@@ -1,0 +1,163 @@
+tabla,label,variable,descripcion,notas,estado
+dato_relevante,Titulo,titulo,Texto corto que da una introducción sobre la información a destacar,NA,NA
+dato_relevante,Descripción,descripcion,"Texto detallado en él que se resalta algún tema de interés para algún grupo biológico, grupo de interés o especie.",NA,NA
+dato_relevante,Identificador de la referencia,ref_id,Identificador que relaciona la referencia bibliográfica de la cual se tomó la información,NA,NA
+dato_relevante,Identificador región,slug_region,Identificador de la región a la cual aplica la información,NA,NA
+dato_relevante,Identificador grupo,slug_grupo,Por medio de este campo se identifica él grupo biológico o de interés con él que se relaciona la información.,NA,NA
+dato_relevante,Comentarios,comentarios,Información para consultar interna,NA,NA
+departamento,Identificador departamento,slug,Identificador único del departamento,"Se creó utilizando él nombre del departamento, quitando mayúsculas, tildes y símbolos. En los casos donde incluye más de dos palabras los espacios se reemplazaron por -",NA
+departamento,Departamento,label,Nombre completo del departamento,NA,NA
+departamento,Codígo DANE,cod_dane,Código del DANE único para cada departamento,NA,NA
+departamento,Zona marina,marino,Indica si él departamento tiene o no zonas marinas,NA,NA
+departamento,Fecha corte,fecha_corte,Fecha en la cual se realizó él corte de datos para él cálculo de las cifras,NA,NA
+especie,Identificador especie,slug,Identificador único de la especie,"Se forma con él nombre científico de la especie, reemplazando los espacios por -",done
+especie,Especie,species,Nombre científico de la especies,NA,NA
+especie,Reino,kingdom,Reino al cual pertenece la especie,NA,NA
+especie,Filo,phylum,Filo al cual pertenece la especie,NA,NA
+especie,Clase,class,Clase al cual pertenece la especie,NA,NA
+especie,Orden,order,Orden al cual pertenece la especie,NA,NA
+especie,Familia,family,Familia al cual pertenece la especie,NA,NA
+especie,Género,genus,Generó al cual pertenece la especie,NA,NA
+especie_meta,Identificador especie,slug,Identificador único de la especie,NA,NA
+especie_meta,URL especie,url_especie,? para crear vínculos,"para la creación de URLs automáticas de las especies. Contiene los datos del catálogo, I-naturalist, GBIF, eBird",NA
+especie_meta,Nombre común español,venacular_name_es,Nombre o nombres comunes conocidos para la especie,NA,NA
+especie_grupo_biologico,Identificador especie,slug_especie,"Identificador de la especie, este permite enlazar con la tabla especie","Este identificador se puede repetir varias veces, teniendo en cuenta que una especie puede pertenecer a 1 o varios grupos biológicos",done
+especie_grupo_biologico,Identificador grupo biológico,slug_grupo_biologico,"Identificador del grupo biológico, este permite enlazar con la tabla grupo biológico","Este identificador se puede repetir varias veces, teniendo en cuenta que un grupo biológico puede tener 1 o varias especies",NA
+especie_grupo_interes_conservacion,Identificador especie,slug_especie,"Identificador de la especie, este permite enlazar con la tabla especie","Este identificador se puede repetir varias veces, teniendo en cuenta que una especie puede pertenecer a 1 o varios grupos de interés",NA
+especie_grupo_interes_conservacion,Identificador grupo interés,slug_grupo_interes_conservacion,Identificador del grupo de interés este permite enlazar con la tabla grupo interes conservación,"Este identificador se puede repetir varias veces, teniendo en cuenta que un grupo de interés puede tener 1 o varias especies",NA
+especie_region,Identificador especie,slug_especie,"Identificador de la especie, este permite enlazar con la tabla especie",NA,NA
+especie_region,Identificador región,slug_region,"Identificador de la región, este permite enlazar con la tabla región",NA,NA
+especie_region,Registros en SiB,registros,Número de registros de una especie en cierta región,NA,NA
+especie_tematica,Identificador especie,slug_especie,"Identificador de la especie, este permite enlazar con la tabla especie",NA,NA
+especie_tematica,Identificador región,slug_region,"Identificador de la región, este permite enlazar con la tabla región",NA,NA
+especie_tematica,Identificador temática,slug_tematica,"Identificador de una temática, este permite enlazar con la tabla temática",NA,NA
+estimada,Identificador grupo,slug_grupo,"Identificador de un grupo biológico o grupo de interés, este permite enlazar con las tablas grupo biológico o grupo interes conservación",NA,NA
+estimada,Comentarios,comentarios,"Esta campo es para uso interno, en él se hacen aclaraciones de como se definireron los valores, las fuentes y los totales.",NA,NA
+estimada,Número especies estimadas,especies_estimadas,Este valor corresponden al número de total de especies en Colombia para un grupo biológico o de interés reportadas en la bibliografía.,NA,NA
+estimada,Referencia especies estimadas,especies_estimadas_ref,Fuente de la cual se obtuvo él número de especies estimadas,NA,NA
+estimada,Número especies éndemicas,especies_endemicas_estimadas,Este valor corresponden al número de total de especies endémicas en Colombia para un grupo biológico o de interés reportadas en la bibliografía.,NA,NA
+estimada,Referencia especies éndemicas,especies_endemicas_estimadas_ref,Fuente de la cual se obtuvo él número de especies endémicas estimadas,NA,NA
+estimada,Número especies migratorias,especies_migratorias_estimadas,Este valor corresponden al número de total de especies migratorias en Colombia para un grupo biológico o de interés reportadas en la bibliografía.,NA,NA
+estimada,Referencia especies migratorias,especies_migratorias_ref,Fuente de la cual se obtuvo él número de especies migratorias estimadas,NA,NA
+estimada,Especies amenazadas categoría nacional,especies_amenazadas_nacional_estimadas,Este valor corresponden al número de total de especies amenazadas en Colombia para un grupo biológico o de interés reportadas en la resolución 1912 de 2017.,NA,NA
+estimada,Referencia amenazadas categoría nacional,especies_amenazadas_nacional_total_estimadas_ref,Fuente de la cual se obtuvo él número de especies amenazadas estimadas,NA,NA
+estimada,Especies VU categoría nacional,especies_amenazadas_nacional_vu_estimadas,Número de especies amenazadas en categoría Vulnerable reportadas en la resolución 1912 de 2017.,NA,NA
+estimada,Especies EN categoría nacional,especies_amenazadas_nacional_en_estimadas,Número de especies amenazadas en categoría En Peligro reportadas en la resolución 1912 de 2017.,NA,NA
+estimada,Especies CR categoría nacional,especies_amenazadas_nacional_cr_estimadas,Número de especies amenazadas en categoría En Peligro Crítico reportadas en la resolución 1912 de 2017.,NA,NA
+estimada,Número de especies CITES,especies_cites_total_estimadas,Este valor corresponden al número de total de especies encontradas en algun apéndice CITES en Colombia para un grupo biológico.,NA,NA
+estimada,Referencia especies CITES,especies_cites_estimadas_ref,Fuente de la cual se obtuvo él número de especies incluidas en los apéndices CITES,NA,NA
+estimada,Especies I CITES,especies_cites_i_estimadas,Número de especies incluidos en él apéndice I CITES,NA,NA
+estimada,Especies I-II CITES,especies_cites_i_ii_estimadas,Número de especies incluidos en él apéndice III CITES,NA,NA
+estimada,Especies II CITES,especies_cites_ii_estimadas,Número de especies incluidos en él apéndice II CITES,NA,NA
+estimada,Especies III CITES,especies_cites_iii_estimadas,Número de especies incluidos en él apéndice III CITES,NA,NA
+grupo_biologico,Identificador categoría superior,parent,corresponden al slug de la categoría superior del grupo biológico (si la tiene) en caso de no ser así su valor es 0,NA,done
+grupo_biologico,Identificador grupo biológico,slug,Identificador único del grupo biológico,"Se creó utilizando él nombre del grupo biológico, quitando mayúsculas, tildes y símbolos. En los casos donde incluye más de dos palabras los espacios se reemplazaron por -",NA
+grupo_biologico,Grupo biológico,label,Nombre completo del grupo biológico,NA,NA
+grupo_biologico,Descripción,descripcion,Aclaraciones adicionales sobre él grupo biológico. Puede detallar las especies incluidas o excluidas dentro del grupo biológico para él cálculo de cifras.,ej. microorganismos (incluye hongos) abejas que pueden tener especies de múltiples familias,NA
+grupo_biologico,Identificador referencia,ref_id,Identificador de la fuente de la cual se obtuvo la categorización del grupo biológico,NA,NA
+grupo_interesconservacion,Identificador categoría superior,parent,corresponden al slug de la categoría superior del grupo de interés (si la tiene) en caso de no ser así su valor es 0,NA,NA
+grupo_interes_conservacion,Identificador grupos interés,slug,Identificador único del grupo de interés de conservación,"Se creó utilizando él nombre del grupo de interés de conservación, quitando mayúsculas, tildes y símbolos. En los casos donde incluye más de dos palabras los espacios se reemplazaron por -",NA
+grupo_interes_conservacion,Grupo de interés,label,Nombre completo del grupo de interés de conservación,NA,NA
+grupo_interes_conservacion,Descripción,descripcion,Aclaraciones adicionales sobre él grupo de interés de conservación. Puede detallar las especies incluidas o excluidas dentro del grupo de interés de conservación para él cálculo de cifras.,NA,NA
+grupo_interes_conservacion,Identificador referencia,ref_id,Identificador de la fuente de la cual se obtuvo la categorización del grupo de interés de conservación,NA,NA
+municipio,Identificador municipio,slug,Identificador único del municipio,"Se creó utilizando él nombre del municipio, quitando mayúsculas, tildes y símbolos. En los casos donde incluye más de dos palabras los espacios se reemplazaron por -. En él caso de nombres de municipios que se repiten en varios departamentos, se agregaron las letras correspondientes al código ISO del departamento.",NA
+municipio,Municipio,label,Nombre completo del municipio,NA,NA
+municipio,Codígo DANE,cod_dane,Código del DANE único para cada municipio,NA,NA
+municipio,Zona marina,marino,Indica si él municipio tiene o no zonas marinas,NA,NA
+municipio,Fecha corte,fecha_corte,Fecha en la cual se realizó él corte de datos para él cálculo de las cifras,NA,NA
+patrocinador,Identificador patrocinador,slug,Identificador único del patrocinador,"Se creó utilizando él nombre del patrocinador, quitando mayúsculas, tildes y símbolos. En los casos donde incluye más de dos palabras los espacios se reemplazaron por -",NA
+patrocinador,URL logo,imagen,URL donde se encuentra almacenado él logo de la organización patrocinadora,NA,NA
+patrocinador,Patrocinador,titulo,Nombre completo del patrocinador,NA,NA
+patrocinador,Página patrocinador,url,URL de la página oficial del patrocinador,NA,NA
+publicador,Identificador publicador,slug,"Identificador único del publicador, corresponden al identificador asignado a la organización al momento de registrarse en GBIF",En los datos corresponden al campo organizacion_id,done
+publicador,Publicador,label,Nombre completo del publicador,NA,NA
+publicador,País publicador,pais_publicacion,País al que pertenece la organización publicadora,NA,NA
+publicador,Tipo organización,tipo_organizacion,"corresponden a las diferentes categorías establecidas por él SiB-Colombia para las organizaciones nacionales. Estas pueden ser: Academia, Autoridades ambientales, Centros e institutos de investigación, Empresas, Entidades administrativas territoriales, ONG o Redes e iniciativas.",NA,NA
+publicador,Tipo publicador,tipo_publicador,Indica si él publicador es nacional o internacional,NA,NA
+publicador,URL logo,url_logo,URL donde se encuentra almacenado él logo de la organización patrocinadora,NA,NA
+publicador,Página socio,url_socio,URL de la página oficial del patrocinador,NA,NA
+ranking,Identificador grupo,slug,Identificador que permite señalar él grupo al cual se relaciona él ranking,"Se creó utilizando la palabra ranking, separador por - y seguido por él slug del grupo-biológico o grupo de interés de conservación",NA
+ranking,Grupo,label,Indica él nombre completo del grupo biológico o grupo de interés de conservación al que pertenece él ranking,NA,NA
+ranking,Puesto,puesto,Señala él puesto dentro del ranking para cada país. En algunos casos solo se cuenta con él puesto para Colombia.,NA,NA
+ranking,País,pais,Nombre del país relacionado en él ranking,NA,NA
+ranking,Identificador referencia,ref_id,Identificador de la fuente de la cual se obtuvo él ranking,NA,NA
+referencia_estimada,Identificador referencia,ref_id,Identificador único para cada una de las fuentes bibliograficas.,Son números consecutivos,NA
+referencia_estimada,Referencia,label,Lleva él texto de la referencia bibliográfica del documento en él cual se encontró la información citada.,NA,NA
+referencia_estimada,Estado,activa,Booleano que permite identificar si la referencia se debe o no mostrar en la página,NA,NA
+referencia_estimada,Fecha consulta,fecha_consulta,Indica la fecha en la que se consultó la fuente para obtener la cifra o él dato.,Este valor se debe mostrar junto con la referencia,NA
+referencia_estimada,Enlace Zotero,zotero,"Enlace de la biblioteca de zotero en donde se encuentra la información de la fuente bibliografico y comentarios adicionales sobre los datos encontrados, fecha de consulta y observaciones adicionales.",NA,NA
+region,Identificador categoría superior,parent,corresponden al slug de la categoría superior de la región (si la tiene) en caso de no ser así su valor es 0,"Incluir descripción para él nivel 0. Ejemplo describir resguardos, animales, etc.",done
+region,Identificador región,slug,Identificador único de la región,"Se creó utilizando él nombre de la región, quitando mayúsculas, tildes y símbolos. En los casos donde incluye más de dos palabras los espacios se reemplazaron por -",NA
+region,Región,label,Nombre completo de la región,NA,NA
+region,Descripción,descripcion,"Descripción general de la región, puede contener información como delimitaciones, caracteristicas, ubicación, entre otros.",No es un campo obligatorio,NA
+region,Zona marina,marino,Indica si la región tiene o no zonas marinas,Por ahora se encuentra vacío. Y solo se diligenciara a regiones diferentes a departamentos o municipios.,NA
+region_grupo_interes_conservacion,Identificador región,slug_region,"Identificador de la región, este permite enlazar con la tabla región",NA,NA
+region_grupo_interes_conservacion,Identificador grupo interés,slug_grupo_interes_conservacion,"Identificador del grupo de interés de conservación, este permite enlazar con la tabla grupo interes conservación",NA,NA
+region_grupo_interes_conservacion,NA,variables especies,Indica él número de especies del grupo de interés de conservación para la región que se encuentran dentro de la alguna de las temáticas establecidas,NA,NA
+region_grupo_interes_conservacion,NA,variables registros,Indica él número de registros del grupo de interés de conservación para la región que se encuentran dentro de la alguna de las temáticas establecidas,NA,NA
+region_grupo_biologico,Identificador región,slug_region,"Identificador de la región, este permite enlazar con la tabla región",se repite hacia abajo para cada región,done
+region_grupo_biologico,Identificador grupo biológico,slug_grupo_biologico,"Identificador del grupo biológico, este permite enlazar con la tabla grupo biológico",NA,NA
+region_grupo_biologico,NA,variables especies tematica,Indica él número de especies del grupo biológico para la región que se encuentran dentro de la alguna de las temáticas establecidas,NA,NA
+region_grupo_biologico,NA,variables registros tematicas,Indica él número de registros del grupo biológico para la región que se encuentran dentro de la alguna de las temáticas establecidas,NA,NA
+region_patrocinador,Identificador región,slug_region,"Identificador de la región, este permite enlazar con la tabla región",NA,NA
+region_patrocinador,Identificador patrocinador,slug_patrocinador,"Identificador del patrocinador, este permite enlazar con la tabla patrocinador",NA,NA
+region_publicador,Identificador región,slug_region,"Identificador de la región, este permite enlazar con la tabla región",NA,NA
+region_publicador,Identificador publicador,slug_publicador,"Identificador del publicador, este permite enlazar con la tabla publicador",NA,NA
+region_publicador,Número especies reportadas,especies,Número de especies reportadas por un publicador para una región,NA,NA
+region_publicador,Número registros reportados,registros,Número de registros reportados por un publicador para una región,NA,NA
+region_publicador,Número registros continentales,registros_continentales,Número de registros en zonas continentales reportados por un publicador para una región,En las regiones donde no se encuentran zonas marinas este valor debe coincidir con él campo registros,NA
+region_publicador,Número registros marinos,registros_marinos,Número de registros correspondientes a especies identificadas en hábitats marinos según WoRMS reportados por un publicador para una región,NA,NA
+region_publicador,Número registros salobres,registros_salobres,Número de registros correspondientes a especies identificadas en hábitats salobres según WoRMS reportados por un publicador para una región,NA,NA
+region_publicador,Número especies continentales,especies_continentales,Número de especies en zonas continentales reportados por un publicador para una región,En las regiones donde no se encuentran zonas marinas este valor debe coincidir con él campo especies,NA
+region_publicador,Número especies marinas,especies_marinas,Número de especies identificadas en hábitats marinos según WoRMS reportados por un publicador para una región,NA,NA
+region_publicador,Número especies salobres,especies_salobres,Número de especies identificadas en hábitats salobres según WoRMS reportados por un publicador para una región,NA,NA
+region_tematica,Identificador región,slug_region,"Identificador de la región, este permite enlazar con la tabla región",NA,done
+region_tematica,Fecha corte,fecha_corte,fecha consolidación de ese nivel,NA,NA
+region_tematica,NA,variables especies tematica,Indica él número de especies del grupo biológico para la región que se encuentran dentro de la alguna de las temáticas establecidas,NA,NA
+region_tematica,NA,variables registros tematicas,Indica él número de registros del grupo biológico para la región que se encuentran dentro de la alguna de las temáticas establecidas,NA,NA
+tematica,Identificador temática superior,parent,corresponden al slug de la categoría superior de la temática (si la tiene) en caso de no ser así su valor es 0,NA,done
+tematica,Identificador temática,slug,Identificador único de la temática,"ej. iucn_en,endemicas,mads_invasora",NA
+tematica,Temática,label,Nombre completo de la temática o categoría de la temática,NA,NA
+tematica,Orden aparición,orden,Indica él orden en que se deben mostrar las diferentes categorías dentro de la temática,NA,NA
+tematica,Explicación general,tooltip,Pequeña explicación de la categoría temática,NA,NA
+tematica,Descripción,descripcion,"Descripción extensa sobre la temática, sus alcances o la forma en que se determina",NA,NA
+tematica,Activa en la página,activa,Booleano que permite identificar si la temática se debe o no mostrar en la página,NA,NA
+temporalidad_grupo_biologico,Identificador región,slug_region,"Identificador de la región, este permite enlazar con la tabla región",NA,NA
+temporalidad_grupo_biologico,Identificador grupo biológico,slug_grupo_biologico,"Identificador del grupo biológico, este permite enlazar con la tabla grupo biológico",NA,NA
+temporalidad_grupo_biologico,Año,anio,Año en él cual se tomaron los registros,NA,NA
+temporalidad_grupo_biologico,Número de registros,registros,Número de registros perteneciente a un grupo biológico en un año,NA,NA
+temporalidad_grupo_interes_conservacion,Identificador región,slug_region,"Identificador de la región, este permite enlazar con la tabla región",NA,NA
+temporalidad_grupo_interes_conservacion,Identificador grupo interés,slug_grupo_interes_conservacion,"Identificador del grupo de interés de conservación, este permite enlazar con la tabla grupo interes conservación",NA,NA
+temporalidad_grupo_interes_conservacion,Año,anio,Año en él cual se tomaron los registros,NA,NA
+temporalidad_grupo_interes_conservacion,Número de registros,registros,Número de registros perteneciente a un grupo de interés de conservación en un año,NA,NA
+temporalidad_pais_publicacion,Identificador región,slug_region,"Identificador de la región, este permite enlazar con la tabla región",NA,NA
+temporalidad_pais_publicacion,País publicación,pais_publicacion,País al cual pertenecen los diferentes publicadores que han reportado registros,NA,NA
+temporalidad_pais_publicacion,Año,anio,Año en él cual se tomaron los registros,NA,NA
+temporalidad_pais_publicacion,Número de registros,registros,Número de registros por país de publicación en un año,NA,NA
+temporalidad_pais_publicacion,Número de especies,especies,Número de especies por país de publicación en un año,NA,NA
+temporalidad_publicador_region,Identificador región,slug_region,"Identificador de la región, este permite enlazar con la tabla región",NA,NA
+temporalidad_publicador_region,Identificador publicador,slug_publicador,"Identificador del publicador, este permite enlazar con la tabla publicador",NA,NA
+temporalidad_publicador_region,Año,anio,Año en él cual se tomaron los registros,NA,NA
+temporalidad_publicador_region,Número de registros,registros,Número de registros por año reportados por un publicador en una región,NA,NA
+temporalidad_publicador_region,Número de registros continentales,registros_continentales,Número de registros continentales por año reportados por un publicador en una región,NA,NA
+temporalidad_publicador_region,Número de registros marinos,registros_marinos,Número de registros marinos por año reportados por un publicador en una región,NA,NA
+temporalidad_publicador_region,Número de registros salobres,registros_salobres,Número de registros salobres por año reportados por un publicador en una región,NA,NA
+temporalidad_publicador_region,Número de especies,especies,Número de especies por año reportados por un publicador en una región,NA,NA
+temporalidad_publicador_region,Número de especies continentales,especies_continentales,Número de especies continentales por año reportados por un publicador en una región,NA,NA
+temporalidad_publicador_region,Número de especies marinos,especies_marinos,Número de especies marinas por año reportados por un publicador en una región,NA,NA
+temporalidad_publicador_region,Número de especies salobres,especies_salobres,Número de especies salobres por año reportados por un publicador en una región,NA,NA
+temporalidad_region,Identificador región,slug_region,"Identificador de la región, este permite enlazar con la tabla región",NA,NA
+temporalidad_region,Año,anio,Año en él cual se tomaron los registros,NA,NA
+temporalidad_region,Número de registros,registros,Número de registros por año en una región,NA,NA
+temporalidad_region,Número de registros continentales,registros_continentales,Número de registros continentales por año en una región,NA,NA
+temporalidad_region,Número de registros marinos,registros_marinos,Número de registros marinos por año en una región,NA,NA
+temporalidad_region,Número de registros salobres,registros_salobres,Número de registros salobres por año en una región,NA,NA
+temporalidad_region,Número de especies,especies,Número de especies por año reportados en una región,NA,NA
+temporalidad_region,Número de especies continentales,especies_continentales,Número de especies continentales por año reportados en una región,NA,NA
+temporalidad_region,Número de especies marinos,especies_marinos,Número de especies marinas por año reportados en una región,NA,NA
+temporalidad_region,Número de especies salobres,especies_salobres,Número de especies salobres por año reportados en una región,NA,NA
+ventana_recomendada,Ventana inicio,from,slug de ventana recomendada,"Ej. Narino -> Resguardo, Narino -> RNLP",NA
+ventana_recomendada,Ventana final,to,slug a ventana recomendada,"from,to
+narino,resguardo-x
+narino,reserva-la-planada",NA
+ventana_recomendada,Tipo,type,"Indica él tipo ventanas a las que se hace referencia. Por ejemplo, ventanas regionales, grupos biologicos, grupos de interés.",NA,NA

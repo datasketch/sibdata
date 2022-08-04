@@ -37,10 +37,13 @@ map(av_regions, function(region){
   parent_tematica <- sib_tables("region_tematica") |>
     filter(slug_region == parent)
 
+  slides <- make_region_slides(region)
+
   l <- list(
-    tematica = subreg_tematica,
+    slides = slides,
     grupos_biologicos = reg_gr_bio,
     grupos_interes = reg_gr_int,
+    tematica = reg_tematica,
     regiones = subreg_tematica
     )
   jsonlite::write_json(l, paste0("static/data/",region, ".json"),

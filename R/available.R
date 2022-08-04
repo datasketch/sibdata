@@ -4,6 +4,8 @@ sib_available_tables <- function(){
   sibdata::available_tables
 }
 
+
+
 #' @export
 sib_available_regions <- function(with_grupo = TRUE){
   if(with_grupo){
@@ -30,4 +32,7 @@ sib_available_subregions <- function(region){
   region |> pull(slug)
 }
 
-
+#' @export
+sib_available_profile_types <- function(){
+  c("region", "grupo_biologico", "grupo_interes_conservacion", "specie", "tematica")
+}

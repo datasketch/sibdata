@@ -35,12 +35,4 @@ publicadores_to_json <- function(json_file){
 
 
 
-possible_profile_types <- function(){
-  c("region", "grupo_biologico", "grupo_interes_conservacion", "specie", "tematica")
-}
-
-validate_profile_type <- function(type){
-  if(!type %in% possible_profile_types())
-    stop("Type must be one of: ", paste(possible_profile_types(), collapse = ", "))
-}
 

@@ -11,6 +11,7 @@ navigation_trees <- function(type, json_file = NULL){
 
   sib_validate_profile_type(type)
 
+  #type <- "region"
   #type <- "grupo_biologico"
   #type <- "tematica"
 
@@ -27,6 +28,7 @@ navigation_trees <- function(type, json_file = NULL){
              )
   }
 
+  table
 
   tree <- data.tree::FromDataFrameNetwork(table)
 

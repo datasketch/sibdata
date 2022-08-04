@@ -36,9 +36,33 @@ map(av_regions, function(region){
   parent <- sib_parent_region(region)
 
   reg_gr_bio <- sib_tables("region_grupo_biologico") |>
-    filter(slug_region == region)
+    filter(slug_region == region) |>
+    mutate(slug = slug_grupo_biologico) |>
+    relocate(slug)
   reg_gr_int <- sib_tables("region_grupo_interes_conservacion") |>
-    filter(slug_region == region)
+    filter(slug_region == region) |>
+    mutate(slug = slug_grupo_interes_conservacion) |>
+    relocate(slug)
+
+  # make_data_especies <- function(slug_grupo_biologico, region){
+  #   subregs <- sib_available_subregions(region)
+  #   parent <- sib_parent_region(region)
+  # }
+
+  # reg_gr_bio_with_data <- reg_gr_bio |>
+  #   mutate(
+  #     data_especies =
+  #     )
+
+  # Add custom DATA for viz inside grupos biológicos y de interés
+  if(grepl("grupo", type)){
+    #type <- "grupo_biologico"
+
+    #grupo_data(region)
+
+  }
+
+
   reg_tematica <- sib_tables("region_tematica") |>
     filter(slug_region == region)
   subreg_tematica <- sib_tables("region_tematica") |>

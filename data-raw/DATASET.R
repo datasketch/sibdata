@@ -13,7 +13,7 @@ names(ds) <- table_names
 
 
 ## Add icons
-available_icons <- list.files("inst/iconos/")
+available_icons <- list.files("inst/icons/")
 available_icons <- available_icons |>
   tools::file_path_sans_ext() |>
   strsplit("-") |>

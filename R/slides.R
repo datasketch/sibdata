@@ -22,6 +22,8 @@ make_region_slides <- function(region){
     filter(slug_region == parent)
 
   esp <- sib_tables("especie")
+  esp_tem <- sib_tables("especie_tematica")
+  esp_meta <- sib_tables("especie_meta")
 
   esp_reg <- sib_tables("especie_region") |>
     filter(slug_region == region)
@@ -68,6 +70,11 @@ make_region_slides <- function(region){
   gg <- sib_chart_waffle(d)
   ggsave(path, gg, width = 4, height = 4)
 
+  x <- d$registros_region_total
+  names(x) <- d$slug_region
+  x[1] <- x[1] - x[2]
+  x <- rev(x)
+  x <- round(x/sum(x)*100)
   proportion <- x[1]
   description_tpl <- "El departamento de {region} tiene alrededor del {proportion}% de las observaciones de especies del país."
   title_tpl <- "{region} vs {parent}"

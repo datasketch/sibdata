@@ -50,26 +50,6 @@ map(av_regions, function(region){
 
   general_info <- sib_region_general(region)
 
-
-  # make_data_especies <- function(slug_grupo_biologico, region){
-  #   subregs <- sib_available_subregions(region)
-  #   parent <- sib_parent_region(region)
-  # }
-
-  # reg_gr_bio_with_data <- reg_gr_bio |>
-  #   mutate(
-  #     data_especies =
-  #     )
-
-  # Add custom DATA for viz inside grupos biológicos y de interés
-  if(grepl("grupo", type)){
-    #type <- "grupo_biologico"
-
-    #grupo_data(region)
-
-  }
-
-
   reg_tematica <- sib_tables("region_tematica") |>
     filter(slug_region == region)
   subreg_tematica <- sib_tables("region_tematica") |>

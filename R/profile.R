@@ -28,6 +28,11 @@ navigation_trees <- function(type, json_file = NULL){
              )
   }
 
+  if(type == "tematica"){
+    table <- table |>
+      filter(is.na(orden))
+  }
+
   table
 
   tree <- data.tree::FromDataFrameNetwork(table)

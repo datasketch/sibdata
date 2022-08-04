@@ -44,6 +44,9 @@ map(av_regions, function(region){
     mutate(slug = slug_grupo_interes_conservacion) |>
     relocate(slug)
 
+  general_info <- sib_region_general(region)
+
+
   # make_data_especies <- function(slug_grupo_biologico, region){
   #   subregs <- sib_available_subregions(region)
   #   parent <- sib_parent_region(region)
@@ -73,6 +76,7 @@ map(av_regions, function(region){
   slides <- make_region_slides(region)
 
   l <- list(
+    general_info = general_info,
     slides = slides,
     grupos_biologicos = reg_gr_bio,
     grupos_interes = reg_gr_int,

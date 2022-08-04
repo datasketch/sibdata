@@ -14,7 +14,16 @@ navigation_trees("grupo_interes_conservacion",
 navigation_trees("tematica",
                  json_file = "static/data/nav_tematica.json")
 
+# navigation_trees("territorio",
+#                  json_file = "static/data/nav_tematica.json")
+
+
 publicadores_to_json("static/data/publicador.json")
+
+
+# Copy icons
+
+copy_icons("static")
 
 
 # Generate files for regions

@@ -34,5 +34,5 @@ sib_available_subregions <- function(region){
 
 #' @export
 sib_available_profile_types <- function(){
-  c("region", "grupo_biologico", "grupo_interes_conservacion", "specie", "tematica")
+  c("region", "territorio", "grupo_biologico", "grupo_interes_conservacion", "specie", "tematica")
 }

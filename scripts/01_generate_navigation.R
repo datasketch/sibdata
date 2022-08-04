@@ -5,6 +5,10 @@ library(sibdata)
 navigation_trees("region",
                  json_file = "static/data/nav_region.json")
 
+navigation_trees("territorio",
+                 json_file = "static/data/nav_territorio.json")
+
+
 navigation_trees("grupo_biologico",
                  json_file = "static/data/nav_grupo_biologico.json")
 

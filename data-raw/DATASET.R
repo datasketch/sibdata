@@ -27,6 +27,8 @@ ds$grupo_interes_conservacion <- ds$grupo_interes_conservacion |>
 ds$tematica <- ds$tematica |>
   mutate(icon = slug %in% available_icons)
 
+ds$territorio <- read_delim("data-raw/territorio.tsv")
+
 region_table <- ds$region
 tematica_table <- ds$tematica
 

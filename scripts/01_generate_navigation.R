@@ -77,6 +77,25 @@ map(av_regions, function(region){
   parent_tematica <- sib_tables("region_tematica") |>
     filter(slug_region == parent)
 
+  # Territorio
+
+  d <- subreg_tematica
+  munis_chart1 <- sib_chart_reg_municipios(d, "especies_region_total")
+  path1 <- glue::glue("static/charts/{region}/region_municipios_1.html")
+  htmlwidgets::saveWidget(munis_chart1, path1)
+  munis_chart2 <- sib_chart_reg_municipios(d, "registros_region_total")
+  path2 <- glue::glue("static/charts/{region}/region_municipios_2.html")
+  htmlwidgets::saveWidget(munis_chart2, path2)
+
+  territorio <- list(
+    municipios = list(
+      charts = list(
+        list(title = "Especies por municipio", path = path1),
+        list(title = "Observaciones por municipio", path = path2)
+      )
+    )
+  )
+
   slides <- make_region_slides(region)
 
   l <- list(
@@ -85,7 +104,7 @@ map(av_regions, function(region){
     grupos_biologicos = reg_gr_bio,
     grupos_interes = reg_gr_int,
     tematica = reg_tematica,
-    regiones = subreg_tematica
+    territorio = territorio
     )
   jsonlite::write_json(l, paste0("static/data/",region, ".json"),
                    auto_unbox = TRUE, pretty =TRUE)

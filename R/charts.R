@@ -1,5 +1,13 @@
 
 
+sib_chart_reg_municipios <- function(d, var = "especies_region_total"){
+
+  x <- d |> select(one_of(c("slug_region", var)))
+  h <- hgchmagic::hgch_bar_CatNum(x, hor_title = " ", ver_title = " ")
+  h
+}
+
+
 #' @export
 sib_chart_waffle <- function(d, path){
 

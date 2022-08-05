@@ -43,3 +43,18 @@ sib_chart_gt_table <- function(t, labels = NULL){
     }
     gt
 }
+
+
+#' @export
+sib_chart_gt_table2 <- function(t, labels = NULL){
+  names(t) <- c("especie", "tematica")
+  gt <- gt::gt(t) |>
+    #opt_table_font("Space Grotesk") |>
+    gt::tab_style(
+      style = gt::cell_text(size = gt::px(12)),
+      locations = list(gt::cells_body(), gt::cells_column_labels())
+    )
+  gt
+}
+
+

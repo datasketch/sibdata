@@ -57,6 +57,58 @@ map(av_regions, function(region){
   parent_tematica <- sib_tables("region_tematica") |>
     dplyr::filter(slug_region == parent)
 
+  esp_reg <- sib_tables("especie_region") |>
+    filter(slug_region == region)
+  esp_tem <- sib_tables("especie_tematica")
+  esp_reg_tem <-  esp_reg |>
+    left_join(esp_tem) |>
+    select(-registros)
+
+
+  tem <- sib_tables("tematica") #|>
+    #dplyr::filter(is.na(orden))
+
+  d2 <- reg_tematica |>
+    select(-fecha_corte) |>
+    pivot_longer(-starts_with("slug"),
+                 names_to = c("indicador"),
+                 values_to = "count")
+
+  inds <- sib_tables("ind_meta") |>
+    filter(indicador %in% names(d))
+  d3 <- left_join(d2, inds)
+  d4 <- d3 |>
+    select_if(~length(unique(.))!= 1) |>
+    select(-indicador)
+  d5 <- d4 %>% relocate(count, .after = last_col())
+  d6 <- d5 |>
+    filter(cobertura == "total") |>
+    filter(tipo == "especies") |>
+    filter(!is.na(slug_tematica)) |>
+    select(slug_tematica, label, count)
+
+  tems_list <- d6 |> group_split(slug_tematica)
+  tem_groups <- d6 |> group_by(slug_tematica) |>
+    group_keys() |> pull(slug_tematica)
+  names(tems_list) <- tem_groups
+
+  tematica_list <- map(tems_list, function(x){
+    #x <- tems_list[[8]]
+    x$slug <- x$slug_tematica
+    esps_tem <- esp_reg_tem |>
+      select(-slug_region) |>
+      filter(grepl(x$slug, slug_tematica)) #|>
+    #distinct(slug_especie, .keep_all = TRUE)
+    #x$especies <- list(esps_tem)
+    x$title <- paste0("Lista especies: ", x$slug)
+    #chart <- sib_chart_gt_table2(esps_tem)
+    slug <- x$slug
+    path <- glue::glue("static/charts/{region}/{slug}.html")
+    #gt::gtsave(chart, path)
+    x$chart <- path
+    x
+  })
+
   # Territorio
 
   d <- subreg_tematica
@@ -89,7 +141,7 @@ map(av_regions, function(region){
     slides = slides,
     grupos_biologicos = reg_gr_bio,
     grupos_interes = reg_gr_int,
-    tematica = reg_tematica,
+    tematica = tematica_list,
     territorio = territorio
     )
   jsonlite::write_json(l, paste0("static/data/",region, ".json"),

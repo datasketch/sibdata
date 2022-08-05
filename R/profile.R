@@ -28,10 +28,10 @@ navigation_trees <- function(type, json_file = NULL){
              )
   }
 
-  if(type == "tematica"){
-    table <- table |>
-      dplyr::filter(is.na(orden))
-  }
+  # if(type == "tematica"){
+  #   table <- table |>
+  #     dplyr::filter(is.na(orden))
+  # }
 
   table
 

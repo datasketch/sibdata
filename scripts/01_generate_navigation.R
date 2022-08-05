@@ -40,22 +40,22 @@ map(av_regions, function(region){
   parent <- sib_parent_region(region)
 
   reg_gr_bio <- sib_tables("region_grupo_biologico") |>
-    filter(slug_region == region) |>
-    mutate(slug = slug_grupo_biologico) |>
-    relocate(slug)
+    dplyr::filter(slug_region == region) |>
+    dplyr::mutate(slug = slug_grupo_biologico) |>
+    dplyr::relocate(slug)
   reg_gr_int <- sib_tables("region_grupo_interes_conservacion") |>
-    filter(slug_region == region) |>
-    mutate(slug = slug_grupo_interes_conservacion) |>
-    relocate(slug)
+    dplyr::filter(slug_region == region) |>
+    dplyr::mutate(slug = slug_grupo_interes_conservacion) |>
+    dplyr::relocate(slug)
 
   general_info <- sib_region_general(region)
 
   reg_tematica <- sib_tables("region_tematica") |>
-    filter(slug_region == region)
+    dplyr::filter(slug_region == region)
   subreg_tematica <- sib_tables("region_tematica") |>
-    filter(slug_region %in% subregs)
+    dplyr::filter(slug_region %in% subregs)
   parent_tematica <- sib_tables("region_tematica") |>
-    filter(slug_region == parent)
+    dplyr::filter(slug_region == parent)
 
   # Territorio
 
@@ -68,11 +68,17 @@ map(av_regions, function(region){
   htmlwidgets::saveWidget(munis_chart2, path2)
 
   territorio <- list(
-    municipios = list(
+    "municipios" = list(
       charts = list(
         list(title = "Especies por municipio", path = path1),
         list(title = "Observaciones por municipio", path = path2)
       )
+    ),
+    "reserva-forestal-la-planada" = list(
+      list(title = "Próximamente tendrás acceso a la información de la reserva", path = NULL)
+    ),
+    "resguardo-indigena-pialapi-pueblo-viejo" = list(
+      list(title = "Próximamente tendrás acceso a la información del resguardo", path = NULL)
     )
   )
 

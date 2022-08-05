@@ -17,20 +17,20 @@ navigation_trees <- function(type, json_file = NULL){
 
   table <- sib_tables(type)
   if("activa" %in% names(table)){
-    table <- table |> filter(activa)
+    table <- table |> dplyr::filter(activa)
   }
 
   # Add icon URLs
   if("icon" %in% names(table)){
     table <- table |>
-      mutate(icon_white = paste0("static/icons/",slug,"-white.svg"),
+      dplyr::mutate(icon_white = paste0("static/icons/",slug,"-white.svg"),
              icon_black = paste0("static/icons/",slug,"-black.svg")
              )
   }
 
   if(type == "tematica"){
     table <- table |>
-      filter(is.na(orden))
+      dplyr::filter(is.na(orden))
   }
 
   table
@@ -49,7 +49,7 @@ navigation_trees <- function(type, json_file = NULL){
 
 publicadores_to_json <- function(json_file){
   pubs <- sib_tables("publicador") |>
-    distinct()
+    dplyr::distinct()
   jsonlite::write_json(pubs, json_file,
                        auto_unbox = TRUE, pretty = TRUE)
 }

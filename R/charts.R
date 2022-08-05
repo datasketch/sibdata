@@ -2,7 +2,7 @@
 
 sib_chart_reg_municipios <- function(d, var = "especies_region_total"){
 
-  x <- d |> select(one_of(c("slug_region", var)))
+  x <- d |> dplyr::select(one_of(c("slug_region", var)))
   h <- hgchmagic::hgch_bar_CatNum(x, hor_title = " ", ver_title = " ")
   h
 }
@@ -17,7 +17,7 @@ sib_chart_waffle <- function(d, path){
   x <- rev(x)
   x <- round(x/sum(x)*100)
 
-  gg <- waffle(x, colors = c("orange", "lightgrey"), row = 10,
+  gg <- waffle::waffle(x, colors = c("orange", "lightgrey"), row = 10,
                flip = TRUE) +
     theme(legend.position = "none")
   gg

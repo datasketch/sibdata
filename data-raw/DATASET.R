@@ -41,7 +41,7 @@ ind_meta <- read_csv("data-raw/diccionaries/ind_meta.csv")
 ds$ind_meta <- ind_meta
 
 #saveRDS(ds, "ds.rds")
-#saveRDS(ds, "sib-data-app/ds.rds")
+saveRDS(ds, "inst/sib-data-app/ds.rds")
 
 available_tables <- names(ds)
 

@@ -10,8 +10,8 @@ ds <- read_rds("ds.rds")
 opts_grupo_biologico <- c("todos", ds$grupo_biologico$slug)
 opts_grupo_interes <-  c("todos", ds$grupo_interes_conservacion$slug)
 opts_region <- ds$region$slug
-opts_region <- c("colombia", "narino", "boyaca", "santander", "tolima",
-                 "resguardo-indigena-pialapi-pueblo-viejo", 
+opts_region <- c("narino","colombia", "boyaca", "santander", "tolima",
+                 "resguardo-indigena-pialapi-pueblo-viejo",
                  "reserva-natural-la-planada")
 
 
@@ -34,9 +34,9 @@ ui <- panelsPage(
         body = div(
           # verbatimTextOutput("debug"),
           selectizeInput("sel_region","Seleccione Región",opts_region,
-                         selected = "colombia"),
+                         selected = "narino"),
           hr(),
-          radioButtons("sel_grupo_type", "Tipo de grupo", 
+          radioButtons("sel_grupo_type", "Tipo de grupo",
                        c( "Biológico" = "biologico", "Interés de Conservación" = "interes")),
           conditionalPanel("input.sel_grupo_type == 'biologico'",
                            selectizeInput("sel_grupo_biologico","Seleccione grupo",opts_grupo_biologico)
@@ -46,7 +46,7 @@ ui <- panelsPage(
           ),
           hr(),
           radioButtons("registro_especie", "Tipo registo", c("Todos" = "todos", "Observaciones" = "registro","Especies"="especie")),
-          radioButtons("modo", "Modo", c("Todos" = "todos","Continental" = "continental","Marino" = "marinas")),
+          radioButtons("modo", "Cobertura", c("Todos" = "todos","Continental" = "continental","Marino" = "marinas")),
           radioButtons("tematica", "Temática", c("todas","amenazadas", "cites", "endemicas", "migratorias", "exoticas", "invasoras")),
           br()
         ),
@@ -54,25 +54,26 @@ ui <- panelsPage(
   panel(title = "Información",
         body = div(
           uiOutput("controls"),
-          uiOutput("chart_controls"),
-          uiOutput("viz_type"),
-          uiOutput("viz"),
+          #uiOutput("chart_controls"),
+          #uiOutput("viz_type"),
+          #uiOutput("viz"),
+          uiOutput("table"),
           br()
         ),
         footer = "")
 )
 
 server <-  function(input, output, session) {
-  
-  
+
+
   output$debug <- renderText({
     #capture.output(str(data()))
     #glimpse(data())
-    #input$sel_grupo 
+    #input$sel_grupo
     available_chart_vars()
   })
-  
-  
+
+
   sel_grupo <- reactive({
     if(input$sel_grupo_type == "biologico"){
       return(input$sel_grupo_biologico)
@@ -80,7 +81,7 @@ server <-  function(input, output, session) {
       return(input$sel_grupo_interes)
     }
   })
-  
+
   d_gr <- reactive({
     if(input$sel_grupo_type == "biologico"){
       d <- ds$region_grupo_biologico
@@ -93,101 +94,101 @@ server <-  function(input, output, session) {
     }
     d
   })
-  
+
   d_gr_reg <- reactive({
     d <- d_gr()
-    ind_reg <- d |> 
+    ind_reg <- d |>
       filter(slug_region == input$sel_region)
     ind_reg
   })
-  
+
   d_gr_subreg <- reactive({
     d <- d_gr()
     subregs <- ds$region |>
-      filter(parent == input$sel_region) |> 
+      filter(parent == input$sel_region) |>
       pull(slug)
-    ind_subregs <- d |> 
+    ind_subregs <- d |>
       filter(slug_region %in% subregs)
     ind_subregs
   })
-  
-  
+
+
   vars_meta <- reactive({
     inds <- ds$ind_meta
     if(input$tematica != "todas"){
-      inds <- inds |> 
+      inds <- inds |>
         filter(grepl(input$tematica,tematica))
     }
     if(input$modo != "todos"){
-      inds <- inds |> 
+      inds <- inds |>
         filter(grepl(input$modo,modo))
     }
     if(input$registro_especie != "todos"){
-      inds <- inds |> 
+      inds <- inds |>
         filter(grepl(input$registro_especie,tipo))
     }
     inds |> pull(indicador)
   })
-    
-  
+
+
   data_selected <- reactive({
     #req(d_gr_reg())
     d <- d_gr_reg()
     if(input$region_type == "subregion"){
       d <- d_gr_subreg()
     }
-    
+
     vars <- c("slug", vars_meta())
 
     d <- d |>
       select(contains(vars))
 
-    d2 <- d |> 
-      pivot_longer(-starts_with("slug"), 
+    d2 <- d |>
+      pivot_longer(-starts_with("slug"),
                    names_to = c("indicador"),
                    values_to = "count")
-    
-    inds <- ds$ind_meta |> 
+
+    inds <- ds$ind_meta |>
       filter(indicador %in% names(d))
     d3 <- left_join(d2, inds)
-    d4 <- d3 |> 
-      select(-indicador) |> 
+    d4 <- d3 |>
+      select(-indicador) |>
       select_if(~length(unique(.))!= 1)
     d5 <- d4 |>
       relocate(count, .after = last_col())
     return(d5)
   })
-  
+
   available_chart_vars <- reactive({
     #req(data())
     d <- data_selected()
     d <- d |> select(-count)
     names(d)
   })
-  
+
   data <- reactive({
     dd <- data_selected()
-    dd <- dd |> 
+    dd <- dd |>
       select(c(any_of(input$chart_vars),"count"))
     dd
   })
-  
+
   available_charts <- reactive({
     #dd <- data()
     c("table","pie", "donut", "treemap", "bar")
   })
-  
-  
+
+
   output$controls <- renderUI({
     out <- list()
     out <- list(
-      radioButtons("region_type", "Tipo", 
+      radioButtons("region_type", "Tipo",
                    c( "Total región"="region", "Subregiones"="subregion")),
       br()
     )
     out
   })
-  
+
   output$chart_controls <- renderUI({
     #req(available_chart_vars())
     selectizeInput("chart_vars","Seleccione variables a visualizar",
@@ -195,20 +196,44 @@ server <-  function(input, output, session) {
                    selected = available_chart_vars()[2],
                    options = list(plugins = list('drag_drop')), width = 200)
   })
-  
+
   output$viz_type <- renderUI({
     selectInput("sel_chart_type","Seleccione tipo de visualización",
                    available_charts())
   })
-  
-  
+
+
+  output$table <- renderUI({
+    if(input$region_type == "region"){
+      dd <- d_gr_reg()
+    }else{
+      dd <- d_gr_subreg()
+    }
+
+    vars_cobertura <- c("continental", "marino")
+    if(input$modo != "todos"){
+      vars_cobertura <- input$modo
+      dd <- dd |> select(contains(c("slug", vars_cobertura)))
+    }
+    if(input$tematica != "todas"){
+      vars_tematicas <- input$tematica
+      dd <- dd |> select(contains(c("slug",vars_tematicas)))
+    }
+    if(input$registro_especie != "todos"){
+      vars_reg_esp <- input$registro_especie
+      dd <- dd |> select(contains(c("slug",vars_reg_esp)))
+    }
+
+    renderDataTable(dd)
+
+  })
 
   output$viz <- renderUI({
 
     dd <- data()
-    
+
     sel_chart_type <- input$sel_chart_type
-    
+
     opts <- list(
       dataLabels_show = TRUE,
       color_by = names(dd)[1]
@@ -221,12 +246,12 @@ server <-  function(input, output, session) {
       table = renderDataTable(dd)
     )
     out[[sel_chart_type]]
-    
+
   })
-  
-  
-  
-  
+
+
+
+
 }
 
 shinyApp(ui, server)

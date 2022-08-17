@@ -14,6 +14,7 @@ navigation_trees <- function(type, json_file = NULL){
   #type <- "region"
   #type <- "grupo_biologico"
   #type <- "tematica"
+  #type <- "territorio"
 
   table <- sib_tables(type)
   if("activa" %in% names(table)){

@@ -11,39 +11,39 @@ make_region_slides <- function(region){
   parent <- sib_parent_region(region)
 
   reg_gr_bio <- sib_tables("region_grupo_biologico") |>
-    filter(slug_region == region)
+    dplyr::filter(slug_region == region)
   reg_gr_int <- sib_tables("region_grupo_interes_conservacion") |>
-    filter(slug_region == region)
+    dplyr::filter(slug_region == region)
   reg_tematica <- sib_tables("region_tematica") |>
-    filter(slug_region == region)
+    dplyr::filter(slug_region == region)
   subreg_tematica <- sib_tables("region_tematica") |>
-    filter(slug_region %in% subregs)
+    dplyr::filter(slug_region %in% subregs)
   parent_tematica <- sib_tables("region_tematica") |>
-    filter(slug_region == parent)
+    dplyr::filter(slug_region == parent)
 
   esp <- sib_tables("especie")
   esp_tem <- sib_tables("especie_tematica")
   esp_meta <- sib_tables("especie_meta")
 
   esp_reg <- sib_tables("especie_region") |>
-    filter(slug_region == region)
+    dplyr::filter(slug_region == region)
 
   esp_parent <- sib_tables("especie_region") |>
-    filter(slug_region == parent)
+    dplyr::filter(slug_region == parent)
 
   #esp_subreg <- sib_tables("especie_region") |> ## No se puede calcular
   #  filter(slug_region %in% subregs)
 
   esp_reg_tem <-  esp_reg |>
-    left_join(esp_tem) |>
-    select(-registros)
+    dplyr::left_join(esp_tem) |>
+    dplyr::select(-registros)
 
   pubs <-  sib_tables("publicador")
   pubs_reg <- sib_tables("region_publicador")|>
-    filter(slug_region == region) |>
-    distinct() |>
-    left_join(pubs, by = c("slug_publicador" = "slug")) |>
-    select(label, pais_publicacion, tipo_publicador, registros, especies)
+    dplyr::filter(slug_region == region) |>
+    dplyr::distinct() |>
+    dplyr::left_join(pubs, by = c("slug_publicador" = "slug")) |>
+    dplyr::select(label, pais_publicacion, tipo_publicador, registros, especies)
 
   estimada <- sib_tables("estimada")
 
@@ -60,10 +60,10 @@ make_region_slides <- function(region){
   # Nariño vs Colombia
 
   reg_vs_parent <- sib_tables("region_tematica") |>
-    filter(slug_region %in% c(region, parent))
+    dplyr::filter(slug_region %in% c(region, parent))
 
   d <- reg_vs_parent |>
-    select(slug_region, registros_region_total)
+    dplyr::select(slug_region, registros_region_total)
 
   path <- glue::glue("static/charts/{region}/reg_vs_parent.png")
 

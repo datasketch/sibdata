@@ -14,7 +14,9 @@ sib_region_general <- function(region){
   intro_tpl <- "A través del SiB Colombia se han publicado {registros_region_total} observaciones
   para el {subtipo} de {label}. Estos datos hacen referencia a un total de
   {especies_region_total} especies, de las cuales {especies_continentales} habitan el territorio
-  al interior del continente y {especies_marinas} en el mar."
+  al interior del continente y {especies_marinas} en el mar.
+  Tenga en cuenta que algunas especies pueden tener hábitats continentales y marinos por la cual
+  la especie se incluye dentro del conteo de ambas coberturas."
 
   reg_list <- purrr::transpose(reg_data)[[1]]
   reg_list$main_text <- glue::glue_data(reg_data, intro_tpl)

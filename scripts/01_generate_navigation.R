@@ -35,7 +35,7 @@ copy_icons("static")
 av_regions <- sib_available_regions()
 
 map(av_regions, function(region){
-  # region <- "narino"
+  # region <- "tolima"
   subregs <- sib_available_subregions(region)
   parent <- sib_parent_region(region)
 
@@ -58,46 +58,46 @@ map(av_regions, function(region){
     dplyr::filter(slug_region == parent)
 
   esp_reg <- sib_tables("especie_region") |>
-    filter(slug_region == region)
+    dplyr::filter(slug_region == region)
   esp_tem <- sib_tables("especie_tematica")
   esp_reg_tem <-  esp_reg |>
-    left_join(esp_tem) |>
-    select(-registros)
+    dplyr::left_join(esp_tem) |>
+    dplyr::select(-registros)
 
 
   tem <- sib_tables("tematica") #|>
     #dplyr::filter(is.na(orden))
 
   d2 <- reg_tematica |>
-    select(-fecha_corte) |>
-    pivot_longer(-starts_with("slug"),
+    dplyr::select(-fecha_corte) |>
+    tidyr::pivot_longer(-starts_with("slug"),
                  names_to = c("indicador"),
                  values_to = "count")
 
-  inds <- sib_tables("ind_meta") |>
-    filter(indicador %in% names(d))
-  d3 <- left_join(d2, inds)
+  inds <- sib_tables("ind_meta") #|>
+    #filter(indicador %in% names(d))
+  d3 <- dplyr::left_join(d2, inds)
   d4 <- d3 |>
-    select_if(~length(unique(.))!= 1) |>
-    select(-indicador)
-  d5 <- d4 %>% relocate(count, .after = last_col())
+    dplyr::select_if(~length(unique(.))!= 1) |>
+    dplyr::select(-indicador)
+  d5 <- d4 %>% dplyr::relocate(count, .after = last_col())
   d6 <- d5 |>
-    filter(cobertura == "total") |>
-    filter(tipo == "especies") |>
-    filter(!is.na(slug_tematica)) |>
-    select(slug_tematica, label, count)
+    dplyr::filter(cobertura == "total") |>
+    dplyr::filter(tipo == "especies") |>
+    dplyr::filter(!is.na(slug_tematica)) |>
+    dplyr::select(slug_tematica, label, count)
 
-  tems_list <- d6 |> group_split(slug_tematica)
-  tem_groups <- d6 |> group_by(slug_tematica) |>
-    group_keys() |> pull(slug_tematica)
-  names(tems_list) <- tem_groups
+  tems_list <- d6 |> dplyr::group_split(slug_tematica)
+  tem_groups <- d6 |> dplyr::group_by(slug_tematica) |>
+    dplyr::group_keys() |> dplyr::pull(slug_tematica)
+  #names(tems_list) <- tem_groups
 
-  tematica_list <- map(tems_list, function(x){
+  tematica_list <- purrr::map(tems_list, function(x){
     #x <- tems_list[[8]]
     x$slug <- x$slug_tematica
     esps_tem <- esp_reg_tem |>
-      select(-slug_region) |>
-      filter(grepl(x$slug, slug_tematica)) #|>
+      dplyr::select(-slug_region) |>
+      dplyr::filter(grepl(x$slug, slug_tematica)) #|>
     #distinct(slug_especie, .keep_all = TRUE)
     #x$especies <- list(esps_tem)
     x$title <- paste0("Lista especies: ", x$slug)
@@ -106,10 +106,11 @@ map(av_regions, function(region){
     path <- glue::glue("static/charts/{region}/{slug}.html")
     #gt::gtsave(chart, path)
     x$chart <- path
-    x
+    as.list(x)
   })
 
   # Territorio
+  dir.create(glue::glue("static/charts/{region}"))
 
   d <- subreg_tematica
   munis_chart1 <- sib_chart_reg_municipios(d, "especies_region_total")

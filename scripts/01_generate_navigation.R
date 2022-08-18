@@ -101,13 +101,16 @@ map(av_regions, function(region){
     slides = slides,
     grupos_biologicos = reg_gr_bio,
     grupos_interes = reg_gr_int,
-    tematica = tematica_list,
+    tematica = tem_list,
     territorio = territorio,
     patrocinador = patrocinador,
     publicadores = publicadores
     )
   jsonlite::write_json(l, paste0("static/data/",region, ".json"),
                    auto_unbox = TRUE, pretty =TRUE)
+
+
+
 })
 
 

@@ -10,6 +10,8 @@ make_region_slides <- function(region){
   subregs <- sib_available_subregions(region)
   parent <- sib_parent_region(region)
 
+  reg_labels <- sib_tables("region") |> select(slug, label)
+
   reg_gr_bio <- sib_tables("region_grupo_biologico") |>
     dplyr::filter(slug_region == region)
   reg_gr_int <- sib_tables("region_grupo_interes_conservacion") |>
@@ -17,7 +19,9 @@ make_region_slides <- function(region){
   reg_tematica <- sib_tables("region_tematica") |>
     dplyr::filter(slug_region == region)
   subreg_tematica <- sib_tables("region_tematica") |>
-    dplyr::filter(slug_region %in% subregs)
+    dplyr::filter(slug_region %in% subregs) |>
+    dplyr::left_join(reg_labels, by = c("slug_region" = "slug")) |>
+    relocate(label)
   parent_tematica <- sib_tables("region_tematica") |>
     dplyr::filter(slug_region == parent)
 
@@ -63,21 +67,22 @@ make_region_slides <- function(region){
     dplyr::filter(slug_region %in% c(region, parent))
 
   d <- reg_vs_parent |>
-    dplyr::select(slug_region, registros_region_total)
+    dplyr::select(slug_region, especies_region_total)
 
   path <- glue::glue("static/charts/{region}/reg_vs_parent.png")
 
   gg <- sib_chart_waffle(d)
   ggsave(path, gg, width = 4, height = 4)
 
-  x <- d$registros_region_total
+  x <- d$especies_region_total
   names(x) <- d$slug_region
   x[1] <- x[1] - x[2]
   x <- rev(x)
   x <- round(x/sum(x)*100)
   proportion <- x[1]
-  description_tpl <- "El departamento de {region} tiene alrededor del {proportion}% de las observaciones de especies del país."
-  title_tpl <- "{region} vs {parent}"
+  regionTitle <- makeup::makeup_chr(region, "Title")
+  description_tpl <- "El departamento de {regionTitle} tiene alrededor del {proportion}% de las especies del país."
+  title_tpl <- "{region} vs. {parent}"
   l <- list(
     id = "slide1",
     layout = "title/(text|chart)",
@@ -97,29 +102,35 @@ make_region_slides <- function(region){
 
   esp_animal_mas_obs <- esp_obs |>
     filter(kingdom == "Animalia") |>
-    slice_max(registros, n = 20)
+    slice_max(registros, n = 20) |>
+    mutate(registros_str = makeup::makeup(as.numeric(registros), "45,343.00"))
 
   esp_animal_menos_obs <- esp_obs |>
     filter(kingdom == "Animalia") |>
-    slice_min(registros, n = 20)
+    slice_min(registros, n = 20) |>
+    mutate(registros_str = makeup::makeup(as.numeric(registros), "45,343.00"))
 
   esp_planta_mas_obs <- esp_obs |>
     filter(kingdom == "Plantae") |>
-    slice_max(registros, n = 20)
+    slice_max(registros, n = 20) |>
+    mutate(registros_str = makeup::makeup(as.numeric(registros), "45,343.00"))
 
   esp_planta_menos_obs <- esp_obs |>
     filter(kingdom == "Plantae") |>
-    slice_min(registros, n = 20)
+    slice_min(registros, n = 20) |>
+    mutate(registros_str = makeup::makeup(as.numeric(registros), "45,343.00"))
 
   esp_mamiferos_mas_obs <- esp_obs |>
     filter(class == "Mammalia") |>
-    slice_min(registros, n = 20)
+    slice_min(registros, n = 20) |>
+    mutate(registros_str = makeup::makeup(as.numeric(registros), "45,343.00"))
 
-  x <- glue::glue_data(esp_animal_mas_obs |> slice(1:5), "{species} ({registros})")
+
+  x <- glue::glue_data(esp_animal_mas_obs |> slice(1:5), "_{species}_ ({registros_str})")
   x <- paste(x, collapse = ", ")
   phrase1 <- glue::glue("Las especies de animales con más registros son: {x}.")
 
-  x <- glue::glue_data(esp_planta_mas_obs |> slice(1:5), "{species} ({registros})")
+  x <- glue::glue_data(esp_planta_mas_obs |> slice(1:5), "_{species}_ ({registros_str})")
   x <- paste(x, collapse = ", ")
   phrase2 <- glue::glue("Las especies de plantas con más registros son: {x}.")
 
@@ -136,29 +147,42 @@ make_region_slides <- function(region){
   # ¿Cuál es el municipio con mayor número de especies marinas, endémicas, amenazadas?
 
   n_muni_mas_marinas <- subreg_tematica |>
-    select(slug_region, especies_marinas) |>
+    select(slug_region, label, especies_marinas) |>
     filter(!is.na(especies_marinas)) |>
-    slice_max(n = 10, order_by = especies_marinas)
+    slice_max(n = 10, order_by = especies_marinas) |>
+    select(label, n = especies_marinas)
 
   n_muni_mas_endemicas <- subreg_tematica |>
-    select(slug_region, especies_endemicas) |>
+    select(slug_region, label, especies_endemicas) |>
     filter(!is.na(especies_endemicas)) |>
-    slice_max(n = 10, order_by = especies_endemicas)
+    slice_max(n = 10, order_by = especies_endemicas) |>
+    select(label, n = especies_endemicas)
 
   n_muni_mas_amenazadas_global <- subreg_tematica |>
-    select(slug_region, especies_amenazadas_global_total) |>
+    select(slug_region, label, especies_amenazadas_global_total) |>
     filter(!is.na(especies_amenazadas_global_total)) |>
-    slice_max(n = 10, order_by = especies_amenazadas_global_total)
+    slice_max(n = 10, order_by = especies_amenazadas_global_total) |>
+    select(label, n = especies_amenazadas_global_total)
+
+
+  n_muni_mas_amenazadas_nacional <- subreg_tematica |>
+    select(slug_region, label, especies_amenazadas_nacional_total) |>
+    filter(!is.na(especies_amenazadas_nacional_total)) |>
+    slice_max(n = 10, order_by = especies_amenazadas_nacional_total) |>
+    select(label, n = especies_amenazadas_nacional_total)
 
   t <- n_muni_mas_endemicas
   gt <- sib_chart_gt_table(t,
-                     labels = c("Municipio", "Número de especies endémicas"))
+                     labels = c("Municipio", "Número de especies endémicas"),
+                     color = "#34d986")
   path1 <- glue::glue("static/charts/{region}/muni_mas_endemicas.html")
   gt::gtsave(gt, path1)
 
-  t <- n_muni_mas_amenazadas_global
+  t <- n_muni_mas_amenazadas_nacional
   gt <- sib_chart_gt_table(t,
-                           labels = c("Municipio", "Número de especies amenazadas (global)"))
+                           labels = c("Municipio", "Número de especies amenazadas (nacional)"),
+                           color = "#f59542"
+                           )
   path2 <- glue::glue("static/charts/{region}/muni_mas_amenazadas.html")
   gt::gtsave(gt, path2)
 

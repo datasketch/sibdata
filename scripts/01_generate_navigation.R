@@ -89,6 +89,11 @@ map(av_regions, function(region){
     left_join(patrocinadores, by = c("slug_patrocinador" = "slug"))
 
 
+  publicadores <- sib_tables("region_publicador") |>
+    filter(slug_region == region) |>
+    left_join(sib_tables("publicador"), by = c("slug_publicador" = "slug")) |>
+    select(slug_publicador, registros, especies, label, url_logo, url_socio) |>
+    arrange(desc(registros))
 
   l <- list(
     general_info = general_info,
@@ -97,7 +102,8 @@ map(av_regions, function(region){
     grupos_interes = reg_gr_int,
     tematica = tematica_list,
     territorio = territorio,
-    patrocinador = patrocinador
+    patrocinador = patrocinador,
+    publicadores = publicadores
     )
   jsonlite::write_json(l, paste0("static/data/",region, ".json"),
                    auto_unbox = TRUE, pretty =TRUE)

@@ -30530,7 +30530,208 @@
       ]
     }
   ],
-  "tematica": ["function (region) ", "{", "    reg_tematica <- region_tematica(region)", "    esp_reg <- dplyr::filter(sib_tables(\"especie_region\"), slug_region == ", "        region)", "    esp_tem <- sib_tables(\"especie_tematica\")", "    esp_reg_tem <- dplyr::select(dplyr::left_join(esp_reg, esp_tem), ", "        -registros)", "    tem <- sib_tables(\"tematica\")", "    d2 <- tidyr::pivot_longer(dplyr::select(reg_tematica, -fecha_corte), ", "        -starts_with(\"slug\"), names_to = c(\"indicador\"), values_to = \"count\")", "    inds <- sib_tables(\"ind_meta\")", "    d3 <- dplyr::left_join(d2, inds)", "    d4 <- dplyr::select(dplyr::select_if(d3, ~length(unique(.)) != ", "        1), -indicador)", "    d5 <- d4 %>% dplyr::relocate(count, .after = last_col())", "    d6 <- dplyr::select(dplyr::filter(dplyr::filter(dplyr::filter(d5, ", "        cobertura == \"total\"), tipo == \"especies\"), !is.na(slug_tematica)), ", "        slug_tematica, label, count)", "    tems_list <- dplyr::group_split(d6, slug_tematica)", "    tem_groups <- dplyr::pull(dplyr::group_keys(dplyr::group_by(d6, ", "        slug_tematica)), slug_tematica)", "    tematica_list <- purrr::map(tems_list, function(x) {", "        x$slug <- x$slug_tematica", "        esps_tem <- dplyr::filter(dplyr::select(esp_reg_tem, ", "            -slug_region), grepl(x$slug, slug_tematica))", "        x$title <- paste0(\"Lista especies: \", x$slug)", "        slug <- x$slug", "        path <- glue::glue(\"static/charts/{region}/{slug}.html\")", "        x$chart <- path", "        as.list(x)", "    })", "    tematica_list", "}"],
+  "tematica": [
+    {
+      "slug_tematica": "amenazadas-global",
+      "label": "Número de especies amenaza global",
+      "count": 145,
+      "slug": "amenazadas-global",
+      "title": "Lista especies: amenazadas-global",
+      "chart": "static/charts/tolima/amenazadas-global.html"
+    },
+    {
+      "slug_tematica": "amenazadas-global-cr",
+      "label": "Especies CR categoría global",
+      "count": 12,
+      "slug": "amenazadas-global-cr",
+      "title": "Lista especies: amenazadas-global-cr",
+      "chart": "static/charts/tolima/amenazadas-global-cr.html"
+    },
+    {
+      "slug_tematica": "amenazadas-global-dd",
+      "label": "Especies DD categoría global",
+      "count": 39,
+      "slug": "amenazadas-global-dd",
+      "title": "Lista especies: amenazadas-global-dd",
+      "chart": "static/charts/tolima/amenazadas-global-dd.html"
+    },
+    {
+      "slug_tematica": "amenazadas-global-en",
+      "label": "Especies EN categoría global",
+      "count": 44,
+      "slug": "amenazadas-global-en",
+      "title": "Lista especies: amenazadas-global-en",
+      "chart": "static/charts/tolima/amenazadas-global-en.html"
+    },
+    {
+      "slug_tematica": "amenazadas-global-ew",
+      "label": "Especies EW categoría global",
+      "count": 2,
+      "slug": "amenazadas-global-ew",
+      "title": "Lista especies: amenazadas-global-ew",
+      "chart": "static/charts/tolima/amenazadas-global-ew.html"
+    },
+    {
+      "slug_tematica": "amenazadas-global-ex",
+      "label": "Especies EX categoría global",
+      "count": 1,
+      "slug": "amenazadas-global-ex",
+      "title": "Lista especies: amenazadas-global-ex",
+      "chart": "static/charts/tolima/amenazadas-global-ex.html"
+    },
+    {
+      "slug_tematica": "amenazadas-global-lc",
+      "label": "Especies LC categoría global",
+      "count": 1995,
+      "slug": "amenazadas-global-lc",
+      "title": "Lista especies: amenazadas-global-lc",
+      "chart": "static/charts/tolima/amenazadas-global-lc.html"
+    },
+    {
+      "slug_tematica": "amenazadas-global-lr-lc",
+      "label": "Especies LR/LC categoría global",
+      "count": 3,
+      "slug": "amenazadas-global-lr-lc",
+      "title": "Lista especies: amenazadas-global-lr-lc",
+      "chart": "static/charts/tolima/amenazadas-global-lr-lc.html"
+    },
+    {
+      "slug_tematica": "amenazadas-global-lr-nt",
+      "label": "Especies LR/NT categoría global",
+      "count": 3,
+      "slug": "amenazadas-global-lr-nt",
+      "title": "Lista especies: amenazadas-global-lr-nt",
+      "chart": "static/charts/tolima/amenazadas-global-lr-nt.html"
+    },
+    {
+      "slug_tematica": "amenazadas-global-nt",
+      "label": "Especies NT categoría global",
+      "count": 58,
+      "slug": "amenazadas-global-nt",
+      "title": "Lista especies: amenazadas-global-nt",
+      "chart": "static/charts/tolima/amenazadas-global-nt.html"
+    },
+    {
+      "slug_tematica": "amenazadas-global-vu",
+      "label": "Especies VU categoría global",
+      "count": 89,
+      "slug": "amenazadas-global-vu",
+      "title": "Lista especies: amenazadas-global-vu",
+      "chart": "static/charts/tolima/amenazadas-global-vu.html"
+    },
+    {
+      "slug_tematica": "amenazadas-nacional",
+      "label": "Número de especies amenaza nacional",
+      "count": 128,
+      "slug": "amenazadas-nacional",
+      "title": "Lista especies: amenazadas-nacional",
+      "chart": "static/charts/tolima/amenazadas-nacional.html"
+    },
+    {
+      "slug_tematica": "amenazadas-nacional-cr",
+      "label": "Especies CR categoría nacional",
+      "count": 19,
+      "slug": "amenazadas-nacional-cr",
+      "title": "Lista especies: amenazadas-nacional-cr",
+      "chart": "static/charts/tolima/amenazadas-nacional-cr.html"
+    },
+    {
+      "slug_tematica": "amenazadas-nacional-en",
+      "label": "Especies EN categoría nacional",
+      "count": 31,
+      "slug": "amenazadas-nacional-en",
+      "title": "Lista especies: amenazadas-nacional-en",
+      "chart": "static/charts/tolima/amenazadas-nacional-en.html"
+    },
+    {
+      "slug_tematica": "amenazadas-nacional-vu",
+      "label": "Especies VU categoría nacional",
+      "count": 78,
+      "slug": "amenazadas-nacional-vu",
+      "title": "Lista especies: amenazadas-nacional-vu",
+      "chart": "static/charts/tolima/amenazadas-nacional-vu.html"
+    },
+    {
+      "slug_tematica": "cites",
+      "label": "Número de especies CITES",
+      "count": 322,
+      "slug": "cites",
+      "title": "Lista especies: cites",
+      "chart": "static/charts/tolima/cites.html"
+    },
+    {
+      "slug_tematica": "cites-i",
+      "label": "Especies I CITES",
+      "count": 15,
+      "slug": "cites-i",
+      "title": "Lista especies: cites-i",
+      "chart": "static/charts/tolima/cites-i.html"
+    },
+    {
+      "slug_tematica": "cites-i-ii",
+      "label": "Especies I-II CITES",
+      "count": 1,
+      "slug": "cites-i-ii",
+      "title": "Lista especies: cites-i-ii",
+      "chart": "static/charts/tolima/cites-i-ii.html"
+    },
+    {
+      "slug_tematica": "cites-ii",
+      "label": "Especies II CITES",
+      "count": 293,
+      "slug": "cites-ii",
+      "title": "Lista especies: cites-ii",
+      "chart": "static/charts/tolima/cites-ii.html"
+    },
+    {
+      "slug_tematica": "cites-iii",
+      "label": "Especies III CITES",
+      "count": 13,
+      "slug": "cites-iii",
+      "title": "Lista especies: cites-iii",
+      "chart": "static/charts/tolima/cites-iii.html"
+    },
+    {
+      "slug_tematica": "endemicas",
+      "label": "Número especies éndemicas",
+      "count": 612,
+      "slug": "endemicas",
+      "title": "Lista especies: endemicas",
+      "chart": "static/charts/tolima/endemicas.html"
+    },
+    {
+      "slug_tematica": "exotica-riesgo-invasion",
+      "label": "Número especies exoticas con potencial de invasión",
+      "count": 29,
+      "slug": "exotica-riesgo-invasion",
+      "title": "Lista especies: exotica-riesgo-invasion",
+      "chart": "static/charts/tolima/exotica-riesgo-invasion.html"
+    },
+    {
+      "slug_tematica": "exoticas",
+      "label": "Número especies exoticas",
+      "count": 152,
+      "slug": "exoticas",
+      "title": "Lista especies: exoticas",
+      "chart": "static/charts/tolima/exoticas.html"
+    },
+    {
+      "slug_tematica": "invasoras",
+      "label": "Número especies invasoras",
+      "count": 6,
+      "slug": "invasoras",
+      "title": "Lista especies: invasoras",
+      "chart": "static/charts/tolima/invasoras.html"
+    },
+    {
+      "slug_tematica": "migratorias",
+      "label": "Número especies migratorias",
+      "count": 89,
+      "slug": "migratorias",
+      "title": "Lista especies: migratorias",
+      "chart": "static/charts/tolima/migratorias.html"
+    }
+  ],
   "territorio": {
     "municipios": {
       "charts": [

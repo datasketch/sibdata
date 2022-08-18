@@ -92,7 +92,7 @@ region_gr_bio_data <- function(region){
     x$parent <- reg_gr_bio_parent |>
       filter(slug == x$slug)
 
-    species_list <- list_species(region, grupo_interes = x$slug)
+    species_list <- list_species(region, grupo_biologico = x$slug)
     species_list_top <- species_list |>
       arrange(desc(registros)) |>
       slice(1:50)
@@ -101,7 +101,19 @@ region_gr_bio_data <- function(region){
       arrange(registros) |>
       slice(1:50)
 
-
+    tematicas <- c("amenazadas-nacional", "amenazadas-global", "cites", "migratorias",
+                   "endemicas", "exoticas", "exoticas_riesgo_invasion", "invasoras")
+    species_list_tematica <- map(tematicas, function(tem){
+      #tem <- tematicas[6]
+      spe <- list_species(region, grupo_biologico = x$slug, tematica = tem)
+      spe <- spe |>
+        arrange(desc(registros)) |>
+        slice(1:50) |>
+        select(species, registros)
+      spe
+    })
+    names(species_list_tematica) <- tematicas
+    x$species_list_tematica <- species_list_tematica
     x
   })
   reg_gr_bio_list
@@ -141,6 +153,22 @@ region_gr_int_data <- function(region){
       arrange(registros) |>
       slice(1:50)
     x$species_list_bottom <- species_list_bottom
+
+    tematicas <- c("amenazadas-nacional", "amenazadas-global", "cites", "migratorias",
+                   "endemicas", "exoticas", "exoticas_riesgo_invasion", "invasoras")
+    species_list_tematica <- map(tematicas, function(tem){
+      #tem <- tematicas[6]
+      spe <- list_species(region, grupo_interes = x$slug, tematica = tem)
+      spe <- spe |>
+        arrange(desc(registros)) |>
+        slice(1:50) |>
+        select(species, registros)
+      spe
+    })
+    names(species_list_tematica) <- tematicas
+    x$species_list_tematica <- species_list_tematica
+
+
     x
   })
   reg_gr_int_list

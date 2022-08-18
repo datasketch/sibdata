@@ -77,7 +77,7 @@ map(av_regions, function(region){
       list(title = "Próximamente tendrás acceso a la información de las áreas protegidas", path = NULL)
     ),
     "reservas-naturales" = list(
-      list(title = "Próximamente tendrás acceso a la información de las reservas naturales", path = NULL)
+      list(title = "Próximamente tendrás acceso a la información de ecosistemas estratégicos", path = NULL)
     )
   )
 

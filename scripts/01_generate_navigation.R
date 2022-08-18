@@ -92,7 +92,8 @@ map(av_regions, function(region){
   publicadores <- sib_tables("region_publicador") |>
     filter(slug_region == region) |>
     left_join(sib_tables("publicador"), by = c("slug_publicador" = "slug")) |>
-    select(slug_publicador, registros, especies, label, url_logo, url_socio) |>
+    select(slug_publicador, registros, especies, label, pais_publicacion,
+           url_logo, url_socio) |>
     arrange(desc(registros))
 
   l <- list(

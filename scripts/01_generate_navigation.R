@@ -24,6 +24,9 @@ navigation_trees("tematica",
 
 publicadores_to_json("static/data/publicador.json")
 
+tooltips <- sib_tables("tematica") |>
+  select(slug, tooltip)
+jsonlite::write_json(tooltips, "static/data/tooltips.json")
 
 # Copy icons
 

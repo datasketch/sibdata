@@ -1,5 +1,6 @@
 library(sibdata)
 
+sib_available_tables()
 
 # generate_navigation
 navigation_trees("region",
@@ -27,6 +28,9 @@ publicadores_to_json("static/data/publicador.json")
 tooltips <- sib_tables("tematica") |>
   select(slug, tooltip)
 jsonlite::write_json(tooltips, "static/data/tooltips.json")
+
+
+
 
 # Copy icons
 
@@ -69,13 +73,21 @@ map(av_regions, function(region){
         list(title = "Observaciones por municipio", path = path2)
       )
     ),
-    "reserva-forestal-la-planada" = list(
-      list(title = "Próximamente tendrás acceso a la información de la reserva", path = NULL)
+    "areas-protegidas" = list(
+      list(title = "Próximamente tendrás acceso a la información de las áreas protegidas", path = NULL)
     ),
-    "resguardo-indigena-pialapi-pueblo-viejo" = list(
-      list(title = "Próximamente tendrás acceso a la información del resguardo", path = NULL)
+    "reservas-naturales" = list(
+      list(title = "Próximamente tendrás acceso a la información de las reservas naturales", path = NULL)
     )
   )
+
+  ##
+  patrocinadores <- sib_tables("patrocinador")
+  patrocinador <- sib_tables("region_patrocinador") |>
+    filter(slug_region == region)
+  patrocinador <- patrocinador |>
+    left_join(patrocinadores, by = c("slug_patrocinador" = "slug"))
+
 
 
   l <- list(
@@ -84,7 +96,8 @@ map(av_regions, function(region){
     grupos_biologicos = reg_gr_bio,
     grupos_interes = reg_gr_int,
     tematica = tematica_list,
-    territorio = territorio
+    territorio = territorio,
+    patrocinador = patrocinador
     )
   jsonlite::write_json(l, paste0("static/data/",region, ".json"),
                    auto_unbox = TRUE, pretty =TRUE)

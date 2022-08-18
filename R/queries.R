@@ -72,12 +72,26 @@ region_gr_bio_data <- function(region){
     dplyr::mutate(slug = slug_grupo_biologico) |>
     dplyr::relocate(slug)
 
+  parent <- sib_parent_region(region)
+  reg_gr_bio_parent <- sib_tables("region_grupo_biologico") |>
+    dplyr::filter(slug_region == parent) |>
+    dplyr::mutate(slug = slug_grupo_biologico) |>
+    dplyr::relocate(slug) |>
+    left_join(sib_tables("region"), by = c("slug_region" = "slug"))
+  reg_gr_bio_parent <- reg_gr_bio_parent |>
+    dplyr::select(slug, label, especies_region_total, registros_region_total)
+
+
   #keys <- reg_gr_bio |> group_by(slug) |> group_keys()
   reg_gr_bio_list <- reg_gr_bio |>
     group_split(slug)
   reg_gr_bio_list <- map(reg_gr_bio_list, function(x){
     #x <- reg_gr_bio_list[[1]]
     x <- as.list(x)
+
+    x$parent <- reg_gr_bio_parent |>
+      filter(slug == x$slug)
+
     species_list <- list_species(region, grupo_interes = x$slug)
     species_list_top <- species_list |>
       arrange(desc(registros)) |>
@@ -86,6 +100,8 @@ region_gr_bio_data <- function(region){
     species_list_bottom <- species_list |>
       arrange(registros) |>
       slice(1:50)
+
+
     x
   })
   reg_gr_bio_list
@@ -97,11 +113,25 @@ region_gr_int_data <- function(region){
     dplyr::mutate(slug = slug_grupo_interes_conservacion) |>
     dplyr::relocate(slug)
 
+  parent <- sib_parent_region(region)
+  reg_gr_int_parent <- sib_tables("region_grupo_interes_conservacion") |>
+    dplyr::filter(slug_region == parent) |>
+    dplyr::mutate(slug = slug_grupo_interes_conservacion) |>
+    dplyr::relocate(slug) |>
+    left_join(sib_tables("region"), by = c("slug_region" = "slug"))
+  reg_gr_int_parent <- reg_gr_int_parent |>
+    dplyr::select(slug, label, especies_region_total, registros_region_total)
+
+
   reg_gr_int_list <- reg_gr_int |>
     group_split(slug)
   reg_gr_int_list <- map(reg_gr_int_list, function(x){
     #x <- reg_gr_bio_list[[1]]
     x <- as.list(x)
+
+    x$parent <- reg_gr_int_parent |>
+      filter(slug == x$slug)
+
     species_list <- list_species(region, grupo_interes = x$slug)
     species_list_top <- species_list |>
       arrange(desc(registros)) |>

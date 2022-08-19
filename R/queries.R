@@ -40,6 +40,7 @@ tematica_list <- function(region){
     dplyr::group_keys() |> dplyr::pull(slug_tematica)
   #names(tems_list) <- tem_groups
 
+
   tematica_list <- purrr::map(tems_list, function(x){
     #x <- tems_list[[8]]
     x$slug <- x$slug_tematica
@@ -57,7 +58,28 @@ tematica_list <- function(region){
     as.list(x)
   })
 
-  tematica_list
+
+  amenazadas_global <- tematica_list[[1]][1:3]
+  amenazadas_nacional <- tematica_list[[1]][1:3]
+  endemicas <- tematica_list[[21]][1:3]
+  migratorias <- tematica_list[[25]][1:3]
+
+  tematica_list0 <- list(
+    list(
+      slug = "amenazadas",
+      label = "Las especies amenazadas se dividen en Nacional y Global",
+      children = list(amenazadas_global, amenazadas_nacional)
+    ),
+    list(
+      slug = "distribución",
+      label = "Las especies amenazadas se dividen en Nacional y Global",
+      children = list(endemicas, migratorias)
+    )
+  )
+
+
+
+  c(tematica_list0, tematica_list)
 
 }
 

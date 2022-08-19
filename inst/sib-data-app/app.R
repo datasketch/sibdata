@@ -10,7 +10,7 @@ ds <- read_rds("ds.rds")
 opts_grupo_biologico <- c("todos", ds$grupo_biologico$slug)
 opts_grupo_interes <-  c("todos", ds$grupo_interes_conservacion$slug)
 opts_region <- ds$region$slug
-opts_region <- c("tolima","narino","colombia", "boyaca", "santander",
+opts_region <- c("colombia", "narino", "boyaca", "santander", "tolima",
                  "resguardo-indigena-pialapi-pueblo-viejo",
                  "reserva-natural-la-planada")
 
@@ -34,7 +34,7 @@ ui <- panelsPage(
         body = div(
           # verbatimTextOutput("debug"),
           selectizeInput("sel_region","Seleccione Región",opts_region,
-                         selected = "narino"),
+                         selected = "colombia"),
           hr(),
           radioButtons("sel_grupo_type", "Tipo de grupo",
                        c( "Biológico" = "biologico", "Interés de Conservación" = "interes")),
@@ -46,7 +46,7 @@ ui <- panelsPage(
           ),
           hr(),
           radioButtons("registro_especie", "Tipo registo", c("Todos" = "todos", "Observaciones" = "registro","Especies"="especie")),
-          radioButtons("modo", "Cobertura", c("Todos" = "todos","Continental" = "continental","Marino" = "marinas")),
+          radioButtons("modo", "Modo", c("Todos" = "todos","Continental" = "continental","Marino" = "marinas")),
           radioButtons("tematica", "Temática", c("todas","amenazadas", "cites", "endemicas", "migratorias", "exoticas", "invasoras")),
           br()
         ),
@@ -54,10 +54,9 @@ ui <- panelsPage(
   panel(title = "Información",
         body = div(
           uiOutput("controls"),
-          #uiOutput("chart_controls"),
-          #uiOutput("viz_type"),
-          #uiOutput("viz"),
-          uiOutput("table"),
+          uiOutput("chart_controls"),
+          uiOutput("viz_type"),
+          uiOutput("viz"),
           br()
         ),
         footer = "")
@@ -199,34 +198,10 @@ server <-  function(input, output, session) {
 
   output$viz_type <- renderUI({
     selectInput("sel_chart_type","Seleccione tipo de visualización",
-                   available_charts())
+                available_charts())
   })
 
 
-  output$table <- renderUI({
-    if(input$region_type == "region"){
-      dd <- d_gr_reg()
-    }else{
-      dd <- d_gr_subreg()
-    }
-
-    vars_cobertura <- c("continental", "marino")
-    if(input$modo != "todos"){
-      vars_cobertura <- input$modo
-      dd <- dd |> select(contains(c("slug", vars_cobertura)))
-    }
-    if(input$tematica != "todas"){
-      vars_tematicas <- input$tematica
-      dd <- dd |> select(contains(c("slug",vars_tematicas)))
-    }
-    if(input$registro_especie != "todos"){
-      vars_reg_esp <- input$registro_especie
-      dd <- dd |> select(contains(c("slug",vars_reg_esp)))
-    }
-
-    renderDataTable(dd)
-
-  })
 
   output$viz <- renderUI({
 

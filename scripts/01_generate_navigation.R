@@ -67,18 +67,25 @@ map(av_regions, function(region){
   htmlwidgets::saveWidget(munis_chart2, path2)
 
   territorio <- list(
-    "municipios" = list(
+    list(
+      slug = "municipios",
+      label = "Municipios",
       charts = list(
-        list(title = "Especies por municipio", path = path1),
-        list(title = "Observaciones por municipio", path = path2)
+        list(title = "Especies por municipio", path = path1, layout = "title/chart"),
+        list(title = "Observaciones por municipio", path = path2, layout = "title/chart")
       )
     ),
-    "areas-protegidas" = list(
-      list(title = "Próximamente tendrás acceso a la información de las áreas protegidas", path = NULL)
-    ),
-    "reservas-naturales" = list(
-      list(title = "Próximamente tendrás acceso a la información de ecosistemas estratégicos", path = NULL)
-    )
+    list(
+      slug = "areas-protegidas",
+      label = "Áreas protegidas",
+      title = "Próximamente tendrás acceso a la información de las áreas protegidas",
+      charts = NULL
+      ),
+    list(
+      slug = "ecosistemas-estrategicos",
+      label = "Ecosistemas estratégicos",
+      title = "Próximamente tendrás acceso a la información de ecosistemas estratégicos",
+      charts = NULL)
   )
 
   ##
@@ -96,6 +103,12 @@ map(av_regions, function(region){
            url_logo, url_socio) |>
     arrange(desc(registros))
 
+
+
+  municipios_lista <- subreg_tematica |>
+    left_join(sib_tables("region") |> select(slug, label), by = c("slug_region" = "slug")) |>
+    select(slug =slug_region, label)
+
   l <- list(
     general_info = general_info,
     slides = slides,
@@ -104,10 +117,11 @@ map(av_regions, function(region){
     tematica = tem_list,
     territorio = territorio,
     patrocinador = patrocinador,
-    publicadores = publicadores
-    )
+    publicadores = publicadores,
+    municipios_lista = municipios_lista
+  )
   jsonlite::write_json(l, paste0("static/data/",region, ".json"),
-                   auto_unbox = TRUE, pretty =TRUE)
+                       auto_unbox = TRUE, pretty =TRUE)
 
 
 

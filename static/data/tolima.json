@@ -50516,32 +50516,36 @@
       "chart": "static/charts/tolima/migratorias.html"
     }
   ],
-  "territorio": {
-    "municipios": {
+  "territorio": [
+    {
+      "slug": "municipios",
+      "label": "Municipios",
       "charts": [
         {
           "title": "Especies por municipio",
-          "path": "static/charts/tolima/region_municipios_1.html"
+          "path": "static/charts/tolima/region_municipios_1.html",
+          "layout": "title/chart"
         },
         {
           "title": "Observaciones por municipio",
-          "path": "static/charts/tolima/region_municipios_2.html"
+          "path": "static/charts/tolima/region_municipios_2.html",
+          "layout": "title/chart"
         }
       ]
     },
-    "areas-protegidas": [
-      {
-        "title": "Próximamente tendrás acceso a la información de las áreas protegidas",
-        "path": {}
-      }
-    ],
-    "reservas-naturales": [
-      {
-        "title": "Próximamente tendrás acceso a la información de ecosistemas estratégicos",
-        "path": {}
-      }
-    ]
-  },
+    {
+      "slug": "areas-protegidas",
+      "label": "Áreas protegidas",
+      "title": "Próximamente tendrás acceso a la información de las áreas protegidas",
+      "charts": {}
+    },
+    {
+      "slug": "ecosistemas-estrategicos",
+      "label": "Ecosistemas estratégicos",
+      "title": "Próximamente tendrás acceso a la información de ecosistemas estratégicos",
+      "charts": {}
+    }
+  ],
   "patrocinador": [
     {
       "slug_region": "tolima",
@@ -52153,6 +52157,196 @@
       "pais_publicacion": "US",
       "url_logo": "https://statics.sibcolombia.net/sib-resources/images/santander/world.png",
       "url_socio": "https://www.gbif.org/publisher/d003dd60-94fa-11da-a99f-b8a03c50a862"
+    }
+  ],
+  "municipios_lista": [
+    {
+      "slug": "alpujarra",
+      "label": "Alpujarra"
+    },
+    {
+      "slug": "alvarado",
+      "label": "Alvarado"
+    },
+    {
+      "slug": "ambalema",
+      "label": "Ambalema"
+    },
+    {
+      "slug": "anzoategui",
+      "label": "Anzoátegui"
+    },
+    {
+      "slug": "armero",
+      "label": "Armero"
+    },
+    {
+      "slug": "ataco",
+      "label": "Ataco"
+    },
+    {
+      "slug": "cajamarca",
+      "label": "Cajamarca"
+    },
+    {
+      "slug": "carmen-de-apicala",
+      "label": "Carmen de Apicalá"
+    },
+    {
+      "slug": "casabianca",
+      "label": "Casabianca"
+    },
+    {
+      "slug": "chaparral",
+      "label": "Chaparral"
+    },
+    {
+      "slug": "coello",
+      "label": "Coello"
+    },
+    {
+      "slug": "coyaima",
+      "label": "Coyaima"
+    },
+    {
+      "slug": "cunday",
+      "label": "Cunday"
+    },
+    {
+      "slug": "dolores",
+      "label": "Dolores"
+    },
+    {
+      "slug": "espinal",
+      "label": "Espinal"
+    },
+    {
+      "slug": "falan",
+      "label": "Falan"
+    },
+    {
+      "slug": "flandes",
+      "label": "Flandes"
+    },
+    {
+      "slug": "fresno",
+      "label": "Fresno"
+    },
+    {
+      "slug": "guamo",
+      "label": "Guamo"
+    },
+    {
+      "slug": "herveo",
+      "label": "Herveo"
+    },
+    {
+      "slug": "honda",
+      "label": "Honda"
+    },
+    {
+      "slug": "ibague",
+      "label": "Ibagué"
+    },
+    {
+      "slug": "icononzo",
+      "label": "Icononzo"
+    },
+    {
+      "slug": "lerida",
+      "label": "Lérida"
+    },
+    {
+      "slug": "libano",
+      "label": "Líbano"
+    },
+    {
+      "slug": "melgar",
+      "label": "Melgar"
+    },
+    {
+      "slug": "murillo",
+      "label": "Murillo"
+    },
+    {
+      "slug": "natagaima",
+      "label": "Natagaima"
+    },
+    {
+      "slug": "ortega",
+      "label": "Ortega"
+    },
+    {
+      "slug": "palocabildo",
+      "label": "Palocabildo"
+    },
+    {
+      "slug": "piedras",
+      "label": "Piedras"
+    },
+    {
+      "slug": "planadas",
+      "label": "Planadas"
+    },
+    {
+      "slug": "prado",
+      "label": "Prado"
+    },
+    {
+      "slug": "purificacion",
+      "label": "Purificación"
+    },
+    {
+      "slug": "rioblanco",
+      "label": "Rioblanco"
+    },
+    {
+      "slug": "roncesvalles",
+      "label": "Roncesvalles"
+    },
+    {
+      "slug": "rovira",
+      "label": "Rovira"
+    },
+    {
+      "slug": "saldana",
+      "label": "Saldaña"
+    },
+    {
+      "slug": "san-antonio",
+      "label": "San Antonio"
+    },
+    {
+      "slug": "san-luis-tol",
+      "label": "San Luis"
+    },
+    {
+      "slug": "san-sebastian-de-mariquita",
+      "label": "San Sebastián de Mariquita"
+    },
+    {
+      "slug": "santa-isabel",
+      "label": "Santa Isabel"
+    },
+    {
+      "slug": "suarez-tol",
+      "label": "Suárez"
+    },
+    {
+      "slug": "valle-de-san-juan",
+      "label": "Valle de San Juan"
+    },
+    {
+      "slug": "venadillo",
+      "label": "Venadillo"
+    },
+    {
+      "slug": "villahermosa",
+      "label": "Villahermosa"
+    },
+    {
+      "slug": "villarrica",
+      "label": "Villarrica"
     }
   ]
 }

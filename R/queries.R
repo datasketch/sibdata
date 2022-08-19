@@ -55,7 +55,9 @@ tematica_list <- function(region){
       left_join(esp_reg)
 
     esps <- esps_tem |>
-      select(species, registros)
+      select(species, registros) |>
+      arrange(desc(registros)) |>
+      slice(1:50)
 
     #distinct(slug_especie, .keep_all = TRUE)
     #x$especies <- list(esps_tem)

@@ -10,7 +10,7 @@ ds <- read_rds("ds.rds")
 opts_grupo_biologico <- c("todos", ds$grupo_biologico$slug)
 opts_grupo_interes <-  c("todos", ds$grupo_interes_conservacion$slug)
 opts_region <- ds$region$slug
-opts_region <- c("narino","colombia", "boyaca", "santander", "tolima",
+opts_region <- c("tolima","narino","colombia", "boyaca", "santander",
                  "resguardo-indigena-pialapi-pueblo-viejo",
                  "reserva-natural-la-planada")
 

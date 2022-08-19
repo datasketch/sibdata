@@ -3,8 +3,12 @@
 tematica_list <- function(region){
 
   reg_tematica <- region_tematica(region)
+
+  esp_label <- sib_tables("especie") |> select(slug, species)
+
   esp_reg <- sib_tables("especie_region") |>
-    dplyr::filter(slug_region == region)
+    dplyr::filter(slug_region == region) |>
+    left_join(esp_label, by = c("slug_especie" = "slug"))
 
 
   esp_tem <- sib_tables("especie_tematica")
@@ -43,19 +47,26 @@ tematica_list <- function(region){
 
   tematica_list <- purrr::map(tems_list, function(x){
     #x <- tems_list[[8]]
+    x <- as.list(x)
     x$slug <- x$slug_tematica
     esps_tem <- esp_reg_tem |>
       dplyr::select(-slug_region) |>
-      dplyr::filter(grepl(x$slug, slug_tematica)) #|>
+      dplyr::filter(grepl(x$slug, slug_tematica)) |>
+      left_join(esp_reg)
+
+    esps <- esps_tem |>
+      select(species, registros)
+
     #distinct(slug_especie, .keep_all = TRUE)
     #x$especies <- list(esps_tem)
     x$title <- paste0("Lista especies: ", x$slug)
     #chart <- sib_chart_gt_table2(esps_tem)
     slug <- x$slug
-    path <- glue::glue("static/charts/{region}/{slug}.html")
+    #path <- glue::glue("static/charts/{region}/{slug}.html")
     #gt::gtsave(chart, path)
-    x$chart <- path
-    as.list(x)
+    #x$chart <- path
+    x$species_list <- esps
+    x
   })
 
 

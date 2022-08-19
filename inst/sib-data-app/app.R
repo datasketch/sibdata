@@ -14,6 +14,17 @@ opts_region <- c("colombia", "narino", "boyaca", "santander", "tolima",
                  "resguardo-indigena-pialapi-pueblo-viejo",
                  "reserva-natural-la-planada")
 
+available_tematicas <-c(
+  "Amenazadas Nacional" ="amenazadas_nacional",
+  "Amenazadas Global" ="amenazadas_global",
+  "Objeto de comercio (CITES)" = "cites",
+  "Endémicas" =  "endemicas",
+  "Migratorias" = "migratorias",
+  "Exóticas" = "exoticas",
+  "Invasoras" = "invasoras",
+  "Exóticas riesgo invación" = "exoticas_riesgo_invasion",
+  "Todas" = "todas"
+)
 
 
 #     shinyinvoer::buttonImageInput(ns('viz_selection'),
@@ -45,9 +56,9 @@ ui <- panelsPage(
                            selectizeInput("sel_grupo_interes","Seleccione grupo",opts_grupo_interes)
           ),
           hr(),
-          radioButtons("registro_especie", "Tipo registo", c("Todos" = "todos", "Observaciones" = "registro","Especies"="especie")),
-          radioButtons("modo", "Modo", c("Todos" = "todos","Continental" = "continental","Marino" = "marinas")),
-          radioButtons("tematica", "Temática", c("todas","amenazadas", "cites", "endemicas", "migratorias", "exoticas", "invasoras")),
+          radioButtons("sel_tipo", "Tipo", c("Observaciones" = "registros","Especies"="especies")),
+          radioButtons("sel_cobertura", "Cobertura", c("Total" = "total","Continental" = "continental","Marina" = "marinas")),
+          radioButtons("sel_tematica", "Temática", available_tematicas),
           br()
         ),
         footer = ""),

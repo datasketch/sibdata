@@ -14,7 +14,17 @@ ds <- read_rds("sib-data-app/ds.rds")
 
 
 
-
+available_tematicas <-c(
+  "Amenazadas Nacional" ="amenazadas_nacional",
+  "Amenazadas Global" ="amenazadas_global",
+  "Objeto de comercio (CITES)" = "cites",
+  "Endémicas" =  "endemicas",
+  "Migratorias" = "migratorias",
+  "Exóticas" = "exoticas",
+  "Invasoras" = "invasoras",
+  "Exóticas riesgo invación" = "exoticas_riesgo_invasion",
+  "Todas" = "todas"
+  )
 
 
 ## Inputs
@@ -22,36 +32,46 @@ ds <- read_rds("sib-data-app/ds.rds")
 input_gr_bio_o_int <- "biologico" # grupo biológico o de interés
 
 input <- list(
-  sel_grupo_type = "interes",
-  sel_region = "colombia",
-  sel_grupo_biologico = "algas",
-  sel_grupo_interes = "frailejones",
-  sel_modo = "continental",
-  region_type = "region",
-  ##
-  tematica = "amenazadas",
-  registro_especie = "especie",
-  modo = "continental"
-)
-
-input <- list(
-  sel_grupo_type = "interes",
-  sel_region = "narino",
-  sel_grupo_biologico = "todos",
-  sel_grupo_interes = "todos",
-  sel_modo = "continental"
-)
-
-input <- list(
   sel_grupo_type = "biologico",
-  sel_region = "narino",
+  sel_region = "tolima",
   sel_grupo_biologico = "todos",
   sel_grupo_interes = "todos",
-  sel_modo = "todos"
+  sel_cobertura = "continental",
+  sel_tipo = "especies",
 )
 
 
-## Grupo Biológico 0 
+# input <- list(
+#   sel_grupo_type = "interes",
+#   sel_region = "tolima",
+#   sel_grupo_biologico = "algas",
+#   sel_grupo_interes = "frailejones",
+#   sel_modo = "continental",
+#   region_type = "region",
+#   ##
+#   tematica = "amenazadas_nacioal",
+#   registro_especie = "especie",
+#   modo = "continental"
+# )
+
+
+# input <- list(
+#   sel_region = "narino",
+#   sel_grupo_type = "interes",
+#   sel_grupo_biologico = "todos",
+#   sel_grupo_interes = "todos",
+#   sel_modo = "todos"
+# )
+
+
+## Region
+
+region <- function(){
+  input$sel_region
+}
+region()
+
+## Grupo Biológico 0
 
 
 ## Select Grupo
@@ -65,7 +85,7 @@ sel_grupo <- function(){
 
 sel_grupo()
 
-# Select Grupo Data 
+# Select Grupo Data
 d_gr <- function(){
   if(input$sel_grupo_type == "biologico"){
     d <- ds$region_grupo_biologico
@@ -84,7 +104,7 @@ d_gr()
 
 d_gr_reg <- function(){
   d <- d_gr()
-  ind_reg <- d |> 
+  ind_reg <- d |>
     filter(slug_region == input$sel_region)
   ind_reg
 }
@@ -92,13 +112,8 @@ d_gr_reg()
 
 # Select subreg
 d_subreg <- function(){
-  d <- d_gr()
-  subregs <- ds$region |>
-    filter(parent == input$sel_region) |> 
-    pull(slug)
-  ind_subregs <- d |> 
-    filter(slug_region %in% subregs)
-  ind_subregs
+  #d <- d_gr()
+  subregion_tematica(region())
 }
 
 d_subreg()
@@ -111,15 +126,15 @@ d_subreg()
 vars_meta <- function(){
   inds <- ds$ind_meta
   if(input$tematica != "todas"){
-    inds <- inds |> 
+    inds <- inds |>
       filter(grepl(input$tematica,tematica))
   }
-  if(input$modo != "todos"){
-    inds <- inds |> 
+  if(input$cobertura != "todos"){
+    inds <- inds |>
       filter(grepl(input$modo,modo))
   }
   if(input$registro_especie != "todos"){
-    inds <- inds |> 
+    inds <- inds |>
       filter(grepl(input$registro_especie,tipo))
   }
   inds |> pull(indicador)
@@ -135,17 +150,17 @@ data <- function(){
   vars <- c("slug", vars_meta())
   d <- d |>
     select(contains(vars))
-  
-  d2 <- d |> 
-    pivot_longer(-starts_with("slug"), 
+
+  d2 <- d |>
+    pivot_longer(-starts_with("slug"),
                  names_to = c("indicador"),
                  values_to = "count")
-  
-  inds <- ds$ind_meta |> 
+
+  inds <- ds$ind_meta |>
     filter(indicador %in% names(d))
   d3 <- left_join(d2, inds)
-  d4 <- d3 |> 
-    select_if(~length(unique(.))!= 1) |> 
+  d4 <- d3 |>
+    select_if(~length(unique(.))!= 1) |>
     select(-indicador)
   d5 <- d4 %>% relocate(count, .after = last_col())
   d5
@@ -162,8 +177,8 @@ chart_vars <- function(){
 
 
 
-especies_amenazadas <- amenazadas |> 
-  filter(tipo == "especies") |> 
+especies_amenazadas <- amenazadas |>
+  filter(tipo == "especies") |>
   select(-tipo)
 
 h <- hgchmagic::hgch_bar_CatNum(especies_amenazadas,
@@ -189,7 +204,7 @@ h
 
 ########
 
-indicadores_sel_region <- ds$region |> 
+indicadores_sel_region <- ds$region |>
   filter(slug == sel_region)
 
 top_tematicas <- tematica |> filter(parent == "0") |> pull(slug)
@@ -197,7 +212,7 @@ top_tematicas <- tematica |> filter(parent == "0") |> pull(slug)
 especie_tematica <- read_delim("db-cifras-sib/especie_tematica.tsv")
 esp_tematica_sel_region <- especie_tematica |>
   filter(slug_region == sel_region) |>
-  select(-slug_region) 
+  select(-slug_region)
 
 
 # for a given temática level, make temáticas intermediate tables
@@ -207,57 +222,57 @@ level <- "amenazadas_nacional"
 
 amenazadas_nacional <- indicadores_sel_region |> select(contains(level))
 
-a <- amenazadas_nacional |> 
-  pivot_longer(everything(), 
+a <- amenazadas_nacional |>
+  pivot_longer(everything(),
                names_to = c("tipo", "clasificacion"),
                names_pattern = "(.*)amenazadas_nacional(.*)",
                values_to = "count"
-               )
-a <- a |> mutate(tipo = gsub("^_|_$","", tipo), 
+  )
+a <- a |> mutate(tipo = gsub("^_|_$","", tipo),
                  clasificacion = gsub("_","", clasificacion))
 
 totales <- a |> filter(nchar(clasificacion) == 0)
 amenazadas <- a |> filter(!nchar(clasificacion) == 0)
 
-especies_amenazadas <- amenazadas |> 
-  filter(tipo == "especies") |> 
+especies_amenazadas <- amenazadas |>
+  filter(tipo == "especies") |>
   select(-tipo)
 
 h <- hgchmagic::hgch_bar_CatNum(especies_amenazadas,
-                           title = "Especies amenazadas nacionales")
+                                title = "Especies amenazadas nacionales")
 h
 htmlwidgets::saveWidget(h, "narino/especies_amenazadas_nacionales.html")
 
 
 h <- hgchmagic::hgch_donut_CatNum(especies_amenazadas,
-                           title = "Especies amenazadas nacionales",
-                           color_by = "clasificacion")
+                                  title = "Especies amenazadas nacionales",
+                                  color_by = "clasificacion")
 htmlwidgets::saveWidget(h, "narino/especies_amenazadas_nacionales-donut.html")
 
 
 level <- "endemica"
 endemica <- indicadores_sel_region |> select(contains(level))
 
-a <- endemica |> 
-  pivot_longer(everything(), 
+a <- endemica |>
+  pivot_longer(everything(),
                names_to = c("tipo"),
                names_pattern = "(.*)endemicas",
                values_to = "count"
   )
 a <- a |> mutate(tipo = gsub("^_|_$","", tipo))
 
-especies_endemicas <- a |> 
-  filter(grepl("especies",tipo)) |> 
+especies_endemicas <- a |>
+  filter(grepl("especies",tipo)) |>
   filter(tipo == "especies")
 
 h <- hgchmagic::hgch_bar_CatNum(especies_endemicas,
-                           title = "Especies endémicas nacionales")
+                                title = "Especies endémicas nacionales")
 htmlwidgets::saveWidget(h, "narino/especies_endemicas.html")
 
 
-esp_endemicas <- esp_tematica_sel_region |> 
-  filter(slug_tematica ==  "endemicas") |> 
-  select(slug = slug_especie) |> 
+esp_endemicas <- esp_tematica_sel_region |>
+  filter(slug_tematica ==  "endemicas") |>
+  select(slug = slug_especie) |>
   left_join(especies)
 
 t <- DT::datatable(esp_endemicas)
@@ -266,11 +281,11 @@ htmlwidgets::saveWidget(t, "narino/esp_endemicas_list.html")
 
 # Publicadores
 pubs_sel_region <- publicadores |> filter(slug_region == "narino")
-pubs_sel_region <- pubs_region |> 
-  filter(slug_region == "narino") |> 
-  left_join(pubs_sel_region, 
+pubs_sel_region <- pubs_region |>
+  filter(slug_region == "narino") |>
+  left_join(pubs_sel_region,
             c("slug_publicador" = "slug"))
-  
+
 
 
 

@@ -50,7 +50,7 @@ map(av_regions, function(region){
   reg_gr_int <- region_gr_int_data(region)
 
 
-
+  # Temáticas
 
   tem_list <- tematica_list(region)
 
@@ -106,7 +106,6 @@ map(av_regions, function(region){
 
 
   municipios_lista <- subreg_tematica |>
-    left_join(sib_tables("region") |> select(slug, label), by = c("slug_region" = "slug")) |>
     select(slug =slug_region, label)
 
   l <- list(

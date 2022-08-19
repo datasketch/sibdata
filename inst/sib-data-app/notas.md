@@ -1,12 +1,19 @@
 
 
-ocultar salobres
-boyacá, santander, tolima y todos
+primero sale el mapa del departamento
+ver por registros o por especies
 
 
-Nombres filtros:
-tipo registro -> "Tipo"
-modo?
+
+
+
+
+
+
+
+
+# DONE
+
 
 tematica
 amenazadas
@@ -19,24 +26,34 @@ exoticas
 invasoras
 exoticas_riesgo_invasion
 
-Ver cuáles parejas de variales tienen sentido:
-Ej:
-- Categoría amenza vs Global o nacional
 
+Nombres filtros:
+tipo registro -> "Tipo"
+modo?
 
 
 Separar vista de tabla de visualizaciones
 
-
-
-
-
 Temáticas:
 Todas: solo para la tabla
 
-amenazadas ->
-o global o nacional
+
+amenazadas -> o global o nacional
 -> subcategorias
+
+
+# TODO
+
+ocultar salobres
+boyacá, santander, tolima y todos
+
+
+
+
+Ver cuáles parejas de variales tienen sentido:
+Ej:
+- Categoría amenza vs Global o nacional
+
 
 
 Amenzadas:

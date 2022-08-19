@@ -56,6 +56,7 @@ tematica_list <- function(region){
 
     esps <- esps_tem |>
       select(species, registros) |>
+      distinct() |>
       arrange(desc(registros)) |>
       slice(1:50)
 
@@ -73,7 +74,7 @@ tematica_list <- function(region){
 
 
   amenazadas_global <- tematica_list[[1]][1:3]
-  amenazadas_nacional <- tematica_list[[1]][1:3]
+  amenazadas_nacional <- tematica_list[[12]][1:3]
   endemicas <- tematica_list[[21]][1:3]
   migratorias <- tematica_list[[25]][1:3]
 
@@ -216,9 +217,15 @@ region_tematica <- function(region){
 }
 
 subregion_tematica <- function(region){
+
+  regs <- ds$region |> select(slug_region = slug, label)
+
   subregs <- sib_available_subregions(region)
   subreg_tematica <- sib_tables("region_tematica") |>
-    dplyr::filter(slug_region %in% subregs)
+    dplyr::filter(slug_region %in% subregs) |>
+    dplyr::left_join(regs, by = "slug_region") |>
+    dplyr::select(-fecha_corte) |>
+    dplyr::relocate(slug_region, label, everything())
   subreg_tematica
 }
 

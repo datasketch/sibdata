@@ -44,6 +44,7 @@ ds$ind_meta <- ind_meta
 #saveRDS(ds, "inst/sib-data-app/ds.rds")
 
 
+# Create grupo table
 names(ds$region_grupo_biologico)
 grupo_bio <- ds$region_grupo_biologico |>
   rename(slug_grupo = slug_grupo_biologico)
@@ -53,6 +54,19 @@ grupo_int <- ds$region_grupo_interes_conservacion |>
 region_grupo_tematica <- bind_rows(list(biologico = grupo_bio, interes = grupo_int),
                    .id = "grupo_tipo")
 ds$region_grupo_tematica <- region_grupo_tematica
+
+
+# Create especie_grupo table
+
+especie_grupo_bio <- ds$especie_grupo_biologico |>
+  rename(slug_grupo = slug_grupo_biologico)
+especie_grupo_int <- ds$especie_grupo_interes_conservacion |>
+  rename(slug_grupo = slug_grupo_interes_conservacion)
+especie_grupo <- bind_rows(list(biologico = especie_grupo_bio, interes = especie_grupo_int),
+                                   .id = "grupo_tipo")
+ds$especie_grupo <- especie_grupo
+
+
 available_tables <- names(ds)
 
 usethis::use_data(ds, available_tables, overwrite = TRUE)

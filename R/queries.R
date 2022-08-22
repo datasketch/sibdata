@@ -132,7 +132,7 @@ region_gr_bio_data <- function(region){
     species_list <- list_species(region, grupo_biologico = x$slug)
     species_list_top <- species_list |>
       arrange(desc(registros)) |>
-      slice(1:50)
+      slice(1:500)
     x$species_list_top <- species_list_top
     species_list_bottom <- species_list |>
       arrange(registros) |>

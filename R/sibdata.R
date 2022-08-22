@@ -8,6 +8,7 @@ sibdata <- function(region,
                     subregiones = FALSE,
                     with_parent = FALSE,
                     tidy = TRUE,
+                    n_especies = TRUE,
                     all_indicators = FALSE){
 
   if(!is.null(tipo)) check_cases_values("tipo", tipo)
@@ -28,6 +29,12 @@ sibdata <- function(region,
     d <- sibdata_tidify(d, cobertura = cobertura,
                         tematica = tematica, all_indicators = all_indicators)
   }
+
+  if(n_especies){
+    n <- d |> filter(indicador == "especies_region_total") |> pull(count)
+    return(n)
+  }
+
   return(d)
 }
 
@@ -135,9 +142,6 @@ check_cases_values <- function(param, value){
   }
 
 }
-
-
-
 
 
 

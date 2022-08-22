@@ -12,19 +12,19 @@ copy_icons <- function(path){
 }
 
 
-#' @export
-sib_merge_region_label <- function(d){
-  regs <- sib_tables("region") |> select(slug_region = slug, label)
-  if("slug_region" %in% names(d)){
-    d <- d |>
-      left_join(regs, by = "slug_region") |>
-      relocate(slug_region, label, everything())
+
+
+select_non_single_cat_cols <- function(x){
+  ind_count <- x |> select(indicador, count)
+  has_unique_vals <- function(xx){
+    if(is.numeric(xx)) return(FALSE)
+    if(all(is.na(xx))) return(FALSE)
+    length(unique(xx))== 1
   }
-  if("slug" %in% names(d) && !"slug_region" %in% names(d)){
-    d <- d |>
-      left_join(regs, by = c("slug"="slug_region")) |>
-      relocate(slug, label, everything())
-  }
-  d
+  x |>
+    select(-indicador, -count) |>
+    select_if(~!has_unique_vals(.)) |>
+    bind_cols(ind_count)
 }
+
 

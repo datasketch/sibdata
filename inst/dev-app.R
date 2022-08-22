@@ -4,27 +4,7 @@ library(ggmagic)
 library(hgchmagic)
 
 
-
-
-ds <- read_rds("sib-data-app/ds.rds")
-
-#indicadores <- read_csv("indicadores_meta.csv")
-
-### Charts
-
-
-
-available_tematicas <-c(
-  "Amenazadas Nacional" ="amenazadas_nacional",
-  "Amenazadas Global" ="amenazadas_global",
-  "Objeto de comercio (CITES)" = "cites",
-  "Endémicas" =  "endemicas",
-  "Migratorias" = "migratorias",
-  "Exóticas" = "exoticas",
-  "Invasoras" = "invasoras",
-  "Exóticas riesgo invación" = "exoticas_riesgo_invasion",
-  "Todas" = "todas"
-  )
+av_tems <- sib_available_tematicas()
 
 
 ## Inputs
@@ -32,12 +12,11 @@ available_tematicas <-c(
 input_gr_bio_o_int <- "biologico" # grupo biológico o de interés
 
 input <- list(
-  sel_grupo_type = "biologico",
   sel_region = "tolima",
-  sel_grupo_biologico = "todos",
-  sel_grupo_interes = "todos",
-  sel_cobertura = "continental",
   sel_tipo = "especies",
+  sel_grupo_type = "biologico",
+  sel_grupo = "todos",
+  sel_cobertura = "continental"
 )
 
 
@@ -85,8 +64,31 @@ sel_grupo <- function(){
 
 sel_grupo()
 
+
+
+data <- function(){
+  region <- input$sel_region
+  grupo <- input$sel_grupo
+  tipo <- input$sel_tipo
+  cobertura <- input$sel_cobertura
+  tematica <- input$sel_tematica
+  d <- sibdata(region, grupo = grupo, tipo = tipo,
+               cobertura = cobertura,
+               tematica = tematica,
+               subregiones = subregiones,
+               with_parent = with_parent)
+  d
+}
+
+
+
+
 # Select Grupo Data
 d_gr <- function(){
+
+
+
+
   if(input$sel_grupo_type == "biologico"){
     d <- ds$region_grupo_biologico
     if(sel_grupo() != "todos")

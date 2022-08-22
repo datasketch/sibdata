@@ -43,6 +43,16 @@ ds$ind_meta <- ind_meta
 #saveRDS(ds, "ds.rds")
 saveRDS(ds, "inst/sib-data-app/ds.rds")
 
+
+names(ds$region_grupo_biologico)
+grupo_bio <- ds$region_grupo_biologico |>
+  rename(slug_grupo = slug_grupo_biologico)
+grupo_int <- ds$region_grupo_interes_conservacion |>
+  rename(slug_grupo = slug_grupo_interes_conservacion)
+
+region_grupo_tematica <- bind_rows(list(biologico = grupo_bio, interes = grupo_int),
+                   .id = "grupo_tipo")
+ds$region_grupo_tematica <- region_grupo_tematica
 available_tables <- names(ds)
 
 usethis::use_data(ds, available_tables, overwrite = TRUE)

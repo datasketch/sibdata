@@ -4,65 +4,66 @@ library(shinypanels)
 library(shiny)
 library(DT)
 library(hgchmagic)
-
-ds <- read_rds("ds.rds")
-
-opts_grupo_biologico <- c("todos", ds$grupo_biologico$slug)
-opts_grupo_interes <-  c("todos", ds$grupo_interes_conservacion$slug)
-opts_region <- ds$region$slug
-opts_region <- c("colombia", "narino", "boyaca", "santander", "tolima",
-                 "resguardo-indigena-pialapi-pueblo-viejo",
-                 "reserva-natural-la-planada")
-
-available_tematicas <-c(
-  "Amenazadas Nacional" ="amenazadas_nacional",
-  "Amenazadas Global" ="amenazadas_global",
-  "Objeto de comercio (CITES)" = "cites",
-  "Endémicas" =  "endemicas",
-  "Migratorias" = "migratorias",
-  "Exóticas" = "exoticas",
-  "Invasoras" = "invasoras",
-  "Exóticas riesgo invación" = "exoticas_riesgo_invasion",
-  "Todas" = "todas"
-)
+library(sibdata)
+library(shinyinvoer)
 
 
-#     shinyinvoer::buttonImageInput(ns('viz_selection'),
-#                                   " ",#div(class="title-data-select", "Selecciona tipo de visualización"),
-#                                   images = possible_viz,
-#                                   path = app_sys("app/www/viz_icons/"),#app_sys(paste0("app/www/viz_icons/", "reconocimientoFacialApp")),
-#                                   active = actual_but$active,
-#                                   #tooltips = viz_tool(),
-#                                   imageStyle = list(borderColor = "#ffffff",
-#                                                     borderSize = "1px",
-#                                                     padding = "7px",
-#                                                     shadow = TRUE)
-#     )
+custom_css <- "
+#debug{
+max-height: 150px;
+overflow: auto;
+}
+
+"
+
+opts_grupo_biologico <- c("Todos" = "todos", sib_available_grupos(tipo = "biologico"))
+opts_grupo_interes <-  c("Todos" = "todos", sib_available_grupos(tipo = "interes"))
+
+opts_region <- sib_available_regions()
+# opts_region <- c("colombia", "narino", "boyaca", "santander", "tolima",
+#                  "resguardo-indigena-pialapi-pueblo-viejo",
+#                  "reserva-natural-la-planada")
+
+opts_tematicas <- sib_available_tematicas()
 
 
-ui <- panelsPage(
-  panel(title = "Opciones", width = 250,
+ui <- panelsPage(styles = custom_css,
+  panel(title = "Opciones", width = 300,
         body = div(
-          # verbatimTextOutput("debug"),
-          selectizeInput("sel_region","Seleccione Región",opts_region,
-                         selected = "colombia"),
+          verbatimTextOutput("debug"),
+          selectizeInput("sel_region","Seleccione Región",
+                         rev(opts_region),
+                         selected = "Tolima"
+                         ),
           hr(),
           radioButtons("sel_grupo_type", "Tipo de grupo",
-                       c( "Biológico" = "biologico", "Interés de Conservación" = "interes")),
+                       c("Biológico" = "biologico", "Interés de Conservación" = "interes")),
           conditionalPanel("input.sel_grupo_type == 'biologico'",
-                           selectizeInput("sel_grupo_biologico","Seleccione grupo",opts_grupo_biologico)
+                           selectizeInput("sel_grupo_bio","Seleccione grupo",opts_grupo_biologico)
           ),
           conditionalPanel("input.sel_grupo_type == 'interes'",
-                           selectizeInput("sel_grupo_interes","Seleccione grupo",opts_grupo_interes)
+                           selectizeInput("sel_grupo_int","Seleccione grupo",opts_grupo_interes)
           ),
           hr(),
           radioButtons("sel_tipo", "Tipo", c("Observaciones" = "registros","Especies"="especies")),
-          radioButtons("sel_cobertura", "Cobertura", c("Total" = "total","Continental" = "continental","Marina" = "marinas")),
-          radioButtons("sel_tematica", "Temática", available_tematicas),
+          radioButtons("sel_cobertura", "Cobertura", c("Total" = "total","Continental" = "continentales","Marina" = "marinas")),
+          radioButtons("sel_tematica", "Temática", opts_tematicas),
           br()
         ),
         footer = ""),
-  panel(title = "Información",
+  panel(title = "Gráficos",
+        # header_right = shinyinvoer::buttonImageInput('viz_selection',
+        #                                     " ",#div(class="title-data-select", "Selecciona tipo de visualización"),
+        #                                     images = c('table','pie','bar', 'treemap'),
+        #                                     path = "viz_icons/",
+        #                                     nrow = 1,
+        #                                     active = "pie",
+        #                                     #tooltips = viz_tool(),
+        #                                     imageStyle = list(borderColor = "#ffffff",
+        #                                                       borderSize = "1px",
+        #                                                       padding = "7px",
+        #                                                       shadow = TRUE)
+        #       ),
         body = div(
           uiOutput("controls"),
           uiOutput("chart_controls"),
@@ -80,8 +81,49 @@ server <-  function(input, output, session) {
     #capture.output(str(data()))
     #glimpse(data())
     #input$sel_grupo
-    available_chart_vars()
+    #glimpse(inputs())
+    #summary(list(a=1, b= "x"))
+    what <- c(input$sel_grupo_type, inputs())
+    what <- data()
+    what <- inputs()
+    what <- input$viz_selection
+    paste0(capture.output(what),collapse = "\n")
   })
+
+  inputs <- reactive({
+
+    subregiones = input$sugrebiones %||% FALSE
+    with_parent = input$with_parent %||% FALSE
+
+    grupo <- ifelse(input$sel_grupo_type == "biologico",
+                        input$sel_grupo_bio, input$sel_grupo_int)
+    if(grupo == "todos") grupo <- NULL
+
+    list(
+      region = input$sel_region,
+      grupo = grupo,
+      tipo = input$sel_tipo,
+      cobertura = input$sel_cobertura,
+      tematica = input$sel_tematica,
+      subregiones = subregiones,
+      with_parent = with_parent
+    )
+  })
+
+  data <- function(){
+    #req(inputs)
+    inp <- inputs()
+
+    d <- sibdata(inp$region,
+                 grupo = inp$grupo,
+                 tipo = inp$tipo,
+                 cobertura = inp$cobertura,
+                 tematica = inp$tematica,
+                 subregiones = inp$subregiones,
+                 with_parent = inp$with_parent)
+    d <- d |> sib_merge_ind_label()
+    d
+  }
 
 
   sel_grupo <- reactive({
@@ -92,119 +134,28 @@ server <-  function(input, output, session) {
     }
   })
 
-  d_gr <- reactive({
-    if(input$sel_grupo_type == "biologico"){
-      d <- ds$region_grupo_biologico
-      if(sel_grupo() != "todos")
-        d <- d |> filter(slug_grupo_biologico == sel_grupo())
-    } else {
-      d <- ds$region_grupo_interes_conservacion
-      if(sel_grupo() != "todos")
-        d <- d |> filter(slug_grupo_interes_conservacion == sel_grupo())
-    }
-    d
-  })
-
-  d_gr_reg <- reactive({
-    d <- d_gr()
-    ind_reg <- d |>
-      filter(slug_region == input$sel_region)
-    ind_reg
-  })
-
-  d_gr_subreg <- reactive({
-    d <- d_gr()
-    subregs <- ds$region |>
-      filter(parent == input$sel_region) |>
-      pull(slug)
-    ind_subregs <- d |>
-      filter(slug_region %in% subregs)
-    ind_subregs
-  })
-
-
-  vars_meta <- reactive({
-    inds <- ds$ind_meta
-    if(input$tematica != "todas"){
-      inds <- inds |>
-        filter(grepl(input$tematica,tematica))
-    }
-    if(input$modo != "todos"){
-      inds <- inds |>
-        filter(grepl(input$modo,modo))
-    }
-    if(input$registro_especie != "todos"){
-      inds <- inds |>
-        filter(grepl(input$registro_especie,tipo))
-    }
-    inds |> pull(indicador)
-  })
-
-
-  data_selected <- reactive({
-    #req(d_gr_reg())
-    d <- d_gr_reg()
-    if(input$region_type == "subregion"){
-      d <- d_gr_subreg()
-    }
-
-    vars <- c("slug", vars_meta())
-
-    d <- d |>
-      select(contains(vars))
-
-    d2 <- d |>
-      pivot_longer(-starts_with("slug"),
-                   names_to = c("indicador"),
-                   values_to = "count")
-
-    inds <- ds$ind_meta |>
-      filter(indicador %in% names(d))
-    d3 <- left_join(d2, inds)
-    d4 <- d3 |>
-      select(-indicador) |>
-      select_if(~length(unique(.))!= 1)
-    d5 <- d4 |>
-      relocate(count, .after = last_col())
-    return(d5)
-  })
-
-  available_chart_vars <- reactive({
-    #req(data())
-    d <- data_selected()
-    d <- d |> select(-count)
-    names(d)
-  })
-
-  data <- reactive({
-    dd <- data_selected()
-    dd <- dd |>
-      select(c(any_of(input$chart_vars),"count"))
-    dd
-  })
-
   available_charts <- reactive({
     #dd <- data()
-    c("table","pie", "donut", "treemap", "bar")
+    c("Torta"= "pie","Tabla"="table", "Dona" = "donut", "Treemap" = "treemap","Barras" = "bar")
   })
 
 
   output$controls <- renderUI({
-    out <- list()
-    out <- list(
-      radioButtons("region_type", "Tipo",
-                   c( "Total región"="region", "Subregiones"="subregion")),
-      br()
-    )
-    out
+    # out <- list()
+    # out <- list(
+    #   radioButtons("region_type", "Tipo",
+    #                c( "Total región"="region", "Subregiones"="subregion")),
+    #   br()
+    # )
+    # out
   })
 
   output$chart_controls <- renderUI({
     #req(available_chart_vars())
-    selectizeInput("chart_vars","Seleccione variables a visualizar",
-                   available_chart_vars(), multiple = FALSE,
-                   selected = available_chart_vars()[2],
-                   options = list(plugins = list('drag_drop')), width = 200)
+    # selectizeInput("chart_vars","Seleccione variables a visualizar",
+    #                available_chart_vars(), multiple = FALSE,
+    #                selected = available_chart_vars()[2],
+    #                options = list(plugins = list('drag_drop')), width = 200)
   })
 
   output$viz_type <- renderUI({
@@ -215,7 +166,7 @@ server <-  function(input, output, session) {
 
 
   output$viz <- renderUI({
-
+    req(data())
     dd <- data()
 
     sel_chart_type <- input$sel_chart_type

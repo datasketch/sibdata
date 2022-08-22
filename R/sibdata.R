@@ -1,131 +1,168 @@
 
+#' @export
 sibdata <- function(region,
                     tipo = NULL,
                     cobertura = NULL,
                     tematica = NULL,
-                    grupo_biologico = NULL,
-                    grupo_interes = NULL,
-                    subregiones = NULL,
-                    parent = NULL,
-                    use_case = NULL){
+                    grupo = NULL,
+                    subregiones = FALSE,
+                    with_parent = FALSE,
+                    tidy = TRUE,
+                    all_indicators = FALSE){
 
-  cases <- list(tipo = tipo,
-                cobertura = cobertura,
-                tematica = tematica,
-                grupo_biologico = grupo_biologico,
-                grupo_interes = grupo_interes,
-                subregiones = subregiones,
-                parent = parent)
+  if(!is.null(tipo)) check_cases_values("tipo", tipo)
+  if(!is.null(cobertura)) check_cases_values("cobertura", cobertura)
+  if(!is.null(tematica)) check_cases_values("tematica", tematica)
+  if(!is.null(grupo)) check_cases_values("grupo", grupo)
 
-  case <- check_cases(cases)
+  d <- sibdata_wide(region,
+                    tipo = tipo,
+                    cobertura = cobertura,
+                    tematica = tematica,
+                    grupo = grupo,
+                    subregiones = subregiones,
+                    with_parent = with_parent)
 
-  if(case == "only_region"){
-    d <- region_tematica(region) |>
-      sib_merge_region_label()
+
+  if(tidy){
+    d <- sibdata_tidify(d, cobertura = cobertura,
+                        tematica = tematica, all_indicators = all_indicators)
   }
-
-  if(case == "only_tipo"){
-    d <- region_tematica(region) |>
-      sib_merge_region_label()
-    if(tipo == "todos"){
-      d <- d
-      # d <- d |>
-      #   select(c("slug_region", "label"), starts_with(tipo))
-    }else{
-      d <- d |>
-        select(c("slug_region", "label"), starts_with(paste0(tipo,"_region_total")))
-    }
-  }
-
-  if(case == "only_cobertura"){
-    d <- region_tematica(region) |>
-      sib_merge_region_label()
-    if(tipo == "total"){
-      d <- d
-      # d <- d |>
-      #   select(c("slug_region", "label"), starts_with(tipo))
-    }else{
-      d <- d |>
-        select(c("slug_region", "label"), starts_with(paste0(tipo,"_region_total")))
-    }
-  }
-
-  if(case == "subregions"){
-    d <- subregion_tematica(region)
-  }
-  if(case == "subregions_tipo"){
-    d <- subregion_tematica(region) |>
-      select(c("slug_region", "label"), starts_with(tipo))
-  }
-
   return(d)
-
 }
 
-check_cases <- function(cases){
 
-  cases_null <- purrr::map(cases, is.null)
 
-  only_region <- all(unlist(cases_null))
-  if(only_region) return("only_region")
 
-  if(!cases_null$tipo){
-    check_cases_values("tipo", cases$tipo)
-    only_tipo <- only_param(cases, "tipo")
-    if(only_tipo) return("only_tipo")
+sibdata_wide <- function(region,
+                         tipo = NULL,
+                         cobertura = NULL,
+                         tematica = NULL,
+                         grupo = NULL,
+                         subregiones = FALSE,
+                         with_parent = FALSE){
+  if(subregiones){
+    d <- subregion_tematica(region)
+  } else if(with_parent){
+    d <- with_parent_tematica(region)
+  } else if (is.null(grupo)){
+    d <- region_tematica(region)
+  } else {
+    d <- region_grupo_tematica(region, grupo)
   }
+  d <-  d |> sib_merge_region_label()
 
-  if(!cases_null$cobertura){
-    check_cases_values("cobertura", cases$cobertura)
-    only_cobertura <- only_param(cases, "cobertura")
-    if(only_cobertura) return("only_cobertura")
-  }
+  sel_inds <- select_indicator(tipo = tipo,
+                               cobertura = cobertura,
+                               tematica = tematica)
+
+  # Si no hay GR definido
+  d <- d |>
+    select(contains(c("slug","label","grupo")), any_of(sel_inds))
 
 
-  subregions <- cases$subregiones %||% FALSE
-  if(subregions){
-    if(is.null(cases$tipo)){
-      return("subregions")
+  d
+}
+
+
+sibdata_tidify <- function(d,
+                           tematica = NULL,
+                           cobertura = NULL,
+                           all_indicators = FALSE){
+
+
+
+  inds <- sib_tables("ind_meta")
+
+  not_tematica <- inds |> filter(is.na(tematica)) |> pull(indicador)
+  not_cobertura <- inds |> filter(cobertura == "total") |> pull(indicador)
+  is_cat_tematica <-  inds |>
+    filter(!is.na(categorias_tematicas), categorias_tematicas != "total") |>
+    pull(indicador)
+
+  d2 <- d |>
+    pivot_longer(-contains(c("slug","grupo", "label")),
+                 names_to = c("indicador"),
+                 values_to = "count")
+
+  if(all_indicators){
+    return(d2)
+  } else{
+
+    d3 <- d2 |>
+      #sib_merge_ind_label() |>
+      select_non_single_cat_cols()
+
+    if(is.null(tematica)){
+      # Si no hay tematica definida retornar solo los totales
+      d3 <- d3 |>
+        filter(indicador %in% not_tematica)
     }else{
-      return("subregions_tipo")
+      d3 <- d3 |>
+        filter(grepl(tematica, indicador) )
+      if(grepl("amenazada|cites", tematica)){
+        d3 <- d3 |>
+          filter(indicador %in% is_cat_tematica) |>
+          filter(grepl("_en|_cr|_vu|_i", indicador))
+      }
     }
+    if(is.null(cobertura)){
+      d3 <- d3 |>
+        filter(indicador %in% not_cobertura)
+    }
+
   }
 
-  parent <- cases$parent %||% FALSE
-  if(parent){
-  }
+  d3
 
 }
 
 
 check_cases_values <- function(param, value){
-  if(param == "tipo"){
-    if(!value %in% c("registros", "especies", "todos")){
-      stop('tipo must be one of: "registros", "especies", "todos"')
+
+  if(param %in% c("tipo", "cobertura", "tematica")){
+    inds <- sib_tables("ind_meta")
+    values <- inds |> select(one_of(param)) |> pull(1) |> unique()
+    if(!value %in% values){
+      stop("Value: ", value, ". ", param,' must be one of: ', paste0(values, collapse = ", "))
     }
   }
-  if(param == "cobertura"){
-    if(!value %in% c("continental", "marina", "total")){
-      stop('cobertura must be one of: "continental", "marina", "total"')
+  if(param == "grupo"){
+    values <- sib_available_grupos()
+    if(!value %in% values){
+      stop("Value: ",value, ". ", param,' must be one of: ', paste0(values, collapse = ", "))
     }
   }
-}
 
-only_param <- function(cases, param){
-  cases_null <- purrr::map(cases, is.null)
-  cases_not_param <- names(cases_null)[param != names(cases_null)]
-  cases_null[[param]] == FALSE && all(unlist(cases_null[cases_not_param]))
 }
 
 
-sibdata_viz <- function(region, viz){
 
-  if(viz == "map"){
-    sibdata(region, subregiones = TRUE)
+
+
+
+
+select_indicator <- function(tipo = NULL,
+                             cobertura = NULL,
+                             tematica = NULL){
+
+  cases <- list(tipo = tipo,
+                cobertura = cobertura,
+                tematica = tematica)
+
+  inds <- sib_tables("ind_meta")
+
+  if(!is.null(tipo)){
+    inds <- inds |>
+      filter(tipo == cases$tipo)
   }
-
+  if(!is.null(cobertura)){
+    inds <- inds |>
+      filter(cobertura == cases$cobertura)
+  }
+  if(!is.null(tematica)){
+    inds <- inds |>
+      filter(tematica == cases$tematica)
+  }
+  inds$indicador
 }
-
-
-
-

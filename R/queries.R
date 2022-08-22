@@ -216,6 +216,14 @@ region_tematica <- function(region){
   reg_tematica
 }
 
+
+region_grupo_tematica <- function(region, grupo){
+  reg_grp_tematica <- sib_tables("region_grupo_tematica") |>
+    dplyr::filter(slug_region == region) |>
+    dplyr::filter(slug_grupo == grupo)
+  reg_grp_tematica
+}
+
 subregion_tematica <- function(region){
 
   regs <- ds$region |> select(slug_region = slug, label)
@@ -234,6 +242,13 @@ parent_tematica <- function(region){
   parent_tematica <- sib_tables("region_tematica") |>
     dplyr::filter(slug_region == parent)
   parent_tematica
+}
+
+with_parent_tematica <- function(region){
+  parent <- sib_parent_region(region)
+  with_parent_tematica <- sib_tables("region_tematica") |>
+    dplyr::filter(slug_region %in% c(region, parent))
+  with_parent_tematica
 }
 
 

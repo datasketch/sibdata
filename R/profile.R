@@ -47,7 +47,7 @@ navigation_trees <- function(type, json_file = NULL){
   l
 }
 
-
+#' @export
 publicadores_to_json <- function(json_file){
   pubs <- sib_tables("publicador") |>
     dplyr::distinct()

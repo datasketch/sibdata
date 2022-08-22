@@ -2,7 +2,7 @@
 #' @export
 make_region_slides <- function(region){
 
-  sib_validate_available_regions(region, with_grupo = TRUE)
+  sib_validate_available_regions(region)
 
 
   ####################

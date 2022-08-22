@@ -41,7 +41,7 @@ ind_meta <- read_csv("data-raw/diccionaries/ind_meta.csv")
 ds$ind_meta <- ind_meta
 
 #saveRDS(ds, "ds.rds")
-saveRDS(ds, "inst/sib-data-app/ds.rds")
+#saveRDS(ds, "inst/sib-data-app/ds.rds")
 
 
 names(ds$region_grupo_biologico)
@@ -56,3 +56,5 @@ ds$region_grupo_tematica <- region_grupo_tematica
 available_tables <- names(ds)
 
 usethis::use_data(ds, available_tables, overwrite = TRUE)
+
+

@@ -14,7 +14,8 @@ tematica_list <- function(region){
   esp_tem <- sib_tables("especie_tematica")
   esp_reg_tem <-  esp_reg |>
     dplyr::left_join(esp_tem) |>
-    dplyr::select(-registros)
+    dplyr::select(-registros) |>
+    distinct()
 
 
   tem <- sib_tables("tematica") #|>
@@ -46,7 +47,7 @@ tematica_list <- function(region){
 
 
   tematica_list <- purrr::map(tems_list, function(x){
-    #x <- tems_list[[8]]
+    #x <- tems_list[[17]]
     x <- as.list(x)
     x$slug <- x$slug_tematica
     esps_tem <- esp_reg_tem |>
@@ -58,7 +59,7 @@ tematica_list <- function(region){
       select(species, registros) |>
       distinct() |>
       arrange(desc(registros)) |>
-      slice(1:50)
+      slice(1:x$count)
 
     #distinct(slug_especie, .keep_all = TRUE)
     #x$especies <- list(esps_tem)
@@ -135,7 +136,7 @@ region_gr_bio_data <- function(region){
     x$species_list_top <- species_list_top
     species_list_bottom <- species_list |>
       arrange(registros) |>
-      slice(1:50)
+      slice(1:500)
 
     tematicas <- c("amenazadas-nacional", "amenazadas-global", "cites", "migratorias",
                    "endemicas", "exoticas", "exoticas_riesgo_invasion", "invasoras")
@@ -144,7 +145,7 @@ region_gr_bio_data <- function(region){
       spe <- list_species(region, grupo_biologico = x$slug, tematica = tem)
       spe <- spe |>
         arrange(desc(registros)) |>
-        slice(1:50) |>
+        slice(1:500) |>
         select(species, registros)
       spe
     })
@@ -183,11 +184,11 @@ region_gr_int_data <- function(region){
     species_list <- list_species(region, grupo_interes = x$slug)
     species_list_top <- species_list |>
       arrange(desc(registros)) |>
-      slice(1:50)
+      slice(1:500)
     x$species_list_top <- species_list_top
     species_list_bottom <- species_list |>
       arrange(registros) |>
-      slice(1:50)
+      slice(1:500)
     x$species_list_bottom <- species_list_bottom
 
     tematicas <- c("amenazadas-nacional", "amenazadas-global", "cites", "migratorias",
@@ -197,7 +198,7 @@ region_gr_int_data <- function(region){
       spe <- list_species(region, grupo_interes = x$slug, tematica = tem)
       spe <- spe |>
         arrange(desc(registros)) |>
-        slice(1:50) |>
+        slice(1:500) |>
         select(species, registros)
       spe
     })

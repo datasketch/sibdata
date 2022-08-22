@@ -34,7 +34,7 @@ ui <- panelsPage(
         body = div(
           # verbatimTextOutput("debug"),
           selectizeInput("sel_region","Seleccione Región",opts_region,
-                         selected = "narino"),
+                         selected = "tolima"),
           hr(),
           radioButtons("sel_grupo_type", "Tipo de grupo",
                        c( "Biológico" = "biologico", "Interés de Conservación" = "interes")),

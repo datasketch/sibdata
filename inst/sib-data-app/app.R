@@ -30,7 +30,7 @@ opts_tematicas <- sib_available_tematicas()
 ui <- panelsPage(styles = custom_css,
   panel(title = "Opciones", width = 300,
         body = div(
-          verbatimTextOutput("debug"),
+          # verbatimTextOutput("debug"),
           selectizeInput("sel_region","Seleccione Región",
                          rev(opts_region),
                          selected = "Tolima"

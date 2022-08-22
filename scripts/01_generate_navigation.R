@@ -79,13 +79,14 @@ map(av_regions, function(region){
       slug = "areas-protegidas",
       label = "Áreas protegidas",
       title = "Próximamente tendrás acceso a la información de las áreas protegidas",
-      charts = NULL
-      ),
+      charts = list()
+    ),
     list(
       slug = "ecosistemas-estrategicos",
       label = "Ecosistemas estratégicos",
       title = "Próximamente tendrás acceso a la información de ecosistemas estratégicos",
-      charts = NULL)
+      charts = list()
+    )
   )
 
   ##

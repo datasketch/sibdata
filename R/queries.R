@@ -86,7 +86,7 @@ tematica_list <- function(region){
       children = list(amenazadas_global, amenazadas_nacional)
     ),
     list(
-      slug = "distribución",
+      slug = "distribucion",
       label = "Las especies amenazadas se dividen en Nacional y Global",
       children = list(endemicas, migratorias)
     )
@@ -175,7 +175,7 @@ region_gr_int_data <- function(region){
   reg_gr_int_list <- reg_gr_int |>
     group_split(slug)
   reg_gr_int_list <- map(reg_gr_int_list, function(x){
-    #x <- reg_gr_bio_list[[1]]
+    #x <- reg_gr_int_list[[1]]
     x <- as.list(x)
 
     x$parent <- reg_gr_int_parent |>

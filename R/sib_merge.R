@@ -53,3 +53,16 @@ sib_merge_grupo_label <- function(d){
   d
 
 }
+
+#' @export
+sib_merge_especie_label <- function(x){
+  especie <- sib_tables("especie") |>
+    mutate(label = species)
+  x |>
+    left_join(especie, by = c("slug_especie"="slug")) |>
+    select(!contains("slug_region")) |>
+    select(label, registros, everything())
+}
+
+
+

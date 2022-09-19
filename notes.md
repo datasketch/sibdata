@@ -1,7 +1,7 @@
 # OK
 
 nav--- OK
-publicadores: falta link
+publicadores: falta link... número especies y obs
 
 
 # TODO

@@ -10,6 +10,759 @@
     "label": "Tolima",
     "main_text": "A través del SiB Colombia se han publicado 609259 observaciones\npara el departamento de Tolima. Estos datos hacen referencia a un total de\n7944 especies"
   },
+  "nav_tematica": {
+    "slug": "0",
+    "children": [
+      {
+        "slug": "amenazadas",
+        "activa": true,
+        "icon": true,
+        "icon_black": "static/icons/amenazadas-black.svg",
+        "icon_white": "static/icons/amenazadas-white.svg",
+        "label": "Amenazadas",
+        "children": [
+          {
+            "slug": "amenazadas-global",
+            "activa": true,
+            "descripcion": "La Lista Roja de UICN es un indicador crítico de la salud de la biodiversidad del mundo que permite agilizar acciones que fomente la conservación de la biodiversidad.",
+            "icon": false,
+            "icon_black": "static/icons/amenazadas-global-black.svg",
+            "icon_white": "static/icons/amenazadas-global-white.svg",
+            "label": "Categoría UICN global",
+            "tooltip": "UICN (Unión Internacional para la Conservación de la Naturaleza)",
+            "children": [
+              {
+                "slug": "amenazadas-global-ex",
+                "activa": true,
+                "descripcion": "Hace referencia a un taxón en el cual el último individuo vivo ha muerto y no se han logrado encontrar nuevos registros en hábitats con condiciones apropiadas al ciclo de vida y formas del taxón.",
+                "icon": false,
+                "icon_black": "static/icons/amenazadas-global-ex-black.svg",
+                "icon_white": "static/icons/amenazadas-global-ex-white.svg",
+                "label": "EX",
+                "orden": 12,
+                "tooltip": "Extinto"
+              },
+              {
+                "slug": "amenazadas-global-ew",
+                "activa": true,
+                "descripcion": "El taxón solamente sobrevive en cultivo, cautividad o como poblaciones naturalizadas fuera de su distribución original.",
+                "icon": false,
+                "icon_black": "static/icons/amenazadas-global-ew-black.svg",
+                "icon_white": "static/icons/amenazadas-global-ew-white.svg",
+                "label": "EW",
+                "orden": 11,
+                "tooltip": "Extinto en estado silvestre"
+              },
+              {
+                "slug": "amenazadas-global-cr",
+                "activa": true,
+                "descripcion": "Se ha reducido el tamaño de la población o se ha presentado disminución en la extensión de presencia o área de ocupación que genera un riesgo de extinción extremadamente alto en vida silvestre.",
+                "icon": false,
+                "icon_black": "static/icons/amenazadas-global-cr-black.svg",
+                "icon_white": "static/icons/amenazadas-global-cr-white.svg",
+                "label": "CR",
+                "orden": 10,
+                "tooltip": "En peligro crítico"
+              },
+              {
+                "slug": "amenazadas-global-en",
+                "activa": true,
+                "descripcion": "Se ha reducido el tamaño de la población o se ha presentado disminución en la extensión de presencia o área de ocupación que genera un riesgo de extinción muy alto en vida silvestre.",
+                "icon": false,
+                "icon_black": "static/icons/amenazadas-global-en-black.svg",
+                "icon_white": "static/icons/amenazadas-global-en-white.svg",
+                "label": "EN",
+                "orden": 9,
+                "tooltip": "En peligro"
+              },
+              {
+                "slug": "amenazadas-global-vu",
+                "activa": true,
+                "descripcion": "Se ha reducido el tamaño de la población o se ha presentado disminución en la extensión de presencia o área de ocupación que genera un riesgo de extinción alto en vida silvestre.",
+                "icon": false,
+                "icon_black": "static/icons/amenazadas-global-vu-black.svg",
+                "icon_white": "static/icons/amenazadas-global-vu-white.svg",
+                "label": "VU",
+                "orden": 8,
+                "tooltip": "Vulnerable"
+              },
+              {
+                "slug": "amenazadas-global-lr-cd",
+                "activa": true,
+                "descripcion": "Especies con bajo riesgo de amenaza, generalmente esta categoría se incluyen taxones ampliamente distribuidos",
+                "icon": false,
+                "icon_black": "static/icons/amenazadas-global-lr-cd-black.svg",
+                "icon_white": "static/icons/amenazadas-global-lr-cd-white.svg",
+                "label": "LR/cd",
+                "orden": 7,
+                "tooltip": "Menor riesgo / dependiente de medidas de conservación"
+              },
+              {
+                "slug": "amenazadas-global-nt",
+                "activa": true,
+                "descripcion": "Al realizar la evaluación no se encontraron los criterios para definirse como En peligro crítico, En peligro o Vulnerable. Sin embargo es posible que los cumpla en un futuro cercano.",
+                "icon": false,
+                "icon_black": "static/icons/amenazadas-global-nt-black.svg",
+                "icon_white": "static/icons/amenazadas-global-nt-white.svg",
+                "label": "NT",
+                "orden": 6,
+                "tooltip": "Casi amenazado"
+              },
+              {
+                "slug": "amenazadas-global-lr-nt",
+                "activa": true,
+                "descripcion": "Al realizar la evaluación no se encontraron los criterios para definirse como En peligro crítico, En peligro o Vulnerable. Sin embargo es posible que los cumpla en un futuro cercano. ",
+                "icon": false,
+                "icon_black": "static/icons/amenazadas-global-lr-nt-black.svg",
+                "icon_white": "static/icons/amenazadas-global-lr-nt-white.svg",
+                "label": "LR/nt",
+                "orden": 5,
+                "tooltip": "Casi amenazado"
+              },
+              {
+                "slug": "amenazadas-global-lc",
+                "activa": true,
+                "descripcion": "Se realizó la evaluación de riesgo de extensión pero no se cumplieron los criterio para definirlo en alguna categoría de amenaza (En peligro crítico, En peligro, Vulnerable o Casi amenazado)",
+                "icon": false,
+                "icon_black": "static/icons/amenazadas-global-lc-black.svg",
+                "icon_white": "static/icons/amenazadas-global-lc-white.svg",
+                "label": "LC",
+                "orden": 4,
+                "tooltip": "Preocupación menor"
+              },
+              {
+                "slug": "amenazadas-global-lr-lc",
+                "activa": true,
+                "descripcion": "Se realizó la evaluación de riesgo de extensión pero no se cumplieron los criterio para definirlo en alguna categoría de amenaza (En peligro crítico, En peligro, Vulnerable o Casi amenazado). Esto influenciado por programas de conservación continuados para la especie o su hábitat. Al interrumpir la realización de estos programas se debe reevaluar la categoría para la especies.",
+                "icon": false,
+                "icon_black": "static/icons/amenazadas-global-lr-lc-black.svg",
+                "icon_white": "static/icons/amenazadas-global-lr-lc-white.svg",
+                "label": "LR/lc",
+                "orden": 3,
+                "tooltip": "Preocupación menor"
+              },
+              {
+                "slug": "amenazadas-global-dd",
+                "activa": true,
+                "descripcion": "No se tiene la información adecuada para realizar una evaluación del riesgo de extensión basado en su distribución y/o condición de la población.",
+                "icon": false,
+                "icon_black": "static/icons/amenazadas-global-dd-black.svg",
+                "icon_white": "static/icons/amenazadas-global-dd-white.svg",
+                "label": "DD",
+                "orden": 2,
+                "tooltip": "Datos insuficientes"
+              },
+              {
+                "slug": "amenazadas-global-ne",
+                "activa": true,
+                "descripcion": "No se ha llevado a cabo el proceso de clasificación de acuerdo a los criterios establecidos.",
+                "icon": false,
+                "icon_black": "static/icons/amenazadas-global-ne-black.svg",
+                "icon_white": "static/icons/amenazadas-global-ne-white.svg",
+                "label": "NE",
+                "orden": 1,
+                "tooltip": "No evaluado"
+              }
+            ]
+          },
+          {
+            "slug": "amenazadas-nacional",
+            "activa": true,
+            "descripcion": "El Ministerio de Ambiente y Desarrollo Sostenible (MADS), junto con las entidades que conforman Sistema Nacional Ambiental (SINA) y diferentes investigadores, desarrollan procesos de evaluación sobre las especies de la diversidad biológica del país. Teniendo en cuanta información biológica, ecológica, poblacional y la metodología de categorización del UICUN, se categorizan las especies en los listados oficiales de especies amenazadas. Actualmente, estas especies se encuentran en la resolución 1912 de 2017 donde se estableció un listado de especies silvestres continentales y marino costeras que se encuentran amenazadas para Colombia",
+            "icon": false,
+            "icon_black": "static/icons/amenazadas-nacional-black.svg",
+            "icon_white": "static/icons/amenazadas-nacional-white.svg",
+            "label": "Categoría UICN nacional",
+            "tooltip": "Ministerio de Ambiente y Desarrollo Sostenible, resolución 1912 de 2017",
+            "children": [
+              {
+                "slug": "amenazadas-nacional-cr",
+                "activa": true,
+                "descripcion": "Son aquellas especies que enfrentan un riesgo de extinción extremadamente alto en vida silvestre.",
+                "icon": false,
+                "icon_black": "static/icons/amenazadas-nacional-cr-black.svg",
+                "icon_white": "static/icons/amenazadas-nacional-cr-white.svg",
+                "label": "CR",
+                "orden": 3,
+                "tooltip": "En peligro crítico"
+              },
+              {
+                "slug": "amenazadas-nacional-en",
+                "activa": true,
+                "descripcion": "Presentan un riesgo de extinción muy alto en estado de vida silvestre.",
+                "icon": false,
+                "icon_black": "static/icons/amenazadas-nacional-en-black.svg",
+                "icon_white": "static/icons/amenazadas-nacional-en-white.svg",
+                "label": "EN",
+                "orden": 2,
+                "tooltip": "En peligro"
+              },
+              {
+                "slug": "amenazadas-nacional-vu",
+                "activa": true,
+                "descripcion": "Especies que presentan un riesgo de extinción alto en estado de vida silvestre.",
+                "icon": false,
+                "icon_black": "static/icons/amenazadas-nacional-vu-black.svg",
+                "icon_white": "static/icons/amenazadas-nacional-vu-white.svg",
+                "label": "VU",
+                "orden": 1,
+                "tooltip": "Vulnerable"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "cites",
+        "activa": true,
+        "descripcion": "CITES es un acuerdo internacional concertado entre los gobiernos que tiene como finalidad velar por que el comercio internacional de especímenes de animales y plantas silvestres no constituye una amenaza para la supervivencia de las especies.",
+        "icon": true,
+        "icon_black": "static/icons/cites-black.svg",
+        "icon_white": "static/icons/cites-white.svg",
+        "label": "CITES",
+        "tooltip": "Convención sobre el Comercio Internacional de Especies Amenazadas de Fauna y Flora Silvestres",
+        "children": [
+          {
+            "slug": "cites-i",
+            "activa": true,
+            "descripcion": "Incluye las especies sobre las que se cierne el mayor grado de peligro entre las especies de fauna y de flora por lo cual, CITES prohíbe el comercio internacional de especímenes de esas especies, salvo cuando la importación se realiza con fines no comerciales.",
+            "icon": false,
+            "icon_black": "static/icons/cites-i-black.svg",
+            "icon_white": "static/icons/cites-i-white.svg",
+            "label": "Apéndice CITES I",
+            "orden": 4
+          },
+          {
+            "slug": "cites-ii",
+            "activa": true,
+            "descripcion": "Incluye especies que no están necesariamente amenazadas de extinción pero que podrían llegar a estarlo a menos que se controle estrictamente su comercio",
+            "icon": false,
+            "icon_black": "static/icons/cites-ii-black.svg",
+            "icon_white": "static/icons/cites-ii-white.svg",
+            "label": "Apéndice CITES II",
+            "orden": 2
+          },
+          {
+            "slug": "cites-iii",
+            "activa": true,
+            "descripcion": "Corresponde a las especies incluidas a solicitud de una Parte que ya reglamenta el comercio de dicha especie y necesita la cooperación de otros países para evitar la explotación insostenible o ilegal de las mismas",
+            "icon": false,
+            "icon_black": "static/icons/cites-iii-black.svg",
+            "icon_white": "static/icons/cites-iii-white.svg",
+            "label": "Apéndice CITES III",
+            "orden": 1
+          },
+          {
+            "slug": "cites-i-ii",
+            "activa": true,
+            "descripcion": "Para el caos del Crocodylus acutus, caimán aguja. Se aplica la categoría II en la región de Córdoba y la categoría I para el resto del país. Teniendo en cuenta el Distrito de Manejo Integrado de los Manglares de la Bahía de Cispatá, Tinajones, La Balsa y Sectores Aledaños.",
+            "icon": false,
+            "icon_black": "static/icons/cites-i-ii-black.svg",
+            "icon_white": "static/icons/cites-i-ii-white.svg",
+            "label": "Apéndice CITES I-II",
+            "orden": 3
+          }
+        ]
+      },
+      {
+        "slug": "endemicas",
+        "activa": true,
+        "descripcion": "La distribución natural de la especie está limitada dentro del territorio Colombiano. En este grupo se incluyen las especie en las listas de referencia taxonómica (aves, peces dulceacuícolas, plantas y líquenes, mamíferos y coleópteros).",
+        "icon": true,
+        "icon_black": "static/icons/endemicas-black.svg",
+        "icon_white": "static/icons/endemicas-white.svg",
+        "label": "Endémicas"
+      },
+      {
+        "slug": "exoticas-invasoras",
+        "activa": true,
+        "descripcion": "Se incluyen especies catalogadas como exóticas, exóticas con alto riesgo de invasión, invasoras catalogadas por el Registro mundial de especies introducidas e invasoras para Colombia y el Ministerio de Ambiente y Desarrollo Sostenible.",
+        "icon": false,
+        "icon_black": "static/icons/exoticas-invasoras-black.svg",
+        "icon_white": "static/icons/exoticas-invasoras-white.svg",
+        "label": "Exóticas",
+        "children": [
+          {
+            "slug": "exoticas",
+            "activa": true,
+            "descripcion": "Las especies exóticas son aquellas que no son nativas de un país o una región a la que llegaron de manera intencional o accidental, generalmente como resultado de actividades humanas.",
+            "icon": true,
+            "icon_black": "static/icons/exoticas-black.svg",
+            "icon_white": "static/icons/exoticas-white.svg",
+            "label": "Exóticas",
+            "tooltip": "Exóticas GRIIS (Registro mundial de especies introducidas e invasoras)"
+          },
+          {
+            "slug": "invasoras",
+            "activa": true,
+            "descripcion": "Organismos que se adaptan a regiones fuera de su distribución natural, causando daños al ecosistema, las especies nativas, salud o economía de la región.",
+            "icon": false,
+            "icon_black": "static/icons/invasoras-black.svg",
+            "icon_white": "static/icons/invasoras-white.svg",
+            "label": "Invasoras",
+            "tooltip": "Invasoras (resolución 848 de 2008 del Ministerio de Ambiente y Desarrollo Sostenible)"
+          },
+          {
+            "slug": "exotica-riesgo-invasion",
+            "activa": true,
+            "descripcion": "Una especie exótica con alto riesgo de invasión, es una especie con alta probabilidad de establecerse en ecosistemas o hábitats naturales o seminaturales, es un agente de cambio y amenaza la diversidad biológica nativa.",
+            "icon": false,
+            "icon_black": "static/icons/exotica-riesgo-invasion-black.svg",
+            "icon_white": "static/icons/exotica-riesgo-invasion-white.svg",
+            "label": "Especies exóticas con alto riesgo de invasión",
+            "tooltip": "Invasoras GRIIS (Registro mundial de especies introducidas e invasoras)"
+          }
+        ]
+      },
+      {
+        "slug": "migratorias",
+        "activa": true,
+        "descripcion": "Especies que se desplazan estacional y cíclicamente de una región a otra por cambios en la disponibilidad de alimento, condiciones ambientales o zonas de reproducción y cría.",
+        "icon": false,
+        "icon_black": "static/icons/migratorias-black.svg",
+        "icon_white": "static/icons/migratorias-white.svg",
+        "label": "Migratorias",
+        "tooltip": "Temática aplicada solo a aves"
+      }
+    ]
+  },
+  "nav_grupo_biologico": {
+    "slug": "0",
+    "children": [
+      {
+        "slug": "animales",
+        "icon": true,
+        "icon_black": "static/icons/animales-black.svg",
+        "icon_white": "static/icons/animales-white.svg",
+        "label": "Animales",
+        "children": [
+          {
+            "slug": "vertebrados",
+            "icon": false,
+            "icon_black": "static/icons/vertebrados-black.svg",
+            "icon_white": "static/icons/vertebrados-white.svg",
+            "label": "Vertebrados",
+            "children": [
+              {
+                "slug": "mamiferos",
+                "icon": false,
+                "icon_black": "static/icons/mamiferos-black.svg",
+                "icon_white": "static/icons/mamiferos-white.svg",
+                "label": "Mamíferos",
+                "children": [
+                  {
+                    "slug": "mamiferos-marinos",
+                    "icon": false,
+                    "icon_black": "static/icons/mamiferos-marinos-black.svg",
+                    "icon_white": "static/icons/mamiferos-marinos-white.svg",
+                    "label": "Mamíferos Marinos"
+                  }
+                ]
+              },
+              {
+                "slug": "aves",
+                "icon": false,
+                "icon_black": "static/icons/aves-black.svg",
+                "icon_white": "static/icons/aves-white.svg",
+                "label": "Aves"
+              },
+              {
+                "slug": "reptiles",
+                "icon": false,
+                "icon_black": "static/icons/reptiles-black.svg",
+                "icon_white": "static/icons/reptiles-white.svg",
+                "label": "Reptiles",
+                "children": [
+                  {
+                    "slug": "tortugas-marinas",
+                    "icon": false,
+                    "icon_black": "static/icons/tortugas-marinas-black.svg",
+                    "icon_white": "static/icons/tortugas-marinas-white.svg",
+                    "label": "Tortugas Marinas"
+                  }
+                ]
+              },
+              {
+                "slug": "anfibios",
+                "icon": false,
+                "icon_black": "static/icons/anfibios-black.svg",
+                "icon_white": "static/icons/anfibios-white.svg",
+                "label": "Anfibios"
+              },
+              {
+                "slug": "peces",
+                "icon": false,
+                "icon_black": "static/icons/peces-black.svg",
+                "icon_white": "static/icons/peces-white.svg",
+                "label": "Peces",
+                "children": [
+                  {
+                    "slug": "peces-marinos",
+                    "icon": false,
+                    "icon_black": "static/icons/peces-marinos-black.svg",
+                    "icon_white": "static/icons/peces-marinos-white.svg",
+                    "label": "Peces Marinos"
+                  },
+                  {
+                    "slug": "peces-dulceacuicolas",
+                    "icon": false,
+                    "icon_black": "static/icons/peces-dulceacuicolas-black.svg",
+                    "icon_white": "static/icons/peces-dulceacuicolas-white.svg",
+                    "label": "Peces dulceacuícolas"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "slug": "invertebrados",
+            "icon": false,
+            "icon_black": "static/icons/invertebrados-black.svg",
+            "icon_white": "static/icons/invertebrados-white.svg",
+            "label": "Invertebrados",
+            "children": [
+              {
+                "slug": "insectos",
+                "icon": false,
+                "icon_black": "static/icons/insectos-black.svg",
+                "icon_white": "static/icons/insectos-white.svg",
+                "label": "Insectos",
+                "children": [
+                  {
+                    "slug": "escarabajos",
+                    "icon": false,
+                    "icon_black": "static/icons/escarabajos-black.svg",
+                    "icon_white": "static/icons/escarabajos-white.svg",
+                    "label": "Escarabajos"
+                  },
+                  {
+                    "slug": "mariposas",
+                    "icon": false,
+                    "icon_black": "static/icons/mariposas-black.svg",
+                    "icon_white": "static/icons/mariposas-white.svg",
+                    "label": "Mariposas"
+                  },
+                  {
+                    "slug": "dipteros",
+                    "icon": false,
+                    "icon_black": "static/icons/dipteros-black.svg",
+                    "icon_white": "static/icons/dipteros-white.svg",
+                    "label": "Dípteros"
+                  },
+                  {
+                    "slug": "hormigas",
+                    "icon": false,
+                    "icon_black": "static/icons/hormigas-black.svg",
+                    "icon_white": "static/icons/hormigas-white.svg",
+                    "label": "Hormigas"
+                  },
+                  {
+                    "slug": "abejas",
+                    "icon": false,
+                    "icon_black": "static/icons/abejas-black.svg",
+                    "icon_white": "static/icons/abejas-white.svg",
+                    "label": "Abejas"
+                  }
+                ]
+              },
+              {
+                "slug": "aracnidos",
+                "icon": false,
+                "icon_black": "static/icons/aracnidos-black.svg",
+                "icon_white": "static/icons/aracnidos-white.svg",
+                "label": "Arácnidos"
+              },
+              {
+                "slug": "moluscos",
+                "icon": false,
+                "icon_black": "static/icons/moluscos-black.svg",
+                "icon_white": "static/icons/moluscos-white.svg",
+                "label": "Moluscos"
+              },
+              {
+                "slug": "decapodos",
+                "icon": false,
+                "icon_black": "static/icons/decapodos-black.svg",
+                "icon_white": "static/icons/decapodos-white.svg",
+                "label": "Decápodos"
+              },
+              {
+                "slug": "crustaceos",
+                "icon": false,
+                "icon_black": "static/icons/crustaceos-black.svg",
+                "icon_white": "static/icons/crustaceos-white.svg",
+                "label": "Crustáceos"
+              },
+              {
+                "slug": "equinodermos",
+                "icon": false,
+                "icon_black": "static/icons/equinodermos-black.svg",
+                "icon_white": "static/icons/equinodermos-white.svg",
+                "label": "Equinodermos"
+              },
+              {
+                "slug": "esponjas",
+                "icon": false,
+                "icon_black": "static/icons/esponjas-black.svg",
+                "icon_white": "static/icons/esponjas-white.svg",
+                "label": "Esponjas"
+              },
+              {
+                "slug": "corales",
+                "icon": false,
+                "icon_black": "static/icons/corales-black.svg",
+                "icon_white": "static/icons/corales-white.svg",
+                "label": "Corales"
+              },
+              {
+                "slug": "medusas",
+                "icon": false,
+                "icon_black": "static/icons/medusas-black.svg",
+                "icon_white": "static/icons/medusas-white.svg",
+                "label": "Medusas"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "plantas",
+        "icon": true,
+        "icon_black": "static/icons/plantas-black.svg",
+        "icon_white": "static/icons/plantas-white.svg",
+        "label": "Plantas",
+        "children": [
+          {
+            "slug": "angiospermas",
+            "icon": false,
+            "icon_black": "static/icons/angiospermas-black.svg",
+            "icon_white": "static/icons/angiospermas-white.svg",
+            "label": "Angiospermas"
+          },
+          {
+            "slug": "gimnospermas",
+            "icon": false,
+            "icon_black": "static/icons/gimnospermas-black.svg",
+            "icon_white": "static/icons/gimnospermas-white.svg",
+            "label": "Gimnospermas"
+          },
+          {
+            "slug": "helechos",
+            "icon": false,
+            "icon_black": "static/icons/helechos-black.svg",
+            "icon_white": "static/icons/helechos-white.svg",
+            "label": "Helechos"
+          },
+          {
+            "slug": "musgos",
+            "icon": false,
+            "icon_black": "static/icons/musgos-black.svg",
+            "icon_white": "static/icons/musgos-white.svg",
+            "label": "Musgos"
+          },
+          {
+            "slug": "hepaticas",
+            "icon": false,
+            "icon_black": "static/icons/hepaticas-black.svg",
+            "icon_white": "static/icons/hepaticas-white.svg",
+            "label": "Hepáticas"
+          },
+          {
+            "slug": "antocerotas",
+            "icon": false,
+            "icon_black": "static/icons/antocerotas-black.svg",
+            "icon_white": "static/icons/antocerotas-white.svg",
+            "label": "Antocerotas"
+          }
+        ]
+      },
+      {
+        "slug": "hongos",
+        "descripcion": "Este grupo incluye solo el reino Fungi. No se incluyen especies incluidas en grupos como pseudohongos (Chromistas) o mixomicetos (Protozoos).",
+        "icon": true,
+        "icon_black": "static/icons/hongos-black.svg",
+        "icon_white": "static/icons/hongos-white.svg",
+        "label": "Hongos"
+      },
+      {
+        "slug": "archeas",
+        "icon": true,
+        "icon_black": "static/icons/archeas-black.svg",
+        "icon_white": "static/icons/archeas-white.svg",
+        "label": "Archeas"
+      },
+      {
+        "slug": "bacterias",
+        "icon": true,
+        "icon_black": "static/icons/bacterias-black.svg",
+        "icon_white": "static/icons/bacterias-white.svg",
+        "label": "Bacterias"
+      },
+      {
+        "slug": "chromista",
+        "icon": true,
+        "icon_black": "static/icons/chromista-black.svg",
+        "icon_white": "static/icons/chromista-white.svg",
+        "label": "Cromistas"
+      },
+      {
+        "slug": "protozoos",
+        "icon": true,
+        "icon_black": "static/icons/protozoos-black.svg",
+        "icon_white": "static/icons/protozoos-white.svg",
+        "label": "Protozoos"
+      },
+      {
+        "slug": "virus",
+        "icon": true,
+        "icon_black": "static/icons/virus-black.svg",
+        "icon_white": "static/icons/virus-white.svg",
+        "label": "Virus"
+      }
+    ]
+  },
+  "nav_grupo_interes": {
+    "slug": "0",
+    "children": [
+      {
+        "slug": "algas",
+        "descripcion": "Las algas tienen una gran diversidad en formas, hábitats, estrategias ecológicas y fisiológicas. Gracias a esto son parte fundamental de la cadena alimenticia, la producción de oxígeno atmosférico, regulación del clima y combustibles fósiles. Además, de ser utilizadas en las industrias farmacéuticas, químicas y alimenticias. Y como bioindicadores de calidad en los ecosistemas, teniendo en cuenta la respuesta de este grupo a variables como la eutrofización, salinidad, toxicidad, acidificación, contaminación química, entre otros.",
+        "icon": true,
+        "icon_black": "static/icons/algas-black.svg",
+        "icon_white": "static/icons/algas-white.svg",
+        "label": "Algas",
+        "ref_id": 74
+      },
+      {
+        "slug": "liquenes",
+        "descripcion": "Para Colombia se estiman alrededor de 3600 especies; sin embargo, la cifra reportada no alcanza las 2000 especies. Situación que contrasta en ocasiones con el manejo y la conservación de este grupo de organismos, para el cual solo se conoce una medida de protección que está enmarcada en la resolución 0213 de febrero de 1977.",
+        "icon": true,
+        "icon_black": "static/icons/liquenes-black.svg",
+        "icon_white": "static/icons/liquenes-white.svg",
+        "label": "Líquenes",
+        "ref_id": 70
+      },
+      {
+        "slug": "epifitas",
+        "descripcion": "Dentro del grupo de las epífitas se encuentran las plantas que crecen sobre otras plantas. En Colombia se encuentra alrededor del 20% de la diversidad mundial de este grupo y aunque son una de las comunidades más diversas de los Andes tropicales, son especies vulnerables dentro de este ecosistema.",
+        "icon": true,
+        "icon_black": "static/icons/epifitas-black.svg",
+        "icon_white": "static/icons/epifitas-white.svg",
+        "label": "Epífitas"
+      },
+      {
+        "slug": "orquideas",
+        "descripcion": "El uso del suelo y la biodiversidad ha puesto en amenazada de extinción a las diferentes especies orquídeas encontradas en Colombia. Adicionalmente, existe un comercio ilegal de especies que no se ha logrado frenar a pesar de las leyes y las iniciativas de propagación in-vitro, estrategias exitosas para su conservación y recuperación, en el caso de especies extintas o casi extintas en la naturaleza.",
+        "icon": true,
+        "icon_black": "static/icons/orquideas-black.svg",
+        "icon_white": "static/icons/orquideas-white.svg",
+        "label": "Orquídeas",
+        "ref_id": 69
+      },
+      {
+        "slug": "magnolias-afines",
+        "descripcion": "Las especies de las familias Magnoliaceae, Podocarpaceae y Myristicaeae son conocidas por los pobladores de diferentes zonas del país, debido a las caracteristicas de su madera. Esto ha causado que una gran cantidad de especies se encuentren amenazadas, especialmente las especies ubicadas en la región Andina, relacionado con la transformación de la cobertura boscosa, la alta densidad poblacional y el incremento en la demanda de los recursos maderosos.",
+        "icon": false,
+        "icon_black": "static/icons/magnolias-afines-black.svg",
+        "icon_white": "static/icons/magnolias-afines-white.svg",
+        "label": "Magnolias y afines",
+        "ref_id": 75
+      },
+      {
+        "slug": "palmas",
+        "descripcion": "La mayoría de las palmas colombianas son habitantes del bosque y no sobreviven en áreas deforestadas, o si sobreviven como juveniles o adultos, no logran regenerarse allí, por lo tanto, la pérdida de hábitat es la mayor amenaza para estas especies. En total, 54 especies de palmas colombianas se encuentran en alguna categoría de amenaza y poco más de la mitad de las especies amenazadas son endémicas de Colombia, por lo cual su conservación es una prioridad para el país. \n\n",
+        "icon": true,
+        "icon_black": "static/icons/palmas-black.svg",
+        "icon_white": "static/icons/palmas-white.svg",
+        "label": "Palmas",
+        "ref_id": 54
+      },
+      {
+        "slug": "frailejones",
+        "descripcion": "Los frailejones se enfrentan a varias amenazas para su conservación como la perdida de hábitat, cambio de uso de suelo por minería o usos agropecuarios, interacciones bióticas y el cambio climático. Aunque se han delimitado las zonas de páramo y creado estrategias de conservación como los parques nacionales naturales, es necesario mantener el estudio y la conservación de estas especies.",
+        "icon": true,
+        "icon_black": "static/icons/frailejones-black.svg",
+        "icon_white": "static/icons/frailejones-white.svg",
+        "label": "Frailejones",
+        "ref_id": 71
+      },
+      {
+        "slug": "bromelias-labiadas-pasifloras",
+        "descripcion": "Las familias Bromeliaceae, Lamiaceae y Passifloraceae son familias de plantas con una alta de diversidad en el país y una gran relevancia en aspectos ecológicos y económicos debido a los usos que tienen. Especies de estas familias proporcionan albergue a otras especies y son parte importante de redes ecológicas en diferentes ecosistemas. Adicionalmente, son fuente de comida, aceites esenciales, fibras, metabolitos secundarios de uso farmacéutico y cosméticos, además de ser usadas como plantas ornamentales. Debido a esto se ha evaluado el grado de amenaza de sus especies y se busca la creación de diferentes programas de conservación y uso sostenible que involucren factores sociales, culturales y económicos.",
+        "icon": false,
+        "icon_black": "static/icons/bromelias-labiadas-pasifloras-black.svg",
+        "icon_white": "static/icons/bromelias-labiadas-pasifloras-white.svg",
+        "label": "Bromelias, labiadas y pasifloras",
+        "ref_id": 76
+      },
+      {
+        "slug": "pinos-afines",
+        "descripcion": "Las especies nativas de este grupo tienen diferentes usos maderabñe, ornamentales y paisajísticos. Además de estar integrados en programas de manejo y estabilización del recurso hídrico, reducción de la erosión en microcuencas y enriquecimiento de bosques naturales. Sin embargo, se estima que debido al deterioro de su hábitat, la explotación actual y potencial, el tamaño de sus poblaciones se está reduciendo. ",
+        "icon": false,
+        "icon_black": "static/icons/pinos-afines-black.svg",
+        "icon_white": "static/icons/pinos-afines-white.svg",
+        "label": "Pinos y afines",
+        "ref_id": 77
+      },
+      {
+        "slug": "fanerogamas",
+        "descripcion": "Colombia es uno de los países con mayor diversidad de fanerógamas en el mundo. Estas plantas corresponden a árboles y arbustos. Las especies encontradas en Colombia se encuentran amenazadas por la sobreexplotación del recurso o cambios drásticos en su hábitat y en el caso de las especies con distribución restringida, aumenta el grado de amenaza, especialmente por la falta información disponible que dificulta la implementación de planes de manejo para su conservación.",
+        "icon": true,
+        "icon_black": "static/icons/fanerogamas-black.svg",
+        "icon_white": "static/icons/fanerogamas-white.svg",
+        "label": "Fanerógamas",
+        "ref_id": 78
+      },
+      {
+        "slug": "pastos-marinos",
+        "descripcion": "Los pastos marinos se encuentran en aguas con poca profundidad, por lo cual se toman como indicadores del estado de salud de las zonas costeras, además de ofrecer protección contra la erosión. Son hábitat y alimento para diversas especies de interés comercial, proveen oxígeno a la columna del agua, mantienen la biodiversidad de organismos y son uno de los ecosistemas considerados con mayor capacidad de secuestro de carbono frente a otros ecosistemas terrestres. Por todos estos servicios se encuentra regulado su uso, criterios de estudio y conservación.",
+        "icon": false,
+        "icon_black": "static/icons/pastos-marinos-black.svg",
+        "icon_white": "static/icons/pastos-marinos-white.svg",
+        "label": "Pastos Marinos",
+        "ref_id": 45
+      },
+      {
+        "slug": "especies-maderables",
+        "descripcion": "En 2020 se publicó la caracterización de las 30 especies forestales maderables con mayor movilidad en Colombia. Estas especies representan el 70% del volumen de madera proveniente de bosque natural comercializado a nivel nacional. Y son utilizadas en la construcción, producción de chapas y contrachapados, maderas para muebles, componentes para muebles y carpintería.",
+        "icon": false,
+        "icon_black": "static/icons/especies-maderables-black.svg",
+        "icon_white": "static/icons/especies-maderables-white.svg",
+        "label": "Especies Maderables",
+        "ref_id": 46
+      },
+      {
+        "slug": "mangles",
+        "descripcion": "Los manglares ofrecen servicios ecosistémicos como la mitigación de la erosión, reducción del oleaje, retención, fijación, estabilización y acreción del suelo, además de aumentar la resiliencia de la zona costera frente a escenarios de cambio climático. Sin embargo, diferentes factores ejercen presión en la conservación de los manglares, como el cambio en el uso del suelo, incluida la expansión de la frontera urbana, hotelera, agropecuaria e industrial; la demanda de recursos, la exposición a eventos de índole natural asociados con la dinámica costera, la exposición a sustancias contaminantes producto de derrames incidentales en las zonas costeras.",
+        "icon": true,
+        "icon_black": "static/icons/mangles-black.svg",
+        "icon_white": "static/icons/mangles-white.svg",
+        "label": "Mangles",
+        "ref_id": 45
+      },
+      {
+        "slug": "zamias",
+        "descripcion": "Colombia es uno de los países con mayor número de especies de zamias en el mundo. Del total de especies, más del 50% se encuentran en alguna categoría de amenaza como consecuencia de la transformación del hábitat y eso indiscriminado de estas. Además, de estar catalogadas dentro de los apéndices CITES. Debido a la gran importan importancia de las especies de Zamia para Colombia, su grado de amenaza y las oportunidades de conservación, el país cuenta con un Plan de acción para la conservación de as zamias en Colombia.",
+        "icon": true,
+        "icon_black": "static/icons/zamias-black.svg",
+        "icon_white": "static/icons/zamias-white.svg",
+        "label": "Zamias",
+        "ref_id": 72
+      }
+    ]
+  },
+  "nav_territorio": {
+    "slug": "tolima",
+    "children": [
+      {
+        "slug": "municipios",
+        "label": "Municipios",
+        "slug_region": "tolima",
+        "subtipo": "Municipio",
+        "tipo": "Político-administrativo"
+      }
+    ]
+  },
   "slides": [
     {
       "id": "slide1",

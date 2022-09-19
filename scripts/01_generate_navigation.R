@@ -127,6 +127,12 @@ map(av_regions, function(region){
 
   l <- list(
     general_info = general_info,
+
+    nav_tematica = nav_tematica,
+    nav_grupo_biologico = nav_grupo_biologico,
+    nav_grupo_interes = nav_grupo_interes,
+    nav_territorio = nav_territorio,
+
     slides = slides,
     grupos_biologicos = reg_gr_bio,
     grupos_interes = reg_gr_int,

@@ -68,8 +68,13 @@ navigation_trees <- function(type, region = NULL, json_file = NULL){
 
 #' @export
 publicadores_to_json <- function(json_file){
+
+  pub_col <- sib_tables("region_publicador") |>
+    filter(slug_region == "colombia") |>
+    select(slug = slug_publicador, registros, especies)
   pubs <- sib_tables("publicador") |>
-    dplyr::distinct()
+    dplyr::distinct() |>
+    left_join(pub_col)
   jsonlite::write_json(pubs, json_file,
                        auto_unbox = TRUE, pretty = TRUE)
 }

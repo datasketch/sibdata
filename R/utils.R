@@ -11,9 +11,6 @@ copy_icons <- function(path){
 
 }
 
-
-
-
 select_non_single_cat_cols <- function(x){
   ind_count <- x |> select(indicador, count)
   has_unique_vals <- function(xx){

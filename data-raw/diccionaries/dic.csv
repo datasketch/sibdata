@@ -1,4 +1,4 @@
-tabla,label,variable,descripcion,notas,estado
+tabla,label,variable,descripcion_interna,notas,estado
 dato_relevante,Titulo,titulo,Texto corto que da una introducción sobre la información a destacar,NA,NA
 dato_relevante,Descripción,descripcion,"Texto detallado en él que se resalta algún tema de interés para algún grupo biológico, grupo de interés o especie.",NA,NA
 dato_relevante,Identificador de la referencia,ref_id,Identificador que relaciona la referencia bibliográfica de la cual se tomó la información,NA,NA
@@ -21,10 +21,8 @@ especie,Género,genus,Generó al cual pertenece la especie,NA,NA
 especie_meta,Identificador especie,slug,Identificador único de la especie,NA,NA
 especie_meta,URL especie,url_especie,? para crear vínculos,"para la creación de URLs automáticas de las especies. Contiene los datos del catálogo, I-naturalist, GBIF, eBird",NA
 especie_meta,Nombre común español,venacular_name_es,Nombre o nombres comunes conocidos para la especie,NA,NA
-especie_grupo_biologico,Identificador especie,slug_especie,"Identificador de la especie, este permite enlazar con la tabla especie","Este identificador se puede repetir varias veces, teniendo en cuenta que una especie puede pertenecer a 1 o varios grupos biológicos",done
-especie_grupo_biologico,Identificador grupo biológico,slug_grupo_biologico,"Identificador del grupo biológico, este permite enlazar con la tabla grupo biológico","Este identificador se puede repetir varias veces, teniendo en cuenta que un grupo biológico puede tener 1 o varias especies",NA
-especie_grupo_interes_conservacion,Identificador especie,slug_especie,"Identificador de la especie, este permite enlazar con la tabla especie","Este identificador se puede repetir varias veces, teniendo en cuenta que una especie puede pertenecer a 1 o varios grupos de interés",NA
-especie_grupo_interes_conservacion,Identificador grupo interés,slug_grupo_interes_conservacion,Identificador del grupo de interés este permite enlazar con la tabla grupo interes conservación,"Este identificador se puede repetir varias veces, teniendo en cuenta que un grupo de interés puede tener 1 o varias especies",NA
+especie_grupo,Identificador especie,slug_especie,"Identificador de la especie, este permite enlazar con la tabla especie","Este identificador se puede repetir varias veces, teniendo en cuenta que una especie puede pertenecer a 1 o varios grupos biológicos",done
+especie_grupo,Identificador grupo biológico,slug_grupo,"Identificador del grupo biológico, este permite enlazar con la tabla grupo biológico","Este identificador se puede repetir varias veces, teniendo en cuenta que un grupo biológico puede tener 1 o varias especies",NA
 especie_region,Identificador especie,slug_especie,"Identificador de la especie, este permite enlazar con la tabla especie",NA,NA
 especie_region,Identificador región,slug_region,"Identificador de la región, este permite enlazar con la tabla región",NA,NA
 especie_region,Registros en SiB,registros,Número de registros de una especie en cierta región,NA,NA
@@ -50,16 +48,11 @@ estimada,Especies I CITES,especies_cites_i_estimadas,Número de especies incluid
 estimada,Especies I-II CITES,especies_cites_i_ii_estimadas,Número de especies incluidos en él apéndice III CITES,NA,NA
 estimada,Especies II CITES,especies_cites_ii_estimadas,Número de especies incluidos en él apéndice II CITES,NA,NA
 estimada,Especies III CITES,especies_cites_iii_estimadas,Número de especies incluidos en él apéndice III CITES,NA,NA
-grupo_biologico,Identificador categoría superior,parent,corresponden al slug de la categoría superior del grupo biológico (si la tiene) en caso de no ser así su valor es 0,NA,done
-grupo_biologico,Identificador grupo biológico,slug,Identificador único del grupo biológico,"Se creó utilizando él nombre del grupo biológico, quitando mayúsculas, tildes y símbolos. En los casos donde incluye más de dos palabras los espacios se reemplazaron por -",NA
-grupo_biologico,Grupo biológico,label,Nombre completo del grupo biológico,NA,NA
-grupo_biologico,Descripción,descripcion,Aclaraciones adicionales sobre él grupo biológico. Puede detallar las especies incluidas o excluidas dentro del grupo biológico para él cálculo de cifras.,ej. microorganismos (incluye hongos) abejas que pueden tener especies de múltiples familias,NA
-grupo_biologico,Identificador referencia,ref_id,Identificador de la fuente de la cual se obtuvo la categorización del grupo biológico,NA,NA
-grupo_interesconservacion,Identificador categoría superior,parent,corresponden al slug de la categoría superior del grupo de interés (si la tiene) en caso de no ser así su valor es 0,NA,NA
-grupo_interes_conservacion,Identificador grupos interés,slug,Identificador único del grupo de interés de conservación,"Se creó utilizando él nombre del grupo de interés de conservación, quitando mayúsculas, tildes y símbolos. En los casos donde incluye más de dos palabras los espacios se reemplazaron por -",NA
-grupo_interes_conservacion,Grupo de interés,label,Nombre completo del grupo de interés de conservación,NA,NA
-grupo_interes_conservacion,Descripción,descripcion,Aclaraciones adicionales sobre él grupo de interés de conservación. Puede detallar las especies incluidas o excluidas dentro del grupo de interés de conservación para él cálculo de cifras.,NA,NA
-grupo_interes_conservacion,Identificador referencia,ref_id,Identificador de la fuente de la cual se obtuvo la categorización del grupo de interés de conservación,NA,NA
+grupo,Identificador categoría superior,parent,corresponden al slug de la categoría superior del grupo biológico (si la tiene) en caso de no ser así su valor es 0,NA,done
+grupo,Identificador grupo biológico,slug,Identificador único del grupo biológico,"Se creó utilizando él nombre del grupo biológico, quitando mayúsculas, tildes y símbolos. En los casos donde incluye más de dos palabras los espacios se reemplazaron por -",NA
+grupo,Grupo biológico,label,Nombre completo del grupo biológico,NA,NA
+grupo,Descripción,descripcion,Aclaraciones adicionales sobre él grupo biológico. Puede detallar las especies incluidas o excluidas dentro del grupo biológico para él cálculo de cifras.,ej. microorganismos (incluye hongos) abejas que pueden tener especies de múltiples familias,NA
+grupo,Identificador referencia,ref_id,Identificador de la fuente de la cual se obtuvo la categorización del grupo biológico,NA,NA
 municipio,Identificador municipio,slug,Identificador único del municipio,"Se creó utilizando él nombre del municipio, quitando mayúsculas, tildes y símbolos. En los casos donde incluye más de dos palabras los espacios se reemplazaron por -. En él caso de nombres de municipios que se repiten en varios departamentos, se agregaron las letras correspondientes al código ISO del departamento.",NA
 municipio,Municipio,label,Nombre completo del municipio,NA,NA
 municipio,Codígo DANE,cod_dane,Código del DANE único para cada municipio,NA,NA
@@ -91,14 +84,11 @@ region,Identificador región,slug,Identificador único de la región,"Se creó u
 region,Región,label,Nombre completo de la región,NA,NA
 region,Descripción,descripcion,"Descripción general de la región, puede contener información como delimitaciones, caracteristicas, ubicación, entre otros.",No es un campo obligatorio,NA
 region,Zona marina,marino,Indica si la región tiene o no zonas marinas,Por ahora se encuentra vacío. Y solo se diligenciara a regiones diferentes a departamentos o municipios.,NA
-region_grupo_interes_conservacion,Identificador región,slug_region,"Identificador de la región, este permite enlazar con la tabla región",NA,NA
-region_grupo_interes_conservacion,Identificador grupo interés,slug_grupo_interes_conservacion,"Identificador del grupo de interés de conservación, este permite enlazar con la tabla grupo interes conservación",NA,NA
-region_grupo_interes_conservacion,NA,variables especies,Indica él número de especies del grupo de interés de conservación para la región que se encuentran dentro de la alguna de las temáticas establecidas,NA,NA
-region_grupo_interes_conservacion,NA,variables registros,Indica él número de registros del grupo de interés de conservación para la región que se encuentran dentro de la alguna de las temáticas establecidas,NA,NA
-region_grupo_biologico,Identificador región,slug_region,"Identificador de la región, este permite enlazar con la tabla región",se repite hacia abajo para cada región,done
-region_grupo_biologico,Identificador grupo biológico,slug_grupo_biologico,"Identificador del grupo biológico, este permite enlazar con la tabla grupo biológico",NA,NA
-region_grupo_biologico,NA,variables especies tematica,Indica él número de especies del grupo biológico para la región que se encuentran dentro de la alguna de las temáticas establecidas,NA,NA
-region_grupo_biologico,NA,variables registros tematicas,Indica él número de registros del grupo biológico para la región que se encuentran dentro de la alguna de las temáticas establecidas,NA,NA
+region_grupo,Identificador región,slug_region,"Identificador de la región, este permite enlazar con la tabla región",se repite hacia abajo para cada región,done
+region_grupo,Identificador grupo biológico,slug_grupo,"Identificador del grupo biológico, este permite enlazar con la tabla grupo biológico",NA,NA
+region_grupo,NA,tipo,NA,NA,NA
+region_grupo,NA,variables especies tematica,Indica él número de especies del grupo biológico para la región que se encuentran dentro de la alguna de las temáticas establecidas,NA,NA
+region_grupo,NA,variables registros tematicas,Indica él número de registros del grupo biológico para la región que se encuentran dentro de la alguna de las temáticas establecidas,NA,NA
 region_patrocinador,Identificador región,slug_region,"Identificador de la región, este permite enlazar con la tabla región",NA,NA
 region_patrocinador,Identificador patrocinador,slug_patrocinador,"Identificador del patrocinador, este permite enlazar con la tabla patrocinador",NA,NA
 region_publicador,Identificador región,slug_region,"Identificador de la región, este permite enlazar con la tabla región",NA,NA

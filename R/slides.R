@@ -5,6 +5,7 @@ make_region_slides <- function(region){
   sib_validate_available_regions(region)
 
 
+  dir.create(glue::glue("static/charts/{region}"))
   ####################
 
   subregs <- sib_available_subregions(region)
@@ -12,10 +13,14 @@ make_region_slides <- function(region){
 
   reg_labels <- sib_tables("region") |> select(slug, label)
 
-  reg_gr_bio <- sib_tables("region_grupo_biologico") |>
-    dplyr::filter(slug_region == region)
-  reg_gr_int <- sib_tables("region_grupo_interes_conservacion") |>
-    dplyr::filter(slug_region == region)
+  reg_gr_bio <- sib_tables("region_grupo_tematica") |>
+    dplyr::filter(slug_region == region) |>
+    dplyr::filter(tipo == "biologico")
+
+  reg_gr_int <- sib_tables("region_grupo_tematica") |>
+    dplyr::filter(slug_region == region) |>
+    dplyr::filter(tipo == "interes")
+
   reg_tematica <- sib_tables("region_tematica") |>
     dplyr::filter(slug_region == region)
   subreg_tematica <- sib_tables("region_tematica") |>
@@ -63,35 +68,40 @@ make_region_slides <- function(region){
 
   # Nariño vs Colombia
 
-  reg_vs_parent <- sib_tables("region_tematica") |>
-    dplyr::filter(slug_region %in% c(region, parent))
+  if(region == "colombia"){
+    l <- NULL
+  }else{
+    reg_vs_parent <- sib_tables("region_tematica") |>
+      dplyr::filter(slug_region %in% c(region, parent))
 
-  d <- reg_vs_parent |>
-    dplyr::select(slug_region, especies_region_total)
+    d <- reg_vs_parent |>
+      dplyr::select(slug_region, especies_region_total)
 
-  path <- glue::glue("static/charts/{region}/reg_vs_parent.png")
+    path <- glue::glue("static/charts/{region}/reg_vs_parent.png")
 
-  gg <- sib_chart_waffle(d)
-  ggsave(path, gg, width = 4, height = 4)
+    gg <- sib_chart_waffle(d)
+    ggsave(path, gg, width = 4, height = 4)
 
-  x <- d$especies_region_total
-  names(x) <- d$slug_region
-  x[1] <- x[1] - x[2]
-  x <- rev(x)
-  x <- round(x/sum(x)*100)
-  proportion <- x[1]
-  regionTitle <- makeup::makeup_chr(region, "Title")
-  description_tpl <- "El departamento de {regionTitle} tiene alrededor del {proportion}% de las especies del país."
-  title_tpl <- "{region} vs. {parent}"
-  l <- list(
-    id = "slide1",
-    layout = "title/(text|chart)",
-    title =  toupper(glue::glue(title_tpl)),
-    description = glue::glue(description_tpl),
-    chart_type = "image",
-    chart_url = path
-  )
-  slides <- list(l)
+    x <- d$especies_region_total
+    names(x) <- d$slug_region
+    x[1] <- x[1] - x[2]
+    x <- rev(x)
+    x <- round(x/sum(x)*100)
+    proportion <- x[1]
+    regionTitle <- makeup::makeup_chr(region, "Title")
+    description_tpl <- "El departamento de {regionTitle} tiene alrededor del {proportion}% de las especies del país."
+    title_tpl <- "{region} vs. {parent}"
+    l <- list(
+      id = "slide1",
+      layout = "title/(text|chart)",
+      title =  toupper(glue::glue(title_tpl)),
+      description = glue::glue(description_tpl),
+      chart_type = "image",
+      chart_url = path
+    )
+    slides <- list(l)
+  }
+
 
 
   # Especies con mayor número de observaciones

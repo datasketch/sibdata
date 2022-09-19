@@ -3,21 +3,21 @@ library(sibdata)
 sib_available_tables()
 
 # generate_navigation
-navigation_trees("region",
-                 json_file = "static/data/nav_region.json")
-
-navigation_trees("territorio",
-                 json_file = "static/data/nav_territorio.json")
-
-
-navigation_trees("grupo_biologico",
-                 json_file = "static/data/nav_grupo_biologico.json")
-
-navigation_trees("grupo_interes_conservacion",
-                 json_file = "static/data/nav_grupo_interes_conservacion.json")
-
-navigation_trees("tematica",
-                 json_file = "static/data/nav_tematica.json")
+# navigation_trees("region",
+#                  json_file = "static/data/nav_region.json")
+#
+# navigation_trees("territorio",
+#                  json_file = "static/data/nav_territorio.json")
+#
+#
+# navigation_trees("grupo_biologico",
+#                  json_file = "static/data/nav_grupo_biologico.json")
+#
+# navigation_trees("grupo_interes_conservacion",
+#                  json_file = "static/data/nav_grupo_interes_conservacion.json")
+#
+# navigation_trees("tematica",
+#                  json_file = "static/data/nav_tematica.json")
 
 # navigation_trees("territorio",
 #                  json_file = "static/data/nav_tematica.json")
@@ -29,30 +29,46 @@ tooltips <- sib_tables("tematica") |>
   select(slug, tooltip)
 jsonlite::write_json(tooltips, "static/data/tooltips.json")
 
-
-
-
 # Copy icons
 
 copy_icons("static")
 
+
+# Generate navigation files
 
 # Generate files for regions
 
 av_regions <- sib_available_regions()
 
 map(av_regions, function(region){
+  message(region)
+  #region <- "boyaca"
+  # region <- "narino"
   # region <- "tolima"
+  # region <- "colombia"
+
+  nav_tematica <- navigation_trees("tematica")
+  nav_grupo_biologico <- navigation_trees("grupo_biologico")
+  nav_grupo_interes <- navigation_trees("grupo_interes")
+  nav_territorio <- navigation_trees("territorio", region = region)
+
 
   general_info <- sib_region_general(region)
+
+  gallery <- make_gallery(region)
+
   slides <- make_region_slides(region)
+
+
+
   reg_gr_bio <- region_gr_bio_data(region)
   reg_gr_int <- region_gr_int_data(region)
 
 
   # Temáticas
 
-  tem_list <- tematica_list(region)
+  #tem_list <- tematica_list(region)
+  tem_list <- NA
 
   # Territorio
   dir.create(glue::glue("static/charts/{region}"))

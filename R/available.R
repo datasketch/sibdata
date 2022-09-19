@@ -8,16 +8,12 @@ sib_available_tables <- function(){
 
 #' @export
 sib_available_regions <- function(){
-
-  reg_gr_bio <- sib_tables("region_grupo_biologico") |>
-    dplyr::distinct(slug_region)
-  reg_gr_int <- sib_tables("region_grupo_interes_conservacion") |>
-    dplyr::distinct(slug_region)
-  regs <- bind_rows(reg_gr_bio, reg_gr_int) |>
+  reg_gr <- sib_tables("region_grupo_tematica") |>
+    dplyr::distinct(slug_region) |>
     select(slug_region) |>
     sib_merge_region_label()
-  av_regs <- regs$slug_region
-  names(av_regs) <- regs$label
+  av_regs <- reg_gr$slug_region
+  names(av_regs) <- reg_gr$label
   av_regs
 }
 
@@ -36,7 +32,7 @@ sib_available_subregions <- function(region){
 
 #' @export
 sib_available_profile_types <- function(){
-  c("region", "territorio", "grupo_biologico", "grupo_interes_conservacion",
+  c("region", "territorio", "grupo_biologico", "grupo_interes",
     "specie", "tematica")
 }
 

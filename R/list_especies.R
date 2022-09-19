@@ -2,22 +2,14 @@
 
 #' @export
 list_species <- function(region,
-                         grupo_biologico = NULL, grupo_interes = NULL,
+                         grupo = NULL,
                          tematica = NULL){
   # region <- "tolima"
 
   especie <- sib_tables("especie")
 
-  if( !is.null(grupo_biologico) && !is.null(grupo_interes))
-    stop("Please query grupo_biologico or grupo_interes")
-
-  do_query_grupo <- !is.null(grupo_biologico) || !is.null(grupo_biologico)
+  do_query_grupo <- !is.null(grupo)
   do_query_tematica <- !is.null(tematica)
-
-  grupo <- grupo_biologico %||% grupo_interes
-
-  #message("do_query_grupo ", do_query_grupo)
-  #message("do_query_tematica ", do_query_tematica)
 
   esp_reg <- sib_tables("especie_region") |>
     dplyr::filter(slug_region == region)
@@ -26,8 +18,8 @@ list_species <- function(region,
   if(do_query_grupo){
     # Returns the list of the region and grupo
     # grupo <- "aves"
-    esp_gr_bio <- sib_tables("especie_grupo_biologico") |>
-      dplyr::filter(slug_grupo_biologico == grupo)
+    esp_gr_bio <- sib_tables("especie_grupo") |>
+      dplyr::filter(slug_grupo == grupo)
     esp_reg_gr_bio <- esp_reg |>
       filter(slug_especie %in% esp_gr_bio$slug_especie)
 

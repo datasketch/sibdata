@@ -15,4 +15,19 @@ write_csv(tables, "data-raw/diccionaries/tables.csv")
 write_csv(dic, "data-raw/diccionaries/dic.csv")
 write_csv(ind_meta, "data-raw/diccionaries/ind_meta.csv")
 
+# Textos
+
+ss <- "https://docs.google.com/spreadsheets/d/1-FiWbPN7Zn4SQJQ9bhQ542JuZnAzV4FRb-mqUzEDsUM/edit#gid=1694674636"
+
+imagenes <- googlesheets4::read_sheet(ss, sheet = "imagenes_galeria")
+destacados_imagenes <- imagenes |>
+  select(slug_region, img_link)
+write_csv(destacados_imagenes, "data-raw/gallery_images.csv")
+
+
+
+
+
+
+
 

@@ -3,13 +3,19 @@ library(tidyverse)
 
 
 # Get data form googlesheets
-# source("data-raw/get_data.R")
+source("data-raw/get_data.R")
 
 files <- list.files("data-raw/db-cifras-sib", full.names = TRUE)
 table_names <- gsub(".tsv", "",basename(files))
 
 ds <- map(files, read_delim)
 names(ds) <- table_names
+
+
+## Add grupo table
+
+ds$grupo <- ds$grupo_biologico
+ds$grupo_biologico <- NULL
 
 
 ## Add icons
@@ -20,9 +26,7 @@ available_icons <- available_icons |>
   map_chr(1) |>
   unique()
 
-ds$grupo_biologico <- ds$grupo_biologico |>
-  mutate(icon = slug %in% available_icons)
-ds$grupo_interes_conservacion <- ds$grupo_interes_conservacion |>
+ds$grupo <- ds$grupo |>
   mutate(icon = slug %in% available_icons)
 ds$tematica <- ds$tematica |>
   mutate(icon = slug %in% available_icons)
@@ -45,27 +49,29 @@ ds$ind_meta <- ind_meta
 
 
 # Create grupo table
-names(ds$region_grupo_biologico)
-grupo_bio <- ds$region_grupo_biologico |>
+
+ds$region_grupo_tematica <- ds$region_grupo_biologico |>
   rename(slug_grupo = slug_grupo_biologico)
-grupo_int <- ds$region_grupo_interes_conservacion |>
-  rename(slug_grupo = slug_grupo_interes_conservacion)
+grupo_tipo <- ds$grupo |> select(slug_grupo = slug, tipo)
+ds$region_grupo_tematica <- ds$region_grupo_tematica |>
+  left_join(grupo_tipo) |>
+  relocate(tipo, .after = slug_grupo)
 
-region_grupo_tematica <- bind_rows(list(biologico = grupo_bio, interes = grupo_int),
-                   .id = "grupo_tipo")
-ds$region_grupo_tematica <- region_grupo_tematica
 
+ds$region_grupo_biologico <- NULL
 
 # Create especie_grupo table
 
-especie_grupo_bio <- ds$especie_grupo_biologico |>
-  rename(slug_grupo = slug_grupo_biologico)
-especie_grupo_int <- ds$especie_grupo_interes_conservacion |>
-  rename(slug_grupo = slug_grupo_interes_conservacion)
-especie_grupo <- bind_rows(list(biologico = especie_grupo_bio, interes = especie_grupo_int),
-                                   .id = "grupo_tipo")
-ds$especie_grupo <- especie_grupo
+ds$especie_grupo <- ds$especie_grupo_biologico |>
+  rename(slug_grupo = slug_grupo_biologico )
 
+ds$especie_grupo_biologico <- NULL
+
+# Add imagenes a destacadas
+gallery_images <- read_csv("data-raw/gallery_images.csv")
+ds$gallery_images <- gallery_images
+
+# Save
 
 available_tables <- names(ds)
 

@@ -1,5 +1,6 @@
 
 
+
 primero sale el mapa del departamento
 ver por registros o por especies
 
@@ -48,6 +49,15 @@ compare_button:
 
 
 
+# Notas tolima
+
+Quieren lanzar el 12 de septiembre
+
+
+
+
+
+
 # Ajustes datos
 
 inds_meta
@@ -61,6 +71,8 @@ tabla: grupo = grupo_bio + grupo_int
 
 grupo -> rename to region_grupo_tematica?
 
+
+Link a fotos
 
 
 # DONE

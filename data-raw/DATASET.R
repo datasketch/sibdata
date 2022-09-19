@@ -71,6 +71,14 @@ ds$especie_grupo_biologico <- NULL
 gallery_images <- read_csv("data-raw/gallery_images.csv")
 ds$gallery_images <- gallery_images
 
+preg_frecuentes <- read_csv("data-raw/preg_frecuentes.csv")
+ds$preg_frecuentes <- preg_frecuentes
+
+glosario <- read_csv("data-raw/glosario.csv")
+ds$glosario <- glosario
+
+
+
 # Save
 
 available_tables <- names(ds)

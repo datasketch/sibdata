@@ -29,7 +29,7 @@ preg_frecuentes <- googlesheets4::read_sheet(ss, sheet = "Preguntas frecuentes")
 write_csv(preg_frecuentes, "data-raw/preg_frecuentes.csv")
 
 glosario <- googlesheets4::read_sheet(ss, sheet = "Glosario")
-write_csv(preg_frecuentes, "data-raw/glosario.csv")
+write_csv(glosario, "data-raw/glosario.csv")
 
 
 

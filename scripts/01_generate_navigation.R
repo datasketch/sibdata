@@ -30,7 +30,7 @@ preg_frecuentes <- sib_tables("preg_frecuentes")
 jsonlite::write_json(preg_frecuentes, "static/data/preg_frecuentes.json",
                      auto_unbox = TRUE, pretty = TRUE)
 glosario <- sib_tables("glosario")
-jsonlite::write_json(preg_frecuentes, "static/data/glosario.json",
+jsonlite::write_json(glosario, "static/data/glosario.json",
                      auto_unbox = TRUE, pretty = TRUE)
 
 

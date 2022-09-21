@@ -13,8 +13,8 @@ sib_chart_waffle <- function(d, path){
 
   x <- d$especies_region_total
   names(x) <- d$slug_region
-  x[1] <- x[1] - x[2]
-  x <- rev(x)
+  x[2] <- x[2] - x[1]
+  #x <- rev(x)
   x <- round(x/sum(x)*100)
 
   gg <- waffle::waffle(x, colors = c("orange", "lightgrey"), row = 10,

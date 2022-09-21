@@ -7,21 +7,28 @@ sib_available_tables <- function(){
 
 
 #' @export
-sib_available_regions <- function(){
-  reg_gr <- sib_tables("region_grupo_tematica") |>
-    dplyr::distinct(slug_region) |>
+sib_available_regions <- function(level = c(1,2)){
+  regs <- sib_tables("region")
+  if(1 %in% level)
+    vars <- "País"
+  if(2 %in% level)
+    vars <- c(vars, "Departamento")
+  regs2 <- regs |>
+    filter(subtipo %in% vars)
+  regs_level <- regs2$slug
+
+  reg_gr <- sib_tables("region_grupo") |>
+    dplyr::distinct(slug_region, .keep_all = TRUE) |>
     select(slug_region) |>
-    sib_merge_region_label()
+    sib_merge_region_label() |>
+    filter(slug_region %in% regs_level)
+
   av_regs <- reg_gr$slug_region
   names(av_regs) <- reg_gr$label
   av_regs
 }
 
-#' @export
-sib_parent_region <- function(region){
-  sib_tables("region") |>
-    dplyr::filter(slug == region) |> dplyr::pull(parent)
-}
+
 
 #' @export
 sib_available_subregions <- function(region){
@@ -46,7 +53,7 @@ sib_available_grupos <- function(tipo = NULL){
     grps <- bind_rows(gr_bio, gr_int) |>
       select(slug_grupo = slug, label)
   } else {
-    grps <- sib_tables("region_grupo_tematica") |>
+    grps <- sib_tables("region_grupo") |>
       filter(grupo_tipo == tipo) |>
       select(slug_grupo) |>
       sib_merge_grupo_label()

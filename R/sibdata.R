@@ -55,7 +55,7 @@ sibdata_wide <- function(region,
   } else if (is.null(grupo)){
     d <- region_tematica(region)
   } else {
-    d <- region_grupo_tematica(region, grupo)
+    d <- region_grupo(region, grupo)
   }
   d <-  d |> sib_merge_region_label()
 

@@ -1,20 +1,69 @@
 # OK
 
-nav--- OK
-publicadores: falta link... número especies y obs
-
 
 # TODO
 
+
+Nerith... dónde están las especies amenazadas estimadas? 
+
+json vista temáticas
+
+json grupos biológico
+
+datos municipios
+
+Agregar regiones a publicadores
+
+
+datos para todos los gráficos
 svgs de los mapas
 
 
-datos para los gráficos
 
-temáticas
+```
+ {
+        "slug": "exoticas-invasoras",
+        "activa": true,
+        "descripcion": "Se incluyen especies catalogadas como exóticas, exóticas con alto riesgo de invasión, invasoras catalogadas por el Registro mundial de especies introducidas e invasoras para Colombia y el Ministerio de Ambiente y Desarrollo Sostenible.",
+        "icon": false,
+        "icon_black": "static/icons/exoticas-invasoras-black.svg",
+        "icon_white": "static/icons/exoticas-invasoras-white.svg",
+        "label": "Exóticas",
+        "children": [
+          {
+            "slug": "exoticas",
+            "activa": true,
+            "descripcion": "Las especies exóticas son aquellas que no son nativas de un país o una región a la que llegaron de manera intencional o accidental, generalmente como resultado de actividades humanas.",
+            "icon": true,
+            "icon_black": "static/icons/exoticas-black.svg",
+            "icon_white": "static/icons/exoticas-white.svg",
+            "label": "Exóticas",
+            "tooltip": "Exóticas GRIIS (Registro mundial de especies introducidas e invasoras)"
+          },
+          {
+            "slug": "invasoras",
+            "activa": true,
+            "descripcion": "Organismos que se adaptan a regiones fuera de su distribución natural, causando daños al ecosistema, las especies nativas, salud o economía de la región.",
+            "icon": false,
+            "icon_black": "static/icons/invasoras-black.svg",
+            "icon_white": "static/icons/invasoras-white.svg",
+            "label": "Invasoras",
+            "tooltip": "Invasoras (resolución 848 de 2008 del Ministerio de Ambiente y Desarrollo Sostenible)"
+          },
+          {
+            "slug": "exotica-riesgo-invasion",
+            "activa": true,
+            "descripcion": "Una especie exótica con alto riesgo de invasión, es una especie con alta probabilidad de establecerse en ecosistemas o hábitats naturales o seminaturales, es un agente de cambio y amenaza la diversidad biológica nativa.",
+            "icon": false,
+            "icon_black": "static/icons/exotica-riesgo-invasion-black.svg",
+            "icon_white": "static/icons/exotica-riesgo-invasion-white.svg",
+            "label": "Especies exóticas con alto riesgo de invasión",
+            "tooltip": "Invasoras GRIIS (Registro mundial de especies introducidas e invasoras)"
+          }
+        ]
+      },
 
-mas-glosario
-mas-preguntas-frecuentes
+```
 
 
 

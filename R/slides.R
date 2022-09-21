@@ -13,11 +13,11 @@ make_region_slides <- function(region){
 
   reg_labels <- sib_tables("region") |> select(slug, label)
 
-  reg_gr_bio <- sib_tables("region_grupo_tematica") |>
+  reg_gr_bio <- sib_tables("region_grupo") |>
     dplyr::filter(slug_region == region) |>
     dplyr::filter(tipo == "biologico")
 
-  reg_gr_int <- sib_tables("region_grupo_tematica") |>
+  reg_gr_int <- sib_tables("region_grupo") |>
     dplyr::filter(slug_region == region) |>
     dplyr::filter(tipo == "interes")
 
@@ -51,8 +51,10 @@ make_region_slides <- function(region){
   pubs_reg <- sib_tables("region_publicador")|>
     dplyr::filter(slug_region == region) |>
     dplyr::distinct() |>
-    dplyr::left_join(pubs, by = c("slug_publicador" = "slug")) |>
-    dplyr::select(label, pais_publicacion, tipo_publicador, registros, especies)
+    dplyr::left_join(pubs |> select(slug, label, pais_publicacion, tipo_publicador),
+                     by = c("slug_publicador" = "slug")) |>
+    dplyr::select(label, pais_publicacion, tipo_publicador,
+                  registros, especies)
 
   estimada <- sib_tables("estimada")
 
@@ -76,6 +78,10 @@ make_region_slides <- function(region){
 
     d <- reg_vs_parent |>
       dplyr::select(slug_region, especies_region_total)
+    idx_col <- which(d$slug_region == "colombia")
+    if(idx_col == 1){
+      d <- d |> slice(2:1)
+    }
 
     path <- glue::glue("static/charts/{region}/reg_vs_parent.png")
 

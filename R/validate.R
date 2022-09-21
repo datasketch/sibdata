@@ -5,7 +5,12 @@ sib_validate_profile_type <- function(type){
     stop("Type must be one of: ", paste(sib_available_profile_types(), collapse = ", "))
 }
 
-
+#' @export
+sib_validate_indicadores <- function(indicadores){
+  available_indicadores <- sib_tables("ind_meta")$indicador
+  if(!all(indicadores %in% available_indicadores))
+    stop("Not all indicadores in available_indicadores")
+}
 
 
 #' @export

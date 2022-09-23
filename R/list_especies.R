@@ -8,6 +8,8 @@ list_species <- function(region,
 
   especie <- sib_tables("especie")
 
+  especie_meta <- sib_tables("especie_meta")
+
   do_query_grupo <- !is.null(grupo)
   do_query_tematica <- !is.null(tematica)
 
@@ -31,7 +33,7 @@ list_species <- function(region,
         distinct()
       especies <- esp_reg_gr_bio |>
         #filter(slug_especie %in% esp_tem$slug_especie)
-        left_join(esp_tem) |>
+        left_join(esp_tem, by = c("slug_region", "slug_especie")) |>
         filter(!is.na(slug_tematica))
 
     }else{
@@ -44,7 +46,7 @@ list_species <- function(region,
       # tematica  <- "cites"
       esp_tem <- esp_tems |>
         dplyr::filter(grepl(tematica, slug_tematica)) |>
-        left_join(esp_reg)
+        left_join(esp_reg, by = c("slug_region", "slug_especie"))
       especies <- esp_tem
 
     }else{
@@ -54,7 +56,38 @@ list_species <- function(region,
   }
 
   esp_with_name <- especies  |>
-    left_join(especie, by = c("slug_especie" = "slug"))
-  esp_with_name
+    left_join(especie, by = c("slug_especie" = "slug")) |>
+    left_join(especie_meta, by = c("slug_especie" = "slug"))
+
+  if(nrow(esp_with_name) == 0){
+    esp_with_name$GBIF <- character(0)
+    esp_with_name$CBC <- character(0)
+    esp_info <- esp_with_name
+  }else{
+    esp_with_name_urls <- map(esp_with_name$url_especie, safely(function(x){
+      # message(x)
+      if(!is.na(x)){
+        a <- jsonlite::fromJSON(x)
+      }else{
+        a <- tibble(GBIF = NA, CBC = NA)
+      }
+      as_tibble(a)
+    }))
+    res <- map(esp_with_name_urls, function(x){
+      if(!is.null(x$error)){
+        return(tibble(GBIF = NA, CBC = NA))
+      } else {
+        return(x$result)
+      }
+
+    })
+    esp_with_name_urls <- res |> bind_rows()
+
+    esp_info <- bind_cols(esp_with_name, esp_with_name_urls)
+    esp_info
+  }
+
+  esp_info
+
 }
 

@@ -1,12 +1,12 @@
 # OK
 
-amenazads childre slugs
-children temáticas amenazadas, 
-slugs que no coinciden, 
-Marino = TRUE para deptos en general_info
-quitar nav_amenzadas: ER de
-temáticas, algunos slug con guión bajo
-nav_exoticas
+- amenazads childre slugs
+- children temáticas amenazadas, 
+- slugs que no coinciden, 
+- Marino = TRUE para deptos en general_info
+- quitar nav_amenzadas: ER de
+- temáticas, algunos slug con guión bajo
+- nav_exoticas
 
 
 # TODO
@@ -100,5 +100,9 @@ colombia
  |- departamentos
  |- municipios
  |- ...
+
+
+
+
 
 

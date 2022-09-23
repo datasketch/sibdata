@@ -78,6 +78,8 @@ map(av_regions, function(region){
   #slides <- list()
 
   reg_gr_bio <- region_gr_bio_data(region)
+
+
   reg_gr_int <- region_gr_int_data(region)
 
 
@@ -151,9 +153,9 @@ map(av_regions, function(region){
 
     gallery = gallery,
     slides = slides,
+    tematica = tem_list,
     grupos_biologicos = reg_gr_bio,
     grupos_interes = reg_gr_int,
-    tematica = tem_list,
     territorio = territorio,
     patrocinador = patrocinador,
     publicadores = publicadores,

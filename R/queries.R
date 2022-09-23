@@ -22,9 +22,9 @@ tematica_list <- function(region){
       slug = "amenazadas",
       label = "Amenazadas",
       children = list(
-        c(list("slug" = "amenazadas-nacional"),
+        c(list("slug" = "amenazadas-nacional", "label" = "Amenazadas nacional"),
           region_indicadores(region, inds_amenazadas_nacional)),
-        c(list("slug" = "amenazadas-global"),
+        c(list("slug" = "amenazadas-global", "label" = "Amenazadas global"),
         region_indicadores(region, inds_amenazadas_global))
       ),
       especies_list = NULL
@@ -117,119 +117,6 @@ tematica_list <- function(region){
 
 
 
-
-
-
-
-region_gr_bio_data <- function(region){
-  reg_gr_bio <- sib_tables("region_grupo") |>
-    dplyr::filter(slug_region == region) |>
-    dplyr::filter(tipo == "biologico") |>
-    dplyr::mutate(slug = slug_grupo) |>
-    dplyr::relocate(slug)
-
-  parent <- sib_parent_region(region)
-  reg_gr_bio_parent <- sib_tables("region_grupo") |>
-    dplyr::filter(slug_region == parent) |>
-    dplyr::filter(tipo == "biologico") |>
-    dplyr::mutate(slug = slug_grupo) |>
-    dplyr::relocate(slug) |>
-    left_join(sib_tables("region"), by = c("slug_region" = "slug"))
-  reg_gr_bio_parent <- reg_gr_bio_parent |>
-    dplyr::select(slug, label, especies_region_total, registros_region_total)
-
-
-  #keys <- reg_gr_bio |> group_by(slug) |> group_keys()
-  reg_gr_bio_list <- reg_gr_bio |>
-    group_split(slug)
-  reg_gr_bio_list <- map(reg_gr_bio_list, function(x){
-    #x <- reg_gr_bio_list[[1]]
-    x <- as.list(x)
-
-    x$parent <- reg_gr_bio_parent |>
-      filter(slug == x$slug)
-
-    species_list <- list_species(region, grupo = x$slug)
-    species_list_top <- species_list |>
-      arrange(desc(registros)) |>
-      slice(1:500)
-    x$species_list_top <- species_list_top
-    species_list_bottom <- species_list |>
-      arrange(registros) |>
-      slice(1:500)
-
-    tematicas <- c("amenazadas-nacional", "amenazadas-global", "cites", "migratorias",
-                   "endemicas", "exoticas", "exoticas_riesgo_invasion", "invasoras")
-    species_list_tematica <- map(tematicas, function(tem){
-      #tem <- tematicas[6]
-      spe <- list_species(region, grupo = x$slug, tematica = tem)
-      spe <- spe |>
-        arrange(desc(registros)) |>
-        slice(1:500) |>
-        select(species, registros)
-      spe
-    })
-    names(species_list_tematica) <- tematicas
-    x$species_list_tematica <- species_list_tematica
-    x
-  })
-  reg_gr_bio_list
-}
-
-region_gr_int_data <- function(region){
-  reg_gr_bio <- sib_tables("region_grupo") |>
-    dplyr::filter(slug_region == region) |>
-    dplyr::filter(tipo == "interes") |>
-    dplyr::mutate(slug = slug_grupo) |>
-    dplyr::relocate(slug)
-
-  parent <- sib_parent_region(region)
-  reg_gr_bio_parent <- sib_tables("region_grupo") |>
-    dplyr::filter(slug_region == parent) |>
-    dplyr::filter(tipo == "interes") |>
-    dplyr::mutate(slug = slug_grupo) |>
-    dplyr::relocate(slug) |>
-    left_join(sib_tables("region"), by = c("slug_region" = "slug"))
-  reg_gr_bio_parent <- reg_gr_bio_parent |>
-    dplyr::select(slug, label, especies_region_total, registros_region_total)
-
-
-  #keys <- reg_gr_bio |> group_by(slug) |> group_keys()
-  reg_gr_bio_list <- reg_gr_bio |>
-    group_split(slug)
-  reg_gr_bio_list <- map(reg_gr_bio_list, function(x){
-    #x <- reg_gr_bio_list[[1]]
-    x <- as.list(x)
-
-    x$parent <- reg_gr_bio_parent |>
-      filter(slug == x$slug)
-
-    species_list <- list_species(region, grupo = x$slug)
-    species_list_top <- species_list |>
-      arrange(desc(registros)) |>
-      slice(1:500)
-    x$species_list_top <- species_list_top
-    species_list_bottom <- species_list |>
-      arrange(registros) |>
-      slice(1:500)
-
-    tematicas <- c("amenazadas-nacional", "amenazadas-global", "cites", "migratorias",
-                   "endemicas", "exoticas", "exoticas_riesgo_invasion", "invasoras")
-    species_list_tematica <- map(tematicas, function(tem){
-      #tem <- tematicas[6]
-      spe <- list_species(region, grupo = x$slug, tematica = tem)
-      spe <- spe |>
-        arrange(desc(registros)) |>
-        slice(1:500) |>
-        select(species, registros)
-      spe
-    })
-    names(species_list_tematica) <- tematicas
-    x$species_list_tematica <- species_list_tematica
-    x
-  })
-  reg_gr_bio_list
-}
 
 region_tematica <- function(region){
   reg_tematica <- sib_tables("region_tematica") |>

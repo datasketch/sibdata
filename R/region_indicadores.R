@@ -59,7 +59,11 @@ default_indicadores <- function(section){
       "especies_cites_ii" = "especies_cites_ii",
       "especies_cites_i_ii" = "especies_cites_i_ii",
       "especies_cites_iii" = "especies_cites_iii",
-      "registros_cites_total" = "registros_cites_total"
+      "registros_cites_total" = "registros_cites_total",
+      "registros_cites_i" = "registros_cites_i",
+      "registros_cites_ii" = "registros_cites_ii",
+      "registros_cites_i_ii" = "registros_cites_i_ii",
+      "registros_cites_iii" = "registros_cites_iii"
     )
   }
   if(section == "inds_parent_cites"){
@@ -69,7 +73,11 @@ default_indicadores <- function(section){
       "parent_especies_cites_ii" = "especies_cites_ii",
       "parent_especies_cites_i_ii" = "especies_cites_i_ii",
       "parent_especies_cites_iii" = "especies_cites_iii",
-      "parent_registros_cites_total" = "registros_cites_total"
+      "parent_registros_cites_total" = "registros_cites_total",
+      "parent_registros_cites_i" = "registros_cites_i",
+      "parent_registros_cites_ii" = "registros_cites_ii",
+      "parent_registros_cites_i_ii" = "registros_cites_i_ii",
+      "parent_registros_cites_iii" = "registros_cites_iii"
     )
   }
 
@@ -101,19 +109,25 @@ default_indicadores <- function(section){
   if(section == "inds_exoticas"){
     inds <- c(
       "especies_exoticas_total" = "especies_exoticas_total",
-      "registros_exoticas_total" = "registros_exoticas_total",
       "especies_exoticas" = "especies_exoticas",
       "especies_invasoras" = "especies_invasoras",
-      "especies_exoticas_riesgo_invasion" = "especies_exoticas_riesgo_invasion"
+      "especies_exoticas_riesgo_invasion" = "especies_exoticas_riesgo_invasion",
+      "registros_exoticas_total" = "registros_exoticas_total",
+      "registros_exoticas" = "registros_exoticas",
+      "registros_invasoras" = "registros_invasoras",
+      "registros_exoticas_riesgo_invasion" = "registros_exoticas_riesgo_invasion"
     )
   }
   if(section == "inds_parent_exoticas"){
     inds <- c(
       "parent_especies_exoticas_total" = "especies_exoticas_total",
-      "parent_registros_exoticas_total" = "registros_exoticas_total",
       "parent_especies_exoticas" = "especies_exoticas",
       "parent_especies_invasoras" = "especies_invasoras",
-      "parent_especies_exoticas_riesgo_invasion" = "especies_exoticas_riesgo_invasion"
+      "parent_especies_exoticas_riesgo_invasion" = "especies_exoticas_riesgo_invasion",
+      "parent_registros_exoticas_total" = "registros_exoticas_total",
+      "parent_registros_exoticas" = "registros_exoticas",
+      "parent_registros_invasoras" = "registros_invasoras",
+      "parent_registros_exoticas_riesgo_invasion" = "registros_exoticas_riesgo_invasion"
     )
   }
 

@@ -20,14 +20,17 @@ tematica_list <- function(region){
   # Amenazadas
   amenazadas <- list(
       slug = "amenazadas",
-      nacional = region_indicadores(region, inds_amenazadas_nacional),
-      global = region_indicadores(region, inds_amenazadas_global),
+      label = "Amenazadas",
+      children = list(
+        region_indicadores(region, inds_amenazadas_nacional),
+        region_indicadores(region, inds_amenazadas_global)
+      ),
       especies_list = NULL
   )
 
   ## Amenazadas - Amenazadas Nacional
   amenazadas_nacional <- c(
-    list(slug = "amenazadas_nacional"),
+    list(slug = "amenazadas_nacional", label = "Amenazadas nacional"),
     region_indicadores(region, inds_amenazadas_nacional),
     region_indicadores(parent_region, inds_especies_parent),
     list(list_especies_amenazadas_nacional = NULL,
@@ -38,7 +41,7 @@ tematica_list <- function(region){
 
   ## Amenazadas - Amenazadas Global
   amenazadas_global <- c(
-    list(slug = "amenazadas_global"),
+    list(slug = "amenazadas_global", label = "Amenazadas global"),
     region_indicadores(region, inds_amenazadas_global),
     region_indicadores(region, inds_especies_parent),
     list(list_especies_amenazadas_global = NULL,

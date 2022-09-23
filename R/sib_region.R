@@ -4,8 +4,9 @@ sib_region_general <- function(region){
 
   ## TODO validate varsnames
   vars <- c(
+    "especies_region_estimadas", "especies_region_total",
   "registros_region_total", "registros_continentales", "registros_marinos",
-  "especies_region_total", "especies_continentales", "especies_marinas",
+  "especies_continentales", "especies_marinas",
   "subtipo","label"
   )
 

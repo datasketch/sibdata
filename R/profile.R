@@ -32,6 +32,9 @@ navigation_trees <- function(type, region = NULL, json_file = NULL){
     table <- sib_tables("territorio") |>
       filter(slug_region == region | parent == region)
 
+  } else if(type == "tematica") {
+    table <- sib_tables(type) |>
+      filter(parent != "cites")
   } else {
     table <- sib_tables(type)
   }
@@ -72,9 +75,19 @@ publicadores_to_json <- function(json_file){
   pub_col <- sib_tables("region_publicador") |>
     filter(slug_region == "colombia") |>
     select(slug = slug_publicador, registros, especies)
+  pub_reg <- sib_tables("region_publicador") |>
+    filter(slug_region %in% c("boyaca", "narino", "tolima", "santander", "colombia")) |>
+    sib_merge_region_label() |>
+    select(slug = slug_publicador, label) |>
+    distinct() |>
+    group_by(slug) |>
+    summarise(region = paste(label, collapse = ", "))
+
   pubs <- sib_tables("publicador") |>
     dplyr::distinct() |>
-    left_join(pub_col)
+    left_join(pub_col) |>
+    left_join(pub_reg)
+
   jsonlite::write_json(pubs, json_file,
                        auto_unbox = TRUE, pretty = TRUE)
 }

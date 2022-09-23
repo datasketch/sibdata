@@ -1,22 +1,31 @@
 # OK
 
+General info: Especies estimadas
+json vista temáticas
+Agregar regiones a publicadores
+Amenazadas con children
+general_info: especies_estimadas
+nav_cites
+resgistros_cites está faltando
+registros_exoticas está faltando
+
+
 
 # TODO
 
-
 Nerith... dónde están las especies amenazadas estimadas? 
-
-json vista temáticas
 
 json grupos biológico
 
 datos municipios
 
-Agregar regiones a publicadores
-
-
 datos para todos los gráficos
-svgs de los mapas
+
+
+
+
+nav_exoticas
+
 
 
 

@@ -9,6 +9,7 @@
     "especies_marinas": 0,
     "subtipo": "departamento",
     "label": "Boyacá",
+    "marino": false,
     "main_text": "A través del SiB Colombia se han publicado 427815 observaciones\npara el departamento de Boyacá. Estos datos hacen referencia a un total de\n10641 especies"
   },
   "nav_tematica": {
@@ -30,141 +31,7 @@
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
             "label": "Categoría UICN global",
-            "tooltip": "UICN (Unión Internacional para la Conservación de la Naturaleza)",
-            "children": [
-              {
-                "slug": "amenazadas-global-ex",
-                "activa": true,
-                "descripcion": "Hace referencia a un taxón en el cual el último individuo vivo ha muerto y no se han logrado encontrar nuevos registros en hábitats con condiciones apropiadas al ciclo de vida y formas del taxón.",
-                "icon": false,
-                "icon_black": "static/icons/amenazadas-global-ex-black.svg",
-                "icon_white": "static/icons/amenazadas-global-ex-white.svg",
-                "label": "EX",
-                "orden": 12,
-                "tooltip": "Extinto"
-              },
-              {
-                "slug": "amenazadas-global-ew",
-                "activa": true,
-                "descripcion": "El taxón solamente sobrevive en cultivo, cautividad o como poblaciones naturalizadas fuera de su distribución original.",
-                "icon": false,
-                "icon_black": "static/icons/amenazadas-global-ew-black.svg",
-                "icon_white": "static/icons/amenazadas-global-ew-white.svg",
-                "label": "EW",
-                "orden": 11,
-                "tooltip": "Extinto en estado silvestre"
-              },
-              {
-                "slug": "amenazadas-global-cr",
-                "activa": true,
-                "descripcion": "Se ha reducido el tamaño de la población o se ha presentado disminución en la extensión de presencia o área de ocupación que genera un riesgo de extinción extremadamente alto en vida silvestre.",
-                "icon": false,
-                "icon_black": "static/icons/amenazadas-global-cr-black.svg",
-                "icon_white": "static/icons/amenazadas-global-cr-white.svg",
-                "label": "CR",
-                "orden": 10,
-                "tooltip": "En peligro crítico"
-              },
-              {
-                "slug": "amenazadas-global-en",
-                "activa": true,
-                "descripcion": "Se ha reducido el tamaño de la población o se ha presentado disminución en la extensión de presencia o área de ocupación que genera un riesgo de extinción muy alto en vida silvestre.",
-                "icon": false,
-                "icon_black": "static/icons/amenazadas-global-en-black.svg",
-                "icon_white": "static/icons/amenazadas-global-en-white.svg",
-                "label": "EN",
-                "orden": 9,
-                "tooltip": "En peligro"
-              },
-              {
-                "slug": "amenazadas-global-vu",
-                "activa": true,
-                "descripcion": "Se ha reducido el tamaño de la población o se ha presentado disminución en la extensión de presencia o área de ocupación que genera un riesgo de extinción alto en vida silvestre.",
-                "icon": false,
-                "icon_black": "static/icons/amenazadas-global-vu-black.svg",
-                "icon_white": "static/icons/amenazadas-global-vu-white.svg",
-                "label": "VU",
-                "orden": 8,
-                "tooltip": "Vulnerable"
-              },
-              {
-                "slug": "amenazadas-global-lr-cd",
-                "activa": true,
-                "descripcion": "Especies con bajo riesgo de amenaza, generalmente esta categoría se incluyen taxones ampliamente distribuidos",
-                "icon": false,
-                "icon_black": "static/icons/amenazadas-global-lr-cd-black.svg",
-                "icon_white": "static/icons/amenazadas-global-lr-cd-white.svg",
-                "label": "LR/cd",
-                "orden": 7,
-                "tooltip": "Menor riesgo / dependiente de medidas de conservación"
-              },
-              {
-                "slug": "amenazadas-global-nt",
-                "activa": true,
-                "descripcion": "Al realizar la evaluación no se encontraron los criterios para definirse como En peligro crítico, En peligro o Vulnerable. Sin embargo es posible que los cumpla en un futuro cercano.",
-                "icon": false,
-                "icon_black": "static/icons/amenazadas-global-nt-black.svg",
-                "icon_white": "static/icons/amenazadas-global-nt-white.svg",
-                "label": "NT",
-                "orden": 6,
-                "tooltip": "Casi amenazado"
-              },
-              {
-                "slug": "amenazadas-global-lr-nt",
-                "activa": true,
-                "descripcion": "Al realizar la evaluación no se encontraron los criterios para definirse como En peligro crítico, En peligro o Vulnerable. Sin embargo es posible que los cumpla en un futuro cercano. ",
-                "icon": false,
-                "icon_black": "static/icons/amenazadas-global-lr-nt-black.svg",
-                "icon_white": "static/icons/amenazadas-global-lr-nt-white.svg",
-                "label": "LR/nt",
-                "orden": 5,
-                "tooltip": "Casi amenazado"
-              },
-              {
-                "slug": "amenazadas-global-lc",
-                "activa": true,
-                "descripcion": "Se realizó la evaluación de riesgo de extensión pero no se cumplieron los criterio para definirlo en alguna categoría de amenaza (En peligro crítico, En peligro, Vulnerable o Casi amenazado)",
-                "icon": false,
-                "icon_black": "static/icons/amenazadas-global-lc-black.svg",
-                "icon_white": "static/icons/amenazadas-global-lc-white.svg",
-                "label": "LC",
-                "orden": 4,
-                "tooltip": "Preocupación menor"
-              },
-              {
-                "slug": "amenazadas-global-lr-lc",
-                "activa": true,
-                "descripcion": "Se realizó la evaluación de riesgo de extensión pero no se cumplieron los criterio para definirlo en alguna categoría de amenaza (En peligro crítico, En peligro, Vulnerable o Casi amenazado). Esto influenciado por programas de conservación continuados para la especie o su hábitat. Al interrumpir la realización de estos programas se debe reevaluar la categoría para la especies.",
-                "icon": false,
-                "icon_black": "static/icons/amenazadas-global-lr-lc-black.svg",
-                "icon_white": "static/icons/amenazadas-global-lr-lc-white.svg",
-                "label": "LR/lc",
-                "orden": 3,
-                "tooltip": "Preocupación menor"
-              },
-              {
-                "slug": "amenazadas-global-dd",
-                "activa": true,
-                "descripcion": "No se tiene la información adecuada para realizar una evaluación del riesgo de extensión basado en su distribución y/o condición de la población.",
-                "icon": false,
-                "icon_black": "static/icons/amenazadas-global-dd-black.svg",
-                "icon_white": "static/icons/amenazadas-global-dd-white.svg",
-                "label": "DD",
-                "orden": 2,
-                "tooltip": "Datos insuficientes"
-              },
-              {
-                "slug": "amenazadas-global-ne",
-                "activa": true,
-                "descripcion": "No se ha llevado a cabo el proceso de clasificación de acuerdo a los criterios establecidos.",
-                "icon": false,
-                "icon_black": "static/icons/amenazadas-global-ne-black.svg",
-                "icon_white": "static/icons/amenazadas-global-ne-white.svg",
-                "label": "NE",
-                "orden": 1,
-                "tooltip": "No evaluado"
-              }
-            ]
+            "tooltip": "UICN (Unión Internacional para la Conservación de la Naturaleza)"
           },
           {
             "slug": "amenazadas-nacional",
@@ -174,42 +41,7 @@
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
             "label": "Categoría UICN nacional",
-            "tooltip": "Ministerio de Ambiente y Desarrollo Sostenible, resolución 1912 de 2017",
-            "children": [
-              {
-                "slug": "amenazadas-nacional-cr",
-                "activa": true,
-                "descripcion": "Son aquellas especies que enfrentan un riesgo de extinción extremadamente alto en vida silvestre.",
-                "icon": false,
-                "icon_black": "static/icons/amenazadas-nacional-cr-black.svg",
-                "icon_white": "static/icons/amenazadas-nacional-cr-white.svg",
-                "label": "CR",
-                "orden": 3,
-                "tooltip": "En peligro crítico"
-              },
-              {
-                "slug": "amenazadas-nacional-en",
-                "activa": true,
-                "descripcion": "Presentan un riesgo de extinción muy alto en estado de vida silvestre.",
-                "icon": false,
-                "icon_black": "static/icons/amenazadas-nacional-en-black.svg",
-                "icon_white": "static/icons/amenazadas-nacional-en-white.svg",
-                "label": "EN",
-                "orden": 2,
-                "tooltip": "En peligro"
-              },
-              {
-                "slug": "amenazadas-nacional-vu",
-                "activa": true,
-                "descripcion": "Especies que presentan un riesgo de extinción alto en estado de vida silvestre.",
-                "icon": false,
-                "icon_black": "static/icons/amenazadas-nacional-vu-black.svg",
-                "icon_white": "static/icons/amenazadas-nacional-vu-white.svg",
-                "label": "VU",
-                "orden": 1,
-                "tooltip": "Vulnerable"
-              }
-            ]
+            "tooltip": "Ministerio de Ambiente y Desarrollo Sostenible, resolución 1912 de 2017"
           }
         ]
       },
@@ -239,39 +71,7 @@
         "icon": false,
         "icon_black": "static/icons/exoticas-invasoras-black.svg",
         "icon_white": "static/icons/exoticas-invasoras-white.svg",
-        "label": "Exóticas",
-        "children": [
-          {
-            "slug": "exoticas",
-            "activa": true,
-            "descripcion": "Las especies exóticas son aquellas que no son nativas de un país o una región a la que llegaron de manera intencional o accidental, generalmente como resultado de actividades humanas.",
-            "icon": true,
-            "icon_black": "static/icons/exoticas-black.svg",
-            "icon_white": "static/icons/exoticas-white.svg",
-            "label": "Exóticas",
-            "tooltip": "Exóticas GRIIS (Registro mundial de especies introducidas e invasoras)"
-          },
-          {
-            "slug": "invasoras",
-            "activa": true,
-            "descripcion": "Organismos que se adaptan a regiones fuera de su distribución natural, causando daños al ecosistema, las especies nativas, salud o economía de la región.",
-            "icon": false,
-            "icon_black": "static/icons/invasoras-black.svg",
-            "icon_white": "static/icons/invasoras-white.svg",
-            "label": "Invasoras",
-            "tooltip": "Invasoras (resolución 848 de 2008 del Ministerio de Ambiente y Desarrollo Sostenible)"
-          },
-          {
-            "slug": "exotica-riesgo-invasion",
-            "activa": true,
-            "descripcion": "Una especie exótica con alto riesgo de invasión, es una especie con alta probabilidad de establecerse en ecosistemas o hábitats naturales o seminaturales, es un agente de cambio y amenaza la diversidad biológica nativa.",
-            "icon": false,
-            "icon_black": "static/icons/exotica-riesgo-invasion-black.svg",
-            "icon_white": "static/icons/exotica-riesgo-invasion-white.svg",
-            "label": "Especies exóticas con alto riesgo de invasión",
-            "tooltip": "Invasoras GRIIS (Registro mundial de especies introducidas e invasoras)"
-          }
-        ]
+        "label": "Exóticas"
       },
       {
         "slug": "migratorias",
@@ -105137,6 +104937,7 @@
       "label": "Amenazadas",
       "children": [
         {
+          "slug": "amenazadas-nacional",
           "especies": 190,
           "registros": 7428,
           "cr": 23,
@@ -105148,6 +104949,7 @@
           "especies_estimadas": 41344
         },
         {
+          "slug": "amenazadas-global",
           "especies": 220,
           "registros": 7655,
           "cr": 34,
@@ -105162,7 +104964,7 @@
       "especies_list": {}
     },
     {
-      "slug": "amenazadas_nacional",
+      "slug": "amenazadas-nacional",
       "label": "Amenazadas nacional",
       "especies": 190,
       "registros": 7428,
@@ -105180,7 +104982,7 @@
       "list_especies_amenazadas_nacional_cr": {}
     },
     {
-      "slug": "amenazadas_global",
+      "slug": "amenazadas-global",
       "label": "Amenazadas global",
       "especies": 220,
       "registros": 7655,
@@ -105243,7 +105045,7 @@
       "list_especies_migratorias": {}
     },
     {
-      "slug": "exoticas",
+      "slug": "exoticas-invasoras",
       "especies_exoticas_total": 223,
       "especies_exoticas": 173,
       "especies_invasoras": 10,

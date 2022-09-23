@@ -22,15 +22,17 @@ tematica_list <- function(region){
       slug = "amenazadas",
       label = "Amenazadas",
       children = list(
-        region_indicadores(region, inds_amenazadas_nacional),
-        region_indicadores(region, inds_amenazadas_global)
+        c(list("slug" = "amenazadas-nacional"),
+          region_indicadores(region, inds_amenazadas_nacional)),
+        c(list("slug" = "amenazadas-global"),
+        region_indicadores(region, inds_amenazadas_global))
       ),
       especies_list = NULL
   )
 
   ## Amenazadas - Amenazadas Nacional
   amenazadas_nacional <- c(
-    list(slug = "amenazadas_nacional", label = "Amenazadas nacional"),
+    list(slug = "amenazadas-nacional", label = "Amenazadas nacional"),
     region_indicadores(region, inds_amenazadas_nacional),
     region_indicadores(parent_region, inds_especies_parent),
     list(list_especies_amenazadas_nacional = NULL,
@@ -41,7 +43,7 @@ tematica_list <- function(region){
 
   ## Amenazadas - Amenazadas Global
   amenazadas_global <- c(
-    list(slug = "amenazadas_global", label = "Amenazadas global"),
+    list(slug = "amenazadas-global", label = "Amenazadas global"),
     region_indicadores(region, inds_amenazadas_global),
     region_indicadores(region, inds_especies_parent),
     list(list_especies_amenazadas_global = NULL,
@@ -92,7 +94,7 @@ tematica_list <- function(region){
   inds_exoticas <- default_indicadores("inds_exoticas")
   inds_parent_exoticas <- default_indicadores("inds_parent_exoticas")
   exoticas <- c(
-    list(slug = "exoticas"),
+    list(slug = "exoticas-invasoras"),
     region_indicadores(region, inds_exoticas),
     region_indicadores(parent_region, inds_especies_parent),
     list(list_especies_exoticas_total = NULL,

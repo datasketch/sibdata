@@ -53,6 +53,10 @@ copy_icons("static")
 
 av_regions <- sib_available_regions()
 
+library(tictoc)
+
+tic()
+
 map(av_regions, function(region){
   message(region)
   # region <- "boyaca"
@@ -163,6 +167,7 @@ map(av_regions, function(region){
 })
 
 
+toc()
 
 
 

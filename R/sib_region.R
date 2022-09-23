@@ -7,7 +7,7 @@ sib_region_general <- function(region){
     "especies_region_estimadas", "especies_region_total",
   "registros_region_total", "registros_continentales", "registros_marinos",
   "especies_continentales", "especies_marinas",
-  "subtipo","label"
+  "subtipo","label", "marino"
   )
 
   reg_data <- sib_calculate_region(region, vars)
@@ -26,7 +26,10 @@ sib_region_general <- function(region){
 
 #' @export
 sib_calculate_region <- function(region, vars = NULL){
-  region_table <- sib_tables("region")
+  region_table <- sib_tables("region") |> select(-marino)
+
+  region_table <- left_join(region_table, sib_region_marino())
+
   reg <- region_table |>
     dplyr::filter(slug == region)
   reg_tem <- sib_tables("region_tematica") |>
@@ -39,6 +42,15 @@ sib_calculate_region <- function(region, vars = NULL){
     reg <- reg |> dplyr::select(any_of(vars))
   }
   reg
+}
+
+sib_region_marino <- function(){
+  deptos <- sib_tables("departamento") |>
+    select(slug, marino)
+  munis <- sib_tables("municipio") |>
+    select(slug, marino)
+  col <- tibble(slug = "colombia", marino = TRUE)
+  bind_rows(col, deptos, munis)
 }
 
 

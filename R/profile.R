@@ -34,7 +34,10 @@ navigation_trees <- function(type, region = NULL, json_file = NULL){
 
   } else if(type == "tematica") {
     table <- sib_tables(type) |>
-      filter(parent != "cites")
+      filter(parent != "cites") |>
+      filter(parent != "amenazadas-global") |>
+      filter(parent != "amenazadas-nacional") |>
+      filter(parent != "exoticas-invasoras")
   } else {
     table <- sib_tables(type)
   }

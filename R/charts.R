@@ -17,7 +17,7 @@ sib_chart_waffle <- function(d, path){
   #x <- rev(x)
   x <- round(x/sum(x)*100)
 
-  gg <- waffle::waffle(x, colors = c("orange", "lightgrey"), row = 10,
+  gg <- waffle::waffle(x, colors = c("#6699FF", "#FFCC99"), row = 10,
                flip = TRUE) +
     theme(legend.position = "none")
   gg

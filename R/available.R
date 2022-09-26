@@ -1,30 +1,30 @@
 
-#' @export
-sib_available_tables <- function(){
-  sibdata::available_tables
-}
+#' #' @export
+#' sib_available_tables <- function(){
+#'   sibdata::available_tables
+#' }
 
 
 
 #' @export
-sib_available_regions <- function(level = c(1,2)){
-  regs <- sib_tables("region")
-  if(1 %in% level)
-    vars <- "País"
-  if(2 %in% level)
-    vars <- c(vars, "Departamento")
-  regs2 <- regs |>
-    filter(subtipo %in% vars)
-  regs_level <- regs2$slug
+sib_available_regions <- function(subtipo = NULL, departamento = NULL){
+  regs <- sibdata_region()
+  reg_gr <- sibdata_region_grupo() |>
+    select(slug_region)
+  sel_subtipo <- subtipo
+  if(!is.null(subtipo)){
+    regs <- regs |>
+      filter(subtipo %in% sel_subtipo)
+  }
+  regs <- regs |> semi_join(reg_gr, by = c("slug" = "slug_region"))
 
-  reg_gr <- sib_tables("region_grupo") |>
-    dplyr::distinct(slug_region, .keep_all = TRUE) |>
-    select(slug_region) |>
-    sib_merge_region_label() |>
-    filter(slug_region %in% regs_level)
+  if(subtipo == "Municipio" & !is.null(departamento)){
+    regs <- regs |>
+      filter(parent == departamento)
+  }
 
-  av_regs <- reg_gr$slug_region
-  names(av_regs) <- reg_gr$label
+  av_regs <- regs |> pull(slug)
+  names(av_regs) <- regs |> pull(label)
   av_regs
 }
 
@@ -32,7 +32,7 @@ sib_available_regions <- function(level = c(1,2)){
 
 #' @export
 sib_available_subregions <- function(region){
-  region <- sib_tables("region") |>
+  region <- sibdata_region() |>
     dplyr::filter(parent == region)
   region |> dplyr::pull(slug)
 }

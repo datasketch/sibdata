@@ -119,7 +119,7 @@ tematica_list <- function(region){
 
 
 region_tematica <- function(region){
-  reg_tematica <- sib_tables("region_tematica") |>
+  reg_tematica <- sibdata_region_tematica() |>
     dplyr::filter(slug_region == region)
   reg_tematica
 }

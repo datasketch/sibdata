@@ -1,21 +1,62 @@
 
-#' @export
-sib_merge_region_label <- function(d){
-  if(!"label" %in% names(d)){
-    regs <- sib_tables("region") |> select(slug_region = slug, label)
-    if("slug_region" %in% names(d)){
-      d <- d |>
-        left_join(regs, by = "slug_region") |>
-        relocate(slug_region, label, everything())
-    }
-    if("slug" %in% names(d) && !"slug_region" %in% names(d)){
-      d <- d |>
-        left_join(regs, by = c("slug"="slug_region")) |>
-        relocate(slug, label, everything())
-    }
-  }
-  d
+sib_region_labels <- function(){
+  sibdata_region() |>
+    select(slug, label)
 }
+
+
+#' @export
+sib_merge_region_label <- function(d, slug = "slug", label = "label_region"){
+  if(label %in% colnames(d)){
+    warning("Overwritting existing label column: ", label,
+            " Use the label param to rename the output label column.")
+  }
+  regs_label <- sibdata_region() |>
+    select(slug_region = slug, label_region = label)
+
+  if(slug == "slug"){
+    by <- c("slug" = "slug_region")
+  } else if(slug == "slug_region"){
+    by <- "slug_region"
+  } else {
+    stop('slug must be "slug" or "slug_region"')
+  }
+
+  if(!slug %in% colnames(d)){
+    stop("Region slug column not found")
+  }else{
+    d2 <- d |>
+      left_join(regs_label, by = by, copy = TRUE)
+  }
+  d2
+}
+
+
+#' @export
+sib_merge_grupo_label <- function(d, slug){
+  grupo_labels <- sibdata_grupo() |>
+    select(slug_grupo = slug, label_grupo = label)
+
+  if(slug == "slug"){
+    by <- c("slug" = "slug_grupo")
+  } else if(slug == "slug_grupo"){
+    by <- "slug_grupo"
+  } else {
+    stop('slug must be "slug" or "slug_grupo"')
+  }
+
+  if(!slug %in% colnames(d)){
+    stop("Region slug column not found")
+  }else{
+    d2 <- d |>
+      left_join(grupo_labels, by = by, copy = TRUE)
+  }
+  d2 |>
+    relocate(label_grupo, .after = slug_grupo)
+
+}
+
+
 
 #' @export
 sib_merge_ind_label <- function(d, replace = TRUE){
@@ -32,27 +73,6 @@ sib_merge_ind_label <- function(d, replace = TRUE){
 
 }
 
-#' @export
-sib_merge_grupo_label <- function(d){
-  gr_bio <- sib_tables("grupo_biologico")
-  gr_int <- sib_tables("grupo_interes_conservacion") |>
-    mutate(parent = as.character(parent))
-  grps <- bind_rows(gr_bio, gr_int) |>
-    select(slug_grupo = slug, label)
-
-  if("slug_grupo" %in% names(d)){
-    d <- d |>
-      left_join(grps, by = "slug_grupo") |>
-      relocate(slug_grupo, label, everything())
-  }
-  if("slug" %in% names(d) && !"slug_grupo" %in% names(d)){
-    d <- d |>
-      left_join(grps, by = c("slug"="slug_grupo")) |>
-      relocate(slug, label, everything())
-  }
-  d
-
-}
 
 #' @export
 sib_merge_especie_label <- function(x){

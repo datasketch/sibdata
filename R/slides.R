@@ -2,7 +2,7 @@
 #' @export
 make_region_slides <- function(region){
 
-  sib_validate_available_regions(region)
+  #sib_validate_available_regions(region)
 
 
   dir.create(glue::glue("static/charts/{region}"))
@@ -11,52 +11,57 @@ make_region_slides <- function(region){
   subregs <- sib_available_subregions(region)
   parent <- sib_parent_region(region)
 
-  reg_labels <- sib_tables("region") |> select(slug, label)
+  reg_labels <- sib_region_labels() |> collect()
 
-  reg_gr_bio <- sib_tables("region_grupo") |>
+  reg_gr_bio <- sibdata_region_grupo() |>
     dplyr::filter(slug_region == region) |>
-    dplyr::filter(tipo == "biologico")
+    dplyr::filter(tipo == "biologico") |>
+    collect()
 
-  reg_gr_int <- sib_tables("region_grupo") |>
+  reg_gr_int <- sibdata_region_grupo() |>
     dplyr::filter(slug_region == region) |>
-    dplyr::filter(tipo == "interes")
+    dplyr::filter(tipo == "interes") |>
+    collect()
 
-  reg_tematica <- sib_tables("region_tematica") |>
-    dplyr::filter(slug_region == region)
-  subreg_tematica <- sib_tables("region_tematica") |>
+  reg_tematica <- sibdata_region_tematica() |>
+    dplyr::filter(slug_region == region) |>
+    collect()
+  subreg_tematica <- sibdata_region_tematica() |>
+    collect() |>
     dplyr::filter(slug_region %in% subregs) |>
     dplyr::left_join(reg_labels, by = c("slug_region" = "slug")) |>
     relocate(label)
-  parent_tematica <- sib_tables("region_tematica") |>
+  parent_tematica <- sibdata_region_tematica() |>
+    collect() |>
     dplyr::filter(slug_region == parent)
 
-  esp <- sib_tables("especie")
-  esp_tem <- sib_tables("especie_tematica")
-  esp_meta <- sib_tables("especie_meta")
+  esp <- sibdata_especie() |> collect()
+  esp_tem <- sibdata_especie_tematica() |> collect()
+  esp_meta <- sibdata_especie_meta() |> collect()
 
-  esp_reg <- sib_tables("especie_region") |>
-    dplyr::filter(slug_region == region)
+  esp_reg <- sibdata_especie_region() |>
+    dplyr::filter(slug_region == region) |>
+    collect()
 
-  esp_parent <- sib_tables("especie_region") |>
-    dplyr::filter(slug_region == parent)
-
-  #esp_subreg <- sib_tables("especie_region") |> ## No se puede calcular
-  #  filter(slug_region %in% subregs)
+  esp_parent <- sibdata_especie_region() |>
+    dplyr::filter(slug_region == parent) |>
+    collect()
 
   esp_reg_tem <-  esp_reg |>
-    dplyr::left_join(esp_tem) |>
+    dplyr::left_join(esp_tem, by = c("slug_region", "slug_especie")) |>
     dplyr::select(-registros)
 
-  pubs <-  sib_tables("publicador")
-  pubs_reg <- sib_tables("region_publicador")|>
+  pubs <-  sibdata_publicador()
+  pubs_reg <- sibdata_region_publicador() |>
     dplyr::filter(slug_region == region) |>
     dplyr::distinct() |>
     dplyr::left_join(pubs |> select(slug, label, pais_publicacion, tipo_publicador),
                      by = c("slug_publicador" = "slug")) |>
     dplyr::select(label, pais_publicacion, tipo_publicador,
-                  registros, especies)
+                  registros, especies) |>
+    collect()
 
-  estimada <- sib_tables("estimada")
+  estimada <- sibdata_estimada() |> collect()
 
 
   slides <- list()
@@ -73,8 +78,9 @@ make_region_slides <- function(region){
   if(region == "colombia"){
     l <- NULL
   }else{
-    reg_vs_parent <- sib_tables("region_tematica") |>
-      dplyr::filter(slug_region %in% c(region, parent))
+    reg_vs_parent <- sibdata_region_tematica() |>
+      dplyr::filter(slug_region %in% c(region, parent)) |>
+      collect()
 
     d <- reg_vs_parent |>
       dplyr::select(slug_region, especies_region_total)

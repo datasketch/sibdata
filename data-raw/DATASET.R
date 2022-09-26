@@ -63,8 +63,15 @@ str(ds$region_tematica)
 
 # Save
 
-available_tables <- names(ds)
+#available_tables <- names(ds)
+#usethis::use_data(ds, available_tables, overwrite = TRUE)
 
-usethis::use_data(ds, available_tables, overwrite = TRUE)
+library(RSQLite)
+con <- dbConnect(RSQLite::SQLite(), "inst/sib.sqlite")
+map2(ds, names(ds), function(d,nm){
+  dbWriteTable(con, nm, d)
+})
+dbDisconnect(con)
+
 
 

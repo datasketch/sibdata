@@ -154,7 +154,7 @@ select_indicator <- function(tipo = NULL,
                 cobertura = cobertura,
                 tematica = tematica)
 
-  inds <- sib_tables("ind_meta")
+  inds <- sibdata_ind_meta()
 
   if(!is.null(tipo)){
     inds <- inds |>

@@ -1,13 +1,15 @@
 
 make_gallery <- function(region){
 
-  txts <- sib_tables("dato_relevante") |>
+  txts <- sibdata_dato_relevante() |>
     filter(slug_region == region) |>
-    select(text = descripcion)
+    select(text = descripcion) |>
+    collect()
 
-  imgs <- sib_tables("gallery_images") |>
+  imgs <- sibdata_gallery_images() |>
     filter(slug_region == region) |>
-    select(image = img_link)
+    select(image = img_link) |>
+    collect()
 
   n <- min(nrow(txts), nrow(imgs))
   txts <- txts |> slice(1:n)

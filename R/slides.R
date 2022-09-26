@@ -96,10 +96,10 @@ make_region_slides <- function(region){
 
     x <- d$especies_region_total
     names(x) <- d$slug_region
-    x[1] <- x[1] - x[2]
+    x[2] <- x[2] - x[1]
     x <- rev(x)
     x <- round(x/sum(x)*100)
-    proportion <- x[1]
+    proportion <- x[2]
     regionTitle <- makeup::makeup_chr(region, "Title")
     description_tpl <- "El departamento de {regionTitle} tiene alrededor del {proportion}% de las especies del país."
     title_tpl <- "{region} vs. {parent}"

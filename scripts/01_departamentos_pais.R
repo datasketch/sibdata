@@ -49,20 +49,35 @@ map(av_regions, function(region){
   subreg_tematica <- subregion_tematica(region)
   d <- subreg_tematica |>
     collect()
-  munis_chart1 <- sib_chart_reg_municipios(d, "especies_region_total")
+
+
+  if(region != "colombia"){
+    map_name <- paste0("col_depto_", region)
+  }else{
+    map_name <- "col_departments"
+  }
+  dd <- d |> select(label, especies_region_total) |> as.data.frame()
+  munis_chart1<- lfltmagic::lflt_choropleth_GnmNum(dd, map_name = map_name)
+
+  #munis_chart1 <- sib_chart_reg_municipios(d, "especies_region_total")
   path1 <- glue::glue("static/charts/{region}/region_municipios_1.html")
   htmlwidgets::saveWidget(munis_chart1, path1)
-  munis_chart2 <- sib_chart_reg_municipios(d, "registros_region_total")
+
+  #munis_chart2 <- sib_chart_reg_municipios(d, "registros_region_total")
+  dd <- d |> select(label, registros_region_total) |> as.data.frame()
+  munis_chart2<- lfltmagic::lflt_choropleth_GnmNum(dd, map_name = map_name)
   path2 <- glue::glue("static/charts/{region}/region_municipios_2.html")
   htmlwidgets::saveWidget(munis_chart2, path2)
 
+  region_tipo <- "municipio"
+  if(region == "colombia") region_tipo <- "departamento"
   territorio <- list(
     list(
       slug = "municipios",
       label = "Municipios",
       charts = list(
-        list(title = "Especies por municipio", path = path1, layout = "title/chart"),
-        list(title = "Observaciones por municipio", path = path2, layout = "title/chart")
+        list(title = glue::glue("Especies por {region_tipo}"), path = path1, layout = "title/chart"),
+        list(title =  glue::glue("Registros por {region_tipo}"), path = path2, layout = "title/chart")
       )
     ),
     list(
@@ -114,7 +129,9 @@ map(av_regions, function(region){
     tematica = tem_list,
     grupos_biologicos = reg_gr_bio,
     grupos_interes = reg_gr_int,
+
     territorio = territorio,
+
     patrocinador = patrocinador,
     publicadores = publicadores,
     municipios_lista = municipios_lista

@@ -51,6 +51,7 @@ sib_region_marino <- function(){
     select(slug, marino) |> collect()
   munis <- sibdata_municipio() |>
     select(slug, marino) |> collect()
+  munis$slug[munis$slug == "colombia"] <- "colombia-hui"
   col <- tibble(slug = "colombia", marino = TRUE)
   bind_rows(col, deptos, munis)
 }

@@ -19,15 +19,14 @@ map(av_regions[1:3], function(region){
   nav_grupo_interes <- navigation_trees("grupo_interes")
 
   # No hay territorio
-  #nav_territorio <- navigation_trees("territorio", region = region)
+  nav_territorio <- list()
 
   general_info <- sib_region_general(region)
 
   # No hay galería
-  # gallery <- make_gallery(region)
+  gallery <- list()
 
   slides <- make_region_slides2(region)
-  #slides <- list()
 
   parent <- sib_parent_region(region)
 
@@ -64,16 +63,21 @@ map(av_regions[1:3], function(region){
     nav_tematica = nav_tematica,
     nav_grupo_biologico = nav_grupo_biologico,
     nav_grupo_interes = nav_grupo_interes,
+    nav_territorio = list(),
 
     general_info = general_info,
 
+    gallery = list(),
     slides = slides,
     tematica = tem_list,
     grupos_biologicos = reg_gr_bio,
     grupos_interes = reg_gr_int,
 
+    territorio = list(),
+
     patrocinador = patrocinador,
-    publicadores = publicadores
+    publicadores = publicadores,
+    municipios_lista = list()
   )
   jsonlite::write_json(l, paste0("static/data/",region, ".json"),
                        auto_unbox = TRUE, pretty =TRUE)

@@ -33,7 +33,7 @@ region_grupo_data <- function(region, tipo = "biologico", verbose = FALSE){
   reg_grupo_list <- map(reg_gr_bio_list, function(x){
 
     if(verbose){
-      message("  Grupo '", i,"': " ,x$slug)
+      message("  Grupo ", i," de ",nrow(reg_gr_bio),": " ,x$slug)
     }
     i <<- i + 1
     #x <- reg_gr_bio_list[[3]]

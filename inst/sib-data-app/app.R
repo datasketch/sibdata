@@ -149,6 +149,8 @@ server <-  function(input, output, session) {
 
   output$list_species <- renderDataTable({
 
+    req(input$sel_grupo_type)
+
     grupo <- ifelse(input$sel_grupo_type == "biologico",
                     input$sel_grupo_bio, input$sel_grupo_int)
     if (grupo == "todos") grupo <- NULL

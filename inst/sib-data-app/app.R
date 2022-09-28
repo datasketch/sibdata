@@ -8,6 +8,7 @@ library(lfltmagic)
 library(sibdata)
 library(shinyinvoer)
 library(shinydisconnect)
+library(dsmodules)
 
 opts_grupo_biologico <- c("Todos" = "todos", sib_available_grupos(tipo = "biologico"))
 opts_grupo_interes <-  c("Todos" = "todos", sib_available_grupos(tipo = "interes"))
@@ -38,13 +39,9 @@ ui <- panelsPage(
   panel(title = "Opciones", width = 300,
         body = div(
           #verbatimTextOutput("debug"),
-          selectizeInput("sel_region","Seleccione Región",
-                         rev(opts_region),
-                         selected = "Tolima"
-          ),
+          uiOutput("sel_region_"),
           hr(),
-          radioButtons("sel_grupo_type", "Tipo de grupo",
-                       c("Biológico" = "biologico", "Interés de Conservación" = "interes")),
+          uiOutput("sel_grupo_"),
           conditionalPanel("input.sel_grupo_type == 'biologico'",
                            selectizeInput("sel_grupo_bio","Seleccione grupo",
                                           opts_grupo_biologico)
@@ -56,7 +53,8 @@ ui <- panelsPage(
           hr(),
           radioButtons("sel_tipo", "Tipo", c("Observaciones" = "registros","Especies"="especies")),
           radioButtons("sel_cobertura", "Cobertura", c("Total" = "total","Continental" = "continentales","Marina" = "marinas")),
-          radioButtons("sel_tematica", "Temática", opts_tematicas),
+          uiOutput("sel_tematica_")
+          ,
           br()
         ),
         footer = ""),
@@ -80,27 +78,62 @@ ui <- panelsPage(
 server <-  function(input, output, session) {
 
 
-  output$debug <- renderText({
+  par <- list(region = NULL, tematica = NULL, grupo = NULL)
+  url_par <- reactive({
+    url_params(par, session)$inputs
+  })
+
+  output$debug <- renderPrint({
     #capture.output(str(data()))
     #glimpse(data())
     #input$sel_grupo
     #glimpse(inputs())
     #summary(list(a=1, b= "x"))
-    what <- c(input$sel_grupo_type, inputs())
-    what <- data()
-    what <- inputs()
-    what <- input$viz_selection
-    paste0(capture.output(what),collapse = "\n")
+    # what <- c(input$sel_grupo_type, inputs())
+    # what <- data()
+    # what <- inputs()
+    # what <- input$viz_selection
+    # paste0(capture.output(what),collapse = "\n")
+    url_par()
+  })
+
+
+  output$sel_region_ <- renderUI({
+    req(opts_region)
+    default_select <- NULL
+    if (!is.null(url_par()$region)) default_select <- tolower(url_par()$region)
+    selectizeInput("sel_region","Seleccione Región",
+                   rev(opts_region),
+                   selected = default_select
+    )
+  })
+
+
+  output$sel_grupo_ <- renderUI({
+    default_select <- NULL
+    if (!is.null(url_par()$grupo)) default_select <- tolower(url_par()$grupo)
+    radioButtons("sel_grupo_type", "Tipo de grupo",
+                 c("Biológico" = "biologico", "Interés de Conservación" = "interes"),
+                 selected = default_select)
+  })
+
+  output$sel_tematica_ <- renderUI({
+    req(opts_tematicas)
+    default_select <- NULL
+    if (!is.null(url_par()$tematica)) default_select <- tolower(url_par()$tematica)
+    radioButtons("sel_tematica", "Temática", opts_tematicas, selected = default_select)
   })
 
   inputs <- reactive({
 
+    req(input$sel_grupo_type)
     subregiones = input$sugrebiones %||% FALSE
     with_parent = input$with_parent %||% FALSE
 
     grupo <- ifelse(input$sel_grupo_type == "biologico",
                     input$sel_grupo_bio, input$sel_grupo_int)
     if(grupo == "todos") grupo <- NULL
+
 
     list(
       region = input$sel_region,
@@ -127,30 +160,30 @@ server <-  function(input, output, session) {
     #tx <- "No hay especies registradas para los filtros seleccionados"
 
     #if (nrow(l_s) != 0) {
-      DT::datatable(l_s,
-                    rownames = F,
-                    selection = 'none',
-                    escape = FALSE,
-                    options = list(
-                      dom = 'Bfrtip',
-                      language = list(url = '//cdn.datatables.net/plug-ins/1.10.11/i18n/Spanish.json'),
-                      scrollX = T,
-                      fixedColumns = TRUE,
-                      fixedHeader = TRUE,
-                      searching = FALSE,
-                      info = FALSE,
-                      #scrollY = "700px",
-                      initComplete = JS(
-                        "function(settings, json) {",
-                        "$(this.api().table().header()).css({'background-color': '#4ad3ac', 'color': '#ffffff'});",
-                        "}")
-                    ))
-      # tx <- HTML(paste0(
-      #   purrr::map(unique(l_s$family), function(f){
-      #     df <- l_s |> dplyr::filter(family %in% f)
-      #     HTML(paste0("<p><b>Familia: ", unique(f),"</b><br/>",
-      #                 paste0(df$species, " (", df$registros, ")", collapse = "<br/>"), "</p>", collapse = "<br/>"))
-      #   }), collapse = "<br/>"))
+    DT::datatable(l_s,
+                  rownames = F,
+                  selection = 'none',
+                  escape = FALSE,
+                  options = list(
+                    dom = 'Bfrtip',
+                    language = list(url = '//cdn.datatables.net/plug-ins/1.10.11/i18n/Spanish.json'),
+                    scrollX = T,
+                    fixedColumns = TRUE,
+                    fixedHeader = TRUE,
+                    searching = FALSE,
+                    info = FALSE,
+                    #scrollY = "700px",
+                    initComplete = JS(
+                      "function(settings, json) {",
+                      "$(this.api().table().header()).css({'background-color': '#4ad3ac', 'color': '#ffffff'});",
+                      "}")
+                  ))
+    # tx <- HTML(paste0(
+    #   purrr::map(unique(l_s$family), function(f){
+    #     df <- l_s |> dplyr::filter(family %in% f)
+    #     HTML(paste0("<p><b>Familia: ", unique(f),"</b><br/>",
+    #                 paste0(df$species, " (", df$registros, ")", collapse = "<br/>"), "</p>", collapse = "<br/>"))
+    #   }), collapse = "<br/>"))
     #}
 
     #tx
@@ -171,7 +204,7 @@ server <-  function(input, output, session) {
                  subregiones = subR,
                  with_parent = inp$with_parent)
     if (actual_but$active != "map") {
-    d <- d |> sib_merge_ind_label()
+      d <- d |> sib_merge_ind_label()
     } else {
       d <- d |> dplyr::select(label, count)
     }
@@ -270,21 +303,23 @@ server <-  function(input, output, session) {
     )
 
     if (actual_but$active == "map") {
-    region <- inputs()$region
-    opts$color_by <- NULL
-    opts$map_name <- paste0("col_depto_", region)
+      region <- inputs()$region
+      opts$color_by <- NULL
+      opts$map_name <- paste0("col_depto_", region)
     }
 
 
     out <- list(
-      pie = renderHighchart(hgch_pie_CatNum(dd, opts = opts)),
-      donut = renderHighchart(hgch_donut_CatNum(dd, opts = opts)),
-      bar = renderHighchart(hgch_bar_CatNum(dd, opts = opts)),
-      treemap = renderHighchart(hgch_treemap_CatNum(dd, opts = opts)),
+      pie = renderHighchart(suppressWarnings(hgch_pie_CatNum(dd, opts = opts))),
+      donut = renderHighchart(suppressWarnings(hgch_donut_CatNum(dd, opts = opts))),
+      bar = renderHighchart(suppressWarnings(hgch_bar_CatNum(dd, opts = opts))),
+      treemap = renderHighchart(suppressWarnings(hgch_treemap_CatNum(dd, opts = opts))),
       table = renderDataTable(dd),
-      map = renderLeaflet(lflt_choropleth_GnmNum(dd, opts = opts))
+      map = renderLeaflet(suppressWarnings(lflt_choropleth_GnmNum(dd, opts = opts)))
     )
+
     out[[sel_chart_type]]
+
 
   })
 

@@ -45,22 +45,14 @@ sib_available_profile_types <- function(){
 
 #' @export
 sib_available_grupos <- function(tipo = NULL){
-
-  if(is.null(tipo)){
-    gr_bio <- sib_tables("grupo_biologico")
-    gr_int <- sib_tables("grupo_interes_conservacion") |>
-      mutate(parent = as.character(parent))
-    grps <- bind_rows(gr_bio, gr_int) |>
-      select(slug_grupo = slug, label)
-  } else {
-    grps <- sib_tables("region_grupo") |>
-      filter(grupo_tipo == tipo) |>
-      select(slug_grupo) |>
-      sib_merge_grupo_label()
-
+  grupo_tipo <- tipo
+  grupo <- sibdata_grupo() |> collect()
+  if(!is.null(tipo)){
+    grps <- grupo |>
+      filter(tipo == tipo)
   }
-  av_grps <- grps$slug_grupo
-  names(av_grps) <- grps$label
+  av_grps <- grupo$slug
+  names(av_grps) <- grupo$label
   av_grps
 
 }

@@ -19,7 +19,7 @@ overflow: auto;
 opts_grupo_biologico <- c("Todos" = "todos", sib_available_grupos(tipo = "biologico"))
 opts_grupo_interes <-  c("Todos" = "todos", sib_available_grupos(tipo = "interes"))
 
-opts_region <- sib_available_regions()
+opts_region <- sib_available_regions(subtipo = c("País", "Departamento"))
 # opts_region <- c("colombia", "narino", "boyaca", "santander", "tolima",
 #                  "resguardo-indigena-pialapi-pueblo-viejo",
 #                  "reserva-natural-la-planada")
@@ -30,7 +30,7 @@ opts_tematicas <- sib_available_tematicas()
 ui <- panelsPage(styles = custom_css,
   panel(title = "Opciones", width = 300,
         body = div(
-          # verbatimTextOutput("debug"),
+          verbatimTextOutput("debug"),
           selectizeInput("sel_region","Seleccione Región",
                          rev(opts_region),
                          selected = "Tolima"
@@ -39,10 +39,12 @@ ui <- panelsPage(styles = custom_css,
           radioButtons("sel_grupo_type", "Tipo de grupo",
                        c("Biológico" = "biologico", "Interés de Conservación" = "interes")),
           conditionalPanel("input.sel_grupo_type == 'biologico'",
-                           selectizeInput("sel_grupo_bio","Seleccione grupo",opts_grupo_biologico)
+                           selectizeInput("sel_grupo_bio","Seleccione grupo",
+                                          opts_grupo_biologico)
           ),
           conditionalPanel("input.sel_grupo_type == 'interes'",
-                           selectizeInput("sel_grupo_int","Seleccione grupo",opts_grupo_interes)
+                           selectizeInput("sel_grupo_int","Seleccione grupo",
+                                          opts_grupo_interes)
           ),
           hr(),
           radioButtons("sel_tipo", "Tipo", c("Observaciones" = "registros","Especies"="especies")),

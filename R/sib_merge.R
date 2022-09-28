@@ -6,7 +6,7 @@ sib_region_labels <- function(){
 
 
 #' @export
-sib_merge_region_label <- function(d, slug = "slug", label = "label_region"){
+sib_merge_region_label <- function(d, slug = "slug_region", label = "label_region"){
   if(label %in% colnames(d)){
     warning("Overwritting existing label column: ", label,
             " Use the label param to rename the output label column.")
@@ -26,7 +26,8 @@ sib_merge_region_label <- function(d, slug = "slug", label = "label_region"){
     stop("Region slug column not found")
   }else{
     d2 <- d |>
-      left_join(regs_label, by = by, copy = TRUE)
+      left_join(regs_label, by = by, copy = TRUE) |>
+      relocate(label_region, .after = slug_region)
   }
   d2
 }
@@ -60,7 +61,7 @@ sib_merge_grupo_label <- function(d, slug){
 
 #' @export
 sib_merge_ind_label <- function(d, replace = TRUE){
-  inds <- sib_tables("ind_meta") |>
+  inds <- sibdata_indicadores() |>
     #filter(indicador %in% names(d)) |>
     select(indicador,label_ind = label)
   dd <- left_join(d, inds, by = "indicador")

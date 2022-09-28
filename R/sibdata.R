@@ -8,7 +8,7 @@ sibdata <- function(region,
                     subregiones = FALSE,
                     with_parent = FALSE,
                     tidy = TRUE,
-                    n_especies = TRUE,
+                    n_especies = FALSE,
                     all_indicators = FALSE){
 
   if(!is.null(tipo)) check_cases_values("tipo", tipo)
@@ -65,7 +65,8 @@ sibdata_wide <- function(region,
 
   # Si no hay GR definido
   d <- d |>
-    select(contains(c("slug","label","grupo")), any_of(sel_inds))
+    select(contains(c("slug","label","grupo")), any_of(sel_inds)) |>
+    collect()
 
 
   d
@@ -79,7 +80,7 @@ sibdata_tidify <- function(d,
 
 
 
-  inds <- sib_tables("ind_meta")
+  inds <- sibdata_indicadores()
 
   not_tematica <- inds |> filter(is.na(tematica)) |> pull(indicador)
   not_cobertura <- inds |> filter(cobertura == "total") |> pull(indicador)
@@ -88,6 +89,7 @@ sibdata_tidify <- function(d,
     pull(indicador)
 
   d2 <- d |>
+    collect() |>
     pivot_longer(-contains(c("slug","grupo", "label")),
                  names_to = c("indicador"),
                  values_to = "count")
@@ -128,7 +130,7 @@ sibdata_tidify <- function(d,
 check_cases_values <- function(param, value){
 
   if(param %in% c("tipo", "cobertura", "tematica")){
-    inds <- sib_tables("ind_meta")
+    inds <- sibdata_indicadores()
     values <- inds |> select(one_of(param)) |> pull(1) |> unique()
     if(!value %in% values){
       stop("Value: ", value, ". ", param,' must be one of: ', paste0(values, collapse = ", "))
@@ -154,7 +156,7 @@ select_indicator <- function(tipo = NULL,
                 cobertura = cobertura,
                 tematica = tematica)
 
-  inds <- sibdata_ind_meta()
+  inds <- sibdata_indicadores()
 
   if(!is.null(tipo)){
     inds <- inds |>

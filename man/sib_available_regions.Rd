@@ -7,7 +7,7 @@ sib_available_tables <- function(){
 sibdata::available_tables
 }}
 \usage{
-sib_available_regions(subtipo = NULL)
+sib_available_regions(subtipo = NULL, departamento = NULL)
 }
 \description{
 #' @export

@@ -39,10 +39,10 @@ info_publicador <- function(){
     collect() |>
     filter(slug_region %in% which_regs) |>
     sib_merge_region_label("slug_region") |>
-    select(slug = slug_publicador, label) |>
+    select(slug = slug_publicador, label_region) |>
     distinct() |>
     group_by(slug) |>
-    summarise(region = str_flatten(label, collapse = ", "))
+    summarise(region = str_flatten(label_region, collapse = ", "))
 
   pubs <- sibdata_publicador() |>
     collect() |>

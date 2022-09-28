@@ -5,8 +5,8 @@ list_species <- function(region,
                          grupo = NULL,
                          tematica = NULL){
   # region <- "tolima"
-  # tematica <- "amenazadas"
-  # grupo <- "aves"
+  # tematica <- "endemicas"
+  # grupo <- "hongos"
 
   esp_reg <- sibdata_especie_region() |>
     filter(slug_region == region)

@@ -4,6 +4,7 @@ library(shinypanels)
 library(shiny)
 library(DT)
 library(hgchmagic)
+library(lfltmagic)
 library(sibdata)
 library(shinyinvoer)
 library(shinydisconnect)
@@ -158,16 +159,24 @@ server <-  function(input, output, session) {
   data <- function(){
     #req(inputs)
     inp <- inputs()
+    subR <- inp$subregiones
+    req(actual_but$active)
+    if (actual_but$active == "map") subR <- TRUE
 
     d <- sibdata(inp$region,
                  grupo = inp$grupo,
                  tipo = inp$tipo,
                  cobertura = inp$cobertura,
                  tematica = inp$tematica,
-                 subregiones = inp$subregiones,
+                 subregiones = subR,
                  with_parent = inp$with_parent)
+    if (actual_but$active != "map") {
     d <- d |> sib_merge_ind_label()
-    print(d)
+    } else {
+      d <- d |> dplyr::select(label, count)
+    }
+
+    print(class(d))
     d
   }
 
@@ -251,7 +260,7 @@ server <-  function(input, output, session) {
     req(data())
     dd <- data()
 
-    sel_chart_type <- input$sel_chart_type
+    sel_chart_type <- actual_but$active
 
     opts <- list(
       dataLabels_show = TRUE,
@@ -259,12 +268,21 @@ server <-  function(input, output, session) {
       legend_show = FALSE,
       text_family = "Lato"
     )
+
+    if (actual_but$active == "map") {
+    region <- inputs()$region
+    opts$color_by <- NULL
+    opts$map_name <- paste0("col_depto_", region)
+    }
+
+
     out <- list(
       pie = renderHighchart(hgch_pie_CatNum(dd, opts = opts)),
       donut = renderHighchart(hgch_donut_CatNum(dd, opts = opts)),
       bar = renderHighchart(hgch_bar_CatNum(dd, opts = opts)),
       treemap = renderHighchart(hgch_treemap_CatNum(dd, opts = opts)),
-      table = renderDataTable(dd)
+      table = renderDataTable(dd),
+      map = renderLeaflet(lflt_choropleth_GnmNum(dd, opts = opts))
     )
     out[[sel_chart_type]]
 

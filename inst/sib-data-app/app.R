@@ -6,20 +6,12 @@ library(DT)
 library(hgchmagic)
 library(sibdata)
 library(shinyinvoer)
-
-
-custom_css <- "
-#debug{
-max-height: 150px;
-overflow: auto;
-}
-
-"
+library(shinydisconnect)
 
 opts_grupo_biologico <- c("Todos" = "todos", sib_available_grupos(tipo = "biologico"))
 opts_grupo_interes <-  c("Todos" = "todos", sib_available_grupos(tipo = "interes"))
 
-opts_region <- sib_available_regions(subtipo = c("País", "Departamento"))
+opts_region <- sib_available_regions(subtipo = "País", departamento="Departamento")
 # opts_region <- c("colombia", "narino", "boyaca", "santander", "tolima",
 #                  "resguardo-indigena-pialapi-pueblo-viejo",
 #                  "reserva-natural-la-planada")
@@ -27,14 +19,28 @@ opts_region <- sib_available_regions(subtipo = c("País", "Departamento"))
 opts_tematicas <- sib_available_tematicas()
 
 
-ui <- panelsPage(styles = custom_css,
+ui <- panelsPage(
+  disconnectMessage(
+    text = "Tu sesión ha finalizado, por favor haz click aquí para recargar vista",
+    refresh = "RECARGAR",
+    background = "#ffffff",
+    colour = "#da1c95",
+    size = 14,
+    overlayColour = "#2a2e30",
+    overlayOpacity = 0.85,
+    refreshColour = "#ffffff",
+    css = "padding: 4.8em 3.5em !important; box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1) !important;"
+  ),
+  tags$head(
+    tags$link(rel="stylesheet", type="text/css", href="custom.css")
+  ),
   panel(title = "Opciones", width = 300,
         body = div(
           verbatimTextOutput("debug"),
           selectizeInput("sel_region","Seleccione Región",
                          rev(opts_region),
                          selected = "Tolima"
-                         ),
+          ),
           hr(),
           radioButtons("sel_grupo_type", "Tipo de grupo",
                        c("Biológico" = "biologico", "Interés de Conservación" = "interes")),
@@ -98,7 +104,7 @@ server <-  function(input, output, session) {
     with_parent = input$with_parent %||% FALSE
 
     grupo <- ifelse(input$sel_grupo_type == "biologico",
-                        input$sel_grupo_bio, input$sel_grupo_int)
+                    input$sel_grupo_bio, input$sel_grupo_int)
     if(grupo == "todos") grupo <- NULL
 
     list(
@@ -124,6 +130,7 @@ server <-  function(input, output, session) {
                  subregiones = inp$subregiones,
                  with_parent = inp$with_parent)
     d <- d |> sib_merge_ind_label()
+    print(d)
     d
   }
 
@@ -175,7 +182,8 @@ server <-  function(input, output, session) {
 
     opts <- list(
       dataLabels_show = TRUE,
-      color_by = names(dd)[1]
+      color_by = names(dd)[1],
+      legend_show = FALSE
     )
     out <- list(
       pie = renderHighchart(hgch_pie_CatNum(dd, opts = opts)),

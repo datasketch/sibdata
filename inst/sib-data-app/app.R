@@ -72,7 +72,7 @@ ui <- panelsPage(
         footer = ""),
   panel(title = "Especies",
         width = 300,
-        body = uiOutput("list_species")
+        body = dataTableOutput("list_species")
   )
 )
 
@@ -113,7 +113,7 @@ server <-  function(input, output, session) {
   })
 
 
-  output$list_species <- renderUI({
+  output$list_species <- renderDataTable({
 
     grupo <- ifelse(input$sel_grupo_type == "biologico",
                     input$sel_grupo_bio, input$sel_grupo_int)
@@ -123,18 +123,36 @@ server <-  function(input, output, session) {
                         grupo = grupo,
                         tematica = input$sel_tematica) |>
       collect()
-    tx <- "No hay especies registradas para los filtros seleccionados"
+    #tx <- "No hay especies registradas para los filtros seleccionados"
 
-    if (nrow(l_s) != 0) {
-      tx <- HTML(paste0(
-        purrr::map(unique(l_s$family), function(f){
-          df <- l_s |> dplyr::filter(family %in% f)
-          HTML(paste0("<p><b>Familia: ", unique(f),"</b><br/>",
-                      paste0(df$species, " (", df$registros, ")", collapse = "<br/>"), "</p>", collapse = "<br/>"))
-        }), collapse = "<br/>"))
-    }
+    #if (nrow(l_s) != 0) {
+      DT::datatable(l_s,
+                    rownames = F,
+                    selection = 'none',
+                    escape = FALSE,
+                    options = list(
+                      dom = 'Bfrtip',
+                      language = list(url = '//cdn.datatables.net/plug-ins/1.10.11/i18n/Spanish.json'),
+                      scrollX = T,
+                      fixedColumns = TRUE,
+                      fixedHeader = TRUE,
+                      searching = FALSE,
+                      info = FALSE,
+                      #scrollY = "700px",
+                      initComplete = JS(
+                        "function(settings, json) {",
+                        "$(this.api().table().header()).css({'background-color': '#4ad3ac', 'color': '#ffffff'});",
+                        "}")
+                    ))
+      # tx <- HTML(paste0(
+      #   purrr::map(unique(l_s$family), function(f){
+      #     df <- l_s |> dplyr::filter(family %in% f)
+      #     HTML(paste0("<p><b>Familia: ", unique(f),"</b><br/>",
+      #                 paste0(df$species, " (", df$registros, ")", collapse = "<br/>"), "</p>", collapse = "<br/>"))
+      #   }), collapse = "<br/>"))
+    #}
 
-    tx
+    #tx
   })
 
   data <- function(){

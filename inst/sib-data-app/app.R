@@ -60,6 +60,7 @@ ui <- panelsPage(
         ),
         footer = ""),
   panel(title = "Gráficos",
+        can_collapse = FALSE,
         header_right = uiOutput("viz_type"),
         body = div(
           uiOutput("controls"),
@@ -68,7 +69,11 @@ ui <- panelsPage(
           uiOutput("viz"),
           br()
         ),
-        footer = "")
+        footer = ""),
+  panel(title = "Especies",
+        width = 300,
+        body = uiOutput("list_species")
+  )
 )
 
 server <-  function(input, output, session) {
@@ -107,6 +112,31 @@ server <-  function(input, output, session) {
     )
   })
 
+
+  output$list_species <- renderUI({
+
+    grupo <- ifelse(input$sel_grupo_type == "biologico",
+                    input$sel_grupo_bio, input$sel_grupo_int)
+    if (grupo == "todos") grupo <- NULL
+    print(grupo)
+    l_s <- list_species(region = input$sel_region,
+                        grupo = grupo,
+                        tematica = input$sel_tematica) |>
+      collect()
+    tx <- "No hay especies registradas para los filtros seleccionados"
+
+    if (nrow(l_s) != 0) {
+      tx <- HTML(paste0(
+        purrr::map(unique(l_s$family), function(f){
+          df <- l_s |> dplyr::filter(family %in% f)
+          HTML(paste0("<p><b>Familia: ", unique(f),"</b><br/>",
+                      paste0(df$species, " (", df$registros, ")", collapse = "<br/>"), "</p>", collapse = "<br/>"))
+        }), collapse = "<br/>"))
+    }
+
+    tx
+  })
+
   data <- function(){
     #req(inputs)
     inp <- inputs()
@@ -139,7 +169,7 @@ server <-  function(input, output, session) {
 
 
   hover_viz <- reactive({
-   req(available_charts())
+    req(available_charts())
     names(available_charts())
   })
 

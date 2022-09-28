@@ -238,7 +238,8 @@ server <-  function(input, output, session) {
     opts <- list(
       dataLabels_show = TRUE,
       color_by = names(dd)[1],
-      legend_show = FALSE
+      legend_show = FALSE,
+      text_family = "Lato"
     )
     out <- list(
       pie = renderHighchart(hgch_pie_CatNum(dd, opts = opts)),

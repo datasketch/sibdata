@@ -11,7 +11,7 @@ library(shinydisconnect)
 opts_grupo_biologico <- c("Todos" = "todos", sib_available_grupos(tipo = "biologico"))
 opts_grupo_interes <-  c("Todos" = "todos", sib_available_grupos(tipo = "interes"))
 
-opts_region <- sib_available_regions(subtipo = "País", departamento="Departamento")
+opts_region <- sib_available_regions(subtipo = "Departamento")
 # opts_region <- c("colombia", "narino", "boyaca", "santander", "tolima",
 #                  "resguardo-indigena-pialapi-pueblo-viejo",
 #                  "reserva-natural-la-planada")
@@ -60,22 +60,11 @@ ui <- panelsPage(
         ),
         footer = ""),
   panel(title = "Gráficos",
-        # header_right = shinyinvoer::buttonImageInput('viz_selection',
-        #                                     " ",#div(class="title-data-select", "Selecciona tipo de visualización"),
-        #                                     images = c('table','pie','bar', 'treemap'),
-        #                                     path = "viz_icons/",
-        #                                     nrow = 1,
-        #                                     active = "pie",
-        #                                     #tooltips = viz_tool(),
-        #                                     imageStyle = list(borderColor = "#ffffff",
-        #                                                       borderSize = "1px",
-        #                                                       padding = "7px",
-        #                                                       shadow = TRUE)
-        #       ),
+        header_right = uiOutput("viz_type"),
         body = div(
           uiOutput("controls"),
           uiOutput("chart_controls"),
-          uiOutput("viz_type"),
+
           uiOutput("viz"),
           br()
         ),
@@ -145,8 +134,44 @@ server <-  function(input, output, session) {
 
   available_charts <- reactive({
     #dd <- data()
-    c("Torta"= "pie","Tabla"="table", "Dona" = "donut", "Treemap" = "treemap","Barras" = "bar")
+    c("Torta"= "pie","Tabla"="table", "Dona" = "donut", "Treemap" = "treemap","Barras" = "bar", "Mapa" = "map")
   })
+
+
+  hover_viz <- reactive({
+   req(available_charts())
+    names(available_charts())
+  })
+
+
+  actual_but <- reactiveValues(active = NULL)
+
+  observe({
+    if (is.null(available_charts())) return()
+    viz_rec <- available_charts() |> as.vector()
+    if (is.null(input$sel_chart_type)) return()
+    vizDef <- input$sel_chart_type
+
+    if (vizDef %in% viz_rec) {
+      actual_but$active <- vizDef
+    } else {
+      actual_but$active <- viz_rec[1]
+    }
+  })
+
+
+  output$viz_type <- renderUI({
+    req(available_charts())
+    suppressWarnings(
+      buttonImageInput('sel_chart_type',
+                       " ",
+                       images = available_charts() |> as.vector(),
+                       tooltips = hover_viz(),
+                       path = 'viz_icons/',
+                       active = actual_but$active)
+    )
+  })
+
 
 
   output$controls <- renderUI({
@@ -167,10 +192,10 @@ server <-  function(input, output, session) {
     #                options = list(plugins = list('drag_drop')), width = 200)
   })
 
-  output$viz_type <- renderUI({
-    selectInput("sel_chart_type","Seleccione tipo de visualización",
-                available_charts())
-  })
+  # output$viz_type <- renderUI({
+  #   selectInput("sel_chart_type","Seleccione tipo de visualización",
+  #               available_charts())
+  # })
 
 
 

@@ -14,13 +14,22 @@ sib_region_general <- function(region){
   reg_data$subtipo <- tolower(reg_data$subtipo)
   reg_data$marino <- as.logical(reg_data$marino)
 
+  marino_text <- "."
+  if(reg_data$marino){
+    marino_text <- " de las cuales {especies_marinas} son especies marinas."
+  }
+  especies_marinas <-  makeup::makeup(reg_data$especies_marinas,"45.343,00")
+  reg_data$marino_text <- glue::glue(marino_text)
+
   intro_tpl <- "A través del SiB Colombia se han publicado {registros_region_total} observaciones
   para el {subtipo} de {label}. Estos datos hacen referencia a un total de
-  {especies_region_total} especies"
+  {especies_region_total} especies{marino_text}"
+
+  reg_data$especies_region_total <- makeup::makeup(reg_data$especies_region_total,"45.343,00")
+  reg_data$registros_region_total <- makeup::makeup(reg_data$registros_region_total,"45.343,00")
 
   reg_list <- purrr::transpose(reg_data)[[1]]
   reg_list$main_text <- glue::glue_data(reg_data, intro_tpl)
-
   reg_list
 
 }

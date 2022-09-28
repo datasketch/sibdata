@@ -76,10 +76,10 @@ sib_merge_ind_label <- function(d, replace = TRUE){
 
 #' @export
 sib_merge_especie_label <- function(x){
-  especie <- sib_tables("especie") |>
+  especie <- sibdata_especie() |>
     mutate(label = species)
   x |>
-    left_join(especie, by = c("slug_especie"="slug")) |>
+    left_join(especie, by = c("slug_especie"="slug"), copy = TRUE) |>
     select(!contains("slug_region")) |>
     select(label, registros, everything())
 }

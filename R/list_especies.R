@@ -39,7 +39,8 @@ list_species <- function(region,
   }
 
   esp_with_name <- especies  |>
-    left_join(sibdata_especie_meta(), by = c("slug_especie" = "slug"))
+    left_join(sibdata_especie_meta(), by = c("slug_especie" = "slug")) |>
+    sib_merge_especie_label()
 
   esp_with_name
 

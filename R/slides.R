@@ -125,27 +125,27 @@ make_region_slides <- function(region){
   esp_animal_mas_obs <- esp_obs |>
     filter(kingdom == "Animalia") |>
     slice_max(registros, n = 20) |>
-    mutate(registros_str = makeup::makeup(as.numeric(registros), "45,343.00"))
+    mutate(registros_str = makeup::makeup(as.numeric(registros),  "45.343,00"))
 
   esp_animal_menos_obs <- esp_obs |>
     filter(kingdom == "Animalia") |>
     slice_min(registros, n = 20) |>
-    mutate(registros_str = makeup::makeup(as.numeric(registros), "45,343.00"))
+    mutate(registros_str = makeup::makeup(as.numeric(registros),  "45.343,00"))
 
   esp_planta_mas_obs <- esp_obs |>
     filter(kingdom == "Plantae") |>
     slice_max(registros, n = 20) |>
-    mutate(registros_str = makeup::makeup(as.numeric(registros), "45,343.00"))
+    mutate(registros_str = makeup::makeup(as.numeric(registros),  "45.343,00"))
 
   esp_planta_menos_obs <- esp_obs |>
     filter(kingdom == "Plantae") |>
     slice_min(registros, n = 20) |>
-    mutate(registros_str = makeup::makeup(as.numeric(registros), "45,343.00"))
+    mutate(registros_str = makeup::makeup(as.numeric(registros),  "45.343,00"))
 
   esp_mamiferos_mas_obs <- esp_obs |>
     filter(class == "Mammalia") |>
     slice_min(registros, n = 20) |>
-    mutate(registros_str = makeup::makeup(as.numeric(registros), "45,343.00"))
+    mutate(registros_str = makeup::makeup(as.numeric(registros),  "45.343,00"))
 
 
   x <- glue::glue_data(esp_animal_mas_obs |> slice(1:5), "_{species}_ ({registros_str})")

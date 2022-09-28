@@ -1,5 +1,5 @@
 library(sibdata)
-
+library(lfltmagic)
 
 save_info_page("static/data")
 
@@ -50,22 +50,37 @@ map(av_regions, function(region){
   d <- subreg_tematica |>
     collect()
 
+  dd <- d |>
+    select(slug_region, especies_region_total, registros_region_total)
 
-  if(region != "colombia"){
-    map_name <- paste0("col_depto_", region)
-  }else{
+  if(region == "colombia"){
     map_name <- "col_departments"
+    deptos <- sibdata_departamento() |> collect()
+    dd <- dd |>
+      left_join(deptos, by = c("slug_region" = "slug"), copy = TRUE)
+
+  }else{
+    map_name <- paste0("col_depto_", region)
+    munis <- sibdata_municipio() |> collect()
+    dd <- dd |>
+      left_join(munis, by = c("slug_region" = "slug"))
   }
-  dd <- d |> select(label, especies_region_total) |> as.data.frame()
-  munis_chart1<- lfltmagic::lflt_choropleth_GnmNum(dd, map_name = map_name)
+
+  dd_esp <- dd |> select(cod_dane, value = especies_region_total, label)
+  dd_reg <- dd |> select(cod_dane, value = registros_region_total, label)
+
+  tooltip <- "<b>{value} especies</b><br><i>{label}</i>"
+  munis_chart1<- lfltmagic::lflt_choropleth_GcdNum(dd_esp, map_name = map_name,
+                                                  tooltip = tooltip)
 
   #munis_chart1 <- sib_chart_reg_municipios(d, "especies_region_total")
   path1 <- glue::glue("static/charts/{region}/region_municipios_1.html")
   htmlwidgets::saveWidget(munis_chart1, path1)
 
   #munis_chart2 <- sib_chart_reg_municipios(d, "registros_region_total")
-  dd <- d |> select(label, registros_region_total) |> as.data.frame()
-  munis_chart2<- lfltmagic::lflt_choropleth_GnmNum(dd, map_name = map_name)
+  tooltip <- "<b>{value} observaciones</b><br><i>{label}</i>"
+  munis_chart2<- lfltmagic::lflt_choropleth_GcdNum(dd_reg, map_name = map_name,
+                                                   tooltip = tooltip)
   path2 <- glue::glue("static/charts/{region}/region_municipios_2.html")
   htmlwidgets::saveWidget(munis_chart2, path2)
 

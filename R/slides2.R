@@ -96,10 +96,10 @@ make_region_slides2 <- function(region){
 
     x <- d$especies_region_total
     names(x) <- d$slug_region
-    x[1] <- x[1] - x[2]
+    x[2] <- x[2] - x[1]
     x <- rev(x)
     x <- round(x/sum(x)*100)
-    proportion <- x[1]
+    proportion <- x[2]
     regionTitle <- makeup::makeup_chr(region, "Title")
 
     description_tpl <- "El municipio de {regionTitle} tiene alrededor del {proportion}% de las especies del departamento"
@@ -126,27 +126,27 @@ make_region_slides2 <- function(region){
   esp_animal_mas_obs <- esp_obs |>
     filter(kingdom == "Animalia") |>
     slice_max(registros, n = 20) |>
-    mutate(registros_str = makeup::makeup(as.numeric(registros), "45,343.00"))
+    mutate(registros_str = makeup::makeup(as.numeric(registros), "45.343,00"))
 
   esp_animal_menos_obs <- esp_obs |>
     filter(kingdom == "Animalia") |>
     slice_min(registros, n = 20) |>
-    mutate(registros_str = makeup::makeup(as.numeric(registros), "45,343.00"))
+    mutate(registros_str = makeup::makeup(as.numeric(registros), "45.343,00"))
 
   esp_planta_mas_obs <- esp_obs |>
     filter(kingdom == "Plantae") |>
     slice_max(registros, n = 20) |>
-    mutate(registros_str = makeup::makeup(as.numeric(registros), "45,343.00"))
+    mutate(registros_str = makeup::makeup(as.numeric(registros),  "45.343,00"))
 
   esp_planta_menos_obs <- esp_obs |>
     filter(kingdom == "Plantae") |>
     slice_min(registros, n = 20) |>
-    mutate(registros_str = makeup::makeup(as.numeric(registros), "45,343.00"))
+    mutate(registros_str = makeup::makeup(as.numeric(registros),  "45.343,00"))
 
   esp_mamiferos_mas_obs <- esp_obs |>
     filter(class == "Mammalia") |>
     slice_min(registros, n = 20) |>
-    mutate(registros_str = makeup::makeup(as.numeric(registros), "45,343.00"))
+    mutate(registros_str = makeup::makeup(as.numeric(registros),  "45.343,00"))
 
 
   x <- glue::glue_data(esp_animal_mas_obs |> slice(1:5), "_{species}_ ({registros_str})")

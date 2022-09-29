@@ -154,7 +154,7 @@ server <-  function(input, output, session) {
     grupo <- ifelse(input$sel_grupo_type == "biologico",
                     input$sel_grupo_bio, input$sel_grupo_int)
     if (grupo == "todos") grupo <- NULL
-    print(grupo)
+    #print(grupo)
     l_s <- list_species(region = input$sel_region,
                         grupo = grupo,
                         tematica = input$sel_tematica) |>
@@ -211,7 +211,7 @@ server <-  function(input, output, session) {
       d <- d |> dplyr::select(label, count)
     }
 
-    print(class(d))
+    #print(class(d))
     d
   }
 
@@ -290,14 +290,12 @@ server <-  function(input, output, session) {
   # })
 
 
-
-  output$viz <- renderUI({
+  vizOps <- reactive({
     req(data())
+    req(actual_but$active)
     dd <- data()
-
-    sel_chart_type <- actual_but$active
-
     opts <- list(
+      data = dd,
       dataLabels_show = TRUE,
       color_by = names(dd)[1],
       legend_show = FALSE,
@@ -321,20 +319,49 @@ server <-  function(input, output, session) {
       opts$max_topo_fill_opacity <- 0.8
       opts$map_opacity <- 0.5
     }
+    opts
+  })
 
 
-    out <- list(
-      pie = renderHighchart(suppressWarnings(hgch_pie_CatNum(dd, opts = opts))),
-      donut = renderHighchart(suppressWarnings(hgch_donut_CatNum(dd, opts = opts))),
-      bar = renderHighchart(suppressWarnings(hgch_bar_CatNum(dd, opts = opts))),
-      treemap = renderHighchart(suppressWarnings(hgch_treemap_CatNum(dd, opts = opts))),
-      table = renderDataTable(dd),
-      map = renderLeaflet(suppressWarnings(lflt_choropleth_GnmNum(dd, opts = opts)))
-    )
+  l_viz <- reactive({
+    req(vizOps())
+    opts <- vizOps()
+    sel_chart_type <- actual_but$active
+    if (sel_chart_type == "table") return()
+    viz <- paste0("hgchmagic::hgch_", sel_chart_type, "_CatNum")
+    if (sel_chart_type == "map") viz <- "lfltmagic::lflt_choropleth_GnmNum"
+    suppressWarnings(do.call(eval(parse(text=viz)), opts))
+  })
 
-    out[[sel_chart_type]]
 
+  output$hgch_viz <- renderHighchart({
+    req(l_viz())
+    sel_chart_type <- actual_but$active
+    if (sel_chart_type %in% c("table", "map")) return()
+    l_viz()
+  })
 
+  output$lflt_viz <- renderLeaflet({
+    req(l_viz())
+    sel_chart_type <- actual_but$active
+    if (!sel_chart_type %in% c( "map")) return()
+    l_viz()
+  })
+
+  output$dt_sum <- renderDataTable({
+    req(data())
+    data()
+  })
+
+  output$viz <- renderUI({
+    req(actual_but$active)
+    if (actual_but$active == "table") {
+      dataTableOutput("dt_sum")
+    } else if (actual_but$active == "map") {
+      leafletOutput("lflt_viz", height = 600)
+    } else {
+      highchartOutput("hgch_viz", height = 600)
+    }
   })
 
 

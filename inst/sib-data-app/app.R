@@ -242,7 +242,7 @@ server <-  function(input, output, session) {
 
   available_charts <- reactive({
     #dd <- data()
-    c("Torta"= "pie","Tabla"="table", "Dona" = "donut", "Treemap" = "treemap","Barras" = "bar", "Mapa" = "map")
+    c( "Mapa" = "map", "Torta"= "pie", "Dona" = "donut", "Treemap" = "treemap","Barras" = "bar", "Tabla"="table")
   })
 
 

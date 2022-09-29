@@ -1,4 +1,12 @@
 library(sibdata)
+library(lfltmagic)
+devtools::load_all()
+
+
+here::dr_here()
+#here::set_here("./..")
+setwd("../")
+here::dr_here()
 
 #av_regions <- sib_available_regions(subtipo = c("Municipio"))
 av_regions <- sib_available_regions(subtipo = c("Municipio"),

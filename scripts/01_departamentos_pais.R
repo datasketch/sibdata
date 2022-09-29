@@ -1,7 +1,9 @@
 library(sibdata)
 library(lfltmagic)
 
-save_info_page("static/data")
+devtools::load_all()
+
+#save_info_page("static/data")
 
 
 # Generate navigation files
@@ -12,6 +14,10 @@ av_regions <- sib_available_regions(subtipo = c("Departamento", "País"))
 
 library(tictoc)
 
+here::dr_here()
+#here::set_here("./..")
+setwd("../")
+here::dr_here()
 tic()
 
 map(av_regions, function(region){

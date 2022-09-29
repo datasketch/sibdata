@@ -60,7 +60,12 @@ ui <- panelsPage(
         footer = ""),
   panel(title = "Gráficos",
         can_collapse = FALSE,
-        header_right = uiOutput("viz_type"),
+        header_right = div(style = "display: flex;",
+                           div(
+                             class='first-container',
+                             uiOutput("viz_type")),
+                           div(class='second-container',
+                               uiOutput("descargas"))),
         body = div(
           uiOutput("controls"),
           uiOutput("chart_controls"),
@@ -364,6 +369,18 @@ server <-  function(input, output, session) {
     }
   })
 
+
+  output$descargas <- renderUI({
+    if (is.null(actual_but$active)) return()
+    if (actual_but$active != "table") {
+      downloadImageUI("download_viz", dropdownLabel = "Descargar", formats = c("jpeg", "pdf", "png", "html"), display = "dropdown")
+    } else {
+      downloadTableUI("dropdown_table", dropdownLabel = "Descargar", formats = c("csv", "xlsx", "json"), display = "dropdown")
+    }
+  })
+
+  downloadTableServer("dropdown_table", element = reactive(data_fin()), formats = c("csv", "xlsx", "json"))
+  downloadImageServer("download_viz", element = reactive(l_viz()), lib = "highcharter", formats = c("jpeg", "pdf", "png", "html"), file_prefix = "plot")
 
 
 

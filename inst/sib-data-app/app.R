@@ -42,14 +42,7 @@ ui <- panelsPage(
           uiOutput("sel_region_"),
           hr(),
           uiOutput("sel_grupo_"),
-          conditionalPanel("input.sel_grupo_type == 'biologico'",
-                           selectizeInput("sel_grupo_bio","Seleccione grupo",
-                                          opts_grupo_biologico)
-          ),
-          conditionalPanel("input.sel_grupo_type == 'interes'",
-                           selectizeInput("sel_grupo_int","Seleccione grupo",
-                                          opts_grupo_interes)
-          ),
+          uiOutput("sel_grupo_opts"),
           hr(),
           radioButtons("sel_tipo", "Tipo", c("Observaciones" = "registros","Especies"="especies")),
           radioButtons("sel_cobertura", "Cobertura", c("Total" = "total","Continental" = "continentales","Marina" = "marinas")),
@@ -115,12 +108,32 @@ server <-  function(input, output, session) {
 
 
   output$sel_grupo_ <- renderUI({
+
+    radioButtons("sel_grupo_type", "Tipo de grupo",
+                 c("Biológico" = "biologico", "Interés de Conservación" = "interes"))
+  })
+
+
+  output$sel_grupo_opts <- renderUI({
+    req(input$sel_grupo_type)
     default_select <- NULL
     if (!is.null(url_par()$grupo)) default_select <- tolower(url_par()$grupo)
-    radioButtons("sel_grupo_type", "Tipo de grupo",
-                 c("Biológico" = "biologico", "Interés de Conservación" = "interes"),
-                 selected = default_select)
+
+    opts <- opts_grupo_interes
+    id <- "sel_grupo_int"
+    if (input$sel_grupo_type == "biologico") {
+      opts <- opts_grupo_biologico
+      id <- "sel_grupo_bio"
+    }
+
+    selectizeInput(id ,
+                   "Seleccione grupo",
+                   opts,
+                   default_select)
+
   })
+
+
 
   output$sel_tematica_ <- renderUI({
     req(opts_tematicas)
@@ -156,8 +169,9 @@ server <-  function(input, output, session) {
 
     req(input$sel_grupo_type)
 
-    grupo <- ifelse(input$sel_grupo_type == "biologico",
-                    input$sel_grupo_bio, input$sel_grupo_int)
+    grupo <-  input$sel_grupo_bio
+    if (input$sel_grupo_type == "interes") grupo <- input$sel_grupo_int
+    req(grupo)
     if (grupo == "todos") grupo <- NULL
     #print(grupo)
     l_s <- list_species(region = input$sel_region,
@@ -197,7 +211,7 @@ server <-  function(input, output, session) {
   })
 
   data <- function(){
-    #req(inputs)
+    tryCatch({
     inp <- inputs()
     subR <- inp$subregiones
     req(actual_but$active)
@@ -218,6 +232,10 @@ server <-  function(input, output, session) {
 
     #print(class(d))
     d
+    },
+    error = function(cond) {
+      return()
+    })
   }
 
 

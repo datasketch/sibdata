@@ -177,7 +177,8 @@ server <-  function(input, output, session) {
 
     req(data_especies())
     l_s <- data_especies()
-
+    l_s$url_gbif <- paste0("<a href='",l_s$url_gbif,"'  target='_blank'>",l_s$url_gbif,"</a>")
+    l_s$url_cbc <- paste0("<a href='",l_s$url_cbc,"'  target='_blank'>",l_s$url_cbc,"</a>")
     DT::datatable(l_s,
                   rownames = F,
                   selection = 'none',

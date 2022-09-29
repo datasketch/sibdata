@@ -157,7 +157,8 @@ map(av_regions, function(region){
     publicadores = publicadores,
     municipios_lista = municipios_lista
   )
-  jsonlite::write_json(l, paste0("static/data/",region, ".json"),
+  dir.create(file.path("static/data",region))
+  jsonlite::write_json(l, paste0("static/data/",region,"/",region, ".json"),
                        auto_unbox = TRUE, pretty =TRUE)
 
 

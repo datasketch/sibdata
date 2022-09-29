@@ -301,13 +301,25 @@ server <-  function(input, output, session) {
       dataLabels_show = TRUE,
       color_by = names(dd)[1],
       legend_show = FALSE,
-      text_family = "Lato"
+      text_family = "Lato",
+      axis_line_y_size = 1,
+      axis_line_x_size = 1,
+      axis_line_color = "#dbd9d9",
+      border_weight = 0.2,
+      grid_y_color = "#dbd9d9",
+      grid_x_width = 0,
+      palette_colors = c("#5151f2", "#4ad3ac", "#ffd150", "#00afff", "#ffe0bb", "#f26330", "#163875")
     )
 
     if (actual_but$active == "map") {
       region <- inputs()$region
       opts$color_by <- NULL
+      opts$legend_show <- TRUE
+      opts$palette_colors <- rev(c("#f26330", "#f77e38", "#fb9745", "#feae56", "#ffc570", "#ffdb93", "#ffeec9"))
       opts$map_name <- paste0("col_depto_", region)
+      opts$topo_fill_opacity <- 0.6
+      opts$max_topo_fill_opacity <- 0.8
+      opts$map_opacity <- 0.5
     }
 
 

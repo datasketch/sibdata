@@ -18,7 +18,7 @@ opts_region <- sib_available_regions(subtipo = "Departamento")
 #                  "resguardo-indigena-pialapi-pueblo-viejo",
 #                  "reserva-natural-la-planada")
 
-opts_tematicas <- sib_available_tematicas()
+opts_tematicas <- c("Todas" = "todas", sib_available_tematicas())
 
 
 ui <- panelsPage(
@@ -145,20 +145,22 @@ server <-  function(input, output, session) {
   inputs <- reactive({
 
     req(input$sel_grupo_type)
+    req(input$sel_tematica)
     subregiones = input$sugrebiones %||% FALSE
     with_parent = input$with_parent %||% FALSE
 
     grupo <- ifelse(input$sel_grupo_type == "biologico",
                     input$sel_grupo_bio, input$sel_grupo_int)
     if(grupo == "todos") grupo <- NULL
-
+    tematica <- input$sel_tematica
+    if (tematica == "todas") tematica <- NULL
 
     list(
       region = input$sel_region,
       grupo = grupo,
       tipo = input$sel_tipo,
       cobertura = input$sel_cobertura,
-      tematica = input$sel_tematica,
+      tematica = tematica,
       subregiones = subregiones,
       with_parent = with_parent
     )
@@ -168,19 +170,18 @@ server <-  function(input, output, session) {
   output$list_species <- renderDataTable({
 
     req(input$sel_grupo_type)
-
+    req(input$sel_tematica)
     grupo <-  input$sel_grupo_bio
     if (input$sel_grupo_type == "interes") grupo <- input$sel_grupo_int
     req(grupo)
     if (grupo == "todos") grupo <- NULL
-    #print(grupo)
+    tematica <- input$sel_tematica
+    if (tematica == "todas") tematica <- NULL
     l_s <- list_species(region = input$sel_region,
                         grupo = grupo,
-                        tematica = input$sel_tematica) |>
+                        tematica = tematica) |>
       collect()
-    #tx <- "No hay especies registradas para los filtros seleccionados"
 
-    #if (nrow(l_s) != 0) {
     DT::datatable(l_s,
                   rownames = F,
                   selection = 'none',
@@ -199,15 +200,7 @@ server <-  function(input, output, session) {
                       "$(this.api().table().header()).css({'background-color': '#4ad3ac', 'color': '#ffffff'});",
                       "}")
                   ))
-    # tx <- HTML(paste0(
-    #   purrr::map(unique(l_s$family), function(f){
-    #     df <- l_s |> dplyr::filter(family %in% f)
-    #     HTML(paste0("<p><b>Familia: ", unique(f),"</b><br/>",
-    #                 paste0(df$species, " (", df$registros, ")", collapse = "<br/>"), "</p>", collapse = "<br/>"))
-    #   }), collapse = "<br/>"))
-    #}
 
-    #tx
   })
 
   data <- function(){

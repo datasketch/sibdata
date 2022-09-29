@@ -9,6 +9,9 @@ make_region_slides2 <- function(region){
 
   #subregs <- sib_available_subregions(region)
   parent <- sib_parent_region(region)
+  if(parent %in% c("reservas-forestales-protectoras",
+                   "territorios-indigenas"))
+    parent <- "narino"
 
   reg_labels <- sib_region_labels() |> collect()
 

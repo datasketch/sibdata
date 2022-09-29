@@ -185,7 +185,7 @@ tematica_list <- function(region){
   exoticas <- c(
     list(slug = "exoticas-invasoras"),
     region_indicadores(region, inds_exoticas),
-    region_indicadores(parent_region, inds_especies_parent),
+    region_indicadores(parent_region, inds_parent_exoticas),
     list(list_especies_exoticas_total = esp_list_exoticas_total,
          list_especies_exoticas = esp_list_exoticas,
          list_especies_invasoras = NULL,

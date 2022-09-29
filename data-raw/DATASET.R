@@ -61,17 +61,20 @@ ds$region_tematica <- tmp2
 str(ds$region_tematica)
 
 
+#readr::write_rds(ds, "data-raw/ds.rds")
+saveRDS(ds, "data-raw/ds.rds")
+
 # Save
 
 #available_tables <- names(ds)
 #usethis::use_data(ds, available_tables, overwrite = TRUE)
 
-library(RSQLite)
-con <- dbConnect(RSQLite::SQLite(), "inst/sib.sqlite")
-map2(ds, names(ds), function(d,nm){
-  dbWriteTable(con, nm, d)
-})
-dbDisconnect(con)
+# library(RSQLite)
+# con <- dbConnect(RSQLite::SQLite(), "inst/sib.sqlite")
+# map2(ds, names(ds), function(d,nm){
+#   dbWriteTable(con, nm, d)
+# })
+# dbDisconnect(con)
 
 
 

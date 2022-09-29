@@ -4,15 +4,23 @@ library(sibdata)
 av_regions <- sib_available_regions(subtipo = c("Municipio"),
                                     departamento = "tolima")
 
+av_regions <- c(
+  "reserva-forestal-la-planada",
+  "resguardo-indigena-pialapi-pueblo-viejo",
+  av_regions
+)
+
 library(tictoc)
 
 tic()
 
-map(av_regions[1:3], function(region){
+map(av_regions[1:5], function(region){
   message("\n...........",region)
   # region <- "ibague"
   # region <- "alpujarra"
   # region <- "alvarado"
+  # region <- "reserva-forestal-la-planada"
+  # region <-  "resguardo-indigena-pialapi-pueblo-viejo"
 
   nav_tematica <- navigation_trees("tematica")
   nav_grupo_biologico <- navigation_trees("grupo_biologico")

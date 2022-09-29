@@ -4,22 +4,16 @@ library(shinypanels)
 library(shiny)
 library(DT)
 library(hgchmagic)
+library(lfltmagic)
 library(sibdata)
 library(shinyinvoer)
-
-
-custom_css <- "
-#debug{
-max-height: 150px;
-overflow: auto;
-}
-
-"
+library(shinydisconnect)
+library(dsmodules)
 
 opts_grupo_biologico <- c("Todos" = "todos", sib_available_grupos(tipo = "biologico"))
 opts_grupo_interes <-  c("Todos" = "todos", sib_available_grupos(tipo = "interes"))
 
-opts_region <- sib_available_regions(subtipo = c("País", "Departamento"))
+opts_region <- sib_available_regions(subtipo = "Departamento")
 # opts_region <- c("colombia", "narino", "boyaca", "santander", "tolima",
 #                  "resguardo-indigena-pialapi-pueblo-viejo",
 #                  "reserva-natural-la-planada")
@@ -27,17 +21,27 @@ opts_region <- sib_available_regions(subtipo = c("País", "Departamento"))
 opts_tematicas <- sib_available_tematicas()
 
 
-ui <- panelsPage(styles = custom_css,
+ui <- panelsPage(
+  disconnectMessage(
+    text = "Tu sesión ha finalizado, por favor haz click aquí para recargar vista",
+    refresh = "RECARGAR",
+    background = "#ffffff",
+    colour = "#da1c95",
+    size = 14,
+    overlayColour = "#2a2e30",
+    overlayOpacity = 0.85,
+    refreshColour = "#ffffff",
+    css = "padding: 4.8em 3.5em !important; box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1) !important;"
+  ),
+  tags$head(
+    tags$link(rel="stylesheet", type="text/css", href="custom.css")
+  ),
   panel(title = "Opciones", width = 300,
         body = div(
-          verbatimTextOutput("debug"),
-          selectizeInput("sel_region","Seleccione Región",
-                         rev(opts_region),
-                         selected = "Tolima"
-                         ),
+          #verbatimTextOutput("debug"),
+          uiOutput("sel_region_"),
           hr(),
-          radioButtons("sel_grupo_type", "Tipo de grupo",
-                       c("Biológico" = "biologico", "Interés de Conservación" = "interes")),
+          uiOutput("sel_grupo_"),
           conditionalPanel("input.sel_grupo_type == 'biologico'",
                            selectizeInput("sel_grupo_bio","Seleccione grupo",
                                           opts_grupo_biologico)
@@ -49,57 +53,92 @@ ui <- panelsPage(styles = custom_css,
           hr(),
           radioButtons("sel_tipo", "Tipo", c("Observaciones" = "registros","Especies"="especies")),
           radioButtons("sel_cobertura", "Cobertura", c("Total" = "total","Continental" = "continentales","Marina" = "marinas")),
-          radioButtons("sel_tematica", "Temática", opts_tematicas),
+          uiOutput("sel_tematica_")
+          ,
           br()
         ),
         footer = ""),
   panel(title = "Gráficos",
-        # header_right = shinyinvoer::buttonImageInput('viz_selection',
-        #                                     " ",#div(class="title-data-select", "Selecciona tipo de visualización"),
-        #                                     images = c('table','pie','bar', 'treemap'),
-        #                                     path = "viz_icons/",
-        #                                     nrow = 1,
-        #                                     active = "pie",
-        #                                     #tooltips = viz_tool(),
-        #                                     imageStyle = list(borderColor = "#ffffff",
-        #                                                       borderSize = "1px",
-        #                                                       padding = "7px",
-        #                                                       shadow = TRUE)
-        #       ),
+        can_collapse = FALSE,
+        header_right = div(style = "display: flex;",
+                           div(
+                             class='first-container',
+                             uiOutput("viz_type")),
+                           div(class='second-container',
+                               uiOutput("descargas"))),
         body = div(
           uiOutput("controls"),
           uiOutput("chart_controls"),
-          uiOutput("viz_type"),
+
           uiOutput("viz"),
           br()
         ),
-        footer = "")
+        footer = ""),
+  panel(title = "Especies",
+        width = 300,
+        body = dataTableOutput("list_species")
+  )
 )
 
 server <-  function(input, output, session) {
 
 
-  output$debug <- renderText({
+  par <- list(region = NULL, tematica = NULL, grupo = NULL)
+  url_par <- reactive({
+    url_params(par, session)$inputs
+  })
+
+  output$debug <- renderPrint({
     #capture.output(str(data()))
     #glimpse(data())
     #input$sel_grupo
     #glimpse(inputs())
     #summary(list(a=1, b= "x"))
-    what <- c(input$sel_grupo_type, inputs())
-    what <- data()
-    what <- inputs()
-    what <- input$viz_selection
-    paste0(capture.output(what),collapse = "\n")
+    # what <- c(input$sel_grupo_type, inputs())
+    # what <- data()
+    # what <- inputs()
+    # what <- input$viz_selection
+    # paste0(capture.output(what),collapse = "\n")
+    url_par()
+  })
+
+
+  output$sel_region_ <- renderUI({
+    req(opts_region)
+    default_select <- NULL
+    if (!is.null(url_par()$region)) default_select <- tolower(url_par()$region)
+    selectizeInput("sel_region","Seleccione Región",
+                   rev(opts_region),
+                   selected = default_select
+    )
+  })
+
+
+  output$sel_grupo_ <- renderUI({
+    default_select <- NULL
+    if (!is.null(url_par()$grupo)) default_select <- tolower(url_par()$grupo)
+    radioButtons("sel_grupo_type", "Tipo de grupo",
+                 c("Biológico" = "biologico", "Interés de Conservación" = "interes"),
+                 selected = default_select)
+  })
+
+  output$sel_tematica_ <- renderUI({
+    req(opts_tematicas)
+    default_select <- NULL
+    if (!is.null(url_par()$tematica)) default_select <- tolower(url_par()$tematica)
+    radioButtons("sel_tematica", "Temática", opts_tematicas, selected = default_select)
   })
 
   inputs <- reactive({
 
+    req(input$sel_grupo_type)
     subregiones = input$sugrebiones %||% FALSE
     with_parent = input$with_parent %||% FALSE
 
     grupo <- ifelse(input$sel_grupo_type == "biologico",
-                        input$sel_grupo_bio, input$sel_grupo_int)
+                    input$sel_grupo_bio, input$sel_grupo_int)
     if(grupo == "todos") grupo <- NULL
+
 
     list(
       region = input$sel_region,
@@ -112,18 +151,72 @@ server <-  function(input, output, session) {
     )
   })
 
+
+  output$list_species <- renderDataTable({
+
+    req(input$sel_grupo_type)
+
+    grupo <- ifelse(input$sel_grupo_type == "biologico",
+                    input$sel_grupo_bio, input$sel_grupo_int)
+    if (grupo == "todos") grupo <- NULL
+    #print(grupo)
+    l_s <- list_species(region = input$sel_region,
+                        grupo = grupo,
+                        tematica = input$sel_tematica) |>
+      collect()
+    #tx <- "No hay especies registradas para los filtros seleccionados"
+
+    #if (nrow(l_s) != 0) {
+    DT::datatable(l_s,
+                  rownames = F,
+                  selection = 'none',
+                  escape = FALSE,
+                  options = list(
+                    dom = 'Bfrtip',
+                    language = list(url = '//cdn.datatables.net/plug-ins/1.10.11/i18n/Spanish.json'),
+                    scrollX = T,
+                    fixedColumns = TRUE,
+                    fixedHeader = TRUE,
+                    searching = FALSE,
+                    info = FALSE,
+                    #scrollY = "700px",
+                    initComplete = JS(
+                      "function(settings, json) {",
+                      "$(this.api().table().header()).css({'background-color': '#4ad3ac', 'color': '#ffffff'});",
+                      "}")
+                  ))
+    # tx <- HTML(paste0(
+    #   purrr::map(unique(l_s$family), function(f){
+    #     df <- l_s |> dplyr::filter(family %in% f)
+    #     HTML(paste0("<p><b>Familia: ", unique(f),"</b><br/>",
+    #                 paste0(df$species, " (", df$registros, ")", collapse = "<br/>"), "</p>", collapse = "<br/>"))
+    #   }), collapse = "<br/>"))
+    #}
+
+    #tx
+  })
+
   data <- function(){
     #req(inputs)
     inp <- inputs()
+    subR <- inp$subregiones
+    req(actual_but$active)
+    if (actual_but$active == "map") subR <- TRUE
 
     d <- sibdata(inp$region,
                  grupo = inp$grupo,
                  tipo = inp$tipo,
                  cobertura = inp$cobertura,
                  tematica = inp$tematica,
-                 subregiones = inp$subregiones,
+                 subregiones = subR,
                  with_parent = inp$with_parent)
-    d <- d |> sib_merge_ind_label()
+    if (actual_but$active != "map") {
+      d <- d |> sib_merge_ind_label()
+    } else {
+      d <- d |> dplyr::select(label, count)
+    }
+
+    #print(class(d))
     d
   }
 
@@ -138,8 +231,44 @@ server <-  function(input, output, session) {
 
   available_charts <- reactive({
     #dd <- data()
-    c("Torta"= "pie","Tabla"="table", "Dona" = "donut", "Treemap" = "treemap","Barras" = "bar")
+    c("Torta"= "pie","Tabla"="table", "Dona" = "donut", "Treemap" = "treemap","Barras" = "bar", "Mapa" = "map")
   })
+
+
+  hover_viz <- reactive({
+    req(available_charts())
+    names(available_charts())
+  })
+
+
+  actual_but <- reactiveValues(active = NULL)
+
+  observe({
+    if (is.null(available_charts())) return()
+    viz_rec <- available_charts() |> as.vector()
+    if (is.null(input$sel_chart_type)) return()
+    vizDef <- input$sel_chart_type
+
+    if (vizDef %in% viz_rec) {
+      actual_but$active <- vizDef
+    } else {
+      actual_but$active <- viz_rec[1]
+    }
+  })
+
+
+  output$viz_type <- renderUI({
+    req(available_charts())
+    suppressWarnings(
+      buttonImageInput('sel_chart_type',
+                       " ",
+                       images = available_charts() |> as.vector(),
+                       tooltips = hover_viz(),
+                       path = 'viz_icons/',
+                       active = actual_but$active)
+    )
+  })
+
 
 
   output$controls <- renderUI({
@@ -160,34 +289,98 @@ server <-  function(input, output, session) {
     #                options = list(plugins = list('drag_drop')), width = 200)
   })
 
-  output$viz_type <- renderUI({
-    selectInput("sel_chart_type","Seleccione tipo de visualización",
-                available_charts())
+  # output$viz_type <- renderUI({
+  #   selectInput("sel_chart_type","Seleccione tipo de visualización",
+  #               available_charts())
+  # })
+
+
+  vizOps <- reactive({
+    req(data())
+    req(actual_but$active)
+    dd <- data()
+    opts <- list(
+      data = dd,
+      dataLabels_show = TRUE,
+      color_by = names(dd)[1],
+      legend_show = FALSE,
+      text_family = "Lato",
+      axis_line_y_size = 1,
+      axis_line_x_size = 1,
+      axis_line_color = "#dbd9d9",
+      border_weight = 0.2,
+      grid_y_color = "#dbd9d9",
+      grid_x_width = 0,
+      palette_colors = c("#5151f2", "#4ad3ac", "#ffd150", "#00afff", "#ffe0bb", "#f26330", "#163875")
+    )
+
+    if (actual_but$active == "map") {
+      region <- inputs()$region
+      opts$color_by <- NULL
+      opts$legend_show <- TRUE
+      opts$palette_colors <- rev(c("#f26330", "#f77e38", "#fb9745", "#feae56", "#ffc570", "#ffdb93", "#ffeec9"))
+      opts$map_name <- paste0("col_depto_", region)
+      opts$topo_fill_opacity <- 0.6
+      opts$max_topo_fill_opacity <- 0.8
+      opts$map_opacity <- 0.5
+    }
+    opts
   })
 
 
+  l_viz <- reactive({
+    req(vizOps())
+    opts <- vizOps()
+    sel_chart_type <- actual_but$active
+    if (sel_chart_type == "table") return()
+    viz <- paste0("hgchmagic::hgch_", sel_chart_type, "_CatNum")
+    if (sel_chart_type == "map") viz <- "lfltmagic::lflt_choropleth_GnmNum"
+    suppressWarnings(do.call(eval(parse(text=viz)), opts))
+  })
+
+
+  output$hgch_viz <- renderHighchart({
+    req(l_viz())
+    sel_chart_type <- actual_but$active
+    if (sel_chart_type %in% c("table", "map")) return()
+    l_viz()
+  })
+
+  output$lflt_viz <- renderLeaflet({
+    req(l_viz())
+    sel_chart_type <- actual_but$active
+    if (!sel_chart_type %in% c( "map")) return()
+    l_viz()
+  })
+
+  output$dt_sum <- renderDataTable({
+    req(data())
+    data()
+  })
 
   output$viz <- renderUI({
-    req(data())
-    dd <- data()
-
-    sel_chart_type <- input$sel_chart_type
-
-    opts <- list(
-      dataLabels_show = TRUE,
-      color_by = names(dd)[1]
-    )
-    out <- list(
-      pie = renderHighchart(hgch_pie_CatNum(dd, opts = opts)),
-      donut = renderHighchart(hgch_donut_CatNum(dd, opts = opts)),
-      bar = renderHighchart(hgch_bar_CatNum(dd, opts = opts)),
-      treemap = renderHighchart(hgch_treemap_CatNum(dd, opts = opts)),
-      table = renderDataTable(dd)
-    )
-    out[[sel_chart_type]]
-
+    req(actual_but$active)
+    if (actual_but$active == "table") {
+      dataTableOutput("dt_sum")
+    } else if (actual_but$active == "map") {
+      leafletOutput("lflt_viz", height = 600)
+    } else {
+      highchartOutput("hgch_viz", height = 600)
+    }
   })
 
+
+  output$descargas <- renderUI({
+    if (is.null(actual_but$active)) return()
+    if (actual_but$active != "table") {
+      downloadImageUI("download_viz", dropdownLabel = "Descargar", formats = c("jpeg", "pdf", "png", "html"), display = "dropdown")
+    } else {
+      downloadTableUI("dropdown_table", dropdownLabel = "Descargar", formats = c("csv", "xlsx", "json"), display = "dropdown")
+    }
+  })
+
+  downloadTableServer("dropdown_table", element = reactive(data_fin()), formats = c("csv", "xlsx", "json"))
+  downloadImageServer("download_viz", element = reactive(l_viz()), lib = "highcharter", formats = c("jpeg", "pdf", "png", "html"), file_prefix = "plot")
 
 
 

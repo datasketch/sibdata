@@ -45,7 +45,7 @@ ui <- panelsPage(
           uiOutput("sel_grupo_opts"),
           hr(),
           radioButtons("sel_tipo", "Tipo", c("Observaciones" = "registros","Especies"="especies")),
-          radioButtons("sel_cobertura", "Cobertura", c("Total" = "total","Continental" = "continentales","Marina" = "marinas")),
+          #radioButtons("sel_cobertura", "Cobertura", c("Total" = "total","Continental" = "continentales","Marina" = "marinas")),
           uiOutput("sel_tematica_")
           ,
           br()
@@ -159,7 +159,7 @@ server <-  function(input, output, session) {
       region = input$sel_region,
       grupo = grupo,
       tipo = input$sel_tipo,
-      cobertura = input$sel_cobertura,
+      #cobertura = input$sel_cobertura,
       tematica = tematica,
       subregiones = subregiones,
       with_parent = with_parent

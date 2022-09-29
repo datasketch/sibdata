@@ -13,7 +13,7 @@ library(dsmodules)
 opts_grupo_biologico <- c("Todos" = "todos", sib_available_grupos(tipo = "biologico"))
 opts_grupo_interes <-  c("Todos" = "todos", sib_available_grupos(tipo = "interes"))
 
-opts_region <- sib_available_regions(subtipo = "Departamento")
+opts_region <- c(sib_available_regions(subtipo = "País"), sib_available_regions(subtipo = "Departamento"))
 # opts_region <- c("colombia", "narino", "boyaca", "santander", "tolima",
 #                  "resguardo-indigena-pialapi-pueblo-viejo",
 #                  "reserva-natural-la-planada")
@@ -341,6 +341,7 @@ server <-  function(input, output, session) {
       opts$legend_show <- TRUE
       opts$palette_colors <- rev(c("#f26330", "#f77e38", "#fb9745", "#feae56", "#ffc570", "#ffdb93", "#ffeec9"))
       opts$map_name <- paste0("col_depto_", region)
+      if (region == "colombia") opts$map_name <- "col_departments"
       opts$topo_fill_opacity <- 0.6
       opts$max_topo_fill_opacity <- 0.8
       opts$map_opacity <- 0.5

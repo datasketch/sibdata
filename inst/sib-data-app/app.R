@@ -36,7 +36,7 @@ ui <- panelsPage(
   tags$head(
     tags$link(rel="stylesheet", type="text/css", href="custom.css")
   ),
-  panel(title = "Opciones", width = 300,
+  panel(title = "Opciones", width = 250,
         body = div(
           #verbatimTextOutput("debug"),
           uiOutput("sel_region_"),
@@ -68,7 +68,9 @@ ui <- panelsPage(
         ),
         footer = ""),
   panel(title = "Especies",
-        width = 300,
+        width = 350,
+        can_collapse = FALSE,
+        header_right = downloadTableUI("species_table", dropdownLabel = "Descargar especies", formats = c("csv", "xlsx", "json"), display = "dropdown", dropdownWidth = 200),
         body = dataTableOutput("list_species")
   )
 )
@@ -167,8 +169,7 @@ server <-  function(input, output, session) {
   })
 
 
-  output$list_species <- renderDataTable({
-
+  data_especies <- reactive({
     req(input$sel_grupo_type)
     req(input$sel_tematica)
     grupo <-  input$sel_grupo_bio
@@ -181,13 +182,22 @@ server <-  function(input, output, session) {
                         grupo = grupo,
                         tematica = tematica) |>
       collect()
+    l_s
+  })
+
+  output$list_species <- renderDataTable({
+
+    req(data_especies())
+    l_s <- data_especies()
 
     DT::datatable(l_s,
                   rownames = F,
                   selection = 'none',
                   escape = FALSE,
+                  #extensions = 'Buttons',
                   options = list(
-                    dom = 'Bfrtip',
+                    dom = 'Bftsp',
+                    #buttons = c('copy', 'csv'),
                     language = list(url = '//cdn.datatables.net/plug-ins/1.10.11/i18n/Spanish.json'),
                     scrollX = T,
                     fixedColumns = TRUE,
@@ -392,6 +402,7 @@ server <-  function(input, output, session) {
 
   downloadTableServer("dropdown_table", element = reactive(data_fin()), formats = c("csv", "xlsx", "json"))
   downloadImageServer("download_viz", element = reactive(l_viz()), lib = "highcharter", formats = c("jpeg", "pdf", "png", "html"), file_prefix = "plot")
+  downloadTableServer("species_table", element = reactive(data_especies()), formats = c("csv", "xlsx", "json"))
 
 
 

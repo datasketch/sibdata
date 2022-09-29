@@ -7,7 +7,6 @@ library(hgchmagic)
 library(lfltmagic)
 library(sibdata)
 library(shinyinvoer)
-library(shinydisconnect)
 library(dsmodules)
 
 opts_grupo_biologico <- c("Todos" = "todos", sib_available_grupos(tipo = "biologico"))
@@ -22,17 +21,6 @@ opts_tematicas <- c("Todas" = "todas", sib_available_tematicas())
 
 
 ui <- panelsPage(
-  disconnectMessage(
-    text = "Tu sesión ha finalizado, por favor haz click aquí para recargar vista",
-    refresh = "RECARGAR",
-    background = "#ffffff",
-    colour = "#da1c95",
-    size = 14,
-    overlayColour = "#2a2e30",
-    overlayOpacity = 0.85,
-    refreshColour = "#ffffff",
-    css = "padding: 4.8em 3.5em !important; box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1) !important;"
-  ),
   tags$head(
     tags$link(rel="stylesheet", type="text/css", href="custom.css")
   ),

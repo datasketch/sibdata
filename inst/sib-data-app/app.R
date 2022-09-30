@@ -56,7 +56,7 @@ ui <- panelsPage(
         ),
         footer = ""),
   panel(title = "Especies",
-        width = 350,
+        width = 450,
         can_collapse = FALSE,
         header_right = downloadTableUI("species_table", dropdownLabel = "Descargar especies", formats = c("csv", "xlsx", "json"), display = "dropdown", dropdownWidth = 200),
         body = dataTableOutput("list_species")
@@ -168,7 +168,8 @@ server <-  function(input, output, session) {
     if (tematica == "todas") tematica <- NULL
     l_s <- list_species(region = input$sel_region,
                         grupo = grupo,
-                        tematica = tematica) |>
+                        tematica = tematica,
+                        with_labels = TRUE) |>
       collect()
     l_s
   })
@@ -177,8 +178,10 @@ server <-  function(input, output, session) {
 
     req(data_especies())
     l_s <- data_especies()
-    l_s$url_gbif <- paste0("<a href='",l_s$url_gbif,"'  target='_blank'>",l_s$url_gbif,"</a>")
-    l_s$url_cbc <- paste0("<a href='",l_s$url_cbc,"'  target='_blank'>",l_s$url_cbc,"</a>")
+    l_s$GBIF <- paste0("<a href='",l_s$GBIF,"'  target='_blank'>","GBIF","</a>")
+    l_s$CBC <- paste0("<a href='",l_s$CBC,"'  target='_blank'>","CBC","</a>")
+    l_s$CBC[l_s$CBC == "<a href='NA'  target='_blank'>NA</a>"] <- ""
+    l_s$GBIF[l_s$GBIF == "<a href='NA'  target='_blank'>NA</a>"] <- ""
     DT::datatable(l_s,
                   rownames = F,
                   selection = 'none',

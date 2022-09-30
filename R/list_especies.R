@@ -3,7 +3,7 @@
 #' @export
 list_species <- function(region,
                          grupo = NULL,
-                         tematica = NULL){
+                         tematica = NULL, with_labels = FALSE){
   # region <- "tolima"
   # tematica <- "endemicas"
   # grupo <- "hongos"
@@ -41,6 +41,20 @@ list_species <- function(region,
   esp_with_name <- especies  |>
     left_join(sibdata_especie_meta(), by = c("slug_especie" = "slug")) |>
     sib_merge_especie_label()
+
+  if(with_labels){
+    # esp_with_name$slug <- NULL
+    # esp_with_name$species <- NULL
+
+    esp_with_name <- esp_with_name |>
+      select(-slug_especie, -species) |>
+      rename("Especie" = "label", "Observaciones" = "registros",
+             "Vernáculo" = "vernacular_name_es",
+             "GBIF" = "url_gbif", "CBC" = "url_cbc",
+             "Reino" = "kingdom", "Phylum" = "phylum", "Clase" = "class",
+             "Orden" = "order", "Familia" = "family",
+             "Genus" = "genus")
+  }
 
   esp_with_name
 

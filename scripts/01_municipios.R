@@ -9,20 +9,31 @@ setwd("../")
 here::dr_here()
 
 #av_regions <- sib_available_regions(subtipo = c("Municipio"))
-av_regions <- sib_available_regions(subtipo = c("Municipio"),
+av_regions1 <- sib_available_regions(subtipo = c("Municipio"),
                                     departamento = "tolima")
 
+av_regions2 <- sib_available_regions(subtipo = c("Municipio"),
+                                    departamento = "narino")
+
+av_regions3 <- sib_available_regions(subtipo = c("Municipio"),
+                                     departamento = "boyaca")
+av_regions4 <- sib_available_regions(subtipo = c("Municipio"),
+                                     departamento = "santander")
+
 av_regions <- c(
-  "reserva-forestal-la-planada",
-  "resguardo-indigena-pialapi-pueblo-viejo",
-  av_regions
+  # "reserva-forestal-la-planada",
+  # "resguardo-indigena-pialapi-pueblo-viejo",
+  # av_regions1[1:3],
+  av_regions2[1:3],
+  av_regions3,
+  av_regions4
 )
 
 library(tictoc)
 
 tic()
 
-map(av_regions[1:5], function(region){
+map(av_regions, function(region){
   message("\n...........",region)
   # region <- "ibague"
   # region <- "alpujarra"
@@ -46,6 +57,25 @@ map(av_regions[1:5], function(region){
 
   parent <- sib_parent_region(region)
 
+  general_info$parent <- parent
+  parent_depto <- parent
+  general_info$parent_label <- sibdata_region() |>
+    collect() |>
+    filter(slug == parent_depto) |> pull(label)
+
+
+
+  if(region == "reserva-forestal-la-planada"){
+    parent <- "narino"
+  }
+  if(region == "resguardo-indigena-pialapi-pueblo-viejo"){
+    parent <- "narino"
+  }
+
+  reg_gr_bio <- list()
+  reg_gr_int <- list()
+
+  if(parent %in% c("narino", "tolima"))
   reg_gr_bio <- region_grupo_data(region, tipo = "biologico", verbose = TRUE)
   reg_gr_int <- region_grupo_data(region, tipo = "interes", verbose = TRUE)
 

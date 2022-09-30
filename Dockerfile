@@ -81,7 +81,7 @@ RUN Rscript -e 'remotes::install_github("datasketch/lfltmagic@7677b096a1440ba105
 
 RUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/*
 
-RUN wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2
+RUN wget https://ds-services-assets.s3.amazonaws.com/common/phantomjs-2.1.1-linux-x86_64.tar.bz2
 
 RUN tar phantomjs-2.1.1-linux-x86_64.tar.bz2
 

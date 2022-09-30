@@ -100,9 +100,10 @@ make_region_slides <- function(region){
     x <- rev(x)
     x <- round(x/sum(x)*100)
     proportion <- x[2]
+    regionLabel <- sib_merge_region_label(data.frame(slug_region = region))$label
     regionTitle <- makeup::makeup_chr(region, "Title")
-    description_tpl <- "El departamento de {regionTitle} tiene alrededor del {proportion}% de las especies del país."
-    title_tpl <- "{region} vs. {parent}"
+    description_tpl <- "El departamento de {regionLabel} tiene alrededor del {proportion}% de las especies del país."
+    title_tpl <- "{regionLabel} vs. {parent}"
     l <- list(
       id = "slide1",
       layout = "title/(text|chart)",

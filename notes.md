@@ -10,13 +10,14 @@ revisar dato relevante ballenas
 Especies Colombia / Especies Colombia
 especies estimadas Amenazadas???
 shinypanels... rotate quitar
+despliegue app https
+slides title
 
 # TODO
 
 
 referencia estimada
 
-slides title
 
 
 

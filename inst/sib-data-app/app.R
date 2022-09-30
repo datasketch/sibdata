@@ -8,6 +8,7 @@ library(lfltmagic)
 library(sibdata)
 library(shinyinvoer)
 library(dsmodules)
+library(V8)
 
 
 opts_grupo_biologico <- c("Todos" = "todos", sib_available_grupos(tipo = "biologico"))

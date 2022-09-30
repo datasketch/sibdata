@@ -9,11 +9,11 @@ setwd("../")
 here::dr_here()
 
 #av_regions <- sib_available_regions(subtipo = c("Municipio"))
-av_regions1 <- sib_available_regions(subtipo = c("Municipio"),
-                                    departamento = "tolima")
+#av_regions1 <- sib_available_regions(subtipo = c("Municipio"),
+#                                     departamento = "tolima")
 
 av_regions2 <- sib_available_regions(subtipo = c("Municipio"),
-                                    departamento = "narino")
+                                     departamento = "narino")
 
 av_regions3 <- sib_available_regions(subtipo = c("Municipio"),
                                      departamento = "boyaca")
@@ -23,8 +23,8 @@ av_regions4 <- sib_available_regions(subtipo = c("Municipio"),
 av_regions <- c(
   # "reserva-forestal-la-planada",
   # "resguardo-indigena-pialapi-pueblo-viejo",
-  av_regions1[36:47],
-  #av_regions2,
+  #av_regions1,
+  av_regions2,
   av_regions3,
   av_regions4
 )
@@ -76,7 +76,7 @@ map(av_regions, function(region){
   reg_gr_int <- list()
 
   if(parent %in% c("narino", "tolima"))
-  reg_gr_bio <- region_grupo_data(region, tipo = "biologico", verbose = TRUE)
+    reg_gr_bio <- region_grupo_data(region, tipo = "biologico", verbose = TRUE)
   reg_gr_int <- region_grupo_data(region, tipo = "interes", verbose = TRUE)
 
 

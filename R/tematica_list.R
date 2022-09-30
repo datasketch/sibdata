@@ -207,6 +207,11 @@ tematica_list <- function(region){
 
 
 
+
+
+
+
+
 tematica_list_col <- function(region){
 
   region <- "colombia"
@@ -325,6 +330,7 @@ tematica_list_col <- function(region){
 
   cites <- c(
     list(slug = "cites",
+         estimadas_cites_total = estimadas$especies_cites_total_estimadas,
          estimadas_cites_i = estimadas$especies_cites_i_estimadas,
          estimadas_cites_i_ii = estimadas$especies_cites_i_ii_estimadas,
          estimadas_cites_ii = estimadas$especies_cites_ii_estimadas,

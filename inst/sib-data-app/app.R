@@ -9,6 +9,7 @@ library(sibdata)
 library(shinyinvoer)
 library(dsmodules)
 
+
 opts_grupo_biologico <- c("Todos" = "todos", sib_available_grupos(tipo = "biologico"))
 opts_grupo_interes <-  c("Todos" = "todos", sib_available_grupos(tipo = "interes"))
 

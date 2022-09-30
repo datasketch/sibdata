@@ -79,6 +79,16 @@ RUN Rscript -e 'remotes::install_github("datasketch/hgchmagic@1c2126cb2722071855
 
 RUN Rscript -e 'remotes::install_github("datasketch/lfltmagic@7677b096a1440ba105c67c883d1144830204923e")'
 
+RUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/*
+
+RUN wget phantomjs-2.1.1-linux-x86_64.tar.bz2
+
+RUN tar phantomjs-2.1.1-linux-x86_64.tar.bz2
+
+RUN mv phantomjs-2.1.1-linux-x86_64 /usr/local/share
+
+RUN ln -sf /usr/local/share/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/bin
+
 RUN mkdir /build_zone
 
 ADD . /build_zone

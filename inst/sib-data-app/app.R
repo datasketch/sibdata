@@ -7,36 +7,24 @@ library(hgchmagic)
 library(lfltmagic)
 library(sibdata)
 library(shinyinvoer)
-library(shinydisconnect)
 library(dsmodules)
 
 opts_grupo_biologico <- c("Todos" = "todos", sib_available_grupos(tipo = "biologico"))
 opts_grupo_interes <-  c("Todos" = "todos", sib_available_grupos(tipo = "interes"))
 
-opts_region <- sib_available_regions(subtipo = "Departamento")
+opts_region <- c(sib_available_regions(subtipo = "País"), sib_available_regions(subtipo = "Departamento"))
 # opts_region <- c("colombia", "narino", "boyaca", "santander", "tolima",
 #                  "resguardo-indigena-pialapi-pueblo-viejo",
 #                  "reserva-natural-la-planada")
 
-opts_tematicas <- sib_available_tematicas()
+opts_tematicas <- c("Todas" = "todas", sib_available_tematicas())
 
 
 ui <- panelsPage(
-  disconnectMessage(
-    text = "Tu sesión ha finalizado, por favor haz click aquí para recargar vista",
-    refresh = "RECARGAR",
-    background = "#ffffff",
-    colour = "#da1c95",
-    size = 14,
-    overlayColour = "#2a2e30",
-    overlayOpacity = 0.85,
-    refreshColour = "#ffffff",
-    css = "padding: 4.8em 3.5em !important; box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1) !important;"
-  ),
   tags$head(
     tags$link(rel="stylesheet", type="text/css", href="custom.css")
   ),
-  panel(title = "Opciones", width = 300,
+  panel(title = "Opciones", width = 250,
         body = div(
           #verbatimTextOutput("debug"),
           uiOutput("sel_region_"),
@@ -45,7 +33,7 @@ ui <- panelsPage(
           uiOutput("sel_grupo_opts"),
           hr(),
           radioButtons("sel_tipo", "Tipo", c("Observaciones" = "registros","Especies"="especies")),
-          radioButtons("sel_cobertura", "Cobertura", c("Total" = "total","Continental" = "continentales","Marina" = "marinas")),
+          #radioButtons("sel_cobertura", "Cobertura", c("Total" = "total","Continental" = "continentales","Marina" = "marinas")),
           uiOutput("sel_tematica_")
           ,
           br()
@@ -68,7 +56,9 @@ ui <- panelsPage(
         ),
         footer = ""),
   panel(title = "Especies",
-        width = 300,
+        width = 350,
+        can_collapse = FALSE,
+        header_right = downloadTableUI("species_table", dropdownLabel = "Descargar especies", formats = c("csv", "xlsx", "json"), display = "dropdown", dropdownWidth = 200),
         body = dataTableOutput("list_species")
   )
 )
@@ -145,48 +135,58 @@ server <-  function(input, output, session) {
   inputs <- reactive({
 
     req(input$sel_grupo_type)
+    req(input$sel_tematica)
     subregiones = input$sugrebiones %||% FALSE
     with_parent = input$with_parent %||% FALSE
 
     grupo <- ifelse(input$sel_grupo_type == "biologico",
                     input$sel_grupo_bio, input$sel_grupo_int)
     if(grupo == "todos") grupo <- NULL
-
+    tematica <- input$sel_tematica
+    if (tematica == "todas") tematica <- NULL
 
     list(
       region = input$sel_region,
       grupo = grupo,
       tipo = input$sel_tipo,
-      cobertura = input$sel_cobertura,
-      tematica = input$sel_tematica,
+      #cobertura = input$sel_cobertura,
+      tematica = tematica,
       subregiones = subregiones,
       with_parent = with_parent
     )
   })
 
 
-  output$list_species <- renderDataTable({
-
+  data_especies <- reactive({
     req(input$sel_grupo_type)
-
+    req(input$sel_tematica)
     grupo <-  input$sel_grupo_bio
     if (input$sel_grupo_type == "interes") grupo <- input$sel_grupo_int
     req(grupo)
     if (grupo == "todos") grupo <- NULL
-    #print(grupo)
+    tematica <- input$sel_tematica
+    if (tematica == "todas") tematica <- NULL
     l_s <- list_species(region = input$sel_region,
                         grupo = grupo,
-                        tematica = input$sel_tematica) |>
+                        tematica = tematica) |>
       collect()
-    #tx <- "No hay especies registradas para los filtros seleccionados"
+    l_s
+  })
 
-    #if (nrow(l_s) != 0) {
+  output$list_species <- renderDataTable({
+
+    req(data_especies())
+    l_s <- data_especies()
+    l_s$url_gbif <- paste0("<a href='",l_s$url_gbif,"'  target='_blank'>",l_s$url_gbif,"</a>")
+    l_s$url_cbc <- paste0("<a href='",l_s$url_cbc,"'  target='_blank'>",l_s$url_cbc,"</a>")
     DT::datatable(l_s,
                   rownames = F,
                   selection = 'none',
                   escape = FALSE,
+                  #extensions = 'Buttons',
                   options = list(
-                    dom = 'Bfrtip',
+                    dom = 'Bftsp',
+                    #buttons = c('copy', 'csv'),
                     language = list(url = '//cdn.datatables.net/plug-ins/1.10.11/i18n/Spanish.json'),
                     scrollX = T,
                     fixedColumns = TRUE,
@@ -199,15 +199,7 @@ server <-  function(input, output, session) {
                       "$(this.api().table().header()).css({'background-color': '#4ad3ac', 'color': '#ffffff'});",
                       "}")
                   ))
-    # tx <- HTML(paste0(
-    #   purrr::map(unique(l_s$family), function(f){
-    #     df <- l_s |> dplyr::filter(family %in% f)
-    #     HTML(paste0("<p><b>Familia: ", unique(f),"</b><br/>",
-    #                 paste0(df$species, " (", df$registros, ")", collapse = "<br/>"), "</p>", collapse = "<br/>"))
-    #   }), collapse = "<br/>"))
-    #}
 
-    #tx
   })
 
   data <- function(){
@@ -249,7 +241,7 @@ server <-  function(input, output, session) {
 
   available_charts <- reactive({
     #dd <- data()
-    c("Torta"= "pie","Tabla"="table", "Dona" = "donut", "Treemap" = "treemap","Barras" = "bar", "Mapa" = "map")
+    c( "Mapa" = "map", "Torta"= "pie", "Dona" = "donut", "Treemap" = "treemap","Barras" = "bar", "Tabla"="table")
   })
 
 
@@ -338,6 +330,7 @@ server <-  function(input, output, session) {
       opts$legend_show <- TRUE
       opts$palette_colors <- rev(c("#f26330", "#f77e38", "#fb9745", "#feae56", "#ffc570", "#ffdb93", "#ffeec9"))
       opts$map_name <- paste0("col_depto_", region)
+      if (region == "colombia") opts$map_name <- "col_departments"
       opts$topo_fill_opacity <- 0.6
       opts$max_topo_fill_opacity <- 0.8
       opts$map_opacity <- 0.5
@@ -399,6 +392,7 @@ server <-  function(input, output, session) {
 
   downloadTableServer("dropdown_table", element = reactive(data_fin()), formats = c("csv", "xlsx", "json"))
   downloadImageServer("download_viz", element = reactive(l_viz()), lib = "highcharter", formats = c("jpeg", "pdf", "png", "html"), file_prefix = "plot")
+  downloadTableServer("species_table", element = reactive(data_especies()), formats = c("csv", "xlsx", "json"))
 
 
 

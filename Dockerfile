@@ -69,7 +69,7 @@ RUN Rscript -e 'remotes::install_github("datasketch/makeup@e4cde16244da49883e728
 
 RUN Rscript -e 'remotes::install_github("datasketch/shinyinvoer@dd8178db99cac78f0abbd236e83e07bf1f22ba18")'
 
-RUN Rscript -e 'remotes::install_github("datasketch/shinypanels@8be05c0ff074000f82f5903d597ce9e0eb0fc6b2")'
+RUN Rscript -e 'remotes::install_github("datasketch/shinypanels@ce26c64f9749d1fbe90c992b1c15e83af576b305")'
 
 RUN Rscript -e 'remotes::install_github("datasketch/ggmagic@cfeb47aafd792bf342d657177206ff28fa833b0d")'
 

@@ -77,7 +77,7 @@ map(av_regions, function(region){
 
   tooltip <- "<b>{value} especies</b><br><i>{label}</i>"
   munis_chart1<- lfltmagic::lflt_choropleth_GcdNum(dd_esp, map_name = map_name,
-                                                  tooltip = tooltip)
+                                                  tooltip = tooltip, map_zoom = F)
 
   #munis_chart1 <- sib_chart_reg_municipios(d, "especies_region_total")
   path1 <- glue::glue("static/charts/{region}/region_municipios_1.html")
@@ -86,7 +86,7 @@ map(av_regions, function(region){
   #munis_chart2 <- sib_chart_reg_municipios(d, "registros_region_total")
   tooltip <- "<b>{value} observaciones</b><br><i>{label}</i>"
   munis_chart2<- lfltmagic::lflt_choropleth_GcdNum(dd_reg, map_name = map_name,
-                                                   tooltip = tooltip)
+                                                   tooltip = tooltip, map_zoom = F)
   path2 <- glue::glue("static/charts/{region}/region_municipios_2.html")
   htmlwidgets::saveWidget(munis_chart2, path2)
 
@@ -137,6 +137,13 @@ map(av_regions, function(region){
   municipios_lista <- subreg_tematica |>
     select(slug =slug_region, label) |>
     collect()
+  departamentos_lista <- tribble(
+    ~slug, ~label,
+    "boyaca", "Boyacá",
+    "narino", "Nariño",
+    "santander", "Santander",
+    "tolima", "Tolima"
+  )
 
   l <- list(
     general_info = general_info,
@@ -155,7 +162,8 @@ map(av_regions, function(region){
 
     patrocinador = patrocinador,
     publicadores = publicadores,
-    municipios_lista = municipios_lista
+    municipios_lista = municipios_lista,
+    departamentos_lista = departamentos_lista
   )
   dir.create(file.path("static/data",region))
   jsonlite::write_json(l, paste0("static/data/",region,"/",region, ".json"),

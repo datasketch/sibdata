@@ -10,7 +10,19 @@ sib_region_general <- function(region){
   "subtipo","label", "marino"
   )
 
+  # region <- "reserva-forestal-la-planada"
+  # region <-  "resguardo-indigena-pialapi-pueblo-viejo"
+
+
   reg_data <- sib_calculate_region(region, vars) |> collect()
+
+  if(region == "reserva-forestal-la-planada"){
+    reg_data$label <- "La Planada"
+  }
+  if(region == "resguardo-indigena-pialapi-pueblo-viejo"){
+    reg_data$label <- "Pialapí Pueblo-Viejo"
+  }
+
   reg_data$subtipo <- tolower(reg_data$subtipo)
   reg_data$marino <- as.logical(reg_data$marino)
   if(is.na(reg_data$marino))

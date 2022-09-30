@@ -1,24 +1,33 @@
+
+
+
 # OK
 
-- amenazads childre slugs
-- children temáticas amenazadas, 
-- slugs que no coinciden, 
-- Marino = TRUE para deptos en general_info
-- quitar nav_amenzadas: ER de
-- temáticas, algunos slug con guión bajo
-- nav_exoticas
-
-amen, cites, endemicas: Datos estimados
-json grupos biológico
+Colombia
+lista deptos y no municipios
+lista_deptos: simplificar
 
 # TODO
 
-textos region marina para nariño
+
+referencia estimada
+
+slides title
+
+revisar dato relevante ballenas
 
 
-datos municipios
+- shinypanels... rotate quitar
+
+
+
+Especies Colombia / Especies Colombia
+especies estimadas Amenazadas???
+
+
 
 datos para todos los gráficos
+
 
 
 

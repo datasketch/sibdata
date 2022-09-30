@@ -70,7 +70,8 @@ saveRDS(ds, "data-raw/ds.rds")
 #usethis::use_data(ds, available_tables, overwrite = TRUE)
 
 library(RSQLite)
-con <- dbConnect(RSQLite::SQLite(), "inst/sib.sqlite")
+unlink("inst/db/sib.sqlite")
+con <- dbConnect(RSQLite::SQLite(), "inst/db/sib.sqlite")
 map2(ds, names(ds), function(d,nm){
   dbWriteTable(con, nm, d)
 })

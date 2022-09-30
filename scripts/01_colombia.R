@@ -77,7 +77,9 @@ dd_reg <- dd |> select(cod_dane, value = registros_region_total, label)
 
 tooltip <- "<b>{value} especies</b><br><i>{label}</i>"
 munis_chart1<- lfltmagic::lflt_choropleth_GcdNum(dd_esp, map_name = map_name,
-                                                 tooltip = tooltip, map_zoom = F)
+                                                 tooltip = tooltip,
+                                                 map_zoom = F,
+                                                 legend_decreasing = TRUE)
 
 #munis_chart1 <- sib_chart_reg_municipios(d, "especies_region_total")
 path1 <- glue::glue("static/charts/{region}/region_municipios_1.html")
@@ -86,7 +88,8 @@ htmlwidgets::saveWidget(munis_chart1, path1)
 #munis_chart2 <- sib_chart_reg_municipios(d, "registros_region_total")
 tooltip <- "<b>{value} observaciones</b><br><i>{label}</i>"
 munis_chart2<- lfltmagic::lflt_choropleth_GcdNum(dd_reg, map_name = map_name,
-                                                 tooltip = tooltip, map_zoom = F)
+                                                 tooltip = tooltip, map_zoom = F,
+                                                 legend_decreasing = TRUE)
 path2 <- glue::glue("static/charts/{region}/region_municipios_2.html")
 htmlwidgets::saveWidget(munis_chart2, path2)
 

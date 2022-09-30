@@ -10,7 +10,7 @@ devtools::load_all()
 
 # Generate files for regions
 
-av_regions <- sib_available_regions(subtipo = c("Departamento", "País"))
+av_regions <- sib_available_regions(subtipo = c("Departamento"))
 
 library(tictoc)
 

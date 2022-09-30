@@ -6,6 +6,9 @@
 Colombia
 lista deptos y no municipios
 lista_deptos: simplificar
+revisar dato relevante ballenas
+Especies Colombia / Especies Colombia
+especies estimadas Amenazadas???
 
 # TODO
 
@@ -14,15 +17,9 @@ referencia estimada
 
 slides title
 
-revisar dato relevante ballenas
 
 
 - shinypanels... rotate quitar
-
-
-
-Especies Colombia / Especies Colombia
-especies estimadas Amenazadas???
 
 
 

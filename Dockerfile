@@ -69,7 +69,7 @@ RUN Rscript -e 'remotes::install_github("datasketch/makeup@e4cde16244da49883e728
 
 RUN Rscript -e 'remotes::install_github("datasketch/shinyinvoer@dd8178db99cac78f0abbd236e83e07bf1f22ba18")'
 
-RUN Rscript -e 'remotes::install_github("datasketch/shinypanels@8be05c0ff074000f82f5903d597ce9e0eb0fc6b2")'
+RUN Rscript -e 'remotes::install_github("datasketch/shinypanels@ce26c64f9749d1fbe90c992b1c15e83af576b305")'
 
 RUN Rscript -e 'remotes::install_github("datasketch/ggmagic@cfeb47aafd792bf342d657177206ff28fa833b0d")'
 
@@ -78,6 +78,16 @@ RUN Rscript -e 'remotes::install_github("datasketch/dsmodules@5e9a9860ae27aad2cb
 RUN Rscript -e 'remotes::install_github("datasketch/hgchmagic@1c2126cb2722071855fa7133bffcd32a805399e1")'
 
 RUN Rscript -e 'remotes::install_github("datasketch/lfltmagic@7677b096a1440ba105c67c883d1144830204923e")'
+
+RUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/*
+
+RUN wget https://ds-services-assets.s3.amazonaws.com/common/phantomjs-2.1.1-linux-x86_64.tar.bz2
+
+RUN tar phantomjs-2.1.1-linux-x86_64.tar.bz2
+
+RUN mv phantomjs-2.1.1-linux-x86_64 /usr/local/share
+
+RUN ln -sf /usr/local/share/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/bin
 
 RUN mkdir /build_zone
 

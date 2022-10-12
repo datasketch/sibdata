@@ -6,8 +6,8 @@ sib_region_general <- function(region){
   vars <- c(
     "especies_region_estimadas", "especies_region_total",
   "registros_region_total", "registros_continentales", "registros_marinos",
-  "especies_continentales", "especies_marinas",
-  "subtipo","label", "marino"
+  "especies_continentales", "especies_marinas", "especies_continentales",
+  "subtipo","label", "marino", "fecha_corte"
   )
 
   # region <- "reserva-forestal-la-planada"
@@ -31,13 +31,22 @@ sib_region_general <- function(region){
   marino_text <- "."
   if(reg_data$marino){
     marino_text <- " de las cuales {especies_marinas} son especies marinas."
+    marino_text <- "; de las cuales {especies_continentales} habitan al interior del
+    continente y {especies_marinas}, en el mar."
   }
   especies_marinas <-  makeup::makeup(reg_data$especies_marinas,"45.343,00")
+  especies_continentales <-  makeup::makeup(reg_data$especies_continentales,"45.343,00")
   reg_data$marino_text <- glue::glue(marino_text)
 
   intro_tpl <- "A través del SiB Colombia se han publicado {registros_region_total_str} observaciones
   para el {subtipo} de {label}. Estos datos hacen referencia a un total de
   {especies_region_total_str} especies{marino_text}"
+
+  if(region == "colombia"){
+    intro_tpl <- "A {fecha_corte}, se han publicado {registros_region_total_str} observaciones a través
+    del SiB Colombia. Estos datos respaldan la existencia de {especies_region_total_str} especies
+    en el territorio nacional{marino_text}"
+  }
 
   reg_data$especies_region_total_str <- makeup::makeup(reg_data$especies_region_total,"45.343,00")
   reg_data$registros_region_total_str <- makeup::makeup(reg_data$registros_region_total,"45.343,00")

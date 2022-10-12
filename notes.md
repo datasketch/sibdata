@@ -1,17 +1,15 @@
 
 
+amenazadas_nacional
+parent_cr/vu
+
+
+
+
 
 # OK
 
-Colombia
-lista deptos y no municipios
-lista_deptos: simplificar
-revisar dato relevante ballenas
-Especies Colombia / Especies Colombia
-especies estimadas Amenazadas???
-shinypanels... rotate quitar
-despliegue app https
-slides title
+
 
 # TODO
 

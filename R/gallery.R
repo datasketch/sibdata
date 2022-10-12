@@ -11,14 +11,15 @@ make_gallery <- function(region){
     select(image = img_link) |>
     collect()
 
-  n <- min(nrow(txts), nrow(imgs))
-  txts <- txts |> slice(1:n)
-  imgs <- imgs |> slice(1:n)
+  n <- min(nrow(txts), nrow(imgs), 7)
+  txts <- txts |> slice(1:(n+1))
+  imgs <- imgs |> slice(c(1:(n),1))
 
   gal <- bind_cols(txts, imgs) |>
     pivot_longer(text:image) |>
     rownames_to_column(var = "id") |>
-    pivot_wider("id", names_from = "name", values_from = "value")
+    pivot_wider("id", names_from = "name", values_from = "value") |>
+    slice(1:15)
 
   gal
 }

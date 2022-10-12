@@ -5,6 +5,11 @@ subregion_tematica <- function(region){
     select(slug_region = slug, label)
 
   subregs <- sib_available_subregions(region)
+
+  if(region == "colombia"){
+    subregs <- c(subregs, "bogota-dc")
+  }
+
   subreg_tematica <- sibdata_region_tematica() |>
     dplyr::filter(slug_region %in% subregs) |>
     dplyr::left_join(regs, by = "slug_region") |>

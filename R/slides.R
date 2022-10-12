@@ -4,8 +4,8 @@ make_region_slides <- function(region){
 
   #sib_validate_available_regions(region)
 
-
-  dir.create(glue::glue("static/charts/{region}"))
+  if(!dir.exists("static/charts/{region}"))
+    dir.create(glue::glue("static/charts/{region}"))
   ####################
 
   subregs <- sib_available_subregions(region)
@@ -100,14 +100,31 @@ make_region_slides <- function(region){
     x <- rev(x)
     x <- round(x/sum(x)*100)
     proportion <- x[2]
+
     regionLabel <- sib_merge_region_label(data.frame(slug_region = region))$label
+    parentLabel <- sib_merge_region_label(data.frame(slug_region = parent))$label
     regionTitle <- makeup::makeup_chr(region, "Title")
-    description_tpl <- "El departamento de {regionLabel} tiene alrededor del {proportion}% de las especies del país."
-    title_tpl <- "{regionLabel} vs. {parent}"
+
+    esp_colombia <- reg_vs_parent |>
+      filter(slug_region == "colombia") |> pull(especies_region_total)
+    esp_colombia_str <- makeup::makeup(esp_colombia,"45.343,00")
+    esp_depto <- reg_vs_parent |>
+      filter(slug_region != "colombia") |> pull(especies_region_total)
+    esp_depto_str <- makeup::makeup(esp_depto,"45.343,00")
+    esp_depto_endemicas <- reg_vs_parent |>
+      filter(slug_region != "colombia") |> pull(especies_endemicas)
+    esp_depto_endemicas_str <- makeup::makeup(esp_depto_endemicas,"45.343,00")
+
+    description_tpl <- "De las {esp_colombia_str} especies observadas en Colombia,
+    departamento de {regionLabel} aporta {esp_depto_str}, equivalentes a {proportion}%.
+    De estas {esp_depto_endemicas_str} especies son endémicas."
+
+    title_tpl <- "¿Cómo está {regionLabel} frente al resto de {parentLabel}?"
+
     l <- list(
       id = "slide1",
       layout = "title/(text|chart)",
-      title =  toupper(glue::glue(title_tpl)),
+      title =  glue::glue(title_tpl),
       description = glue::glue(description_tpl),
       chart_type = "image",
       chart_url = path
@@ -195,26 +212,30 @@ make_region_slides <- function(region){
     select(label, n = especies_amenazadas_nacional_total)
 
   t <- n_muni_mas_endemicas
+  col_title <- "Municipio"
+  if(region == "colombia") col_title <- "Departamentos"
   gt <- sib_chart_gt_table(t,
-                     labels = c("Municipio", "Número de especies endémicas"),
+                     labels = c(col_title, "Número de especies endémicas"),
                      color = "#34d986")
   path1 <- glue::glue("static/charts/{region}/muni_mas_endemicas.html")
   gt::gtsave(gt, path1)
 
   t <- n_muni_mas_amenazadas_nacional
   gt <- sib_chart_gt_table(t,
-                           labels = c("Municipio", "Número de especies amenazadas (nacional)"),
+                           labels = c(col_title, "Número de especies amenazadas (nacional)"),
                            color = "#f59542"
                            )
   path2 <- glue::glue("static/charts/{region}/muni_mas_amenazadas.html")
   gt::gtsave(gt, path2)
 
   description_tpl <- ""
-  title_tpl <- "Los municipios con más: "
+  title_tpl <- "Top municipios"
+  if(region == "colombia")
+    title_tpl <- "Top departamentos"
   l <- list(
     id = "slide3",
     layout = "title/(chart|chart)",
-    title =  toupper(glue::glue(title_tpl)),
+    title =  glue::glue(title_tpl),
     description = glue::glue(description_tpl),
     chart_type = "html",
     chart1_url = path1,

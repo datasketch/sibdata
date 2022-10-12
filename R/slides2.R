@@ -103,14 +103,38 @@ make_region_slides2 <- function(region){
     x <- rev(x)
     x <- round(x/sum(x)*100)
     proportion <- x[2]
+
+    regionLabel <- sib_merge_region_label(data.frame(slug_region = region))$label
+    parentLabel <- sib_merge_region_label(data.frame(slug_region = parent))$label
     regionTitle <- makeup::makeup_chr(region, "Title")
 
-    description_tpl <- "El municipio de {regionTitle} tiene alrededor del {proportion}% de las especies del departamento"
-    title_tpl <- "{region} vs. {parent}"
+    esp_parent <- reg_vs_parent |>
+      filter(slug_region == parent) |> pull(especies_region_total)
+    esp_parent_str <- makeup::makeup(esp_parent,"45.343,00")
+    esp_muni <- reg_vs_parent |>
+      filter(slug_region != parent) |> pull(especies_region_total)
+    esp_muni_str <- makeup::makeup(esp_muni,"45.343,00")
+    esp_muni_endemicas <- reg_vs_parent |>
+      filter(slug_region != parent) |> pull(especies_endemicas)
+    esp_muni_endemicas_str <- makeup::makeup(esp_muni_endemicas,"45.343,00")
+
+    description_tpl <- "De las {esp_parent_str} especies observadas en Colombia,
+    departamento de {regionLabel} aporta {esp_muni_str}, equivalentes a {proportion}%.
+    De estas {esp_muni_endemicas_str} especies son endémicas."
+
+    title_tpl <- "¿Cómo está {regionLabel} frente al resto de {parentLabel}?"
+
+    if(region %in% c("reserva-forestal-la-planada",
+                     "resguardo-indigena-pialapi-pueblo-viejo"))
+      description_tpl <- "De las {esp_parent_str} especies observadas en {parentLabel},
+    {regionLabel} aporta {esp_muni_str}, equivalentes a {proportion} %.
+    De estas {esp_muni_endemicas_str} especies son endémicas."
+
+
     l <- list(
       id = "slide1",
       layout = "title/(text|chart)",
-      title =  toupper(glue::glue(title_tpl)),
+      title =  glue::glue(title_tpl),
       description = glue::glue(description_tpl),
       chart_type = "image",
       chart_url = path

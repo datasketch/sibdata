@@ -38,7 +38,6 @@ general_info <- sib_region_general(region)
 gallery <- make_gallery(region)
 
 slides <- make_region_slides(region)
-#slides <- list()
 
 reg_gr_bio <- region_grupo_data(region, tipo = "biologico", verbose = TRUE)
 reg_gr_int <- region_grupo_data(region, tipo = "interes", verbose = TRUE)
@@ -62,6 +61,7 @@ dd <- d |>
 if(region == "colombia"){
   map_name <- "col_departments"
   deptos <- sibdata_departamento() |> collect()
+  deptos$slug[deptos$slug == "bogota"] <- "bogota-dc"
   dd <- dd |>
     left_join(deptos, by = c("slug_region" = "slug"), copy = TRUE)
 

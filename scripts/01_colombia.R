@@ -3,12 +3,15 @@ library(lfltmagic)
 
 devtools::load_all()
 
-#save_info_page("static/data")
+## Generate info pages
+save_info_page("static/data")
+
 
 
 # Generate navigation files
 
 # Generate files for regions
+
 
 
 

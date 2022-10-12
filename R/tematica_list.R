@@ -148,8 +148,10 @@ tematica_list <- function(region){
 
   migratorias <- c(
     list(slug = "migratorias",
-         texto = "Existen otras especies migratorias pero aún no están documentadas
-         a través del SiB Colombia,"),
+         texto = "La información de especies migratorias se basa en la
+         [Lista de referencia de especies de aves de Colombia - 2020](https://doi.org/10.15472/qhsz0p).
+         Para aportar más datos sobre este y otros grupos bilógicos puede visitar nuestro sitio web
+         https://biodiversidad.co"),
     region_indicadores(region, inds_migratorias),
     region_indicadores(parent_region, inds_parent_migratorias),
     list(species_list = esp_list_migratorias)
@@ -377,8 +379,10 @@ tematica_list_col <- function(region){
 
   migratorias <- c(
     list(slug = "migratorias",
-         texto = "Existen otras especies migratorias pero aún no están documentadas
-         a través del SiB Colombia",
+         texto = "La información de especies migratorias se basa en la
+         [Lista de referencia de especies de aves de Colombia - 2020](https://doi.org/10.15472/qhsz0p).
+         Para aportar más datos sobre este y otros grupos bilógicos puede visitar nuestro sitio web
+         https://biodiversidad.co",
          estimadas_migratorias = estimadas$especies_migratorias_estimadas),
     region_indicadores(region, inds_migratorias),
     region_indicadores(parent_region, inds_parent_migratorias),

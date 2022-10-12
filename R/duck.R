@@ -92,7 +92,17 @@ sibdata_dato_relevante <- function(){
   tbl(con, "dato_relevante")
 }
 
+#' @export
+sibdata_preg_frecuentes <- function(){
+  con <- getOption("con")
+  tbl(con, "preg_frecuentes")
+}
 
+#' @export
+sibdata_glosario <- function(){
+  con <- getOption("con")
+  tbl(con, "glosario")
+}
 
 
 

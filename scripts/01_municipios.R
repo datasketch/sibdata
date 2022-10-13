@@ -9,10 +9,10 @@ setwd("../")
 here::dr_here()
 
 #av_regions <- sib_available_regions(subtipo = c("Municipio"))
-av_regions1 <- sib_available_regions(subtipo = c("Municipio"),
+av_regions2 <- sib_available_regions(subtipo = c("Municipio"),
                                     departamento = "tolima")
 
-av_regions2 <- sib_available_regions(subtipo = c("Municipio"),
+av_regions1 <- sib_available_regions(subtipo = c("Municipio"),
                                     departamento = "narino")
 
 av_regions3 <- sib_available_regions(subtipo = c("Municipio"),
@@ -24,9 +24,9 @@ av_regions <- c(
   # "reserva-forestal-la-planada",
   # "resguardo-indigena-pialapi-pueblo-viejo",
   av_regions1,
-  av_regions2,
-  av_regions3,
-  av_regions4
+  av_regions2
+  # av_regions3,
+  # av_regions4
 )
 
 library(tictoc)

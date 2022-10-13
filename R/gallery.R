@@ -1,12 +1,12 @@
 
-make_gallery <- function(region){
+make_gallery <- function(region, con){
 
-  txts <- sibdata_dato_relevante() |>
+  txts <- sibdata_dato_relevante(con) |>
     filter(slug_region == region) |>
     select(text = descripcion) |>
     collect()
 
-  imgs <- sibdata_gallery_images() |>
+  imgs <- sibdata_gallery_images(con) |>
     filter(slug_region == region) |>
     select(image = img_link) |>
     collect()

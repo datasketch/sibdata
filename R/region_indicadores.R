@@ -1,8 +1,8 @@
 
 #' @export
-region_indicadores <- function(region, indicadores){
-  sib_validate_indicadores(indicadores)
-  d <- region_tematica(region) |> collect()
+region_indicadores <- function(region, indicadores, con = NULL){
+  sib_validate_indicadores(indicadores, con)
+  d <- region_tematica(region, con) |> collect()
   if(!all(indicadores %in% colnames(d))){
     stop("Not all indicadores in region_tematica table: ",
          mop::which_not_in(indicadores, names(d)))

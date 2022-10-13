@@ -1,22 +1,22 @@
 
 
-region_grupo_data <- function(region, tipo = "biologico", verbose = FALSE){
+region_grupo_data <- function(region, tipo = "biologico", verbose = FALSE, con){
 
   sel_tipo <- tipo
-  reg_gr_bio <- sibdata_region_grupo() |>
+  reg_gr_bio <- sibdata_region_grupo(con) |>
     dplyr::filter(slug_region == region) |>
     dplyr::filter(tipo == sel_tipo) |>
     dplyr::mutate(slug = slug_grupo) |>
     dplyr::relocate(slug) |>
     collect()
 
-  parent <- sib_parent_region(region)
-  reg_gr_bio_parent <- sibdata_region_grupo() |>
+  parent <- sib_parent_region(region, con)
+  reg_gr_bio_parent <- sibdata_region_grupo(con) |>
     dplyr::filter(slug_region == parent) |>
     dplyr::filter(tipo == sel_tipo) |>
     dplyr::mutate(slug = slug_grupo) |>
     dplyr::relocate(slug) |>
-    left_join(sibdata_region(), by = c("slug_region" = "slug"))
+    left_join(sibdata_region(con), by = c("slug_region" = "slug"))
   reg_gr_bio_parent <- reg_gr_bio_parent |>
     dplyr::select(slug, label, especies_region_total, registros_region_total)
 
@@ -31,7 +31,6 @@ region_grupo_data <- function(region, tipo = "biologico", verbose = FALSE){
 
   i <- 1
   reg_grupo_list <- map(reg_gr_bio_list, function(x){
-
     if(verbose){
       message("  Grupo ", i," de ",nrow(reg_gr_bio),": " ,x$slug)
     }
@@ -44,15 +43,15 @@ region_grupo_data <- function(region, tipo = "biologico", verbose = FALSE){
       filter(slug == current_slug) |>
       collect()
 
-    x$estimadas <- estimadas_grupo(x$slug)
+    x$estimadas <- estimadas_grupo(x$slug, con)
 
     grupo <- x$slug
-    subgrupo_especies <- sib_region_subgrupo(region, grupo) |>
+    subgrupo_especies <- sib_region_subgrupo(region, grupo, con) |>
       select(slug_grupo, label_grupo, especies_region_total) |>
       collect()
     x$subgrupo_especies <- subgrupo_especies
 
-    species_list <- list_species(region, grupo = x$slug)
+    species_list <- list_species(region, grupo = x$slug, con = con)
     species_list_top <- species_list |>
       #collect() |>
       #arrange(desc(registros)) |>
@@ -65,7 +64,7 @@ region_grupo_data <- function(region, tipo = "biologico", verbose = FALSE){
     species_list_tematica <- map(tematicas, function(tem){
       #tem <- tematicas[1]
       #message(tem)
-      spe <- list_species(region, grupo = x$slug, tematica = tem)
+      spe <- list_species(region, grupo = x$slug, tematica = tem, con = con)
       spe_top <- spe |>
         slice_max(registros, n = 10) |>
         collect()

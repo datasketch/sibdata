@@ -7,9 +7,9 @@
 
 
 #' @export
-sib_available_regions <- function(subtipo = NULL, departamento = NULL){
-  regs <- sibdata_region()
-  reg_gr <- sibdata_region_grupo() |>
+sib_available_regions <- function(subtipo = NULL, departamento = NULL, con = con){
+  regs <- sibdata_region(con)
+  reg_gr <- sibdata_region_grupo(con) |>
     select(slug_region)
   sel_subtipo <- subtipo
   if(!is.null(subtipo)){
@@ -31,8 +31,8 @@ sib_available_regions <- function(subtipo = NULL, departamento = NULL){
 
 
 #' @export
-sib_available_subregions <- function(region){
-  region <- sibdata_region() |>
+sib_available_subregions <- function(region, con){
+  region <- sibdata_region(con) |>
     dplyr::filter(parent == region)
   region |> dplyr::pull(slug)
 }

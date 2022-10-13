@@ -70,16 +70,19 @@ saveRDS(ds, "data-raw/ds.rds")
 #usethis::use_data(ds, available_tables, overwrite = TRUE)
 
 library(duckdb)
+unlink("inst/db/sibdata.duckdb")
 con <- DBI::dbConnect(duckdb::duckdb(), dbdir = "inst/db/sibdata.duckdb")
 map2(ds, names(ds), function(d,nm){
-  dbWriteTable(con, nm, d)
+  dbWriteTable(con, nm, d, overwrite = TRUE)
 })
+dbListTables(con)
+duckdb::duckdb_shutdown(con)
 dbDisconnect(con)
 
 
 library(RSQLite)
-unlink("inst/db/sib.sqlite")
-con <- dbConnect(RSQLite::SQLite(), "inst/db/sib.sqlite")
+unlink("inst/db/sibdata.sqlite")
+con <- dbConnect(RSQLite::SQLite(), "inst/db/sibdata.sqlite")
 map2(ds, names(ds), function(d,nm){
   dbWriteTable(con, nm, d)
 })

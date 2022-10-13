@@ -1,6 +1,6 @@
 
 #' @export
-navigation_trees <- function(type, region = NULL){
+navigation_trees <- function(type, region = NULL, con = con){
 
   #type <- "region"
   #type <- "grupo_biologico"
@@ -10,7 +10,7 @@ navigation_trees <- function(type, region = NULL){
 
 
   if(type %in% c("grupo_biologico", "grupo_interes")){
-    table <- sibdata_grupo()
+    table <- sibdata_grupo(con)
     if(type == "grupo_biologico"){
       table <- table |>
         filter(tipo == "biologico") |>
@@ -22,17 +22,17 @@ navigation_trees <- function(type, region = NULL){
         select(-tipo)
     }
   } else if(type == "territorio"){
-    table <- sibdata_territorio() |>
+    table <- sibdata_territorio(con) |>
       filter(slug_region == region | parent == region)
 
   } else if(type == "tematica") {
-    table <- sibdata_tematica() |>
+    table <- sibdata_tematica(con) |>
       filter(parent != "cites") |>
       filter(parent != "amenazadas-global") |>
       filter(parent != "amenazadas-nacional") |>
       filter(parent != "exoticas-invasoras")
   } else if(type == "region") {
-    table <- sibdata_region()
+    table <- sibdata_region(con)
   } else{
     stop("Undefined type")
   }

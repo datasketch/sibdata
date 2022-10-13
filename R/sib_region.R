@@ -1,6 +1,6 @@
 
 #' @export
-sib_region_general <- function(region){
+sib_region_general <- function(region, con){
 
   ## TODO validate varsnames
   vars <- c(
@@ -14,7 +14,7 @@ sib_region_general <- function(region){
   # region <-  "resguardo-indigena-pialapi-pueblo-viejo"
 
 
-  reg_data <- sib_calculate_region(region, vars) |> collect()
+  reg_data <- sib_calculate_region(region, vars, con) |> collect()
 
   if(region == "reserva-forestal-la-planada"){
     reg_data$label <- "La Planada"
@@ -25,14 +25,16 @@ sib_region_general <- function(region){
 
   reg_data$subtipo <- tolower(reg_data$subtipo)
   reg_data$marino <- as.logical(reg_data$marino)
+  reg_data$fecha_corte <- as.character(reg_data$fecha_corte)
   if(is.na(reg_data$marino))
     reg_data$marino <- FALSE
+
 
   marino_text <- "."
   if(reg_data$marino){
     marino_text <- " de las cuales {especies_marinas} son especies marinas."
     marino_text <- "; de las cuales {especies_continentales} habitan al interior del
-    continente y {especies_marinas}, en el mar."
+    continente y {especies_marinas} en el mar."
   }
   especies_marinas <-  makeup::makeup(reg_data$especies_marinas,"45.343,00")
   especies_continentales <-  makeup::makeup(reg_data$especies_continentales,"45.343,00")
@@ -58,15 +60,15 @@ sib_region_general <- function(region){
 }
 
 #' @export
-sib_calculate_region <- function(region, vars = NULL){
-  region_table <- sibdata_region() |> select(-marino)
-  marinos <- sib_region_marino()
+sib_calculate_region <- function(region, vars = NULL, con = NULL){
+  region_table <- sibdata_region(con) |> select(-marino)
+  marinos <- sib_region_marino(con)
   region_table <- left_join(region_table, marinos,
                             by = "slug", copy = TRUE)
 
   reg <- region_table |>
     dplyr::filter(slug == region)
-  reg_tem <- sibdata_region_tematica() |>
+  reg_tem <- sibdata_region_tematica(con) |>
     dplyr::filter(slug_region == region)
   reg <- reg |> dplyr::left_join(reg_tem, by = c("slug" = "slug_region"))
   #lreg <- purrr::transpose(reg)[[1]]
@@ -78,10 +80,10 @@ sib_calculate_region <- function(region, vars = NULL){
   reg
 }
 
-sib_region_marino <- function(){
-  deptos <- sibdata_departamento() |>
+sib_region_marino <- function(con){
+  deptos <- sibdata_departamento(con) |>
     select(slug, marino) |> collect()
-  munis <- sibdata_municipio() |>
+  munis <- sibdata_municipio(con) |>
     select(slug, marino) |> collect()
   munis$slug[munis$slug == "colombia"] <- "colombia-hui"
   col <- tibble(slug = "colombia", marino = TRUE)

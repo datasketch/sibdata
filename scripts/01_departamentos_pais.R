@@ -3,14 +3,12 @@ library(lfltmagic)
 
 devtools::load_all()
 
-#save_info_page("static/data")
 
 
 # Generate navigation files
 
 # Generate files for regions
 
-av_regions <- sib_available_regions(subtipo = c("Departamento"))
 
 library(tictoc)
 
@@ -20,39 +18,45 @@ setwd("../")
 here::dr_here()
 tic()
 
+
+con <- DBI::dbConnect(duckdb::duckdb(), sys_file("db/sibdata.duckdb"),
+                      read_only = TRUE)
+av_regions <- sib_available_regions(subtipo = c("Departamento"), con = con)
+
+
+
 map(av_regions, function(region){
   message(region)
   # region <- "boyaca"
   # region <- "narino"
   # region <- "tolima"
-  # region <- "colombia"
 
-  nav_tematica <- navigation_trees("tematica")
-  nav_grupo_biologico <- navigation_trees("grupo_biologico")
-  nav_grupo_interes <- navigation_trees("grupo_interes")
-  nav_territorio <- navigation_trees("territorio", region = region)
+  nav_tematica <- navigation_trees("tematica", con = con)
+  nav_grupo_biologico <- navigation_trees("grupo_biologico", con = con)
+  nav_grupo_interes <- navigation_trees("grupo_interes", con = con)
+  nav_territorio <- navigation_trees("territorio", region = region, con = con)
 
 
-  general_info <- sib_region_general(region)
+  general_info <- sib_region_general(region, con)
 
-  gallery <- make_gallery(region)
+  gallery <- make_gallery(region, con)
 
-  slides <- make_region_slides(region)
+  slides <- make_region_slides(region, con)
   #slides <- list()
 
-  reg_gr_bio <- region_grupo_data(region, tipo = "biologico", verbose = TRUE)
-  reg_gr_int <- region_grupo_data(region, tipo = "interes", verbose = TRUE)
+  reg_gr_bio <- region_grupo_data(region, tipo = "biologico", verbose = TRUE, con = con)
+  reg_gr_int <- region_grupo_data(region, tipo = "interes", verbose = TRUE, con = con)
 
 
   # Temáticas
 
-  tem_list <- tematica_list(region)
+  tem_list <- tematica_list(region, con = con)
   #tem_list <- NA
 
   # Territorio
   dir.create(glue::glue("static/charts/{region}"))
 
-  subreg_tematica <- subregion_tematica(region)
+  subreg_tematica <- subregion_tematica(region, con)
   d <- subreg_tematica |>
     collect()
 
@@ -61,13 +65,13 @@ map(av_regions, function(region){
 
   if(region == "colombia"){
     map_name <- "col_departments"
-    deptos <- sibdata_departamento() |> collect()
+    deptos <- sibdata_departamento(con) |> collect()
     dd <- dd |>
       left_join(deptos, by = c("slug_region" = "slug"), copy = TRUE)
 
   }else{
     map_name <- paste0("col_depto_", region)
-    munis <- sibdata_municipio() |> collect()
+    munis <- sibdata_municipio(con) |> collect()
     dd <- dd |>
       left_join(munis, by = c("slug_region" = "slug"))
   }
@@ -116,16 +120,16 @@ map(av_regions, function(region){
   )
 
   ##
-  patrocinadores <- sibdata_patrocinador()
-  patrocinador <- sibdata_region_patrocinador() |>
+  patrocinadores <- sibdata_patrocinador(con)
+  patrocinador <- sibdata_region_patrocinador(con) |>
     filter(slug_region == region)
   patrocinador <- patrocinador |>
     left_join(patrocinadores, by = c("slug_patrocinador" = "slug")) |>
     collect()
 
-  publicadores <- sibdata_region_publicador() |>
+  publicadores <- sibdata_region_publicador(con) |>
     filter(slug_region == region) |>
-    left_join(sibdata_publicador(), by = c("slug_publicador" = "slug")) |>
+    left_join(sibdata_publicador(con), by = c("slug_publicador" = "slug")) |>
     select(slug_publicador, registros = registros.x, especies = especies.x,
            label, pais_publicacion,
            url_logo, url_socio) |>

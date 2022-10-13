@@ -1,8 +1,8 @@
 
 #' @export
-estimadas_grupo <- function(grupo){
+estimadas_grupo <- function(grupo, con){
 
-  d <- sibdata_estimada() |>
+  d <- sibdata_estimada(con) |>
     filter(slug_grupo == grupo) |>
     select(slug_grupo,
            especies_amenazadas_nacional_total_estimadas,

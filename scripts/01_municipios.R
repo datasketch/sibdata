@@ -37,7 +37,7 @@ library(tictoc)
 
 tic()
 
-map(av_regions[35], function(region){
+map(av_regions, function(region){
   message("\n...........",region)
   # region <- "ibague"
   # region <- "alpujarra"

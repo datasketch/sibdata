@@ -8,7 +8,8 @@ region_grupo_data <- function(region, tipo = "biologico", verbose = FALSE, con){
     dplyr::filter(tipo == sel_tipo) |>
     dplyr::mutate(slug = slug_grupo) |>
     dplyr::relocate(slug) |>
-    collect()
+    collect() |>
+    distinct(slug, .keep_all = TRUE)
 
   parent <- sib_parent_region(region, con)
   reg_gr_bio_parent <- sibdata_region_grupo(con) |>

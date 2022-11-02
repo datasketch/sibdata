@@ -30,10 +30,12 @@ ui <- panelsPage(
           #verbatimTextOutput("debug"),
           uiOutput("sel_region_"),
           hr(),
+
+          radioButtons("sel_tipo", "Tipo", c("Observaciones" = "registros","Especies"="especies")),
+          hr(),
           uiOutput("sel_grupo_"),
           uiOutput("sel_grupo_opts"),
           hr(),
-          radioButtons("sel_tipo", "Tipo", c("Observaciones" = "registros","Especies"="especies")),
           #radioButtons("sel_cobertura", "Cobertura", c("Total" = "total","Continental" = "continentales","Marina" = "marinas")),
           uiOutput("sel_tematica_")
           ,
@@ -224,6 +226,7 @@ server <-  function(input, output, session) {
     if (actual_but$active != "map") {
       d <- d |> sib_merge_ind_label()
     } else {
+      print(d)
       d <- d |> dplyr::select(label, count)
       d$label <- dplyr::recode(d$label, "San Sebastián de Mariquita" = "Mariquita")
       # if (label %in% names(d)) {

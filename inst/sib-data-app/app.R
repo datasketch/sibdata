@@ -226,9 +226,11 @@ server <-  function(input, output, session) {
       d <- d |> sib_merge_ind_label()
     } else {
       d <- d |> dplyr::select(label, count)
-      d$label <- dplyr::recode(d$label, "San Sebastián de Mariquita" = "Mariquita")
+      d$label <- dplyr::recode(d$label, "San Sebastián de Mariquita" = "Mariquita",
+                               "San Andrés de Tumaco" = "Tumaco",
+                               "Santacruz" = "Santa cruz",
+                               "El Tablón de Gómez" = "El Tablón")
     }
-
     d
     },
     error = function(cond) {

@@ -169,8 +169,9 @@ server <-  function(input, output, session) {
     if (tematica == "todas") tematica <- NULL
     l_s <- list_species(region = input$sel_region,
                         grupo = grupo,
-                        tematica = tematica,
-                        with_labels = TRUE) |>
+                        tematica = tematica#,
+                        #with_labels = TRUE
+                        ) |>
       collect()
     l_s
   })
@@ -224,9 +225,12 @@ server <-  function(input, output, session) {
       d <- d |> sib_merge_ind_label()
     } else {
       d <- d |> dplyr::select(label, count)
+      d$label <- dplyr::recode(d$label, "San Sebastián de Mariquita" = "Mariquita")
+      # if (label %in% names(d)) {
+      #   d$label[d$label == "San Sebastián de Mariquita"] <- "Mariquita"
+      # }
     }
 
-    #print(class(d))
     d
     },
     error = function(cond) {

@@ -229,7 +229,8 @@ server <-  function(input, output, session) {
       d$label <- dplyr::recode(d$label, "San Sebastián de Mariquita" = "Mariquita",
                                "San Andrés de Tumaco" = "Tumaco",
                                "Santacruz" = "Santa cruz",
-                               "El Tablón de Gómez" = "El Tablón")
+                               "El Tablón de Gómez" = "El Tablón",
+                               "Güicán de la Sierra" = "Guican")
     }
     d
     },

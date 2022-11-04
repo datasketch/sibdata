@@ -54,11 +54,11 @@ ds$glosario <- glosario
 
 # Clean data
 
-#tmp <- ds$region_tematica
-#tmp2  <- tmp |>
-#  mutate_at(vars(!matches("slug_region", "fecha_corte")), as.numeric)
-#ds$region_tematica <- tmp2
-#str(ds$region_tematica)
+tmp <- ds$region_tematica
+tmp2  <- tmp |>
+  mutate_at(vars(!matches("slug_region", "fecha_corte")), as.numeric)
+ds$region_tematica <- tmp2
+str(ds$region_tematica)
 
 
 #readr::write_rds(ds, "data-raw/ds.rds")
@@ -69,20 +69,9 @@ saveRDS(ds, "data-raw/ds.rds")
 #available_tables <- names(ds)
 #usethis::use_data(ds, available_tables, overwrite = TRUE)
 
-library(duckdb)
-unlink("inst/db/sibdata.duckdb")
-con <- DBI::dbConnect(duckdb::duckdb(), dbdir = "inst/db/sibdata.duckdb")
-map2(ds, names(ds), function(d,nm){
-  dbWriteTable(con, nm, d, overwrite = TRUE)
-})
-dbListTables(con)
-duckdb::duckdb_shutdown(con)
-dbDisconnect(con)
-
-
 library(RSQLite)
-unlink("inst/db/sibdata.sqlite")
-con <- dbConnect(RSQLite::SQLite(), "inst/db/sibdata.sqlite")
+unlink("inst/db/sib.sqlite")
+con <- dbConnect(RSQLite::SQLite(), "inst/db/sib.sqlite")
 map2(ds, names(ds), function(d,nm){
   dbWriteTable(con, nm, d)
 })

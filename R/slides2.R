@@ -1,5 +1,5 @@
 #' @export
-make_region_slides2 <- function(region, con = con){
+make_region_slides2 <- function(region){
 
   #sib_validate_available_regions(region)
 
@@ -8,24 +8,24 @@ make_region_slides2 <- function(region, con = con){
   ####################
 
   #subregs <- sib_available_subregions(region)
-  parent <- sib_parent_region(region, con)
+  parent <- sib_parent_region(region)
   if(parent %in% c("reservas-forestales-protectoras",
                    "territorios-indigenas"))
     parent <- "narino"
 
-  reg_labels <- sib_region_labels(con) |> collect()
+  reg_labels <- sib_region_labels() |> collect()
 
-  reg_gr_bio <- sibdata_region_grupo(con) |>
+  reg_gr_bio <- sibdata_region_grupo() |>
     dplyr::filter(slug_region == region) |>
     dplyr::filter(tipo == "biologico") |>
     collect()
 
-  reg_gr_int <- sibdata_region_grupo(con) |>
+  reg_gr_int <- sibdata_region_grupo() |>
     dplyr::filter(slug_region == region) |>
     dplyr::filter(tipo == "interes") |>
     collect()
 
-  reg_tematica <- sibdata_region_tematica(con) |>
+  reg_tematica <- sibdata_region_tematica() |>
     dplyr::filter(slug_region == region) |>
     collect()
   # subreg_tematica <- sibdata_region_tematica() |>
@@ -33,19 +33,19 @@ make_region_slides2 <- function(region, con = con){
   #   dplyr::filter(slug_region %in% subregs) |>
   #   dplyr::left_join(reg_labels, by = c("slug_region" = "slug")) |>
   #   relocate(label)
-  parent_tematica <- sibdata_region_tematica(con) |>
+  parent_tematica <- sibdata_region_tematica() |>
     collect() |>
     dplyr::filter(slug_region == parent)
 
-  esp <- sibdata_especie(con) |> collect()
-  esp_tem <- sibdata_especie_tematica(con) |> collect()
-  esp_meta <- sibdata_especie_meta(con) |> collect()
+  esp <- sibdata_especie() |> collect()
+  esp_tem <- sibdata_especie_tematica() |> collect()
+  esp_meta <- sibdata_especie_meta() |> collect()
 
-  esp_reg <- sibdata_especie_region(con) |>
+  esp_reg <- sibdata_especie_region() |>
     dplyr::filter(slug_region == region) |>
     collect()
 
-  esp_parent <- sibdata_especie_region(con) |>
+  esp_parent <- sibdata_especie_region() |>
     dplyr::filter(slug_region == parent) |>
     collect()
 
@@ -53,8 +53,8 @@ make_region_slides2 <- function(region, con = con){
     dplyr::left_join(esp_tem, by = c("slug_region", "slug_especie")) |>
     dplyr::select(-registros)
 
-  pubs <-  sibdata_publicador(con)
-  pubs_reg <- sibdata_region_publicador(con) |>
+  pubs <-  sibdata_publicador()
+  pubs_reg <- sibdata_region_publicador() |>
     dplyr::filter(slug_region == region) |>
     dplyr::distinct() |>
     dplyr::left_join(pubs |> select(slug, label, pais_publicacion, tipo_publicador),
@@ -63,7 +63,7 @@ make_region_slides2 <- function(region, con = con){
                   registros, especies) |>
     collect()
 
-  estimada <- sibdata_estimada(con) |> collect()
+  estimada <- sibdata_estimada() |> collect()
 
 
   slides <- list()
@@ -80,7 +80,7 @@ make_region_slides2 <- function(region, con = con){
   if(region == "colombia"){
     l <- NULL
   }else{
-    reg_vs_parent <- sibdata_region_tematica(con) |>
+    reg_vs_parent <- sibdata_region_tematica() |>
       dplyr::filter(slug_region %in% c(region, parent)) |>
       collect()
 
@@ -103,38 +103,14 @@ make_region_slides2 <- function(region, con = con){
     x <- rev(x)
     x <- round(x/sum(x)*100)
     proportion <- x[2]
-
-    regionLabel <- sib_merge_region_label(data.frame(slug_region = region),con = con)$label
-    parentLabel <- sib_merge_region_label(data.frame(slug_region = parent),con = con)$label
     regionTitle <- makeup::makeup_chr(region, "Title")
 
-    esp_parent <- reg_vs_parent |>
-      filter(slug_region == parent) |> pull(especies_region_total)
-    esp_parent_str <- makeup::makeup(esp_parent,"45.343,00")
-    esp_muni <- reg_vs_parent |>
-      filter(slug_region != parent) |> pull(especies_region_total)
-    esp_muni_str <- makeup::makeup(esp_muni,"45.343,00")
-    esp_muni_endemicas <- reg_vs_parent |>
-      filter(slug_region != parent) |> pull(especies_endemicas)
-    esp_muni_endemicas_str <- makeup::makeup(esp_muni_endemicas,"45.343,00")
-
-    description_tpl <- "De las {esp_parent_str} especies observadas en {parentLabel},
-    el municipio de {regionLabel} aporta {esp_muni_str}, equivalentes a {proportion}%.
-    De estas {esp_muni_endemicas_str} especies son endémicas."
-
-    title_tpl <- "¿Cómo está {regionLabel} frente al resto de {parentLabel}?"
-
-    if(region %in% c("reserva-forestal-la-planada",
-                     "resguardo-indigena-pialapi-pueblo-viejo"))
-      description_tpl <- "De las {esp_parent_str} especies observadas en {parentLabel},
-    {regionLabel} aporta {esp_muni_str}, equivalentes a {proportion} %.
-    De estas {esp_muni_endemicas_str} especies son endémicas."
-
-
+    description_tpl <- "El municipio de {regionTitle} tiene alrededor del {proportion}% de las especies del departamento"
+    title_tpl <- "{region} vs. {parent}"
     l <- list(
       id = "slide1",
       layout = "title/(text|chart)",
-      title =  glue::glue(title_tpl),
+      title =  toupper(glue::glue(title_tpl)),
       description = glue::glue(description_tpl),
       chart_type = "image",
       chart_url = path

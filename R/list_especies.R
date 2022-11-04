@@ -3,13 +3,12 @@
 #' @export
 list_species <- function(region,
                          grupo = NULL,
-                         tematica = NULL, with_labels = FALSE,
-                         con = NULL){
+                         tematica = NULL){
   # region <- "tolima"
   # tematica <- "endemicas"
   # grupo <- "hongos"
 
-  esp_reg <- sibdata_especie_region(con) |>
+  esp_reg <- sibdata_especie_region() |>
     filter(slug_region == region)
 
   especies <- esp_reg
@@ -20,7 +19,7 @@ list_species <- function(region,
     #   filter(slug_tematica %like% paste0("%",tematica,"%")) |>
     #   left_join(esp_reg, by = c("slug_region", "slug_especie"))
 
-    esp_tem <- sibdata_especie_tematica(con) |>
+    esp_tem <- sibdata_especie_tematica() |>
       filter(slug_region == region) |>
       filter(slug_tematica %like% paste0("%",tematica,"%"))
 
@@ -31,7 +30,7 @@ list_species <- function(region,
 
   if(!is.null(grupo)){
 
-    esp_gru <- sibdata_especie_grupo(con) |>
+    esp_gru <- sibdata_especie_grupo() |>
       filter(slug_grupo == grupo)
 
     especies <- especies |>
@@ -40,22 +39,8 @@ list_species <- function(region,
   }
 
   esp_with_name <- especies  |>
-    left_join(sibdata_especie_meta(con), by = c("slug_especie" = "slug")) |>
-    sib_merge_especie_label(con)
-
-  if(with_labels){
-    # esp_with_name$slug <- NULL
-    # esp_with_name$species <- NULL
-
-    esp_with_name <- esp_with_name |>
-      select(-slug_especie, -species) |>
-      rename("Especie" = "label", "Observaciones" = "registros",
-             "Vernáculo" = "vernacular_name_es",
-             "GBIF" = "url_gbif", "CBC" = "url_cbc",
-             "Reino" = "kingdom", "Phylum" = "phylum", "Clase" = "class",
-             "Orden" = "order", "Familia" = "family",
-             "Genus" = "genus")
-  }
+    left_join(sibdata_especie_meta(), by = c("slug_especie" = "slug")) |>
+    sib_merge_especie_label()
 
   esp_with_name
 

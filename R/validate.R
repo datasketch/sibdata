@@ -6,8 +6,8 @@ sib_validate_profile_type <- function(type){
 }
 
 #' @export
-sib_validate_indicadores <- function(indicadores, con){
-  available_indicadores <- sibdata_ind_meta(con) |> pull(indicador)
+sib_validate_indicadores <- function(indicadores){
+  available_indicadores <- sibdata_ind_meta() |> pull(indicador)
   if(!all(indicadores %in% available_indicadores))
     stop("Not all indicadores in available_indicadores")
 }

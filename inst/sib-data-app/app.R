@@ -172,7 +172,7 @@ server <-  function(input, output, session) {
                         grupo = grupo,
                         tematica = tematica#,
                         #with_labels = TRUE
-                        ) |>
+    ) |>
       collect()
     l_s
   })
@@ -210,29 +210,29 @@ server <-  function(input, output, session) {
 
   data <- function(){
     tryCatch({
-    inp <- inputs()
-    subR <- inp$subregiones
-    req(actual_but$active)
-    if (actual_but$active == "map") subR <- TRUE
+      inp <- inputs()
+      subR <- inp$subregiones
+      req(actual_but$active)
+      if (actual_but$active == "map") subR <- TRUE
 
-    d <- sibdata(inp$region,
-                 grupo = inp$grupo,
-                 tipo = inp$tipo,
-                 cobertura = inp$cobertura,
-                 tematica = inp$tematica,
-                 subregiones = subR,
-                 with_parent = inp$with_parent)
-    if (actual_but$active != "map") {
-      d <- d |> sib_merge_ind_label()
-    } else {
-      d <- d |> dplyr::select(label, count)
-      d$label <- dplyr::recode(d$label, "San Sebastián de Mariquita" = "Mariquita",
-                               "San Andrés de Tumaco" = "Tumaco",
-                               "Santacruz" = "Santa cruz",
-                               "El Tablón de Gómez" = "El Tablón",
-                               "Güicán de la Sierra" = "Guican")
-    }
-    d
+      d <- sibdata(inp$region,
+                   grupo = inp$grupo,
+                   tipo = inp$tipo,
+                   cobertura = inp$cobertura,
+                   tematica = inp$tematica,
+                   subregiones = subR,
+                   with_parent = inp$with_parent)
+      if (actual_but$active != "map") {
+        d <- d |> sib_merge_ind_label()
+      } else {
+        d <- d |> dplyr::select(label, count)
+        d$label <- dplyr::recode(d$label, "San Sebastián de Mariquita" = "Mariquita",
+                                 "San Andrés de Tumaco" = "Tumaco",
+                                 "Santacruz" = "Santa cruz",
+                                 "El Tablón de Gómez" = "El Tablón",
+                                 "Güicán de la Sierra" = "Guican")
+      }
+      d
     },
     error = function(cond) {
       return()

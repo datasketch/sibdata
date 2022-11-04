@@ -1,18 +1,17 @@
 
-sib_region_labels <- function(con){
-  sibdata_region(con) |>
+sib_region_labels <- function(){
+  sibdata_region() |>
     select(slug, label)
 }
 
 
 #' @export
-sib_merge_region_label <- function(d, slug = "slug_region", label = "label_region",
-                                   con = con){
+sib_merge_region_label <- function(d, slug = "slug_region", label = "label_region"){
   if(label %in% colnames(d)){
     warning("Overwritting existing label column: ", label,
             " Use the label param to rename the output label column.")
   }
-  regs_label <- sibdata_region(con) |>
+  regs_label <- sibdata_region() |>
     select(slug_region = slug, label_region = label)
 
   if(slug == "slug"){
@@ -35,8 +34,8 @@ sib_merge_region_label <- function(d, slug = "slug_region", label = "label_regio
 
 
 #' @export
-sib_merge_grupo_label <- function(d, slug, con){
-  grupo_labels <- sibdata_grupo(con) |>
+sib_merge_grupo_label <- function(d, slug){
+  grupo_labels <- sibdata_grupo() |>
     select(slug_grupo = slug, label_grupo = label)
 
   if(slug == "slug"){
@@ -77,8 +76,8 @@ sib_merge_ind_label <- function(d, replace = TRUE){
 
 
 #' @export
-sib_merge_especie_label <- function(x, con){
-  especie <- sibdata_especie(con) |>
+sib_merge_especie_label <- function(x){
+  especie <- sibdata_especie() |>
     mutate(label = species)
   x |>
     left_join(especie, by = c("slug_especie"="slug"), copy = TRUE) |>

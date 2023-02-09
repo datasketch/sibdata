@@ -7,7 +7,7 @@ sib_region_general <- function(region, con){
     "especies_region_estimadas", "especies_region_total",
   "registros_region_total", "registros_continentales", "registros_marinos",
   "especies_continentales", "especies_marinas", "especies_continentales",
-  "subtipo","label", "marino", "fecha_corte"
+  "subtipo","label", "marino", "fecha_corte", "estimada_region_ref_id"
   )
 
   # region <- "reserva-forestal-la-planada"
@@ -55,6 +55,15 @@ sib_region_general <- function(region, con){
 
   reg_list <- purrr::transpose(reg_data)[[1]]
   reg_list$main_text <- glue::glue_data(reg_data, intro_tpl)
+
+  # Créditos y referencias
+
+  estimada_ref_id <- reg_data$estimada_region_ref_id
+  ref <- sibdata_referencia_estimada(con) |>
+    filter(ref_id == estimada_ref_id) |>
+      collect()
+  reg_list$referencia <- ref$label
+  reg_list$credito_foto <- glue::glue("{region}. Foto: Pepito Pérez. Creative Commons")
   reg_list
 
 }
@@ -89,5 +98,12 @@ sib_region_marino <- function(con){
   col <- tibble(slug = "colombia", marino = TRUE)
   bind_rows(col, deptos, munis)
 }
+
+
+
+
+
+
+
 
 

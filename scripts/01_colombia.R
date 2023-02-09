@@ -28,8 +28,6 @@ con <- DBI::dbConnect(duckdb::duckdb(), sys_file("db/sibdata.duckdb"),
 
 region <- "colombia"
 
-## Generate info pages
-save_info_page("static/data", con)
 
 
 message(region)

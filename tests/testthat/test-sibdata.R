@@ -130,4 +130,11 @@ test_that("sibdata works", {
   d <- sibdata_wide("tolima", tipo = tipo, subregiones = TRUE)
 
 
+  ###
+
+  t2 <- sibdata("colombia", tipo = "especies",
+                tematica = NULL)
+
+
+
 })

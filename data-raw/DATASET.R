@@ -37,8 +37,6 @@ tematica_table <- ds$tematica
 ind_meta <- read_csv("data-raw/diccionaries/ind_meta.csv")
 ds$ind_meta <- ind_meta
 
-#saveRDS(ds, "ds.rds")
-#saveRDS(ds, "inst/sib-data-app/ds.rds")
 
 
 # Add imagenes a destacadas
@@ -52,17 +50,10 @@ glosario <- read_csv("data-raw/glosario.csv")
 ds$glosario <- glosario
 
 
-# Clean data
-
-#tmp <- ds$region_tematica
-#tmp2  <- tmp |>
-#  mutate_at(vars(!matches("slug_region", "fecha_corte")), as.numeric)
-#ds$region_tematica <- tmp2
-#str(ds$region_tematica)
-
-
-#readr::write_rds(ds, "data-raw/ds.rds")
 saveRDS(ds, "data-raw/ds.rds")
+
+usethis::use_data(ds, internal = TRUE, overwrite = TRUE)
+
 
 # Save
 
@@ -76,8 +67,8 @@ map2(ds, names(ds), function(d,nm){
   dbWriteTable(con, nm, d, overwrite = TRUE)
 })
 dbListTables(con)
-duckdb::duckdb_shutdown(con)
-dbDisconnect(con)
+duckdb::dbDisconnect(con)
+#duckdb::duckdb_shutdown(con)
 
 
 library(RSQLite)

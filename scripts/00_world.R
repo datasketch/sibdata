@@ -1,23 +1,18 @@
 library(sibdata)
-library(lfltmagic)
-
+#library(lfltmagic)
 library(geodato)
+library(tictoc)
 
 devtools::load_all()
 
-
-# Generate navigation files
-
-# Generate files for regions
-
-
-library(tictoc)
+#here::i_am("static")
 
 here::dr_here()
-#here::set_here("./..")
-setwd("../")
-here::dr_here()
-tic()
+# here::set_here()
+# here::dr_here()
+# setwd("../")
+# here::dr_here()
+# tic()
 
 #
 # con <- DBI::dbConnect(duckdb::duckdb(), "../inst/db/sibdata.duckdb",
@@ -98,7 +93,7 @@ lista_mapa <- map2(dato_home_by_group, ranking_by_group, function(x,y){
     ranking_refs = parse_ref(unique(y$ref_id))
   )
 })
-
+lista_mapa <- unname(lista_mapa)
 # Tarjetas Destacado
 
 regs <- sibdata_region_tematica(con) |> collect()
@@ -120,7 +115,7 @@ destacados_regiones <- regs |>
 
 
 l <- list(
-  lista_mapa = lista_dato_mapa,
+  lista_mapa = lista_mapa,
   destacados_regiones = destacados_regiones
 )
 #dir.create(file.path("static/data/home"))

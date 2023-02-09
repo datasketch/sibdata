@@ -3,18 +3,36 @@
 
 - Actualizar datos 2023
 
+- Halar datos para mapa en el home
+- Regenerar glosario
 
 
 # TODO
 
+
+Estimadas vs observadas para deptos y municipios
+
+
+https://deploy-preview-1--cifras-biodiversidad.netlify.app/mas/publicadores?region=Carmen%20de%20Apical%C3%A1
+publicadores municipios como arreglo en region
+
+icono foto y referencias por depto
+
+Datos de publicadores para municipios
+
+Referencia de estimadas para banners
+
+Segunda vista amenazadas departamentos
+
+
+
+
+
 - Revisar listas de especies (repetidas cites y exóticas, separar amenaza global y nacional, especies en cites que no son de la temática)
 
 - Revisar y ajustar json 
-    - Halar datos para mapa en el home
     - patrocinadores de cada perfil
     - Datos municipios Santander y Boyacá
-    - Regenerar glosario
-    - 
 
 - Rehacer explorador
     - Revisar municipios, que todos tengan datos

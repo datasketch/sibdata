@@ -30,6 +30,9 @@ info_pages <- function(con){
 info_publicador <- function(con){
 
   which_regs <- c("boyaca", "narino", "tolima", "santander", "colombia")
+  which_regs <- sibdata_region(con) |> collect() |>
+    filter(parent %in% which_regs) |>
+    pull(slug)
 
   pub_col <- sibdata_region_publicador(con) |>
     collect() |>

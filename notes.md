@@ -6,11 +6,11 @@
 - Halar datos para mapa en el home
 - Regenerar glosario
 
+- Referencia de estimadas para banners
+icono foto y referencias por depto
 
 # TODO
 
-Referencia de estimadas para banners
-icono foto y referencias por depto
 
 Datos de publicadores para municipios
 https://deploy-preview-1--cifras-biodiversidad.netlify.app/mas/publicadores?region=Carmen%20de%20Apical%C3%A1

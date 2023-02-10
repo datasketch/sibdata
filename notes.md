@@ -9,19 +9,16 @@
 - Referencia de estimadas para banners
 icono foto y referencias por depto
 
-# TODO
-
-
 Datos de publicadores para municipios
 https://deploy-preview-1--cifras-biodiversidad.netlify.app/mas/publicadores?region=Carmen%20de%20Apical%C3%A1
 publicadores municipios como arreglo en region
 
 
+# TODO
+
+
 Estimadas vs observadas para deptos y municipios
 Segunda vista amenazadas departamentos
-
-
-
 
 
 - Revisar listas de especies (repetidas cites y exóticas, separar amenaza global y nacional, especies en cites que no son de la temática)
@@ -39,6 +36,10 @@ Segunda vista amenazadas departamentos
 
 
 
+# Ajustes datos
+
+- Falta información de créditos de fotos, no mostramos las que no tienen?
+- Mostrar referencias con links a Zotero y otros lugares?
 
 
 

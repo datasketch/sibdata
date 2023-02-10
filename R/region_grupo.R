@@ -32,12 +32,12 @@ region_grupo_data <- function(region, tipo = "biologico", verbose = FALSE, con){
 
   i <- 1
   reg_grupo_list <- map(reg_gr_bio_list, function(x){
+    #x <- reg_gr_bio_list[[3]]
+    #x <- reg_gr_bio_list[[4]]
     if(verbose){
       message("  Grupo ", i," de ",nrow(reg_gr_bio),": " ,x$slug)
     }
     i <<- i + 1
-    #x <- reg_gr_bio_list[[3]]
-    #x <- reg_gr_bio_list[[4]]
     x <- as.list(x)
     current_slug <- x$slug
     x$parent <- reg_gr_bio_parent |>
@@ -64,6 +64,7 @@ region_grupo_data <- function(region, tipo = "biologico", verbose = FALSE, con){
                    "endemicas", "exoticas")
     species_list_tematica <- map(tematicas, function(tem){
       #tem <- tematicas[1]
+      #tem <- "exoticas"
       #message(tem)
       spe <- list_species(region, grupo = x$slug, tematica = tem, con = con)
       spe_top <- spe |>

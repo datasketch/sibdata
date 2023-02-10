@@ -1,5 +1,5 @@
 library(sibdata)
-library(lfltmagic)
+#library(lfltmagic)
 
 devtools::load_all()
 
@@ -15,15 +15,12 @@ library(tictoc)
 
 here::dr_here()
 #here::set_here("./..")
-setwd("../")
-here::dr_here()
+#setwd("../")
+#here::dr_here()
 tic()
 
-#
-# con <- DBI::dbConnect(duckdb::duckdb(), "../inst/db/sibdata.duckdb",
-#                       read_only = TRUE)
 
-con <- DBI::dbConnect(duckdb::duckdb(), sys_file("db/sibdata.duckdb"),
+con <- DBI::dbConnect(RSQLite::SQLite(), sys_file("db/sibdata.sqlite"),
                       read_only = TRUE)
 
 region <- "colombia"

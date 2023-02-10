@@ -1,6 +1,33 @@
 test_that("List species", {
 
-  esps_tolima <- list_species(region = "tolima") |>
+
+  # Especies no repetidas en exoticas colombia
+
+  esps_col <- list_species(region = "colombia",
+                              tematica = "exoticas",
+                              con = con) |>
+    collect()
+
+  esps_col_cites_i <- list_species(region = "colombia",
+                           tematica = "cites-i",
+                           con = con) |>
+    collect()
+
+  esps_col_cites <- list_species(region = "colombia",
+                                   tematica = "cites",
+                                   con = con) |>
+    collect()
+
+
+  esps_col <- list_species(region = "carmen-de-apicala",
+                           tematica = "exoticas",
+                           con = con) |>
+    collect()
+
+
+  #
+
+  esps_tolima <- list_species(region = "tolima", con = con) |>
     collect()
 
   esps_tolima_amenazadas <- list_species(region = "tolima",

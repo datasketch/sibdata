@@ -7,6 +7,7 @@ list_species <- function(region,
                          con = NULL){
   # region <- "tolima"
   # tematica <- "endemicas"
+  # tematica <- "cites-i"
   # grupo <- "hongos"
 
   esp_reg <- sibdata_especie_region(con) |>
@@ -20,9 +21,21 @@ list_species <- function(region,
     #   filter(slug_tematica %like% paste0("%",tematica,"%")) |>
     #   left_join(esp_reg, by = c("slug_region", "slug_especie"))
 
+    if(tematica == "cites"){
+      tematica <- c("cites-i", "cites-i_ii", "cites-ii", "cites-iii")
+    } else if(tematica == "amenazadas-global"){
+      tematica <- c("amenazadas-global-cr", "amenazadas-global-en",
+                    "amenazadas-global-vu")
+    } else if(tematica == "amenazadas-nacional"){
+      tematica <- c("amenazadas-nacional-cr", "amenazadas-nacional-en",
+                    "amenazadas-nacional-vu")
+    }
+
+
     esp_tem <- sibdata_especie_tematica(con) |>
       filter(slug_region == region) |>
-      filter(slug_tematica %like% paste0("%",tematica,"%"))
+      #filter(slug_tematica %like% paste0("%",tematica,"%"))
+      filter(slug_tematica %in% tematica)
 
     especies <- especies |>
       left_join(esp_tem, by = c("slug_region", "slug_especie")) |>

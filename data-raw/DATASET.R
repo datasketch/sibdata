@@ -50,15 +50,23 @@ glosario <- read_csv("data-raw/glosario.csv")
 ds$glosario <- glosario
 
 
-saveRDS(ds, "data-raw/ds.rds")
-
-usethis::use_data(ds, internal = TRUE, overwrite = TRUE)
+#saveRDS(ds, "data-raw/ds.rds")
+#usethis::use_data(ds, internal = TRUE, overwrite = TRUE)
 
 
 # Save
 
 #available_tables <- names(ds)
 #usethis::use_data(ds, available_tables, overwrite = TRUE)
+
+library(RSQLite)
+unlink("inst/db/sibdata.sqlite")
+con <- dbConnect(RSQLite::SQLite(), "inst/db/sibdata.sqlite")
+map2(ds, names(ds), function(d,nm){
+  dbWriteTable(con, nm, d)
+})
+dbDisconnect(con)
+
 
 library(duckdb)
 unlink("inst/db/sibdata.duckdb")
@@ -71,13 +79,7 @@ duckdb::dbDisconnect(con)
 #duckdb::duckdb_shutdown(con)
 
 
-library(RSQLite)
-unlink("inst/db/sibdata.sqlite")
-con <- dbConnect(RSQLite::SQLite(), "inst/db/sibdata.sqlite")
-map2(ds, names(ds), function(d,nm){
-  dbWriteTable(con, nm, d)
-})
-dbDisconnect(con)
+
 
 
 

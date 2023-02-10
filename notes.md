@@ -13,18 +13,19 @@ Datos de publicadores para municipios
 https://deploy-preview-1--cifras-biodiversidad.netlify.app/mas/publicadores?region=Carmen%20de%20Apical%C3%A1
 publicadores municipios como arreglo en region
 
+Estimadas vs observadas para deptos y municipios
+Segunda vista amenazadas departamentos
+
+- Revisar listas de especies (repetidas cites y exóticas, separar amenaza global y nacional, especies en cites que no son de la temática)
+
+JSON
+    - patrocinadores de cada perfil
 
 # TODO
 
 
-Estimadas vs observadas para deptos y municipios
-Segunda vista amenazadas departamentos
-
-
-- Revisar listas de especies (repetidas cites y exóticas, separar amenaza global y nacional, especies en cites que no son de la temática)
 
 - Revisar y ajustar json 
-    - patrocinadores de cada perfil
     - Datos municipios Santander y Boyacá
 
 - Rehacer explorador

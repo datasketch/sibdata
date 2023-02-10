@@ -8,15 +8,16 @@
 
 #' @export
 sib_available_regions <- function(subtipo = NULL, departamento = NULL, con = con){
-  regs <- sibdata_region(con)
+  regs <- sibdata_region(con) |> collect()
   reg_gr <- sibdata_region_grupo(con) |>
-    select(slug_region)
+    #select(slug_region) |>
+    collect()
   sel_subtipo <- subtipo
   if(!is.null(subtipo)){
     regs <- regs |>
       filter(subtipo %in% sel_subtipo)
   }
-  regs <- regs |> semi_join(reg_gr, by = c("slug" = "slug_region"))
+  #regs <- regs |> semi_join(reg_gr, by = c("slug" = "slug_region"))
 
   if(subtipo == "Municipio" & !is.null(departamento)){
     regs <- regs |>

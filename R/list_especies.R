@@ -29,6 +29,13 @@ list_species <- function(region,
     } else if(tematica == "amenazadas-nacional"){
       tematica <- c("amenazadas-nacional-cr", "amenazadas-nacional-en",
                     "amenazadas-nacional-vu")
+    } else if(tematica == "amenazadas"){
+      tematica <- c("amenazadas-global-cr", "amenazadas-global-en",
+                    "amenazadas-global-vu",
+                    "amenazadas-nacional-cr", "amenazadas-nacional-en",
+                    "amenazadas-nacional-vu")
+    } else if(tematica == "exoticas"){
+      tematica <- c("exoticas")
     }
 
 

@@ -1,15 +1,15 @@
-library(sibdata)
-library(lfltmagic)
+#library(sibdata)
+#library(lfltmagic)
 devtools::load_all()
 
 
-here::dr_here()
-#here::set_here("./..")
-setwd("../")
-here::dr_here()
+# here::dr_here()
+# #here::set_here("./..")
+# setwd("../")
+# here::dr_here()
 
 
-con <- DBI::dbConnect(duckdb::duckdb(), sys_file("db/sibdata.duckdb"),
+con <- DBI::dbConnect(RSQLite::SQLite(), sys_file("db/sibdata.sqlite"),
                       read_only = TRUE)
 
 #av_regions <- sib_available_regions(subtipo = c("Municipio"))
@@ -20,25 +20,33 @@ av_regions1 <- sib_available_regions(subtipo = c("Municipio"),
                                     departamento = "narino", con = con)
 
 av_regions3 <- sib_available_regions(subtipo = c("Municipio"),
-                                     departamento = "boyaca", con = con)
-av_regions4 <- sib_available_regions(subtipo = c("Municipio"),
                                      departamento = "santander", con = con)
+
+av_regions4 <- sib_available_regions(subtipo = c("Municipio"),
+                                     departamento = "boyaca", con = con)
 
 av_regions <- c(
   # "reserva-forestal-la-planada",
   # "resguardo-indigena-pialapi-pueblo-viejo",
-  # av_regions1,
-  av_regions2
-  # av_regions3,
-  # av_regions4
+  av_regions1,
+  av_regions2,
+  av_regions3,
+  av_regions4
 )
+
+n <- length(av_regions)
+i <<- 1
 
 library(tictoc)
 
 tic()
 
+
 map(av_regions, function(region){
-  message("\n...........",region)
+  parent <- sib_parent_region(region, con = con)
+  message("\n################################  ", parent)
+  message("................................. ",region, paste0("(",i," de ",n,")"))
+  i <<- i + 1
   # region <- "ibague"
   # region <- "alpujarra"
   # region <- "alvarado"

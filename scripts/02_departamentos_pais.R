@@ -1,35 +1,32 @@
-library(sibdata)
-library(lfltmagic)
+#library(sibdata)
+#library(lfltmagic)
+library(tictoc)
+
 
 devtools::load_all()
 
 
-
-# Generate navigation files
-
-# Generate files for regions
-
-
-library(tictoc)
-
-here::dr_here()
-#here::set_here("./..")
-setwd("../")
-here::dr_here()
+# here::dr_here()
+# #here::set_here("./..")
+# setwd("../")
+# here::dr_here()
 tic()
 
 
-con <- DBI::dbConnect(duckdb::duckdb(), sys_file("db/sibdata.duckdb"),
+con <- DBI::dbConnect(RSQLite::SQLite(), sys_file("db/sibdata.sqlite"),
                       read_only = TRUE)
 av_regions <- sib_available_regions(subtipo = c("Departamento"), con = con)
 
 
 
 map(av_regions, function(region){
-  message(region)
+  message("##################")
+  message("\n", region, "\n")
+
   # region <- "boyaca"
   # region <- "narino"
   # region <- "tolima"
+  # region <- "santander"
 
   nav_tematica <- navigation_trees("tematica", con = con)
   nav_grupo_biologico <- navigation_trees("grupo_biologico", con = con)
@@ -80,19 +77,19 @@ map(av_regions, function(region){
   dd_reg <- dd |> select(cod_dane, value = registros_region_total, label)
 
   tooltip <- "<b>{value} especies</b><br><i>{label}</i>"
-  munis_chart1<- lfltmagic::lflt_choropleth_GcdNum(dd_esp, map_name = map_name,
-                                                  tooltip = tooltip, map_zoom = F)
+  # munis_chart1<- lfltmagic::lflt_choropleth_GcdNum(dd_esp, map_name = map_name,
+  #                                                 tooltip = tooltip, map_zoom = F)
 
   #munis_chart1 <- sib_chart_reg_municipios(d, "especies_region_total")
   path1 <- glue::glue("static/charts/{region}/region_municipios_1.html")
-  htmlwidgets::saveWidget(munis_chart1, path1)
+  # htmlwidgets::saveWidget(munis_chart1, path1)
 
   #munis_chart2 <- sib_chart_reg_municipios(d, "registros_region_total")
   tooltip <- "<b>{value} observaciones</b><br><i>{label}</i>"
-  munis_chart2<- lfltmagic::lflt_choropleth_GcdNum(dd_reg, map_name = map_name,
-                                                   tooltip = tooltip, map_zoom = F)
+  # munis_chart2<- lfltmagic::lflt_choropleth_GcdNum(dd_reg, map_name = map_name,
+  #                                                  tooltip = tooltip, map_zoom = F)
   path2 <- glue::glue("static/charts/{region}/region_municipios_2.html")
-  htmlwidgets::saveWidget(munis_chart2, path2)
+  # htmlwidgets::saveWidget(munis_chart2, path2)
 
   region_tipo <- "municipio"
   if(region == "colombia") region_tipo <- "departamento"

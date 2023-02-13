@@ -28,10 +28,10 @@ av_regions4 <- sib_available_regions(subtipo = c("Municipio"),
 av_regions <- c(
   # "reserva-forestal-la-planada",
   # "resguardo-indigena-pialapi-pueblo-viejo",
-  av_regions1,
-  av_regions2,
   av_regions3,
-  av_regions4
+  av_regions4,
+  av_regions1,
+  av_regions2
 )
 
 n <- length(av_regions)

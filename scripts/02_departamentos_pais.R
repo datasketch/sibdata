@@ -18,6 +18,7 @@ con <- DBI::dbConnect(RSQLite::SQLite(), sys_file("db/sibdata.sqlite"),
 av_regions <- sib_available_regions(subtipo = c("Departamento"), con = con)
 
 
+av_regions <- c("boyaca","narino","tolima", "santander")
 
 map(av_regions, function(region){
   message("##################")
@@ -99,7 +100,7 @@ map(av_regions, function(region){
       label = "Municipios",
       charts = list(
         list(title = glue::glue("Especies por {region_tipo}"), path = path1, layout = "title/chart"),
-        list(title =  glue::glue("Registros por {region_tipo}"), path = path2, layout = "title/chart")
+        list(title =  glue::glue("Observaciones por {region_tipo}"), path = path2, layout = "title/chart")
       )
     ),
     list(

@@ -23,6 +23,10 @@ JSON
 
 # TODO
 
+Repetidas exóticas
+Título especies por departamento
+
+
 
 
 - Revisar y ajustar json 

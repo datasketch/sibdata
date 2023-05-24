@@ -22,78 +22,59 @@ con <- DBI::dbConnect(RSQLite::SQLite(), sys_file("db/sibdata.sqlite"),
                       read_only = TRUE)
 
 
-# Mapa mundi
 
-dato_home <- sibdata_dato_relevante(con) |>
-  filter(slug_region == "home") |>
+
+
+# Mapa mundi
+ranking <- sibdata_ranking(con) |>
+  filter(slug == 'ranking-biodiverdad-mundo') |>
   collect()
-ranking <- sibdata_ranking(con) |> collect()
+
+country_ranking <- ranking |>
+  select(puesto, pais) |>
+  gd_match(map_name = "world_countries", col = "pais")
 
 refs <- sibdata_referencia_estimada(con) |>
   collect()
 
+parse_ref <- function(str){
+  #str <- "56 | 92"
+  r_ids <- strsplit(map_chr(str, ~ gsub(" ","",.)), "\\|")
+  map_chr(r_ids, function(rs){
+    rs <- as.numeric(rs)
+    ref_txt <- refs |> filter(ref_id %in% rs) |>
+      pull(label)
+    ref_txt <- paste0(ref_txt, collapse = " ")
+  })
+}
 
-common_categories <- intersect(dato_home$slug_grupo, ranking$slug)
-
-dato_home <- dato_home |>
-  filter(slug_grupo %in% common_categories)
-
-dato_home_by_group <- dato_home |>
-  group_by(slug_grupo) |>
-  group_split()
-names(dato_home_by_group) <- dato_home |>
-  group_by(slug_grupo) |>
-  group_keys() |> pull(1)
-
-ranking <- ranking |>
-  filter(slug %in% common_categories) |>
-  group_by(slug) |>
-  arrange(puesto, .by_group = TRUE)
-unique(ranking$slug)
-
-ranking_by_group <- ranking |>
-  group_split()
-names(ranking_by_group) <- ranking |> group_keys() |> pull(1)
-
-all(names(dato_home_by_group) == names(ranking_by_group))
-
-lista_mapa <- map2(dato_home_by_group, ranking_by_group, function(x,y){
-  #x <- dato_home_by_group[[1]]
-  #y <- ranking_by_group[[1]]
-
-  parse_ref <- function(str){
-    #str <- "3| 52"
-    r_ids <- strsplit(map_chr(str, ~ gsub(" ","",.)), "\\|")
-    map_chr(r_ids, function(rs){
-      rs <- as.numeric(rs)
-      ref_txt <- refs |> filter(ref_id %in% rs) |>
-        pull(label)
-      ref_txt <- paste0(ref_txt, collapse = " ")
-    })
-  }
-
-  str <- x$ref_id
+ref_principal <- parse_ref(ranking$ref_id[1])
 
 
-  descriptions <- x |>
-    select(descripcion, ref_id) |>
-    mutate(refs = parse_ref(ref_id)) |>
-    select(-ref_id)
 
-  country_ranking <- y |>
-    select(puesto, pais) |>
-    gd_match(map_name = "world_countries", col = "pais")
+positions <- tibble::tribble(
+  ~position,  ~position_text,
+  1, "Primer lugar en diversidad de aves(42), orquídeas (41) y mariposas (13)",
+  2, "Segundo en plantas (51), anfibios(52), peces dulceacuícolas(10), reptiles(53), palmas(54) y murciélagos (53)",
+  3, "quinto en mamíferos (55)"
+)
+
+ref_ids <- c(42, 41, 13, 51, 52, 10, 53, 54, 53, 55)
+position_refs <- refs |>
+  select(ref_id, label, zotero) |>
+  filter(ref_id %in% ref_ids)
+
+lista_mapa <- list(
+  country_ranking = country_ranking,
+  ref_principal = ref_principal,
+  positions = positions,
+  position_refs = position_refs
+)
 
 
-  list(
-    slug = x$slug_grupo[1],
-    title = x$titulo[1],
-    descriptions = descriptions,
-    ranking = country_ranking,
-    ranking_refs = parse_ref(unique(y$ref_id))
-  )
-})
-lista_mapa <- unname(lista_mapa)
+
+
+
 # Tarjetas Destacado
 
 regs <- sibdata_region_tematica(con) |> collect()

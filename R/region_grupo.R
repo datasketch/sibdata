@@ -33,7 +33,7 @@ region_grupo_data <- function(region, tipo = "biologico", verbose = FALSE, con){
   i <- 1
   reg_grupo_list <- map(reg_gr_bio_list, function(x){
     #x <- reg_gr_bio_list[[3]]
-    #x <- reg_gr_bio_list[[4]]
+    #x <- reg_gr_bio_list[[21]]
     if(verbose){
       message("  Grupo ", i," de ",nrow(reg_gr_bio),": " ,x$slug)
     }
@@ -61,7 +61,7 @@ region_grupo_data <- function(region, tipo = "biologico", verbose = FALSE, con){
     x$species_list_top <- species_list_top
 
     tematicas <- c("amenazadas-nacional", "amenazadas-global", "cites", "migratorias",
-                   "endemicas", "exoticas")
+                   "endemicas", "exoticas-total")
     species_list_tematica <- map(tematicas, function(tem){
       #tem <- tematicas[1]
       #tem <- "exoticas"

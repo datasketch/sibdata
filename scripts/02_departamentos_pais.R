@@ -2,7 +2,6 @@
 #library(lfltmagic)
 library(tictoc)
 
-
 devtools::load_all()
 
 
@@ -10,6 +9,8 @@ devtools::load_all()
 # #here::set_here("./..")
 # setwd("../")
 # here::dr_here()
+
+str(getwd())
 tic()
 
 

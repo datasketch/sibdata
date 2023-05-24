@@ -23,7 +23,8 @@ tematica_list_col <- function(region, con){
 
   inds_amenazadas_nacional <- default_indicadores("inds_amenazadas_nacional")
   inds_amenazadas_global <- default_indicadores("inds_amenazadas_global")
-  inds_especies_parent <- default_indicadores("inds_especies_parent")
+  inds_especies_parent_est <- default_indicadores("inds_especies_parent_est")
+
 
   esp_list <- list_species(region, tematica = "amenazadas", con = con) |>
     select(label, slug_especie, registros, url_gbif, url_cbc, slug_tematica) |>
@@ -61,7 +62,7 @@ tematica_list_col <- function(region, con){
          estimadas_vu = estimadas$especies_amenazadas_nacional_vu_estimadas
     ),
     region_indicadores(region, inds_amenazadas_nacional, con = con),
-    region_indicadores(parent_region, inds_especies_parent, con = con),
+    region_indicadores(parent_region, inds_especies_parent_est, con = con),
     list(list_especies_amenazadas_nacional = NULL,
          list_especies_amenazadas_nacional_vu = NULL,
          list_especies_amenazadas_nacional_en = NULL,
@@ -84,7 +85,7 @@ tematica_list_col <- function(region, con){
          estimadas_en = estimadas$especies_amenazadas_global_en_estimadas,
          estimadas_vu = estimadas$especies_amenazadas_global_vu_estimadas),
     region_indicadores(region, inds_amenazadas_global, con = con),
-    region_indicadores(region, inds_especies_parent, con = con),
+    region_indicadores(region, inds_especies_parent_est, con = con),
     list(list_especies_amenazadas_global = NULL,
          list_especies_amenazadas_global_vu = NULL,
          list_especies_amenazadas_global_en = NULL,
@@ -195,7 +196,7 @@ tematica_list_col <- function(region, con){
   inds_parent_exoticas <- default_indicadores("inds_parent_exoticas")
 
   ## OJOOOOOOO REVISAR EL DATO
-  esp_list_exoticas_total <- list_species(region, tematica = "exoticas", con = con) |>
+  esp_list_exoticas_total <- list_species(region, tematica = "exoticas-total", con = con) |>
     select(label, slug_especie, registros, url_gbif, url_cbc, slug_tematica) |>
     arrange(desc(registros)) |>
     collect() |>
@@ -214,7 +215,7 @@ tematica_list_col <- function(region, con){
     distinct() |>
     slice(1:10)
   esp_list_exoticas_riesgo_invasion <- list_species(region,
-                                                    tematica = "riesgo-invasion",
+                                                    tematica = "exotica-riesgo-invasion",
                                                     con = con) |>
     select(label, slug_especie, registros, url_gbif, url_cbc, slug_tematica) |>
     arrange(desc(registros)) |>

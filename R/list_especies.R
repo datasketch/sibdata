@@ -16,7 +16,7 @@ list_species <- function(region,
   especies <- esp_reg
 
   if(!is.null(tematica)){
-    # especies <- sibdata_especie_tematica() |>
+    # especies <- sibdata_especie_tematica(con = con) |>
     #   filter(slug_region == region) |>
     #   filter(slug_tematica %like% paste0("%",tematica,"%")) |>
     #   left_join(esp_reg, by = c("slug_region", "slug_especie"))
@@ -34,11 +34,9 @@ list_species <- function(region,
                     "amenazadas-global-vu",
                     "amenazadas-nacional-cr", "amenazadas-nacional-en",
                     "amenazadas-nacional-vu")
-    } else if(tematica == "exoticas"){
-      tematica <- c("exoticas")
+    } else if(tematica == "exoticas-total"){
+      tematica <- c("exoticas", "exotica-riesgo-invasion", "invasoras")
     }
-
-
     esp_tem <- sibdata_especie_tematica(con) |>
       filter(slug_region == region) |>
       #filter(slug_tematica %like% paste0("%",tematica,"%"))

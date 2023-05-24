@@ -18,7 +18,8 @@ tematica_list <- function(region, con){
 
   inds_amenazadas_nacional <- default_indicadores("inds_amenazadas_nacional")
   inds_amenazadas_global <- default_indicadores("inds_amenazadas_global")
-  inds_especies_parent <- default_indicadores("inds_especies_parent")
+  inds_especies_parent_est <- default_indicadores("inds_especies_parent_est")
+  inds_especies_parent_total <- default_indicadores("inds_especies_parent_total")
 
   esp_list <- list_species(region, tematica = "amenazadas", con = con) |>
     select(label, slug_especie, registros, url_gbif, url_cbc, slug_tematica) |>
@@ -56,7 +57,8 @@ tematica_list <- function(region, con){
          estimadas_vu = estimadas$especies_amenazadas_nacional_vu_estimadas
     ),
     region_indicadores(region, inds_amenazadas_nacional, con = con),
-    region_indicadores(parent_region, inds_especies_parent, con = con),
+    region_indicadores(parent_region, inds_especies_parent_est, con = con),
+    region_indicadores(parent_region, inds_especies_parent_total, con = con),
     list(list_especies_amenazadas_nacional = NULL,
          list_especies_amenazadas_nacional_vu = NULL,
          list_especies_amenazadas_nacional_en = NULL,
@@ -79,7 +81,8 @@ tematica_list <- function(region, con){
          estimadas_en = estimadas$especies_amenazadas_global_en_estimadas,
          estimadas_vu = estimadas$especies_amenazadas_global_vu_estimadas),
     region_indicadores(region, inds_amenazadas_global, con = con),
-    region_indicadores(region, inds_especies_parent, con = con),
+    region_indicadores(parent_region, inds_especies_parent_est, con = con),
+    region_indicadores(parent_region, inds_especies_parent_total, con = con),
     list(list_especies_amenazadas_global = NULL,
          list_especies_amenazadas_global_vu = NULL,
          list_especies_amenazadas_global_en = NULL,

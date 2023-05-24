@@ -48,6 +48,7 @@ map(av_regions, function(region){
   message("................................. ",region, paste0("(",i," de ",n,")"))
   i <<- i + 1
   # region <- "ibague"
+  # region <- "chiquinquira"
   # region <- "alpujarra"
   # region <- "alvarado"
   # region <- "reserva-forestal-la-planada"
@@ -88,7 +89,7 @@ map(av_regions, function(region){
   reg_gr_bio <- list()
   reg_gr_int <- list()
 
-  if(parent %in% c("narino", "tolima"))
+  #if(parent %in% c("narino", "tolima"))
   reg_gr_bio <- region_grupo_data(region, tipo = "biologico", verbose = TRUE, con = con)
   reg_gr_int <- region_grupo_data(region, tipo = "interes", verbose = TRUE,con = con)
 

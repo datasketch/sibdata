@@ -46,9 +46,15 @@ default_indicadores <- function(section){
       "especies_estimadas" = "especies_region_estimadas"
     )
   }
-  if(section == "inds_especies_parent"){
+  if(section == "inds_especies_parent_est"){
     inds <- c(
-      "parent_especies" = "especies_region_estimadas"
+      "parent_especies_est" = "especies_region_estimadas"
+    )
+  }
+
+  if(section == "inds_especies_parent_total"){
+    inds <- c(
+      "parent_especies_total" = "especies_region_total"
     )
   }
 

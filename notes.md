@@ -1,5 +1,62 @@
 
-# DONE
+
+
+
+# 2023-05
+
+Home: 
+mapa ranking-biodiversidad-mundo. Referencias como tooltip
+db-cifras-sib/ranking.tsv
+
+Colombia:
+- Colombia, Hongos, Especies amenazadas. Número de listado de especies menor al indicado en la cifra
+- Ya estaba. Agregar Categoría cites_i_ii para Colombia
+
+
+
+
+## TODO
+
+Perfil Colombia:
+
+- Especies exóticas_temática. No se está mostrando la lista de “Especies Exóticas con potencial de invasion observadas”
+
+- Adicionalmente, se observan las especies repetidas. Debería mostrarse las especies de la tabla especie_tematica que apliquen en la región y en el caso de amenazadas nacional las que tengan en el campo slug_tematica los valores ‘amenazadas-nacional-vu’, ‘amenazadas-nacional-en’ o ‘amenazadas-nacional-cr’. Para las amenazadas global las especies que tengan en el campo slug_tematica los valores de ‘amenazadas-global-vu’, ‘amenazadas-global-cr’ o ‘amenazadas-global-en’
+
+
+- Arreglar listado especies exóticas colombia.  En los grupos biológicos, en la categoría exóticas, el número de especies exóticas que se muestra no corresponde al total de la categoría, si no el valor de la subcategoría exóticas. jemplo: En Colombia se están mostrando 117 especies exóticas... deberían ser 180. Variable especies_exoticas_total. Animales Exóticas: El valor total de exóticas es de 76, se muestran 117 Se muestra: exoticas total2.718,   exoticas 1933, exoticas riesgo invasión 765, invasoras 20 el valor de exóticas total es de 1.869, en exóticas es 1.120, exóticas riesgo invasión es 732, invasoras es 17
+
+
+- Amenenazas nacional: Agregar Estimadas con su referencia. X Especies CR observadas. YYY Especies estimadas (gris)
+
+
+
+
+
+Perfil deptos:
+- mostrar mapa por en deptos municipios
+- En tolima: se siguen mostrando especies que no son cites
+- revisar tematica_list_deptos para arreglar exóticas
+
+
+Perfil municipios:
+- Municipios, amenazadas: Se observan las mismas especies entre las categorías nacional y global. 
+- Inconsistencia en la sección de grupos biológicos. No muestra especies de animales de tunja
+- En la vista de los municipios hace falta incluir la comparación con el departamento.
+- Municipios -> temática, compara el municipio con el departamento
+
+
+
+
+
+
+
+
+
+
+# 2023-02
+
+## DONE
 
 - Actualizar datos 2023
 
@@ -21,7 +78,7 @@ Segunda vista amenazadas departamentos
 JSON
     - patrocinadores de cada perfil
 
-# TODO
+## TODO
 
 Repetidas exóticas
 Título especies por departamento
@@ -41,7 +98,7 @@ Título especies por departamento
 
 
 
-# Ajustes datos
+## Ajustes datos
 
 - Falta información de créditos de fotos, no mostramos las que no tienen?
 - Mostrar referencias con links a Zotero y otros lugares?
@@ -51,7 +108,7 @@ Título especies por departamento
 
 
 
-# Ajustes datos
+## Ajustes datos
 
 inds_meta
 marinas - marinos > marina?

@@ -23,7 +23,7 @@ tematica_list_col <- function(region, con){
 
   inds_amenazadas_nacional <- default_indicadores("inds_amenazadas_nacional")
   inds_amenazadas_global <- default_indicadores("inds_amenazadas_global")
-  inds_especies_parent_est <- default_indicadores("inds_especies_parent_est")
+  inds_especies_est <- default_indicadores("inds_especies_est")
 
 
 
@@ -60,12 +60,12 @@ tematica_list_col <- function(region, con){
   ## Amenazadas - Amenazadas Nacional
   amenazadas_nacional <- c(
     list(slug = "amenazadas-nacional", label = "Amenazadas nacional",
-         estimadas_cr = estimadas$especies_amenazadas_nacional_cr_estimadas,
-         estimadas_en = estimadas$especies_amenazadas_nacional_en_estimadas,
-         estimadas_vu = estimadas$especies_amenazadas_nacional_vu_estimadas
+         cr_estimadas = estimadas$especies_amenazadas_nacional_cr_estimadas,
+         en_estimadas = estimadas$especies_amenazadas_nacional_en_estimadas,
+         vu_estimadas = estimadas$especies_amenazadas_nacional_vu_estimadas
     ),
     region_indicadores(region, inds_amenazadas_nacional, con = con),
-    region_indicadores(parent_region, inds_especies_parent_est, con = con),
+    region_indicadores(region, inds_especies_est, con = con),
     list(list_especies_amenazadas_nacional = NULL,
          list_especies_amenazadas_nacional_vu = NULL,
          list_especies_amenazadas_nacional_en = NULL,
@@ -75,11 +75,11 @@ tematica_list_col <- function(region, con){
 
   amenazadas_global <- c(
     list(slug = "amenazadas-global", label = "Amenazadas global",
-         estimadas_cr = estimadas$especies_amenazadas_global_cr_estimadas,
-         estimadas_en = estimadas$especies_amenazadas_global_en_estimadas,
-         estimadas_vu = estimadas$especies_amenazadas_global_vu_estimadas),
+         cr_estimadas = estimadas$especies_amenazadas_global_cr_estimadas,
+         en_estimadas = estimadas$especies_amenazadas_global_en_estimadas,
+         vu_estimadas = estimadas$especies_amenazadas_global_vu_estimadas),
     region_indicadores(region, inds_amenazadas_global, con = con),
-    region_indicadores(region, inds_especies_parent_est, con = con),
+    region_indicadores(region, inds_especies_est, con = con),
     list(list_especies_amenazadas_global = NULL,
          list_especies_amenazadas_global_vu = NULL,
          list_especies_amenazadas_global_en = NULL,
@@ -110,7 +110,7 @@ tematica_list_col <- function(region, con){
     collect() |>
     distinct() |>
     slice(1:10)
-  esp_list_cites_i_ii <- list_species(region, tematica = "cites-i_ii", con = con) |>
+  esp_list_cites_i_ii <- list_species(region, tematica = "cites-i-ii", con = con) |>
     select(label, slug_especie, registros, url_gbif, url_cbc, slug_tematica) |>
     arrange(desc(registros)) |>
     collect() |>
@@ -125,11 +125,11 @@ tematica_list_col <- function(region, con){
 
   cites <- c(
     list(slug = "cites",
-         estimadas_cites_total = estimadas$especies_cites_total_estimadas,
-         estimadas_cites_i = estimadas$especies_cites_i_estimadas,
-         estimadas_cites_i_ii = estimadas$especies_cites_i_ii_estimadas,
-         estimadas_cites_ii = estimadas$especies_cites_ii_estimadas,
-         estimadas_cites_iii = estimadas$especies_cites_iii_estimadas),
+         cites_total_estimadas = estimadas$especies_cites_total_estimadas,
+         cites_i_estimadas = estimadas$especies_cites_i_estimadas,
+         cites_i_ii_estimadas = estimadas$especies_cites_i_ii_estimadas,
+         cites_ii_estimadas = estimadas$especies_cites_ii_estimadas,
+         cites_iii_estimadas = estimadas$especies_cites_iii_estimadas),
     region_indicadores(region, inds_cites, con = con),
     region_indicadores(parent_region, inds_parent_cites, con = con),
     list(list_especies_cites = esp_list_cites,
@@ -153,7 +153,7 @@ tematica_list_col <- function(region, con){
 
   endemicas <- c(
     list(slug = "endemicas",
-         estimadas_endemicas = estimadas$especies_endemicas_estimadas),
+         endemcias_estimadas = estimadas$especies_endemicas_estimadas),
     region_indicadores(region, inds_endemicas, con = con),
     region_indicadores(parent_region, inds_parent_endemicas, con = con),
     list(list_especies_endemicas = NULL),
@@ -178,7 +178,7 @@ tematica_list_col <- function(region, con){
          [Lista de referencia de especies de aves de Colombia - 2020](https://doi.org/10.15472/qhsz0p).
          Para aportar más datos sobre este y otros grupos bilógicos puede visitar nuestro sitio web
          https://biodiversidad.co",
-         estimadas_migratorias = estimadas$especies_migratorias_estimadas),
+         migratorias_estimadas = estimadas$especies_migratorias_estimadas),
     region_indicadores(region, inds_migratorias, con = con),
     region_indicadores(parent_region, inds_parent_migratorias, con = con),
     list(species_list = esp_list_migratorias)
@@ -219,10 +219,10 @@ tematica_list_col <- function(region, con){
 
   exoticas <- c(
     list(slug = "exoticas-invasoras",
-         estimadas_exoticas_total = estimadas$especies_exoticas_total_estimadas,
-         estimadas_exoticas = estimadas$especies_exoticas_estimadas,
-         estimadas_exoticas_riesgo_invasion = estimadas$especies_exoticas_riesgo_invasion_estimadas,
-         estimadas_exoticas_invasoras = estimadas$especies_invasoras_estimadas),
+         exoticas_total_estimadas = estimadas$especies_exoticas_total_estimadas,
+         exoticas_estimadas = estimadas$especies_exoticas_estimadas,
+         exoticas_riesgo_invasion_estimadas = estimadas$especies_exoticas_riesgo_invasion_estimadas,
+         exoticas_invasoras_estimadas = estimadas$especies_invasoras_estimadas),
     region_indicadores(region, inds_exoticas, con = con),
     region_indicadores(parent_region, inds_parent_exoticas, con = con),
     list(list_especies_exoticas_total = esp_list_exoticas_total,

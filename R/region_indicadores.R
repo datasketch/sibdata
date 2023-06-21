@@ -33,6 +33,17 @@ default_indicadores <- function(section){
       "especies_estimadas" = "especies_region_estimadas"
     )
   }
+
+  if(section == "parent_inds_amenazadas_nacional"){
+    inds <- c(
+      "parent_especies_est" = "especies_region_estimadas",
+      "parent_cr" = "especies_amenazadas_nacional_cr",
+      "parent_en" = "especies_amenazadas_nacional_en",
+      "parent_vu" = "especies_amenazadas_nacional_vu"
+    )
+  }
+
+
   if(section == "inds_amenazadas_global"){
     inds <- c(
       "especies" = "especies_amenazadas_global_total",
@@ -46,9 +57,19 @@ default_indicadores <- function(section){
       "especies_estimadas" = "especies_region_estimadas"
     )
   }
-  if(section == "inds_especies_parent_est"){
+
+  if(section == "parent_inds_amenazadas_global"){
     inds <- c(
-      "parent_especies_est" = "especies_region_estimadas"
+      "parent_especies_est" = "especies_region_estimadas",
+      "parent_cr" = "especies_amenazadas_global_cr",
+      "parent_en" = "especies_amenazadas_global_en",
+      "parent_vu" = "especies_amenazadas_global_vu"
+    )
+  }
+
+  if(section == "inds_especies_est"){
+    inds <- c(
+      "especies_total" = "especies_region_total"
     )
   }
 

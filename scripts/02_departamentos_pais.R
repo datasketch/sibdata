@@ -52,9 +52,12 @@ map(av_regions, function(region){
   tem_list <- tematica_list(region, con = con)
   #tem_list <- NA
 
+
+
+
   # Territorio
   dir.create(glue::glue("static/charts/{region}"))
-
+  library(ltgeo)
   subreg_tematica <- subregion_tematica(region, con)
   d <- subreg_tematica |>
     collect()
@@ -62,36 +65,43 @@ map(av_regions, function(region){
   dd <- d |>
     select(slug_region, especies_region_total, registros_region_total)
 
-  if(region == "colombia"){
-    map_name <- "col_departments"
-    deptos <- sibdata_departamento(con) |> collect()
-    dd <- dd |>
-      left_join(deptos, by = c("slug_region" = "slug"), copy = TRUE)
 
-  }else{
-    map_name <- paste0("col_depto_", region)
-    munis <- sibdata_municipio(con) |> collect()
-    dd <- dd |>
-      left_join(munis, by = c("slug_region" = "slug"))
-  }
+  map_name <- paste0("col_municipalities_", region)
+  munis <- sibdata_municipio(con) |> collect()
+  dd <- dd |>
+    left_join(munis, by = c("slug_region" = "slug"))
 
-  dd_esp <- dd |> select(cod_dane, value = especies_region_total, label)
-  dd_reg <- dd |> select(cod_dane, value = registros_region_total, label)
+  dd_esp <- dd |> select(cod_dane, value = especies_region_total, label, slug_region)
+  dd_reg <- dd |> select(cod_dane, value = registros_region_total, label, slug_region)
 
-  tooltip <- "<b>{value} especies</b><br><i>{label}</i>"
-  # munis_chart1<- lfltmagic::lflt_choropleth_GcdNum(dd_esp, map_name = map_name,
-  #                                                 tooltip = tooltip, map_zoom = F)
+  tooltip <- "<b>{value} especies</b><br><i>{label}</i><br><br>
+  <a href='https://deploy-preview-1--cifras-biodiversidad.netlify.app/{{region}}/{slug_region}'>Ver más</a>"
+  tooltip <- glue::glue(tooltip, .open = "{{", .close = "}}")
 
-  #munis_chart1 <- sib_chart_reg_municipios(d, "especies_region_total")
+  var <- "value"
+  opts <- list(
+    background_color = "#ffffff",
+    tooltip_template = tooltip,
+    zoom_show = FALSE,
+    map_tiles = NULL,
+    map_popup = TRUE
+  )
+  data <- dd_esp
+  munis_chart1 <- ltgeo::lt_choropleth(data, map_name = map_name, var = var, opts = opts)
+
   path1 <- glue::glue("static/charts/{region}/region_municipios_1.html")
-  # htmlwidgets::saveWidget(munis_chart1, path1)
+  htmlwidgets::saveWidget(munis_chart1, path1)
 
-  #munis_chart2 <- sib_chart_reg_municipios(d, "registros_region_total")
-  tooltip <- "<b>{value} observaciones</b><br><i>{label}</i>"
-  # munis_chart2<- lfltmagic::lflt_choropleth_GcdNum(dd_reg, map_name = map_name,
-  #                                                  tooltip = tooltip, map_zoom = F)
+
+  tooltip <- "<b>{value} observaciones</b><br><i>{label}</i><br><br>
+  <a href='https://deploy-preview-1--cifras-biodiversidad.netlify.app/{{region}}/{slug_region}'>Ver más</a>"
+  tooltip <- glue::glue(tooltip, .open = "{{", .close = "}}")
+
+  opts$tooltip_template <- tooltip
+
+  munis_chart2<- ltgeo::lt_choropleth(data, map_name = map_name, var = var, opts = opts)
   path2 <- glue::glue("static/charts/{region}/region_municipios_2.html")
-  # htmlwidgets::saveWidget(munis_chart2, path2)
+  htmlwidgets::saveWidget(munis_chart2, path2)
 
   region_tipo <- "municipio"
   if(region == "colombia") region_tipo <- "departamento"
@@ -158,8 +168,9 @@ map(av_regions, function(region){
     gallery = gallery,
     slides = slides,
     tematica = tem_list,
-    grupos_biologicos = reg_gr_bio,
-    grupos_interes = reg_gr_int,
+
+    # grupos_biologicos = reg_gr_bio,
+    # grupos_interes = reg_gr_int,
 
     territorio = territorio,
 

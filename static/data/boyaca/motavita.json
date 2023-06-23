@@ -569,7 +569,7 @@
     "registros_region_total_str": "414",
     "main_text": "A través del SiB Colombia se han publicado 414 observaciones\npara el municipio de Motavita. Estos datos hacen referencia a un total de\n84 especies.",
     "referencia": [],
-    "credito_foto": "motavita. Foto: Pepito Pérez. Creative Commons",
+    "credito_foto": "Acá se muestra el tooltip",
     "parent": "boyaca",
     "parent_label": "Boyacá"
   },
@@ -608,7 +608,38 @@
           "en_registros": 4,
           "vu": 2,
           "vu_registros": 2,
-          "especies_estimadas": "NA"
+          "especies_estimadas": "NA",
+          "species_list": [
+            {
+              "label": "Eremophila alpestris",
+              "slug_especie": "eremophila-alpestris",
+              "registros": 2,
+              "url_gbif": "https://www.gbif.org/species/9415596",
+              "url_cbc": "https://catalogo.biodiversidad.co/file/61d903ba182759fd36568fd5/summary",
+              "slug_tematica": "amenazadas-nacional-en"
+            },
+            {
+              "label": "Salvia bogotensis",
+              "slug_especie": "salvia-bogotensis",
+              "registros": 2,
+              "url_gbif": "https://www.gbif.org/species/7306642",
+              "slug_tematica": "amenazadas-nacional-en"
+            },
+            {
+              "label": "Passiflora crispolanata",
+              "slug_especie": "passiflora-crispolanata",
+              "registros": 1,
+              "url_gbif": "https://www.gbif.org/species/3587257",
+              "slug_tematica": "amenazadas-nacional-vu"
+            },
+            {
+              "label": "Salvia rubriflora",
+              "slug_especie": "salvia-rubriflora",
+              "registros": 1,
+              "url_gbif": "https://www.gbif.org/species/3888855",
+              "slug_tematica": "amenazadas-nacional-vu"
+            }
+          ]
         },
         {
           "slug": "amenazadas-global",
@@ -621,47 +652,17 @@
           "en_registros": "NA",
           "vu": "NA",
           "vu_registros": "NA",
-          "especies_estimadas": "NA"
-        }
-      ],
-      "species_list": [
-        {
-          "label": "Eremophila alpestris",
-          "slug_especie": "eremophila-alpestris",
-          "registros": 2,
-          "url_gbif": "https://www.gbif.org/species/9415596",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/61d903ba182759fd36568fd5/summary",
-          "slug_tematica": "amenazadas-nacional-en"
-        },
-        {
-          "label": "Salvia bogotensis",
-          "slug_especie": "salvia-bogotensis",
-          "registros": 2,
-          "url_gbif": "https://www.gbif.org/species/7306642",
-          "slug_tematica": "amenazadas-nacional-en"
-        },
-        {
-          "label": "Passiflora crispolanata",
-          "slug_especie": "passiflora-crispolanata",
-          "registros": 1,
-          "url_gbif": "https://www.gbif.org/species/3587257",
-          "slug_tematica": "amenazadas-nacional-vu"
-        },
-        {
-          "label": "Salvia rubriflora",
-          "slug_especie": "salvia-rubriflora",
-          "registros": 1,
-          "url_gbif": "https://www.gbif.org/species/3888855",
-          "slug_tematica": "amenazadas-nacional-vu"
+          "especies_estimadas": "NA",
+          "species_list": []
         }
       ]
     },
     {
       "slug": "amenazadas-nacional",
       "label": "Amenazadas nacional",
-      "estimadas_cr": 182,
-      "estimadas_en": 428,
-      "estimadas_vu": 687,
+      "parent_cr_estimadas": 182,
+      "parent_en_estimadas": 428,
+      "parent_vu_estimadas": 687,
       "especies": 4,
       "registros": 6,
       "cr": "NA",
@@ -672,6 +673,9 @@
       "vu_registros": 2,
       "especies_estimadas": "NA",
       "parent_especies_est": 41344,
+      "parent_cr": 23,
+      "parent_en": 67,
+      "parent_vu": 106,
       "parent_especies_total": 11300,
       "list_especies_amenazadas_nacional": {},
       "list_especies_amenazadas_nacional_vu": {},
@@ -712,9 +716,9 @@
     {
       "slug": "amenazadas-global",
       "label": "Amenazadas global",
-      "estimadas_cr": 383,
-      "estimadas_en": 672,
-      "estimadas_vu": 696,
+      "cr_estimadas": 383,
+      "en_estimadas": 672,
+      "vu_estimadas": 696,
       "especies": "NA",
       "registros": "NA",
       "cr": "NA",
@@ -725,6 +729,9 @@
       "vu_registros": "NA",
       "especies_estimadas": "NA",
       "parent_especies_est": 41344,
+      "parent_cr": 41,
+      "parent_en": 94,
+      "parent_vu": 123,
       "parent_especies_total": 11300,
       "list_especies_amenazadas_global": {},
       "list_especies_amenazadas_global_vu": {},
@@ -734,11 +741,11 @@
     },
     {
       "slug": "cites",
-      "estimadas_cites_total": 3545,
-      "estimadas_cites_i": 63,
-      "estimadas_cites_i_ii": 1,
-      "estimadas_cites_ii": 3450,
-      "estimadas_cites_iii": 31,
+      "cites_total_estimadas": 3545,
+      "cites_i_estimadas": 63,
+      "cites_i_ii_estimadas": 1,
+      "cites_ii_estimadas": 3450,
+      "cites_iii_estimadas": 31,
       "especies_cites_total": 10,
       "especies_cites_i": "NA",
       "especies_cites_ii": 10,
@@ -926,11 +933,92 @@
         }
       ],
       "list_especies_cites_iii": [],
-      "species_list": []
+      "species_list": [
+        {
+          "label": "Colibri coruscans",
+          "slug_especie": "colibri-coruscans",
+          "registros": 16,
+          "url_gbif": "https://www.gbif.org/species/5228474",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4a8dcf0106c67230e7385/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Lesbia victoriae",
+          "slug_especie": "lesbia-victoriae",
+          "registros": 11,
+          "url_gbif": "https://www.gbif.org/species/5228496",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56ca3180f0106c67230e7457/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Metallura tyrianthina",
+          "slug_especie": "metallura-tyrianthina",
+          "registros": 10,
+          "url_gbif": "https://www.gbif.org/species/2476860",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b67cf0106c67230e7406/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Lesbia nuna",
+          "slug_especie": "lesbia-nuna",
+          "registros": 6,
+          "url_gbif": "https://www.gbif.org/species/5228490",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56ca35c6f0106c67230e7459/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Eriocnemis vestita",
+          "slug_especie": "eriocnemis-vestita",
+          "registros": 5,
+          "url_gbif": "https://www.gbif.org/species/5228524",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c74cecf0106c67230e73e8/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Elanus leucurus",
+          "slug_especie": "elanus-leucurus",
+          "registros": 4,
+          "url_gbif": "https://www.gbif.org/species/2480367",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c6909bf0106c67230e73cf/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Buteo platypterus",
+          "slug_especie": "buteo-platypterus",
+          "registros": 1,
+          "url_gbif": "https://www.gbif.org/species/2480538",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c1fa1ff0106c67230e731d/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Geranoaetus melanoleucus",
+          "slug_especie": "geranoaetus-melanoleucus",
+          "registros": 1,
+          "url_gbif": "https://www.gbif.org/species/2480668",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b4b2f0106c67230e7405/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Heliangelus amethysticollis",
+          "slug_especie": "heliangelus-amethysticollis",
+          "registros": 1,
+          "url_gbif": "https://www.gbif.org/species/2476699",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9c8ecf0106c67230e7448/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Lafresnaya lafresnayi",
+          "slug_especie": "lafresnaya-lafresnayi",
+          "registros": 1,
+          "url_gbif": "https://www.gbif.org/species/2476238",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56ca18b6f0106c67230e7455/summary",
+          "slug_tematica": "cites-ii"
+        }
+      ]
     },
     {
       "slug": "endemicas",
-      "estimadas_endemicas": 8105,
+      "endemicas_estimadas": 8105,
       "especies_endemicas": 5,
       "registros_endemicas": 15,
       "parent_especies_endemicas": 1010,
@@ -978,7 +1066,7 @@
     {
       "slug": "migratorias",
       "texto": "La información de especies migratorias se basa en la\n         [Lista de referencia de especies de aves de Colombia - 2020](https://doi.org/10.15472/qhsz0p).\n         Para aportar más datos sobre este y otros grupos bilógicos puede visitar nuestro sitio web\n         https://biodiversidad.co",
-      "estimadas_migratorias": "NA",
+      "migratorias_estimadas": "NA",
       "especies_migratorias": 4,
       "registros_migratorias": 18,
       "parent_especies_migratorias": 90,
@@ -1020,10 +1108,10 @@
     },
     {
       "slug": "exoticas-invasoras",
-      "estimadas_exoticas_total": 2586,
-      "estimadas_exoticas": 1456,
-      "estimadas_exoticas_riesgo_invasion": 1095,
-      "estimadas_exoticas_invasoras": 22,
+      "exoticas_total_estimadas": 2586,
+      "exoticas_estimadas": 1456,
+      "exoticas_riesgo_invasion_estimadas": 1095,
+      "exoticas_invasoras_estimadas": 22,
       "especies_exoticas_total": 2,
       "especies_exoticas": 1,
       "especies_invasoras": "NA",

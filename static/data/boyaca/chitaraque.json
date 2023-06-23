@@ -569,7 +569,7 @@
     "registros_region_total_str": "3.389",
     "main_text": "A través del SiB Colombia se han publicado 3.389 observaciones\npara el municipio de Chitaraque. Estos datos hacen referencia a un total de\n184 especies.",
     "referencia": [],
-    "credito_foto": "chitaraque. Foto: Pepito Pérez. Creative Commons",
+    "credito_foto": "Acá se muestra el tooltip",
     "parent": "boyaca",
     "parent_label": "Boyacá"
   },
@@ -608,7 +608,17 @@
           "en_registros": "NA",
           "vu": 1,
           "vu_registros": 2,
-          "especies_estimadas": "NA"
+          "especies_estimadas": "NA",
+          "species_list": [
+            {
+              "label": "Dynastes neptunus",
+              "slug_especie": "dynastes-neptunus",
+              "registros": 2,
+              "url_gbif": "https://www.gbif.org/species/1074532",
+              "url_cbc": "https://catalogo.biodiversidad.co/file/56d783c93c16479905cba929/summary",
+              "slug_tematica": "amenazadas-nacional-vu"
+            }
+          ]
         },
         {
           "slug": "amenazadas-global",
@@ -621,41 +631,33 @@
           "en_registros": 1,
           "vu": 1,
           "vu_registros": 5,
-          "especies_estimadas": "NA"
-        }
-      ],
-      "species_list": [
-        {
-          "label": "Coeligena prunellei",
-          "slug_especie": "coeligena-prunellei",
-          "registros": 5,
-          "url_gbif": "https://www.gbif.org/species/2477039",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/5c6b2ae2d76e3b71032c8c0e/summary",
-          "slug_tematica": "amenazadas-global-vu"
-        },
-        {
-          "label": "Dynastes neptunus",
-          "slug_especie": "dynastes-neptunus",
-          "registros": 2,
-          "url_gbif": "https://www.gbif.org/species/1074532",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56d783c93c16479905cba929/summary",
-          "slug_tematica": "amenazadas-nacional-vu"
-        },
-        {
-          "label": "Meriania arizae",
-          "slug_especie": "meriania-arizae",
-          "registros": 1,
-          "url_gbif": "https://www.gbif.org/species/7833778",
-          "slug_tematica": "amenazadas-global-en"
+          "especies_estimadas": "NA",
+          "species_list": [
+            {
+              "label": "Coeligena prunellei",
+              "slug_especie": "coeligena-prunellei",
+              "registros": 5,
+              "url_gbif": "https://www.gbif.org/species/2477039",
+              "url_cbc": "https://catalogo.biodiversidad.co/file/5c6b2ae2d76e3b71032c8c0e/summary",
+              "slug_tematica": "amenazadas-global-vu"
+            },
+            {
+              "label": "Meriania arizae",
+              "slug_especie": "meriania-arizae",
+              "registros": 1,
+              "url_gbif": "https://www.gbif.org/species/7833778",
+              "slug_tematica": "amenazadas-global-en"
+            }
+          ]
         }
       ]
     },
     {
       "slug": "amenazadas-nacional",
       "label": "Amenazadas nacional",
-      "estimadas_cr": 182,
-      "estimadas_en": 428,
-      "estimadas_vu": 687,
+      "parent_cr_estimadas": 182,
+      "parent_en_estimadas": 428,
+      "parent_vu_estimadas": 687,
       "especies": 1,
       "registros": 2,
       "cr": "NA",
@@ -666,6 +668,9 @@
       "vu_registros": 2,
       "especies_estimadas": "NA",
       "parent_especies_est": 41344,
+      "parent_cr": 23,
+      "parent_en": 67,
+      "parent_vu": 106,
       "parent_especies_total": 11300,
       "list_especies_amenazadas_nacional": {},
       "list_especies_amenazadas_nacional_vu": {},
@@ -685,9 +690,9 @@
     {
       "slug": "amenazadas-global",
       "label": "Amenazadas global",
-      "estimadas_cr": 383,
-      "estimadas_en": 672,
-      "estimadas_vu": 696,
+      "cr_estimadas": 383,
+      "en_estimadas": 672,
+      "vu_estimadas": 696,
       "especies": 2,
       "registros": 6,
       "cr": "NA",
@@ -698,6 +703,9 @@
       "vu_registros": 5,
       "especies_estimadas": "NA",
       "parent_especies_est": 41344,
+      "parent_cr": 41,
+      "parent_en": 94,
+      "parent_vu": 123,
       "parent_especies_total": 11300,
       "list_especies_amenazadas_global": {},
       "list_especies_amenazadas_global_vu": {},
@@ -723,11 +731,11 @@
     },
     {
       "slug": "cites",
-      "estimadas_cites_total": 3545,
-      "estimadas_cites_i": 63,
-      "estimadas_cites_i_ii": 1,
-      "estimadas_cites_ii": 3450,
-      "estimadas_cites_iii": 31,
+      "cites_total_estimadas": 3545,
+      "cites_i_estimadas": 63,
+      "cites_i_ii_estimadas": 1,
+      "cites_ii_estimadas": 3450,
+      "cites_iii_estimadas": 31,
       "especies_cites_total": 23,
       "especies_cites_i": "NA",
       "especies_cites_ii": 23,
@@ -911,25 +919,87 @@
       "list_especies_cites_iii": [],
       "species_list": [
         {
-          "label": "Coeligena prunellei",
-          "slug_especie": "coeligena-prunellei",
-          "registros": 5,
-          "url_gbif": "https://www.gbif.org/species/2477039",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/5c6b2ae2d76e3b71032c8c0e/summary",
-          "slug_tematica": "amenazadas-global-vu"
+          "label": "Amazilia tzacatl",
+          "slug_especie": "amazilia-tzacatl",
+          "registros": 75,
+          "url_gbif": "https://www.gbif.org/species/2476441",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e782a283c45700544e407e/summary",
+          "slug_tematica": "cites-ii"
         },
         {
-          "label": "Meriania arizae",
-          "slug_especie": "meriania-arizae",
-          "registros": 1,
-          "url_gbif": "https://www.gbif.org/species/7833778",
-          "slug_tematica": "amenazadas-global-en"
+          "label": "Milvago chimachima",
+          "slug_especie": "milvago-chimachima",
+          "registros": 41,
+          "url_gbif": "https://www.gbif.org/species/2481066",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b89cf0106c67230e7408/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Forpus conspicillatus",
+          "slug_especie": "forpus-conspicillatus",
+          "registros": 34,
+          "url_gbif": "https://www.gbif.org/species/2479071",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c76fc3f0106c67230e73ed/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Anthracothorax nigricollis",
+          "slug_especie": "anthracothorax-nigricollis",
+          "registros": 19,
+          "url_gbif": "https://www.gbif.org/species/2476718",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56df4d0583c45700544e3c60/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Phaethornis guy",
+          "slug_especie": "phaethornis-guy",
+          "registros": 18,
+          "url_gbif": "https://www.gbif.org/species/2476607",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Spizaetus tyrannus",
+          "slug_especie": "spizaetus-tyrannus",
+          "registros": 18,
+          "url_gbif": "https://www.gbif.org/species/2480672",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56de6c0883c45700544e3c1f/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Colibri coruscans",
+          "slug_especie": "colibri-coruscans",
+          "registros": 8,
+          "url_gbif": "https://www.gbif.org/species/5228474",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4a8dcf0106c67230e7385/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Colibri delphinae",
+          "slug_especie": "colibri-delphinae",
+          "registros": 8,
+          "url_gbif": "https://www.gbif.org/species/5228485",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Pionus chalcopterus",
+          "slug_especie": "pionus-chalcopterus",
+          "registros": 8,
+          "url_gbif": "https://www.gbif.org/species/2479901",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Doryfera ludovicae",
+          "slug_especie": "doryfera-ludovicae",
+          "registros": 6,
+          "url_gbif": "https://www.gbif.org/species/2476971",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e79acc83c45700544e420e/summary",
+          "slug_tematica": "cites-ii"
         }
       ]
     },
     {
       "slug": "endemicas",
-      "estimadas_endemicas": 8105,
+      "endemicas_estimadas": 8105,
       "especies_endemicas": 4,
       "registros_endemicas": 82,
       "parent_especies_endemicas": 1010,
@@ -971,7 +1041,7 @@
     {
       "slug": "migratorias",
       "texto": "La información de especies migratorias se basa en la\n         [Lista de referencia de especies de aves de Colombia - 2020](https://doi.org/10.15472/qhsz0p).\n         Para aportar más datos sobre este y otros grupos bilógicos puede visitar nuestro sitio web\n         https://biodiversidad.co",
-      "estimadas_migratorias": "NA",
+      "migratorias_estimadas": "NA",
       "especies_migratorias": 24,
       "registros_migratorias": 354,
       "parent_especies_migratorias": 90,
@@ -1061,10 +1131,10 @@
     },
     {
       "slug": "exoticas-invasoras",
-      "estimadas_exoticas_total": 2586,
-      "estimadas_exoticas": 1456,
-      "estimadas_exoticas_riesgo_invasion": 1095,
-      "estimadas_exoticas_invasoras": 22,
+      "exoticas_total_estimadas": 2586,
+      "exoticas_estimadas": 1456,
+      "exoticas_riesgo_invasion_estimadas": 1095,
+      "exoticas_invasoras_estimadas": 22,
       "especies_exoticas_total": 1,
       "especies_exoticas": "NA",
       "especies_invasoras": "NA",

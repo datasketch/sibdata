@@ -63,7 +63,20 @@ sib_region_general <- function(region, con){
     filter(ref_id == estimada_ref_id) |>
       collect()
   reg_list$referencia <- ref$label
-  reg_list$credito_foto <- glue::glue("{region}. Foto: Pepito Pérez. Creative Commons")
+
+
+  # Creditos fotos
+
+  parent <- sib_parent_region(region, con)
+  if(parent %in% c("boyaca", "narino", "santander", "tolima"))
+    region <- parent
+  creditos_banners <- sibdata_banner_images(con) |> collect()
+  credito_foto <- creditos_banners |>
+    filter(slug == region) |>
+    pull(credito)
+
+  reg_list$credito_foto <- ifelse(is.na(credito_foto), "", credito_foto)
+
   reg_list
 
 }

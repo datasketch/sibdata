@@ -21,8 +21,15 @@ ss <- "https://docs.google.com/spreadsheets/d/1-FiWbPN7Zn4SQJQ9bhQ542JuZnAzV4FRb
 
 imagenes <- googlesheets4::read_sheet(ss, sheet = "imagenes_galeria")
 destacados_imagenes <- imagenes |>
-  select(slug_region, img_link)
-write_csv(destacados_imagenes, "data-raw/gallery_images.csv")
+  select(slug_region, img_link, credito)
+write_csv(destacados_imagenes, "data-raw/gallery_images.csv", na = "")
+
+banners <- googlesheets4::read_sheet(ss, sheet = "imagenes_landings")
+banner_imagenes <- banners |>
+  select(slug, credito) |>
+  filter(!is.na(slug))
+write_csv(banner_imagenes, "data-raw/banner_images.csv", na = "")
+
 
 
 preg_frecuentes <- googlesheets4::read_sheet(ss, sheet = "Preguntas frecuentes")

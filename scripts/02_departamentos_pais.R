@@ -75,7 +75,7 @@ map(av_regions, function(region){
   dd_reg <- dd |> select(cod_dane, value = registros_region_total, label, slug_region)
 
   tooltip <- "<b>{value} especies</b><br><i>{label}</i><br><br>
-  <a href='https://deploy-preview-1--cifras-biodiversidad.netlify.app/{{region}}/{slug_region}'>Ver más</a>"
+  <a href='https://deploy-preview-1--cifras-biodiversidad.netlify.app/{{region}}/{slug_region}' target='_blank'>Ver más</a>"
   tooltip <- glue::glue(tooltip, .open = "{{", .close = "}}")
 
   var <- "value"
@@ -94,7 +94,7 @@ map(av_regions, function(region){
 
 
   tooltip <- "<b>{value} observaciones</b><br><i>{label}</i><br><br>
-  <a href='https://deploy-preview-1--cifras-biodiversidad.netlify.app/{{region}}/{slug_region}'>Ver más</a>"
+  <a href='https://deploy-preview-1--cifras-biodiversidad.netlify.app/{{region}}/{slug_region}'  target='_blank'>Ver más</a>"
   tooltip <- glue::glue(tooltip, .open = "{{", .close = "}}")
 
   opts$tooltip_template <- tooltip

@@ -43,6 +43,9 @@ ds$ind_meta <- ind_meta
 gallery_images <- read_csv("data-raw/gallery_images.csv")
 ds$gallery_images <- gallery_images
 
+banner_images <- read_csv("data-raw/banner_images.csv")
+ds$banner_images <- banner_images
+
 preg_frecuentes <- read_csv("data-raw/preg_frecuentes.csv")
 ds$preg_frecuentes <- preg_frecuentes
 

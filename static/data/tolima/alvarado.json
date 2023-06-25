@@ -569,7 +569,7 @@
     "registros_region_total_str": "4.651",
     "main_text": "A través del SiB Colombia se han publicado 4.651 observaciones\npara el municipio de Alvarado. Estos datos hacen referencia a un total de\n433 especies.",
     "referencia": [],
-    "credito_foto": "alvarado. Foto: Pepito Pérez. Creative Commons",
+    "credito_foto": "",
     "parent": "tolima",
     "parent_label": "Tolima"
   },
@@ -608,7 +608,24 @@
           "en_registros": "NA",
           "vu": 2,
           "vu_registros": 4,
-          "especies_estimadas": "NA"
+          "especies_estimadas": "NA",
+          "species_list": [
+            {
+              "label": "Leptotila conoveri",
+              "slug_especie": "leptotila-conoveri",
+              "registros": 3,
+              "url_gbif": "https://www.gbif.org/species/2496093",
+              "slug_tematica": "amenazadas-nacional-vu"
+            },
+            {
+              "label": "Ara militaris",
+              "slug_especie": "ara-militaris",
+              "registros": 1,
+              "url_gbif": "https://www.gbif.org/species/5959230",
+              "url_cbc": "https://catalogo.biodiversidad.co/file/56e7807583c45700544e405e/summary",
+              "slug_tematica": "amenazadas-nacional-vu"
+            }
+          ]
         },
         {
           "slug": "amenazadas-global",
@@ -621,48 +638,33 @@
           "en_registros": "NA",
           "vu": 2,
           "vu_registros": 3,
-          "especies_estimadas": "NA"
-        }
-      ],
-      "species_list": [
-        {
-          "label": "Leptotila conoveri",
-          "slug_especie": "leptotila-conoveri",
-          "registros": 3,
-          "url_gbif": "https://www.gbif.org/species/2496093",
-          "slug_tematica": "amenazadas-nacional-vu"
-        },
-        {
-          "label": "Gustavia santanderiensis",
-          "slug_especie": "gustavia-santanderiensis",
-          "registros": 2,
-          "url_gbif": "https://www.gbif.org/species/5383794",
-          "slug_tematica": "amenazadas-global-vu"
-        },
-        {
-          "label": "Ara militaris",
-          "slug_especie": "ara-militaris",
-          "registros": 1,
-          "url_gbif": "https://www.gbif.org/species/5959230",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7807583c45700544e405e/summary",
-          "slug_tematica": "amenazadas-global-vu"
-        },
-        {
-          "label": "Ara militaris",
-          "slug_especie": "ara-militaris",
-          "registros": 1,
-          "url_gbif": "https://www.gbif.org/species/5959230",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7807583c45700544e405e/summary",
-          "slug_tematica": "amenazadas-nacional-vu"
+          "especies_estimadas": "NA",
+          "species_list": [
+            {
+              "label": "Gustavia santanderiensis",
+              "slug_especie": "gustavia-santanderiensis",
+              "registros": 2,
+              "url_gbif": "https://www.gbif.org/species/5383794",
+              "slug_tematica": "amenazadas-global-vu"
+            },
+            {
+              "label": "Ara militaris",
+              "slug_especie": "ara-militaris",
+              "registros": 1,
+              "url_gbif": "https://www.gbif.org/species/5959230",
+              "url_cbc": "https://catalogo.biodiversidad.co/file/56e7807583c45700544e405e/summary",
+              "slug_tematica": "amenazadas-global-vu"
+            }
+          ]
         }
       ]
     },
     {
       "slug": "amenazadas-nacional",
       "label": "Amenazadas nacional",
-      "estimadas_cr": 182,
-      "estimadas_en": 428,
-      "estimadas_vu": 687,
+      "parent_cr_estimadas": 182,
+      "parent_en_estimadas": 428,
+      "parent_vu_estimadas": 687,
       "especies": 2,
       "registros": 4,
       "cr": "NA",
@@ -673,6 +675,9 @@
       "vu_registros": 4,
       "especies_estimadas": "NA",
       "parent_especies_est": 46508,
+      "parent_cr": 20,
+      "parent_en": 30,
+      "parent_vu": 79,
       "parent_especies_total": 8386,
       "list_especies_amenazadas_nacional": {},
       "list_especies_amenazadas_nacional_vu": {},
@@ -699,9 +704,9 @@
     {
       "slug": "amenazadas-global",
       "label": "Amenazadas global",
-      "estimadas_cr": 383,
-      "estimadas_en": 672,
-      "estimadas_vu": 696,
+      "cr_estimadas": 383,
+      "en_estimadas": 672,
+      "vu_estimadas": 696,
       "especies": 2,
       "registros": 3,
       "cr": "NA",
@@ -712,6 +717,9 @@
       "vu_registros": 3,
       "especies_estimadas": "NA",
       "parent_especies_est": 46508,
+      "parent_cr": 14,
+      "parent_en": 52,
+      "parent_vu": 92,
       "parent_especies_total": 8386,
       "list_especies_amenazadas_global": {},
       "list_especies_amenazadas_global_vu": {},
@@ -737,11 +745,11 @@
     },
     {
       "slug": "cites",
-      "estimadas_cites_total": 3545,
-      "estimadas_cites_i": 63,
-      "estimadas_cites_i_ii": 1,
-      "estimadas_cites_ii": 3450,
-      "estimadas_cites_iii": 31,
+      "cites_total_estimadas": 3545,
+      "cites_i_estimadas": 63,
+      "cites_i_ii_estimadas": 1,
+      "cites_ii_estimadas": 3450,
+      "cites_iii_estimadas": 31,
       "especies_cites_total": 40,
       "especies_cites_i": 1,
       "especies_cites_ii": 36,
@@ -963,25 +971,89 @@
       ],
       "species_list": [
         {
-          "label": "Gustavia santanderiensis",
-          "slug_especie": "gustavia-santanderiensis",
-          "registros": 2,
-          "url_gbif": "https://www.gbif.org/species/5383794",
-          "slug_tematica": "amenazadas-global-vu"
+          "label": "Milvago chimachima",
+          "slug_especie": "milvago-chimachima",
+          "registros": 44,
+          "url_gbif": "https://www.gbif.org/species/2481066",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b89cf0106c67230e7408/summary",
+          "slug_tematica": "cites-ii"
         },
         {
-          "label": "Ara militaris",
-          "slug_especie": "ara-militaris",
-          "registros": 1,
-          "url_gbif": "https://www.gbif.org/species/5959230",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7807583c45700544e405e/summary",
-          "slug_tematica": "amenazadas-global-vu"
+          "label": "Forpus conspicillatus",
+          "slug_especie": "forpus-conspicillatus",
+          "registros": 37,
+          "url_gbif": "https://www.gbif.org/species/2479071",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c76fc3f0106c67230e73ed/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Brotogeris jugularis",
+          "slug_especie": "brotogeris-jugularis",
+          "registros": 32,
+          "url_gbif": "https://www.gbif.org/species/2479563",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56df5ee983c45700544e3c6a/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Pionus menstruus",
+          "slug_especie": "pionus-menstruus",
+          "registros": 23,
+          "url_gbif": "https://www.gbif.org/species/2479902",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e6089483c45700544e3e8f/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Dendrocygna autumnalis",
+          "slug_especie": "dendrocygna-autumnalis",
+          "registros": 20,
+          "url_gbif": "https://www.gbif.org/species/2498393",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c51ad1f0106c67230e7398/summary",
+          "slug_tematica": "cites-iii"
+        },
+        {
+          "label": "Amazona ochrocephala",
+          "slug_especie": "amazona-ochrocephala",
+          "registros": 13,
+          "url_gbif": "https://www.gbif.org/species/2479612",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7943b83c45700544e419d/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Falco sparverius",
+          "slug_especie": "falco-sparverius",
+          "registros": 10,
+          "url_gbif": "https://www.gbif.org/species/9685907",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c769ddf0106c67230e73ec/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Buteogallus meridionalis",
+          "slug_especie": "buteogallus-meridionalis",
+          "registros": 9,
+          "url_gbif": "https://www.gbif.org/species/2480655",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d6c5283c16479905cba90e/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Athene cunicularia",
+          "slug_especie": "athene-cunicularia",
+          "registros": 8,
+          "url_gbif": "https://www.gbif.org/species/2497240",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Elanus leucurus",
+          "slug_especie": "elanus-leucurus",
+          "registros": 8,
+          "url_gbif": "https://www.gbif.org/species/2480367",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c6909bf0106c67230e73cf/summary",
+          "slug_tematica": "cites-ii"
         }
       ]
     },
     {
       "slug": "endemicas",
-      "estimadas_endemicas": 8105,
+      "endemicas_estimadas": 8105,
       "especies_endemicas": 25,
       "registros_endemicas": 301,
       "parent_especies_endemicas": 674,
@@ -1072,7 +1144,7 @@
     {
       "slug": "migratorias",
       "texto": "La información de especies migratorias se basa en la\n         [Lista de referencia de especies de aves de Colombia - 2020](https://doi.org/10.15472/qhsz0p).\n         Para aportar más datos sobre este y otros grupos bilógicos puede visitar nuestro sitio web\n         https://biodiversidad.co",
-      "estimadas_migratorias": "NA",
+      "migratorias_estimadas": "NA",
       "especies_migratorias": 35,
       "registros_migratorias": 270,
       "parent_especies_migratorias": 83,
@@ -1162,10 +1234,10 @@
     },
     {
       "slug": "exoticas-invasoras",
-      "estimadas_exoticas_total": 2586,
-      "estimadas_exoticas": 1456,
-      "estimadas_exoticas_riesgo_invasion": 1095,
-      "estimadas_exoticas_invasoras": 22,
+      "exoticas_total_estimadas": 2586,
+      "exoticas_estimadas": 1456,
+      "exoticas_riesgo_invasion_estimadas": 1095,
+      "exoticas_invasoras_estimadas": 22,
       "especies_exoticas_total": 9,
       "especies_exoticas": 5,
       "especies_invasoras": "NA",

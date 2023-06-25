@@ -569,7 +569,7 @@
     "registros_region_total_str": "227",
     "main_text": "A través del SiB Colombia se han publicado 227 observaciones\npara el municipio de San Bernardo. Estos datos hacen referencia a un total de\n119 especies.",
     "referencia": [],
-    "credito_foto": "san-bernardo-nar. Foto: Pepito Pérez. Creative Commons",
+    "credito_foto": "",
     "parent": "narino",
     "parent_label": "Nariño"
   },
@@ -608,7 +608,17 @@
           "en_registros": "NA",
           "vu": 1,
           "vu_registros": 1,
-          "especies_estimadas": "NA"
+          "especies_estimadas": "NA",
+          "species_list": [
+            {
+              "label": "Tremarctos ornatus",
+              "slug_especie": "tremarctos-ornatus",
+              "registros": 1,
+              "url_gbif": "https://www.gbif.org/species/2433401",
+              "url_cbc": "https://catalogo.biodiversidad.co/file/56ccae30207ecea54a561e3d/summary",
+              "slug_tematica": "amenazadas-nacional-vu"
+            }
+          ]
         },
         {
           "slug": "amenazadas-global",
@@ -621,41 +631,33 @@
           "en_registros": "NA",
           "vu": 2,
           "vu_registros": 2,
-          "especies_estimadas": "NA"
-        }
-      ],
-      "species_list": [
-        {
-          "label": "Clethra rugosa",
-          "slug_especie": "clethra-rugosa",
-          "registros": 1,
-          "url_gbif": "https://www.gbif.org/species/3718157",
-          "slug_tematica": "amenazadas-global-vu"
-        },
-        {
-          "label": "Tremarctos ornatus",
-          "slug_especie": "tremarctos-ornatus",
-          "registros": 1,
-          "url_gbif": "https://www.gbif.org/species/2433401",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56ccae30207ecea54a561e3d/summary",
-          "slug_tematica": "amenazadas-global-vu"
-        },
-        {
-          "label": "Tremarctos ornatus",
-          "slug_especie": "tremarctos-ornatus",
-          "registros": 1,
-          "url_gbif": "https://www.gbif.org/species/2433401",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56ccae30207ecea54a561e3d/summary",
-          "slug_tematica": "amenazadas-nacional-vu"
+          "especies_estimadas": "NA",
+          "species_list": [
+            {
+              "label": "Clethra rugosa",
+              "slug_especie": "clethra-rugosa",
+              "registros": 1,
+              "url_gbif": "https://www.gbif.org/species/3718157",
+              "slug_tematica": "amenazadas-global-vu"
+            },
+            {
+              "label": "Tremarctos ornatus",
+              "slug_especie": "tremarctos-ornatus",
+              "registros": 1,
+              "url_gbif": "https://www.gbif.org/species/2433401",
+              "url_cbc": "https://catalogo.biodiversidad.co/file/56ccae30207ecea54a561e3d/summary",
+              "slug_tematica": "amenazadas-global-vu"
+            }
+          ]
         }
       ]
     },
     {
       "slug": "amenazadas-nacional",
       "label": "Amenazadas nacional",
-      "estimadas_cr": 182,
-      "estimadas_en": 428,
-      "estimadas_vu": 687,
+      "parent_cr_estimadas": 182,
+      "parent_en_estimadas": 428,
+      "parent_vu_estimadas": 687,
       "especies": 1,
       "registros": 1,
       "cr": "NA",
@@ -666,6 +668,9 @@
       "vu_registros": 1,
       "especies_estimadas": "NA",
       "parent_especies_est": 51947,
+      "parent_cr": 13,
+      "parent_en": 60,
+      "parent_vu": 86,
       "parent_especies_total": 10624,
       "list_especies_amenazadas_nacional": {},
       "list_especies_amenazadas_nacional_vu": {},
@@ -685,9 +690,9 @@
     {
       "slug": "amenazadas-global",
       "label": "Amenazadas global",
-      "estimadas_cr": 383,
-      "estimadas_en": 672,
-      "estimadas_vu": 696,
+      "cr_estimadas": 383,
+      "en_estimadas": 672,
+      "vu_estimadas": 696,
       "especies": 2,
       "registros": 2,
       "cr": "NA",
@@ -698,6 +703,9 @@
       "vu_registros": 2,
       "especies_estimadas": "NA",
       "parent_especies_est": 51947,
+      "parent_cr": 29,
+      "parent_en": 52,
+      "parent_vu": 94,
       "parent_especies_total": 10624,
       "list_especies_amenazadas_global": {},
       "list_especies_amenazadas_global_vu": {},
@@ -723,11 +731,11 @@
     },
     {
       "slug": "cites",
-      "estimadas_cites_total": 3545,
-      "estimadas_cites_i": 63,
-      "estimadas_cites_i_ii": 1,
-      "estimadas_cites_ii": 3450,
-      "estimadas_cites_iii": 31,
+      "cites_total_estimadas": 3545,
+      "cites_i_estimadas": 63,
+      "cites_i_ii_estimadas": 1,
+      "cites_ii_estimadas": 3450,
+      "cites_iii_estimadas": 31,
       "especies_cites_total": 7,
       "especies_cites_i": 1,
       "especies_cites_ii": 6,
@@ -870,11 +878,52 @@
       "list_especies_cites_iii": [],
       "species_list": [
         {
-          "label": "Clethra rugosa",
-          "slug_especie": "clethra-rugosa",
+          "label": "Epidendrum fimbriatum",
+          "slug_especie": "epidendrum-fimbriatum",
+          "registros": 3,
+          "url_gbif": "https://www.gbif.org/species/5314559",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e19c1183c45700544e3d1c/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Falco sparverius",
+          "slug_especie": "falco-sparverius",
+          "registros": 3,
+          "url_gbif": "https://www.gbif.org/species/9685907",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c769ddf0106c67230e73ec/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Epidendrum frutex",
+          "slug_especie": "epidendrum-frutex",
+          "registros": 2,
+          "url_gbif": "https://www.gbif.org/species/5321014",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e19dd483c45700544e3d1e/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Puma concolor",
+          "slug_especie": "puma-concolor",
+          "registros": 2,
+          "url_gbif": "https://www.gbif.org/species/2435099",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56ca9a27f0106c67230e746b/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Fernandezia crystallina",
+          "slug_especie": "fernandezia-crystallina",
           "registros": 1,
-          "url_gbif": "https://www.gbif.org/species/3718157",
-          "slug_tematica": "amenazadas-global-vu"
+          "url_gbif": "https://www.gbif.org/species/8017152",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e240f183c45700544e3d6a/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Pudu mephistophiles",
+          "slug_especie": "pudu-mephistophiles",
+          "registros": 1,
+          "url_gbif": "https://www.gbif.org/species/2440912",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5f6284b26974676445c6a7c5/summary",
+          "slug_tematica": "cites-ii"
         },
         {
           "label": "Tremarctos ornatus",
@@ -882,13 +931,13 @@
           "registros": 1,
           "url_gbif": "https://www.gbif.org/species/2433401",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56ccae30207ecea54a561e3d/summary",
-          "slug_tematica": "amenazadas-global-vu"
+          "slug_tematica": "cites-i"
         }
       ]
     },
     {
       "slug": "endemicas",
-      "estimadas_endemicas": 8105,
+      "endemicas_estimadas": 8105,
       "especies_endemicas": 5,
       "registros_endemicas": 7,
       "parent_especies_endemicas": 596,
@@ -936,7 +985,7 @@
     {
       "slug": "migratorias",
       "texto": "La información de especies migratorias se basa en la\n         [Lista de referencia de especies de aves de Colombia - 2020](https://doi.org/10.15472/qhsz0p).\n         Para aportar más datos sobre este y otros grupos bilógicos puede visitar nuestro sitio web\n         https://biodiversidad.co",
-      "estimadas_migratorias": "NA",
+      "migratorias_estimadas": "NA",
       "especies_migratorias": 1,
       "registros_migratorias": 4,
       "parent_especies_migratorias": 110,
@@ -954,10 +1003,10 @@
     },
     {
       "slug": "exoticas-invasoras",
-      "estimadas_exoticas_total": 2586,
-      "estimadas_exoticas": 1456,
-      "estimadas_exoticas_riesgo_invasion": 1095,
-      "estimadas_exoticas_invasoras": 22,
+      "exoticas_total_estimadas": 2586,
+      "exoticas_estimadas": 1456,
+      "exoticas_riesgo_invasion_estimadas": 1095,
+      "exoticas_invasoras_estimadas": 22,
       "especies_exoticas_total": 8,
       "especies_exoticas": 3,
       "especies_invasoras": "NA",

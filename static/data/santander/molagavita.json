@@ -569,7 +569,7 @@
     "registros_region_total_str": "446",
     "main_text": "A través del SiB Colombia se han publicado 446 observaciones\npara el municipio de Molagavita. Estos datos hacen referencia a un total de\n80 especies.",
     "referencia": [],
-    "credito_foto": "molagavita. Foto: Pepito Pérez. Creative Commons",
+    "credito_foto": "",
     "parent": "santander",
     "parent_label": "Santander"
   },
@@ -608,7 +608,39 @@
           "en_registros": 2,
           "vu": 2,
           "vu_registros": 2,
-          "especies_estimadas": "NA"
+          "especies_estimadas": "NA",
+          "species_list": [
+            {
+              "label": "Coeligena bonapartei",
+              "slug_especie": "coeligena-bonapartei",
+              "registros": 2,
+              "url_gbif": "https://www.gbif.org/species/2477033",
+              "url_cbc": "https://catalogo.biodiversidad.co/file/56c4a3fbf0106c67230e7384/summary",
+              "slug_tematica": "amenazadas-nacional-en"
+            },
+            {
+              "label": "Hapalopsittaca amazonina",
+              "slug_especie": "hapalopsittaca-amazonina",
+              "registros": 1,
+              "url_gbif": "https://www.gbif.org/species/2479473",
+              "slug_tematica": "amenazadas-nacional-vu"
+            },
+            {
+              "label": "Salvia jaramilloi",
+              "slug_especie": "salvia-jaramilloi",
+              "registros": 1,
+              "url_gbif": "https://www.gbif.org/species/3898904",
+              "slug_tematica": "amenazadas-nacional-vu"
+            },
+            {
+              "label": "Vultur gryphus",
+              "slug_especie": "vultur-gryphus",
+              "registros": 1,
+              "url_gbif": "https://www.gbif.org/species/2481907",
+              "url_cbc": "https://catalogo.biodiversidad.co/file/56d0552d3c16479905cba819/summary",
+              "slug_tematica": "amenazadas-nacional-cr"
+            }
+          ]
         },
         {
           "slug": "amenazadas-global",
@@ -621,64 +653,34 @@
           "en_registros": "NA",
           "vu": 2,
           "vu_registros": 2,
-          "especies_estimadas": "NA"
-        }
-      ],
-      "species_list": [
-        {
-          "label": "Coeligena bonapartei",
-          "slug_especie": "coeligena-bonapartei",
-          "registros": 2,
-          "url_gbif": "https://www.gbif.org/species/2477033",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4a3fbf0106c67230e7384/summary",
-          "slug_tematica": "amenazadas-nacional-en"
-        },
-        {
-          "label": "Hapalopsittaca amazonina",
-          "slug_especie": "hapalopsittaca-amazonina",
-          "registros": 1,
-          "url_gbif": "https://www.gbif.org/species/2479473",
-          "slug_tematica": "amenazadas-nacional-vu"
-        },
-        {
-          "label": "Pleurothallis killipii",
-          "slug_especie": "pleurothallis-killipii",
-          "registros": 1,
-          "url_gbif": "https://www.gbif.org/species/2787067",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/5b5b42a0f0d3bfe0305746b7/summary",
-          "slug_tematica": "amenazadas-global-vu"
-        },
-        {
-          "label": "Salvia jaramilloi",
-          "slug_especie": "salvia-jaramilloi",
-          "registros": 1,
-          "url_gbif": "https://www.gbif.org/species/3898904",
-          "slug_tematica": "amenazadas-nacional-vu"
-        },
-        {
-          "label": "Vultur gryphus",
-          "slug_especie": "vultur-gryphus",
-          "registros": 1,
-          "url_gbif": "https://www.gbif.org/species/2481907",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56d0552d3c16479905cba819/summary",
-          "slug_tematica": "amenazadas-global-vu"
-        },
-        {
-          "label": "Vultur gryphus",
-          "slug_especie": "vultur-gryphus",
-          "registros": 1,
-          "url_gbif": "https://www.gbif.org/species/2481907",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56d0552d3c16479905cba819/summary",
-          "slug_tematica": "amenazadas-nacional-cr"
+          "especies_estimadas": "NA",
+          "species_list": [
+            {
+              "label": "Pleurothallis killipii",
+              "slug_especie": "pleurothallis-killipii",
+              "registros": 1,
+              "url_gbif": "https://www.gbif.org/species/2787067",
+              "url_cbc": "https://catalogo.biodiversidad.co/file/5b5b42a0f0d3bfe0305746b7/summary",
+              "slug_tematica": "amenazadas-global-vu"
+            },
+            {
+              "label": "Vultur gryphus",
+              "slug_especie": "vultur-gryphus",
+              "registros": 1,
+              "url_gbif": "https://www.gbif.org/species/2481907",
+              "url_cbc": "https://catalogo.biodiversidad.co/file/56d0552d3c16479905cba819/summary",
+              "slug_tematica": "amenazadas-global-vu"
+            }
+          ]
         }
       ]
     },
     {
       "slug": "amenazadas-nacional",
       "label": "Amenazadas nacional",
-      "estimadas_cr": 182,
-      "estimadas_en": 428,
-      "estimadas_vu": 687,
+      "parent_cr_estimadas": 182,
+      "parent_en_estimadas": 428,
+      "parent_vu_estimadas": 687,
       "especies": 4,
       "registros": 5,
       "cr": 1,
@@ -689,6 +691,9 @@
       "vu_registros": 2,
       "especies_estimadas": "NA",
       "parent_especies_est": 38198,
+      "parent_cr": 34,
+      "parent_en": 87,
+      "parent_vu": 123,
       "parent_especies_total": 13280,
       "list_especies_amenazadas_nacional": {},
       "list_especies_amenazadas_nacional_vu": {},
@@ -730,9 +735,9 @@
     {
       "slug": "amenazadas-global",
       "label": "Amenazadas global",
-      "estimadas_cr": 383,
-      "estimadas_en": 672,
-      "estimadas_vu": 696,
+      "cr_estimadas": 383,
+      "en_estimadas": 672,
+      "vu_estimadas": 696,
       "especies": 2,
       "registros": 2,
       "cr": "NA",
@@ -743,6 +748,9 @@
       "vu_registros": 2,
       "especies_estimadas": "NA",
       "parent_especies_est": 38198,
+      "parent_cr": 48,
+      "parent_en": 116,
+      "parent_vu": 138,
       "parent_especies_total": 13280,
       "list_especies_amenazadas_global": {},
       "list_especies_amenazadas_global_vu": {},
@@ -769,11 +777,11 @@
     },
     {
       "slug": "cites",
-      "estimadas_cites_total": 3545,
-      "estimadas_cites_i": 63,
-      "estimadas_cites_i_ii": 1,
-      "estimadas_cites_ii": 3450,
-      "estimadas_cites_iii": 31,
+      "cites_total_estimadas": 3545,
+      "cites_i_estimadas": 63,
+      "cites_i_ii_estimadas": 1,
+      "cites_ii_estimadas": 3450,
+      "cites_iii_estimadas": 31,
       "especies_cites_total": 16,
       "especies_cites_i": 1,
       "especies_cites_ii": 15,
@@ -966,26 +974,87 @@
       "list_especies_cites_iii": [],
       "species_list": [
         {
-          "label": "Pleurothallis killipii",
-          "slug_especie": "pleurothallis-killipii",
-          "registros": 1,
-          "url_gbif": "https://www.gbif.org/species/2787067",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/5b5b42a0f0d3bfe0305746b7/summary",
-          "slug_tematica": "amenazadas-global-vu"
+          "label": "Heliangelus amethysticollis",
+          "slug_especie": "heliangelus-amethysticollis",
+          "registros": 26,
+          "url_gbif": "https://www.gbif.org/species/2476699",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9c8ecf0106c67230e7448/summary",
+          "slug_tematica": "cites-ii"
         },
         {
-          "label": "Vultur gryphus",
-          "slug_especie": "vultur-gryphus",
+          "label": "Metallura tyrianthina",
+          "slug_especie": "metallura-tyrianthina",
+          "registros": 20,
+          "url_gbif": "https://www.gbif.org/species/2476860",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b67cf0106c67230e7406/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Coeligena bonapartei",
+          "slug_especie": "coeligena-bonapartei",
+          "registros": 2,
+          "url_gbif": "https://www.gbif.org/species/2477033",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4a3fbf0106c67230e7384/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Coeligena torquata",
+          "slug_especie": "coeligena-torquata",
+          "registros": 2,
+          "url_gbif": "https://www.gbif.org/species/2477053",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Elanoides forficatus",
+          "slug_especie": "elanoides-forficatus",
+          "registros": 2,
+          "url_gbif": "https://www.gbif.org/species/2480461",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d8b3d03c16479905cba972/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Epidendrum caesaris",
+          "slug_especie": "epidendrum-caesaris",
           "registros": 1,
-          "url_gbif": "https://www.gbif.org/species/2481907",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56d0552d3c16479905cba819/summary",
-          "slug_tematica": "amenazadas-global-vu"
+          "url_gbif": "https://www.gbif.org/species/5951978",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Falco sparverius",
+          "slug_especie": "falco-sparverius",
+          "registros": 1,
+          "url_gbif": "https://www.gbif.org/species/9685907",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c769ddf0106c67230e73ec/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Fernandezia crystallina",
+          "slug_especie": "fernandezia-crystallina",
+          "registros": 1,
+          "url_gbif": "https://www.gbif.org/species/8017152",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e240f183c45700544e3d6a/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Hapalopsittaca amazonina",
+          "slug_especie": "hapalopsittaca-amazonina",
+          "registros": 1,
+          "url_gbif": "https://www.gbif.org/species/2479473",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Masdevallia coriacea",
+          "slug_especie": "masdevallia-coriacea",
+          "registros": 1,
+          "url_gbif": "https://www.gbif.org/species/2848467",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7870583c45700544e40cc/summary",
+          "slug_tematica": "cites-ii"
         }
       ]
     },
     {
       "slug": "endemicas",
-      "estimadas_endemicas": 8105,
+      "endemicas_estimadas": 8105,
       "especies_endemicas": 5,
       "registros_endemicas": 9,
       "parent_especies_endemicas": 1185,
@@ -1033,7 +1102,7 @@
     {
       "slug": "migratorias",
       "texto": "La información de especies migratorias se basa en la\n         [Lista de referencia de especies de aves de Colombia - 2020](https://doi.org/10.15472/qhsz0p).\n         Para aportar más datos sobre este y otros grupos bilógicos puede visitar nuestro sitio web\n         https://biodiversidad.co",
-      "estimadas_migratorias": "NA",
+      "migratorias_estimadas": "NA",
       "especies_migratorias": 4,
       "registros_migratorias": 13,
       "parent_especies_migratorias": 97,
@@ -1075,10 +1144,10 @@
     },
     {
       "slug": "exoticas-invasoras",
-      "estimadas_exoticas_total": 2586,
-      "estimadas_exoticas": 1456,
-      "estimadas_exoticas_riesgo_invasion": 1095,
-      "estimadas_exoticas_invasoras": 22,
+      "exoticas_total_estimadas": 2586,
+      "exoticas_estimadas": 1456,
+      "exoticas_riesgo_invasion_estimadas": 1095,
+      "exoticas_invasoras_estimadas": 22,
       "especies_exoticas_total": 1,
       "especies_exoticas": 1,
       "especies_invasoras": "NA",

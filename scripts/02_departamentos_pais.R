@@ -82,9 +82,13 @@ map(av_regions, function(region){
   opts <- list(
     background_color = "#ffffff",
     tooltip_template = tooltip,
-    zoom_show = FALSE,
+    zoom_show = TRUE,
+    border_width = 1,
+    border_color = "white",
     map_tiles = NULL,
-    map_popup = TRUE
+    map_popup = TRUE,
+    legend_show = TRUE,
+    title_legend = "Especies"
   )
   data <- dd_esp
   munis_chart1 <- ltgeo::lt_choropleth(data, map_name = map_name, var = var, opts = opts)
@@ -94,10 +98,11 @@ map(av_regions, function(region){
 
 
   tooltip <- "<b>{value} observaciones</b><br><i>{label}</i><br><br>
-  <a href='https://deploy-preview-1--cifras-biodiversidad.netlify.app/{{region}}/{slug_region}'  target='_blank'>Ver más</a>"
+  <a href='https://cifras.biodiversidad.co/{{region}}/{slug_region}'  target='_blank'>Ver más</a>"
   tooltip <- glue::glue(tooltip, .open = "{{", .close = "}}")
 
   opts$tooltip_template <- tooltip
+  opts$title_legend <- "Observaciones"
 
   munis_chart2<- ltgeo::lt_choropleth(data, map_name = map_name, var = var, opts = opts)
   path2 <- glue::glue("static/charts/{region}/region_municipios_2.html")

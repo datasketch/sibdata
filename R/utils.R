@@ -27,7 +27,7 @@ select_non_single_cat_cols <- function(x){
 
 
 #' @export
-sys_file <- function(...){
+sys_file_sibdata <- function(...){
   system.file(..., package = "sibdata")
 }
 

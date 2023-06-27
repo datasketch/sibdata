@@ -45,12 +45,12 @@ sib_available_profile_types <- function(){
 }
 
 #' @export
-sib_available_grupos <- function(tipo = NULL){
+sib_available_grupos <- function(tipo = NULL, con){
   grupo_tipo <- tipo
-  grupo <- sibdata_grupo() |> collect()
+  grupo <- sibdata_grupo(con) |> collect()
   if(!is.null(tipo)){
-    grps <- grupo |>
-      filter(tipo == tipo)
+    grupo <- grupo |>
+      filter(tipo == grupo_tipo)
   }
   av_grps <- grupo$slug
   names(av_grps) <- grupo$label
@@ -61,9 +61,14 @@ sib_available_grupos <- function(tipo = NULL){
 #' @export
 sib_available_tematicas <- function(){
   available_tematicas <-c(
+    "Amenazqdas" = "amenazadas",
     "Amenazadas Nacional" ="amenazadas_nacional",
     "Amenazadas Global" ="amenazadas_global",
     "Objeto de comercio (CITES)" = "cites",
+    "Objeto de comercio (CITES I)" = "cites_i",
+    "Objeto de comercio (CITES I_II)" = "cites_i_ii",
+    "Objeto de comercio (CITES II)" = "cites_ii",
+    "Objeto de comercio (CITES III)" = "cites_iii",
     "Endémicas" =  "endemicas",
     "Migratorias" = "migratorias",
     "Exóticas" = "exoticas",

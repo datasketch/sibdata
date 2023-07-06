@@ -9,10 +9,26 @@ library(sibdata)
 library(shinyinvoer)
 library(dsmodules)
 
+library(RSQLite)
+
+
+library(dstools)
+library(geodato)
+library(makeup)
+library(hdtype)
+library(hdtable)
+library(hdbase)
+library(paletero)
+
+
+
 
 con <- DBI::dbConnect(RSQLite::SQLite(),
-                      sys_file_sibdata("db/sibdata.sqlite"),
+                      #sys_file_sibdata("db/sibdata.sqlite"),
+                      "sibdata.sqlite",
                       read_only = TRUE)
+
+dbListTables(con)
 
 opts_grupo_biologico <- c("Todos" = "todos",
                           sib_available_grupos(tipo = "biologico", con))
@@ -66,7 +82,8 @@ ui <- panelsPage(
                        dataTableOutput("list_species"),
                        br()
                        )
-  )
+  ),
+  dsmodules::showDebug(hosts = c("127.0.0.1", "randommonkey.shinyapps.io"))
 )
 
 server <-  function(input, output, session) {
@@ -192,13 +209,14 @@ server <-  function(input, output, session) {
     req(data_especies())
     l_s <- data_especies()
     l_s$GBIF <- paste0("<a href='",l_s$url_gbif,"'  target='_blank'>","GBIF","</a>")
-    l_s$CBC <- paste0("<a href='",l_s$url_cbc,"'  target='_blank'>","CBC","</a>")
-    l_s$CBC[l_s$CBC == "<a href='NA'  target='_blank'>NA</a>"] <- ""
+    l_s$`Catálogo Biodiversidad Colombia` <- paste0("<a href='",l_s$url_cbc,"'  target='_blank'>","CBC","</a>")
+    l_s$`Catálogo Biodiversidad Colombia`[l_s$`Catálogo Biodiversidad Colombia` == "<a href='NA'  target='_blank'>NA</a>"] <- ""
     l_s$GBIF[l_s$GBIF == "<a href='NA'  target='_blank'>NA</a>"] <- ""
     l_s$url_gbif <- NULL
     l_s$url_cbc <- NULL
     l_s <- l_s |> relocate(GBIF, .after = "Registros")
-    l_s <- l_s |> relocate(CBC, .after = "GBIF")
+    l_s <- l_s |> relocate(`Catálogo Biodiversidad Colombia`, .after = "GBIF")
+
     DT::datatable(l_s,
                   rownames = F,
                   selection = 'none',

@@ -61,7 +61,7 @@ sib_available_grupos <- function(tipo = NULL, con){
 #' @export
 sib_available_tematicas <- function(){
   available_tematicas <-c(
-    "Amenazqdas" = "amenazadas",
+    "Amenazadas" = "amenazadas",
     "Amenazadas Nacional" ="amenazadas_nacional",
     "Amenazadas Global" ="amenazadas_global",
     "Objeto de comercio (CITES)" = "cites",

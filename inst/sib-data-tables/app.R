@@ -53,8 +53,9 @@ ui <- panelsPage(
   tags$head(
     tags$link(rel="stylesheet", type="text/css", href="custom.css")
   ),
-  shinypanels::panel(title = "Opciones", width = 300,
-                     collapsable = FALSE,
+  shinypanels::panel(title = "Opciones",
+                     width = 300,
+                     can_collapse = FALSE,
                      body = div(
                        #verbatimTextOutput("debug"),
                        uiOutput("sel_region_"),
@@ -70,14 +71,18 @@ ui <- panelsPage(
                      ),
                      footer = ""),
   shinypanels::panel(title = "Especies",
-                     #width = 600,
-                     collapsable = FALSE,
-                     head = downloadTableUI("species_table",
-                                            dropdownLabel = "Descargar especies",
-                                            formats = c("csv", "xlsx", "json"),
-                                            display = "dropdown",
-                                            dropdownWidth = 200),
+                     width = 800,
+                     can_collapse = FALSE,
+                     header_right = #h1("Hello")
+                       uiOutput("down_data")
+                       # downloadTableUI("species_table",
+                       #                      dropdownLabel = "Descargar especies",
+                       #                      formats = c("csv", "xlsx"),
+                       #                      display = "dropdown",
+                       #                      dropdownWidth = 200)
+                     ,
                      body = list(
+                       #uiOutput("down_data"),
                        verbatimTextOutput("debug"),
                        dataTableOutput("list_species"),
                        br()
@@ -167,6 +172,7 @@ server <-  function(input, output, session) {
                     input$sel_grupo_bio, input$sel_grupo_int)
     if(grupo == "todos") grupo <- NULL
     tematica <- input$sel_tematica
+    tematica <- gsub("_", "-", tematica)
     if (tematica == "todas") tematica <- NULL
 
     list(
@@ -223,15 +229,16 @@ server <-  function(input, output, session) {
                   escape = FALSE,
                   #extensions = 'Buttons',
                   options = list(
-                    dom = 'Bftsp',
+                    #dom = 'pBfts',
+                    dom = "flipt",
                     buttons = c('copy', 'csv', 'xlsx'),
                     language = list(url = '//cdn.datatables.net/plug-ins/1.10.11/i18n/Spanish.json'),
                     scrollX = T,
                     #fixedColumns = TRUE,
-                    #fixedHeader = TRUE,
+                    fixedHeader = TRUE,
                     searching = FALSE,
                     info = FALSE,
-                    #scrollY = "700px",
+                    scrollY = "700px",
                     initComplete = JS(
                       "function(settings, json) {",
                       "$(this.api().table().header()).css({'background-color': '#4ad3ac', 'color': '#ffffff'});",
@@ -252,13 +259,30 @@ server <-  function(input, output, session) {
 
 
 
+  output$down_data <- renderUI({
+    req(data_especies())
+    # if (is.null(data_species())) return()
+    dsmodules::downloadTableUI("download_table",
+                               #dropdownLabel = paste0(img(src= 'descarga-icon-w.svg', height = "15px", class = "img-down"), "Datos"),
+                               dropdownLabel =  "Descargar",
+                               formats = c("csv", "xlsx"),
+                               display = "dropdown",
+                               text = "Descarga")
 
-
-  output$descargas <- renderUI({
-    downloadTableUI("species_table", dropdownLabel = "Descargar", formats = c("csv", "xlsx", "json"), display = "dropdown")
   })
 
-  downloadTableServer("species_table", element = reactive(data_especies()), formats = c("csv", "xlsx", "json"))
+  observe({
+    dsmodules::downloadTableServer("download_table",
+                                   element = data_especies(),
+                                   formats = c("csv", "xlsx"))
+  })
+
+
+  # output$descargas <- renderUI({
+  #   downloadTableUI("species_table", dropdownLabel = "Descargar", formats = c("csv", "xlsx", "json"), display = "dropdown")
+  # })
+  #
+  # downloadTableServer("species_table", element = reactive(data_especies()), formats = c("csv", "xlsx", "json"))
 
 
 

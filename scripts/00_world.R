@@ -18,7 +18,7 @@ here::dr_here()
 # con <- DBI::dbConnect(duckdb::duckdb(), "../inst/db/sibdata.duckdb",
 #                       read_only = TRUE)
 
-con <- DBI::dbConnect(RSQLite::SQLite(), sys_file("db/sibdata.sqlite"),
+con <- DBI::dbConnect(RSQLite::SQLite(), sys_file_sibdata("db/sibdata.sqlite"),
                       read_only = TRUE)
 
 

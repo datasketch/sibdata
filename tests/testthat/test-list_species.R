@@ -1,6 +1,12 @@
 test_that("List species", {
 
 
+  con <- DBI::dbConnect(RSQLite::SQLite(),
+                        sys_file_sibdata("db/sibdata.sqlite"),
+                        #"sibdata.sqlite",
+                        read_only = TRUE)
+
+
   # Especies no repetidas en exoticas colombia
 
   esps_col <- list_species(region = "colombia",
@@ -45,6 +51,9 @@ test_that("List species", {
 
 
   ### OJO CON EXÓTICAS TOTAL
+
+
+
 
 
 })

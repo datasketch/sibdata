@@ -1,5 +1,13 @@
 test_that("List species work", {
 
+
+
+  con <- DBI::dbConnect(RSQLite::SQLite(),
+                        sys_file_sibdata("db/sibdata.sqlite"),
+                        #"sibdata.sqlite",
+                        read_only = TRUE)
+
+
   # Colombia Amenazadas
 
   region <- "colombia"

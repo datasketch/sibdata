@@ -2,6 +2,7 @@
 #library(lfltmagic)
 library(tictoc)
 
+library(vctrs)
 devtools::load_all()
 
 
@@ -14,7 +15,7 @@ str(getwd())
 tic()
 
 
-con <- DBI::dbConnect(RSQLite::SQLite(), sys_file("db/sibdata.sqlite"),
+con <- DBI::dbConnect(RSQLite::SQLite(), sys_file_sibdata("db/sibdata.sqlite"),
                       read_only = TRUE)
 av_regions <- sib_available_regions(subtipo = c("Departamento"), con = con)
 
@@ -75,7 +76,7 @@ map(av_regions, function(region){
   dd_reg <- dd |> select(cod_dane, value = registros_region_total, label, slug_region)
 
   tooltip <- "<b>{value} especies</b><br><i>{label}</i><br><br>
-  <a href='https://deploy-preview-1--cifras-biodiversidad.netlify.app/{{region}}/{slug_region}' target='_blank'>Ver más</a>"
+  <a href='https://cifras.biodiversidad.co/{{region}}/{slug_region}' target='_blank'>Ver más</a>"
   tooltip <- glue::glue(tooltip, .open = "{{", .close = "}}")
 
   var <- "value"
@@ -91,22 +92,22 @@ map(av_regions, function(region){
     title_legend = "Especies"
   )
   data <- dd_esp
-  munis_chart1 <- ltgeo::lt_choropleth(data, map_name = map_name, var = var, opts = opts)
-
+  # munis_chart1 <- ltgeo::lt_choropleth(data, map_name = map_name, var = var, opts = opts)
+  #
   path1 <- glue::glue("static/charts/{region}/region_municipios_1.html")
-  htmlwidgets::saveWidget(munis_chart1, path1)
-
-
-  tooltip <- "<b>{value} observaciones</b><br><i>{label}</i><br><br>
-  <a href='https://cifras.biodiversidad.co/{{region}}/{slug_region}'  target='_blank'>Ver más</a>"
-  tooltip <- glue::glue(tooltip, .open = "{{", .close = "}}")
-
-  opts$tooltip_template <- tooltip
-  opts$title_legend <- "Observaciones"
-
-  munis_chart2<- ltgeo::lt_choropleth(data, map_name = map_name, var = var, opts = opts)
+  # htmlwidgets::saveWidget(munis_chart1, path1)
+  #
+  #
+  # tooltip <- "<b>{value} observaciones</b><br><i>{label}</i><br><br>
+  # <a href='https://cifras.biodiversidad.co/{{region}}/{slug_region}'  target='_blank'>Ver más</a>"
+  # tooltip <- glue::glue(tooltip, .open = "{{", .close = "}}")
+  #
+  # opts$tooltip_template <- tooltip
+  # opts$title_legend <- "Observaciones"
+  #
+  # munis_chart2<- ltgeo::lt_choropleth(data, map_name = map_name, var = var, opts = opts)
   path2 <- glue::glue("static/charts/{region}/region_municipios_2.html")
-  htmlwidgets::saveWidget(munis_chart2, path2)
+  # htmlwidgets::saveWidget(munis_chart2, path2)
 
   region_tipo <- "municipio"
   if(region == "colombia") region_tipo <- "departamento"
@@ -174,8 +175,8 @@ map(av_regions, function(region){
     slides = slides,
     tematica = tem_list,
 
-    # grupos_biologicos = reg_gr_bio,
-    # grupos_interes = reg_gr_int,
+    grupos_biologicos = reg_gr_bio,
+    grupos_interes = reg_gr_int,
 
     territorio = territorio,
 

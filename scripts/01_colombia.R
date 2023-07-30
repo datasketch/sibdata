@@ -22,7 +22,7 @@ here::dr_here()
 tic()
 
 
-con <- DBI::dbConnect(RSQLite::SQLite(), sys_file("db/sibdata.sqlite"),
+con <- DBI::dbConnect(RSQLite::SQLite(), sys_file_sibdata("db/sibdata.sqlite"),
                       read_only = TRUE)
 
 region <- "colombia"

@@ -69,26 +69,15 @@ dd <- dd |>
   left_join(deptos, by = c("slug_region" = "slug"), copy = TRUE)
 
 
-dd_esp <- dd |> select(cod_dane, value = especies_region_total, label)
-dd_reg <- dd |> select(cod_dane, value = registros_region_total, label)
+dd_esp <- dd |> select(cod_dane, value = especies_region_total, label) |>
+  rename(n_especies = value)
+dd_reg <- dd |> select(cod_dane, value = registros_region_total, label) |>
+  rename(n_registros = value)
+dd_map <- left_join(dd_esp, dd_reg) |>
+  select(id = cod_dane, label, n_especies, n_registros)
+tj <- geodato::gd_tj("col_departments")
+tj <- geodato::gd_tj("col_departments") |> left_join(dd_map)
 
-tooltip <- "<b>{value} especies</b><br><i>{label}</i>"
-# munis_chart1<- lfltmagic::lflt_choropleth_GcdNum(dd_esp, map_name = map_name,
-#                                                  tooltip = tooltip,
-#                                                  map_zoom = F,
-#                                                  legend_decreasing = TRUE)
-
-#munis_chart1 <- sib_chart_reg_municipios(d, "especies_region_total")
-path1 <- glue::glue("static/charts/{region}/region_municipios_1.html")
-#htmlwidgets::saveWidget(munis_chart1, path1)
-
-#munis_chart2 <- sib_chart_reg_municipios(d, "registros_region_total")
-tooltip <- "<b>{value} observaciones</b><br><i>{label}</i>"
-# munis_chart2<- lfltmagic::lflt_choropleth_GcdNum(dd_reg, map_name = map_name,
-#                                                  tooltip = tooltip, map_zoom = F,
-#                                                  legend_decreasing = TRUE)
-path2 <- glue::glue("static/charts/{region}/region_municipios_2.html")
-#htmlwidgets::saveWidget(munis_chart2, path2)
 
 region_tipo <- "municipio"
 if(region == "colombia") region_tipo <- "departamento"
@@ -96,9 +85,10 @@ territorio <- list(
   list(
     slug = "municipios",
     label = "Municipios",
+    map_data = tj,
     charts = list(
-      list(title = glue::glue("Especies por {region_tipo}"), path = path1, layout = "title/chart"),
-      list(title =  glue::glue("Registros por {region_tipo}"), path = path2, layout = "title/chart")
+      list(title = glue::glue("Especies por {region_tipo}"), path = "", layout = "title/chart"),
+      list(title =  glue::glue("Registros por {region_tipo}"), path = "", layout = "title/chart")
     )
   ),
   list(

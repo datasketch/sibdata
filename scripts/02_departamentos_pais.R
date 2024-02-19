@@ -72,52 +72,25 @@ map(av_regions, function(region){
   dd <- dd |>
     left_join(munis, by = c("slug_region" = "slug"))
 
-  dd_esp <- dd |> select(cod_dane, value = especies_region_total, label, slug_region)
-  dd_reg <- dd |> select(cod_dane, value = registros_region_total, label, slug_region)
+  dd_esp <- dd |> select(cod_dane, value = especies_region_total, label, slug_region) |>
+    rename(n_especies = value)
+  dd_reg <- dd |> select(cod_dane, value = registros_region_total, label, slug_region) |>
+    rename(n_registros = value)
 
-  tooltip <- "<b>{value} especies</b><br><i>{label}</i><br><br>
-  <a href='https://cifras.biodiversidad.co/{{region}}/{slug_region}' target='_blank'>Ver más</a>"
-  tooltip <- glue::glue(tooltip, .open = "{{", .close = "}}")
+  dd_map <- left_join(dd_esp, dd_reg) |>
+    select(id = cod_dane, label, n_especies, n_registros)
+  tj <- geodato::gd_tj("col_municipalities") |>
+    filter(depto == toupper(region))
+  tj <- tj |> left_join(dd_map)
 
-  var <- "value"
-  opts <- list(
-    background_color = "#ffffff",
-    tooltip_template = tooltip,
-    zoom_show = TRUE,
-    border_width = 1,
-    border_color = "white",
-    map_tiles = NULL,
-    map_popup = TRUE,
-    legend_show = TRUE,
-    title_legend = "Especies"
-  )
-  data <- dd_esp
-  # munis_chart1 <- ltgeo::lt_choropleth(data, map_name = map_name, var = var, opts = opts)
-  #
-  path1 <- glue::glue("static/charts/{region}/region_municipios_1.html")
-  # htmlwidgets::saveWidget(munis_chart1, path1)
-  #
-  #
-  # tooltip <- "<b>{value} observaciones</b><br><i>{label}</i><br><br>
-  # <a href='https://cifras.biodiversidad.co/{{region}}/{slug_region}'  target='_blank'>Ver más</a>"
-  # tooltip <- glue::glue(tooltip, .open = "{{", .close = "}}")
-  #
-  # opts$tooltip_template <- tooltip
-  # opts$title_legend <- "Observaciones"
-  #
-  # munis_chart2<- ltgeo::lt_choropleth(data, map_name = map_name, var = var, opts = opts)
-  path2 <- glue::glue("static/charts/{region}/region_municipios_2.html")
-  # htmlwidgets::saveWidget(munis_chart2, path2)
-
-  region_tipo <- "municipio"
-  if(region == "colombia") region_tipo <- "departamento"
   territorio <- list(
     list(
       slug = "municipios",
       label = "Municipios",
+      map_data = tj,
       charts = list(
-        list(title = glue::glue("Especies por {region_tipo}"), path = path1, layout = "title/chart"),
-        list(title =  glue::glue("Observaciones por {region_tipo}"), path = path2, layout = "title/chart")
+        list(title = glue::glue("Especies por {region_tipo}"), path = "", layout = "title/chart"),
+        list(title =  glue::glue("Observaciones por {region_tipo}"), path = "", layout = "title/chart")
       )
     ),
     list(

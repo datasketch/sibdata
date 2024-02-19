@@ -1,6 +1,20 @@
 
 library(tidyverse)
 
+options(timeout = 1200)
+# Get ds-cifras-sib from gitlab
+# https://gitlab.com/sib-colombia/cifras-biodiversidad.git
+
+url <- "https://gitlab.com/sib-colombia/cifras-biodiversidad/-/archive/main/cifras-biodiversidad-main.zip?path=db-cifras-sib"
+if(!dir.exists("data-raw/downloads")) dir.create("data-raw/downloads")
+download.file(url, "data-raw/downloads/db-sifras-sib.zip")
+unzip("data-raw/downloads/db-sifras-sib.zip",
+      exdir = "data-raw/downloads")
+fs::dir_copy("data-raw/downloads/cifras-biodiversidad-main-db-cifras-sib/db-cifras-sib/",
+             "data-raw/db-cifras-sib", overwrite = TRUE)
+unlink("data-raw/downloads",
+       recursive = TRUE)
+
 
 # Get data form googlesheets
 source("data-raw/get_data.R")
@@ -78,7 +92,7 @@ map2(ds, names(ds), function(d,nm){
   dbWriteTable(con, nm, d, overwrite = TRUE)
 })
 dbListTables(con)
-duckdb::dbDisconnect(con)
+duckdb::dbDisconnect(con, shutdown = TRUE)
 #duckdb::duckdb_shutdown(con)
 
 

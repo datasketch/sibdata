@@ -553,21 +553,21 @@
   "nav_territorio": [],
   "general_info": {
     "especies_region_estimadas": "NA",
-    "especies_region_total": 469,
-    "registros_region_total": 1587,
-    "registros_continentales": 1587,
+    "especies_region_total": 498,
+    "registros_region_total": 1736,
+    "registros_continentales": 1736,
     "registros_marinos": 0,
-    "especies_continentales": 469,
+    "especies_continentales": 498,
     "especies_marinas": "NA",
     "subtipo": "municipio",
     "label": "Muzo",
     "marino": false,
-    "fecha_corte": "19355",
+    "fecha_corte": "19722",
     "estimada_region_ref_id": "NA",
     "marino_text": ".",
-    "especies_region_total_str": "469",
-    "registros_region_total_str": "1.587",
-    "main_text": "A través del SiB Colombia se han publicado 1.587 observaciones\npara el municipio de Muzo. Estos datos hacen referencia a un total de\n469 especies.",
+    "especies_region_total_str": "498",
+    "registros_region_total_str": "1.736",
+    "main_text": "A través del SiB Colombia se han publicado 1.736 observaciones\npara el municipio de Muzo. Estos datos hacen referencia a un total de\n498 especies.",
     "referencia": [],
     "credito_foto": "Acá se muestra el tooltip",
     "parent": "boyaca",
@@ -579,7 +579,7 @@
       "id": "slide1",
       "layout": "title/(text|chart)",
       "title": "¿Cómo está Muzo frente al resto de Boyacá?",
-      "description": "De las 11.300 especies observadas en Boyacá,\nel municipio de Muzo aporta 469, equivalentes a 4%.\nDe estas 11 especies son endémicas.",
+      "description": "De las 11.731 especies observadas en Boyacá,\nel municipio de Muzo aporta 498, equivalentes a 4%.\nDe estas 13 especies son endémicas.",
       "chart_type": "image",
       "chart_url": "static/charts/muzo/reg_vs_parent.png"
     },
@@ -587,7 +587,7 @@
       "id": "slide2",
       "layout": "text-blocks",
       "texts": [
-        "Las especies de animales con más registros son: _Ramphocelus dimidiatus_ (30), _Thraupis episcopus_ (21), _Tyrannus melancholicus_ (18), _Molossus molossus_ (16), _Pitangus sulphuratus_ (15).",
+        "Las especies de animales con más registros son: _Ramphocelus dimidiatus_ (31), _Thraupis episcopus_ (22), _Hypanthidioides colombiae_ (20), _Tyrannus melancholicus_ (19), _Molossus molossus_ (16).",
         "Las especies de plantas con más registros son: _Piptocoma discolor_ (4), _Aiouea montana_ (3), _Bellucia pentamera_ (3), _Vismia baccifera_ (3), _Miconia affinis_ (2)."
       ]
     }
@@ -600,16 +600,31 @@
         {
           "slug": "amenazadas-nacional",
           "label": "Amenazadas nacional",
-          "especies": 3,
-          "registros": 5,
-          "cr": "NA",
-          "cr_registros": "NA",
-          "en": "NA",
-          "en_registros": "NA",
-          "vu": 3,
-          "vu_registros": 5,
+          "especies": 7,
+          "registros": 23,
+          "cr": 1,
+          "cr_registros": 1,
+          "en": 2,
+          "en_registros": 12,
+          "vu": 4,
+          "vu_registros": 10,
           "especies_estimadas": "NA",
           "species_list": [
+            {
+              "label": "Thomasomys hylophilus",
+              "slug_especie": "thomasomys-hylophilus",
+              "registros": 10,
+              "url_gbif": "https://www.gbif.org/species/2439173",
+              "slug_tematica": "amenazadas-nacional-en"
+            },
+            {
+              "label": "Lagothrix lagothricha",
+              "slug_especie": "lagothrix-lagothricha",
+              "registros": 5,
+              "url_gbif": "https://www.gbif.org/species/5786085",
+              "url_cbc": "https://catalogo.biodiversidad.co/file/5e3b3b8b7312d26d51df5888/summary",
+              "slug_tematica": "amenazadas-nacional-vu"
+            },
             {
               "label": "Dynastes neptunus",
               "slug_especie": "dynastes-neptunus",
@@ -617,6 +632,14 @@
               "url_gbif": "https://www.gbif.org/species/1074532",
               "url_cbc": "https://catalogo.biodiversidad.co/file/56d783c93c16479905cba929/summary",
               "slug_tematica": "amenazadas-nacional-vu"
+            },
+            {
+              "label": "Tayassu pecari",
+              "slug_especie": "tayassu-pecari",
+              "registros": 2,
+              "url_gbif": "https://www.gbif.org/species/2440993",
+              "url_cbc": "https://catalogo.biodiversidad.co/file/56cc9182207ecea54a561e37/summary",
+              "slug_tematica": "amenazadas-nacional-en"
             },
             {
               "label": "Anadia bogotensis",
@@ -633,6 +656,14 @@
               "url_gbif": "https://www.gbif.org/species/5786069",
               "url_cbc": "https://catalogo.biodiversidad.co/file/56c0c817f0106c67230e72fe/summary",
               "slug_tematica": "amenazadas-nacional-vu"
+            },
+            {
+              "label": "Ateles hybridus",
+              "slug_especie": "ateles-hybridus",
+              "registros": 1,
+              "url_gbif": "https://www.gbif.org/species/4267251",
+              "url_cbc": "https://catalogo.biodiversidad.co/file/56c15c46f0106c67230e7314/summary",
+              "slug_tematica": "amenazadas-nacional-cr"
             }
           ]
         },
@@ -702,28 +733,43 @@
     {
       "slug": "amenazadas-nacional",
       "label": "Amenazadas nacional",
-      "parent_cr_estimadas": 182,
-      "parent_en_estimadas": 428,
-      "parent_vu_estimadas": 687,
-      "especies": 3,
-      "registros": 5,
-      "cr": "NA",
-      "cr_registros": "NA",
-      "en": "NA",
-      "en_registros": "NA",
-      "vu": 3,
-      "vu_registros": 5,
+      "parent_cr_estimadas": 465,
+      "parent_en_estimadas": 801,
+      "parent_vu_estimadas": 837,
+      "especies": 7,
+      "registros": 23,
+      "cr": 1,
+      "cr_registros": 1,
+      "en": 2,
+      "en_registros": 12,
+      "vu": 4,
+      "vu_registros": 10,
       "especies_estimadas": "NA",
       "parent_especies_est": 41344,
-      "parent_cr": 23,
-      "parent_en": 67,
-      "parent_vu": 106,
-      "parent_especies_total": 11300,
+      "parent_cr": 53,
+      "parent_en": 124,
+      "parent_vu": 134,
+      "parent_especies_total": 11731,
       "list_especies_amenazadas_nacional": {},
       "list_especies_amenazadas_nacional_vu": {},
       "list_especies_amenazadas_nacional_en": {},
       "list_especies_amenazadas_nacional_cr": {},
       "species_list": [
+        {
+          "label": "Thomasomys hylophilus",
+          "slug_especie": "thomasomys-hylophilus",
+          "registros": 10,
+          "url_gbif": "https://www.gbif.org/species/2439173",
+          "slug_tematica": "amenazadas-nacional-en"
+        },
+        {
+          "label": "Lagothrix lagothricha",
+          "slug_especie": "lagothrix-lagothricha",
+          "registros": 5,
+          "url_gbif": "https://www.gbif.org/species/5786085",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5e3b3b8b7312d26d51df5888/summary",
+          "slug_tematica": "amenazadas-nacional-vu"
+        },
         {
           "label": "Dynastes neptunus",
           "slug_especie": "dynastes-neptunus",
@@ -731,6 +777,14 @@
           "url_gbif": "https://www.gbif.org/species/1074532",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56d783c93c16479905cba929/summary",
           "slug_tematica": "amenazadas-nacional-vu"
+        },
+        {
+          "label": "Tayassu pecari",
+          "slug_especie": "tayassu-pecari",
+          "registros": 2,
+          "url_gbif": "https://www.gbif.org/species/2440993",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cc9182207ecea54a561e37/summary",
+          "slug_tematica": "amenazadas-nacional-en"
         },
         {
           "label": "Anadia bogotensis",
@@ -747,6 +801,14 @@
           "url_gbif": "https://www.gbif.org/species/5786069",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56c0c817f0106c67230e72fe/summary",
           "slug_tematica": "amenazadas-nacional-vu"
+        },
+        {
+          "label": "Ateles hybridus",
+          "slug_especie": "ateles-hybridus",
+          "registros": 1,
+          "url_gbif": "https://www.gbif.org/species/4267251",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c15c46f0106c67230e7314/summary",
+          "slug_tematica": "amenazadas-nacional-cr"
         }
       ]
     },
@@ -766,10 +828,10 @@
       "vu_registros": 19,
       "especies_estimadas": "NA",
       "parent_especies_est": 41344,
-      "parent_cr": 41,
-      "parent_en": 94,
-      "parent_vu": 123,
-      "parent_especies_total": 11300,
+      "parent_cr": 43,
+      "parent_en": 97,
+      "parent_vu": 128,
+      "parent_especies_total": 11731,
       "list_especies_amenazadas_global": {},
       "list_especies_amenazadas_global_vu": {},
       "list_especies_amenazadas_global_en": {},
@@ -825,31 +887,31 @@
     },
     {
       "slug": "cites",
-      "cites_total_estimadas": 3545,
+      "cites_total_estimadas": 3676,
       "cites_i_estimadas": 63,
       "cites_i_ii_estimadas": 1,
-      "cites_ii_estimadas": 3450,
+      "cites_ii_estimadas": 3581,
       "cites_iii_estimadas": 31,
-      "especies_cites_total": 30,
+      "especies_cites_total": 33,
       "especies_cites_i": "NA",
-      "especies_cites_ii": 28,
+      "especies_cites_ii": 31,
       "especies_cites_i_ii": "NA",
       "especies_cites_iii": 2,
-      "registros_cites_total": 103,
+      "registros_cites_total": 129,
       "registros_cites_i": "NA",
-      "registros_cites_ii": 97,
+      "registros_cites_ii": 123,
       "registros_cites_i_ii": "NA",
       "registros_cites_iii": 6,
-      "parent_especies_cites_total": 482,
-      "parent_especies_cites_i": 12,
-      "parent_especies_cites_ii": 455,
+      "parent_especies_cites_total": 534,
+      "parent_especies_cites_i": 14,
+      "parent_especies_cites_ii": 505,
       "parent_especies_cites_i_ii": "NA",
       "parent_especies_cites_iii": 15,
-      "parent_registros_cites_total": 42402,
-      "parent_registros_cites_i": 216,
-      "parent_registros_cites_ii": 39893,
+      "parent_registros_cites_total": 53753,
+      "parent_registros_cites_i": 262,
+      "parent_registros_cites_ii": 50571,
       "parent_registros_cites_i_ii": "NA",
-      "parent_registros_cites_iii": 2293,
+      "parent_registros_cites_iii": 2920,
       "list_especies_cites": [
         {
           "label": "Cebus albifrons",
@@ -870,17 +932,33 @@
         {
           "label": "Forpus conspicillatus",
           "slug_especie": "forpus-conspicillatus",
-          "registros": 12,
+          "registros": 13,
           "url_gbif": "https://www.gbif.org/species/2479071",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56c76fc3f0106c67230e73ed/summary",
           "slug_tematica": "cites-ii"
         },
         {
+          "label": "Rupornis magnirostris",
+          "slug_especie": "rupornis-magnirostris",
+          "registros": 11,
+          "url_gbif": "https://www.gbif.org/species/5844398",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56ce57a13c16479905cba79b/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
           "label": "Brotogeris jugularis",
           "slug_especie": "brotogeris-jugularis",
-          "registros": 9,
+          "registros": 10,
           "url_gbif": "https://www.gbif.org/species/2479563",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56df5ee983c45700544e3c6a/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Kinosternon leucostomum",
+          "slug_especie": "kinosternon-leucostomum",
+          "registros": 8,
+          "url_gbif": "https://www.gbif.org/species/2442350",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d97f1c3c16479905cba999/summary",
           "slug_tematica": "cites-ii"
         },
         {
@@ -889,6 +967,14 @@
           "registros": 5,
           "url_gbif": "https://www.gbif.org/species/2476774",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56df654383c45700544e3c70/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Lagothrix lagothricha",
+          "slug_especie": "lagothrix-lagothricha",
+          "registros": 5,
+          "url_gbif": "https://www.gbif.org/species/5786085",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5e3b3b8b7312d26d51df5888/summary",
           "slug_tematica": "cites-ii"
         },
         {
@@ -904,29 +990,6 @@
           "registros": 4,
           "url_gbif": "https://www.gbif.org/species/2476595",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56e5fc9c83c45700544e3e8d/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
-          "label": "Phaethornis striigularis",
-          "slug_especie": "phaethornis-striigularis",
-          "registros": 4,
-          "url_gbif": "https://www.gbif.org/species/2476600",
-          "slug_tematica": "cites-ii"
-        },
-        {
-          "label": "Potos flavus",
-          "slug_especie": "potos-flavus",
-          "registros": 4,
-          "url_gbif": "https://www.gbif.org/species/2433573",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56ca8a60f0106c67230e7463/summary",
-          "slug_tematica": "cites-iii"
-        },
-        {
-          "label": "Florisuga mellivora",
-          "slug_especie": "florisuga-mellivora",
-          "registros": 3,
-          "url_gbif": "https://www.gbif.org/species/2476195",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e0b15783c45700544e3ce3/summary",
           "slug_tematica": "cites-ii"
         }
       ],
@@ -952,17 +1015,33 @@
         {
           "label": "Forpus conspicillatus",
           "slug_especie": "forpus-conspicillatus",
-          "registros": 12,
+          "registros": 13,
           "url_gbif": "https://www.gbif.org/species/2479071",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56c76fc3f0106c67230e73ed/summary",
           "slug_tematica": "cites-ii"
         },
         {
+          "label": "Rupornis magnirostris",
+          "slug_especie": "rupornis-magnirostris",
+          "registros": 11,
+          "url_gbif": "https://www.gbif.org/species/5844398",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56ce57a13c16479905cba79b/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
           "label": "Brotogeris jugularis",
           "slug_especie": "brotogeris-jugularis",
-          "registros": 9,
+          "registros": 10,
           "url_gbif": "https://www.gbif.org/species/2479563",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56df5ee983c45700544e3c6a/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Kinosternon leucostomum",
+          "slug_especie": "kinosternon-leucostomum",
+          "registros": 8,
+          "url_gbif": "https://www.gbif.org/species/2442350",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d97f1c3c16479905cba999/summary",
           "slug_tematica": "cites-ii"
         },
         {
@@ -971,6 +1050,14 @@
           "registros": 5,
           "url_gbif": "https://www.gbif.org/species/2476774",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56df654383c45700544e3c70/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Lagothrix lagothricha",
+          "slug_especie": "lagothrix-lagothricha",
+          "registros": 5,
+          "url_gbif": "https://www.gbif.org/species/5786085",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5e3b3b8b7312d26d51df5888/summary",
           "slug_tematica": "cites-ii"
         },
         {
@@ -986,29 +1073,6 @@
           "registros": 4,
           "url_gbif": "https://www.gbif.org/species/2476595",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56e5fc9c83c45700544e3e8d/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
-          "label": "Phaethornis striigularis",
-          "slug_especie": "phaethornis-striigularis",
-          "registros": 4,
-          "url_gbif": "https://www.gbif.org/species/2476600",
-          "slug_tematica": "cites-ii"
-        },
-        {
-          "label": "Florisuga mellivora",
-          "slug_especie": "florisuga-mellivora",
-          "registros": 3,
-          "url_gbif": "https://www.gbif.org/species/2476195",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e0b15783c45700544e3ce3/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
-          "label": "Amazona ochrocephala",
-          "slug_especie": "amazona-ochrocephala",
-          "registros": 2,
-          "url_gbif": "https://www.gbif.org/species/2479612",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7943b83c45700544e419d/summary",
           "slug_tematica": "cites-ii"
         }
       ],
@@ -1050,17 +1114,33 @@
         {
           "label": "Forpus conspicillatus",
           "slug_especie": "forpus-conspicillatus",
-          "registros": 12,
+          "registros": 13,
           "url_gbif": "https://www.gbif.org/species/2479071",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56c76fc3f0106c67230e73ed/summary",
           "slug_tematica": "cites-ii"
         },
         {
+          "label": "Rupornis magnirostris",
+          "slug_especie": "rupornis-magnirostris",
+          "registros": 11,
+          "url_gbif": "https://www.gbif.org/species/5844398",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56ce57a13c16479905cba79b/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
           "label": "Brotogeris jugularis",
           "slug_especie": "brotogeris-jugularis",
-          "registros": 9,
+          "registros": 10,
           "url_gbif": "https://www.gbif.org/species/2479563",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56df5ee983c45700544e3c6a/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Kinosternon leucostomum",
+          "slug_especie": "kinosternon-leucostomum",
+          "registros": 8,
+          "url_gbif": "https://www.gbif.org/species/2442350",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d97f1c3c16479905cba999/summary",
           "slug_tematica": "cites-ii"
         },
         {
@@ -1069,6 +1149,14 @@
           "registros": 5,
           "url_gbif": "https://www.gbif.org/species/2476774",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56df654383c45700544e3c70/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Lagothrix lagothricha",
+          "slug_especie": "lagothrix-lagothricha",
+          "registros": 5,
+          "url_gbif": "https://www.gbif.org/species/5786085",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5e3b3b8b7312d26d51df5888/summary",
           "slug_tematica": "cites-ii"
         },
         {
@@ -1085,39 +1173,16 @@
           "url_gbif": "https://www.gbif.org/species/2476595",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56e5fc9c83c45700544e3e8d/summary",
           "slug_tematica": "cites-ii"
-        },
-        {
-          "label": "Phaethornis striigularis",
-          "slug_especie": "phaethornis-striigularis",
-          "registros": 4,
-          "url_gbif": "https://www.gbif.org/species/2476600",
-          "slug_tematica": "cites-ii"
-        },
-        {
-          "label": "Potos flavus",
-          "slug_especie": "potos-flavus",
-          "registros": 4,
-          "url_gbif": "https://www.gbif.org/species/2433573",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56ca8a60f0106c67230e7463/summary",
-          "slug_tematica": "cites-iii"
-        },
-        {
-          "label": "Florisuga mellivora",
-          "slug_especie": "florisuga-mellivora",
-          "registros": 3,
-          "url_gbif": "https://www.gbif.org/species/2476195",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e0b15783c45700544e3ce3/summary",
-          "slug_tematica": "cites-ii"
         }
       ]
     },
     {
       "slug": "endemicas",
-      "endemicas_estimadas": 8105,
-      "especies_endemicas": 11,
-      "registros_endemicas": 28,
-      "parent_especies_endemicas": 1010,
-      "parent_registros_endemicas": 29435,
+      "endemicas_estimadas": 8497,
+      "especies_endemicas": 13,
+      "registros_endemicas": 33,
+      "parent_especies_endemicas": 1036,
+      "parent_registros_endemicas": 33386,
       "list_especies_endemicas": {},
       "species_list": [
         {
@@ -1128,10 +1193,23 @@
           "slug_tematica": "endemicas"
         },
         {
+          "label": "Hemibrycon plutarcoi",
+          "slug_especie": "hemibrycon-plutarcoi",
+          "registros": 3,
+          "slug_tematica": "endemicas"
+        },
+        {
           "label": "Proechimys chrysaeolus",
           "slug_especie": "proechimys-chrysaeolus",
           "registros": 3,
           "url_gbif": "https://www.gbif.org/species/2439768",
+          "slug_tematica": "endemicas"
+        },
+        {
+          "label": "Cladonia symphoriza",
+          "slug_especie": "cladonia-symphoriza",
+          "registros": 2,
+          "url_gbif": "https://www.gbif.org/species/3391245",
           "slug_tematica": "endemicas"
         },
         {
@@ -1177,35 +1255,22 @@
           "registros": 1,
           "url_gbif": "https://www.gbif.org/species/5217567",
           "slug_tematica": "endemicas"
-        },
-        {
-          "label": "Marmosops magdalenae",
-          "slug_especie": "marmosops-magdalenae",
-          "registros": 1,
-          "url_gbif": "https://www.gbif.org/species/11130407",
-          "slug_tematica": "endemicas"
-        },
-        {
-          "label": "Palicourea boyacana",
-          "slug_especie": "palicourea-boyacana",
-          "registros": 1,
-          "slug_tematica": "endemicas"
         }
       ]
     },
     {
       "slug": "migratorias",
       "texto": "La información de especies migratorias se basa en la\n         [Lista de referencia de especies de aves de Colombia - 2020](https://doi.org/10.15472/qhsz0p).\n         Para aportar más datos sobre este y otros grupos bilógicos puede visitar nuestro sitio web\n         https://biodiversidad.co",
-      "migratorias_estimadas": "NA",
+      "migratorias_estimadas": 567,
       "especies_migratorias": 26,
-      "registros_migratorias": 78,
-      "parent_especies_migratorias": 90,
-      "parent_registros_migratorias": 27479,
+      "registros_migratorias": 79,
+      "parent_especies_migratorias": 95,
+      "parent_registros_migratorias": 34248,
       "species_list": [
         {
           "label": "Tyrannus melancholicus",
           "slug_especie": "tyrannus-melancholicus",
-          "registros": 18,
+          "registros": 19,
           "url_gbif": "https://www.gbif.org/species/5229662",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56cfa86b3c16479905cba7f5/summary",
           "slug_tematica": "migratorias"
@@ -1286,10 +1351,10 @@
     },
     {
       "slug": "exoticas-invasoras",
-      "exoticas_total_estimadas": 2586,
-      "exoticas_estimadas": 1456,
-      "exoticas_riesgo_invasion_estimadas": 1095,
-      "exoticas_invasoras_estimadas": 22,
+      "exoticas_total_estimadas": 2574,
+      "exoticas_estimadas": 1451,
+      "exoticas_riesgo_invasion_estimadas": {},
+      "exoticas_invasoras_estimadas": 26,
       "especies_exoticas_total": 5,
       "especies_exoticas": 3,
       "especies_invasoras": "NA",
@@ -1298,14 +1363,14 @@
       "registros_exoticas": 3,
       "registros_invasoras": 0,
       "registros_exoticas_riesgo_invasion": 5,
-      "parent_especies_exoticas_total": 828,
-      "parent_especies_exoticas": 435,
-      "parent_especies_invasoras": 9,
-      "parent_especies_exoticas_riesgo_invasion": 384,
-      "parent_registros_exoticas_total": 13131,
-      "parent_registros_exoticas": 3987,
-      "parent_registros_invasoras": 310,
-      "parent_registros_exoticas_riesgo_invasion": 8834,
+      "parent_especies_exoticas_total": 848,
+      "parent_especies_exoticas": 450,
+      "parent_especies_invasoras": 12,
+      "parent_especies_exoticas_riesgo_invasion": 386,
+      "parent_registros_exoticas_total": 15478,
+      "parent_registros_exoticas": 4290,
+      "parent_registros_invasoras": 1921,
+      "parent_registros_exoticas_riesgo_invasion": 9267,
       "list_especies_exoticas_total": [
         {
           "label": "Andropogon bicornis",
@@ -1364,14 +1429,13 @@
     {
       "slug": "abejas",
       "slug_grupo": "abejas",
-      "tipo": "biologico",
       "slug_region": "muzo",
-      "registros_region_total": 13,
-      "registros_continentales": 13,
+      "registros_region_total": 36,
+      "registros_continentales": 36,
       "registros_marinos": 0,
       "registros_salobres": 0,
-      "especies_region_total": 4,
-      "especies_continentales": 4,
+      "especies_region_total": 5,
+      "especies_continentales": 5,
       "especies_marinas": 0,
       "especies_salobres": 0,
       "especies_amenazadas_nacional_total": 0,
@@ -1582,23 +1646,39 @@
       "registros_salobres_amenazadas_global_dd": 0,
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
+      "tipo": "biologico",
       "parent": [
         {
           "slug": "abejas",
           "label": "Boyacá",
-          "especies_region_total": 37,
-          "registros_region_total": 1059
+          "especies_region_total": 32,
+          "registros_region_total": 1558
         }
       ],
       "estimadas": {
         "slug_grupo": "abejas",
         "especies_amenazadas_nacional_total_estimadas": 11,
-        "especies_amenazadas_global_total_estimadas": 0,
+        "especies_amenazadas_global_total_estimadas": "0",
         "especies_cites_total_estimadas": 0,
         "especies_endemicas_estimadas": "NA"
       },
       "subgrupo_especies": [],
       "species_list_top": [
+        {
+          "label": "Partamona musarum",
+          "registros": 4,
+          "slug_especie": "partamona-musarum",
+          "slug_grupo": "abejas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1339722",
+          "species": "Partamona musarum",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hymenoptera",
+          "family": "Apidae",
+          "genus": "Partamona"
+        },
         {
           "label": "Trigona muzoensis",
           "registros": 4,
@@ -1645,19 +1725,19 @@
           "genus": "Melipona"
         },
         {
-          "label": "Partamona musarum",
-          "registros": 2,
-          "slug_especie": "partamona-musarum",
+          "label": "Agapostemon semimelleus",
+          "registros": 1,
+          "slug_especie": "agapostemon-semimelleus",
           "slug_grupo": "abejas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1339722",
-          "species": "Partamona musarum",
+          "url_gbif": "https://www.gbif.org/species/5042870",
+          "species": "Agapostemon semimelleus",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Hymenoptera",
-          "family": "Apidae",
-          "genus": "Partamona"
+          "family": "Halictidae",
+          "genus": "Agapostemon"
         }
       ],
       "species_list_tematica": {
@@ -1672,14 +1752,13 @@
     {
       "slug": "anfibios",
       "slug_grupo": "anfibios",
-      "tipo": "biologico",
       "slug_region": "muzo",
       "registros_region_total": 11,
       "registros_continentales": 11,
       "registros_marinos": 0,
       "registros_salobres": 0,
-      "especies_region_total": 6,
-      "especies_continentales": 6,
+      "especies_region_total": 8,
+      "especies_continentales": 8,
       "especies_marinas": 0,
       "especies_salobres": 0,
       "especies_amenazadas_nacional_total": 0,
@@ -1719,7 +1798,7 @@
       "especies_amenazadas_global_en": "NA",
       "especies_amenazadas_global_vu": "NA",
       "especies_amenazadas_global_nt": "NA",
-      "especies_amenazadas_global_lc": 5,
+      "especies_amenazadas_global_lc": 6,
       "especies_amenazadas_global_dd": "NA",
       "especies_amenazadas_global_lr_lc": "NA",
       "especies_amenazadas_global_lr_nt": "NA",
@@ -1771,7 +1850,7 @@
       "especies_continentales_amenazadas_global_en": "NA",
       "especies_continentales_amenazadas_global_vu": "NA",
       "especies_continentales_amenazadas_global_nt": "NA",
-      "especies_continentales_amenazadas_global_lc": 5,
+      "especies_continentales_amenazadas_global_lc": 6,
       "especies_continentales_amenazadas_global_dd": "NA",
       "especies_continentales_amenazadas_global_lr_lc": "NA",
       "especies_continentales_amenazadas_global_lr_nt": "NA",
@@ -1890,20 +1969,21 @@
       "registros_salobres_amenazadas_global_dd": "NA",
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
+      "tipo": "biologico",
       "parent": [
         {
           "slug": "anfibios",
           "label": "Boyacá",
-          "especies_region_total": 153,
-          "registros_region_total": 7172
+          "especies_region_total": 170,
+          "registros_region_total": 7497
         }
       ],
       "estimadas": {
         "slug_grupo": "anfibios",
-        "especies_amenazadas_nacional_total_estimadas": 50,
-        "especies_amenazadas_global_total_estimadas": 304,
-        "especies_cites_total_estimadas": 39,
-        "especies_endemicas_estimadas": 391
+        "especies_amenazadas_nacional_total_estimadas": 290,
+        "especies_amenazadas_global_total_estimadas": "304",
+        "especies_cites_total_estimadas": 125,
+        "especies_endemicas_estimadas": 404
       },
       "subgrupo_especies": [],
       "species_list_top": [
@@ -1923,6 +2003,22 @@
           "genus": "Pristimantis"
         },
         {
+          "label": "Boana crepitans",
+          "registros": 1,
+          "slug_especie": "boana-crepitans",
+          "slug_grupo": "anfibios",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/10697747",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d4b0ee3c16479905cba8af/summary",
+          "species": "Boana crepitans",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Amphibia",
+          "order": "Anura",
+          "family": "Hylidae",
+          "genus": "Boana"
+        },
+        {
           "label": "Boana platanera",
           "registros": 1,
           "slug_especie": "boana-platanera",
@@ -1930,6 +2026,21 @@
           "tipo": "biologico",
           "url_gbif": "https://www.gbif.org/species/11203160",
           "species": "Boana platanera",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Amphibia",
+          "order": "Anura",
+          "family": "Hylidae",
+          "genus": "Boana"
+        },
+        {
+          "label": "Boana xerophylla",
+          "registros": 1,
+          "slug_especie": "boana-xerophylla",
+          "slug_grupo": "anfibios",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/10493617",
+          "species": "Boana xerophylla",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Amphibia",
@@ -2043,10 +2154,9 @@
     {
       "slug": "angiospermas",
       "slug_grupo": "angiospermas",
-      "tipo": "biologico",
       "slug_region": "muzo",
-      "registros_region_total": 49,
-      "registros_continentales": 49,
+      "registros_region_total": 51,
+      "registros_continentales": 51,
       "registros_marinos": 0,
       "registros_salobres": 0,
       "especies_region_total": 36,
@@ -2261,19 +2371,20 @@
       "registros_salobres_amenazadas_global_dd": "NA",
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
+      "tipo": "biologico",
       "parent": [
         {
           "slug": "angiospermas",
           "label": "Boyacá",
-          "especies_region_total": 5818,
-          "registros_region_total": 122847
+          "especies_region_total": 5948,
+          "registros_region_total": 129851
         }
       ],
       "estimadas": {
         "slug_grupo": "angiospermas",
-        "especies_amenazadas_nacional_total_estimadas": 696,
-        "especies_amenazadas_global_total_estimadas": 926,
-        "especies_cites_total_estimadas": 2758,
+        "especies_amenazadas_nacional_total_estimadas": 1143,
+        "especies_amenazadas_global_total_estimadas": "926",
+        "especies_cites_total_estimadas": 2769,
         "especies_endemicas_estimadas": 5999
       },
       "subgrupo_especies": [],
@@ -2355,6 +2466,21 @@
           "order": "Myrtales",
           "family": "Melastomataceae",
           "genus": "Miconia"
+        },
+        {
+          "label": "Passiflora capsularis",
+          "registros": 2,
+          "slug_especie": "passiflora-capsularis",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7313548",
+          "species": "Passiflora capsularis",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Malpighiales",
+          "family": "Passifloraceae",
+          "genus": "Passiflora"
         },
         {
           "label": "Sapium glandulosum",
@@ -2727,21 +2853,6 @@
           "genus": "Palicourea"
         },
         {
-          "label": "Passiflora capsularis",
-          "registros": 1,
-          "slug_especie": "passiflora-capsularis",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7313548",
-          "species": "Passiflora capsularis",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Passifloraceae",
-          "genus": "Passiflora"
-        },
-        {
           "label": "Piper haughtii",
           "registros": 1,
           "slug_especie": "piper-haughtii",
@@ -2928,33 +3039,32 @@
     {
       "slug": "animales",
       "slug_grupo": "animales",
-      "tipo": "biologico",
       "slug_region": "muzo",
-      "registros_region_total": 1529,
-      "registros_continentales": 1529,
+      "registros_region_total": 1673,
+      "registros_continentales": 1673,
       "registros_marinos": 0,
       "registros_salobres": 0,
-      "especies_region_total": 432,
-      "especies_continentales": 432,
+      "especies_region_total": 460,
+      "especies_continentales": 460,
       "especies_marinas": 0,
       "especies_salobres": 0,
-      "especies_amenazadas_nacional_total": 3,
-      "especies_amenazadas_nacional_cr": "NA",
-      "especies_amenazadas_nacional_en": "NA",
-      "especies_amenazadas_nacional_vu": 3,
-      "registros_amenazadas_nacional_total": 5,
-      "registros_amenazadas_nacional_cr": "NA",
-      "registros_amenazadas_nacional_en": "NA",
-      "registros_amenazadas_nacional_vu": 5,
-      "especies_cites_total": 30,
+      "especies_amenazadas_nacional_total": 7,
+      "especies_amenazadas_nacional_cr": 1,
+      "especies_amenazadas_nacional_en": 2,
+      "especies_amenazadas_nacional_vu": 4,
+      "registros_amenazadas_nacional_total": 23,
+      "registros_amenazadas_nacional_cr": 1,
+      "registros_amenazadas_nacional_en": 12,
+      "registros_amenazadas_nacional_vu": 10,
+      "especies_cites_total": 33,
       "especies_cites_i": "NA",
       "especies_cites_i_ii": "NA",
-      "especies_cites_ii": 28,
+      "especies_cites_ii": 31,
       "especies_cites_iii": 2,
-      "registros_cites_total": 103,
+      "registros_cites_total": 129,
       "registros_cites_i": "NA",
       "registros_cites_i_ii": "NA",
-      "registros_cites_ii": 97,
+      "registros_cites_ii": 123,
       "registros_cites_iii": 6,
       "especies_exoticas_total": 3,
       "especies_exoticas": 1,
@@ -2964,10 +3074,10 @@
       "registros_exoticas": 1,
       "registros_invasoras": 0,
       "registros_exoticas_riesgo_invasion": 5,
-      "especies_endemicas": 8,
+      "especies_endemicas": 9,
       "especies_migratorias": 26,
-      "registros_endemicas": 25,
-      "registros_migratorias": 78,
+      "registros_endemicas": 28,
+      "registros_migratorias": 79,
       "especies_amenazadas_global_total": 6,
       "especies_amenazadas_global_ex": "NA",
       "especies_amenazadas_global_ew": "NA",
@@ -2975,7 +3085,7 @@
       "especies_amenazadas_global_en": "NA",
       "especies_amenazadas_global_vu": 5,
       "especies_amenazadas_global_nt": 2,
-      "especies_amenazadas_global_lc": 240,
+      "especies_amenazadas_global_lc": 242,
       "especies_amenazadas_global_dd": 6,
       "especies_amenazadas_global_lr_lc": "NA",
       "especies_amenazadas_global_lr_nt": "NA",
@@ -2990,23 +3100,23 @@
       "registros_amenazadas_global_dd": 13,
       "registros_amenazadas_global_lr_lc": "NA",
       "registros_amenazadas_global_lr_nt": "NA",
-      "especies_continentales_amenazadas_nacional_total": 3,
-      "especies_continentales_amenazadas_nacional_cr": "NA",
-      "especies_continentales_amenazadas_nacional_en": "NA",
-      "especies_continentales_amenazadas_nacional_vu": 3,
-      "registros_continentales_amenazadas_nacional_total": 5,
-      "registros_continentales_amenazadas_nacional_cr": "NA",
-      "registros_continentales_amenazadas_nacional_en": "NA",
-      "registros_continentales_amenazadas_nacional_vu": 5,
-      "especies_continentales_cites_total": 30,
+      "especies_continentales_amenazadas_nacional_total": 7,
+      "especies_continentales_amenazadas_nacional_cr": 1,
+      "especies_continentales_amenazadas_nacional_en": 2,
+      "especies_continentales_amenazadas_nacional_vu": 4,
+      "registros_continentales_amenazadas_nacional_total": 23,
+      "registros_continentales_amenazadas_nacional_cr": 1,
+      "registros_continentales_amenazadas_nacional_en": 12,
+      "registros_continentales_amenazadas_nacional_vu": 10,
+      "especies_continentales_cites_total": 33,
       "especies_continentales_cites_i": "NA",
       "especies_continentales_cites_i_ii": "NA",
-      "especies_continentales_cites_ii": 28,
+      "especies_continentales_cites_ii": 31,
       "especies_continentales_cites_iii": 2,
-      "registros_continentales_cites_total": 103,
+      "registros_continentales_cites_total": 129,
       "registros_continentales_cites_i": "NA",
       "registros_continentales_cites_i_ii": "NA",
-      "registros_continentales_cites_ii": 97,
+      "registros_continentales_cites_ii": 123,
       "registros_continentales_cites_iii": 6,
       "especies_continentales_exoticas_total": 3,
       "especies_continentales_exoticas": 1,
@@ -3016,10 +3126,10 @@
       "registros_continentales_exoticas": 1,
       "registros_continentales_invasoras": 0,
       "registros_continentales_exoticas_riesgo_invasion": 5,
-      "especies_continentales_endemicas": 8,
+      "especies_continentales_endemicas": 9,
       "especies_continentales_migratorias": 26,
-      "registros_continentales_endemicas": 25,
-      "registros_continentales_migratorias": 78,
+      "registros_continentales_endemicas": 28,
+      "registros_continentales_migratorias": 79,
       "especies_continentales_amenazadas_global_total": 6,
       "especies_continentales_amenazadas_global_ex": "NA",
       "especies_continentales_amenazadas_global_ew": "NA",
@@ -3027,7 +3137,7 @@
       "especies_continentales_amenazadas_global_en": "NA",
       "especies_continentales_amenazadas_global_vu": 5,
       "especies_continentales_amenazadas_global_nt": 2,
-      "especies_continentales_amenazadas_global_lc": 240,
+      "especies_continentales_amenazadas_global_lc": 242,
       "especies_continentales_amenazadas_global_dd": 6,
       "especies_continentales_amenazadas_global_lr_lc": "NA",
       "especies_continentales_amenazadas_global_lr_nt": "NA",
@@ -3043,12 +3153,12 @@
       "registros_continentales_amenazadas_global_lr_lc": "NA",
       "registros_continentales_amenazadas_global_lr_nt": "NA",
       "especies_marinas_amenazadas_nacional_total": 0,
-      "especies_marinas_amenazadas_nacional_en": "NA",
-      "especies_marinas_amenazadas_nacional_cr": "NA",
+      "especies_marinas_amenazadas_nacional_en": 0,
+      "especies_marinas_amenazadas_nacional_cr": 0,
       "especies_marinas_amenazadas_nacional_vu": 0,
       "registros_marinas_amenazadas_nacional_total": 0,
-      "registros_marinas_amenazadas_nacional_cr": "NA",
-      "registros_marinas_amenazadas_nacional_en": "NA",
+      "registros_marinas_amenazadas_nacional_cr": 0,
+      "registros_marinas_amenazadas_nacional_en": 0,
       "registros_marinas_amenazadas_nacional_vu": 0,
       "especies_marinas_cites_total": 0,
       "especies_marinas_cites_i": "NA",
@@ -3095,12 +3205,12 @@
       "registros_marinas_amenazadas_global_lr_lc": "NA",
       "registros_marinas_amenazadas_global_lr_nt": "NA",
       "especies_salobres_amenazadas_nacional_total": 0,
-      "especies_salobres_amenazadas_nacional_cr": "NA",
-      "especies_salobres_amenazadas_nacional_en": "NA",
+      "especies_salobres_amenazadas_nacional_cr": 0,
+      "especies_salobres_amenazadas_nacional_en": 0,
       "especies_salobres_amenazadas_nacional_vu": 0,
       "registros_salobres_amenazadas_nacional_total": 0,
-      "registros_salobres_amenazadas_nacional_cr": "NA",
-      "registros_salobres_amenazadas_nacional_en": "NA",
+      "registros_salobres_amenazadas_nacional_cr": 0,
+      "registros_salobres_amenazadas_nacional_en": 0,
       "registros_salobres_amenazadas_nacional_vu": 0,
       "especies_salobres_cites_total": 0,
       "especies_salobres_cites_i": "NA",
@@ -3146,37 +3256,38 @@
       "registros_salobres_amenazadas_global_dd": 0,
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
+      "tipo": "biologico",
       "parent": [
         {
           "slug": "animales",
           "label": "Boyacá",
-          "especies_region_total": 3201,
-          "registros_region_total": 419250
+          "especies_region_total": 3479,
+          "registros_region_total": 499535
         }
       ],
       "estimadas": {
         "slug_grupo": "animales",
-        "especies_amenazadas_nacional_total_estimadas": 483,
-        "especies_amenazadas_global_total_estimadas": 787,
-        "especies_cites_total_estimadas": 686,
+        "especies_amenazadas_nacional_total_estimadas": 759,
+        "especies_amenazadas_global_total_estimadas": "787",
+        "especies_cites_total_estimadas": 809,
         "especies_endemicas_estimadas": 1875
       },
       "subgrupo_especies": [
         {
           "slug_grupo": "invertebrados",
           "label_grupo": "Invertebrados",
-          "especies_region_total": 168
+          "especies_region_total": 191
         },
         {
           "slug_grupo": "vertebrados",
           "label_grupo": "Vertebrados",
-          "especies_region_total": 262
+          "especies_region_total": 267
         }
       ],
       "species_list_top": [
         {
           "label": "Ramphocelus dimidiatus",
-          "registros": 30,
+          "registros": 31,
           "slug_especie": "ramphocelus-dimidiatus",
           "slug_grupo": "animales",
           "tipo": "biologico",
@@ -3192,7 +3303,7 @@
         },
         {
           "label": "Thraupis episcopus",
-          "registros": 21,
+          "registros": 22,
           "slug_especie": "thraupis-episcopus",
           "slug_grupo": "animales",
           "tipo": "biologico",
@@ -3207,8 +3318,23 @@
           "genus": "Thraupis"
         },
         {
+          "label": "Hypanthidioides colombiae",
+          "registros": 20,
+          "slug_especie": "hypanthidioides-colombiae",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1334441",
+          "species": "Hypanthidioides colombiae",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hymenoptera",
+          "family": "Megachilidae",
+          "genus": "Hypanthidioides"
+        },
+        {
           "label": "Tyrannus melancholicus",
-          "registros": 18,
+          "registros": 19,
           "slug_especie": "tyrannus-melancholicus",
           "slug_grupo": "animales",
           "tipo": "biologico",
@@ -3240,7 +3366,7 @@
         },
         {
           "label": "Pitangus sulphuratus",
-          "registros": 15,
+          "registros": 16,
           "slug_especie": "pitangus-sulphuratus",
           "slug_grupo": "animales",
           "tipo": "biologico",
@@ -3286,6 +3412,35 @@
           "genus": "Cebus"
         },
         {
+          "label": "Hypanthidioides christinae",
+          "registros": 14,
+          "slug_especie": "hypanthidioides-christinae",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "species": "Hypanthidioides christinae",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hymenoptera",
+          "family": "Megachilidae",
+          "genus": "Hypanthidioides"
+        },
+        {
+          "label": "Hypanthidioides flavopicta",
+          "registros": 14,
+          "slug_especie": "hypanthidioides-flavopicta",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1334407",
+          "species": "Hypanthidioides flavopicta",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hymenoptera",
+          "family": "Megachilidae",
+          "genus": "Hypanthidioides"
+        },
+        {
           "label": "Myiozetetes cayanensis",
           "registros": 14,
           "slug_especie": "myiozetetes-cayanensis",
@@ -3300,73 +3455,43 @@
           "order": "Passeriformes",
           "family": "Tyrannidae",
           "genus": "Myiozetetes"
-        },
-        {
-          "label": "Amazilia tzacatl",
-          "registros": 13,
-          "slug_especie": "amazilia-tzacatl",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2476441",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e782a283c45700544e407e/summary",
-          "species": "Amazilia tzacatl",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Apodiformes",
-          "family": "Trochilidae",
-          "genus": "Amazilia"
-        },
-        {
-          "label": "Cithaerias pireta",
-          "registros": 12,
-          "slug_especie": "cithaerias-pireta",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1908577",
-          "species": "Cithaerias pireta",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Cithaerias"
-        },
-        {
-          "label": "Forpus conspicillatus",
-          "registros": 12,
-          "slug_especie": "forpus-conspicillatus",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2479071",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c76fc3f0106c67230e73ed/summary",
-          "species": "Forpus conspicillatus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Psittaciformes",
-          "family": "Psittacidae",
-          "genus": "Forpus"
-        },
-        {
-          "label": "Sicalis flaveola",
-          "registros": 12,
-          "slug_especie": "sicalis-flaveola",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2491862",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf2a703c16479905cba7ca/summary",
-          "species": "Sicalis flaveola",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Sicalis"
         }
       ],
       "species_list_tematica": {
         "amenazadas-nacional": [
+          {
+            "label": "Thomasomys hylophilus",
+            "registros": 10,
+            "slug_especie": "thomasomys-hylophilus",
+            "slug_tematica": "amenazadas-nacional-en",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2439173",
+            "species": "Thomasomys hylophilus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Rodentia",
+            "family": "Cricetidae",
+            "genus": "Thomasomys"
+          },
+          {
+            "label": "Lagothrix lagothricha",
+            "registros": 5,
+            "slug_especie": "lagothrix-lagothricha",
+            "slug_tematica": "amenazadas-nacional-vu",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5786085",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/5e3b3b8b7312d26d51df5888/summary",
+            "species": "Lagothrix lagothricha",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Primates",
+            "family": "Atelidae",
+            "genus": "Lagothrix"
+          },
           {
             "label": "Dynastes neptunus",
             "registros": 3,
@@ -3383,6 +3508,23 @@
             "order": "Coleoptera",
             "family": "Scarabaeidae",
             "genus": "Dynastes"
+          },
+          {
+            "label": "Tayassu pecari",
+            "registros": 2,
+            "slug_especie": "tayassu-pecari",
+            "slug_tematica": "amenazadas-nacional-en",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2440993",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cc9182207ecea54a561e37/summary",
+            "species": "Tayassu pecari",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Artiodactyla",
+            "family": "Tayassuidae",
+            "genus": "Tayassu"
           },
           {
             "label": "Anadia bogotensis",
@@ -3417,6 +3559,23 @@
             "order": "Primates",
             "family": "Aotidae",
             "genus": "Aotus"
+          },
+          {
+            "label": "Ateles hybridus",
+            "registros": 1,
+            "slug_especie": "ateles-hybridus",
+            "slug_tematica": "amenazadas-nacional-cr",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/4267251",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c15c46f0106c67230e7314/summary",
+            "species": "Ateles hybridus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Primates",
+            "family": "Atelidae",
+            "genus": "Ateles"
           }
         ],
         "amenazadas-global": [
@@ -3559,7 +3718,7 @@
           },
           {
             "label": "Forpus conspicillatus",
-            "registros": 12,
+            "registros": 13,
             "slug_especie": "forpus-conspicillatus",
             "slug_tematica": "cites-ii",
             "slug_grupo": "animales",
@@ -3575,8 +3734,25 @@
             "genus": "Forpus"
           },
           {
+            "label": "Rupornis magnirostris",
+            "registros": 11,
+            "slug_especie": "rupornis-magnirostris",
+            "slug_tematica": "cites-ii",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5844398",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56ce57a13c16479905cba79b/summary",
+            "species": "Rupornis magnirostris",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Accipitriformes",
+            "family": "Accipitridae",
+            "genus": "Rupornis"
+          },
+          {
             "label": "Brotogeris jugularis",
-            "registros": 9,
+            "registros": 10,
             "slug_especie": "brotogeris-jugularis",
             "slug_tematica": "cites-ii",
             "slug_grupo": "animales",
@@ -3590,6 +3766,22 @@
             "order": "Psittaciformes",
             "family": "Psittacidae",
             "genus": "Brotogeris"
+          },
+          {
+            "label": "Kinosternon leucostomum",
+            "registros": 8,
+            "slug_especie": "kinosternon-leucostomum",
+            "slug_tematica": "cites-ii",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2442350",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56d97f1c3c16479905cba999/summary",
+            "species": "Kinosternon leucostomum",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Testudines",
+            "family": "Kinosternidae",
+            "genus": "Kinosternon"
           },
           {
             "label": "Chalybura buffonii",
@@ -3607,6 +3799,23 @@
             "order": "Apodiformes",
             "family": "Trochilidae",
             "genus": "Chalybura"
+          },
+          {
+            "label": "Lagothrix lagothricha",
+            "registros": 5,
+            "slug_especie": "lagothrix-lagothricha",
+            "slug_tematica": "cites-ii",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5786085",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/5e3b3b8b7312d26d51df5888/summary",
+            "species": "Lagothrix lagothricha",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Primates",
+            "family": "Atelidae",
+            "genus": "Lagothrix"
           },
           {
             "label": "Pionus chalcopterus",
@@ -3673,29 +3882,12 @@
             "order": "Carnivora",
             "family": "Procyonidae",
             "genus": "Potos"
-          },
-          {
-            "label": "Florisuga mellivora",
-            "registros": 3,
-            "slug_especie": "florisuga-mellivora",
-            "slug_tematica": "cites-ii",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476195",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e0b15783c45700544e3ce3/summary",
-            "species": "Florisuga mellivora",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Florisuga"
           }
         ],
         "migratorias": [
           {
             "label": "Tyrannus melancholicus",
-            "registros": 18,
+            "registros": 19,
             "slug_especie": "tyrannus-melancholicus",
             "slug_tematica": "migratorias",
             "slug_grupo": "animales",
@@ -3967,6 +4159,20 @@
             "genus": "Zygodontomys"
           },
           {
+            "label": "Hemibrycon plutarcoi",
+            "registros": 3,
+            "slug_especie": "hemibrycon-plutarcoi",
+            "slug_tematica": "endemicas",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "species": "Hemibrycon plutarcoi",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Characiformes",
+            "family": "Characidae",
+            "genus": "Hemibrycon"
+          },
+          {
             "label": "Proechimys chrysaeolus",
             "registros": 3,
             "slug_especie": "proechimys-chrysaeolus",
@@ -4138,7 +4344,6 @@
     {
       "slug": "aracnidos",
       "slug_grupo": "aracnidos",
-      "tipo": "biologico",
       "slug_region": "muzo",
       "registros_region_total": 9,
       "registros_continentales": 9,
@@ -4356,18 +4561,19 @@
       "registros_salobres_amenazadas_global_dd": "NA",
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
+      "tipo": "biologico",
       "parent": [
         {
           "slug": "aracnidos",
           "label": "Boyacá",
-          "especies_region_total": 127,
-          "registros_region_total": 2561
+          "especies_region_total": 138,
+          "registros_region_total": 2817
         }
       ],
       "estimadas": {
         "slug_grupo": "aracnidos",
         "especies_amenazadas_nacional_total_estimadas": 8,
-        "especies_amenazadas_global_total_estimadas": 0,
+        "especies_amenazadas_global_total_estimadas": "0",
         "especies_cites_total_estimadas": 0,
         "especies_endemicas_estimadas": "NA"
       },
@@ -4475,14 +4681,13 @@
     {
       "slug": "aves",
       "slug_grupo": "aves",
-      "tipo": "biologico",
       "slug_region": "muzo",
-      "registros_region_total": 721,
-      "registros_continentales": 721,
+      "registros_region_total": 736,
+      "registros_continentales": 736,
       "registros_marinos": 0,
       "registros_salobres": 0,
-      "especies_region_total": 177,
-      "especies_continentales": 177,
+      "especies_region_total": 179,
+      "especies_continentales": 179,
       "especies_marinas": 0,
       "especies_salobres": 0,
       "especies_amenazadas_nacional_total": 0,
@@ -4493,15 +4698,15 @@
       "registros_amenazadas_nacional_cr": "NA",
       "registros_amenazadas_nacional_en": "NA",
       "registros_amenazadas_nacional_vu": "NA",
-      "especies_cites_total": 24,
+      "especies_cites_total": 25,
       "especies_cites_i": "NA",
       "especies_cites_i_ii": "NA",
-      "especies_cites_ii": 24,
+      "especies_cites_ii": 25,
       "especies_cites_iii": "NA",
-      "registros_cites_total": 79,
+      "registros_cites_total": 92,
       "registros_cites_i": "NA",
       "registros_cites_i_ii": "NA",
-      "registros_cites_ii": 79,
+      "registros_cites_ii": 92,
       "registros_cites_iii": "NA",
       "especies_exoticas_total": 2,
       "especies_exoticas": 0,
@@ -4514,7 +4719,7 @@
       "especies_endemicas": 1,
       "especies_migratorias": 26,
       "registros_endemicas": 2,
-      "registros_migratorias": 78,
+      "registros_migratorias": 79,
       "especies_amenazadas_global_total": "NA",
       "especies_amenazadas_global_ex": "NA",
       "especies_amenazadas_global_ew": "NA",
@@ -4533,7 +4738,7 @@
       "registros_amenazadas_global_en": "NA",
       "registros_amenazadas_global_vu": "NA",
       "registros_amenazadas_global_nt": 1,
-      "registros_amenazadas_global_lc": 654,
+      "registros_amenazadas_global_lc": 649,
       "registros_amenazadas_global_dd": "NA",
       "registros_amenazadas_global_lr_lc": "NA",
       "registros_amenazadas_global_lr_nt": "NA",
@@ -4545,15 +4750,15 @@
       "registros_continentales_amenazadas_nacional_cr": "NA",
       "registros_continentales_amenazadas_nacional_en": "NA",
       "registros_continentales_amenazadas_nacional_vu": "NA",
-      "especies_continentales_cites_total": 24,
+      "especies_continentales_cites_total": 25,
       "especies_continentales_cites_i": "NA",
       "especies_continentales_cites_i_ii": "NA",
-      "especies_continentales_cites_ii": 24,
+      "especies_continentales_cites_ii": 25,
       "especies_continentales_cites_iii": "NA",
-      "registros_continentales_cites_total": 79,
+      "registros_continentales_cites_total": 92,
       "registros_continentales_cites_i": "NA",
       "registros_continentales_cites_i_ii": "NA",
-      "registros_continentales_cites_ii": 79,
+      "registros_continentales_cites_ii": 92,
       "registros_continentales_cites_iii": "NA",
       "especies_continentales_exoticas_total": 2,
       "especies_continentales_exoticas": 0,
@@ -4566,7 +4771,7 @@
       "especies_continentales_endemicas": 1,
       "especies_continentales_migratorias": 26,
       "registros_continentales_endemicas": 2,
-      "registros_continentales_migratorias": 78,
+      "registros_continentales_migratorias": 79,
       "especies_continentales_amenazadas_global_total": "NA",
       "especies_continentales_amenazadas_global_ex": "NA",
       "especies_continentales_amenazadas_global_ew": "NA",
@@ -4585,7 +4790,7 @@
       "registros_continentales_amenazadas_global_en": "NA",
       "registros_continentales_amenazadas_global_vu": "NA",
       "registros_continentales_amenazadas_global_nt": 1,
-      "registros_continentales_amenazadas_global_lc": 654,
+      "registros_continentales_amenazadas_global_lc": 649,
       "registros_continentales_amenazadas_global_dd": "NA",
       "registros_continentales_amenazadas_global_lr_lc": "NA",
       "registros_continentales_amenazadas_global_lr_nt": "NA",
@@ -4693,26 +4898,27 @@
       "registros_salobres_amenazadas_global_dd": "NA",
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
+      "tipo": "biologico",
       "parent": [
         {
           "slug": "aves",
           "label": "Boyacá",
-          "especies_region_total": 922,
-          "registros_region_total": 320579
+          "especies_region_total": 961,
+          "registros_region_total": 393182
         }
       ],
       "estimadas": {
         "slug_grupo": "aves",
-        "especies_amenazadas_nacional_total_estimadas": 140,
-        "especies_amenazadas_global_total_estimadas": 103,
-        "especies_cites_total_estimadas": 330,
-        "especies_endemicas_estimadas": 82
+        "especies_amenazadas_nacional_total_estimadas": 139,
+        "especies_amenazadas_global_total_estimadas": "103",
+        "especies_cites_total_estimadas": 332,
+        "especies_endemicas_estimadas": 84
       },
       "subgrupo_especies": [],
       "species_list_top": [
         {
           "label": "Ramphocelus dimidiatus",
-          "registros": 30,
+          "registros": 31,
           "slug_especie": "ramphocelus-dimidiatus",
           "slug_grupo": "aves",
           "tipo": "biologico",
@@ -4728,7 +4934,7 @@
         },
         {
           "label": "Thraupis episcopus",
-          "registros": 21,
+          "registros": 22,
           "slug_especie": "thraupis-episcopus",
           "slug_grupo": "aves",
           "tipo": "biologico",
@@ -4744,7 +4950,7 @@
         },
         {
           "label": "Tyrannus melancholicus",
-          "registros": 18,
+          "registros": 19,
           "slug_especie": "tyrannus-melancholicus",
           "slug_grupo": "aves",
           "tipo": "biologico",
@@ -4760,7 +4966,7 @@
         },
         {
           "label": "Pitangus sulphuratus",
-          "registros": 15,
+          "registros": 16,
           "slug_especie": "pitangus-sulphuratus",
           "slug_grupo": "aves",
           "tipo": "biologico",
@@ -4808,7 +5014,7 @@
         },
         {
           "label": "Forpus conspicillatus",
-          "registros": 12,
+          "registros": 13,
           "slug_especie": "forpus-conspicillatus",
           "slug_grupo": "aves",
           "tipo": "biologico",
@@ -4824,7 +5030,7 @@
         },
         {
           "label": "Sicalis flaveola",
-          "registros": 12,
+          "registros": 13,
           "slug_especie": "sicalis-flaveola",
           "slug_grupo": "aves",
           "tipo": "biologico",
@@ -4837,6 +5043,20 @@
           "order": "Passeriformes",
           "family": "Thraupidae",
           "genus": "Sicalis"
+        },
+        {
+          "label": "Stilpnia cyanicollis",
+          "registros": 12,
+          "slug_especie": "stilpnia-cyanicollis",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "species": "Stilpnia cyanicollis",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Stilpnia"
         },
         {
           "label": "Rupornis magnirostris",
@@ -4894,7 +5114,7 @@
           },
           {
             "label": "Forpus conspicillatus",
-            "registros": 12,
+            "registros": 13,
             "slug_especie": "forpus-conspicillatus",
             "slug_tematica": "cites-ii",
             "slug_grupo": "aves",
@@ -4910,8 +5130,25 @@
             "genus": "Forpus"
           },
           {
+            "label": "Rupornis magnirostris",
+            "registros": 11,
+            "slug_especie": "rupornis-magnirostris",
+            "slug_tematica": "cites-ii",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5844398",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56ce57a13c16479905cba79b/summary",
+            "species": "Rupornis magnirostris",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Accipitriformes",
+            "family": "Accipitridae",
+            "genus": "Rupornis"
+          },
+          {
             "label": "Brotogeris jugularis",
-            "registros": 9,
+            "registros": 10,
             "slug_especie": "brotogeris-jugularis",
             "slug_tematica": "cites-ii",
             "slug_grupo": "aves",
@@ -5044,6 +5281,23 @@
             "genus": "Anthracothorax"
           },
           {
+            "label": "Buteo nitidus",
+            "registros": 2,
+            "slug_especie": "buteo-nitidus",
+            "slug_tematica": "cites-ii",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2480556",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56d76cb23c16479905cba926/summary",
+            "species": "Buteo nitidus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Accipitriformes",
+            "family": "Accipitridae",
+            "genus": "Buteo"
+          },
+          {
             "label": "Buteo swainsoni",
             "registros": 2,
             "slug_especie": "buteo-swainsoni",
@@ -5095,23 +5349,6 @@
             "genus": "Elanus"
           },
           {
-            "label": "Milvago chimachima",
-            "registros": 2,
-            "slug_especie": "milvago-chimachima",
-            "slug_tematica": "cites-ii",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2481066",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b89cf0106c67230e7408/summary",
-            "species": "Milvago chimachima",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Falconiformes",
-            "family": "Falconidae",
-            "genus": "Milvago"
-          },
-          {
             "label": "Phaethornis guy",
             "registros": 2,
             "slug_especie": "phaethornis-guy",
@@ -5131,7 +5368,7 @@
         "migratorias": [
           {
             "label": "Tyrannus melancholicus",
-            "registros": 18,
+            "registros": 19,
             "slug_especie": "tyrannus-melancholicus",
             "slug_tematica": "migratorias",
             "slug_grupo": "aves",
@@ -5444,7 +5681,6 @@
     {
       "slug": "crustaceos",
       "slug_grupo": "crustaceos",
-      "tipo": "biologico",
       "slug_region": "muzo",
       "registros_region_total": 4,
       "registros_continentales": 4,
@@ -5662,20 +5898,21 @@
       "registros_salobres_amenazadas_global_dd": "NA",
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
+      "tipo": "biologico",
       "parent": [
         {
           "slug": "crustaceos",
           "label": "Boyacá",
           "especies_region_total": 22,
-          "registros_region_total": 1109
+          "registros_region_total": 1920
         }
       ],
       "estimadas": {
         "slug_grupo": "crustaceos",
-        "especies_amenazadas_nacional_total_estimadas": 33,
-        "especies_amenazadas_global_total_estimadas": 14,
+        "especies_amenazadas_nacional_total_estimadas": 38,
+        "especies_amenazadas_global_total_estimadas": "14",
         "especies_cites_total_estimadas": 0,
-        "especies_endemicas_estimadas": "NA"
+        "especies_endemicas_estimadas": 90
       },
       "subgrupo_especies": [],
       "species_list_top": [
@@ -5707,7 +5944,6 @@
     {
       "slug": "decapodos",
       "slug_grupo": "decapodos",
-      "tipo": "biologico",
       "slug_region": "muzo",
       "registros_region_total": 1,
       "registros_continentales": 1,
@@ -5925,18 +6161,19 @@
       "registros_salobres_amenazadas_global_dd": "NA",
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
+      "tipo": "biologico",
       "parent": [
         {
           "slug": "decapodos",
           "label": "Boyacá",
           "especies_region_total": 11,
-          "registros_region_total": 824
+          "registros_region_total": 1605
         }
       ],
       "estimadas": {
         "slug_grupo": "decapodos",
-        "especies_amenazadas_nacional_total_estimadas": 33,
-        "especies_amenazadas_global_total_estimadas": 14,
+        "especies_amenazadas_nacional_total_estimadas": 38,
+        "especies_amenazadas_global_total_estimadas": "14",
         "especies_cites_total_estimadas": 0,
         "especies_endemicas_estimadas": "NA"
       },
@@ -5954,7 +6191,6 @@
     {
       "slug": "dipteros",
       "slug_grupo": "dipteros",
-      "tipo": "biologico",
       "slug_region": "muzo",
       "registros_region_total": 7,
       "registros_continentales": 7,
@@ -6172,18 +6408,19 @@
       "registros_salobres_amenazadas_global_dd": "NA",
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
+      "tipo": "biologico",
       "parent": [
         {
           "slug": "dipteros",
           "label": "Boyacá",
-          "especies_region_total": 142,
-          "registros_region_total": 8213
+          "especies_region_total": 150,
+          "registros_region_total": 9148
         }
       ],
       "estimadas": {
         "slug_grupo": "dipteros",
         "especies_amenazadas_nacional_total_estimadas": 0,
-        "especies_amenazadas_global_total_estimadas": 0,
+        "especies_amenazadas_global_total_estimadas": "0",
         "especies_cites_total_estimadas": 0,
         "especies_endemicas_estimadas": "NA"
       },
@@ -6277,14 +6514,13 @@
     {
       "slug": "escarabajos",
       "slug_grupo": "escarabajos",
-      "tipo": "biologico",
       "slug_region": "muzo",
-      "registros_region_total": 74,
-      "registros_continentales": 74,
+      "registros_region_total": 80,
+      "registros_continentales": 80,
       "registros_marinos": 0,
       "registros_salobres": 0,
-      "especies_region_total": 21,
-      "especies_continentales": 21,
+      "especies_region_total": 23,
+      "especies_continentales": 23,
       "especies_marinas": 0,
       "especies_salobres": 0,
       "especies_amenazadas_nacional_total": 1,
@@ -6495,20 +6731,21 @@
       "registros_salobres_amenazadas_global_dd": "NA",
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
+      "tipo": "biologico",
       "parent": [
         {
           "slug": "escarabajos",
           "label": "Boyacá",
-          "especies_region_total": 283,
-          "registros_region_total": 14451
+          "especies_region_total": 324,
+          "registros_region_total": 16441
         }
       ],
       "estimadas": {
         "slug_grupo": "escarabajos",
         "especies_amenazadas_nacional_total_estimadas": 5,
-        "especies_amenazadas_global_total_estimadas": 2,
+        "especies_amenazadas_global_total_estimadas": "2",
         "especies_cites_total_estimadas": 0,
-        "especies_endemicas_estimadas": 717
+        "especies_endemicas_estimadas": 928
       },
       "subgrupo_especies": [],
       "species_list_top": [
@@ -6560,6 +6797,21 @@
           "genus": "Dynastes"
         },
         {
+          "label": "Ptenomela columbica",
+          "registros": 3,
+          "slug_especie": "ptenomela-columbica",
+          "slug_grupo": "escarabajos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5989676",
+          "species": "Ptenomela columbica",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Coleoptera",
+          "family": "Scarabaeidae",
+          "genus": "Ptenomela"
+        },
+        {
           "label": "Eurysternus plebejus",
           "registros": 2,
           "slug_especie": "eurysternus-plebejus",
@@ -6576,6 +6828,21 @@
           "genus": "Eurysternus"
         },
         {
+          "label": "Photinus circumcincta",
+          "registros": 2,
+          "slug_especie": "photinus-circumcincta",
+          "slug_grupo": "escarabajos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/11260795",
+          "species": "Photinus circumcincta",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Coleoptera",
+          "family": "Lampyridae",
+          "genus": "Photinus"
+        },
+        {
           "label": "Psalidognathus friendii",
           "registros": 2,
           "slug_especie": "psalidognathus-friendii",
@@ -6589,6 +6856,21 @@
           "order": "Coleoptera",
           "family": "Cerambycidae",
           "genus": "Psalidognathus"
+        },
+        {
+          "label": "Aspidolea singularis",
+          "registros": 1,
+          "slug_especie": "aspidolea-singularis",
+          "slug_grupo": "escarabajos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1075017",
+          "species": "Aspidolea singularis",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Coleoptera",
+          "family": "Scarabaeidae",
+          "genus": "Aspidolea"
         },
         {
           "label": "Coilodes castaneus",
@@ -6665,6 +6947,21 @@
           "genus": "Golofa"
         },
         {
+          "label": "Macraspis bouchardi",
+          "registros": 1,
+          "slug_especie": "macraspis-bouchardi",
+          "slug_grupo": "escarabajos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/6281898",
+          "species": "Macraspis bouchardi",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Coleoptera",
+          "family": "Scarabaeidae",
+          "genus": "Macraspis"
+        },
+        {
           "label": "Macraspis chrysis",
           "registros": 1,
           "slug_especie": "macraspis-chrysis",
@@ -6726,21 +7023,6 @@
           "genus": "Phanaeus"
         },
         {
-          "label": "Photinus circumcincta",
-          "registros": 1,
-          "slug_especie": "photinus-circumcincta",
-          "slug_grupo": "escarabajos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/11260795",
-          "species": "Photinus circumcincta",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Coleoptera",
-          "family": "Lampyridae",
-          "genus": "Photinus"
-        },
-        {
           "label": "Phyllophaga pruinosa",
           "registros": 1,
           "slug_especie": "phyllophaga-pruinosa",
@@ -6751,7 +7033,7 @@
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Coleoptera",
-          "family": "Melolonthidae",
+          "family": "Scarabaeidae",
           "genus": "Phyllophaga"
         },
         {
@@ -6768,21 +7050,6 @@
           "order": "Coleoptera",
           "family": "Scarabaeidae",
           "genus": "Pseudothyridium"
-        },
-        {
-          "label": "Ptenomela columbica",
-          "registros": 1,
-          "slug_especie": "ptenomela-columbica",
-          "slug_grupo": "escarabajos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5989676",
-          "species": "Ptenomela columbica",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Coleoptera",
-          "family": "Scarabaeidae",
-          "genus": "Ptenomela"
         },
         {
           "label": "Sceloenopla cassidiformis",
@@ -6860,7 +7127,6 @@
     {
       "slug": "helechos",
       "slug_grupo": "helechos",
-      "tipo": "biologico",
       "slug_region": "muzo",
       "registros_region_total": 1,
       "registros_continentales": 1,
@@ -7078,19 +7344,20 @@
       "registros_salobres_amenazadas_global_dd": "NA",
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
+      "tipo": "biologico",
       "parent": [
         {
           "slug": "helechos",
           "label": "Boyacá",
-          "especies_region_total": 557,
-          "registros_region_total": 7633
+          "especies_region_total": 563,
+          "registros_region_total": 8017
         }
       ],
       "estimadas": {
         "slug_grupo": "helechos",
-        "especies_amenazadas_nacional_total_estimadas": 0,
-        "especies_amenazadas_global_total_estimadas": 0,
-        "especies_cites_total_estimadas": 74,
+        "especies_amenazadas_nacional_total_estimadas": 46,
+        "especies_amenazadas_global_total_estimadas": "0",
+        "especies_cites_total_estimadas": 71,
         "especies_endemicas_estimadas": 92
       },
       "subgrupo_especies": [],
@@ -7107,14 +7374,13 @@
     {
       "slug": "hongos",
       "slug_grupo": "hongos",
-      "tipo": "biologico",
       "slug_region": "muzo",
-      "registros_region_total": 2,
-      "registros_continentales": 2,
+      "registros_region_total": 5,
+      "registros_continentales": 5,
       "registros_marinos": 0,
       "registros_salobres": 0,
-      "especies_region_total": 1,
-      "especies_continentales": 1,
+      "especies_region_total": 2,
+      "especies_continentales": 2,
       "especies_marinas": 0,
       "especies_salobres": 0,
       "especies_amenazadas_nacional_total": 0,
@@ -7143,9 +7409,9 @@
       "registros_exoticas": 0,
       "registros_invasoras": 0,
       "registros_exoticas_riesgo_invasion": 0,
-      "especies_endemicas": 0,
+      "especies_endemicas": 1,
       "especies_migratorias": "NA",
-      "registros_endemicas": 0,
+      "registros_endemicas": 2,
       "registros_migratorias": "NA",
       "especies_amenazadas_global_total": "NA",
       "especies_amenazadas_global_ex": "NA",
@@ -7195,9 +7461,9 @@
       "registros_continentales_exoticas": 0,
       "registros_continentales_invasoras": 0,
       "registros_continentales_exoticas_riesgo_invasion": 0,
-      "especies_continentales_endemicas": 0,
+      "especies_continentales_endemicas": 1,
       "especies_continentales_migratorias": "NA",
-      "registros_continentales_endemicas": 0,
+      "registros_continentales_endemicas": 2,
       "registros_continentales_migratorias": "NA",
       "especies_continentales_amenazadas_global_total": "NA",
       "especies_continentales_amenazadas_global_ex": "NA",
@@ -7325,18 +7591,19 @@
       "registros_salobres_amenazadas_global_dd": "NA",
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
+      "tipo": "biologico",
       "parent": [
         {
           "slug": "hongos",
           "label": "Boyacá",
-          "especies_region_total": 675,
-          "registros_region_total": 8467
+          "especies_region_total": 764,
+          "registros_region_total": 8978
         }
       ],
       "estimadas": {
         "slug_grupo": "hongos",
-        "especies_amenazadas_nacional_total_estimadas": 0,
-        "especies_amenazadas_global_total_estimadas": 6,
+        "especies_amenazadas_nacional_total_estimadas": 81,
+        "especies_amenazadas_global_total_estimadas": "6",
         "especies_cites_total_estimadas": 0,
         "especies_endemicas_estimadas": 175
       },
@@ -7344,12 +7611,27 @@
       "species_list_top": [
         {
           "label": "Cladonia corymbites",
-          "registros": 2,
+          "registros": 3,
           "slug_especie": "cladonia-corymbites",
           "slug_grupo": "hongos",
           "tipo": "biologico",
           "url_gbif": "https://www.gbif.org/species/3390647",
           "species": "Cladonia corymbites",
+          "kingdom": "Fungi",
+          "phylum": "Ascomycota",
+          "class": "Lecanoromycetes",
+          "order": "Lecanorales",
+          "family": "Cladoniaceae",
+          "genus": "Cladonia"
+        },
+        {
+          "label": "Cladonia symphoriza",
+          "registros": 2,
+          "slug_especie": "cladonia-symphoriza",
+          "slug_grupo": "hongos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3391245",
+          "species": "Cladonia symphoriza",
           "kingdom": "Fungi",
           "phylum": "Ascomycota",
           "class": "Lecanoromycetes",
@@ -7363,21 +7645,37 @@
         "amenazadas-global": [],
         "cites": [],
         "migratorias": [],
-        "endemicas": [],
+        "endemicas": [
+          {
+            "label": "Cladonia symphoriza",
+            "registros": 2,
+            "slug_especie": "cladonia-symphoriza",
+            "slug_tematica": "endemicas",
+            "slug_grupo": "hongos",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/3391245",
+            "species": "Cladonia symphoriza",
+            "kingdom": "Fungi",
+            "phylum": "Ascomycota",
+            "class": "Lecanoromycetes",
+            "order": "Lecanorales",
+            "family": "Cladoniaceae",
+            "genus": "Cladonia"
+          }
+        ],
         "exoticas-total": []
       }
     },
     {
       "slug": "hormigas",
       "slug_grupo": "hormigas",
-      "tipo": "biologico",
       "slug_region": "muzo",
-      "registros_region_total": 3,
-      "registros_continentales": 3,
+      "registros_region_total": 4,
+      "registros_continentales": 4,
       "registros_marinos": 0,
       "registros_salobres": 0,
-      "especies_region_total": 1,
-      "especies_continentales": 1,
+      "especies_region_total": 2,
+      "especies_continentales": 2,
       "especies_marinas": 0,
       "especies_salobres": 0,
       "especies_amenazadas_nacional_total": 0,
@@ -7588,18 +7886,19 @@
       "registros_salobres_amenazadas_global_dd": "NA",
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
+      "tipo": "biologico",
       "parent": [
         {
           "slug": "hormigas",
           "label": "Boyacá",
           "especies_region_total": 42,
-          "registros_region_total": 35100
+          "registros_region_total": 35175
         }
       ],
       "estimadas": {
         "slug_grupo": "hormigas",
         "especies_amenazadas_nacional_total_estimadas": 2,
-        "especies_amenazadas_global_total_estimadas": 0,
+        "especies_amenazadas_global_total_estimadas": "0",
         "especies_cites_total_estimadas": 0,
         "especies_endemicas_estimadas": "NA"
       },
@@ -7619,6 +7918,21 @@
           "order": "Hymenoptera",
           "family": "Formicidae",
           "genus": "Atta"
+        },
+        {
+          "label": "Dorymyrmex brunneus",
+          "registros": 1,
+          "slug_especie": "dorymyrmex-brunneus",
+          "slug_grupo": "hormigas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1325633",
+          "species": "Dorymyrmex brunneus",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hymenoptera",
+          "family": "Formicidae",
+          "genus": "Dorymyrmex"
         }
       ],
       "species_list_tematica": {
@@ -7633,14 +7947,13 @@
     {
       "slug": "insectos",
       "slug_grupo": "insectos",
-      "tipo": "biologico",
       "slug_region": "muzo",
-      "registros_region_total": 432,
-      "registros_continentales": 432,
+      "registros_region_total": 557,
+      "registros_continentales": 557,
       "registros_marinos": 0,
       "registros_salobres": 0,
-      "especies_region_total": 152,
-      "especies_continentales": 152,
+      "especies_region_total": 173,
+      "especies_continentales": 173,
       "especies_marinas": 0,
       "especies_salobres": 0,
       "especies_amenazadas_nacional_total": 1,
@@ -7680,7 +7993,7 @@
       "especies_amenazadas_global_en": "NA",
       "especies_amenazadas_global_vu": "NA",
       "especies_amenazadas_global_nt": "NA",
-      "especies_amenazadas_global_lc": 7,
+      "especies_amenazadas_global_lc": 8,
       "especies_amenazadas_global_dd": 1,
       "especies_amenazadas_global_lr_lc": "NA",
       "especies_amenazadas_global_lr_nt": "NA",
@@ -7691,7 +8004,7 @@
       "registros_amenazadas_global_en": "NA",
       "registros_amenazadas_global_vu": "NA",
       "registros_amenazadas_global_nt": "NA",
-      "registros_amenazadas_global_lc": 9,
+      "registros_amenazadas_global_lc": 12,
       "registros_amenazadas_global_dd": 2,
       "registros_amenazadas_global_lr_lc": "NA",
       "registros_amenazadas_global_lr_nt": "NA",
@@ -7732,7 +8045,7 @@
       "especies_continentales_amenazadas_global_en": "NA",
       "especies_continentales_amenazadas_global_vu": "NA",
       "especies_continentales_amenazadas_global_nt": "NA",
-      "especies_continentales_amenazadas_global_lc": 7,
+      "especies_continentales_amenazadas_global_lc": 8,
       "especies_continentales_amenazadas_global_dd": 1,
       "especies_continentales_amenazadas_global_lr_lc": "NA",
       "especies_continentales_amenazadas_global_lr_nt": "NA",
@@ -7743,7 +8056,7 @@
       "registros_continentales_amenazadas_global_en": "NA",
       "registros_continentales_amenazadas_global_vu": "NA",
       "registros_continentales_amenazadas_global_nt": "NA",
-      "registros_continentales_amenazadas_global_lc": 9,
+      "registros_continentales_amenazadas_global_lc": 12,
       "registros_continentales_amenazadas_global_dd": 2,
       "registros_continentales_amenazadas_global_lr_lc": "NA",
       "registros_continentales_amenazadas_global_lr_nt": "NA",
@@ -7851,26 +8164,27 @@
       "registros_salobres_amenazadas_global_dd": 0,
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
+      "tipo": "biologico",
       "parent": [
         {
           "slug": "insectos",
           "label": "Boyacá",
-          "especies_region_total": 1298,
-          "registros_region_total": 76352
+          "especies_region_total": 1482,
+          "registros_region_total": 81488
         }
       ],
       "estimadas": {
         "slug_grupo": "insectos",
-        "especies_amenazadas_nacional_total_estimadas": 36,
-        "especies_amenazadas_global_total_estimadas": 29,
+        "especies_amenazadas_nacional_total_estimadas": 34,
+        "especies_amenazadas_global_total_estimadas": "29",
         "especies_cites_total_estimadas": 0,
-        "especies_endemicas_estimadas": 926
+        "especies_endemicas_estimadas": 1147
       },
       "subgrupo_especies": [
         {
           "slug_grupo": "abejas",
           "label_grupo": "Abejas",
-          "especies_region_total": 4
+          "especies_region_total": 5
         },
         {
           "slug_grupo": "dipteros",
@@ -7880,20 +8194,64 @@
         {
           "slug_grupo": "escarabajos",
           "label_grupo": "Escarabajos",
-          "especies_region_total": 21
+          "especies_region_total": 23
         },
         {
           "slug_grupo": "hormigas",
           "label_grupo": "Hormigas",
-          "especies_region_total": 1
+          "especies_region_total": 2
         },
         {
           "slug_grupo": "mariposas",
           "label_grupo": "Mariposas",
-          "especies_region_total": 101
+          "especies_region_total": 112
         }
       ],
       "species_list_top": [
+        {
+          "label": "Hypanthidioides colombiae",
+          "registros": 20,
+          "slug_especie": "hypanthidioides-colombiae",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1334441",
+          "species": "Hypanthidioides colombiae",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hymenoptera",
+          "family": "Megachilidae",
+          "genus": "Hypanthidioides"
+        },
+        {
+          "label": "Hypanthidioides christinae",
+          "registros": 14,
+          "slug_especie": "hypanthidioides-christinae",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "species": "Hypanthidioides christinae",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hymenoptera",
+          "family": "Megachilidae",
+          "genus": "Hypanthidioides"
+        },
+        {
+          "label": "Hypanthidioides flavopicta",
+          "registros": 14,
+          "slug_especie": "hypanthidioides-flavopicta",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1334407",
+          "species": "Hypanthidioides flavopicta",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hymenoptera",
+          "family": "Megachilidae",
+          "genus": "Hypanthidioides"
+        },
         {
           "label": "Cithaerias pireta",
           "registros": 12,
@@ -7910,19 +8268,19 @@
           "genus": "Cithaerias"
         },
         {
-          "label": "Hypanthidioides colombiae",
-          "registros": 10,
-          "slug_especie": "hypanthidioides-colombiae",
+          "label": "Morpho cypris",
+          "registros": 8,
+          "slug_especie": "morpho-cypris",
           "slug_grupo": "insectos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1334441",
-          "species": "Hypanthidioides colombiae",
+          "url_gbif": "https://www.gbif.org/species/5133156",
+          "species": "Morpho cypris",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
-          "order": "Hymenoptera",
-          "family": "Megachilidae",
-          "genus": "Hypanthidioides"
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Morpho"
         },
         {
           "label": "Dynastes hercules",
@@ -7956,42 +8314,13 @@
           "genus": "Heliconius"
         },
         {
-          "label": "Hypanthidioides christinae",
-          "registros": 7,
-          "slug_especie": "hypanthidioides-christinae",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "species": "Hypanthidioides christinae",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Hymenoptera",
-          "family": "Megachilidae",
-          "genus": "Hypanthidioides"
-        },
-        {
-          "label": "Hypanthidioides flavopicta",
-          "registros": 7,
-          "slug_especie": "hypanthidioides-flavopicta",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1334407",
-          "species": "Hypanthidioides flavopicta",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Hymenoptera",
-          "family": "Megachilidae",
-          "genus": "Hypanthidioides"
-        },
-        {
-          "label": "Morpho cypris",
+          "label": "Morpho helenor",
           "registros": 6,
-          "slug_especie": "morpho-cypris",
+          "slug_especie": "morpho-helenor",
           "slug_grupo": "insectos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5133156",
-          "species": "Morpho cypris",
+          "url_gbif": "https://www.gbif.org/species/5133265",
+          "species": "Morpho helenor",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
@@ -8015,6 +8344,21 @@
           "genus": "Pierella"
         },
         {
+          "label": "Caligo atreus",
+          "registros": 5,
+          "slug_especie": "caligo-atreus",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1918133",
+          "species": "Caligo atreus",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Caligo"
+        },
+        {
           "label": "Heliconius doris",
           "registros": 5,
           "slug_especie": "heliconius-doris",
@@ -8028,6 +8372,36 @@
           "order": "Lepidoptera",
           "family": "Nymphalidae",
           "genus": "Heliconius"
+        },
+        {
+          "label": "Historis odius",
+          "registros": 5,
+          "slug_especie": "historis-odius",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1898686",
+          "species": "Historis odius",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Historis"
+        },
+        {
+          "label": "Marpesia marcella",
+          "registros": 5,
+          "slug_especie": "marpesia-marcella",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5133634",
+          "species": "Marpesia marcella",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Marpesia"
         },
         {
           "label": "Parides erithalion",
@@ -8122,14 +8496,13 @@
     {
       "slug": "invertebrados",
       "slug_grupo": "invertebrados",
-      "tipo": "biologico",
       "slug_region": "muzo",
-      "registros_region_total": 460,
-      "registros_continentales": 460,
+      "registros_region_total": 587,
+      "registros_continentales": 587,
       "registros_marinos": 0,
       "registros_salobres": 0,
-      "especies_region_total": 168,
-      "especies_continentales": 168,
+      "especies_region_total": 191,
+      "especies_continentales": 191,
       "especies_marinas": 0,
       "especies_salobres": 0,
       "especies_amenazadas_nacional_total": 1,
@@ -8169,7 +8542,7 @@
       "especies_amenazadas_global_en": "NA",
       "especies_amenazadas_global_vu": 1,
       "especies_amenazadas_global_nt": "NA",
-      "especies_amenazadas_global_lc": 7,
+      "especies_amenazadas_global_lc": 8,
       "especies_amenazadas_global_dd": 1,
       "especies_amenazadas_global_lr_lc": "NA",
       "especies_amenazadas_global_lr_nt": "NA",
@@ -8180,7 +8553,7 @@
       "registros_amenazadas_global_en": "NA",
       "registros_amenazadas_global_vu": 1,
       "registros_amenazadas_global_nt": "NA",
-      "registros_amenazadas_global_lc": 9,
+      "registros_amenazadas_global_lc": 12,
       "registros_amenazadas_global_dd": 2,
       "registros_amenazadas_global_lr_lc": "NA",
       "registros_amenazadas_global_lr_nt": "NA",
@@ -8221,7 +8594,7 @@
       "especies_continentales_amenazadas_global_en": "NA",
       "especies_continentales_amenazadas_global_vu": 1,
       "especies_continentales_amenazadas_global_nt": "NA",
-      "especies_continentales_amenazadas_global_lc": 7,
+      "especies_continentales_amenazadas_global_lc": 8,
       "especies_continentales_amenazadas_global_dd": 1,
       "especies_continentales_amenazadas_global_lr_lc": "NA",
       "especies_continentales_amenazadas_global_lr_nt": "NA",
@@ -8232,7 +8605,7 @@
       "registros_continentales_amenazadas_global_en": "NA",
       "registros_continentales_amenazadas_global_vu": 1,
       "registros_continentales_amenazadas_global_nt": "NA",
-      "registros_continentales_amenazadas_global_lc": 9,
+      "registros_continentales_amenazadas_global_lc": 12,
       "registros_continentales_amenazadas_global_dd": 2,
       "registros_continentales_amenazadas_global_lr_lc": "NA",
       "registros_continentales_amenazadas_global_lr_nt": "NA",
@@ -8340,20 +8713,21 @@
       "registros_salobres_amenazadas_global_dd": 0,
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
+      "tipo": "biologico",
       "parent": [
         {
           "slug": "invertebrados",
           "label": "Boyacá",
-          "especies_region_total": 1572,
-          "registros_region_total": 81789
+          "especies_region_total": 1783,
+          "registros_region_total": 88084
         }
       ],
       "estimadas": {
         "slug_grupo": "invertebrados",
-        "especies_amenazadas_nacional_total_estimadas": 98,
-        "especies_amenazadas_global_total_estimadas": 81,
+        "especies_amenazadas_nacional_total_estimadas": 102,
+        "especies_amenazadas_global_total_estimadas": "81",
         "especies_cites_total_estimadas": 147,
-        "especies_endemicas_estimadas": 926
+        "especies_endemicas_estimadas": 1147
       },
       "subgrupo_especies": [
         {
@@ -8369,15 +8743,59 @@
         {
           "slug_grupo": "insectos",
           "label_grupo": "Insectos",
-          "especies_region_total": 152
+          "especies_region_total": 173
         },
         {
           "slug_grupo": "moluscos",
           "label_grupo": "Moluscos",
-          "especies_region_total": 8
+          "especies_region_total": 10
         }
       ],
       "species_list_top": [
+        {
+          "label": "Hypanthidioides colombiae",
+          "registros": 20,
+          "slug_especie": "hypanthidioides-colombiae",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1334441",
+          "species": "Hypanthidioides colombiae",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hymenoptera",
+          "family": "Megachilidae",
+          "genus": "Hypanthidioides"
+        },
+        {
+          "label": "Hypanthidioides christinae",
+          "registros": 14,
+          "slug_especie": "hypanthidioides-christinae",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "species": "Hypanthidioides christinae",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hymenoptera",
+          "family": "Megachilidae",
+          "genus": "Hypanthidioides"
+        },
+        {
+          "label": "Hypanthidioides flavopicta",
+          "registros": 14,
+          "slug_especie": "hypanthidioides-flavopicta",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1334407",
+          "species": "Hypanthidioides flavopicta",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hymenoptera",
+          "family": "Megachilidae",
+          "genus": "Hypanthidioides"
+        },
         {
           "label": "Cithaerias pireta",
           "registros": 12,
@@ -8394,19 +8812,19 @@
           "genus": "Cithaerias"
         },
         {
-          "label": "Hypanthidioides colombiae",
-          "registros": 10,
-          "slug_especie": "hypanthidioides-colombiae",
+          "label": "Morpho cypris",
+          "registros": 8,
+          "slug_especie": "morpho-cypris",
           "slug_grupo": "invertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1334441",
-          "species": "Hypanthidioides colombiae",
+          "url_gbif": "https://www.gbif.org/species/5133156",
+          "species": "Morpho cypris",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
-          "order": "Hymenoptera",
-          "family": "Megachilidae",
-          "genus": "Hypanthidioides"
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Morpho"
         },
         {
           "label": "Dynastes hercules",
@@ -8440,42 +8858,13 @@
           "genus": "Heliconius"
         },
         {
-          "label": "Hypanthidioides christinae",
-          "registros": 7,
-          "slug_especie": "hypanthidioides-christinae",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "species": "Hypanthidioides christinae",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Hymenoptera",
-          "family": "Megachilidae",
-          "genus": "Hypanthidioides"
-        },
-        {
-          "label": "Hypanthidioides flavopicta",
-          "registros": 7,
-          "slug_especie": "hypanthidioides-flavopicta",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1334407",
-          "species": "Hypanthidioides flavopicta",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Hymenoptera",
-          "family": "Megachilidae",
-          "genus": "Hypanthidioides"
-        },
-        {
-          "label": "Morpho cypris",
+          "label": "Morpho helenor",
           "registros": 6,
-          "slug_especie": "morpho-cypris",
+          "slug_especie": "morpho-helenor",
           "slug_grupo": "invertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5133156",
-          "species": "Morpho cypris",
+          "url_gbif": "https://www.gbif.org/species/5133265",
+          "species": "Morpho helenor",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
@@ -8499,6 +8888,21 @@
           "genus": "Pierella"
         },
         {
+          "label": "Caligo atreus",
+          "registros": 5,
+          "slug_especie": "caligo-atreus",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1918133",
+          "species": "Caligo atreus",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Caligo"
+        },
+        {
           "label": "Heliconius doris",
           "registros": 5,
           "slug_especie": "heliconius-doris",
@@ -8512,6 +8916,36 @@
           "order": "Lepidoptera",
           "family": "Nymphalidae",
           "genus": "Heliconius"
+        },
+        {
+          "label": "Historis odius",
+          "registros": 5,
+          "slug_especie": "historis-odius",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1898686",
+          "species": "Historis odius",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Historis"
+        },
+        {
+          "label": "Marpesia marcella",
+          "registros": 5,
+          "slug_especie": "marpesia-marcella",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5133634",
+          "species": "Marpesia marcella",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Marpesia"
         },
         {
           "label": "Parides erithalion",
@@ -8623,33 +9057,32 @@
     {
       "slug": "mamiferos",
       "slug_grupo": "mamiferos",
-      "tipo": "biologico",
       "slug_region": "muzo",
-      "registros_region_total": 212,
-      "registros_continentales": 212,
+      "registros_region_total": 214,
+      "registros_continentales": 214,
       "registros_marinos": 0,
       "registros_salobres": 0,
       "especies_region_total": 35,
       "especies_continentales": 35,
       "especies_marinas": 0,
       "especies_salobres": 0,
-      "especies_amenazadas_nacional_total": 1,
-      "especies_amenazadas_nacional_cr": "NA",
-      "especies_amenazadas_nacional_en": "NA",
-      "especies_amenazadas_nacional_vu": 1,
-      "registros_amenazadas_nacional_total": 1,
-      "registros_amenazadas_nacional_cr": "NA",
-      "registros_amenazadas_nacional_en": "NA",
-      "registros_amenazadas_nacional_vu": 1,
-      "especies_cites_total": 5,
+      "especies_amenazadas_nacional_total": 5,
+      "especies_amenazadas_nacional_cr": 1,
+      "especies_amenazadas_nacional_en": 2,
+      "especies_amenazadas_nacional_vu": 2,
+      "registros_amenazadas_nacional_total": 19,
+      "registros_amenazadas_nacional_cr": 1,
+      "registros_amenazadas_nacional_en": 12,
+      "registros_amenazadas_nacional_vu": 6,
+      "especies_cites_total": 6,
       "especies_cites_i": "NA",
       "especies_cites_i_ii": "NA",
-      "especies_cites_ii": 3,
+      "especies_cites_ii": 4,
       "especies_cites_iii": 2,
-      "registros_cites_total": 23,
+      "registros_cites_total": 28,
       "registros_cites_i": "NA",
       "registros_cites_i_ii": "NA",
-      "registros_cites_ii": 17,
+      "registros_cites_ii": 22,
       "registros_cites_iii": 6,
       "especies_exoticas_total": "NA",
       "especies_exoticas": 0,
@@ -8681,27 +9114,27 @@
       "registros_amenazadas_global_en": "NA",
       "registros_amenazadas_global_vu": 18,
       "registros_amenazadas_global_nt": "NA",
-      "registros_amenazadas_global_lc": 146,
+      "registros_amenazadas_global_lc": 148,
       "registros_amenazadas_global_dd": 9,
       "registros_amenazadas_global_lr_lc": "NA",
       "registros_amenazadas_global_lr_nt": "NA",
-      "especies_continentales_amenazadas_nacional_total": 1,
-      "especies_continentales_amenazadas_nacional_cr": "NA",
-      "especies_continentales_amenazadas_nacional_en": "NA",
-      "especies_continentales_amenazadas_nacional_vu": 1,
-      "registros_continentales_amenazadas_nacional_total": 1,
-      "registros_continentales_amenazadas_nacional_cr": "NA",
-      "registros_continentales_amenazadas_nacional_en": "NA",
-      "registros_continentales_amenazadas_nacional_vu": 1,
-      "especies_continentales_cites_total": 5,
+      "especies_continentales_amenazadas_nacional_total": 5,
+      "especies_continentales_amenazadas_nacional_cr": 1,
+      "especies_continentales_amenazadas_nacional_en": 2,
+      "especies_continentales_amenazadas_nacional_vu": 2,
+      "registros_continentales_amenazadas_nacional_total": 19,
+      "registros_continentales_amenazadas_nacional_cr": 1,
+      "registros_continentales_amenazadas_nacional_en": 12,
+      "registros_continentales_amenazadas_nacional_vu": 6,
+      "especies_continentales_cites_total": 6,
       "especies_continentales_cites_i": "NA",
       "especies_continentales_cites_i_ii": "NA",
-      "especies_continentales_cites_ii": 3,
+      "especies_continentales_cites_ii": 4,
       "especies_continentales_cites_iii": 2,
-      "registros_continentales_cites_total": 23,
+      "registros_continentales_cites_total": 28,
       "registros_continentales_cites_i": "NA",
       "registros_continentales_cites_i_ii": "NA",
-      "registros_continentales_cites_ii": 17,
+      "registros_continentales_cites_ii": 22,
       "registros_continentales_cites_iii": 6,
       "especies_continentales_exoticas_total": "NA",
       "especies_continentales_exoticas": 0,
@@ -8733,17 +9166,17 @@
       "registros_continentales_amenazadas_global_en": "NA",
       "registros_continentales_amenazadas_global_vu": 18,
       "registros_continentales_amenazadas_global_nt": "NA",
-      "registros_continentales_amenazadas_global_lc": 146,
+      "registros_continentales_amenazadas_global_lc": 148,
       "registros_continentales_amenazadas_global_dd": 9,
       "registros_continentales_amenazadas_global_lr_lc": "NA",
       "registros_continentales_amenazadas_global_lr_nt": "NA",
       "especies_marinas_amenazadas_nacional_total": 0,
-      "especies_marinas_amenazadas_nacional_en": "NA",
-      "especies_marinas_amenazadas_nacional_cr": "NA",
+      "especies_marinas_amenazadas_nacional_en": 0,
+      "especies_marinas_amenazadas_nacional_cr": 0,
       "especies_marinas_amenazadas_nacional_vu": 0,
       "registros_marinas_amenazadas_nacional_total": 0,
-      "registros_marinas_amenazadas_nacional_cr": "NA",
-      "registros_marinas_amenazadas_nacional_en": "NA",
+      "registros_marinas_amenazadas_nacional_cr": 0,
+      "registros_marinas_amenazadas_nacional_en": 0,
       "registros_marinas_amenazadas_nacional_vu": 0,
       "especies_marinas_cites_total": 0,
       "especies_marinas_cites_i": "NA",
@@ -8790,12 +9223,12 @@
       "registros_marinas_amenazadas_global_lr_lc": "NA",
       "registros_marinas_amenazadas_global_lr_nt": "NA",
       "especies_salobres_amenazadas_nacional_total": 0,
-      "especies_salobres_amenazadas_nacional_cr": "NA",
-      "especies_salobres_amenazadas_nacional_en": "NA",
+      "especies_salobres_amenazadas_nacional_cr": 0,
+      "especies_salobres_amenazadas_nacional_en": 0,
       "especies_salobres_amenazadas_nacional_vu": 0,
       "registros_salobres_amenazadas_nacional_total": 0,
-      "registros_salobres_amenazadas_nacional_cr": "NA",
-      "registros_salobres_amenazadas_nacional_en": "NA",
+      "registros_salobres_amenazadas_nacional_cr": 0,
+      "registros_salobres_amenazadas_nacional_en": 0,
       "registros_salobres_amenazadas_nacional_vu": 0,
       "especies_salobres_cites_total": 0,
       "especies_salobres_cites_i": "NA",
@@ -8841,19 +9274,20 @@
       "registros_salobres_amenazadas_global_dd": 0,
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
+      "tipo": "biologico",
       "parent": [
         {
           "slug": "mamiferos",
           "label": "Boyacá",
-          "especies_region_total": 153,
-          "registros_region_total": 3372
+          "especies_region_total": 155,
+          "registros_region_total": 3577
         }
       ],
       "estimadas": {
         "slug_grupo": "mamiferos",
-        "especies_amenazadas_nacional_total_estimadas": 42,
-        "especies_amenazadas_global_total_estimadas": 66,
-        "especies_cites_total_estimadas": 103,
+        "especies_amenazadas_nacional_total_estimadas": 71,
+        "especies_amenazadas_global_total_estimadas": "66",
+        "especies_cites_total_estimadas": 102,
         "especies_endemicas_estimadas": 62
       },
       "subgrupo_especies": [],
@@ -8938,6 +9372,22 @@
           "genus": "Didelphis"
         },
         {
+          "label": "Artibeus jamaicensis",
+          "registros": 5,
+          "slug_especie": "artibeus-jamaicensis",
+          "slug_grupo": "mamiferos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2433272",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c0f83cf0106c67230e7308/summary",
+          "species": "Artibeus jamaicensis",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Chiroptera",
+          "family": "Phyllostomidae",
+          "genus": "Artibeus"
+        },
+        {
           "label": "Dasypus novemcinctus",
           "registros": 5,
           "slug_especie": "dasypus-novemcinctus",
@@ -8999,102 +9449,60 @@
           "order": "Carnivora",
           "family": "Procyonidae",
           "genus": "Potos"
-        },
-        {
-          "label": "Artibeus jamaicensis",
-          "registros": 3,
-          "slug_especie": "artibeus-jamaicensis",
-          "slug_grupo": "mamiferos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2433272",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c0f83cf0106c67230e7308/summary",
-          "species": "Artibeus jamaicensis",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Mammalia",
-          "order": "Chiroptera",
-          "family": "Phyllostomidae",
-          "genus": "Artibeus"
-        },
-        {
-          "label": "Melanomys caliginosus",
-          "registros": 3,
-          "slug_especie": "melanomys-caliginosus",
-          "slug_grupo": "mamiferos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5219852",
-          "species": "Melanomys caliginosus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Mammalia",
-          "order": "Rodentia",
-          "family": "Cricetidae",
-          "genus": "Melanomys"
-        },
-        {
-          "label": "Oecomys flavicans",
-          "registros": 3,
-          "slug_especie": "oecomys-flavicans",
-          "slug_grupo": "mamiferos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2439316",
-          "species": "Oecomys flavicans",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Mammalia",
-          "order": "Rodentia",
-          "family": "Cricetidae",
-          "genus": "Oecomys"
-        },
-        {
-          "label": "Proechimys chrysaeolus",
-          "registros": 3,
-          "slug_especie": "proechimys-chrysaeolus",
-          "slug_grupo": "mamiferos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2439768",
-          "species": "Proechimys chrysaeolus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Mammalia",
-          "order": "Rodentia",
-          "family": "Echimyidae",
-          "genus": "Proechimys"
-        },
-        {
-          "label": "Transandinomys talamancae",
-          "registros": 3,
-          "slug_especie": "transandinomys-talamancae",
-          "slug_grupo": "mamiferos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5786979",
-          "species": "Transandinomys talamancae",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Mammalia",
-          "order": "Rodentia",
-          "family": "Cricetidae",
-          "genus": "Transandinomys"
-        },
-        {
-          "label": "Uroderma bilobatum",
-          "registros": 3,
-          "slug_especie": "uroderma-bilobatum",
-          "slug_grupo": "mamiferos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2433156",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cceb9a207ecea54a561e51/summary",
-          "species": "Uroderma bilobatum",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Mammalia",
-          "order": "Chiroptera",
-          "family": "Phyllostomidae",
-          "genus": "Uroderma"
         }
       ],
       "species_list_tematica": {
         "amenazadas-nacional": [
+          {
+            "label": "Thomasomys hylophilus",
+            "registros": 10,
+            "slug_especie": "thomasomys-hylophilus",
+            "slug_tematica": "amenazadas-nacional-en",
+            "slug_grupo": "mamiferos",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2439173",
+            "species": "Thomasomys hylophilus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Rodentia",
+            "family": "Cricetidae",
+            "genus": "Thomasomys"
+          },
+          {
+            "label": "Lagothrix lagothricha",
+            "registros": 5,
+            "slug_especie": "lagothrix-lagothricha",
+            "slug_tematica": "amenazadas-nacional-vu",
+            "slug_grupo": "mamiferos",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5786085",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/5e3b3b8b7312d26d51df5888/summary",
+            "species": "Lagothrix lagothricha",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Primates",
+            "family": "Atelidae",
+            "genus": "Lagothrix"
+          },
+          {
+            "label": "Tayassu pecari",
+            "registros": 2,
+            "slug_especie": "tayassu-pecari",
+            "slug_tematica": "amenazadas-nacional-en",
+            "slug_grupo": "mamiferos",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2440993",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cc9182207ecea54a561e37/summary",
+            "species": "Tayassu pecari",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Artiodactyla",
+            "family": "Tayassuidae",
+            "genus": "Tayassu"
+          },
           {
             "label": "Aotus griseimembra",
             "registros": 1,
@@ -9112,6 +9520,23 @@
             "order": "Primates",
             "family": "Aotidae",
             "genus": "Aotus"
+          },
+          {
+            "label": "Ateles hybridus",
+            "registros": 1,
+            "slug_especie": "ateles-hybridus",
+            "slug_tematica": "amenazadas-nacional-cr",
+            "slug_grupo": "mamiferos",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/4267251",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c15c46f0106c67230e7314/summary",
+            "species": "Ateles hybridus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Primates",
+            "family": "Atelidae",
+            "genus": "Ateles"
           }
         ],
         "amenazadas-global": [
@@ -9218,6 +9643,23 @@
             "order": "Primates",
             "family": "Cebidae",
             "genus": "Cebus"
+          },
+          {
+            "label": "Lagothrix lagothricha",
+            "registros": 5,
+            "slug_especie": "lagothrix-lagothricha",
+            "slug_tematica": "cites-ii",
+            "slug_grupo": "mamiferos",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5786085",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/5e3b3b8b7312d26d51df5888/summary",
+            "species": "Lagothrix lagothricha",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Primates",
+            "family": "Atelidae",
+            "genus": "Lagothrix"
           },
           {
             "label": "Potos flavus",
@@ -9363,14 +9805,13 @@
     {
       "slug": "mariposas",
       "slug_grupo": "mariposas",
-      "tipo": "biologico",
       "slug_region": "muzo",
-      "registros_region_total": 288,
-      "registros_continentales": 288,
+      "registros_region_total": 338,
+      "registros_continentales": 338,
       "registros_marinos": 0,
       "registros_salobres": 0,
-      "especies_region_total": 101,
-      "especies_continentales": 101,
+      "especies_region_total": 112,
+      "especies_continentales": 112,
       "especies_marinas": 0,
       "especies_salobres": 0,
       "especies_amenazadas_nacional_total": 0,
@@ -9410,7 +9851,7 @@
       "especies_amenazadas_global_en": "NA",
       "especies_amenazadas_global_vu": "NA",
       "especies_amenazadas_global_nt": "NA",
-      "especies_amenazadas_global_lc": 6,
+      "especies_amenazadas_global_lc": 7,
       "especies_amenazadas_global_dd": "NA",
       "especies_amenazadas_global_lr_lc": "NA",
       "especies_amenazadas_global_lr_nt": "NA",
@@ -9421,7 +9862,7 @@
       "registros_amenazadas_global_en": "NA",
       "registros_amenazadas_global_vu": "NA",
       "registros_amenazadas_global_nt": "NA",
-      "registros_amenazadas_global_lc": 8,
+      "registros_amenazadas_global_lc": 11,
       "registros_amenazadas_global_dd": "NA",
       "registros_amenazadas_global_lr_lc": "NA",
       "registros_amenazadas_global_lr_nt": "NA",
@@ -9462,7 +9903,7 @@
       "especies_continentales_amenazadas_global_en": "NA",
       "especies_continentales_amenazadas_global_vu": "NA",
       "especies_continentales_amenazadas_global_nt": "NA",
-      "especies_continentales_amenazadas_global_lc": 6,
+      "especies_continentales_amenazadas_global_lc": 7,
       "especies_continentales_amenazadas_global_dd": "NA",
       "especies_continentales_amenazadas_global_lr_lc": "NA",
       "especies_continentales_amenazadas_global_lr_nt": "NA",
@@ -9473,7 +9914,7 @@
       "registros_continentales_amenazadas_global_en": "NA",
       "registros_continentales_amenazadas_global_vu": "NA",
       "registros_continentales_amenazadas_global_nt": "NA",
-      "registros_continentales_amenazadas_global_lc": 8,
+      "registros_continentales_amenazadas_global_lc": 11,
       "registros_continentales_amenazadas_global_dd": "NA",
       "registros_continentales_amenazadas_global_lr_lc": "NA",
       "registros_continentales_amenazadas_global_lr_nt": "NA",
@@ -9581,18 +10022,19 @@
       "registros_salobres_amenazadas_global_dd": "NA",
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
+      "tipo": "biologico",
       "parent": [
         {
           "slug": "mariposas",
           "label": "Boyacá",
-          "especies_region_total": 521,
-          "registros_region_total": 5816
+          "especies_region_total": 602,
+          "registros_region_total": 6860
         }
       ],
       "estimadas": {
         "slug_grupo": "mariposas",
-        "especies_amenazadas_nacional_total_estimadas": 12,
-        "especies_amenazadas_global_total_estimadas": 0,
+        "especies_amenazadas_nacional_total_estimadas": 10,
+        "especies_amenazadas_global_total_estimadas": "0",
         "especies_cites_total_estimadas": 0,
         "especies_endemicas_estimadas": 219
       },
@@ -9614,6 +10056,21 @@
           "genus": "Cithaerias"
         },
         {
+          "label": "Morpho cypris",
+          "registros": 8,
+          "slug_especie": "morpho-cypris",
+          "slug_grupo": "mariposas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5133156",
+          "species": "Morpho cypris",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Morpho"
+        },
+        {
           "label": "Heliconius sara",
           "registros": 7,
           "slug_especie": "heliconius-sara",
@@ -9629,13 +10086,13 @@
           "genus": "Heliconius"
         },
         {
-          "label": "Morpho cypris",
+          "label": "Morpho helenor",
           "registros": 6,
-          "slug_especie": "morpho-cypris",
+          "slug_especie": "morpho-helenor",
           "slug_grupo": "mariposas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5133156",
-          "species": "Morpho cypris",
+          "url_gbif": "https://www.gbif.org/species/5133265",
+          "species": "Morpho helenor",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
@@ -9659,6 +10116,21 @@
           "genus": "Pierella"
         },
         {
+          "label": "Caligo atreus",
+          "registros": 5,
+          "slug_especie": "caligo-atreus",
+          "slug_grupo": "mariposas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1918133",
+          "species": "Caligo atreus",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Caligo"
+        },
+        {
           "label": "Heliconius doris",
           "registros": 5,
           "slug_especie": "heliconius-doris",
@@ -9672,6 +10144,36 @@
           "order": "Lepidoptera",
           "family": "Nymphalidae",
           "genus": "Heliconius"
+        },
+        {
+          "label": "Historis odius",
+          "registros": 5,
+          "slug_especie": "historis-odius",
+          "slug_grupo": "mariposas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1898686",
+          "species": "Historis odius",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Historis"
+        },
+        {
+          "label": "Marpesia marcella",
+          "registros": 5,
+          "slug_especie": "marpesia-marcella",
+          "slug_grupo": "mariposas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5133634",
+          "species": "Marpesia marcella",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Marpesia"
         },
         {
           "label": "Parides erithalion",
@@ -9719,81 +10221,6 @@
           "order": "Lepidoptera",
           "family": "Nymphalidae",
           "genus": "Posttaygetis"
-        },
-        {
-          "label": "Caligo atreus",
-          "registros": 4,
-          "slug_especie": "caligo-atreus",
-          "slug_grupo": "mariposas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1918133",
-          "species": "Caligo atreus",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Caligo"
-        },
-        {
-          "label": "Callicore pitheas",
-          "registros": 4,
-          "slug_especie": "callicore-pitheas",
-          "slug_grupo": "mariposas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/10365587",
-          "species": "Callicore pitheas",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Catagramma"
-        },
-        {
-          "label": "Historis odius",
-          "registros": 4,
-          "slug_especie": "historis-odius",
-          "slug_grupo": "mariposas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1898686",
-          "species": "Historis odius",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Historis"
-        },
-        {
-          "label": "Marpesia marcella",
-          "registros": 4,
-          "slug_especie": "marpesia-marcella",
-          "slug_grupo": "mariposas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5133634",
-          "species": "Marpesia marcella",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Marpesia"
-        },
-        {
-          "label": "Taygetis mermeria",
-          "registros": 4,
-          "slug_especie": "taygetis-mermeria",
-          "slug_grupo": "mariposas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1908203",
-          "species": "Taygetis mermeria",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Taygetis"
         }
       ],
       "species_list_tematica": {
@@ -9808,14 +10235,13 @@
     {
       "slug": "moluscos",
       "slug_grupo": "moluscos",
-      "tipo": "biologico",
       "slug_region": "muzo",
-      "registros_region_total": 14,
-      "registros_continentales": 14,
+      "registros_region_total": 16,
+      "registros_continentales": 16,
       "registros_marinos": 0,
       "registros_salobres": 0,
-      "especies_region_total": 8,
-      "especies_continentales": 8,
+      "especies_region_total": 10,
+      "especies_continentales": 10,
       "especies_marinas": 0,
       "especies_salobres": 0,
       "especies_amenazadas_nacional_total": 0,
@@ -10026,23 +10452,39 @@
       "registros_salobres_amenazadas_global_dd": "NA",
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
+      "tipo": "biologico",
       "parent": [
         {
           "slug": "moluscos",
           "label": "Boyacá",
-          "especies_region_total": 56,
-          "registros_region_total": 397
+          "especies_region_total": 69,
+          "registros_region_total": 434
         }
       ],
       "estimadas": {
         "slug_grupo": "moluscos",
-        "especies_amenazadas_nacional_total_estimadas": 14,
-        "especies_amenazadas_global_total_estimadas": 4,
+        "especies_amenazadas_nacional_total_estimadas": 10,
+        "especies_amenazadas_global_total_estimadas": "4",
         "especies_cites_total_estimadas": 1,
         "especies_endemicas_estimadas": "NA"
       },
       "subgrupo_especies": [],
       "species_list_top": [
+        {
+          "label": "Megalobulimus oblongus",
+          "registros": 2,
+          "slug_especie": "megalobulimus-oblongus",
+          "slug_grupo": "moluscos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/9189798",
+          "species": "Megalobulimus oblongus",
+          "kingdom": "Animalia",
+          "phylum": "Mollusca",
+          "class": "Gastropoda",
+          "order": "Stylommatophora",
+          "family": "Strophocheilidae",
+          "genus": "Megalobulimus"
+        },
         {
           "label": "Aperostoma fischeri",
           "registros": 1,
@@ -10055,7 +10497,7 @@
           "phylum": "Mollusca",
           "class": "Gastropoda",
           "order": "Architaenioglossa",
-          "family": "Neocyclotidae",
+          "family": "Megalomastomatidae",
           "genus": "Aperostoma"
         },
         {
@@ -10115,6 +10557,21 @@
           "order": "Architaenioglossa",
           "family": "Neocyclotidae",
           "genus": "Incidostoma"
+        },
+        {
+          "label": "Labyrinthus otostomus",
+          "registros": 1,
+          "slug_especie": "labyrinthus-otostomus",
+          "slug_grupo": "moluscos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/10722156",
+          "species": "Labyrinthus otostomus",
+          "kingdom": "Animalia",
+          "phylum": "Mollusca",
+          "class": "Gastropoda",
+          "order": "Stylommatophora",
+          "family": "Labyrinthidae",
+          "genus": "Labyrinthus"
         },
         {
           "label": "Plekocheilus gibbonius",
@@ -10190,14 +10647,13 @@
     {
       "slug": "peces",
       "slug_grupo": "peces",
-      "tipo": "biologico",
       "slug_region": "muzo",
       "registros_region_total": 4,
       "registros_continentales": 4,
       "registros_marinos": 0,
       "registros_salobres": 0,
-      "especies_region_total": 1,
-      "especies_continentales": 1,
+      "especies_region_total": 2,
+      "especies_continentales": 2,
       "especies_marinas": 0,
       "especies_salobres": 0,
       "especies_amenazadas_nacional_total": 0,
@@ -10226,9 +10682,9 @@
       "registros_exoticas": 0,
       "registros_invasoras": 0,
       "registros_exoticas_riesgo_invasion": 0,
-      "especies_endemicas": 1,
+      "especies_endemicas": 2,
       "especies_migratorias": "NA",
-      "registros_endemicas": 1,
+      "registros_endemicas": 4,
       "registros_migratorias": "NA",
       "especies_amenazadas_global_total": "NA",
       "especies_amenazadas_global_ex": "NA",
@@ -10278,9 +10734,9 @@
       "registros_continentales_exoticas": 0,
       "registros_continentales_invasoras": 0,
       "registros_continentales_exoticas_riesgo_invasion": 0,
-      "especies_continentales_endemicas": 1,
+      "especies_continentales_endemicas": 2,
       "especies_continentales_migratorias": "NA",
-      "registros_continentales_endemicas": 1,
+      "registros_continentales_endemicas": 4,
       "registros_continentales_migratorias": "NA",
       "especies_continentales_amenazadas_global_total": "NA",
       "especies_continentales_amenazadas_global_ex": "NA",
@@ -10408,29 +10864,43 @@
       "registros_salobres_amenazadas_global_dd": 0,
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
+      "tipo": "biologico",
       "parent": [
         {
           "slug": "peces",
           "label": "Boyacá",
-          "especies_region_total": 204,
-          "registros_region_total": 3595
+          "especies_region_total": 203,
+          "registros_region_total": 4132
         }
       ],
       "estimadas": {
         "slug_grupo": "peces",
-        "especies_amenazadas_nacional_total_estimadas": 123,
-        "especies_amenazadas_global_total_estimadas": 258,
-        "especies_cites_total_estimadas": 44,
+        "especies_amenazadas_nacional_total_estimadas": 113,
+        "especies_amenazadas_global_total_estimadas": "192",
+        "especies_cites_total_estimadas": 53,
         "especies_endemicas_estimadas": "NA"
       },
       "subgrupo_especies": [
         {
           "slug_grupo": "peces-dulceacuicolas",
           "label_grupo": "Peces dulceacuícolas",
-          "especies_region_total": 1
+          "especies_region_total": 2
         }
       ],
       "species_list_top": [
+        {
+          "label": "Hemibrycon plutarcoi",
+          "registros": 3,
+          "slug_especie": "hemibrycon-plutarcoi",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "species": "Hemibrycon plutarcoi",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Characidae",
+          "genus": "Hemibrycon"
+        },
         {
           "label": "Astroblepus marmoratus",
           "registros": 1,
@@ -10454,6 +10924,20 @@
         "migratorias": [],
         "endemicas": [
           {
+            "label": "Hemibrycon plutarcoi",
+            "registros": 3,
+            "slug_especie": "hemibrycon-plutarcoi",
+            "slug_tematica": "endemicas",
+            "slug_grupo": "peces",
+            "tipo": "biologico",
+            "species": "Hemibrycon plutarcoi",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Characiformes",
+            "family": "Characidae",
+            "genus": "Hemibrycon"
+          },
+          {
             "label": "Astroblepus marmoratus",
             "registros": 1,
             "slug_especie": "astroblepus-marmoratus",
@@ -10476,14 +10960,13 @@
     {
       "slug": "peces-dulceacuicolas",
       "slug_grupo": "peces-dulceacuicolas",
-      "tipo": "biologico",
       "slug_region": "muzo",
-      "registros_region_total": 1,
-      "registros_continentales": 1,
+      "registros_region_total": 4,
+      "registros_continentales": 4,
       "registros_marinos": 0,
       "registros_salobres": 0,
-      "especies_region_total": 1,
-      "especies_continentales": 1,
+      "especies_region_total": 2,
+      "especies_continentales": 2,
       "especies_marinas": 0,
       "especies_salobres": 0,
       "especies_amenazadas_nacional_total": 0,
@@ -10512,9 +10995,9 @@
       "registros_exoticas": 0,
       "registros_invasoras": 0,
       "registros_exoticas_riesgo_invasion": 0,
-      "especies_endemicas": 1,
+      "especies_endemicas": 2,
       "especies_migratorias": "NA",
-      "registros_endemicas": 1,
+      "registros_endemicas": 4,
       "registros_migratorias": "NA",
       "especies_amenazadas_global_total": "NA",
       "especies_amenazadas_global_ex": "NA",
@@ -10564,9 +11047,9 @@
       "registros_continentales_exoticas": 0,
       "registros_continentales_invasoras": 0,
       "registros_continentales_exoticas_riesgo_invasion": 0,
-      "especies_continentales_endemicas": 1,
+      "especies_continentales_endemicas": 2,
       "especies_continentales_migratorias": "NA",
-      "registros_continentales_endemicas": 1,
+      "registros_continentales_endemicas": 4,
       "registros_continentales_migratorias": "NA",
       "especies_continentales_amenazadas_global_total": "NA",
       "especies_continentales_amenazadas_global_ex": "NA",
@@ -10694,23 +11177,37 @@
       "registros_salobres_amenazadas_global_dd": 0,
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
+      "tipo": "biologico",
       "parent": [
         {
           "slug": "peces-dulceacuicolas",
           "label": "Boyacá",
-          "especies_region_total": 176,
-          "registros_region_total": 1265
+          "especies_region_total": 173,
+          "registros_region_total": 1484
         }
       ],
       "estimadas": {
         "slug_grupo": "peces-dulceacuicolas",
-        "especies_amenazadas_nacional_total_estimadas": 52,
-        "especies_amenazadas_global_total_estimadas": 66,
+        "especies_amenazadas_nacional_total_estimadas": 56,
+        "especies_amenazadas_global_total_estimadas": "66",
         "especies_cites_total_estimadas": 7,
-        "especies_endemicas_estimadas": 346
+        "especies_endemicas_estimadas": 413
       },
       "subgrupo_especies": [],
       "species_list_top": [
+        {
+          "label": "Hemibrycon plutarcoi",
+          "registros": 3,
+          "slug_especie": "hemibrycon-plutarcoi",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "species": "Hemibrycon plutarcoi",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Characidae",
+          "genus": "Hemibrycon"
+        },
         {
           "label": "Astroblepus marmoratus",
           "registros": 1,
@@ -10734,6 +11231,20 @@
         "migratorias": [],
         "endemicas": [
           {
+            "label": "Hemibrycon plutarcoi",
+            "registros": 3,
+            "slug_especie": "hemibrycon-plutarcoi",
+            "slug_tematica": "endemicas",
+            "slug_grupo": "peces-dulceacuicolas",
+            "tipo": "biologico",
+            "species": "Hemibrycon plutarcoi",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Characiformes",
+            "family": "Characidae",
+            "genus": "Hemibrycon"
+          },
+          {
             "label": "Astroblepus marmoratus",
             "registros": 1,
             "slug_especie": "astroblepus-marmoratus",
@@ -10756,12 +11267,11 @@
     {
       "slug": "plantas",
       "slug_grupo": "plantas",
-      "tipo": "biologico",
       "slug_region": "muzo",
-      "registros_region_total": 56,
-      "registros_continentales": 56,
+      "registros_region_total": 58,
+      "registros_continentales": 58,
       "registros_marinos": 0,
-      "registros_salobres": 6,
+      "registros_salobres": 0,
       "especies_region_total": 36,
       "especies_continentales": 36,
       "especies_marinas": 0,
@@ -10974,19 +11484,20 @@
       "registros_salobres_amenazadas_global_dd": "NA",
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
+      "tipo": "biologico",
       "parent": [
         {
           "slug": "plantas",
           "label": "Boyacá",
-          "especies_region_total": 7372,
-          "registros_region_total": 150056
+          "especies_region_total": 7431,
+          "registros_region_total": 161251
         }
       ],
       "estimadas": {
         "slug_grupo": "plantas",
-        "especies_amenazadas_nacional_total_estimadas": 814,
-        "especies_amenazadas_global_total_estimadas": 958,
-        "especies_cites_total_estimadas": 2859,
+        "especies_amenazadas_nacional_total_estimadas": 1263,
+        "especies_amenazadas_global_total_estimadas": "958",
+        "especies_cites_total_estimadas": 2867,
         "especies_endemicas_estimadas": 6212
       },
       "subgrupo_especies": [
@@ -11079,6 +11590,21 @@
           "order": "Myrtales",
           "family": "Melastomataceae",
           "genus": "Miconia"
+        },
+        {
+          "label": "Passiflora capsularis",
+          "registros": 2,
+          "slug_especie": "passiflora-capsularis",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7313548",
+          "species": "Passiflora capsularis",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Malpighiales",
+          "family": "Passifloraceae",
+          "genus": "Passiflora"
         },
         {
           "label": "Sapium glandulosum",
@@ -11449,21 +11975,6 @@
           "order": "Gentianales",
           "family": "Rubiaceae",
           "genus": "Palicourea"
-        },
-        {
-          "label": "Passiflora capsularis",
-          "registros": 1,
-          "slug_especie": "passiflora-capsularis",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7313548",
-          "species": "Passiflora capsularis",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Passifloraceae",
-          "genus": "Passiflora"
         },
         {
           "label": "Piper haughtii",
@@ -11652,10 +12163,9 @@
     {
       "slug": "reptiles",
       "slug_grupo": "reptiles",
-      "tipo": "biologico",
       "slug_region": "muzo",
-      "registros_region_total": 118,
-      "registros_continentales": 118,
+      "registros_region_total": 119,
+      "registros_continentales": 119,
       "registros_marinos": 0,
       "registros_salobres": 0,
       "especies_region_total": 43,
@@ -11670,15 +12180,15 @@
       "registros_amenazadas_nacional_cr": "NA",
       "registros_amenazadas_nacional_en": "NA",
       "registros_amenazadas_nacional_vu": 1,
-      "especies_cites_total": 1,
+      "especies_cites_total": 2,
       "especies_cites_i": "NA",
       "especies_cites_i_ii": "NA",
-      "especies_cites_ii": 1,
+      "especies_cites_ii": 2,
       "especies_cites_iii": "NA",
-      "registros_cites_total": 1,
+      "registros_cites_total": 9,
       "registros_cites_i": "NA",
       "registros_cites_i_ii": "NA",
-      "registros_cites_ii": 1,
+      "registros_cites_ii": 9,
       "registros_cites_iii": "NA",
       "especies_exoticas_total": 1,
       "especies_exoticas": 1,
@@ -11722,15 +12232,15 @@
       "registros_continentales_amenazadas_nacional_cr": "NA",
       "registros_continentales_amenazadas_nacional_en": "NA",
       "registros_continentales_amenazadas_nacional_vu": 1,
-      "especies_continentales_cites_total": 1,
+      "especies_continentales_cites_total": 2,
       "especies_continentales_cites_i": "NA",
       "especies_continentales_cites_i_ii": "NA",
-      "especies_continentales_cites_ii": 1,
+      "especies_continentales_cites_ii": 2,
       "especies_continentales_cites_iii": "NA",
-      "registros_continentales_cites_total": 1,
+      "registros_continentales_cites_total": 9,
       "registros_continentales_cites_i": "NA",
       "registros_continentales_cites_i_ii": "NA",
-      "registros_continentales_cites_ii": 1,
+      "registros_continentales_cites_ii": 9,
       "registros_continentales_cites_iii": "NA",
       "especies_continentales_exoticas_total": 1,
       "especies_continentales_exoticas": 1,
@@ -11870,20 +12380,21 @@
       "registros_salobres_amenazadas_global_dd": 0,
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
+      "tipo": "biologico",
       "parent": [
         {
           "slug": "reptiles",
           "label": "Boyacá",
-          "especies_region_total": 172,
-          "registros_region_total": 2429
+          "especies_region_total": 179,
+          "registros_region_total": 2755
         }
       ],
       "estimadas": {
         "slug_grupo": "reptiles",
         "especies_amenazadas_nacional_total_estimadas": 44,
-        "especies_amenazadas_global_total_estimadas": 41,
-        "especies_cites_total_estimadas": 40,
-        "especies_endemicas_estimadas": "NA"
+        "especies_amenazadas_global_total_estimadas": "41",
+        "especies_cites_total_estimadas": 50,
+        "especies_endemicas_estimadas": 50
       },
       "subgrupo_especies": [],
       "species_list_top": [
@@ -12018,52 +12529,8 @@
           "genus": "Polychrus"
         },
         {
-          "label": "Bothrops atrox",
-          "registros": 3,
-          "slug_especie": "bothrops-atrox",
-          "slug_grupo": "reptiles",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5220775",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e1691a83c45700544e3d12/summary",
-          "species": "Bothrops atrox",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Squamata",
-          "family": "Viperidae",
-          "genus": "Bothrops"
-        },
-        {
-          "label": "Dendrophidion bivittatus",
-          "registros": 3,
-          "slug_especie": "dendrophidion-bivittatus",
-          "slug_grupo": "reptiles",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2452613",
-          "species": "Dendrophidion bivittatus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Squamata",
-          "family": "Colubridae",
-          "genus": "Dendrophidion"
-        },
-        {
-          "label": "Imantodes cenchoa",
-          "registros": 3,
-          "slug_especie": "imantodes-cenchoa",
-          "slug_grupo": "reptiles",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/8960303",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cd0ba6207ecea54a561e5d/summary",
-          "species": "Imantodes cenchoa",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Squamata",
-          "family": "Colubridae",
-          "genus": "Imantodes"
-        },
-        {
           "label": "Scaphiodontophis annulatus",
-          "registros": 3,
+          "registros": 4,
           "slug_especie": "scaphiodontophis-annulatus",
           "slug_grupo": "reptiles",
           "tipo": "biologico",
@@ -12074,34 +12541,6 @@
           "class": "Squamata",
           "family": "Colubridae",
           "genus": "Scaphiodontophis"
-        },
-        {
-          "label": "Sibon nebulatus",
-          "registros": 3,
-          "slug_especie": "sibon-nebulatus",
-          "slug_grupo": "reptiles",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2458237",
-          "species": "Sibon nebulatus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Squamata",
-          "family": "Colubridae",
-          "genus": "Sibon"
-        },
-        {
-          "label": "Xenodon rabdocephalus",
-          "registros": 3,
-          "slug_especie": "xenodon-rabdocephalus",
-          "slug_grupo": "reptiles",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5959581",
-          "species": "Xenodon rabdocephalus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Squamata",
-          "family": "Colubridae",
-          "genus": "Xenodon"
         }
       ],
       "species_list_tematica": {
@@ -12125,6 +12564,22 @@
         ],
         "amenazadas-global": [],
         "cites": [
+          {
+            "label": "Kinosternon leucostomum",
+            "registros": 8,
+            "slug_especie": "kinosternon-leucostomum",
+            "slug_tematica": "cites-ii",
+            "slug_grupo": "reptiles",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2442350",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56d97f1c3c16479905cba999/summary",
+            "species": "Kinosternon leucostomum",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Testudines",
+            "family": "Kinosternidae",
+            "genus": "Kinosternon"
+          },
           {
             "label": "Boa constrictor",
             "registros": 1,
@@ -12167,10 +12622,9 @@
     {
       "slug": "vasculares",
       "slug_grupo": "vasculares",
-      "tipo": "biologico",
       "slug_region": "muzo",
-      "registros_region_total": 50,
-      "registros_continentales": 50,
+      "registros_region_total": 52,
+      "registros_continentales": 52,
       "registros_marinos": 0,
       "registros_salobres": 0,
       "especies_region_total": 36,
@@ -12385,12 +12839,13 @@
       "registros_salobres_amenazadas_global_dd": "NA",
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
+      "tipo": "biologico",
       "parent": [
         {
           "slug": "vasculares",
           "label": "Boyacá",
-          "especies_region_total": 6455,
-          "registros_region_total": 132225
+          "especies_region_total": 6591,
+          "registros_region_total": 139672
         }
       ],
       "estimadas": {
@@ -12479,6 +12934,21 @@
           "order": "Myrtales",
           "family": "Melastomataceae",
           "genus": "Miconia"
+        },
+        {
+          "label": "Passiflora capsularis",
+          "registros": 2,
+          "slug_especie": "passiflora-capsularis",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7313548",
+          "species": "Passiflora capsularis",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Malpighiales",
+          "family": "Passifloraceae",
+          "genus": "Passiflora"
         },
         {
           "label": "Sapium glandulosum",
@@ -12851,21 +13321,6 @@
           "genus": "Palicourea"
         },
         {
-          "label": "Passiflora capsularis",
-          "registros": 1,
-          "slug_especie": "passiflora-capsularis",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7313548",
-          "species": "Passiflora capsularis",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Passifloraceae",
-          "genus": "Passiflora"
-        },
-        {
           "label": "Piper haughtii",
           "registros": 1,
           "slug_especie": "piper-haughtii",
@@ -13052,33 +13507,32 @@
     {
       "slug": "vertebrados",
       "slug_grupo": "vertebrados",
-      "tipo": "biologico",
       "slug_region": "muzo",
-      "registros_region_total": 1066,
-      "registros_continentales": 1066,
+      "registros_region_total": 1084,
+      "registros_continentales": 1084,
       "registros_marinos": 0,
       "registros_salobres": 0,
-      "especies_region_total": 262,
-      "especies_continentales": 262,
+      "especies_region_total": 267,
+      "especies_continentales": 267,
       "especies_marinas": 0,
       "especies_salobres": 0,
-      "especies_amenazadas_nacional_total": 2,
-      "especies_amenazadas_nacional_cr": "NA",
-      "especies_amenazadas_nacional_en": "NA",
-      "especies_amenazadas_nacional_vu": 2,
-      "registros_amenazadas_nacional_total": 2,
-      "registros_amenazadas_nacional_cr": "NA",
-      "registros_amenazadas_nacional_en": "NA",
-      "registros_amenazadas_nacional_vu": 2,
-      "especies_cites_total": 30,
+      "especies_amenazadas_nacional_total": 6,
+      "especies_amenazadas_nacional_cr": 1,
+      "especies_amenazadas_nacional_en": 2,
+      "especies_amenazadas_nacional_vu": 3,
+      "registros_amenazadas_nacional_total": 20,
+      "registros_amenazadas_nacional_cr": 1,
+      "registros_amenazadas_nacional_en": 12,
+      "registros_amenazadas_nacional_vu": 7,
+      "especies_cites_total": 33,
       "especies_cites_i": "NA",
       "especies_cites_i_ii": "NA",
-      "especies_cites_ii": 28,
+      "especies_cites_ii": 31,
       "especies_cites_iii": 2,
-      "registros_cites_total": 103,
+      "registros_cites_total": 129,
       "registros_cites_i": "NA",
       "registros_cites_i_ii": "NA",
-      "registros_cites_ii": 97,
+      "registros_cites_ii": 123,
       "registros_cites_iii": 6,
       "especies_exoticas_total": 3,
       "especies_exoticas": 1,
@@ -13088,10 +13542,10 @@
       "registros_exoticas": 1,
       "registros_invasoras": 0,
       "registros_exoticas_riesgo_invasion": 5,
-      "especies_endemicas": 8,
+      "especies_endemicas": 9,
       "especies_migratorias": 26,
-      "registros_endemicas": 25,
-      "registros_migratorias": 78,
+      "registros_endemicas": 28,
+      "registros_migratorias": 79,
       "especies_amenazadas_global_total": 5,
       "especies_amenazadas_global_ex": "NA",
       "especies_amenazadas_global_ew": "NA",
@@ -13099,7 +13553,7 @@
       "especies_amenazadas_global_en": "NA",
       "especies_amenazadas_global_vu": 4,
       "especies_amenazadas_global_nt": 2,
-      "especies_amenazadas_global_lc": 233,
+      "especies_amenazadas_global_lc": 234,
       "especies_amenazadas_global_dd": 5,
       "especies_amenazadas_global_lr_lc": "NA",
       "especies_amenazadas_global_lr_nt": "NA",
@@ -13110,27 +13564,27 @@
       "registros_amenazadas_global_en": "NA",
       "registros_amenazadas_global_vu": 18,
       "registros_amenazadas_global_nt": 2,
-      "registros_amenazadas_global_lc": 902,
+      "registros_amenazadas_global_lc": 899,
       "registros_amenazadas_global_dd": 11,
       "registros_amenazadas_global_lr_lc": "NA",
       "registros_amenazadas_global_lr_nt": "NA",
-      "especies_continentales_amenazadas_nacional_total": 2,
-      "especies_continentales_amenazadas_nacional_cr": "NA",
-      "especies_continentales_amenazadas_nacional_en": "NA",
-      "especies_continentales_amenazadas_nacional_vu": 2,
-      "registros_continentales_amenazadas_nacional_total": 2,
-      "registros_continentales_amenazadas_nacional_cr": "NA",
-      "registros_continentales_amenazadas_nacional_en": "NA",
-      "registros_continentales_amenazadas_nacional_vu": 2,
-      "especies_continentales_cites_total": 30,
+      "especies_continentales_amenazadas_nacional_total": 6,
+      "especies_continentales_amenazadas_nacional_cr": 1,
+      "especies_continentales_amenazadas_nacional_en": 2,
+      "especies_continentales_amenazadas_nacional_vu": 3,
+      "registros_continentales_amenazadas_nacional_total": 20,
+      "registros_continentales_amenazadas_nacional_cr": 1,
+      "registros_continentales_amenazadas_nacional_en": 12,
+      "registros_continentales_amenazadas_nacional_vu": 7,
+      "especies_continentales_cites_total": 33,
       "especies_continentales_cites_i": "NA",
       "especies_continentales_cites_i_ii": "NA",
-      "especies_continentales_cites_ii": 28,
+      "especies_continentales_cites_ii": 31,
       "especies_continentales_cites_iii": 2,
-      "registros_continentales_cites_total": 103,
+      "registros_continentales_cites_total": 129,
       "registros_continentales_cites_i": "NA",
       "registros_continentales_cites_i_ii": "NA",
-      "registros_continentales_cites_ii": 97,
+      "registros_continentales_cites_ii": 123,
       "registros_continentales_cites_iii": 6,
       "especies_continentales_exoticas_total": 3,
       "especies_continentales_exoticas": 1,
@@ -13140,10 +13594,10 @@
       "registros_continentales_exoticas": 1,
       "registros_continentales_invasoras": 0,
       "registros_continentales_exoticas_riesgo_invasion": 5,
-      "especies_continentales_endemicas": 8,
+      "especies_continentales_endemicas": 9,
       "especies_continentales_migratorias": 26,
-      "registros_continentales_endemicas": 25,
-      "registros_continentales_migratorias": 78,
+      "registros_continentales_endemicas": 28,
+      "registros_continentales_migratorias": 79,
       "especies_continentales_amenazadas_global_total": 5,
       "especies_continentales_amenazadas_global_ex": "NA",
       "especies_continentales_amenazadas_global_ew": "NA",
@@ -13151,7 +13605,7 @@
       "especies_continentales_amenazadas_global_en": "NA",
       "especies_continentales_amenazadas_global_vu": 4,
       "especies_continentales_amenazadas_global_nt": 2,
-      "especies_continentales_amenazadas_global_lc": 233,
+      "especies_continentales_amenazadas_global_lc": 234,
       "especies_continentales_amenazadas_global_dd": 5,
       "especies_continentales_amenazadas_global_lr_lc": "NA",
       "especies_continentales_amenazadas_global_lr_nt": "NA",
@@ -13162,17 +13616,17 @@
       "registros_continentales_amenazadas_global_en": "NA",
       "registros_continentales_amenazadas_global_vu": 18,
       "registros_continentales_amenazadas_global_nt": 2,
-      "registros_continentales_amenazadas_global_lc": 902,
+      "registros_continentales_amenazadas_global_lc": 899,
       "registros_continentales_amenazadas_global_dd": 11,
       "registros_continentales_amenazadas_global_lr_lc": "NA",
       "registros_continentales_amenazadas_global_lr_nt": "NA",
       "especies_marinas_amenazadas_nacional_total": 0,
-      "especies_marinas_amenazadas_nacional_en": "NA",
-      "especies_marinas_amenazadas_nacional_cr": "NA",
+      "especies_marinas_amenazadas_nacional_en": 0,
+      "especies_marinas_amenazadas_nacional_cr": 0,
       "especies_marinas_amenazadas_nacional_vu": 0,
       "registros_marinas_amenazadas_nacional_total": 0,
-      "registros_marinas_amenazadas_nacional_cr": "NA",
-      "registros_marinas_amenazadas_nacional_en": "NA",
+      "registros_marinas_amenazadas_nacional_cr": 0,
+      "registros_marinas_amenazadas_nacional_en": 0,
       "registros_marinas_amenazadas_nacional_vu": 0,
       "especies_marinas_cites_total": 0,
       "especies_marinas_cites_i": "NA",
@@ -13219,12 +13673,12 @@
       "registros_marinas_amenazadas_global_lr_lc": "NA",
       "registros_marinas_amenazadas_global_lr_nt": "NA",
       "especies_salobres_amenazadas_nacional_total": 0,
-      "especies_salobres_amenazadas_nacional_cr": "NA",
-      "especies_salobres_amenazadas_nacional_en": "NA",
+      "especies_salobres_amenazadas_nacional_cr": 0,
+      "especies_salobres_amenazadas_nacional_en": 0,
       "especies_salobres_amenazadas_nacional_vu": 0,
       "registros_salobres_amenazadas_nacional_total": 0,
-      "registros_salobres_amenazadas_nacional_cr": "NA",
-      "registros_salobres_amenazadas_nacional_en": "NA",
+      "registros_salobres_amenazadas_nacional_cr": 0,
+      "registros_salobres_amenazadas_nacional_en": 0,
       "registros_salobres_amenazadas_nacional_vu": 0,
       "especies_salobres_cites_total": 0,
       "especies_salobres_cites_i": "NA",
@@ -13270,31 +13724,32 @@
       "registros_salobres_amenazadas_global_dd": 0,
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
+      "tipo": "biologico",
       "parent": [
         {
           "slug": "vertebrados",
           "label": "Boyacá",
-          "especies_region_total": 1610,
-          "registros_region_total": 337159
+          "especies_region_total": 1674,
+          "registros_region_total": 411155
         }
       ],
       "estimadas": {
         "slug_grupo": "vertebrados",
-        "especies_amenazadas_nacional_total_estimadas": 385,
-        "especies_amenazadas_global_total_estimadas": 706,
-        "especies_cites_total_estimadas": 539,
-        "especies_endemicas_estimadas": 949
+        "especies_amenazadas_nacional_total_estimadas": 657,
+        "especies_amenazadas_global_total_estimadas": "706",
+        "especies_cites_total_estimadas": 662,
+        "especies_endemicas_estimadas": 963
       },
       "subgrupo_especies": [
         {
           "slug_grupo": "anfibios",
           "label_grupo": "Anfibios",
-          "especies_region_total": 6
+          "especies_region_total": 8
         },
         {
           "slug_grupo": "aves",
           "label_grupo": "Aves",
-          "especies_region_total": 177
+          "especies_region_total": 179
         },
         {
           "slug_grupo": "mamiferos",
@@ -13304,7 +13759,7 @@
         {
           "slug_grupo": "peces",
           "label_grupo": "Peces",
-          "especies_region_total": 1
+          "especies_region_total": 2
         },
         {
           "slug_grupo": "reptiles",
@@ -13315,7 +13770,7 @@
       "species_list_top": [
         {
           "label": "Ramphocelus dimidiatus",
-          "registros": 30,
+          "registros": 31,
           "slug_especie": "ramphocelus-dimidiatus",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
@@ -13331,7 +13786,7 @@
         },
         {
           "label": "Thraupis episcopus",
-          "registros": 21,
+          "registros": 22,
           "slug_especie": "thraupis-episcopus",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
@@ -13347,7 +13802,7 @@
         },
         {
           "label": "Tyrannus melancholicus",
-          "registros": 18,
+          "registros": 19,
           "slug_especie": "tyrannus-melancholicus",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
@@ -13379,7 +13834,7 @@
         },
         {
           "label": "Pitangus sulphuratus",
-          "registros": 15,
+          "registros": 16,
           "slug_especie": "pitangus-sulphuratus",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
@@ -13458,7 +13913,7 @@
         },
         {
           "label": "Forpus conspicillatus",
-          "registros": 12,
+          "registros": 13,
           "slug_especie": "forpus-conspicillatus",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
@@ -13474,7 +13929,7 @@
         },
         {
           "label": "Sicalis flaveola",
-          "registros": 12,
+          "registros": 13,
           "slug_especie": "sicalis-flaveola",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
@@ -13491,6 +13946,56 @@
       ],
       "species_list_tematica": {
         "amenazadas-nacional": [
+          {
+            "label": "Thomasomys hylophilus",
+            "registros": 10,
+            "slug_especie": "thomasomys-hylophilus",
+            "slug_tematica": "amenazadas-nacional-en",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2439173",
+            "species": "Thomasomys hylophilus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Rodentia",
+            "family": "Cricetidae",
+            "genus": "Thomasomys"
+          },
+          {
+            "label": "Lagothrix lagothricha",
+            "registros": 5,
+            "slug_especie": "lagothrix-lagothricha",
+            "slug_tematica": "amenazadas-nacional-vu",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5786085",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/5e3b3b8b7312d26d51df5888/summary",
+            "species": "Lagothrix lagothricha",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Primates",
+            "family": "Atelidae",
+            "genus": "Lagothrix"
+          },
+          {
+            "label": "Tayassu pecari",
+            "registros": 2,
+            "slug_especie": "tayassu-pecari",
+            "slug_tematica": "amenazadas-nacional-en",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2440993",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cc9182207ecea54a561e37/summary",
+            "species": "Tayassu pecari",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Artiodactyla",
+            "family": "Tayassuidae",
+            "genus": "Tayassu"
+          },
           {
             "label": "Anadia bogotensis",
             "registros": 1,
@@ -13524,6 +14029,23 @@
             "order": "Primates",
             "family": "Aotidae",
             "genus": "Aotus"
+          },
+          {
+            "label": "Ateles hybridus",
+            "registros": 1,
+            "slug_especie": "ateles-hybridus",
+            "slug_tematica": "amenazadas-nacional-cr",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/4267251",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c15c46f0106c67230e7314/summary",
+            "species": "Ateles hybridus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Primates",
+            "family": "Atelidae",
+            "genus": "Ateles"
           }
         ],
         "amenazadas-global": [
@@ -13650,7 +14172,7 @@
           },
           {
             "label": "Forpus conspicillatus",
-            "registros": 12,
+            "registros": 13,
             "slug_especie": "forpus-conspicillatus",
             "slug_tematica": "cites-ii",
             "slug_grupo": "vertebrados",
@@ -13666,8 +14188,25 @@
             "genus": "Forpus"
           },
           {
+            "label": "Rupornis magnirostris",
+            "registros": 11,
+            "slug_especie": "rupornis-magnirostris",
+            "slug_tematica": "cites-ii",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5844398",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56ce57a13c16479905cba79b/summary",
+            "species": "Rupornis magnirostris",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Accipitriformes",
+            "family": "Accipitridae",
+            "genus": "Rupornis"
+          },
+          {
             "label": "Brotogeris jugularis",
-            "registros": 9,
+            "registros": 10,
             "slug_especie": "brotogeris-jugularis",
             "slug_tematica": "cites-ii",
             "slug_grupo": "vertebrados",
@@ -13681,6 +14220,22 @@
             "order": "Psittaciformes",
             "family": "Psittacidae",
             "genus": "Brotogeris"
+          },
+          {
+            "label": "Kinosternon leucostomum",
+            "registros": 8,
+            "slug_especie": "kinosternon-leucostomum",
+            "slug_tematica": "cites-ii",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2442350",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56d97f1c3c16479905cba999/summary",
+            "species": "Kinosternon leucostomum",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Testudines",
+            "family": "Kinosternidae",
+            "genus": "Kinosternon"
           },
           {
             "label": "Chalybura buffonii",
@@ -13698,6 +14253,23 @@
             "order": "Apodiformes",
             "family": "Trochilidae",
             "genus": "Chalybura"
+          },
+          {
+            "label": "Lagothrix lagothricha",
+            "registros": 5,
+            "slug_especie": "lagothrix-lagothricha",
+            "slug_tematica": "cites-ii",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5786085",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/5e3b3b8b7312d26d51df5888/summary",
+            "species": "Lagothrix lagothricha",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Primates",
+            "family": "Atelidae",
+            "genus": "Lagothrix"
           },
           {
             "label": "Pionus chalcopterus",
@@ -13764,29 +14336,12 @@
             "order": "Carnivora",
             "family": "Procyonidae",
             "genus": "Potos"
-          },
-          {
-            "label": "Florisuga mellivora",
-            "registros": 3,
-            "slug_especie": "florisuga-mellivora",
-            "slug_tematica": "cites-ii",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476195",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e0b15783c45700544e3ce3/summary",
-            "species": "Florisuga mellivora",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Florisuga"
           }
         ],
         "migratorias": [
           {
             "label": "Tyrannus melancholicus",
-            "registros": 18,
+            "registros": 19,
             "slug_especie": "tyrannus-melancholicus",
             "slug_tematica": "migratorias",
             "slug_grupo": "vertebrados",
@@ -14058,6 +14613,20 @@
             "genus": "Zygodontomys"
           },
           {
+            "label": "Hemibrycon plutarcoi",
+            "registros": 3,
+            "slug_especie": "hemibrycon-plutarcoi",
+            "slug_tematica": "endemicas",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "species": "Hemibrycon plutarcoi",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Characiformes",
+            "family": "Characidae",
+            "genus": "Hemibrycon"
+          },
+          {
             "label": "Proechimys chrysaeolus",
             "registros": 3,
             "slug_especie": "proechimys-chrysaeolus",
@@ -14231,10 +14800,9 @@
     {
       "slug": "bromelias-labiadas-pasifloras",
       "slug_grupo": "bromelias-labiadas-pasifloras",
-      "tipo": "interes",
       "slug_region": "muzo",
-      "registros_region_total": 2,
-      "registros_continentales": 2,
+      "registros_region_total": 3,
+      "registros_continentales": 3,
       "registros_marinos": 0,
       "registros_salobres": 0,
       "especies_region_total": 2,
@@ -14449,23 +15017,39 @@
       "registros_salobres_amenazadas_global_dd": "NA",
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
+      "tipo": "interes",
       "parent": [
         {
           "slug": "bromelias-labiadas-pasifloras",
           "label": "Boyacá",
-          "especies_region_total": 266,
-          "registros_region_total": 3819
+          "especies_region_total": 273,
+          "registros_region_total": 4247
         }
       ],
       "estimadas": {
         "slug_grupo": "bromelias-labiadas-pasifloras",
-        "especies_amenazadas_nacional_total_estimadas": 255,
-        "especies_amenazadas_global_total_estimadas": 101,
+        "especies_amenazadas_nacional_total_estimadas": 224,
+        "especies_amenazadas_global_total_estimadas": "101",
         "especies_cites_total_estimadas": 0,
         "especies_endemicas_estimadas": 312
       },
       "subgrupo_especies": [],
       "species_list_top": [
+        {
+          "label": "Passiflora capsularis",
+          "registros": 2,
+          "slug_especie": "passiflora-capsularis",
+          "slug_grupo": "bromelias-labiadas-pasifloras",
+          "tipo": "interes",
+          "url_gbif": "https://www.gbif.org/species/7313548",
+          "species": "Passiflora capsularis",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Malpighiales",
+          "family": "Passifloraceae",
+          "genus": "Passiflora"
+        },
         {
           "label": "Lepechinia bullata",
           "registros": 1,
@@ -14481,21 +15065,6 @@
           "order": "Lamiales",
           "family": "Lamiaceae",
           "genus": "Lepechinia"
-        },
-        {
-          "label": "Passiflora capsularis",
-          "registros": 1,
-          "slug_especie": "passiflora-capsularis",
-          "slug_grupo": "bromelias-labiadas-pasifloras",
-          "tipo": "interes",
-          "url_gbif": "https://www.gbif.org/species/7313548",
-          "species": "Passiflora capsularis",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Passifloraceae",
-          "genus": "Passiflora"
         }
       ],
       "species_list_tematica": {
@@ -14510,14 +15079,13 @@
     {
       "slug": "liquenes",
       "slug_grupo": "liquenes",
-      "tipo": "interes",
       "slug_region": "muzo",
-      "registros_region_total": 2,
-      "registros_continentales": 2,
+      "registros_region_total": 5,
+      "registros_continentales": 5,
       "registros_marinos": 0,
       "registros_salobres": 0,
-      "especies_region_total": 1,
-      "especies_continentales": 1,
+      "especies_region_total": 2,
+      "especies_continentales": 2,
       "especies_marinas": 0,
       "especies_salobres": 0,
       "especies_amenazadas_nacional_total": 0,
@@ -14546,9 +15114,9 @@
       "registros_exoticas": 0,
       "registros_invasoras": 0,
       "registros_exoticas_riesgo_invasion": 0,
-      "especies_endemicas": 0,
+      "especies_endemicas": 1,
       "especies_migratorias": "NA",
-      "registros_endemicas": 0,
+      "registros_endemicas": 2,
       "registros_migratorias": "NA",
       "especies_amenazadas_global_total": "NA",
       "especies_amenazadas_global_ex": "NA",
@@ -14598,9 +15166,9 @@
       "registros_continentales_exoticas": 0,
       "registros_continentales_invasoras": 0,
       "registros_continentales_exoticas_riesgo_invasion": 0,
-      "especies_continentales_endemicas": 0,
+      "especies_continentales_endemicas": 1,
       "especies_continentales_migratorias": "NA",
-      "registros_continentales_endemicas": 0,
+      "registros_continentales_endemicas": 2,
       "registros_continentales_migratorias": "NA",
       "especies_continentales_amenazadas_global_total": "NA",
       "especies_continentales_amenazadas_global_ex": "NA",
@@ -14728,18 +15296,19 @@
       "registros_salobres_amenazadas_global_dd": "NA",
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
+      "tipo": "interes",
       "parent": [
         {
           "slug": "liquenes",
           "label": "Boyacá",
-          "especies_region_total": 391,
-          "registros_region_total": 3268
+          "especies_region_total": 412,
+          "registros_region_total": 3423
         }
       ],
       "estimadas": {
         "slug_grupo": "liquenes",
-        "especies_amenazadas_nacional_total_estimadas": 0,
-        "especies_amenazadas_global_total_estimadas": 0,
+        "especies_amenazadas_nacional_total_estimadas": 50,
+        "especies_amenazadas_global_total_estimadas": "0",
         "especies_cites_total_estimadas": 0,
         "especies_endemicas_estimadas": 167
       },
@@ -14747,12 +15316,27 @@
       "species_list_top": [
         {
           "label": "Cladonia corymbites",
-          "registros": 2,
+          "registros": 3,
           "slug_especie": "cladonia-corymbites",
           "slug_grupo": "liquenes",
           "tipo": "interes",
           "url_gbif": "https://www.gbif.org/species/3390647",
           "species": "Cladonia corymbites",
+          "kingdom": "Fungi",
+          "phylum": "Ascomycota",
+          "class": "Lecanoromycetes",
+          "order": "Lecanorales",
+          "family": "Cladoniaceae",
+          "genus": "Cladonia"
+        },
+        {
+          "label": "Cladonia symphoriza",
+          "registros": 2,
+          "slug_especie": "cladonia-symphoriza",
+          "slug_grupo": "liquenes",
+          "tipo": "interes",
+          "url_gbif": "https://www.gbif.org/species/3391245",
+          "species": "Cladonia symphoriza",
           "kingdom": "Fungi",
           "phylum": "Ascomycota",
           "class": "Lecanoromycetes",
@@ -14766,14 +15350,30 @@
         "amenazadas-global": [],
         "cites": [],
         "migratorias": [],
-        "endemicas": [],
+        "endemicas": [
+          {
+            "label": "Cladonia symphoriza",
+            "registros": 2,
+            "slug_especie": "cladonia-symphoriza",
+            "slug_tematica": "endemicas",
+            "slug_grupo": "liquenes",
+            "tipo": "interes",
+            "url_gbif": "https://www.gbif.org/species/3391245",
+            "species": "Cladonia symphoriza",
+            "kingdom": "Fungi",
+            "phylum": "Ascomycota",
+            "class": "Lecanoromycetes",
+            "order": "Lecanorales",
+            "family": "Cladoniaceae",
+            "genus": "Cladonia"
+          }
+        ],
         "exoticas-total": []
       }
     },
     {
       "slug": "orquideas",
       "slug_grupo": "orquideas",
-      "tipo": "interes",
       "slug_region": "muzo",
       "registros_region_total": 1,
       "registros_continentales": 1,
@@ -14991,20 +15591,21 @@
       "registros_salobres_amenazadas_global_dd": "NA",
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
+      "tipo": "interes",
       "parent": [
         {
           "slug": "orquideas",
           "label": "Boyacá",
-          "especies_region_total": 505,
-          "registros_region_total": 3296
+          "especies_region_total": 563,
+          "registros_region_total": 3767
         }
       ],
       "estimadas": {
         "slug_grupo": "orquideas",
-        "especies_amenazadas_nacional_total_estimadas": 206,
-        "especies_amenazadas_global_total_estimadas": 58,
-        "especies_cites_total_estimadas": 2705,
-        "especies_endemicas_estimadas": 2244
+        "especies_amenazadas_nacional_total_estimadas": 253,
+        "especies_amenazadas_global_total_estimadas": "58",
+        "especies_cites_total_estimadas": 2690,
+        "especies_endemicas_estimadas": 2262
       },
       "subgrupo_especies": [],
       "species_list_top": [
@@ -15039,8 +15640,8 @@
   "publicadores": [
     {
       "slug_publicador": "e2e717bf-551a-4917-bdc9-4fa0f342c530",
-      "registros": 693,
-      "especies": 163,
+      "registros": 708,
+      "especies": 165,
       "label": "eBird Colombia",
       "pais_publicacion": "CO",
       "url_logo": "https://statics.sibcolombia.net/sib-resources/images/logos-socios/500px/ebird.jpg",
@@ -15048,8 +15649,8 @@
     },
     {
       "slug_publicador": "b4640710-8e03-11d8-b956-b8a03c50a862",
-      "registros": 189,
-      "especies": 109,
+      "registros": 223,
+      "especies": 115,
       "label": "Museum of Comparative Zoology, Harvard University",
       "pais_publicacion": "US",
       "url_logo": "https://statics.sibcolombia.net/sib-resources/images/santander/world.png",
@@ -15067,20 +15668,38 @@
     {
       "slug_publicador": "478a9e81-e716-42dc-a68d-03487953a32e",
       "registros": 115,
-      "especies": 38,
+      "especies": 39,
       "label": "Universidad de la Salle",
       "pais_publicacion": "CO",
       "url_logo": "https://raw.githubusercontent.com/SIB-Colombia/logos/main/socio-SiB-lasalle.png",
       "url_socio": "https://biodiversidad.co/data/?publishingOrg=478a9e81-e716-42dc-a68d-03487953a32e"
     },
     {
+      "slug_publicador": "f6e2efc9-42a3-47ea-99c6-3eda8d653cc9",
+      "registros": 64,
+      "especies": 5,
+      "label": "Universidade Federal do Paraná",
+      "pais_publicacion": "BR",
+      "url_logo": "https://statics.sibcolombia.net/sib-resources/images/santander/world.png",
+      "url_socio": "https://biodiversidad.co/data/?publishingOrg=f6e2efc9-42a3-47ea-99c6-3eda8d653cc9"
+    },
+    {
       "slug_publicador": "bc092ff0-02e4-11dc-991f-b8a03c50a862",
-      "registros": 54,
+      "registros": 57,
       "especies": 5,
       "label": "National Museum of Natural History, Smithsonian Institution",
       "pais_publicacion": "US",
       "url_logo": "https://statics.sibcolombia.net/sib-resources/images/santander/world.png",
       "url_socio": "https://biodiversidad.co/data/?publishingOrg=bc092ff0-02e4-11dc-991f-b8a03c50a862"
+    },
+    {
+      "slug_publicador": "32e82a64-c9b4-4b2f-9fbd-d446309b973f",
+      "registros": 40,
+      "especies": 26,
+      "label": "Auckland War Memorial Museum",
+      "pais_publicacion": "NZ",
+      "url_logo": "https://statics.sibcolombia.net/sib-resources/images/santander/world.png",
+      "url_socio": "https://biodiversidad.co/data/?publishingOrg=32e82a64-c9b4-4b2f-9fbd-d446309b973f"
     },
     {
       "slug_publicador": "007a7e84-3793-4a7c-aa29-8987e27f4d1f",
@@ -15093,21 +15712,12 @@
     },
     {
       "slug_publicador": "4fd82480-ea1c-11da-8db4-b8a03c50a862",
-      "registros": 34,
+      "registros": 36,
       "especies": 8,
       "label": "National Museum of Nature and Science, Japan",
       "pais_publicacion": "JP",
       "url_logo": "https://statics.sibcolombia.net/sib-resources/images/santander/world.png",
       "url_socio": "https://biodiversidad.co/data/?publishingOrg=4fd82480-ea1c-11da-8db4-b8a03c50a862"
-    },
-    {
-      "slug_publicador": "f6e2efc9-42a3-47ea-99c6-3eda8d653cc9",
-      "registros": 29,
-      "especies": 4,
-      "label": "Universidade Federal do Paraná",
-      "pais_publicacion": "BR",
-      "url_logo": "https://statics.sibcolombia.net/sib-resources/images/santander/world.png",
-      "url_socio": "https://biodiversidad.co/data/?publishingOrg=f6e2efc9-42a3-47ea-99c6-3eda8d653cc9"
     },
     {
       "slug_publicador": "396d5f30-dea9-11db-8ab4-b8a03c50a862",
@@ -15120,7 +15730,7 @@
     },
     {
       "slug_publicador": "e8eada63-4a33-44aa-b2fd-4f71efb222a0",
-      "registros": 20,
+      "registros": 19,
       "especies": 2,
       "label": "Museu de Ciències Naturals de Barcelona",
       "pais_publicacion": "ES",
@@ -15137,6 +15747,24 @@
       "url_socio": "https://biodiversidad.co/data/?publishingOrg=5ffa575c-fcd4-4583-9611-545f67b04316"
     },
     {
+      "slug_publicador": "2a7e3080-28a9-11dd-97cd-b8a03c50a862",
+      "registros": 18,
+      "especies": 13,
+      "label": "Instituto de Investigación de Recursos Biológicos Alexander von Humboldt",
+      "pais_publicacion": "CO",
+      "url_logo": "https://raw.githubusercontent.com/SIB-Colombia/logos/main/socio-SiB-iavh.png",
+      "url_socio": "https://biodiversidad.co/data/?publishingOrg=2a7e3080-28a9-11dd-97cd-b8a03c50a862"
+    },
+    {
+      "slug_publicador": "2cd829bb-b713-433d-99cf-64bef11e5b3e",
+      "registros": 18,
+      "especies": 7,
+      "label": "MNHN - Museum national d'Histoire naturelle",
+      "pais_publicacion": "FR",
+      "url_logo": "https://statics.sibcolombia.net/sib-resources/images/santander/world.png",
+      "url_socio": "https://biodiversidad.co/data/?publishingOrg=2cd829bb-b713-433d-99cf-64bef11e5b3e"
+    },
+    {
       "slug_publicador": "2e167bb0-4441-11db-9ba2-b8a03c50a862",
       "registros": 18,
       "especies": 9,
@@ -15146,8 +15774,17 @@
       "url_socio": "https://biodiversidad.co/data/?publishingOrg=2e167bb0-4441-11db-9ba2-b8a03c50a862"
     },
     {
-      "slug_publicador": "acac73b0-055d-11d8-b84f-b8a03c50a862",
+      "slug_publicador": "28eb1a3f-1c15-4a95-931a-4af90ecb574d",
       "registros": 17,
+      "especies": 14,
+      "label": "Naturalista Colombia",
+      "pais_publicacion": "CO",
+      "url_logo": "https://statics.sibcolombia.net/sib-resources/images/logos-socios/portal-sib/logo-naturalistaco.png",
+      "url_socio": "https://biodiversidad.co/data/?publishingOrg=28eb1a3f-1c15-4a95-931a-4af90ecb574d"
+    },
+    {
+      "slug_publicador": "acac73b0-055d-11d8-b84f-b8a03c50a862",
+      "registros": 16,
       "especies": 2,
       "label": "Natural Science Research Laboratory, Museum of Texas Tech University (TTU)",
       "pais_publicacion": "US",
@@ -15162,33 +15799,6 @@
       "pais_publicacion": "US",
       "url_logo": "https://statics.sibcolombia.net/sib-resources/images/santander/world.png",
       "url_socio": "https://biodiversidad.co/data/?publishingOrg=ccd1ddc0-6c21-11de-8224-b8a03c50a862"
-    },
-    {
-      "slug_publicador": "2cd829bb-b713-433d-99cf-64bef11e5b3e",
-      "registros": 15,
-      "especies": 5,
-      "label": "MNHN - Museum national d'Histoire naturelle",
-      "pais_publicacion": "FR",
-      "url_logo": "https://statics.sibcolombia.net/sib-resources/images/santander/world.png",
-      "url_socio": "https://biodiversidad.co/data/?publishingOrg=2cd829bb-b713-433d-99cf-64bef11e5b3e"
-    },
-    {
-      "slug_publicador": "28eb1a3f-1c15-4a95-931a-4af90ecb574d",
-      "registros": 15,
-      "especies": 13,
-      "label": "Naturalista Colombia",
-      "pais_publicacion": "CO",
-      "url_logo": "https://statics.sibcolombia.net/sib-resources/images/logos-socios/portal-sib/logo-naturalistaco.png",
-      "url_socio": "https://biodiversidad.co/data/?publishingOrg=28eb1a3f-1c15-4a95-931a-4af90ecb574d"
-    },
-    {
-      "slug_publicador": "2a7e3080-28a9-11dd-97cd-b8a03c50a862",
-      "registros": 13,
-      "especies": 8,
-      "label": "Instituto de Investigación de Recursos Biológicos Alexander von Humboldt",
-      "pais_publicacion": "CO",
-      "url_logo": "https://raw.githubusercontent.com/SIB-Colombia/logos/main/socio-SiB-iavh.png",
-      "url_socio": "https://biodiversidad.co/data/?publishingOrg=2a7e3080-28a9-11dd-97cd-b8a03c50a862"
     },
     {
       "slug_publicador": "488f6b87-5688-4c9a-928c-2d5355054b01",
@@ -15209,6 +15819,15 @@
       "url_socio": "https://biodiversidad.co/data/?publishingOrg=4205110f-3f0f-40d8-bd0f-2fa71bc827b5"
     },
     {
+      "slug_publicador": "ff90b050-c256-11db-b71b-b8a03c50a862",
+      "registros": 9,
+      "especies": 4,
+      "label": "Comisión nacional para el conocimiento y uso de la biodiversidad",
+      "pais_publicacion": "MX",
+      "url_logo": "https://statics.sibcolombia.net/sib-resources/images/santander/world.png",
+      "url_socio": "https://biodiversidad.co/data/?publishingOrg=ff90b050-c256-11db-b71b-b8a03c50a862"
+    },
+    {
       "slug_publicador": "0e2f2e28-7790-4c82-b8fb-6ef7b4c764e2",
       "registros": 9,
       "especies": 8,
@@ -15227,6 +15846,15 @@
       "url_socio": "https://biodiversidad.co/data/?publishingOrg=0d923068-1cec-44de-8b78-33a51fb0cacd"
     },
     {
+      "slug_publicador": "eac88d99-9f6c-4031-8fc4-8088f0e0dfe7",
+      "registros": 7,
+      "especies": 5,
+      "label": "Universidad Nacional de Colombia",
+      "pais_publicacion": "CO",
+      "url_logo": "https://raw.githubusercontent.com/SIB-Colombia/logos/main/socio-SiB-unal.png",
+      "url_socio": "https://biodiversidad.co/data/?publishingOrg=eac88d99-9f6c-4031-8fc4-8088f0e0dfe7"
+    },
+    {
       "slug_publicador": "66522820-055c-11d8-b84e-b8a03c50a862",
       "registros": 6,
       "especies": 2,
@@ -15236,22 +15864,13 @@
       "url_socio": "https://biodiversidad.co/data/?publishingOrg=66522820-055c-11d8-b84e-b8a03c50a862"
     },
     {
-      "slug_publicador": "ff90b050-c256-11db-b71b-b8a03c50a862",
-      "registros": 6,
-      "especies": 2,
-      "label": "Comisión nacional para el conocimiento y uso de la biodiversidad",
-      "pais_publicacion": "MX",
+      "slug_publicador": "90fd6680-349f-11d8-aa2d-b8a03c50a862",
+      "registros": 5,
+      "especies": 4,
+      "label": "Missouri Botanical Garden",
+      "pais_publicacion": "US",
       "url_logo": "https://statics.sibcolombia.net/sib-resources/images/santander/world.png",
-      "url_socio": "https://biodiversidad.co/data/?publishingOrg=ff90b050-c256-11db-b71b-b8a03c50a862"
-    },
-    {
-      "slug_publicador": "eac88d99-9f6c-4031-8fc4-8088f0e0dfe7",
-      "registros": 6,
-      "especies": 5,
-      "label": "Universidad Nacional de Colombia",
-      "pais_publicacion": "CO",
-      "url_logo": "https://raw.githubusercontent.com/SIB-Colombia/logos/main/socio-SiB-unal.png",
-      "url_socio": "https://biodiversidad.co/data/?publishingOrg=eac88d99-9f6c-4031-8fc4-8088f0e0dfe7"
+      "url_socio": "https://biodiversidad.co/data/?publishingOrg=90fd6680-349f-11d8-aa2d-b8a03c50a862"
     },
     {
       "slug_publicador": "19456090-b49a-11d8-abeb-b8a03c50a862",
@@ -15274,7 +15893,7 @@
     {
       "slug_publicador": "f9b67ad0-9c9b-11d9-b9db-b8a03c50a862",
       "registros": 4,
-      "especies": 2,
+      "especies": 3,
       "label": "Academy of Natural Sciences",
       "pais_publicacion": "US",
       "url_logo": "https://statics.sibcolombia.net/sib-resources/images/santander/world.png",
@@ -15288,15 +15907,6 @@
       "pais_publicacion": "CO",
       "url_logo": "https://raw.githubusercontent.com/SIB-Colombia/logos/main/socio-SiB-acz.png",
       "url_socio": "https://biodiversidad.co/data/?publishingOrg=3ecddc17-a081-4e85-92c3-d8e31716342c"
-    },
-    {
-      "slug_publicador": "90fd6680-349f-11d8-aa2d-b8a03c50a862",
-      "registros": 4,
-      "especies": 4,
-      "label": "Missouri Botanical Garden",
-      "pais_publicacion": "US",
-      "url_logo": "https://statics.sibcolombia.net/sib-resources/images/santander/world.png",
-      "url_socio": "https://biodiversidad.co/data/?publishingOrg=90fd6680-349f-11d8-aa2d-b8a03c50a862"
     },
     {
       "slug_publicador": "8f9a6e03-a0ee-4a60-a08f-32463f36adeb",
@@ -15326,6 +15936,15 @@
       "url_socio": "https://biodiversidad.co/data/?publishingOrg=2d6267a0-0561-11d8-b851-b8a03c50a862"
     },
     {
+      "slug_publicador": "04fd2e13-6881-4e5c-9dd1-8fdd9ab993c1",
+      "registros": 3,
+      "especies": 2,
+      "label": "Finnish Biodiversity Information Facility",
+      "pais_publicacion": "FI",
+      "url_logo": "https://statics.sibcolombia.net/sib-resources/images/santander/world.png",
+      "url_socio": "https://biodiversidad.co/data/?publishingOrg=04fd2e13-6881-4e5c-9dd1-8fdd9ab993c1"
+    },
+    {
       "slug_publicador": "c76cf030-2a95-11da-9cc1-b8a03c50a862",
       "registros": 3,
       "especies": 1,
@@ -15333,6 +15952,15 @@
       "pais_publicacion": "DE",
       "url_logo": "https://statics.sibcolombia.net/sib-resources/images/santander/world.png",
       "url_socio": "https://biodiversidad.co/data/?publishingOrg=c76cf030-2a95-11da-9cc1-b8a03c50a862"
+    },
+    {
+      "slug_publicador": "c1da06f0-580e-11dc-8a9e-b8a03c50a862",
+      "registros": 2,
+      "especies": 1,
+      "label": "Carnegie Museums",
+      "pais_publicacion": "US",
+      "url_logo": "https://statics.sibcolombia.net/sib-resources/images/santander/world.png",
+      "url_socio": "https://biodiversidad.co/data/?publishingOrg=c1da06f0-580e-11dc-8a9e-b8a03c50a862"
     },
     {
       "slug_publicador": "a42867f0-813a-11dc-82e0-b8a03c50a862",
@@ -15362,6 +15990,14 @@
       "url_socio": "https://biodiversidad.co/data/?publishingOrg=b8b274e0-3216-48b8-afea-5616ec326ce1"
     },
     {
+      "slug_publicador": "6e1cad80-bdf5-11d8-84ea-b8a03c50a862",
+      "registros": 2,
+      "label": "Leibniz Institute for the Analysis of Biodiversity Change (LIB)",
+      "pais_publicacion": "DE",
+      "url_logo": "https://statics.sibcolombia.net/sib-resources/images/santander/world.png",
+      "url_socio": "https://biodiversidad.co/data/?publishingOrg=6e1cad80-bdf5-11d8-84ea-b8a03c50a862"
+    },
+    {
       "slug_publicador": "c3367060-856b-11d9-8486-b8a03c50a862",
       "registros": 2,
       "especies": 2,
@@ -15369,14 +16005,6 @@
       "pais_publicacion": "JP",
       "url_logo": "https://statics.sibcolombia.net/sib-resources/images/santander/world.png",
       "url_socio": "https://biodiversidad.co/data/?publishingOrg=c3367060-856b-11d9-8486-b8a03c50a862"
-    },
-    {
-      "slug_publicador": "b3bf3a83-1f68-4541-a03f-330d30d567f5",
-      "registros": 2,
-      "especies": 1,
-      "label": "The International Barcode of Life Consortium",
-      "url_logo": "https://statics.sibcolombia.net/sib-resources/images/santander/world.png",
-      "url_socio": "https://biodiversidad.co/data/?publishingOrg=b3bf3a83-1f68-4541-a03f-330d30d567f5"
     },
     {
       "slug_publicador": "ae447c50-b8a8-11d8-92a4-b8a03c50a862",
@@ -15432,6 +16060,15 @@
       "url_socio": "https://biodiversidad.co/data/?publishingOrg=fee3882f-5360-4f01-a1ca-767c48fa629c"
     },
     {
+      "slug_publicador": "a2ef6dd1-8886-48c9-8025-c62bac973cc7",
+      "registros": 1,
+      "especies": 1,
+      "label": "Denver Museum of Nature & Science",
+      "pais_publicacion": "US",
+      "url_logo": "https://statics.sibcolombia.net/sib-resources/images/santander/world.png",
+      "url_socio": "https://biodiversidad.co/data/?publishingOrg=a2ef6dd1-8886-48c9-8025-c62bac973cc7"
+    },
+    {
       "slug_publicador": "f7bf768e-d88d-489d-a263-dd07232bd9e4",
       "registros": 1,
       "especies": 1,
@@ -15475,6 +16112,15 @@
       "pais_publicacion": "DE",
       "url_logo": "https://statics.sibcolombia.net/sib-resources/images/santander/world.png",
       "url_socio": "https://biodiversidad.co/data/?publishingOrg=0674aea0-a7e1-11d8-9534-b8a03c50a862"
+    },
+    {
+      "slug_publicador": "b3bf3a83-1f68-4541-a03f-330d30d567f5",
+      "registros": 1,
+      "especies": 1,
+      "label": "The International Barcode of Life Consortium",
+      "pais_publicacion": "ZZ",
+      "url_logo": "https://statics.sibcolombia.net/sib-resources/images/santander/world.png",
+      "url_socio": "https://biodiversidad.co/data/?publishingOrg=b3bf3a83-1f68-4541-a03f-330d30d567f5"
     },
     {
       "slug_publicador": "b459e790-0d3c-11d9-8431-b8a03c50a862",

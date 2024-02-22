@@ -9,7 +9,7 @@ devtools::load_all()
 # here::dr_here()
 
 
-con <- DBI::dbConnect(RSQLite::SQLite(), sys_file("db/sibdata.sqlite"),
+con <- DBI::dbConnect(RSQLite::SQLite(), sys_file_sibdata("db/sibdata.sqlite"),
                       read_only = TRUE)
 
 #av_regions <- sib_available_regions(subtipo = c("Municipio"))
@@ -29,7 +29,7 @@ av_regions <- c(
   # "reserva-forestal-la-planada",
   # "resguardo-indigena-pialapi-pueblo-viejo",
 
-  #av_regions4,
+  av_regions4,
   av_regions3,
   av_regions1,
   av_regions2

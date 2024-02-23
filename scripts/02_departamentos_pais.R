@@ -77,10 +77,13 @@ map(av_regions, function(region){
   dd_reg <- dd |> select(cod_dane, value = registros_region_total, label, slug_region) |>
     rename(n_registros = value)
 
+  region_nm <- region
+  if(region == "narino") region_nm <- "NARIÑO"
+
   dd_map <- left_join(dd_esp, dd_reg) |>
     select(id = cod_dane, label, n_especies, n_registros)
   tj <- geodato::gd_tj("col_municipalities") |>
-    filter(depto == toupper(region))
+    filter(depto == toupper(region_nm))
   tj <- tj |> left_join(dd_map)
 
   territorio <- list(
@@ -89,8 +92,6 @@ map(av_regions, function(region){
       label = "Municipios",
       map_data = tj,
       charts = list(
-        list(title = glue::glue("Especies por {region_tipo}"), path = "", layout = "title/chart"),
-        list(title =  glue::glue("Observaciones por {region_tipo}"), path = "", layout = "title/chart")
       )
     ),
     list(

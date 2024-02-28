@@ -20,12 +20,14 @@ con <- DBI::dbConnect(RSQLite::SQLite(), sys_file_sibdata("db/sibdata.sqlite"),
 av_regions <- sib_available_regions(subtipo = c("Departamento"), con = con)
 
 
-av_regions <- c("boyaca","narino","tolima", "santander")
+av_regions_top <- c("boyaca","narino","tolima", "santander")
+av_regions <- av_regions[!av_regions %in% av_regions_top]
 
 map(av_regions, function(region){
   message("##################")
   message("\n", region, "\n")
 
+  # region <- av_regions[1]
   # region <- "boyaca"
   # region <- "narino"
   # region <- "tolima"
@@ -34,6 +36,7 @@ map(av_regions, function(region){
   nav_tematica <- navigation_trees("tematica", con = con)
   nav_grupo_biologico <- navigation_trees("grupo_biologico", con = con)
   nav_grupo_interes <- navigation_trees("grupo_interes", con = con)
+
   nav_territorio <- navigation_trees("territorio", region = region, con = con)
 
 
@@ -159,7 +162,7 @@ map(av_regions, function(region){
     municipios_lista = municipios_lista,
     departamentos_lista = departamentos_lista
   )
-  dir.create(file.path("static/data",region))
+  if(!dir.exists(file.path("static/data",region)))dir.create(file.path("static/data",region))
   jsonlite::write_json(l, paste0("static/data/",region,"/",region, ".json"),
                        auto_unbox = TRUE, pretty =TRUE)
 

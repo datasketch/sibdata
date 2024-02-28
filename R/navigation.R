@@ -50,6 +50,7 @@ navigation_trees <- function(type, region = NULL, con = con){
   }
 
   table <- table |> collect()
+  if(nrow(table) == 0) return(list())
   tree <- data.tree::FromDataFrameNetwork(table)
 
   l <- data.tree::ToListExplicit(tree, unname = TRUE, nameName = "slug",

@@ -1,6 +1,6 @@
 
 #' @export
-make_region_slides <- function(region, con){
+make_region_slides <- function(region, con, save_path = NULL){
 
   #sib_validate_available_regions(region)
 
@@ -89,8 +89,9 @@ make_region_slides <- function(region, con){
       d <- d |> slice(2:1)
     }
 
-    path <- glue::glue("static/charts/{region}/reg_vs_parent.png")
-
+    path <- glue::glue("{region}/reg_vs_parent.png")
+    path <- file.path(save_path, path)
+    if(!dir.exists(path)) dir.create(path, recursive = TRUE)
     gg <- sib_chart_waffle(d)
     ggsave(path, gg, width = 4, height = 4)
 
@@ -218,7 +219,7 @@ make_region_slides <- function(region, con){
                      labels = c(col_title, "Número de especies endémicas"),
                      color = "#34d986")
   path1 <- glue::glue("static/charts/{region}/muni_mas_endemicas.html")
-  gt::gtsave(gt, path1)
+  #gt::gtsave(gt, path1)
 
   t <- n_muni_mas_amenazadas_nacional
   gt <- sib_chart_gt_table(t,
@@ -226,7 +227,7 @@ make_region_slides <- function(region, con){
                            color = "#f59542"
                            )
   path2 <- glue::glue("static/charts/{region}/muni_mas_amenazadas.html")
-  gt::gtsave(gt, path2)
+  #gt::gtsave(gt, path2)
 
   description_tpl <- ""
   title_tpl <- "Top municipios"

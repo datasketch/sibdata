@@ -6,8 +6,10 @@ library(vctrs)
 devtools::load_all()
 
 
-# here::dr_here()
-# #here::set_here("./..")
+here::dr_here()
+save_path <- here::here("static", "data")
+message("Save path: ", save_path)
+#here::set_here("./..")
 # setwd("../")
 # here::dr_here()
 
@@ -17,17 +19,18 @@ tic()
 
 con <- DBI::dbConnect(RSQLite::SQLite(), sys_file_sibdata("db/sibdata.sqlite"),
                       read_only = TRUE)
-av_regions <- sib_available_regions(subtipo = c("Departamento"), con = con)
+av_regions <- unname(sib_available_regions(subtipo = c("Departamento"), con = con))
 
 
 av_regions_top <- c("boyaca","narino","tolima", "santander")
 av_regions <- av_regions[!av_regions %in% av_regions_top]
 
-map(av_regions, function(region){
+map(av_regions[20:29], safely(function(region){
   message("##################")
   message("\n", region, "\n")
 
-  # region <- av_regions[1]
+  # region <- av_regions[4]
+  # region <- "risaralda"
   # region <- "boyaca"
   # region <- "narino"
   # region <- "tolima"
@@ -44,11 +47,14 @@ map(av_regions, function(region){
 
   gallery <- make_gallery(region, con)
 
-  slides <- make_region_slides(region, con)
   #slides <- list()
+  slides <- make_region_slides(region, con, save_path = save_path)
+
 
   reg_gr_bio <- region_grupo_data(region, tipo = "biologico", verbose = TRUE, con = con)
+  #reg_gr_bio <- list()
   reg_gr_int <- region_grupo_data(region, tipo = "interes", verbose = TRUE, con = con)
+  #reg_gr_int <- list()
 
 
   # Temáticas
@@ -89,6 +95,9 @@ map(av_regions, function(region){
     filter(depto == toupper(region_nm))
   tj <- tj |> left_join(dd_map)
 
+
+  message("Message Territorio")
+
   territorio <- list(
     list(
       slug = "municipios",
@@ -112,6 +121,9 @@ map(av_regions, function(region){
   )
 
   ##
+
+  message("Patrocinadores")
+
   patrocinadores <- sibdata_patrocinador(con)
   patrocinador <- sibdata_region_patrocinador(con) |>
     filter(slug_region == region)
@@ -141,6 +153,8 @@ map(av_regions, function(region){
     "tolima", "Tolima"
   )
 
+  message("Before creating the list")
+
   l <- list(
     general_info = general_info,
     nav_tematica = nav_tematica,
@@ -162,13 +176,18 @@ map(av_regions, function(region){
     municipios_lista = municipios_lista,
     departamentos_lista = departamentos_lista
   )
-  if(!dir.exists(file.path("static/data",region)))dir.create(file.path("static/data",region))
-  jsonlite::write_json(l, paste0("static/data/",region,"/",region, ".json"),
+  message("Creating dir:")
+  message(glue::glue("static/data/{region}"))
+  dir.create(glue::glue("static/data/{region}"))
+  if(!dir.exists(file.path(save_path,region))){
+    dir.create(file.path(save_path,region))
+  }
+  jsonlite::write_json(l, paste0(save_path,"/",region,"/",region, ".json"),
                        auto_unbox = TRUE, pretty =TRUE)
 
 
 
-})
+}))
 
 
 toc()

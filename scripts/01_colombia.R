@@ -16,6 +16,8 @@ devtools::load_all()
 library(tictoc)
 
 here::dr_here()
+save_path <- here::here("static", "data")
+message("Save path: ", save_path)
 #here::set_here("./..")
 #setwd("../")
 #here::dr_here()

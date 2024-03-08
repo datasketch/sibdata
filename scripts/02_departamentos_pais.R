@@ -24,8 +24,9 @@ av_regions <- unname(sib_available_regions(subtipo = c("Departamento"), con = co
 
 av_regions_top <- c("boyaca","narino","tolima", "santander")
 av_regions <- av_regions[!av_regions %in% av_regions_top]
+#av_regions <- c("boyaca","narino","tolima", "santander")
 
-map(av_regions[20:29], safely(function(region){
+map(av_regions[1:4], safely(function(region){
   message("##################")
   message("\n", region, "\n")
 

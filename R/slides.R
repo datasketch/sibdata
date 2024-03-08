@@ -85,6 +85,9 @@ make_region_slides <- function(region, con, save_path = NULL){
     d <- reg_vs_parent |>
       dplyr::select(slug_region, especies_region_total)
     idx_col <- which(d$slug_region == "colombia")
+
+    waffle <- d
+
     if(idx_col == 1){
       d <- d |> slice(2:1)
     }
@@ -128,7 +131,8 @@ make_region_slides <- function(region, con, save_path = NULL){
       title =  glue::glue(title_tpl),
       description = glue::glue(description_tpl),
       chart_type = "image",
-      chart_url = path
+      chart_url = path,
+      waffle = waffle
     )
     slides <- list(l)
   }
@@ -179,7 +183,9 @@ make_region_slides <- function(region, con, save_path = NULL){
   l <- list(
     id = "slide2",
     layout = "text-blocks", #text-blocks,
-    texts = list(phrase1, phrase2)
+    texts = list(phrase1, phrase2),
+    especies_animales_top_observaciones = esp_animal_mas_obs |> slice(1:10),
+    especies_plantas_top_observaciones = esp_planta_mas_obs |> slice(1:10)
   )
 
   slides <- c(slides, list(l))
@@ -240,7 +246,9 @@ make_region_slides <- function(region, con, save_path = NULL){
     description = glue::glue(description_tpl),
     chart_type = "html",
     chart1_url = path1,
-    chart2_url = path2
+    chart2_url = path2,
+    n_muni_mas_endemicas = n_muni_mas_endemicas,
+    n_muni_mas_amenazadas_nacional = n_muni_mas_amenazadas_nacional
   )
 
   slides <- c(slides,list(l))

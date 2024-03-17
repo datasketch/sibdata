@@ -88,6 +88,9 @@ make_region_slides2 <- function(region, con = con){
     d <- reg_vs_parent |>
       dplyr::select(slug_region, especies_region_total)
     idx_col <- which(d$slug_region %in% deptos)
+
+    waffle <- d
+
     if(idx_col == 1){
       d <- d |> slice(2:1)
     }
@@ -137,7 +140,8 @@ make_region_slides2 <- function(region, con = con){
       title =  glue::glue(title_tpl),
       description = glue::glue(description_tpl),
       chart_type = "image",
-      chart_url = path
+      chart_url = path,
+      waffle = waffle
     )
     slides <- list(l)
   }

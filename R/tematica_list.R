@@ -212,7 +212,7 @@ tematica_list <- function(region, con){
     distinct() |>
     slice(1:10)
   esp_list_exoticas_riesgo_invasion <- list_species(region,
-                                                    tematica = "riesgo-invasion",
+                                                    tematica = "exotica-riesgo-invasion",
                                                     con = con) |>
     select(label, slug_especie, registros, url_gbif, url_cbc, slug_tematica) |>
     arrange(desc(registros)) |>

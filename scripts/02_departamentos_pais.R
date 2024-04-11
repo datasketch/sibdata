@@ -23,10 +23,12 @@ av_regions <- unname(sib_available_regions(subtipo = c("Departamento"), con = co
 
 
 av_regions_top <- c("boyaca","narino","tolima", "santander")
-av_regions <- av_regions[!av_regions %in% av_regions_top]
+#av_regions <- av_regions[!av_regions %in% av_regions_top]
 #av_regions <- c("boyaca","narino","tolima", "santander")
 
-map(av_regions[1:4], safely(function(region){
+av_regions <- av_regions[av_regions != "bogota-dc"]
+
+map(av_regions, safely(function(region){
   message("##################")
   message("\n", region, "\n")
 
@@ -36,6 +38,10 @@ map(av_regions[1:4], safely(function(region){
   # region <- "narino"
   # region <- "tolima"
   # region <- "santander"
+  # region <- "atlantico"
+  # region <- "bogota-dc"
+  # region <- "reserva-forestal-la-planada"
+  # region <- "resguardo-indigena-pialapi-pueblo-viejo"
 
   nav_tematica <- navigation_trees("tematica", con = con)
   nav_grupo_biologico <- navigation_trees("grupo_biologico", con = con)
@@ -89,6 +95,10 @@ map(av_regions[1:4], safely(function(region){
 
   region_nm <- region
   if(region == "narino") region_nm <- "NARIÑO"
+  if(region == "atlantico") region_nm <- "ATLÁNTICO"
+  if(region == "san_andres") region_nm <- "ARCHIPIELAGO DE SAN ANDRES PROVIDENCIA Y SANTA CATALINA"
+  if(region == "valle_del_cauca") region_nm <- "VALLE DEL CAUCA"
+  if(region == "la_guajira") region_nm <- "LA GUAJIRA"
 
   dd_map <- left_join(dd_esp, dd_reg) |>
     select(id = cod_dane, label, n_especies, n_registros)
@@ -135,12 +145,24 @@ map(av_regions[1:4], safely(function(region){
   publicadores <- sibdata_region_publicador(con) |>
     filter(slug_region == region) |>
     left_join(sibdata_publicador(con), by = c("slug_publicador" = "slug")) |>
+    collect()
+  publicadores_tipo <- publicadores |>
+    select(tipo_organizacion) |>
+    mutate(tipo_organizacion = ifelse(is.na(tipo_organizacion), "No definido", tipo_organizacion)) |>
+    summarise(n_tipo = n(), .by = tipo_organizacion) |>
+    mutate(pct_tipo = n_tipo/sum(n_tipo))
+
+
+  publicadores_list <- publicadores |>
     select(slug_publicador, registros = registros.x, especies = especies.x,
            label, pais_publicacion,
            url_logo, url_socio) |>
-    arrange(desc(registros)) |>
-    collect()
+    arrange(desc(registros))
 
+  publicadores <- list(
+    publicadores_tipo = publicadores_tipo,
+    publicadores_list = publicadores_list
+  )
 
 
   municipios_lista <- subreg_tematica |>

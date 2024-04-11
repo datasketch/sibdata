@@ -1,6 +1,36 @@
 
 
+# 2024-04
 
+## DONE
+
+- Mapa: Norte de Santander, San Andrés, Valle del Cauca, La Guajira
+- Datos publicadores (n_tipos, cantidad por tipo publicador)
+- No hay datos del departamento de Atlántico, arauca, risaralda y bogotá
+- Waffle y Top Municipios para los nuevos Departamentos.
+Unknown or uninitialised column: especies_exoticas_riesgo_invasion_estimadas. 
+
+
+Preguntas:
+- Datos Bogotá?
+- Datos reserva forestal la planada?
+
+
+## TODO
+
+
+- Bogotá D.C. no hay datos de especies ni observaciones?
+- Datos mapa bogota
+- Datos nuevos deptos: waffle y top municipios
+- Actualizar Pialapi 
+
+
+# Notes Data Validations
+
+
+region table: make sure they are unique. Ej. risaralda was repeated
+tabla: region_grupo no hay datos de Bogota... revisar que todos tengan datos
+Que está "reserva-forestal-la-planada"
 
 # 2023-05
 

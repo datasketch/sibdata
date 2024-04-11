@@ -4,12 +4,16 @@ make_region_slides <- function(region, con, save_path = NULL){
 
   #sib_validate_available_regions(region)
 
-  if(!dir.exists("static/charts/{region}"))
-    dir.create(glue::glue("static/charts/{region}"))
+  #if(!dir.exists("static/charts/{region}"))
+  #  dir.create(glue::glue("static/charts/{region}"))
   ####################
 
   subregs <- sib_available_subregions(region, con)
   parent <- sib_parent_region(region, con)
+
+  if(region == "resguardo-indigena-pialapi-pueblo-viejo"){
+    parent <- "colombia"
+  }
 
   reg_labels <- sib_region_labels(con) |> collect()
 
@@ -17,6 +21,8 @@ make_region_slides <- function(region, con, save_path = NULL){
     dplyr::filter(slug_region == region) |>
     dplyr::filter(tipo == "biologico") |>
     collect()
+  if(nrow(reg_gr_bio) == 0)
+    stop("Revisar table region_grupo. No hay datos para ", region)
 
   reg_gr_int <- sibdata_region_grupo(con) |>
     dplyr::filter(slug_region == region) |>
@@ -88,22 +94,25 @@ make_region_slides <- function(region, con, save_path = NULL){
 
     waffle <- d
 
-    if(idx_col == 1){
-      d <- d |> slice(2:1)
-    }
-
-    path <- glue::glue("{region}/reg_vs_parent.png")
-    path <- file.path(save_path, path)
-    if(!dir.exists(path)) dir.create(path, recursive = TRUE)
-    gg <- sib_chart_waffle(d)
-    ggsave(path, gg, width = 4, height = 4)
-
-    x <- d$especies_region_total
-    names(x) <- d$slug_region
-    x[2] <- x[2] - x[1]
-    x <- rev(x)
-    x <- round(x/sum(x)*100)
-    proportion <- x[2]
+    # if(idx_col == 1){
+    #   d <- d |> slice(2:1)
+    # }
+    #
+    # path <- glue::glue("{region}/reg_vs_parent.png")
+    # path <- file.path(save_path, path)
+    # if(!dir.exists(path)) dir.create(path, recursive = TRUE)
+    # gg <- sib_chart_waffle(d)
+    # ggsave(path, gg, width = 4, height = 4)
+    #
+    # x <- d$especies_region_total
+    # names(x) <- d$slug_region
+    # x[2] <- x[2] - x[1]
+    # x <- rev(x)
+    # x <- round(x/sum(x)*100)
+    # proportion <- x[2]
+    #
+    proportion <- waffle$especies_region_total[2]/waffle$especies_region_total[1]
+    proportion <- round(proportion*100, digits = 1)
 
     regionLabel <- sib_merge_region_label(data.frame(slug_region = region), con = con)$label
     parentLabel <- sib_merge_region_label(data.frame(slug_region = parent), con = con)$label
@@ -130,8 +139,8 @@ make_region_slides <- function(region, con, save_path = NULL){
       layout = "title/(text|chart)",
       title =  glue::glue(title_tpl),
       description = glue::glue(description_tpl),
-      chart_type = "image",
-      chart_url = path,
+      #chart_type = "image",
+      #chart_url = path,
       waffle = waffle
     )
     slides <- list(l)
@@ -218,22 +227,6 @@ make_region_slides <- function(region, con, save_path = NULL){
     slice_max(n = 10, order_by = especies_amenazadas_nacional_total) |>
     select(label, n = especies_amenazadas_nacional_total)
 
-  t <- n_muni_mas_endemicas
-  col_title <- "Municipio"
-  if(region == "colombia") col_title <- "Departamentos"
-  gt <- sib_chart_gt_table(t,
-                     labels = c(col_title, "Número de especies endémicas"),
-                     color = "#34d986")
-  path1 <- glue::glue("static/charts/{region}/muni_mas_endemicas.html")
-  #gt::gtsave(gt, path1)
-
-  t <- n_muni_mas_amenazadas_nacional
-  gt <- sib_chart_gt_table(t,
-                           labels = c(col_title, "Número de especies amenazadas (nacional)"),
-                           color = "#f59542"
-                           )
-  path2 <- glue::glue("static/charts/{region}/muni_mas_amenazadas.html")
-  #gt::gtsave(gt, path2)
 
   description_tpl <- ""
   title_tpl <- "Top municipios"
@@ -244,12 +237,12 @@ make_region_slides <- function(region, con, save_path = NULL){
     layout = "title/(chart|chart)",
     title =  glue::glue(title_tpl),
     description = glue::glue(description_tpl),
-    chart_type = "html",
-    chart1_url = path1,
-    chart2_url = path2,
     n_muni_mas_endemicas = n_muni_mas_endemicas,
     n_muni_mas_amenazadas_nacional = n_muni_mas_amenazadas_nacional
   )
+
+  if(region == "resguardo-indigena-pialapi-pueblo-viejo")
+    l <- list(info = "No hay información para municipios del resguardo")
 
   slides <- c(slides,list(l))
 

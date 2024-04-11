@@ -89,7 +89,8 @@ sib_calculate_region <- function(region, vars = NULL, con = NULL){
                             by = "slug", copy = TRUE)
 
   reg <- region_table |>
-    dplyr::filter(slug == region)
+    dplyr::filter(slug == region) |>
+    dplyr::distinct()
   reg_tem <- sibdata_region_tematica(con) |>
     dplyr::filter(slug_region == region)
   reg <- reg |> dplyr::left_join(reg_tem, by = c("slug" = "slug_region"))

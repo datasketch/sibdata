@@ -11,7 +11,7 @@ make_gallery <- function(region, con){
     select(image = img_link) |>
     collect()
 
-  n <- min(nrow(txts), nrow(imgs), 5)
+  n <- min(nrow(txts), nrow(imgs), 7)
   txts <- txts |> slice(1:(n+1))
   imgs <- imgs |> slice(c(1:(n),1))
 

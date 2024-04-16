@@ -177,8 +177,8 @@ tematica_list <- function(region, con){
 
   migratorias <- c(
     list(slug = "migratorias",
-         texto = "La información de especies migratorias se basa en la
-         [Lista de referencia de especies de aves de Colombia - 2020](https://doi.org/10.15472/qhsz0p).
+         texto = "La información de de especies migratorias se basa en la
+         [Lista de referencia de especies de aves de Colombia - 2022](https://doi.org/10.15472/qhsz0p).
          Para aportar más datos sobre este y otros grupos bilógicos puede visitar nuestro sitio web
          https://biodiversidad.co",
          migratorias_estimadas = estimadas$especies_migratorias_estimadas),

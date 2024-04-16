@@ -11,7 +11,8 @@ make_region_slides <- function(region, con, save_path = NULL){
   subregs <- sib_available_subregions(region, con)
   parent <- sib_parent_region(region, con)
 
-  if(region == "resguardo-indigena-pialapi-pueblo-viejo"){
+  if(region == "resguardo-indigena-pialapi-pueblo-viejo" ||
+     region == "reserva-forestal-la-planada"){
     parent <- "colombia"
   }
 
@@ -241,104 +242,105 @@ make_region_slides <- function(region, con, save_path = NULL){
     n_muni_mas_amenazadas_nacional = n_muni_mas_amenazadas_nacional
   )
 
-  if(region == "resguardo-indigena-pialapi-pueblo-viejo")
-    l <- list(info = "No hay información para municipios del resguardo")
-
+  if(region == "resguardo-indigena-pialapi-pueblo-viejo" ||
+     region == "reserva-forestal-la-planada"){
+    l <- list(info = "No hay información para municipios en este territorio")
+  }
   slides <- c(slides,list(l))
 
-#
-#
-#   # ¿Cuál es el municipio con menos registros, ¿por qué?
-#
-#   muni_menos_esp <- subreg_tematica |>
-#     select(slug_region, especies_region_total) |>
-#     slice_min(especies_region_total, n = 10)
-#
-#   muni_mas_esp <- subreg_tematica |>
-#     select(slug_region, especies_region_total) |>
-#     slice_max(especies_region_total, n = 10)
-#
-#   muni_menos_reg <- subreg_tematica |>
-#     select(slug_region, registros_region_total) |>
-#     slice_min(registros_region_total, n = 10)
-#
-#   muni_mas_esp <- subreg_tematica |>
-#     select(slug_region, registros_region_total) |>
-#     slice_max(registros_region_total, n = 10)
-#
-#
-#   # Cuántas son las especies estimadas del departamento
-#   # ???
-#
-#   # Cuáles son las especies exóticas/amenazadas/... del departamento
-#   # ¿Cuáles especies amenazadas tienen mas/menos observaciones en nariño?
-#   # ¿Que especies de peces son comercializadas?
-#
-#   esp_exoticas <- esp_reg_tem |>
-#     filter(grepl("exotica", slug_tematica)) |>
-#     distinct(slug_especie) |>
-#     left_join(esp_obs) |>
-#     arrange(desc(registros))
-#
-#   esp_amenazadas <- esp_reg_tem |>
-#     filter(grepl("amenazada", slug_tematica)) |>
-#     distinct(slug_especie) |>
-#     left_join(esp_obs) |>
-#     arrange(desc(registros))
-#
-#   esp_cites <- esp_reg_tem |>
-#     filter(grepl("cites", slug_tematica)) |>
-#     distinct(slug_especie) |>
-#     left_join(esp_obs) |>
-#     arrange(desc(registros))
-#
-#   esp_cites_i <- esp_reg_tem |>
-#     filter(slug_tematica == "cites-i") |>
-#     distinct(slug_especie) |>
-#     left_join(esp_obs) |>
-#     arrange(desc(registros))
-#
-#
-#   # Cuáles son los municipios con más vacíos de información en el país
-#   # = a los municipios con menos registros?
-#
-#   # Comparación de número especies amenazadas, exóticas, CITES y endémicas de todos los municipios
-#   # ... cómparar cómo?
-#   # subreg_tematica
-#
-#   # Cuáles especies tienen más observaciones en pasto
-#   # No se puede calcular
-#   # esp_reg
-#
-#
-#
-#   # ¿Quienes están aportando datos para la región y cuàl es el ranking de esas organizaciones?
-#   # ¿Qué porcentaje de datos aporta el top 10% de publicadores del SiB Colombia?
-#
-#   top_pubs_reg <- pubs_reg |>
-#     slice_max(registros, n = 10)
-#
-#   top_pubs_esp <- pubs_reg |>
-#     slice_max(especies, n = 10)
-#
-#   dist_pubs_por_tipo_n_regs <- pubs_reg |>
-#     select(tipo_publicador, registros) |>
-#     group_by(tipo_publicador) |>
-#     summarise(total = sum(registros))
-#
-#   dist_pubs_por_tipo <- pubs_reg |>
-#     select(tipo_publicador) |>
-#     group_by(tipo_publicador) |>
-#     summarise(total = n())
-#
-#
-#
-#
-#
-#
-#
-#   #####################
-#
+  #
+  #
+  #   # ¿Cuál es el municipio con menos registros, ¿por qué?
+  #
+  #   muni_menos_esp <- subreg_tematica |>
+  #     select(slug_region, especies_region_total) |>
+  #     slice_min(especies_region_total, n = 10)
+  #
+  #   muni_mas_esp <- subreg_tematica |>
+  #     select(slug_region, especies_region_total) |>
+  #     slice_max(especies_region_total, n = 10)
+  #
+  #   muni_menos_reg <- subreg_tematica |>
+  #     select(slug_region, registros_region_total) |>
+  #     slice_min(registros_region_total, n = 10)
+  #
+  #   muni_mas_esp <- subreg_tematica |>
+  #     select(slug_region, registros_region_total) |>
+  #     slice_max(registros_region_total, n = 10)
+  #
+  #
+  #   # Cuántas son las especies estimadas del departamento
+  #   # ???
+  #
+  #   # Cuáles son las especies exóticas/amenazadas/... del departamento
+  #   # ¿Cuáles especies amenazadas tienen mas/menos observaciones en nariño?
+  #   # ¿Que especies de peces son comercializadas?
+  #
+  #   esp_exoticas <- esp_reg_tem |>
+  #     filter(grepl("exotica", slug_tematica)) |>
+  #     distinct(slug_especie) |>
+  #     left_join(esp_obs) |>
+  #     arrange(desc(registros))
+  #
+  #   esp_amenazadas <- esp_reg_tem |>
+  #     filter(grepl("amenazada", slug_tematica)) |>
+  #     distinct(slug_especie) |>
+  #     left_join(esp_obs) |>
+  #     arrange(desc(registros))
+  #
+  #   esp_cites <- esp_reg_tem |>
+  #     filter(grepl("cites", slug_tematica)) |>
+  #     distinct(slug_especie) |>
+  #     left_join(esp_obs) |>
+  #     arrange(desc(registros))
+  #
+  #   esp_cites_i <- esp_reg_tem |>
+  #     filter(slug_tematica == "cites-i") |>
+  #     distinct(slug_especie) |>
+  #     left_join(esp_obs) |>
+  #     arrange(desc(registros))
+  #
+  #
+  #   # Cuáles son los municipios con más vacíos de información en el país
+  #   # = a los municipios con menos registros?
+  #
+  #   # Comparación de número especies amenazadas, exóticas, CITES y endémicas de todos los municipios
+  #   # ... cómparar cómo?
+  #   # subreg_tematica
+  #
+  #   # Cuáles especies tienen más observaciones en pasto
+  #   # No se puede calcular
+  #   # esp_reg
+  #
+  #
+  #
+  #   # ¿Quienes están aportando datos para la región y cuàl es el ranking de esas organizaciones?
+  #   # ¿Qué porcentaje de datos aporta el top 10% de publicadores del SiB Colombia?
+  #
+  #   top_pubs_reg <- pubs_reg |>
+  #     slice_max(registros, n = 10)
+  #
+  #   top_pubs_esp <- pubs_reg |>
+  #     slice_max(especies, n = 10)
+  #
+  #   dist_pubs_por_tipo_n_regs <- pubs_reg |>
+  #     select(tipo_publicador, registros) |>
+  #     group_by(tipo_publicador) |>
+  #     summarise(total = sum(registros))
+  #
+  #   dist_pubs_por_tipo <- pubs_reg |>
+  #     select(tipo_publicador) |>
+  #     group_by(tipo_publicador) |>
+  #     summarise(total = n())
+  #
+  #
+  #
+  #
+  #
+  #
+  #
+  #   #####################
+  #
 
 
 

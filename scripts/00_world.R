@@ -55,6 +55,10 @@ ref_principal <- parse_ref(ranking$ref_id[1])
 
 
 
+#
+dato_relevante <- sibdata_dato_relevante(con) |> collect()
+
+
 positions <- tibble::tribble(
   ~position,  ~position_text,
   1, "Primer lugar en diversidad de aves(42), orquídeas (41) y mariposas (13)",

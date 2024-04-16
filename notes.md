@@ -1,28 +1,34 @@
 
 
+
 # 2024-04
 
 ## DONE
 
+- Texto Migratorias
+- Información de waffle para resguardo
+- publicador para cada depto: poner también el número de observacines
+- Mapa San Andrés
+- Bogotá D.C. no hay datos de especies ni observaciones?
+- Datos mapa bogota
+- en los datos que actualizaste de (Boyacá, Nariño, Santander, Tolima) en la propiedad gallery solo hay 12 id cuando anteriormente habían 15
+
+- Datos nuevos deptos: waffle y top municipios
 - Mapa: Norte de Santander, San Andrés, Valle del Cauca, La Guajira
 - Datos publicadores (n_tipos, cantidad por tipo publicador)
 - No hay datos del departamento de Atlántico, arauca, risaralda y bogotá
 - Waffle y Top Municipios para los nuevos Departamentos.
 Unknown or uninitialised column: especies_exoticas_riesgo_invasion_estimadas. 
+- Actualizar Pialapi 
 
-
-Preguntas:
-- Datos Bogotá?
-- Datos reserva forestal la planada?
 
 
 ## TODO
 
+- publicador.json: region como arreglo
 
-- Bogotá D.C. no hay datos de especies ni observaciones?
-- Datos mapa bogota
-- Datos nuevos deptos: waffle y top municipios
-- Actualizar Pialapi 
+- correr world - con ranking
+
 
 
 # Notes Data Validations

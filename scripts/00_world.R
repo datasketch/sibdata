@@ -58,12 +58,16 @@ ref_principal <- parse_ref(ranking$ref_id[1])
 #
 dato_relevante <- sibdata_dato_relevante(con) |> collect()
 
+# https://github.com/datasketch/sib-colombia/issues/14
+# Primer lugar en diversidad de aves, orquídeas y mariposas
+# El segundo en variedad de anfibios, peces dulceacuícolas, palmas y murciélagos
+# El sexto en mamíferos.
 
 positions <- tibble::tribble(
   ~position,  ~position_text,
-  1, "Primer lugar en diversidad de aves(42), orquídeas (41) y mariposas (13)",
-  2, "Segundo en plantas (51), anfibios(52), peces dulceacuícolas(10), reptiles(53), palmas(54) y murciélagos (53)",
-  3, "quinto en mamíferos (55)"
+  1, "Primer lugar en diversidad de aves (42), orquídeas (41) y mariposas (13)",
+  2, "Segundo en variedad de anfibios(52), peces dulceacuícolas(10), palmas(54) y murciélagos (53)",
+  3, "Sexto en mamíferos (55)"
 )
 
 ref_ids <- c(42, 41, 13, 51, 52, 10, 53, 54, 53, 55)

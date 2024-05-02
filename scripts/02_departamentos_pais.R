@@ -32,6 +32,7 @@ av_regions_territorio <- c(
 
 av_regions <- c(av_regions, av_regions_territorio)
 
+
 map(av_regions, safely(function(region){
   message("##################")
   message("\n", region, "\n")

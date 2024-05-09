@@ -579,9 +579,7 @@
       "id": "slide1",
       "layout": "title/(text|chart)",
       "title": "¿Cómo está Aguada frente al resto de Santander?",
-      "description": "De las 14.643 especies observadas en Santander,\nel municipio de Aguada aporta 46, equivalentes a 0%.\nDe estas 2 especies son endémicas.",
-      "chart_type": "image",
-      "chart_url": "static/charts/aguada/reg_vs_parent.png",
+      "description": "De las 14.643 especies observadas en Santander,\nel municipio de Aguada aporta 46, equivalentes a 0.3%.\nDe estas 2 especies son endémicas.",
       "waffle": [
         {
           "slug_region": "santander",
@@ -3143,25 +3141,43 @@
   "grupos_interes": [],
   "territorio": [],
   "patrocinador": [],
-  "publicadores": [
-    {
-      "slug_publicador": "e2e717bf-551a-4917-bdc9-4fa0f342c530",
-      "registros": 127,
-      "especies": 45,
-      "label": "eBird Colombia",
-      "pais_publicacion": "CO",
-      "url_logo": "https://statics.sibcolombia.net/sib-resources/images/logos-socios/500px/ebird.jpg",
-      "url_socio": "https://biodiversidad.co/data/?publishingOrg=e2e717bf-551a-4917-bdc9-4fa0f342c530"
-    },
-    {
-      "slug_publicador": "eac88d99-9f6c-4031-8fc4-8088f0e0dfe7",
-      "registros": 8,
-      "especies": 1,
-      "label": "Universidad Nacional de Colombia",
-      "pais_publicacion": "CO",
-      "url_logo": "https://raw.githubusercontent.com/SIB-Colombia/logos/main/socio-SiB-unal.png",
-      "url_socio": "https://biodiversidad.co/data/?publishingOrg=eac88d99-9f6c-4031-8fc4-8088f0e0dfe7"
-    }
-  ],
+  "publicadores": {
+    "publicadores_tipo": [
+      {
+        "tipo_organizacion": "Redes e iniciativas",
+        "n_tipo": 1,
+        "n_tipo_obs": 127,
+        "pct_tipo": 0.5,
+        "pct_tipo_obs": 0.9407
+      },
+      {
+        "tipo_organizacion": "Academia",
+        "n_tipo": 1,
+        "n_tipo_obs": 8,
+        "pct_tipo": 0.5,
+        "pct_tipo_obs": 0.0593
+      }
+    ],
+    "publicadores_list": [
+      {
+        "slug_publicador": "e2e717bf-551a-4917-bdc9-4fa0f342c530",
+        "registros": 127,
+        "especies": 45,
+        "label": "eBird Colombia",
+        "pais_publicacion": "CO",
+        "url_logo": "https://statics.sibcolombia.net/sib-resources/images/logos-socios/500px/ebird.jpg",
+        "url_socio": "https://biodiversidad.co/data/?publishingOrg=e2e717bf-551a-4917-bdc9-4fa0f342c530"
+      },
+      {
+        "slug_publicador": "eac88d99-9f6c-4031-8fc4-8088f0e0dfe7",
+        "registros": 8,
+        "especies": 1,
+        "label": "Universidad Nacional de Colombia",
+        "pais_publicacion": "CO",
+        "url_logo": "https://raw.githubusercontent.com/SIB-Colombia/logos/main/socio-SiB-unal.png",
+        "url_socio": "https://biodiversidad.co/data/?publishingOrg=eac88d99-9f6c-4031-8fc4-8088f0e0dfe7"
+      }
+    ]
+  },
   "municipios_lista": []
 }

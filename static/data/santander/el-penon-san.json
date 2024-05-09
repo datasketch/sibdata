@@ -580,8 +580,6 @@
       "layout": "title/(text|chart)",
       "title": "¿Cómo está El Peñón frente al resto de Santander?",
       "description": "De las 14.643 especies observadas en Santander,\nel municipio de El Peñón aporta 440, equivalentes a 3%.\nDe estas 39 especies son endémicas.",
-      "chart_type": "image",
-      "chart_url": "static/charts/el-penon-san/reg_vs_parent.png",
       "waffle": [
         {
           "slug_region": "santander",
@@ -17780,68 +17778,100 @@
   ],
   "territorio": [],
   "patrocinador": [],
-  "publicadores": [
-    {
-      "slug_publicador": "2a7e3080-28a9-11dd-97cd-b8a03c50a862",
-      "registros": 7582,
-      "especies": 349,
-      "label": "Instituto de Investigación de Recursos Biológicos Alexander von Humboldt",
-      "pais_publicacion": "CO",
-      "url_logo": "https://raw.githubusercontent.com/SIB-Colombia/logos/main/socio-SiB-iavh.png",
-      "url_socio": "https://biodiversidad.co/data/?publishingOrg=2a7e3080-28a9-11dd-97cd-b8a03c50a862"
-    },
-    {
-      "slug_publicador": "e2e717bf-551a-4917-bdc9-4fa0f342c530",
-      "registros": 553,
-      "especies": 139,
-      "label": "eBird Colombia",
-      "pais_publicacion": "CO",
-      "url_logo": "https://statics.sibcolombia.net/sib-resources/images/logos-socios/500px/ebird.jpg",
-      "url_socio": "https://biodiversidad.co/data/?publishingOrg=e2e717bf-551a-4917-bdc9-4fa0f342c530"
-    },
-    {
-      "slug_publicador": "b3bf3a83-1f68-4541-a03f-330d30d567f5",
-      "registros": 279,
-      "especies": 7,
-      "label": "The International Barcode of Life Consortium",
-      "pais_publicacion": "ZZ",
-      "url_logo": "https://statics.sibcolombia.net/sib-resources/images/santander/world.png",
-      "url_socio": "https://biodiversidad.co/data/?publishingOrg=b3bf3a83-1f68-4541-a03f-330d30d567f5"
-    },
-    {
-      "slug_publicador": "5a45153b-bdf9-44ae-b7a7-e3261896540b",
-      "registros": 261,
-      "label": "Universidad del Tolima",
-      "pais_publicacion": "CO",
-      "url_logo": "https://raw.githubusercontent.com/SIB-Colombia/logos/main/socio-SiB-ut.png",
-      "url_socio": "https://biodiversidad.co/data/?publishingOrg=5a45153b-bdf9-44ae-b7a7-e3261896540b"
-    },
-    {
-      "slug_publicador": "28eb1a3f-1c15-4a95-931a-4af90ecb574d",
-      "registros": 22,
-      "especies": 14,
-      "label": "Naturalista Colombia",
-      "pais_publicacion": "CO",
-      "url_logo": "https://statics.sibcolombia.net/sib-resources/images/logos-socios/portal-sib/logo-naturalistaco.png",
-      "url_socio": "https://biodiversidad.co/data/?publishingOrg=28eb1a3f-1c15-4a95-931a-4af90ecb574d"
-    },
-    {
-      "slug_publicador": "450bdfce-76f7-483e-b4c4-cab6a3daebba",
-      "registros": 21,
-      "label": "Universidad CES",
-      "pais_publicacion": "CO",
-      "url_logo": "https://raw.githubusercontent.com/SIB-Colombia/logos/main/socio-SiB-ces.png",
-      "url_socio": "https://biodiversidad.co/data/?publishingOrg=450bdfce-76f7-483e-b4c4-cab6a3daebba"
-    },
-    {
-      "slug_publicador": "ada9d123-ddb4-467d-8891-806ea8d94230",
-      "registros": 6,
-      "especies": 2,
-      "label": "European Nucleotide Archive (EMBL-EBI)",
-      "pais_publicacion": "GB",
-      "url_logo": "https://statics.sibcolombia.net/sib-resources/images/santander/world.png",
-      "url_socio": "https://biodiversidad.co/data/?publishingOrg=ada9d123-ddb4-467d-8891-806ea8d94230"
-    }
-  ],
+  "publicadores": {
+    "publicadores_tipo": [
+      {
+        "tipo_organizacion": "Redes e iniciativas",
+        "n_tipo": 2,
+        "n_tipo_obs": 575,
+        "pct_tipo": 0.2857,
+        "pct_tipo_obs": 0.0659
+      },
+      {
+        "tipo_organizacion": "Internacional",
+        "n_tipo": 2,
+        "n_tipo_obs": 285,
+        "pct_tipo": 0.2857,
+        "pct_tipo_obs": 0.0327
+      },
+      {
+        "tipo_organizacion": "Centros de investigación",
+        "n_tipo": 1,
+        "n_tipo_obs": 7582,
+        "pct_tipo": 0.1429,
+        "pct_tipo_obs": 0.8691
+      },
+      {
+        "tipo_organizacion": "Academia",
+        "n_tipo": 2,
+        "n_tipo_obs": 282,
+        "pct_tipo": 0.2857,
+        "pct_tipo_obs": 0.0323
+      }
+    ],
+    "publicadores_list": [
+      {
+        "slug_publicador": "2a7e3080-28a9-11dd-97cd-b8a03c50a862",
+        "registros": 7582,
+        "especies": 349,
+        "label": "Instituto de Investigación de Recursos Biológicos Alexander von Humboldt",
+        "pais_publicacion": "CO",
+        "url_logo": "https://raw.githubusercontent.com/SIB-Colombia/logos/main/socio-SiB-iavh.png",
+        "url_socio": "https://biodiversidad.co/data/?publishingOrg=2a7e3080-28a9-11dd-97cd-b8a03c50a862"
+      },
+      {
+        "slug_publicador": "e2e717bf-551a-4917-bdc9-4fa0f342c530",
+        "registros": 553,
+        "especies": 139,
+        "label": "eBird Colombia",
+        "pais_publicacion": "CO",
+        "url_logo": "https://statics.sibcolombia.net/sib-resources/images/logos-socios/500px/ebird.jpg",
+        "url_socio": "https://biodiversidad.co/data/?publishingOrg=e2e717bf-551a-4917-bdc9-4fa0f342c530"
+      },
+      {
+        "slug_publicador": "b3bf3a83-1f68-4541-a03f-330d30d567f5",
+        "registros": 279,
+        "especies": 7,
+        "label": "The International Barcode of Life Consortium",
+        "pais_publicacion": "ZZ",
+        "url_logo": "https://statics.sibcolombia.net/sib-resources/images/santander/world.png",
+        "url_socio": "https://biodiversidad.co/data/?publishingOrg=b3bf3a83-1f68-4541-a03f-330d30d567f5"
+      },
+      {
+        "slug_publicador": "5a45153b-bdf9-44ae-b7a7-e3261896540b",
+        "registros": 261,
+        "label": "Universidad del Tolima",
+        "pais_publicacion": "CO",
+        "url_logo": "https://raw.githubusercontent.com/SIB-Colombia/logos/main/socio-SiB-ut.png",
+        "url_socio": "https://biodiversidad.co/data/?publishingOrg=5a45153b-bdf9-44ae-b7a7-e3261896540b"
+      },
+      {
+        "slug_publicador": "28eb1a3f-1c15-4a95-931a-4af90ecb574d",
+        "registros": 22,
+        "especies": 14,
+        "label": "Naturalista Colombia",
+        "pais_publicacion": "CO",
+        "url_logo": "https://statics.sibcolombia.net/sib-resources/images/logos-socios/portal-sib/logo-naturalistaco.png",
+        "url_socio": "https://biodiversidad.co/data/?publishingOrg=28eb1a3f-1c15-4a95-931a-4af90ecb574d"
+      },
+      {
+        "slug_publicador": "450bdfce-76f7-483e-b4c4-cab6a3daebba",
+        "registros": 21,
+        "label": "Universidad CES",
+        "pais_publicacion": "CO",
+        "url_logo": "https://raw.githubusercontent.com/SIB-Colombia/logos/main/socio-SiB-ces.png",
+        "url_socio": "https://biodiversidad.co/data/?publishingOrg=450bdfce-76f7-483e-b4c4-cab6a3daebba"
+      },
+      {
+        "slug_publicador": "ada9d123-ddb4-467d-8891-806ea8d94230",
+        "registros": 6,
+        "especies": 2,
+        "label": "European Nucleotide Archive (EMBL-EBI)",
+        "pais_publicacion": "GB",
+        "url_logo": "https://statics.sibcolombia.net/sib-resources/images/santander/world.png",
+        "url_socio": "https://biodiversidad.co/data/?publishingOrg=ada9d123-ddb4-467d-8891-806ea8d94230"
+      }
+    ]
+  },
   "municipios_lista": []
 }

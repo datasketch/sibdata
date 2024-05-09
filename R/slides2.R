@@ -4,7 +4,7 @@ make_region_slides2 <- function(region, con = con){
   #sib_validate_available_regions(region)
 
 
-  dir.create(glue::glue("static/charts/{region}"))
+  #dir.create(glue::glue("static/charts/{region}"))
   ####################
 
   #subregs <- sib_available_subregions(region)
@@ -91,21 +91,24 @@ make_region_slides2 <- function(region, con = con){
 
     waffle <- d
 
-    if(idx_col == 1){
-      d <- d |> slice(2:1)
-    }
+    # if(idx_col == 1){
+    #   d <- d |> slice(2:1)
+    # }
+    #
+    # path <- glue::glue("static/charts/{region}/reg_vs_parent.png")
+    #
+    # gg <- sib_chart_waffle(d)
+    # ggsave(path, gg, width = 4, height = 4)
+    #
+    # x <- d$especies_region_total
+    # names(x) <- d$slug_region
+    # x[2] <- x[2] - x[1]
+    # x <- rev(x)
+    # x <- round(x/sum(x)*100)
+    # proportion <- x[2]
 
-    path <- glue::glue("static/charts/{region}/reg_vs_parent.png")
-
-    gg <- sib_chart_waffle(d)
-    ggsave(path, gg, width = 4, height = 4)
-
-    x <- d$especies_region_total
-    names(x) <- d$slug_region
-    x[2] <- x[2] - x[1]
-    x <- rev(x)
-    x <- round(x/sum(x)*100)
-    proportion <- x[2]
+    proportion <- waffle$especies_region_total[2]/waffle$especies_region_total[1]
+    proportion <- round(proportion*100, digits = 1)
 
     regionLabel <- sib_merge_region_label(data.frame(slug_region = region),con = con)$label
     parentLabel <- sib_merge_region_label(data.frame(slug_region = parent),con = con)$label
@@ -139,8 +142,8 @@ make_region_slides2 <- function(region, con = con){
       layout = "title/(text|chart)",
       title =  glue::glue(title_tpl),
       description = glue::glue(description_tpl),
-      chart_type = "image",
-      chart_url = path,
+      # chart_type = "image",
+      # chart_url = path,
       waffle = waffle
     )
     slides <- list(l)

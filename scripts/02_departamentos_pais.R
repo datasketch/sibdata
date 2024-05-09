@@ -45,6 +45,7 @@ map(av_regions, safely(function(region){
   # region <- "santander"
   # region <- "atlantico"
   # region <- "bogota-dc"
+  # region <- "norte-santander"
   # region <- "reserva-forestal-la-planada"
   # region <- "resguardo-indigena-pialapi-pueblo-viejo"
 
@@ -91,7 +92,7 @@ map(av_regions, safely(function(region){
     select(slug_region, especies_region_total, registros_region_total)
 
 
-  map_name <- paste0("col_municipalities_", region)
+
   munis <- sibdata_municipio(con) |> collect()
   dd <- dd |>
     left_join(munis, by = c("slug_region" = "slug"))
@@ -101,18 +102,27 @@ map(av_regions, safely(function(region){
   dd_reg <- dd |> select(cod_dane, value = registros_region_total, label, slug_region) |>
     rename(n_registros = value)
 
-  region_nm <- region
-  if(region == "narino") region_nm <- "NARIÑO"
-  if(region == "bogota-dc") region_nm <- "BOGOTA D.C."
-  if(region == "atlantico") region_nm <- "ATLÁNTICO"
-  if(region == "san-andres-providencia") region_nm <- "ARCHIPIELAGO DE SAN ANDRES PROVIDENCIA Y SANTA CATALINA"
-  if(region == "valle-del-cauca") region_nm <- "VALLE DEL CAUCA"
-  if(region == "la-guajira") region_nm <- "LA GUAJIRA"
+  region_id <- region
+  region_id <- gsub("-", "_", region_id)
+
+  # geotable::gt_sf("col_municipalities_vaupes")
+  if(region_id == "norte_santander") region_id <- "norte_de_santander"
+  if(region_id == "san_andres_providencia") region_id <- "archipielago_de_san_andres_providencia_y_santa_catalina"
+  #if(region_id == "bogota-dc") region_nm <- "BOGOTÁ D.C."
+  # if(region == "atlantico") region_nm <- "ATLÁNTICO"
+  # if(reion == "vaupes") region_nm <- "VAUPÉS"
+  # if(region == "valle-del-cauca") region_nm <- "VALLE DEL CAUCA"
+  # if(region == "la-guajira") region_nm <- "LA GUAJIRA"
+  map_name <- paste0("col_municipalities_", region_id)
 
   dd_map <- left_join(dd_esp, dd_reg) |>
     select(id = cod_dane, label, n_especies, n_registros)
-  tj <- geodato::gd_tj("col_municipalities") |>
-    filter(depto == toupper(region_nm))
+
+  conmap <- geotable:::gt_con()
+  tj <- geotable::gt_sf(map_name, con = conmap)
+#
+#   tj <- geodato::gd_tj("col_municipalities") |>
+#     filter(depto == toupper(region_nm))
   tj <- tj |> left_join(dd_map)
 
 

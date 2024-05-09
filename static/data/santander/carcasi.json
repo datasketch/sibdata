@@ -580,8 +580,6 @@
       "layout": "title/(text|chart)",
       "title": "¿Cómo está Carcasí frente al resto de Santander?",
       "description": "De las 14.643 especies observadas en Santander,\nel municipio de Carcasí aporta 151, equivalentes a 1%.\nDe estas 20 especies son endémicas.",
-      "chart_type": "image",
-      "chart_url": "static/charts/carcasi/reg_vs_parent.png",
       "waffle": [
         {
           "slug_region": "santander",
@@ -10770,79 +10768,111 @@
   ],
   "territorio": [],
   "patrocinador": [],
-  "publicadores": [
-    {
-      "slug_publicador": "2a7e3080-28a9-11dd-97cd-b8a03c50a862",
-      "registros": 1727,
-      "especies": 126,
-      "label": "Instituto de Investigación de Recursos Biológicos Alexander von Humboldt",
-      "pais_publicacion": "CO",
-      "url_logo": "https://raw.githubusercontent.com/SIB-Colombia/logos/main/socio-SiB-iavh.png",
-      "url_socio": "https://biodiversidad.co/data/?publishingOrg=2a7e3080-28a9-11dd-97cd-b8a03c50a862"
-    },
-    {
-      "slug_publicador": "96b23685-f195-4131-af29-ea9e160225dd",
-      "registros": 131,
-      "especies": 23,
-      "label": "Universidad de Pamplona",
-      "pais_publicacion": "CO",
-      "url_logo": "https://raw.githubusercontent.com/SIB-Colombia/logos/main/socio-SiB-unipamplona.png",
-      "url_socio": "https://biodiversidad.co/data/?publishingOrg=96b23685-f195-4131-af29-ea9e160225dd"
-    },
-    {
-      "slug_publicador": "e2e717bf-551a-4917-bdc9-4fa0f342c530",
-      "registros": 12,
-      "especies": 12,
-      "label": "eBird Colombia",
-      "pais_publicacion": "CO",
-      "url_logo": "https://statics.sibcolombia.net/sib-resources/images/logos-socios/500px/ebird.jpg",
-      "url_socio": "https://biodiversidad.co/data/?publishingOrg=e2e717bf-551a-4917-bdc9-4fa0f342c530"
-    },
-    {
-      "slug_publicador": "28eb1a3f-1c15-4a95-931a-4af90ecb574d",
-      "registros": 12,
-      "especies": 11,
-      "label": "Naturalista Colombia",
-      "pais_publicacion": "CO",
-      "url_logo": "https://statics.sibcolombia.net/sib-resources/images/logos-socios/portal-sib/logo-naturalistaco.png",
-      "url_socio": "https://biodiversidad.co/data/?publishingOrg=28eb1a3f-1c15-4a95-931a-4af90ecb574d"
-    },
-    {
-      "slug_publicador": "fee3882f-5360-4f01-a1ca-767c48fa629c",
-      "registros": 3,
-      "especies": 1,
-      "label": "Centro Internacional de Agricultura Tropical - CIAT",
-      "pais_publicacion": "CO",
-      "url_logo": "https://raw.githubusercontent.com/SIB-Colombia/logos/main/socio-SiB-ciat.png",
-      "url_socio": "https://biodiversidad.co/data/?publishingOrg=fee3882f-5360-4f01-a1ca-767c48fa629c"
-    },
-    {
-      "slug_publicador": "eac88d99-9f6c-4031-8fc4-8088f0e0dfe7",
-      "registros": 2,
-      "especies": 1,
-      "label": "Universidad Nacional de Colombia",
-      "pais_publicacion": "CO",
-      "url_logo": "https://raw.githubusercontent.com/SIB-Colombia/logos/main/socio-SiB-unal.png",
-      "url_socio": "https://biodiversidad.co/data/?publishingOrg=eac88d99-9f6c-4031-8fc4-8088f0e0dfe7"
-    },
-    {
-      "slug_publicador": "7ce8aef0-9e92-11dc-8738-b8a03c50a862",
-      "registros": 1,
-      "especies": 1,
-      "label": "Plazi.org taxonomic treatments database",
-      "pais_publicacion": "CH",
-      "url_logo": "https://statics.sibcolombia.net/sib-resources/images/santander/world.png",
-      "url_socio": "https://biodiversidad.co/data/?publishingOrg=7ce8aef0-9e92-11dc-8738-b8a03c50a862"
-    },
-    {
-      "slug_publicador": "061b4f20-f241-11da-a328-b8a03c50a862",
-      "registros": 1,
-      "especies": 1,
-      "label": "Royal Botanic Gardens, Kew",
-      "pais_publicacion": "GB",
-      "url_logo": "https://statics.sibcolombia.net/sib-resources/images/santander/world.png",
-      "url_socio": "https://biodiversidad.co/data/?publishingOrg=061b4f20-f241-11da-a328-b8a03c50a862"
-    }
-  ],
+  "publicadores": {
+    "publicadores_tipo": [
+      {
+        "tipo_organizacion": "Centros de investigación",
+        "n_tipo": 2,
+        "n_tipo_obs": 1730,
+        "pct_tipo": 0.25,
+        "pct_tipo_obs": 0.9158
+      },
+      {
+        "tipo_organizacion": "Redes e iniciativas",
+        "n_tipo": 2,
+        "n_tipo_obs": 24,
+        "pct_tipo": 0.25,
+        "pct_tipo_obs": 0.0127
+      },
+      {
+        "tipo_organizacion": "Internacional",
+        "n_tipo": 2,
+        "n_tipo_obs": 2,
+        "pct_tipo": 0.25,
+        "pct_tipo_obs": 0.0011
+      },
+      {
+        "tipo_organizacion": "Academia",
+        "n_tipo": 2,
+        "n_tipo_obs": 133,
+        "pct_tipo": 0.25,
+        "pct_tipo_obs": 0.0704
+      }
+    ],
+    "publicadores_list": [
+      {
+        "slug_publicador": "2a7e3080-28a9-11dd-97cd-b8a03c50a862",
+        "registros": 1727,
+        "especies": 126,
+        "label": "Instituto de Investigación de Recursos Biológicos Alexander von Humboldt",
+        "pais_publicacion": "CO",
+        "url_logo": "https://raw.githubusercontent.com/SIB-Colombia/logos/main/socio-SiB-iavh.png",
+        "url_socio": "https://biodiversidad.co/data/?publishingOrg=2a7e3080-28a9-11dd-97cd-b8a03c50a862"
+      },
+      {
+        "slug_publicador": "96b23685-f195-4131-af29-ea9e160225dd",
+        "registros": 131,
+        "especies": 23,
+        "label": "Universidad de Pamplona",
+        "pais_publicacion": "CO",
+        "url_logo": "https://raw.githubusercontent.com/SIB-Colombia/logos/main/socio-SiB-unipamplona.png",
+        "url_socio": "https://biodiversidad.co/data/?publishingOrg=96b23685-f195-4131-af29-ea9e160225dd"
+      },
+      {
+        "slug_publicador": "e2e717bf-551a-4917-bdc9-4fa0f342c530",
+        "registros": 12,
+        "especies": 12,
+        "label": "eBird Colombia",
+        "pais_publicacion": "CO",
+        "url_logo": "https://statics.sibcolombia.net/sib-resources/images/logos-socios/500px/ebird.jpg",
+        "url_socio": "https://biodiversidad.co/data/?publishingOrg=e2e717bf-551a-4917-bdc9-4fa0f342c530"
+      },
+      {
+        "slug_publicador": "28eb1a3f-1c15-4a95-931a-4af90ecb574d",
+        "registros": 12,
+        "especies": 11,
+        "label": "Naturalista Colombia",
+        "pais_publicacion": "CO",
+        "url_logo": "https://statics.sibcolombia.net/sib-resources/images/logos-socios/portal-sib/logo-naturalistaco.png",
+        "url_socio": "https://biodiversidad.co/data/?publishingOrg=28eb1a3f-1c15-4a95-931a-4af90ecb574d"
+      },
+      {
+        "slug_publicador": "fee3882f-5360-4f01-a1ca-767c48fa629c",
+        "registros": 3,
+        "especies": 1,
+        "label": "Centro Internacional de Agricultura Tropical - CIAT",
+        "pais_publicacion": "CO",
+        "url_logo": "https://raw.githubusercontent.com/SIB-Colombia/logos/main/socio-SiB-ciat.png",
+        "url_socio": "https://biodiversidad.co/data/?publishingOrg=fee3882f-5360-4f01-a1ca-767c48fa629c"
+      },
+      {
+        "slug_publicador": "eac88d99-9f6c-4031-8fc4-8088f0e0dfe7",
+        "registros": 2,
+        "especies": 1,
+        "label": "Universidad Nacional de Colombia",
+        "pais_publicacion": "CO",
+        "url_logo": "https://raw.githubusercontent.com/SIB-Colombia/logos/main/socio-SiB-unal.png",
+        "url_socio": "https://biodiversidad.co/data/?publishingOrg=eac88d99-9f6c-4031-8fc4-8088f0e0dfe7"
+      },
+      {
+        "slug_publicador": "7ce8aef0-9e92-11dc-8738-b8a03c50a862",
+        "registros": 1,
+        "especies": 1,
+        "label": "Plazi.org taxonomic treatments database",
+        "pais_publicacion": "CH",
+        "url_logo": "https://statics.sibcolombia.net/sib-resources/images/santander/world.png",
+        "url_socio": "https://biodiversidad.co/data/?publishingOrg=7ce8aef0-9e92-11dc-8738-b8a03c50a862"
+      },
+      {
+        "slug_publicador": "061b4f20-f241-11da-a328-b8a03c50a862",
+        "registros": 1,
+        "especies": 1,
+        "label": "Royal Botanic Gardens, Kew",
+        "pais_publicacion": "GB",
+        "url_logo": "https://statics.sibcolombia.net/sib-resources/images/santander/world.png",
+        "url_socio": "https://biodiversidad.co/data/?publishingOrg=061b4f20-f241-11da-a328-b8a03c50a862"
+      }
+    ]
+  },
   "municipios_lista": []
 }

@@ -579,9 +579,7 @@
       "id": "slide1",
       "layout": "title/(text|chart)",
       "title": "¿Cómo está Oicatá frente al resto de Boyacá?",
-      "description": "De las 11.731 especies observadas en Boyacá,\nel municipio de Oicatá aporta 48, equivalentes a 0%.\nDe estas 3 especies son endémicas.",
-      "chart_type": "image",
-      "chart_url": "static/charts/oicata/reg_vs_parent.png",
+      "description": "De las 11.731 especies observadas en Boyacá,\nel municipio de Oicatá aporta 48, equivalentes a 0.4%.\nDe estas 3 especies son endémicas.",
       "waffle": [
         {
           "slug_region": "boyaca",
@@ -7857,69 +7855,108 @@
   ],
   "territorio": [],
   "patrocinador": [],
-  "publicadores": [
-    {
-      "slug_publicador": "e2e717bf-551a-4917-bdc9-4fa0f342c530",
-      "registros": 58,
-      "especies": 34,
-      "label": "eBird Colombia",
-      "pais_publicacion": "CO",
-      "url_logo": "https://statics.sibcolombia.net/sib-resources/images/logos-socios/500px/ebird.jpg",
-      "url_socio": "https://biodiversidad.co/data/?publishingOrg=e2e717bf-551a-4917-bdc9-4fa0f342c530"
-    },
-    {
-      "slug_publicador": "03fefd3c-2809-4966-810d-a6c2205ab899",
-      "registros": 15,
-      "especies": 1,
-      "label": "Corpoboyacá - Corporación Autónoma Regional de Boyacá",
-      "pais_publicacion": "CO",
-      "url_logo": "https://raw.githubusercontent.com/SIB-Colombia/logos/main/socio-SiB-corpoboyaca.png",
-      "url_socio": "https://biodiversidad.co/data/?publishingOrg=03fefd3c-2809-4966-810d-a6c2205ab899"
-    },
-    {
-      "slug_publicador": "28eb1a3f-1c15-4a95-931a-4af90ecb574d",
-      "registros": 9,
-      "especies": 9,
-      "label": "Naturalista Colombia",
-      "pais_publicacion": "CO",
-      "url_logo": "https://statics.sibcolombia.net/sib-resources/images/logos-socios/portal-sib/logo-naturalistaco.png",
-      "url_socio": "https://biodiversidad.co/data/?publishingOrg=28eb1a3f-1c15-4a95-931a-4af90ecb574d"
-    },
-    {
-      "slug_publicador": "2a7e3080-28a9-11dd-97cd-b8a03c50a862",
-      "registros": 3,
-      "especies": 2,
-      "label": "Instituto de Investigación de Recursos Biológicos Alexander von Humboldt",
-      "pais_publicacion": "CO",
-      "url_logo": "https://raw.githubusercontent.com/SIB-Colombia/logos/main/socio-SiB-iavh.png",
-      "url_socio": "https://biodiversidad.co/data/?publishingOrg=2a7e3080-28a9-11dd-97cd-b8a03c50a862"
-    },
-    {
-      "slug_publicador": "cccff716-2694-4209-9f9e-2f7a484465a0",
-      "registros": 3,
-      "especies": 1,
-      "label": "Universidad de Antioquia",
-      "pais_publicacion": "CO",
-      "url_logo": "https://raw.githubusercontent.com/SIB-Colombia/logos/main/socio-SiB-udea.png",
-      "url_socio": "https://biodiversidad.co/data/?publishingOrg=cccff716-2694-4209-9f9e-2f7a484465a0"
-    },
-    {
-      "slug_publicador": "da86174a-a605-43a4-a5e8-53d484152cd3",
-      "registros": 2,
-      "especies": 2,
-      "label": "Pl@ntNet",
-      "pais_publicacion": "FR",
-      "url_logo": "https://statics.sibcolombia.net/sib-resources/images/santander/world.png",
-      "url_socio": "https://biodiversidad.co/data/?publishingOrg=da86174a-a605-43a4-a5e8-53d484152cd3"
-    },
-    {
-      "slug_publicador": "814cdfb5-d4f8-4453-815f-ea5df98e76bf",
-      "registros": 1,
-      "label": "Arizona State University Biocollections",
-      "pais_publicacion": "US",
-      "url_logo": "https://statics.sibcolombia.net/sib-resources/images/santander/world.png",
-      "url_socio": "https://biodiversidad.co/data/?publishingOrg=814cdfb5-d4f8-4453-815f-ea5df98e76bf"
-    }
-  ],
+  "publicadores": {
+    "publicadores_tipo": [
+      {
+        "tipo_organizacion": "Internacional",
+        "n_tipo": 2,
+        "n_tipo_obs": 3,
+        "pct_tipo": 0.2857,
+        "pct_tipo_obs": 0.033
+      },
+      {
+        "tipo_organizacion": "Redes e iniciativas",
+        "n_tipo": 2,
+        "n_tipo_obs": 67,
+        "pct_tipo": 0.2857,
+        "pct_tipo_obs": 0.7363
+      },
+      {
+        "tipo_organizacion": "Autoridades ambientales",
+        "n_tipo": 1,
+        "n_tipo_obs": 15,
+        "pct_tipo": 0.1429,
+        "pct_tipo_obs": 0.1648
+      },
+      {
+        "tipo_organizacion": "Centros de investigación",
+        "n_tipo": 1,
+        "n_tipo_obs": 3,
+        "pct_tipo": 0.1429,
+        "pct_tipo_obs": 0.033
+      },
+      {
+        "tipo_organizacion": "Academia",
+        "n_tipo": 1,
+        "n_tipo_obs": 3,
+        "pct_tipo": 0.1429,
+        "pct_tipo_obs": 0.033
+      }
+    ],
+    "publicadores_list": [
+      {
+        "slug_publicador": "e2e717bf-551a-4917-bdc9-4fa0f342c530",
+        "registros": 58,
+        "especies": 34,
+        "label": "eBird Colombia",
+        "pais_publicacion": "CO",
+        "url_logo": "https://statics.sibcolombia.net/sib-resources/images/logos-socios/500px/ebird.jpg",
+        "url_socio": "https://biodiversidad.co/data/?publishingOrg=e2e717bf-551a-4917-bdc9-4fa0f342c530"
+      },
+      {
+        "slug_publicador": "03fefd3c-2809-4966-810d-a6c2205ab899",
+        "registros": 15,
+        "especies": 1,
+        "label": "Corpoboyacá - Corporación Autónoma Regional de Boyacá",
+        "pais_publicacion": "CO",
+        "url_logo": "https://raw.githubusercontent.com/SIB-Colombia/logos/main/socio-SiB-corpoboyaca.png",
+        "url_socio": "https://biodiversidad.co/data/?publishingOrg=03fefd3c-2809-4966-810d-a6c2205ab899"
+      },
+      {
+        "slug_publicador": "28eb1a3f-1c15-4a95-931a-4af90ecb574d",
+        "registros": 9,
+        "especies": 9,
+        "label": "Naturalista Colombia",
+        "pais_publicacion": "CO",
+        "url_logo": "https://statics.sibcolombia.net/sib-resources/images/logos-socios/portal-sib/logo-naturalistaco.png",
+        "url_socio": "https://biodiversidad.co/data/?publishingOrg=28eb1a3f-1c15-4a95-931a-4af90ecb574d"
+      },
+      {
+        "slug_publicador": "2a7e3080-28a9-11dd-97cd-b8a03c50a862",
+        "registros": 3,
+        "especies": 2,
+        "label": "Instituto de Investigación de Recursos Biológicos Alexander von Humboldt",
+        "pais_publicacion": "CO",
+        "url_logo": "https://raw.githubusercontent.com/SIB-Colombia/logos/main/socio-SiB-iavh.png",
+        "url_socio": "https://biodiversidad.co/data/?publishingOrg=2a7e3080-28a9-11dd-97cd-b8a03c50a862"
+      },
+      {
+        "slug_publicador": "cccff716-2694-4209-9f9e-2f7a484465a0",
+        "registros": 3,
+        "especies": 1,
+        "label": "Universidad de Antioquia",
+        "pais_publicacion": "CO",
+        "url_logo": "https://raw.githubusercontent.com/SIB-Colombia/logos/main/socio-SiB-udea.png",
+        "url_socio": "https://biodiversidad.co/data/?publishingOrg=cccff716-2694-4209-9f9e-2f7a484465a0"
+      },
+      {
+        "slug_publicador": "da86174a-a605-43a4-a5e8-53d484152cd3",
+        "registros": 2,
+        "especies": 2,
+        "label": "Pl@ntNet",
+        "pais_publicacion": "FR",
+        "url_logo": "https://statics.sibcolombia.net/sib-resources/images/santander/world.png",
+        "url_socio": "https://biodiversidad.co/data/?publishingOrg=da86174a-a605-43a4-a5e8-53d484152cd3"
+      },
+      {
+        "slug_publicador": "814cdfb5-d4f8-4453-815f-ea5df98e76bf",
+        "registros": 1,
+        "label": "Arizona State University Biocollections",
+        "pais_publicacion": "US",
+        "url_logo": "https://statics.sibcolombia.net/sib-resources/images/santander/world.png",
+        "url_socio": "https://biodiversidad.co/data/?publishingOrg=814cdfb5-d4f8-4453-815f-ea5df98e76bf"
+      }
+    ]
+  },
   "municipios_lista": []
 }

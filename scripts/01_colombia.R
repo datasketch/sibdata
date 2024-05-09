@@ -65,7 +65,8 @@ dd <- d |>
   select(slug_region, especies_region_total, registros_region_total)
 
 
-map_name <- "col_departments"
+map_name <- "col_departments2"
+
 deptos <- sibdata_departamento(con) |> collect()
 dd <- dd |>
   left_join(deptos, by = c("slug_region" = "slug"), copy = TRUE)
@@ -77,8 +78,10 @@ dd_reg <- dd |> select(cod_dane, value = registros_region_total, label) |>
   rename(n_registros = value)
 dd_map <- left_join(dd_esp, dd_reg) |>
   select(id = cod_dane, label, n_especies, n_registros)
-tj <- geodato::gd_tj("col_departments")
-tj <- geodato::gd_tj("col_departments") |> left_join(dd_map)
+#tj <- geodato::gd_tj("col_departments")
+conmap <- geotable::gt_con()
+tj <- geotable::gt_sf("col_departments2", conmap) |> left_join(dd_map)
+#tj <- geodato::gd_tj("col_departments") |> left_join(dd_map)
 
 
 region_tipo <- "municipio"

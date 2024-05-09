@@ -48,6 +48,7 @@ map(av_regions, function(region){
   message("\n################################  ", parent)
   message("................................. ",region, paste0("(",i," de ",n,")"))
   i <<- i + 1
+  # region <- "tunja"
   # region <- "ibague"
   # region <- "chiquinquira"
   # region <- "alpujarra"
@@ -111,14 +112,35 @@ map(av_regions, function(region){
     left_join(patrocinadores, by = c("slug_patrocinador" = "slug")) |>
     collect()
 
+
   publicadores <- sibdata_region_publicador(con) |>
     filter(slug_region == region) |>
-    left_join(sibdata_publicador(con), by = c("slug_publicador" = "slug")) |>
-    select(slug_publicador, registros = registros.x, especies = especies.x,
+    left_join(sibdata_publicador(con) |> select(-especies, -registros),
+              by = c("slug_publicador" = "slug")) |>
+    collect()
+  publicadores_tipo <- publicadores |>
+    select(tipo_organizacion, registros) |>
+    mutate(tipo_organizacion = ifelse(is.na(tipo_organizacion), "No definido", tipo_organizacion)) |>
+    summarise(n_tipo = n(),
+              n_tipo_obs = sum(registros),
+              .by = tipo_organizacion) |>
+    mutate(pct_tipo = n_tipo/sum(n_tipo),
+           pct_tipo_obs = n_tipo_obs/sum(n_tipo_obs))
+
+
+  publicadores_list <- publicadores |>
+    select(slug_publicador, registros = registros, especies = especies,
            label, pais_publicacion,
            url_logo, url_socio) |>
-    arrange(desc(registros)) |>
-    collect()
+    arrange(desc(registros))
+
+  publicadores <- list(
+    publicadores_tipo = publicadores_tipo,
+    publicadores_list = publicadores_list
+  )
+
+
+
 
   l <- list(
     nav_tematica = nav_tematica,

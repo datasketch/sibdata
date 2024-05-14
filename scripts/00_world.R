@@ -1,5 +1,6 @@
 library(sibdata)
-#library(lfltmagic)
+# library(ltgeo)
+# library(lfltmagic)
 library(geodato)
 library(tictoc)
 

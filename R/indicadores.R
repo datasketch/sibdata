@@ -1,5 +1,5 @@
 
 #' @export
-sibdata_indicadores <- function(){
-  sibdata_ind_meta() |> collect()
+sibdata_indicadores <- function(con){
+  sibdata_ind_meta(con) |> collect()
 }

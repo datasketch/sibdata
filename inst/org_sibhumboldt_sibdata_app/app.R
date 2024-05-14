@@ -34,7 +34,7 @@ ui <- panelsPage(
   ),
   panel(title = "Opciones", width = 250,
         body = div(
-          #verbatimTextOutput("debug"),
+          verbatimTextOutput("debug"),
           uiOutput("sel_region_"),
           hr(),
           radioButtons("sel_tipo", "Tipo", c("Observaciones" = "registros","Especies"="especies")),
@@ -55,7 +55,8 @@ ui <- panelsPage(
                              class='first-container',
                              uiOutput("viz_type")),
                            div(class='second-container',
-                               uiOutput("descargas"))),
+                               uiOutput("descargas"))
+        ),
         body = div(
           uiOutput("controls"),
           uiOutput("chart_controls"),
@@ -74,7 +75,6 @@ ui <- panelsPage(
 
 server <-  function(input, output, session) {
 
-
   par <- list(region = NULL, tematica = NULL, grupo = NULL)
   url_par <- reactive({
     url_params(par, session)$inputs
@@ -91,7 +91,10 @@ server <-  function(input, output, session) {
     # what <- inputs()
     # what <- input$viz_selection
     # paste0(capture.output(what),collapse = "\n")
-    url_par()
+    #url_par()
+    #str(r$toList)
+    str(inputs())
+    str(data())
   })
 
 
@@ -216,34 +219,47 @@ server <-  function(input, output, session) {
   })
 
   data <- function(){
-    tryCatch({
-    inp <- inputs()
-    subR <- inp$subregiones
-    req(actual_but$active)
-    if (actual_but$active == "map") subR <- TRUE
-
-    d <- sibdata(inp$region,
-                 grupo = inp$grupo,
-                 tipo = inp$tipo,
-                 cobertura = inp$cobertura,
-                 tematica = inp$tematica,
-                 subregiones = subR,
-                 with_parent = inp$with_parent)
-    if (actual_but$active != "map") {
-      d <- d |> sib_merge_ind_label()
-    } else {
-      d <- d |> dplyr::select(label, count)
-      d$label <- dplyr::recode(d$label, "San Sebastián de Mariquita" = "Mariquita",
-                               "San Andrés de Tumaco" = "Tumaco",
-                               "Santacruz" = "Santa cruz",
-                               "El Tablón de Gómez" = "El Tablón",
-                               "Güicán de la Sierra" = "Guican")
-    }
+      inp <- inputs()
+      subR <- inp$subregiones
+      d <- sibdata(inp$region,
+                   grupo = inp$grupo,
+                   tipo = inp$tipo,
+                   cobertura = inp$cobertura,
+                   tematica = inp$tematica,
+                   subregiones = subR,
+                   with_parent = inp$with_parent,
+                   con = con)
+      d <- d |> sib_merge_ind_label(con = con)
     d
-    },
-    error = function(cond) {
-      return()
-    })
+
+    # tryCatch({
+    #   inp <- inputs()
+    #   subR <- inp$subregiones
+    #   req(actual_but$active)
+    #   if (actual_but$active == "map") subR <- TRUE
+    #
+    #   d <- sibdata(inp$region,
+    #                grupo = inp$grupo,
+    #                tipo = inp$tipo,
+    #                cobertura = inp$cobertura,
+    #                tematica = inp$tematica,
+    #                subregiones = subR,
+    #                with_parent = inp$with_parent)
+    #   if (actual_but$active != "map") {
+    #     d <- d |> sib_merge_ind_label()
+    #   } else {
+    #     d <- d |> dplyr::select(label, count)
+    #     d$label <- dplyr::recode(d$label, "San Sebastián de Mariquita" = "Mariquita",
+    #                              "San Andrés de Tumaco" = "Tumaco",
+    #                              "Santacruz" = "Santa cruz",
+    #                              "El Tablón de Gómez" = "El Tablón",
+    #                              "Güicán de la Sierra" = "Guican")
+    #   }
+    #   d
+    # },
+    # error = function(cond) {
+    #   return()
+    # })
   }
 
 
@@ -258,6 +274,7 @@ server <-  function(input, output, session) {
   available_charts <- reactive({
     #dd <- data()
     c( "Mapa" = "map", "Torta"= "pie", "Dona" = "donut", "Treemap" = "treemap","Barras" = "bar", "Tabla"="table")
+    c("Torta"= "pie", "Dona" = "donut", "Treemap" = "treemap","Barras" = "bar", "Tabla"="table")
   })
 
 

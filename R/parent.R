@@ -7,7 +7,7 @@ parent_tematica <- function(region){
   parent_tematica
 }
 
-with_parent_tematica <- function(region){
+with_parent_tematica <- function(region, con = NULL){
   parent <- sib_parent_region(region, con)
   with_parent_tematica <- sibdata_region_tematica(con) |>
     dplyr::filter(slug_region %in% c(region, parent))

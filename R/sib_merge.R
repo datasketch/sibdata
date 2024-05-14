@@ -61,8 +61,8 @@ sib_merge_grupo_label <- function(d, slug, con){
 
 
 #' @export
-sib_merge_ind_label <- function(d, replace = TRUE){
-  inds <- sibdata_indicadores() |>
+sib_merge_ind_label <- function(d, replace = TRUE, con = con){
+  inds <- sibdata_indicadores(con = con) |>
     #filter(indicador %in% names(d)) |>
     select(indicador,label_ind = label)
   dd <- left_join(d, inds, by = "indicador")

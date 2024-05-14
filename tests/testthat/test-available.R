@@ -1,7 +1,8 @@
 test_that("multiplication works", {
 
-
-  expect_equal(sib_available_regions(subtipo = "País"),
+  con <- DBI::dbConnect(RSQLite::SQLite(), sys_file_sibdata("db/sibdata.sqlite"),
+                        read_only = TRUE)
+  expect_equal(sib_available_regions(subtipo = "País", con = con),
                c("Colombia"  = "colombia"))
 
   deptos <- sib_available_regions(subtipo = "Departamento")

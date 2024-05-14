@@ -1,9 +1,17 @@
 #library(sibdata)
 #library(lfltmagic)
 library(tictoc)
-
+library(geotable)
 library(vctrs)
 devtools::load_all()
+
+
+# con_map <- gt_con()
+# map_name <- "col_municipalities_boyaca"
+# sf2 <- gt_sf(map_name, con_map)
+# sf::write_sf(sf2, "~/Downloads/boyaca.geojson")
+# sf::write_sf(tj, "~/Downloads/boyaca.geojson")
+
 
 
 here::dr_here()
@@ -83,7 +91,6 @@ map(av_regions, safely(function(region){
 
   # Territorio
   dir.create(glue::glue("static/charts/{region}"))
-  library(ltgeo)
   subreg_tematica <- subregion_tematica(region, con)
   d <- subreg_tematica |>
     collect()
@@ -118,13 +125,12 @@ map(av_regions, safely(function(region){
   dd_map <- left_join(dd_esp, dd_reg) |>
     select(id = cod_dane, label, n_especies, n_registros)
 
-  conmap <- geotable:::gt_con()
+  conmap <- geotable::gt_con()
   tj <- geotable::gt_sf(map_name, con = conmap)
 #
 #   tj <- geodato::gd_tj("col_municipalities") |>
 #     filter(depto == toupper(region_nm))
   tj <- tj |> left_join(dd_map)
-
 
   message("Message Territorio")
 
@@ -230,8 +236,8 @@ map(av_regions, safely(function(region){
   }
   jsonlite::write_json(l, paste0(save_path,"/",region,"/",region, ".json"),
                        auto_unbox = TRUE, pretty =TRUE)
-
-
+  sf::write_sf(tj, paste0(save_path,"/",region,"/",region, ".geojson"),
+               delete_dsn = TRUE)
 
 }))
 

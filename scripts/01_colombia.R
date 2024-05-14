@@ -80,7 +80,7 @@ dd_map <- left_join(dd_esp, dd_reg) |>
   select(id = cod_dane, label, n_especies, n_registros)
 #tj <- geodato::gd_tj("col_departments")
 conmap <- geotable::gt_con()
-tj <- geotable::gt_sf("col_departments2", conmap) |> left_join(dd_map)
+tj <- geotable::gt_sf("col_departments", conmap) |> left_join(dd_map)
 #tj <- geodato::gd_tj("col_departments") |> left_join(dd_map)
 
 
@@ -180,7 +180,8 @@ l <- list(
 dir.create(file.path("static/data",region))
 jsonlite::write_json(l, paste0("static/data/",region,"/",region, ".json"),
                      auto_unbox = TRUE, pretty =TRUE)
-
+sf::write_sf(tj, paste0("static/data/",region,"/",region, ".geojson"),
+             delete_dsn = TRUE)
 
 
 

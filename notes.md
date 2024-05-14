@@ -1,5 +1,9 @@
 
 
+Lina Coatura
+
+
+
 
 
 # 2024-05
@@ -9,10 +13,10 @@
 - ¿Qué posibilidad habría de una mejor visualización de San Andrés en el topoJSON del mapa de Colombia, ya que se ve muy pequeño?
 - Datos topoJSON para el mapa de Norte de Santander.
 - Verificando los datos de los Municipios para la sección de Publicadores
+- Actualizar los municipios de Santander.
 
 ## TODO
 
-- Actualizar los municipios de Santander.
 - Explorador
 
 

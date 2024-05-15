@@ -7,7 +7,7 @@ library(hgmagic)
 # library(lfltmagic)
 library(sibdata)
 library(shinyinvoer)
-library(dsmodules)
+library(dsmods)
 library(dbplyr)
 
 
@@ -29,23 +29,14 @@ opts_tematicas <- c("Todas" = "todas", sib_available_tematicas())
 
 
 input <- list(
-  region = "boyaca",
-  tipo = "registros",
+  region = "colombia",
+  tipo = "especies",
   grupo_tipo = "biologico",
-  grupo = "animales",
-  tematica = "amenazadas_nacional"
-  # subregiones = subregiones,
-  # with_parent = with_parent
-)
-
-input <- list(
-  region = "boyaca",
-  grupo = "animales",
-  tematica = "amenazadas_nacional",
+  grupo = NULL,
+  tematica = NULL,
   subregiones = FALSE,
   with_parent = FALSE
 )
-
 inp <- input
 region <- inp$region
 d <- sibdata(inp$region,
@@ -56,6 +47,33 @@ d <- sibdata(inp$region,
              subregiones = inp$subregiones,
              with_parent = inp$with_parent,
              con = con)
+d
+hgmagic::hg_pie_CatNum(d)
+
+
+
+
+
+input <- list(
+  region = "boyaca",
+  grupo = "animales",
+  tematica = "amenazadas_nacional",
+  subregiones = FALSE,
+  with_parent = FALSE
+)
+region <- inp$region
+d <- sibdata(inp$region,
+             grupo = inp$grupo,
+             tipo = inp$tipo,
+             cobertura = inp$cobertura,
+             tematica = inp$tematica,
+             subregiones = inp$subregiones,
+             with_parent = inp$with_parent,
+             con = con)
+d
+
+
+
 
 
 

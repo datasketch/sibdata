@@ -10,7 +10,9 @@ library(dsmods)
 
 library(sibdata)
 
-con <- DBI::dbConnect(RSQLite::SQLite(), sys_file_sibdata("db/sibdata.sqlite"),
+dbdir <- sys_file_sibdata("db/sibdata.sqlite")
+dbdir <- "db/sibdata.sqlite"
+con <- DBI::dbConnect(RSQLite::SQLite(), dbdir,
                       read_only = TRUE)
 
 av_grupos_bio <- sib_available_grupos(tipo = "biologico", con = con)
@@ -34,7 +36,7 @@ ui <- panelsPage(
   ),
   panel(title = "Opciones", width = 250,
         body = div(
-          verbatimTextOutput("debug"),
+          # verbatimTextOutput("debug"),
           uiOutput("sel_region_"),
           hr(),
           radioButtons("sel_tipo", "Tipo", c("Observaciones" = "registros","Especies"="especies")),
@@ -343,30 +345,30 @@ server <-  function(input, output, session) {
     req(actual_but$active)
     dd <- data()
     opts <- list(
-      data = dd,
-      dataLabels_show = TRUE,
-      color_by = names(dd)[1],
-      legend_show = FALSE,
-      text_family = "Lato",
-      axis_line_y_size = 1,
-      axis_line_x_size = 1,
-      axis_line_color = "#dbd9d9",
-      border_weight = 0.2,
-      grid_y_color = "#dbd9d9",
-      grid_x_width = 0,
-      palette_colors = c("#5151f2", "#4ad3ac", "#ffd150", "#00afff", "#ffe0bb", "#f26330", "#163875")
+      data = dd
+      # dataLabels_show = TRUE,
+      # color_by = names(dd)[1],
+      # legend_show = FALSE,
+      # text_family = "Lato",
+      # axis_line_y_size = 1,
+      # axis_line_x_size = 1,
+      # axis_line_color = "#dbd9d9",
+      # border_weight = 0.2,
+      # grid_y_color = "#dbd9d9",
+      # grid_x_width = 0,
+      # palette_colors = c("#5151f2", "#4ad3ac", "#ffd150", "#00afff", "#ffe0bb", "#f26330", "#163875")
     )
 
     if (actual_but$active == "map") {
-      region <- inputs()$region
-      opts$color_by <- NULL
-      opts$legend_show <- TRUE
-      opts$palette_colors <- rev(c("#f26330", "#f77e38", "#fb9745", "#feae56", "#ffc570", "#ffdb93", "#ffeec9"))
-      opts$map_name <- paste0("col_depto_", region)
-      if (region == "colombia") opts$map_name <- "col_departments"
-      opts$topo_fill_opacity <- 0.6
-      opts$max_topo_fill_opacity <- 0.8
-      opts$map_opacity <- 0.5
+      # region <- inputs()$region
+      # opts$color_by <- NULL
+      # opts$legend_show <- TRUE
+      # opts$palette_colors <- rev(c("#f26330", "#f77e38", "#fb9745", "#feae56", "#ffc570", "#ffdb93", "#ffeec9"))
+      # opts$map_name <- paste0("col_depto_", region)
+      # if (region == "colombia") opts$map_name <- "col_departments"
+      # opts$topo_fill_opacity <- 0.6
+      # opts$max_topo_fill_opacity <- 0.8
+      # opts$map_opacity <- 0.5
     }
     opts
   })
@@ -377,7 +379,7 @@ server <-  function(input, output, session) {
     opts <- vizOps()
     sel_chart_type <- actual_but$active
     if (sel_chart_type == "table") return()
-    viz <- paste0("hgchmagic::hgch_", sel_chart_type, "_CatNum")
+    viz <- paste0("hgmagic::hg_", sel_chart_type, "_CatNum")
     if (sel_chart_type == "map") viz <- "lfltmagic::lflt_choropleth_GnmNum"
     suppressWarnings(do.call(eval(parse(text=viz)), opts))
   })

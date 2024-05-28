@@ -193,7 +193,7 @@ tematica_list <- function(region, con){
   inds_parent_exoticas <- default_indicadores("inds_parent_exoticas")
 
   ## OJOOOOOOO REVISAR EL DATO
-  esp_list_exoticas_total <- list_species(region, tematica = "exoticas", con = con) |>
+  esp_list_exoticas_total <- list_species(region, tematica = "exoticas-total", con = con) |>
     select(label, slug_especie, registros, url_gbif, url_cbc, slug_tematica) |>
     arrange(desc(registros)) |>
     collect() |>

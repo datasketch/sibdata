@@ -93,7 +93,7 @@ map2(ds, names(ds), function(d,nm){
 })
 dbListTables(con)
 duckdb::dbDisconnect(con, shutdown = TRUE)
-#duckdb::duckdb_shutdown(con)
+# duckdb::duckdb_shutdown(con)
 
 
 

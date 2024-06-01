@@ -1,9 +1,5 @@
 
 
-Lina Coatura
-
-
-
 
 
 # 2024-05

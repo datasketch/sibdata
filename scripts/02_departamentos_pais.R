@@ -46,6 +46,7 @@ map(av_regions, safely(function(region){
   message("\n", region, "\n")
 
   # region <- av_regions[4]
+  # region <- "amazonas"
   # region <- "risaralda"
   # region <- "boyaca"
   # region <- "narino"
@@ -126,11 +127,12 @@ map(av_regions, safely(function(region){
     select(id = cod_dane, label, n_especies, n_registros)
 
   conmap <- geotable::gt_con()
-  tj <- geotable::gt_sf(map_name, con = conmap)
+  tj <- geotable::gt_sf(map_name, con = conmap) |>
+    select(-name)
 #
 #   tj <- geodato::gd_tj("col_municipalities") |>
 #     filter(depto == toupper(region_nm))
-  tj <- tj |> left_join(dd_map)
+  tj <- tj |> left_join(dd_map, by = "id")
 
   message("Message Territorio")
 
@@ -238,6 +240,13 @@ map(av_regions, safely(function(region){
                        auto_unbox = TRUE, pretty =TRUE)
   sf::write_sf(tj, paste0(save_path,"/",region,"/",region, ".geojson"),
                delete_dsn = TRUE)
+  opts <- list(main_border_width = 0.1,
+               main_border_color = "#007139",
+               fill_color = "#b3cfc0",
+               minor_border_color = "#007139",
+               minor_border_width = 0.1)
+  gt_icon(map_name, opts = opts,
+          save_path = paste0(save_path,"/",region,"/",region, ".svg"))
 
 }))
 

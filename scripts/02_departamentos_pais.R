@@ -102,6 +102,10 @@ map(av_regions, safely(function(region){
 
 
   munis <- sibdata_municipio(con) |> collect()
+  if(region == "bogota-dc"){
+    bogota <- sibdata_departamento(con) |> collect() |> filter(cod_dane == "11")
+    munis <- bogota |> mutate(cod_dane = "11001")
+  }
   dd <- dd |>
     left_join(munis, by = c("slug_region" = "slug"))
 
@@ -117,6 +121,7 @@ map(av_regions, safely(function(region){
   if(region_id == "norte_santander") region_id <- "norte_de_santander"
   if(region_id == "san_andres_providencia") region_id <- "archipielago_de_san_andres_providencia_y_santa_catalina"
   #if(region_id == "bogota-dc") region_nm <- "BOGOTÁ D.C."
+  if(region_id == "bogota_dc") region_id <- "bogota__d_c"
   # if(region == "atlantico") region_nm <- "ATLÁNTICO"
   # if(reion == "vaupes") region_nm <- "VAUPÉS"
   # if(region == "valle-del-cauca") region_nm <- "VALLE DEL CAUCA"

@@ -5,6 +5,9 @@ subregion_tematica <- function(region, con){
     select(slug_region = slug, label)
 
   subregs <- sib_available_subregions(region, con)
+  if(region == "bogota-dc"){
+    subregs <- "bogota-dc"
+  }
 
   if(region == "colombia"){
     subregs <- c(subregs, "bogota-dc")

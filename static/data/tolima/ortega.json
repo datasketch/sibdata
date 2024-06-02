@@ -687,11 +687,7 @@
       "parent_en": 66,
       "parent_vu": 103,
       "parent_especies_total": 8637,
-      "list_especies_amenazadas_nacional": {},
-      "list_especies_amenazadas_nacional_vu": {},
-      "list_especies_amenazadas_nacional_en": {},
-      "list_especies_amenazadas_nacional_cr": {},
-      "species_list": [
+      "list_especies_amenazadas_nacional": [
         {
           "label": "Pimelodus grosskopfii",
           "slug_especie": "pimelodus-grosskopfii",
@@ -707,7 +703,26 @@
           "url_gbif": "https://www.gbif.org/species/5789077",
           "slug_tematica": "amenazadas-nacional-vu"
         }
-      ]
+      ],
+      "list_especies_amenazadas_nacional_vu": [
+        {
+          "label": "Pimelodus grosskopfii",
+          "slug_especie": "pimelodus-grosskopfii",
+          "registros": 1,
+          "url_gbif": "https://www.gbif.org/species/2338918",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/596f48c82f4fd7bc7f3a5417/summary",
+          "slug_tematica": "amenazadas-nacional-vu"
+        },
+        {
+          "label": "Scytalopus rodriguezi",
+          "slug_especie": "scytalopus-rodriguezi",
+          "registros": 1,
+          "url_gbif": "https://www.gbif.org/species/5789077",
+          "slug_tematica": "amenazadas-nacional-vu"
+        }
+      ],
+      "list_especies_amenazadas_nacional_en": [],
+      "list_especies_amenazadas_nacional_cr": []
     },
     {
       "slug": "amenazadas-global",
@@ -729,11 +744,7 @@
       "parent_en": 51,
       "parent_vu": 92,
       "parent_especies_total": 8637,
-      "list_especies_amenazadas_global": {},
-      "list_especies_amenazadas_global_vu": {},
-      "list_especies_amenazadas_global_en": {},
-      "list_especies_amenazadas_global_cr": {},
-      "species_list": [
+      "list_especies_amenazadas_global": [
         {
           "label": "Pimelodus grosskopfii",
           "slug_especie": "pimelodus-grosskopfii",
@@ -748,6 +759,26 @@
           "registros": 1,
           "url_gbif": "https://www.gbif.org/species/5789077",
           "slug_tematica": "amenazadas-global-en"
+        }
+      ],
+      "list_especies_amenazadas_global_vu": [],
+      "list_especies_amenazadas_global_en": [
+        {
+          "label": "Scytalopus rodriguezi",
+          "slug_especie": "scytalopus-rodriguezi",
+          "registros": 1,
+          "url_gbif": "https://www.gbif.org/species/5789077",
+          "slug_tematica": "amenazadas-global-en"
+        }
+      ],
+      "list_especies_amenazadas_global_cr": [
+        {
+          "label": "Pimelodus grosskopfii",
+          "slug_especie": "pimelodus-grosskopfii",
+          "registros": 1,
+          "url_gbif": "https://www.gbif.org/species/2338918",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/596f48c82f4fd7bc7f3a5417/summary",
+          "slug_tematica": "amenazadas-global-cr"
         }
       ]
     },
@@ -1061,42 +1092,78 @@
       "parent_registros_exoticas_riesgo_invasion": 12901,
       "list_especies_exoticas_total": [
         {
-          "label": "Anacardium occidentale",
-          "slug_especie": "anacardium-occidentale",
-          "registros": 1,
-          "url_gbif": "https://www.gbif.org/species/5421368",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e5064083c45700544e3e6f/summary",
-          "slug_tematica": "exoticas"
+          "label": "Pteris grandifolia",
+          "slug_especie": "pteris-grandifolia",
+          "registros": 3,
+          "url_gbif": "https://www.gbif.org/species/5275402",
+          "slug_tematica": "exotica-riesgo-invasion"
         },
         {
-          "label": "Canna indica",
-          "slug_especie": "canna-indica",
-          "registros": 1,
-          "url_gbif": "https://www.gbif.org/species/7826520",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56d7d4303c16479905cba94e/summary",
-          "slug_tematica": "exoticas"
+          "label": "Adiantum petiolatum",
+          "slug_especie": "adiantum-petiolatum",
+          "registros": 2,
+          "url_gbif": "https://www.gbif.org/species/2651824",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56ce5a6b3c16479905cba79c/summary",
+          "slug_tematica": "exotica-riesgo-invasion"
         },
         {
-          "label": "Jatropha curcas",
-          "slug_especie": "jatropha-curcas",
-          "registros": 1,
-          "url_gbif": "https://www.gbif.org/species/3072953",
-          "slug_tematica": "exoticas"
+          "label": "Adiantum tetraphyllum",
+          "slug_especie": "adiantum-tetraphyllum",
+          "registros": 2,
+          "url_gbif": "https://www.gbif.org/species/2651840",
+          "slug_tematica": "exotica-riesgo-invasion"
         },
         {
-          "label": "Mangifera indica",
-          "slug_especie": "mangifera-indica",
-          "registros": 1,
-          "url_gbif": "https://www.gbif.org/species/3190638",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e78b3b83c45700544e4113/summary",
-          "slug_tematica": "exoticas"
+          "label": "Asplenium dimidiatum",
+          "slug_especie": "asplenium-dimidiatum",
+          "registros": 2,
+          "url_gbif": "https://www.gbif.org/species/7310815",
+          "slug_tematica": "exotica-riesgo-invasion"
         },
         {
-          "label": "Tectona grandis",
-          "slug_especie": "tectona-grandis",
-          "registros": 1,
-          "url_gbif": "https://www.gbif.org/species/2925649",
-          "slug_tematica": "exoticas"
+          "label": "Bubulcus ibis",
+          "slug_especie": "bubulcus-ibis",
+          "registros": 2,
+          "url_gbif": "https://www.gbif.org/species/2480830",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c20d14f0106c67230e7320/summary",
+          "slug_tematica": "exotica-riesgo-invasion"
+        },
+        {
+          "label": "Cyclopeltis semicordata",
+          "slug_especie": "cyclopeltis-semicordata",
+          "registros": 2,
+          "url_gbif": "https://www.gbif.org/species/2651219",
+          "slug_tematica": "exotica-riesgo-invasion"
+        },
+        {
+          "label": "Hemionitis rufa",
+          "slug_especie": "hemionitis-rufa",
+          "registros": 2,
+          "url_gbif": "https://www.gbif.org/species/3747936",
+          "slug_tematica": "exotica-riesgo-invasion"
+        },
+        {
+          "label": "Lygodium venustum",
+          "slug_especie": "lygodium-venustum",
+          "registros": 2,
+          "url_gbif": "https://www.gbif.org/species/2650437",
+          "slug_tematica": "exotica-riesgo-invasion"
+        },
+        {
+          "label": "Pityrogramma calomelanos",
+          "slug_especie": "pityrogramma-calomelanos",
+          "registros": 2,
+          "url_gbif": "https://www.gbif.org/species/2651790",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e8321f83c45700544e437a/summary",
+          "slug_tematica": "exotica-riesgo-invasion"
+        },
+        {
+          "label": "Tectaria incisa",
+          "slug_especie": "tectaria-incisa",
+          "registros": 2,
+          "url_gbif": "https://www.gbif.org/species/5275167",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e83b0083c45700544e43cd/summary",
+          "slug_tematica": "exotica-riesgo-invasion"
         }
       ],
       "list_especies_exoticas": [

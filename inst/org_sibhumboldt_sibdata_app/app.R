@@ -66,7 +66,7 @@ ui <- panelsPage(
   ),
   panel(title = "Opciones", width = 280,
         body = div(
-          verbatimTextOutput("debug"),
+          # verbatimTextOutput("debug"),
           uiOutput("sel_region_"),
           hr(),
           uiOutput("sel_grupo_"),

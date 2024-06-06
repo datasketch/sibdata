@@ -56,8 +56,41 @@ tematica_list_col <- function(region, con){
     )
   )
 
-
   ## Amenazadas - Amenazadas Nacional
+  list_especies_amenazadas_nacional <- esp_list_nacional
+  list_especies_amenazadas_nacional_vu <- list_species(region,
+                                                       tematica = "amenazadas-nacional-vu",
+                                                       con = con) |>
+    select(label, slug_especie, registros, url_gbif, url_cbc, slug_tematica) |>
+    arrange(desc(registros)) |>
+    collect() |>
+    distinct() |>
+    slice(1:10)
+  list_especies_amenazadas_nacional_vu <- list_species(region,
+                                                       tematica = "amenazadas-nacional-vu",
+                                                       con = con) |>
+    select(label, slug_especie, registros, url_gbif, url_cbc, slug_tematica) |>
+    arrange(desc(registros)) |>
+    collect() |>
+    distinct() |>
+    slice(1:10)
+  list_especies_amenazadas_nacional_cr <- list_species(region,
+                                                       tematica = "amenazadas-nacional-cr",
+                                                       con = con) |>
+    select(label, slug_especie, registros, url_gbif, url_cbc, slug_tematica) |>
+    arrange(desc(registros)) |>
+    collect() |>
+    distinct() |>
+    slice(1:10)
+  list_especies_amenazadas_nacional_en <- list_species(region,
+                                                       tematica = "amenazadas-nacional-en",
+                                                       con = con) |>
+    select(label, slug_especie, registros, url_gbif, url_cbc, slug_tematica) |>
+    arrange(desc(registros)) |>
+    collect() |>
+    distinct() |>
+    slice(1:10)
+
   amenazadas_nacional <- c(
     list(slug = "amenazadas-nacional", label = "Amenazadas nacional",
          cr_estimadas = estimadas$especies_amenazadas_nacional_cr_estimadas,
@@ -66,12 +99,63 @@ tematica_list_col <- function(region, con){
     ),
     region_indicadores(region, inds_amenazadas_nacional, con = con),
     region_indicadores(region, inds_especies_est, con = con),
-    list(list_especies_amenazadas_nacional = NULL,
-         list_especies_amenazadas_nacional_vu = NULL,
-         list_especies_amenazadas_nacional_en = NULL,
-         list_especies_amenazadas_nacional_cr = NULL),
-    list(species_list = esp_list_nacional)
+    list(list_especies_amenazadas_nacional = list_especies_amenazadas_nacional,
+         list_especies_amenazadas_nacional_vu = list_especies_amenazadas_nacional_vu,
+         list_especies_amenazadas_nacional_en = list_especies_amenazadas_nacional_en,
+         list_especies_amenazadas_nacional_cr = list_especies_amenazadas_nacional_cr)
   )
+
+  # ## Amenazadas - Amenazadas Nacional
+  # amenazadas_nacional <- c(
+  #   list(slug = "amenazadas-nacional", label = "Amenazadas nacional",
+  #        cr_estimadas = estimadas$especies_amenazadas_nacional_cr_estimadas,
+  #        en_estimadas = estimadas$especies_amenazadas_nacional_en_estimadas,
+  #        vu_estimadas = estimadas$especies_amenazadas_nacional_vu_estimadas
+  #   ),
+  #   region_indicadores(region, inds_amenazadas_nacional, con = con),
+  #   region_indicadores(region, inds_especies_est, con = con),
+  #   list(list_especies_amenazadas_nacional = NULL,
+  #        list_especies_amenazadas_nacional_vu = NULL,
+  #        list_especies_amenazadas_nacional_en = NULL,
+  #        list_especies_amenazadas_nacional_cr = NULL),
+  #   list(species_list = esp_list_nacional)
+  # )
+
+
+  ## Amenazadas - Amenazadas Global
+  list_especies_amenazadas_nacional_vu <- list_species(region,
+                                                       tematica = "amenazadas-nacional-vu",
+                                                       con = con) |>
+    select(label, slug_especie, registros, url_gbif, url_cbc, slug_tematica) |>
+    arrange(desc(registros)) |>
+    collect() |>
+    distinct() |>
+    slice(1:10)
+  list_especies_amenazadas_global_vu <- list_species(region,
+                                                     tematica = "amenazadas-global-vu",
+                                                     con = con) |>
+    select(label, slug_especie, registros, url_gbif, url_cbc, slug_tematica) |>
+    arrange(desc(registros)) |>
+    collect() |>
+    distinct() |>
+    slice(1:10)
+  list_especies_amenazadas_global_cr <- list_species(region,
+                                                     tematica = "amenazadas-global-cr",
+                                                     con = con) |>
+    select(label, slug_especie, registros, url_gbif, url_cbc, slug_tematica) |>
+    arrange(desc(registros)) |>
+    collect() |>
+    distinct() |>
+    slice(1:10)
+  list_especies_amenazadas_global_en <- list_species(region,
+                                                     tematica = "amenazadas-global-en",
+                                                     con = con) |>
+    select(label, slug_especie, registros, url_gbif, url_cbc, slug_tematica) |>
+    arrange(desc(registros)) |>
+    collect() |>
+    distinct() |>
+    slice(1:10)
+
 
   amenazadas_global <- c(
     list(slug = "amenazadas-global", label = "Amenazadas global",
@@ -80,12 +164,25 @@ tematica_list_col <- function(region, con){
          vu_estimadas = estimadas$especies_amenazadas_global_vu_estimadas),
     region_indicadores(region, inds_amenazadas_global, con = con),
     region_indicadores(region, inds_especies_est, con = con),
-    list(list_especies_amenazadas_global = NULL,
-         list_especies_amenazadas_global_vu = NULL,
-         list_especies_amenazadas_global_en = NULL,
-         list_especies_amenazadas_global_cr = NULL),
-    list(species_list = esp_list_global)
+    list(list_especies_amenazadas_global = esp_list_global,
+         list_especies_amenazadas_global_vu = list_especies_amenazadas_global_vu,
+         list_especies_amenazadas_global_en = list_especies_amenazadas_global_en,
+         list_especies_amenazadas_global_cr = list_especies_amenazadas_global_cr)
   )
+
+  # amenazadas_global <- c(
+  #   list(slug = "amenazadas-global", label = "Amenazadas global",
+  #        cr_estimadas = estimadas$especies_amenazadas_global_cr_estimadas,
+  #        en_estimadas = estimadas$especies_amenazadas_global_en_estimadas,
+  #        vu_estimadas = estimadas$especies_amenazadas_global_vu_estimadas),
+  #   region_indicadores(region, inds_amenazadas_global, con = con),
+  #   region_indicadores(region, inds_especies_est, con = con),
+  #   list(list_especies_amenazadas_global = NULL,
+  #        list_especies_amenazadas_global_vu = NULL,
+  #        list_especies_amenazadas_global_en = NULL,
+  #        list_especies_amenazadas_global_cr = NULL),
+  #   list(species_list = esp_list_global)
+  # )
 
   # CITES
   inds_cites <- default_indicadores("inds_cites")

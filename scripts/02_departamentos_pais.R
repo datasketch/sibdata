@@ -55,6 +55,8 @@ map(av_regions, safely(function(region){
   # region <- "atlantico"
   # region <- "bogota-dc"
   # region <- "norte-santander"
+  # region <- "valle-del-cauca"
+  # region <- "la-guajira"
   # region <- "reserva-forestal-la-planada"
   # region <- "resguardo-indigena-pialapi-pueblo-viejo"
   reserva_resguardo <- c("reserva-forestal-la-planada",
@@ -121,13 +123,14 @@ map(av_regions, safely(function(region){
 
   # geotable::gt_sf("col_municipalities_vaupes")
   if(region_id == "norte_santander") region_id <- "norte_de_santander"
-  if(region_id == "san_andres_providencia") region_id <- "archipielago_de_san_andres_providencia_y_santa_catalina"
+  if(region_id == "san_andres_y_providencia") region_id <- "archipielago_de_san_andres_providencia_y_santa_catalina"
   #if(region_id == "bogota-dc") region_nm <- "BOGOTÁ D.C."
-  if(region_id == "bogota_dc") region_id <- "bogota__d_c"
+  if(region_id == "bogota_dc") region_id <- "bogota_d_c"
+  # if(region_id == "valle_del_cauca") region_id <- "NA_vale_del_cauca"
   # if(region == "atlantico") region_nm <- "ATLÁNTICO"
   # if(reion == "vaupes") region_nm <- "VAUPÉS"
-  # if(region == "valle-del-cauca") region_nm <- "VALLE DEL CAUCA"
-  # if(region == "la-guajira") region_nm <- "LA GUAJIRA"
+  #if(region == "valle-del-cauca") region_nm <- "VALLE DEL CAUCA"
+  if(region == "la-guajira") region_nm <- "LA GUAJIRA"
   map_name <- paste0("col_municipalities_", region_id)
 
   dd_map <- left_join(dd_esp, dd_reg) |>

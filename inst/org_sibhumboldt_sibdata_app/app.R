@@ -9,17 +9,18 @@ library(shinyinvoer)
 library(dsmods)
 library(geotable)
 library(sibdata)
-library(data.tree)
+library(duckdbits)
 
-# dbdir <- sys_file_sibdata("db/sibdata.sqlite")
+#dbdir <- sys_file_sibdata("db/sibdata.sqlite")
 #dbdir <- sys_file_sibdata("db/sibdata.duckdb")
-dbdir <- "db/sibdata.duckdb"
-con <- gt_con(con = dbdir)
+#dbdir <- "db/sibdata.duckdb"
+#dbdir <- "inst/db/sibdata.duckdb"
+#con <- duckdb_con(con = dbdir)
 #duckdbits::duckdb_disconnect()
-# dbdir <- "db/sibdata.sqlite"
-# con <- DBI::dbConnect(RSQLite::SQLite(), dbdir,
-#                       read_only = TRUE)
-
+dbdir <- "db/sibdata.sqlite"
+con <- DBI::dbConnect(RSQLite::SQLite(), dbdir,
+                       read_only = TRUE)
+#
 # av_grupos_bio <- sib_available_grupos(tipo = "biologico", con = con)
 # opts_grupo_biologico <- c("Todos" = "todos", av_grupos_bio)
 

@@ -7,6 +7,7 @@ library(hgmagic)
 # library(lfltmagic)
 library(shinyinvoer)
 library(dsmods)
+library(dsmodules)
 library(geotable)
 library(sibdata)
 library(duckdbits)
@@ -57,7 +58,7 @@ opts_tematicas <- c("Todas" = "todas", sib_available_tematicas())
 opts_tematicas_ex <- c("cites_i", "cites_ii","cites_i_ii", "cites_iii",
                        "exoticas", "invasoras", "riesgo_invasion")
 opts_tematicas <- opts_tematicas[!opts_tematicas %in% opts_tematicas_ex]
-opts_tematicas <- c(opts_tematicas, c("Exóticas Total" = "exoticas-total"))
+opts_tematicas <- c(opts_tematicas, c("Exóticas Total" = "exoticas"))
 # opts_tematicas <- gsub("_","-",opts_tematicas) # hay diferencia entre sibdata y list_species
 # uno recibe _ y el otro -
 
@@ -67,7 +68,7 @@ ui <- panelsPage(
   ),
   panel(title = "Opciones", width = 280,
         body = div(
-          # verbatimTextOutput("debug"),
+          #verbatimTextOutput("debug"),
           uiOutput("sel_region_"),
           hr(),
           uiOutput("sel_grupo_"),
@@ -100,7 +101,7 @@ ui <- panelsPage(
   panel(title = "Especies",
         width = 400,
         can_collapse = FALSE,
-        # header_right = downloadTableButtonUI("species_table", dropdownLabel = "Descargar especies", formats = c("csv", "xlsx", "json"), display = "dropdown", dropdownWidth = 200),
+        header_right = downloadTableUI("species_table", dropdownLabel = "Descargar especies", formats = c("csv", "xlsx", "json"), display = "dropdown", dropdownWidth = 200),
         body = dataTableOutput("list_species")
   )
 )
@@ -408,8 +409,18 @@ server <-  function(input, output, session) {
     req(data())
     req(actual_but$active)
     dd <- data()
+
+    palette <- NULL
+    if(grepl("amenazadas", inputs()$tematica)){
+      palette <- c("#FF0000", "#FFA500", "#FFFF00")
+    }
+    if(grepl("cites", inputs()$tematica)){
+      palette <- c("#00AFFF", "#000000", "#FFD150", "#4DD3AC")
+    }
+
+
     opts <- list(
-      data = dd
+      data = dd,
       # dataLabels_show = TRUE,
       # color_by = names(dd)[1],
       # legend_show = FALSE,
@@ -420,7 +431,7 @@ server <-  function(input, output, session) {
       # border_weight = 0.2,
       # grid_y_color = "#dbd9d9",
       # grid_x_width = 0,
-      # palette_colors = c("#5151f2", "#4ad3ac", "#ffd150", "#00afff", "#ffe0bb", "#f26330", "#163875")
+      color_palette_categorical = palette
     )
 
     if (actual_but$active == "map") {
@@ -436,6 +447,7 @@ server <-  function(input, output, session) {
     }
     opts
   })
+
 
 
   l_viz <- reactive({
@@ -491,7 +503,7 @@ server <-  function(input, output, session) {
 
   # downloadTableServer("dropdown_table", element = reactive(data_fin()), formats = c("csv", "xlsx", "json"))
   # downloadImageServer("download_viz", element = reactive(l_viz()), lib = "highcharter", formats = c("jpeg", "pdf", "png", "html"), file_prefix = "plot")
-  # downloadTableButtonServer("species_table", element = reactive(data_especies()), formats = c("csv", "xlsx", "json"))
+  downloadTableServer("species_table", element = reactive(data_especies()), formats = c("csv", "xlsx", "json"))
 
 
 }

@@ -130,7 +130,7 @@ map(av_regions, safely(function(region){
   # if(region == "atlantico") region_nm <- "ATLÁNTICO"
   # if(reion == "vaupes") region_nm <- "VAUPÉS"
   #if(region == "valle-del-cauca") region_nm <- "VALLE DEL CAUCA"
-  if(region == "la-guajira") region_nm <- "LA GUAJIRA"
+  # if(region == "la-guajira") region_nm <- "LA GUAJIRA"
   map_name <- paste0("col_municipalities_", region_id)
 
   dd_map <- left_join(dd_esp, dd_reg) |>

@@ -11,6 +11,7 @@ library(dsmods)
 library(dbplyr)
 
 
+
 #con <- DBI::dbConnect(RSQLite::SQLite(), sys_file_sibdata("db/sibdata.sqlite"),
 #                      read_only = TRUE)
 
@@ -59,22 +60,49 @@ hgmagic::hg_pie_CatNum(d)
 input <- list(
   region = "boyaca",
   grupo = "animales",
+  tipo = "especies",
   tematica = "amenazadas_nacional",
   subregiones = FALSE,
   with_parent = FALSE
 )
+inp <- input
 region <- inp$region
 d <- sibdata(inp$region,
              grupo = inp$grupo,
              tipo = inp$tipo,
-             cobertura = inp$cobertura,
+             #cobertura = inp$cobertura,
              tematica = inp$tematica,
              subregiones = inp$subregiones,
              with_parent = inp$with_parent,
              con = con)
-d
+d <- d |> sib_merge_ind_label(con = con)
+palette <- c("#FF0000", "#FFA500", "#FFFF00")
+hgmagic::hg_pie_CatNum(d, opts = list(color_palette_categorical = palette))
 
-##
+input <- list(
+  region = "boyaca",
+  grupo = "animales",
+  tipo = "especies",
+  tematica = "cites",
+  subregiones = FALSE,
+  with_parent = FALSE
+)
+inp <- input
+region <- inp$region
+d <- sibdata(inp$region,
+             grupo = inp$grupo,
+             tipo = inp$tipo,
+             #cobertura = inp$cobertura,
+             tematica = inp$tematica,
+             subregiones = inp$subregiones,
+             with_parent = inp$with_parent,
+             con = con)
+d <- d |> sib_merge_ind_label(con = con)
+palette <- c("#00AFFF", "#000000", "#FFD150", "#4DD3AC")
+hgmagic::hg_pie_CatNum(d, opts = list(color_palette_categorical = palette))
+
+
+## Exoticas total
 
 input <- list(
   region = "boyaca",
@@ -83,6 +111,7 @@ input <- list(
   subregiones = FALSE,
   with_parent = FALSE
 )
+inp <- input
 region <- inp$region
 d <- sibdata(inp$region,
              grupo = inp$grupo,
@@ -92,8 +121,36 @@ d <- sibdata(inp$region,
              subregiones = inp$subregiones,
              with_parent = inp$with_parent,
              con = con)
-d
-esp
+choropleth_map(
+  inp$region,
+  grupo = inp$grupo,
+  tipo = inp$tipo,
+  cobertura = inp$cobertura,
+  tematica = inp$tematica,
+  con = con
+)
+
+esp <- list_species(region = inp$region,
+                    grupo = inp$grupo,
+                    tematica = inp$tematica,
+                    con = con)
+
+
+## For map
+
+
+input <- list(
+  region = "boyaca",
+  grupo = "animales",
+  tematica = "exoticas-total",
+  subregiones = FALSE,
+  with_parent = FALSE
+)
+inp <- input
+region <- inp$region
+
+
+
 
 
 

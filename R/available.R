@@ -71,6 +71,7 @@ sib_available_tematicas <- function(){
     "Objeto de comercio (CITES III)" = "cites_iii",
     "Endémicas" =  "endemicas",
     "Migratorias" = "migratorias",
+    "Exóticas Total" = "exoticas_total",
     "Exóticas" = "exoticas",
     "Invasoras" = "invasoras",
     "Exóticas riesgo invación" = "riesgo_invasion"

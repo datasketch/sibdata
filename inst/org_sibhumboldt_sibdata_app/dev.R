@@ -12,11 +12,10 @@ library(dbplyr)
 
 
 
-#con <- DBI::dbConnect(RSQLite::SQLite(), sys_file_sibdata("db/sibdata.sqlite"),
-#                      read_only = TRUE)
-
 dbdir <- sys_file_sibdata("db/sibdata.duckdb")
-con <- gt_con(con = dbdir)
+con <- DBI::dbConnect(RSQLite::SQLite(), sys_file_sibdata("db/sibdata.sqlite"),
+                      read_only = TRUE)
+
 
 av_grupos_bio <- sib_available_grupos(tipo = "biologico", con = con)
 opts_grupo_biologico <- c("Todos" = "todos", av_grupos_bio)
@@ -121,14 +120,7 @@ d <- sibdata(inp$region,
              subregiones = inp$subregiones,
              with_parent = inp$with_parent,
              con = con)
-choropleth_map(
-  inp$region,
-  grupo = inp$grupo,
-  tipo = inp$tipo,
-  cobertura = inp$cobertura,
-  tematica = inp$tematica,
-  con = con
-)
+
 
 esp <- list_species(region = inp$region,
                     grupo = inp$grupo,
@@ -137,21 +129,6 @@ esp <- list_species(region = inp$region,
 
 
 ## For map
-
-
-input <- list(
-  region = "boyaca",
-  grupo = "animales",
-  tematica = "exoticas-total",
-  subregiones = FALSE,
-  with_parent = FALSE
-)
-inp <- input
-region <- inp$region
-
-
-
-
 
 
 ##

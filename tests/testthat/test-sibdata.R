@@ -79,11 +79,39 @@ test_that("sibdata works", {
                                 "especies_cites_i_ii",
                                 "especies_cites_iii"))
 
+  sibdata("colombia", indicador = "especies_cites_total",
+          subregiones = TRUE,
+          con = con)
+
+  sibdata("colombia", indicador = "especies_exoticas_total",
+          subregiones = TRUE,
+          con = con)
 
   t4 <- sibdata("colombia", cobertura = "continentales",
                 tipo = "especies",
                 tematica = "endemicas", con = con)
   expect_true(all(c("indicador", "count") %in% names(t4)))
+
+
+  sibdata("colombia", tematica = "exoticas_total",
+          subregiones = TRUE,
+          con = con)
+
+  sibdata("colombia", tematica = "exoticas",
+          subregiones = TRUE,
+          con = con)
+
+  sibdata("colombia", tematica = "exoticas_total",
+          indicador = "especies_exoticas_total",
+          subregiones = TRUE,
+          con = con)
+
+  sibdata("colombia", indicador = "especies_exoticas_total",
+          subregiones = TRUE,
+          con = con)
+  sibdata("colombia", tematica = "cites",
+          subregiones = TRUE,
+          con = con)
 
   # Region con grupo biologico
 

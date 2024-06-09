@@ -1,9 +1,10 @@
 
 #' @export
-sibdata <- function(region,
+sibdata <- function(region = NULL,
                     tipo = NULL,
                     cobertura = NULL,
                     tematica = NULL,
+                    indicador = NULL,
                     grupo = NULL,
                     subregiones = FALSE,
                     with_parent = FALSE,
@@ -16,22 +17,34 @@ sibdata <- function(region,
   if(!is.null(cobertura)) check_cases_values("cobertura", cobertura, con = con)
   if(!is.null(tematica)) check_cases_values("tematica", tematica, con = con)
   if(!is.null(grupo)) check_cases_values("grupo", grupo, con = con)
+  if(!is.null(indicador))check_cases_values("indicador", indicador, con = con)
 
   d <- sibdata_wide(region,
                     tipo = tipo,
                     cobertura = cobertura,
                     tematica = tematica,
                     grupo = grupo,
+                    indicador = indicador,
                     subregiones = subregiones,
                     with_parent = with_parent,
                     con = con)
 
 
   if(tidy){
-    d <- sibdata_tidify(d,
-                        cobertura = cobertura,
-                        tematica = tematica, all_indicators = all_indicators,
-                        con = con)
+    if(is.null(indicador)){
+      d <- sibdata_tidify(d,
+                          cobertura = cobertura,
+                          tematica = tematica,
+                          indicador = indicador,
+                          all_indicators = all_indicators,
+                          con = con)
+    }else{
+      if("label" %in% names(d)){
+        d <- d |>
+          select(-label_region) |>
+          rename(count = indicador)
+      }
+    }
   }
 
   if(n_especies){
@@ -50,6 +63,7 @@ sibdata_wide <- function(region,
                          cobertura = NULL,
                          tematica = NULL,
                          grupo = NULL,
+                         indicador = NULL,
                          subregiones = FALSE,
                          with_parent = FALSE,
                          con = NULL){
@@ -64,10 +78,17 @@ sibdata_wide <- function(region,
   }
   d <-  d |> sib_merge_region_label(con = con)
 
-  sel_inds <- select_indicator(tipo = tipo,
-                               cobertura = cobertura,
-                               tematica = tematica,
-                               con = con)
+  if(!is.null(indicador)){
+    sel_inds <- indicador
+  }else{
+    sel_inds <- select_indicator(tipo = tipo,
+                                 cobertura = cobertura,
+                                 tematica = tematica,
+                                 con = con)
+    if(length(sel_inds) == 0){
+      stop("No indicador found for tematica: ", tematica)
+    }
+  }
 
   # Si no hay GR definido
   d <- d |>
@@ -82,9 +103,9 @@ sibdata_wide <- function(region,
 sibdata_tidify <- function(d,
                            tematica = NULL,
                            cobertura = NULL,
+                           indicador = NULL,
                            all_indicators = FALSE,
                            con = NULL){
-
 
 
   inds <- sibdata_indicadores(con)
@@ -134,25 +155,6 @@ sibdata_tidify <- function(d,
 }
 
 
-check_cases_values <- function(param, value, con = NULL){
-
-  if(param %in% c("tipo", "cobertura", "tematica")){
-    inds <- sibdata_indicadores(con = con)
-    values <- inds |> select(one_of(param)) |> pull(1) |> unique()
-    if(!value %in% values){
-      stop("Value: ", value, ". ", param,' must be one of: ', paste0(values, collapse = ", "))
-    }
-  }
-  if(param == "grupo"){
-    values <- sib_available_grupos(con = con)
-    if(!value %in% values){
-      stop("Value: ",value, ". ", param,' must be one of: ', paste0(values, collapse = ", "))
-    }
-  }
-
-}
-
-
 
 
 select_indicator <- function(tipo = NULL,
@@ -175,8 +177,15 @@ select_indicator <- function(tipo = NULL,
       filter(cobertura == cases$cobertura)
   }
   if(!is.null(tematica)){
-    inds <- inds |>
+    inds0 <- inds |>
       filter(tematica == cases$tematica)
+    if(nrow(inds0) == 0){
+      # Try with subtematica
+      inds <- inds |>
+        filter(subtematica == cases$tematica)
+    }else{
+      inds <- inds0
+    }
   }
   inds$indicador
 }

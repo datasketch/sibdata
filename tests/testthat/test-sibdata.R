@@ -83,6 +83,14 @@ test_that("sibdata works", {
           subregiones = TRUE,
           con = con)
 
+  d <- sibdata("colombia",
+          tipo = "registros",
+          tematica = "amenazadas_nacional",
+          indicador = "registros_amenazadas_nacional_en",
+          subregiones = TRUE,
+          con = con)
+  sib_merge_ind_label(d, con = con)
+
   sibdata("colombia", indicador = "especies_exoticas_total",
           subregiones = TRUE,
           con = con)

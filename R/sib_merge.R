@@ -65,6 +65,7 @@ sib_merge_ind_label <- function(d, replace = TRUE, con = con){
   inds <- sibdata_indicadores(con = con) |>
     #filter(indicador %in% names(d)) |>
     select(indicador,label_ind = label)
+  if(!"indicador" %in% names(d)) return(d)
   dd <- left_join(d, inds, by = "indicador")
   if(replace){
     dd <- dd |>

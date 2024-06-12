@@ -17,8 +17,9 @@ sibdata <- function(region = NULL,
   if(!is.null(cobertura)) check_cases_values("cobertura", cobertura, con = con)
   if(!is.null(tematica)) check_cases_values("tematica", tematica, con = con)
   if(!is.null(grupo)) check_cases_values("grupo", grupo, con = con)
-  if(!is.null(indicador))check_cases_values("indicador", indicador, con = con)
-
+  if(!is.null(indicador)){
+    check_cases_values("indicador", indicador, con = con)
+  }
   d <- sibdata_wide(region,
                     tipo = tipo,
                     cobertura = cobertura,
@@ -39,11 +40,11 @@ sibdata <- function(region = NULL,
                           all_indicators = all_indicators,
                           con = con)
     }else{
-      if("label" %in% names(d)){
-        d <- d |>
-          select(-label_region) |>
-          rename(count = indicador)
-      }
+      # if("label" %in% names(d)){
+      #   d <- d |>
+      #     select(-label_region) |>
+      #     rename(count = indicador)
+      # }
     }
   }
 

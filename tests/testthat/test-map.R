@@ -9,7 +9,8 @@ test_that("multiplication works", {
     tipo = "especies",
     tematica = "endemicas",
     subregiones = FALSE,
-    with_parent = FALSE
+    with_parent = FALSE,
+    con = con
   )
   inp <- input
   region <- inp$region

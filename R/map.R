@@ -14,11 +14,7 @@ choropleth_map <- function(region = NULL,
                            con = NULL,
                            conmap = NULL, ...) {
 
-
-  # region <- "boyaca"
-  #inp <- list(...)
-  # inp <- c(as.list(environment()), list(...))
-
+  no_conmap <- is.null(conmap)
   conmap <- geotable::gt_con(conmap)
 
   inp <- as.list(environment())
@@ -50,7 +46,14 @@ choropleth_map <- function(region = NULL,
   # if(inp$tipo == "especies"){
   #   d <- d |> filter(grepl("total", indicador))
   # }
-  d0 <- d |> select(name = label, value = count) |>
+  if(!is.null(inp$indicador)){
+    val <- inp$indicador
+  }else{
+    #val <- inp$tematica
+    val <- "count"
+  }
+
+  d0 <- d |> select(name = label, value = val) |>
     mutate(name = toupper(name))
   dmatch <- geotable::gt_match(d0, map_name, con = conmap) |>
     select(name, value, "..gt_id")
@@ -58,16 +61,22 @@ choropleth_map <- function(region = NULL,
   sf <- geotable::gt_sf(map_name, con = conmap) |>
     geotable::rename_dotdot()
 
-  dgeo <- sf |> left_join(dmatch)
+  dgeo <- sf |> left_join(dmatch, by = "..gt_id")
 
-  geotable::gt_discon(conmap)
+  # Shutdown connection if it wasn't originally provided
+  if(no_conmap){
+    geotable::gt_discon(conmap)
+  }
 
   # str(inp)
 
   pal <- leaflet::colorNumeric(
     palette = c("#b6ecbf", "#29567d"),
-    domain = d$count
+    domain = d0$value
   )
+
+  title <- ifelse(!is.null(inp$indicador), inp$indicador, unique(d$indicador))
+  title <- sib_merge_ind_label(title, con = con)
 
   # Create the leaflet map
   leaflet::leaflet(dgeo) |>
@@ -93,10 +102,10 @@ choropleth_map <- function(region = NULL,
     leaflet::addLegend(
       pal = pal,
       values = dgeo$value,
-      # title = toupper(inp$tipo),
-      title = paste(inp$tematica, "<br>", inp$indicador),
+      title = title,
       position = "bottomright"
     ) |>
+    leaflet.extras::setMapWidgetStyle(list(background = "#ffffff")) |>
     leaflet::addProviderTiles("")
 }
 

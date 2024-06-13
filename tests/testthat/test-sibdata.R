@@ -175,5 +175,8 @@ test_that("sibdata works", {
                 tematica = NULL, con = con)
 
 
+  sibdata("colombia", tipo = "especies",
+          tematica = 'OTRO', indicador = "registros_invasoras", con = con)
+
 
 })

@@ -72,8 +72,8 @@ ui <- panelsPage(
   ),
   panel(title = "Opciones", width = 280,
         body = div(
-          verbatimTextOutput("debug"),
-          verbatimTextOutput("debug2"),
+          # verbatimTextOutput("debug"),
+          # verbatimTextOutput("debug2"),
           uiOutput("sel_region_"),
           hr(),
           uiOutput("sel_grupo_"),
@@ -94,14 +94,21 @@ ui <- panelsPage(
                            div(class='second-container',NULL)
         ),
         body = div(
-          radioButtons("sel_tipo", "Tipo", c("Observaciones" = "registros","Especies"="especies")),
-          uiOutput("data_controls"),
+          div(style = "display: flex; justify-content: space-between;",
+              div(style = "flex: 1;",
+                  radioButtons("sel_tipo", "Tipo",
+                               c("Observaciones" = "registros","Especies"="especies"))),
+              div(style = "flex: 1;",uiOutput("data_controls"))
+          ),
           hr(),
-          textOutput("breadcrumb"),
-          uiOutput("descargas"),
+          div(style = "display: flex; justify-content: space-between; align-items: center;",
+              div(style = "flex: 1;",textOutput("breadcrumb")),
+              div(style = "flex: 1;text-align: right;",uiOutput("descargas"))
+          ),
           #uiOutput("chart_controls"),
+          br(),
           uiOutput("viz"),
-          dataTableOutput("data_viz"), #### HIDE TO PUBLISH
+          # dataTableOutput("data_viz"), #### HIDE TO PUBLISH
           br()
         ),
         footer = ""),
@@ -393,13 +400,6 @@ server <-  function(input, output, session) {
          con = con)
   })
 
-
-
-  data_inputs <- reactive({
-    params <- c(inputs(), con = con)
-    do.call("sibdata", params)
-  })
-
   data <- reactive({
     if(is.null(data_params())) return()
     params <- data_params()
@@ -477,6 +477,7 @@ server <-  function(input, output, session) {
         }
         if(grepl("cites", data_params()$tematica)){
           palette <- c("#00AFFF", "#000000", "#FFD150", "#4DD3AC")
+          color_by <- 1
         }
       }
     }
@@ -533,7 +534,33 @@ server <-  function(input, output, session) {
   output$dt_sum <- renderDataTable({
     # req(data())
     # data()
-    data_inputs()
+    d <- data()
+    nms <- names(d)
+    nms <- sib_merge_ind_label(nms, con = con)
+    nms[nms == "count"] <- "Número"
+    nms[nms == "indicador"] <- "Indicador"
+    names(d) <- nms
+    DT::datatable(d,
+                  rownames = F,
+                  selection = 'none',
+                  escape = FALSE,
+                  #extensions = 'Buttons',
+                  options = list(
+                    dom = 'Bftsp',
+                    #buttons = c('copy', 'csv'),
+                    language = list(url = '//cdn.datatables.net/plug-ins/1.10.11/i18n/Spanish.json'),
+                    scrollX = T,
+                    fixedColumns = TRUE,
+                    fixedHeader = TRUE,
+                    searching = FALSE,
+                    info = FALSE,
+                    #scrollY = "700px",
+                    initComplete = JS(
+                      "function(settings, json) {",
+                      "$(this.api().table().header()).css({'background-color': '#4ad3ac', 'color': '#ffffff'});",
+                      "}")
+                  ))
+
 
   })
 

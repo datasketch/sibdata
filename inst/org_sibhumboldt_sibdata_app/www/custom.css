@@ -4,6 +4,16 @@ body {
  font-family: 'Lato', sans-serif;
 }
 
+.shiny-output-error {
+  visibility: hidden;
+}
+
+.shiny-output-error:before {
+  content: "An error occurred. Please try again later.";
+  visibility: visible;
+  color: white;
+}
+
 .text-malibu {
     color: #09A274;
 }
@@ -12,13 +22,21 @@ body {
     border-top: 2px solid #09A274;
 }
 
+.first-container{
+  width: 500px;
+}
+
 #debug{
  max-height: 200px;
  overflow: auto;
 }
 
-.first-container {
- width: 300px;
+
+.button-image-input {
+  grid-template-columns: repeat(auto-fit, 50px) !important;
+}
+.button-container {
+  max-width: 35px !important;
 }
 
 

@@ -78,7 +78,7 @@ sib_merge_ind_label <- function(d, replace = TRUE, con = con){
     return(dd)
   }
   if("character" %in% class(d)){
-    label <- dstools::match_replace(d, dic = inds)
+    label <- dstools::match_replace(d, dic = inds, force = FALSE)
     return(label)
   }
   stop("Cannot merge labels in this object")

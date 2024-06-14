@@ -125,7 +125,14 @@ d <- sibdata(inp$region,
              con = con)
 d <- d |> sib_merge_ind_label(con = con)
 palette <- c("#00AFFF", "#000000", "#FFD150", "#4DD3AC")
-hgmagic::hg_pie_CatNum(d, opts = list(color_palette_categorical = palette))
+opts <- list(
+  color_palette_categorical = palette,
+  legend_align="right",
+  legend_vertical_align = "middle",
+  axis_text_wrap = 100
+  )
+
+hgmagic::hg_pie_CatNum(d, opts = opts)
 
 
 ## Exoticas total
@@ -177,6 +184,61 @@ d <- sibdata(inp$region,
              with_parent = inp$with_parent,
              con = con)
 d
+
+
+
+
+##
+
+
+input <- list(
+  region = "colombia",
+  grupo = NULL,
+  tipo = "registros",
+  tematica = NULL,
+  indicador = NULL,
+  subregiones = TRUE,
+  with_parent = FALSE
+)
+inp <- input
+region <- inp$region
+d <- sibdata(region = inp$region,
+             grupo = inp$grupo,
+             tipo = inp$tipo,
+             cobertura = inp$cobertura,
+             tematica = inp$tematica,
+             indicador = inp$indicador,
+             subregiones = inp$subregiones,
+             with_parent = inp$with_parent,
+             con = con)
+d
+
+
+
+input <- list(
+  region = "colombia",
+  grupo = "aracnidos",
+  tipo = "registros",
+  tematica = NULL,
+  indicador = NULL,
+  subregiones = TRUE,
+  with_parent = FALSE
+)
+inp <- input
+region <- inp$region
+d <- sibdata(region = inp$region,
+             grupo = inp$grupo,
+             tipo = inp$tipo,
+             cobertura = inp$cobertura,
+             tematica = inp$tematica,
+             indicador = inp$indicador,
+             subregiones = inp$subregiones,
+             with_parent = inp$with_parent,
+             con = con)
+d
+
+
+
 
 
 ###

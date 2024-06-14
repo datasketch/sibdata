@@ -75,7 +75,8 @@ ui <- panelsPage(
           uiOutput("debug"),
           uiOutput("sel_region_"),
           hr(),
-          uiOutput("sel_grupo_"),
+          radioButtons("sel_grupo_type", "Tipo de grupo",
+                       c("Biológico" = "biologico", "Interés de Conservación" = "interes")),
           uiOutput("sel_grupo_opts"),
           hr(),
           #radioButtons("sel_cobertura", "Cobertura", c("Total" = "total","Continental" = "continentales","Marina" = "marinas")),
@@ -132,6 +133,7 @@ server <-  function(input, output, session) {
   r <- reactiveValues(
     amenazadas_categoria = NULL,
     cites_categoria = NULL,
+    exotica_categoria = NULL,
     especies_total_estimadas = NULL,
     indicador = NULL
   )
@@ -171,31 +173,28 @@ server <-  function(input, output, session) {
     )
   })
 
-
-  output$sel_grupo_ <- renderUI({
-    radioButtons("sel_grupo_type", "Tipo de grupo",
-                 c("Biológico" = "biologico", "Interés de Conservación" = "interes"))
-  })
-
-
   output$sel_grupo_opts <- renderUI({
     req(input$sel_grupo_type)
+
     default_select <- NULL
     if (!is.null(url_par()$grupo)) default_select <- tolower(url_par()$grupo)
     opts <- opts_grupo_interes
-    id <- "sel_grupo_int"
-    out <- selectInput(id ,
-                       "Seleccione grupo de interés",
-                       opts_grupo_interes,
-                       default_select)
-    if (input$sel_grupo_type == "biologico") {
-      id <- "sel_grupo_bio"
-      out <- selectInput(id ,
-                         "Seleccione grupo biológico",
-                         opts_grupo_biologico,
-                         default_select)
-    }
-    out
+
+    list(
+      conditionalPanel(
+        condition = "input.sel_grupo_type == 'biologico'",
+        selectInput("sel_grupo_bio",
+                    "Seleccione grupo biológico",
+                    opts_grupo_biologico)
+      ),
+      conditionalPanel(
+        condition = "input.sel_grupo_type != 'biologico'",
+        selectInput("sel_grupo_int",
+                    "Seleccione grupo de interés",
+                    opts_grupo_interes)
+      )
+    )
+
   })
 
   sel_grupo <- reactive({
@@ -205,6 +204,7 @@ server <-  function(input, output, session) {
     } else {
       return(input$sel_grupo_int)
     }
+    input$sel_grupo_bio
   })
 
   output$sel_tematica_ <- renderUI({
@@ -317,12 +317,12 @@ server <-  function(input, output, session) {
   output$debug1 <- renderPrint({
     # str(input$sel_tematica)
     # str(input$sel_grupo_type)
-    # str(sel_grupo())
-    str(input$sel_tipo)
+    str("GRUPO")
+    str(sel_grupo())
     # str(input$sel_grupo_bio)
     # str(input$sel_grupo_int)
     # str(input$chart_type)
-    str("INDICARDOR")
+    str("INDICADOR")
     str(r$indicador)
 
     str("IS AMENAZADAS CITES O EXÓTICAS")
@@ -366,7 +366,8 @@ server <-  function(input, output, session) {
                            ))
       }
     }
-    if(current_chart() == "map" && inputs()$tipo == "especies" && is.null(inputs()$tematica)){
+    if(current_chart() == "map" && inputs()$tipo == "especies" &&
+       is.null(inputs()$tematica) && is.null(inputs()$grupo)){
       out <- tagList(out, selectInput("especies_total_estimadas", "Total o Estimadas",
                                       c("Total" = "region_total",
                                         "Estimadas" = "region_estimadas"
@@ -426,9 +427,15 @@ server <-  function(input, output, session) {
       # Caso exóticas
       # Para ver los casos de exóticas
       if(is_exotica()){
-        r$indicador <-  paste0(input$sel_tipo, "_", inputs()$tematica)
         if(tematica %in% c("invasoras", "riesgo_invasion")) tematica <- "exoticas"
-        message("is exotica: tematica: ", tematica)
+        indicador <-  paste0(input$sel_tipo, "_", inputs()$tematica)
+        message("is exotica tematica: ", tematica)
+        if(inputs()$tematica == "riesgo_invasion"){
+          message("is_riesgo_invasion")
+          indicador <-  paste0(input$sel_tipo, "_exoticas_", inputs()$tematica)
+        }
+        r$indicador <- indicador
+        r$exotica_categoria <- inputs()$tematica
         message("is exotica: r$indicador: ", r$indicador)
       }
     }
@@ -464,12 +471,17 @@ server <-  function(input, output, session) {
     text <- dstools::collapse(
       data_params()$region, data_params()$tipo,
       data_params()$grupo, data_params()$tematica,
+      r$exotica_categoria,
       r$amenazadas_categoria,
       r$cites_categoria,
       r$especies_total_estimadas,
       collapse = " | ")
     text <- gsub("_", " ", text)
-    toupper(text)
+    text <- toupper(text)
+    text <- gsub("INVASION", "INVASIÓN", text)
+    text <- gsub("ENDEMICA", "ENDÉMICA", text)
+    text <- gsub("EXOTICA", "EXÓTICA", text)
+    text
   })
 
 
@@ -524,19 +536,21 @@ server <-  function(input, output, session) {
     # req(actual_but$active)
     # req(r$active)
     dd <- data()
+    params <- data_params()
 
     palette <- NULL
     color_by <- NULL
+
     # if(!is.null(r$inputs$tematica)){
-    if(!is.null(data_params())){
+    if(!is.null(params)){
       # if(grepl("amenazadas", r$inputs$tematica)){
-      if(!is.null(data_params()$tematica)){
-        if(grepl("amenazadas", data_params()$tematica)){
+      if(!is.null(params$tematica)){
+        if(grepl("amenazadas", params$tematica)){
           palette <- c("#FF0000", "#FFA500", "#FFFF00")
           palette <- c("#d9453d", "#d8783d", "#d7a900")
           color_by <- 1
         }
-        if(grepl("cites", data_params()$tematica)){
+        if(grepl("cites", params$tematica)){
           palette <- c("#00AFFF", "#000000", "#FFD150", "#4DD3AC")
           color_by <- 1
         }
@@ -547,12 +561,19 @@ server <-  function(input, output, session) {
       color_palette_categorical = palette,
       color_by = color_by
     )
+
+    if(current_chart() %in% c("pie", "donut")){
+      opts <- c(opts, list(legend_align="right",
+                           legend_vertical_align = "middle",
+                           axis_text_wrap = 100))
+    }
+
     opts <- dstools::removeNulls(opts)
 
     # if(actual_but$active == "map") {
     if(current_chart() == "map") {
       # opts <- r$inputs
-      opts <- data_params()
+      opts <- params
     }
     opts
   })

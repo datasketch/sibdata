@@ -69,12 +69,16 @@ sibdata_wide <- function(region,
                          with_parent = FALSE,
                          con = NULL){
   if(subregiones){
-    d <- subregion_tematica(region, con = con)
+    if(!is.null(grupo)){
+      d <- subregion_grupo(region, grupo, con = con)
+    }else{
+      d <- subregion_tematica(region, con = con)
+    }
   } else if(with_parent){
     d <- with_parent_tematica(region, con = con)
-  } else if (is.null(grupo)){
+  } else if (is.null(grupo) && !subregiones){
     d <- region_tematica(region, con = con)
-  } else {
+  } else if(is.null(tematica) && !subregiones){
     d <- region_grupo(region, grupo, con = con)
   }
   d <-  d |> sib_merge_region_label(con = con)

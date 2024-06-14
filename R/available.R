@@ -74,7 +74,7 @@ sib_available_tematicas <- function(){
     "Exóticas Total" = "exoticas_total",
     "Exóticas" = "exoticas",
     "Invasoras" = "invasoras",
-    "Exóticas riesgo invación" = "riesgo_invasion"
+    "Exóticas riesgo invasión" = "riesgo_invasion"
   )
   available_tematicas
 }

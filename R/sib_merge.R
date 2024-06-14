@@ -9,6 +9,7 @@ sib_region_labels <- function(con){
 sib_merge_region_label <- function(d, slug = "slug_region", label = "label_region",
                                    con = con){
   if(label %in% colnames(d)){
+    d$label <- NULL
     warning("Overwritting existing label column: ", label,
             " Use the label param to rename the output label column.")
   }
@@ -19,6 +20,9 @@ sib_merge_region_label <- function(d, slug = "slug_region", label = "label_regio
     by <- c("slug" = "slug_region")
   } else if(slug == "slug_region"){
     by <- "slug_region"
+    if("label_region" %in% names(d)){
+      d$label_region <- NULL
+    }
   } else {
     stop('slug must be "slug" or "slug_region"')
   }

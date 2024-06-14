@@ -13,31 +13,28 @@ library(sibdata)
 library(duckdbits)
 library(shinyjs)
 
-#dbdir <- sys_file_sibdata("db/sibdata.sqlite")
-#dbdir <- sys_file_sibdata("db/sibdata.duckdb")
-#dbdir <- "db/sibdata.duckdb"
-#dbdir <- "inst/db/sibdata.duckdb"
-#con <- duckdb_con(con = dbdir)
-#duckdbits::duckdb_disconnect()
+
+debug <- TRUE
+# debug <- FALSE
+
 dbdir <- "db/sibdata.sqlite"
 con <- DBI::dbConnect(RSQLite::SQLite(), dbdir,
                       read_only = TRUE)
-#
-# av_grupos_bio <- sib_available_grupos(tipo = "biologico", con = con)
-# opts_grupo_biologico <- c("Todos" = "todos", av_grupos_bio)
 
 av_grupos_int <- sib_available_grupos(tipo = "interes", con = con)
 opts_grupo_interes <-  c("Todos" = "todos", av_grupos_int)
 
-#
+
+paste_dash <- function(str, times = 1){
+  paste(" ", paste0(rep("-",times-1), collapse = ""),str)
+}
+
 gru <- sibdata_grupo(con) |> collect() |> filter(tipo == "biologico")
 gru_tree <- data.tree::FromDataFrameNetwork(gru)
 gru_df <- data.tree::ToDataFrameNetwork(gru_tree,
                                         direction = "descend",
                                         "label", "level", "path")
-paste_dash <- function(str, times = 1){
-  paste(" ", paste0(rep("-",times-1), collapse = ""),str)
-}
+
 opt_gru <- gru_df |>
   rowwise() |>
   mutate(label = paste_dash(label, level)) |>
@@ -50,9 +47,11 @@ opts_grupo_biologico <- c("Todos" = "todos", opts_grupo_biologico)
 pais <- sib_available_regions(subtipo = "País", con = con)
 departamentos <- sib_available_regions(subtipo = "Departamento", con = con)
 opts_region <- c(pais, sort(departamentos))
-# opts_region <- c("colombia", "narino", "boyaca", "santander", "tolima",
-#                  "resguardo-indigena-pialapi-pueblo-viejo",
-#                  "reserva-natural-la-planada")
+opts_region <- c(
+  opts_region,
+  "Resguardo Pialapí Pueblo Viejo" = "resguardo-indigena-pialapi-pueblo-viejo",
+  "Reserva Natural La Planada" = "reserva-natural-la-planada"
+)
 
 
 opts_tematicas <- c("Todas" = "todas", sib_available_tematicas())
@@ -64,6 +63,7 @@ opts_tematicas <- opts_tematicas[!opts_tematicas %in% opts_tematicas_ex]
 # opts_tematicas <- gsub("_","-",opts_tematicas) # hay diferencia entre sibdata y list_species
 # uno recibe _ y el otro -
 
+
 # UI ###############
 
 ui <- panelsPage(
@@ -72,8 +72,7 @@ ui <- panelsPage(
   ),
   panel(title = "Opciones", width = 280,
         body = div(
-          # verbatimTextOutput("debug"),
-          # verbatimTextOutput("debug2"),
+          uiOutput("debug"),
           uiOutput("sel_region_"),
           hr(),
           uiOutput("sel_grupo_"),
@@ -97,18 +96,20 @@ ui <- panelsPage(
           div(style = "display: flex; justify-content: space-between;",
               div(style = "flex: 1;",
                   radioButtons("sel_tipo", "Tipo",
-                               c("Observaciones" = "registros","Especies"="especies"))),
+                               c("Observaciones" = "registros",
+                                 "Especies"="especies")
+                  )
+              ),
               div(style = "flex: 1;",uiOutput("data_controls"))
           ),
           hr(),
           div(style = "display: flex; justify-content: space-between; align-items: center;",
-              div(style = "flex: 1;",textOutput("breadcrumb")),
+              div(style = "flex: 3;",textOutput("breadcrumb")),
               div(style = "flex: 1;text-align: right;",uiOutput("descargas"))
           ),
-          #uiOutput("chart_controls"),
           br(),
           uiOutput("viz"),
-          # dataTableOutput("data_viz"), #### HIDE TO PUBLISH
+          uiOutput("debug_table"),
           br()
         ),
         footer = ""),
@@ -128,10 +129,34 @@ ui <- panelsPage(
 
 server <-  function(input, output, session) {
 
+  r <- reactiveValues(
+    amenazadas_categoria = NULL,
+    cites_categoria = NULL,
+    especies_total_estimadas = NULL,
+    indicador = NULL
+  )
+
   par <- list(region = NULL, tematica = NULL, grupo = NULL)
   url_par <- reactive({
     url_params(par, session)$inputs
   })
+
+  output$debug <- renderUI({
+    if(debug){
+      list(
+        verbatimTextOutput("debug1"),
+        verbatimTextOutput("debug2")
+      )
+    }
+  })
+
+  output$debug_table <- renderUI({
+    if(debug){
+      dataTableOutput("data_viz")
+    }
+  })
+
+
 
 
   ### UI  #####
@@ -152,13 +177,6 @@ server <-  function(input, output, session) {
                  c("Biológico" = "biologico", "Interés de Conservación" = "interes"))
   })
 
-  sel_grupo <- reactive({
-    if(input$sel_grupo_type == "biologico"){
-      return(input$sel_grupo_biologico)
-    } else {
-      return(input$sel_grupo_interes)
-    }
-  })
 
   output$sel_grupo_opts <- renderUI({
     req(input$sel_grupo_type)
@@ -168,7 +186,7 @@ server <-  function(input, output, session) {
     id <- "sel_grupo_int"
     out <- selectInput(id ,
                        "Seleccione grupo de interés",
-                       opts_grupo_biologico,
+                       opts_grupo_interes,
                        default_select)
     if (input$sel_grupo_type == "biologico") {
       id <- "sel_grupo_bio"
@@ -180,6 +198,15 @@ server <-  function(input, output, session) {
     out
   })
 
+  sel_grupo <- reactive({
+    req(input$sel_grupo_type)
+    if(input$sel_grupo_type == "biologico"){
+      return(input$sel_grupo_bio)
+    } else {
+      return(input$sel_grupo_int)
+    }
+  })
+
   output$sel_tematica_ <- renderUI({
     req(opts_tematicas)
     default_select <- NULL
@@ -188,22 +215,26 @@ server <-  function(input, output, session) {
   })
 
 
+
+
   ### INPUTS ##########
 
   inputs <- reactive({
+    # req(input$sel_grupo_type)
+    # req(input$sel_tipo)
+    message("sel_tipo: ", input$sel_tipo)
     subregiones <- input$sugregiones %||% FALSE
     with_parent <- input$with_parent %||% FALSE
     grupo <- NULL
-    if(!is.null(input$sel_grupo_bio) && !is.null(input$sel_grupo_int)){
-      grupo <- ifelse(input$sel_grupo_type == "biologico",
-                      input$sel_grupo_bio, input$sel_grupo_int)
+    grupo <- sel_grupo()
+    if(!is.null(grupo)){
       if(grupo == "todos") grupo <- NULL
     }
+
     tematica <- input$sel_tematica
     if(!is.null(tematica)){
       if (tematica == "todas") tematica <- NULL
     }
-    indicador <- NULL
 
     l <- list(
       region = input$sel_region,
@@ -211,11 +242,9 @@ server <-  function(input, output, session) {
       tipo = input$sel_tipo,
       #cobertura = input$sel_cobertura,
       tematica = tematica,
-      indicador = indicador,
       subregiones = subregiones,
       with_parent = with_parent
     )
-    # r$inputs <- l
     l
   })
 
@@ -238,15 +267,10 @@ server <-  function(input, output, session) {
 
 
 
-
-
-
-
-
-
   ### Available charts
 
   available_charts <- reactive({
+    req(inputs())
     charts <- c( "Mapa" = "map", "Torta"= "pie", "Dona" = "donut",
                  "Treemap" = "treemap","Barras" = "bar", "Tabla"="table")
     map_table <- c("Mapa" = "map", "Tabla" = "table")
@@ -254,7 +278,8 @@ server <-  function(input, output, session) {
     if(!is_amenazadas_or_cites_or_exoticas()){
       if(inputs()$tipo == "registros"){
         return(map_table)
-      } else{
+      }
+      if(inputs()$tipo == "especies"){
         return(map_table_bar)
       }
     }
@@ -266,9 +291,9 @@ server <-  function(input, output, session) {
     # images <- c("Mapa" = "map", "Tabla" = "table")
     images <- c( "Mapa" = "map", "Torta"= "pie", "Dona" = "donut",
                  "Treemap" = "treemap","Barras" = "bar", "Tabla"="table")
-    active <- "map"
     # av_charts <- c( "Mapa" = "map", "Tabla"="table")
     av_charts <- available_charts()
+    active <- av_charts[1]
 
     buttonImageInput('chart_type',
                      # label = NULL,
@@ -281,23 +306,37 @@ server <-  function(input, output, session) {
   })
 
   current_chart <- reactive({
-    req(input$chart_type)
+    # req(input$chart_type)
     #input$chart_type %||% "map"
     input$chart_type
   })
 
+
   #### DEBUG ######
 
-  output$debug <- renderPrint({
-    str(input$sel_tematica)
-    str(input$chart_type)
-    # str("CURRENT_CHART")
-    # str(current_chart())
+  output$debug1 <- renderPrint({
+    # str(input$sel_tematica)
+    # str(input$sel_grupo_type)
+    # str(sel_grupo())
+    str(input$sel_tipo)
+    # str(input$sel_grupo_bio)
+    # str(input$sel_grupo_int)
+    # str(input$chart_type)
+    str("INDICARDOR")
+    str(r$indicador)
+
+    str("IS AMENAZADAS CITES O EXÓTICAS")
+    str(is_amenazadas_or_cites_or_exoticas())
+    str("CURRENT_CHART")
+    #str(available_charts())
+    str(current_chart())
     str("INPUTS")
     str(inputs())
     str("DATA_PARAMS")
-    str(data_params())
+    # str(data_params())
   })
+
+
 
 
   ### DATA CONTROLS #####
@@ -305,7 +344,10 @@ server <-  function(input, output, session) {
   output$data_controls <- renderUI({
     out <- NULL
     req(inputs())
-    req(input$chart_type)
+    # no req is_amenazadas_or_cites_or_exoticas() porque retorna TRUE or FALSE
+    # req(current_chart())
+    # req(input$chart_type)
+
     chart_type <- current_chart()
 
     if(is_amenazadas_or_cites_or_exoticas() && current_chart() == "map"){
@@ -315,7 +357,7 @@ server <-  function(input, output, session) {
       }else if(grepl("cites", input$sel_tematica)){
         out <- selectInput("cites_categoria", "Categoría CITES",
                            c("Total cites" = "_total", "I" = "_i", "I/II" = "_i_ii", "II" = "_ii", "III" = "_iii"))
-      }else if(grepl("exoticas_total", input$sel_tematica)){
+      }else if(grepl("exoticas_total", inputs()$tematica)){
         out <- selectInput("exoticas_categoria", "Categoría CITES",
                            c("Total" = "_total"
                              # "Exóticas" = "exoticas",
@@ -347,58 +389,92 @@ server <-  function(input, output, session) {
     tematica <- inp$tematica
     # if(is.null(inp$region)) return()
 
+
     # Update indicador
-    indicador <- NULL
+    r$indicador <- NULL
+    r$amenazadas_categoria <- NULL
+    r$cites_categoria <- NULL
+    r$especies_total_estimadas <- NULL
 
-    if(is_amenazadas_or_cites_or_exoticas() && current_chart() == "map"){
-      if(grepl("amenazadas", tematica)){
-        # if(is.null(input$amenazadas_categoria)) return()
-        indicador <- paste0(inputs()$tipo, "_", tematica, input$amenazadas_categoria)
+    message("HERE")
+    # Actualizar indicador solo para los mapas
+    if(current_chart() == "map"){
+      message("  current map")
+      # caso amanazadas cites o exoticas
+      if(is_amenazadas_or_cites_or_exoticas()){
+        message("    is ace")
+        if(grepl("amenazadas", tematica)){
+          message("      is_amenazada")
+          r$indicador <- paste0(inputs()$tipo, "_", tematica, input$amenazadas_categoria)
+          message("indicador", r$indicador)
+          r$amenazadas_categoria <- input$amenazadas_categoria
+        }
+        if(grepl("cites", tematica)){
+          r$indicador <- paste0(inputs()$tipo, "_", tematica, input$cites_categoria)
+          r$cites_categoria <- input$cites_categoria
+        }
+        # if(grepl("exoticas_total", input$sel_tematica)){
+        #   indicador <- paste0(input$sel_tipo, "_", tematica, input$exoticas_categoria)
+        # }
+      }else{
+        # Case for non amenazadas, cites, exóticas
+        if(inputs()$tipo == "especies" && is.null(inputs()$tematica)){
+          r$indicador <- paste0(input$sel_tipo, "_", input$especies_total_estimadas)
+        }
+
       }
-      if(grepl("cites", tematica)){
-        # if(is.null(input$cites_categoria)) return()
-        indicador <- paste0(inputs()$tipo, "_", tematica, input$cites_categoria)
+      # Caso exóticas
+      # Para ver los casos de exóticas
+      if(is_exotica()){
+        r$indicador <-  paste0(input$sel_tipo, "_", inputs()$tematica)
+        if(tematica %in% c("invasoras", "riesgo_invasion")) tematica <- "exoticas"
+        message("is exotica: tematica: ", tematica)
+        message("is exotica: r$indicador: ", r$indicador)
       }
-      # if(grepl("exoticas_total", input$sel_tematica)){
-      #   indicador <- paste0(input$sel_tipo, "_", tematica, input$exoticas_categoria)
-      # }
     }
 
-    if(current_chart() == "map" && inputs()$tipo == "especies"){
-      if(is.null(input$especies_total_estimadas)){
-        indicador <- NULL
-      } else{
-        indicador <- paste0(input$sel_tipo, "_", input$especies_total_estimadas)
-      }
-      ## TODO actualizar este indicador también para tomar en cuenta lo que
-      # viene de amenazadas, cites y exóticas
+    if(is_amenazadas_or_cites_or_exoticas()){
+      r$especies_total_estimadas <- NULL
     }
 
-    # Para ver los casos de exóticas
-    if(is_exotica()){
-      inp$tematica <- "exoticas"
-      if(current_chart() == "map"){
-        indicador <-  paste0(input$sel_tipo, "_", inputs()$tematica)
-      }
-      # TODO las estimadas
-    }
-
+    ## TODO actualizar este indicador también para tomar en cuenta lo que
+    # viene de amenazadas, cites y exóticas
 
     subregiones <- FALSE
     if(current_chart() == "map"){
       subregiones <- TRUE
     }
 
+
     list(inp$region,
          grupo = inp$grupo,
          tipo = inp$tipo,
          cobertura = inp$cobertura,
-         tematica = inp$tematica,
-         indicador = indicador,
+         tematica = tematica,
+         indicador = r$indicador,
          subregiones = subregiones,
          with_parent = inp$with_parent,
          con = con)
   })
+
+  #### BREADCRUMBS
+
+  output$breadcrumb <- renderText({
+    req(data_params())
+    text <- dstools::collapse(
+      data_params()$region, data_params()$tipo,
+      data_params()$grupo, data_params()$tematica,
+      r$amenazadas_categoria,
+      r$cites_categoria,
+      r$especies_total_estimadas,
+      collapse = " | ")
+    text <- gsub("_", " ", text)
+    toupper(text)
+  })
+
+
+
+  ### DATA #########
 
   data <- reactive({
     if(is.null(data_params())) return()
@@ -414,7 +490,6 @@ server <-  function(input, output, session) {
     # if(is_amenazadas_or_cites_or_exoticas() && chart_type == "map"){
     #   d <- data()
     # }
-    #
     # # If not is amenazadas_cites_exoticas
     # input$especies_total_estimadas
     d
@@ -437,20 +512,6 @@ server <-  function(input, output, session) {
 
 
   ### VIZ ###########
-
-  output$breadcrumb <- renderText({
-    req(data_params())
-    # text <- dstools::collapse(
-    #   names(inputs()$region), names(inputs()$tipo),
-    #   names(inputs()$grupo), names(inputs()$tematica),
-    #   collapse = " | ")
-    text <- dstools::collapse(
-      data_params()$region, data_params()$tipo,
-      data_params()$grupo, data_params()$tematica,
-      collapse = " | ")
-    text <- gsub("_", " ", text)
-    toupper(text)
-  })
 
 
 
@@ -644,10 +705,10 @@ server <-  function(input, output, session) {
 
     req(data_especies())
     l_s <- data_especies()
-    l_s$GBIF <- paste0("<a href='",l_s$GBIF,"'  target='_blank'>","GBIF","</a>")
-    l_s$CBC <- paste0("<a href='",l_s$CBC,"'  target='_blank'>","CBC","</a>")
-    l_s$CBC[l_s$CBC == "<a href='NA'  target='_blank'>NA</a>"] <- ""
-    l_s$GBIF[l_s$GBIF == "<a href='NA'  target='_blank'>NA</a>"] <- ""
+    l_s$GBIF <- ifelse(is.na(l_s$GBIF), "", paste0("<a href='",l_s$GBIF,"'  target='_blank'>","GBIF","</a>"))
+    l_s$CBC <- ifelse(is.na(l_s$CBC), "", paste0("<a href='",l_s$CBC,"'  target='_blank'>","CBC","</a>"))
+    # l_s$CBC[l_s$CBC == "<a href='NA'  target='_blank'>NA</a>"] <- ""
+    # l_s$GBIF[l_s$GBIF == "<a href='NA'  target='_blank'>NA</a>"] <- ""
     DT::datatable(l_s,
                   rownames = F,
                   selection = 'none',

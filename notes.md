@@ -2,6 +2,14 @@
 
 
 
+
+
+
+
+- Mejorar selectize regions por lista país, departamento, terrotorios
+- Paste_dash -> Hacer funcones que retorne los nombres de regions nombrados, y de grupos biológicos
+
+
 # 2024-05
 
 ## DONE

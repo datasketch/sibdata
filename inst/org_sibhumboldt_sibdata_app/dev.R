@@ -133,7 +133,7 @@ hgmagic::hg_pie_CatNum(d, opts = list(color_palette_categorical = palette))
 input <- list(
   region = "boyaca",
   grupo = "animales",
-  tematica = "exoticas-total",
+  tematica = "exoticas",
   subregiones = FALSE,
   with_parent = FALSE
 )
@@ -147,6 +147,39 @@ d <- sibdata(inp$region,
              subregiones = inp$subregiones,
              with_parent = inp$with_parent,
              con = con)
+
+
+esp <- list_species(region = inp$region,
+                    grupo = inp$grupo,
+                    tematica = inp$tematica,
+                    con = con)
+
+## Invasoras
+
+input <- list(
+  region = "boyaca",
+  grupo = NULL,
+  tematica = "exoticas",
+  #indicador = NULL,
+  indicador = "registros_invasoras",
+  subregiones = TRUE,
+  with_parent = FALSE
+)
+inp <- input
+region <- inp$region
+d <- sibdata(inp$region,
+             grupo = inp$grupo,
+             tipo = inp$tipo,
+             cobertura = inp$cobertura,
+             tematica = inp$tematica,
+             indicador = inp$indicador,
+             subregiones = inp$subregiones,
+             with_parent = inp$with_parent,
+             con = con)
+d
+
+
+###
 
 
 esp <- list_species(region = inp$region,

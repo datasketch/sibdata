@@ -4,6 +4,11 @@ pkg_resources <- function(...){
 }
 
 #' @export
+paste_dash <- function(str, times = 1){
+  paste(" ", paste0(rep("-",times-1), collapse = ""),str)
+}
+
+#' @export
 copy_icons <- function(path){
   icons <- pkg_resources("icons")
   dir.create(path)

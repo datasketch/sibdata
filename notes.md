@@ -8,6 +8,8 @@
 
 - Mejorar selectize regions por lista país, departamento, terrotorios
 - Paste_dash -> Hacer funcones que retorne los nombres de regions nombrados, y de grupos biológicos
+- geotable match bogota Bogotá, D. C.
+
 
 
 # 2024-05

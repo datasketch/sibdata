@@ -12,6 +12,7 @@ choropleth_map <- function(data = NULL,
                            tidy = TRUE,
                            n_especies = FALSE,
                            all_indicators = FALSE,
+                           palette_numeric = NULL,
                            con = NULL,
                            conmap = NULL, ...) {
 
@@ -20,9 +21,28 @@ choropleth_map <- function(data = NULL,
 
   inp <- as.list(environment())
 
-  if(is.null(region))
+  palette_numeric <- palette_numeric %||% c("#b6ecbf", "#29567d")
+  if(!is.null(inp$indicador)){
+    if(grepl("amenaza.*_cr", inp$indicador))
+      palette_numeric <- c("#f9c9c9", "#d9453d")
+    if(grepl("amenaza.*_en", inp$indicador))
+      palette_numeric <- c("#ffe9d9", "#d8783d")
+    if(grepl("amenaza.*_vu", inp$indicador))
+      palette_numeric <- c("#fff9d9", "#d7a900")
+    if(grepl("cites.*_iii$", inp$indicador))
+      palette_numeric <- c("#daf2cc", "#4DD3AC")
+    if(grepl("cites.*_ii$", inp$indicador))
+      palette_numeric <- c("#fff9d9", "#FFD150")
+    if(grepl("cites.*_i$", inp$indicador))
+      palette_numeric <- c("#daf0ff", "#00AFFF")
+    if(grepl("cites.*_i_ii$", inp$indicador))
+      palette_numeric <- c("#dcdcdc", "#000000")
+  }
+
+  if(is.null(inp$region))
     stop("Need a region to plot map")
 
+  region <- inp$region
   if(region == "colombia"){
     inp$subregiones <- TRUE
     map_name <- "col_departments"
@@ -39,8 +59,8 @@ choropleth_map <- function(data = NULL,
 
 
   if(!is.null(data)){
-    d <- data}
-  else{
+    d <- data
+  } else{
     d <- sibdata(inp$region,
                  grupo = inp$grupo,
                  tipo = inp$tipo,
@@ -53,11 +73,10 @@ choropleth_map <- function(data = NULL,
 
   }
 
-
   # if(inp$tipo == "especies"){
   #   d <- d |> filter(grepl("total", indicador))
   # }
-  str(inp)
+  # str(inp)
   if(!is.null(inp$indicador)){
     val <- inp$indicador
   }else{
@@ -69,12 +88,21 @@ choropleth_map <- function(data = NULL,
   d0 <- d |> select(name = label, value = val) |>
     mutate(name = toupper(name)) |>
     filter(!is.na(value))
+  d0$name[d0$name == "BOGOTÁ, D. C."] <- "BOGOTÁ"
 
   sf <- geotable::gt_sf(map_name, con = conmap) |>
     geotable::rename_dotdot()
+  if(nrow(d0) > 1.5 * nrow(sf)){
+    warning("Data may have repeated geographic rows, taking the first indicator found")
+  }
+
   if(nrow(d0) > 0){
-    dmatch <- geotable::gt_match(d0, map_name, con = conmap) |>
+    # message("nrow d0: ", nrow(d0))
+    dmatch <- geotable::gt_match(d0, map_name, unique = TRUE, con = conmap) |>
       select(name, value, "..gt_id")
+    # message("dmatch")
+    # message("is null dmatch", is.null(dmatch))
+    # str(dmatch)
     dgeo <- sf |> left_join(dmatch, by = "..gt_id")
   }else{
     dgeo <- sf
@@ -89,11 +117,12 @@ choropleth_map <- function(data = NULL,
   # str(inp)
 
   pal <- leaflet::colorNumeric(
-    palette = c("#b6ecbf", "#29567d"),
+    palette = palette_numeric,
     domain = d0$value
   )
 
-  title <- ifelse(!is.null(inp$indicador), inp$indicador, unique(d$indicador))
+  title <- ifelse(!is.null(inp$indicador), inp$indicador,
+                  dstools::collapse(unique(d$indicador)))
   title <- sib_merge_ind_label(title, con = con)
 
   # Create the leaflet map

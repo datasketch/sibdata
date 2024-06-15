@@ -226,7 +226,7 @@ server <-  function(input, output, session) {
   inputs <- reactive({
     # req(input$sel_grupo_type)
     # req(input$sel_tipo)
-    message("sel_tipo: ", input$sel_tipo)
+    # message("sel_tipo: ", input$sel_tipo)
     subregiones <- input$sugregiones %||% FALSE
     with_parent <- input$with_parent %||% FALSE
     grupo <- NULL
@@ -325,7 +325,7 @@ server <-  function(input, output, session) {
     #   show_especies_total_estimadas <- show_especies_total_estimadas &&
     #     inputs()$tematica != "migratorias"
     # }
-    message("show especies total estimada: ", show_especies_total_estimadas)
+    # message("show especies total estimada: ", show_especies_total_estimadas)
     # r$show_especies_total_estimadas <- ifelse(is.null(show_especies_total_estimadas), FALSE, TRUE)
     r$show_especies_total_estimadas <-show_especies_total_estimadas
   })
@@ -391,10 +391,10 @@ server <-  function(input, output, session) {
       }
     }
     if(r$show_especies_total_estimadas){
-      message("show esp 2", r$show_especies_total_estimadas)
+      # message("show esp 2", r$show_especies_total_estimadas)
       out <- tagList(out, selectInput("especies_total_estimadas", "Total o Estimadas",
-                                      c("Total" = "region_total",
-                                        "Estimadas" = "region_estimadas"
+                                      c("Total" = "total",
+                                        "Estimadas" = "estimadas"
                                       )))
     }
     out
@@ -421,23 +421,22 @@ server <-  function(input, output, session) {
     r$cites_categoria <- NULL
     r$especies_total_estimadas <- NULL
 
-    message("HERE")
     # Actualizar indicador solo para los mapas
     # TODO show the table with
     if(current_chart() == "map" ){
-      message("  current map")
       # caso amanazadas cites o exoticas
       if(is_amenazadas_or_cites_or_exoticas()){
-        message("    is ace")
         if(grepl("amenazadas", tematica)){
-          message("      is_amenazada")
-          r$indicador <- paste0(inputs()$tipo, "_", tematica, input$amenazadas_categoria)
-          message("indicador", r$indicador)
-          r$amenazadas_categoria <- input$amenazadas_categoria
+          if(!is.null(input$amenazadas_categoria)){
+            r$indicador <- paste0(inputs()$tipo, "_", tematica, input$amenazadas_categoria)
+            r$amenazadas_categoria <- input$amenazadas_categoria
+          }
         }
         if(grepl("cites", tematica)){
-          r$indicador <- paste0(inputs()$tipo, "_", tematica, input$cites_categoria)
-          r$cites_categoria <- input$cites_categoria
+          if(!is.null(input$cites_categoria)){
+            r$indicador <- paste0(inputs()$tipo, "_", tematica, input$cites_categoria)
+            r$cites_categoria <- input$cites_categoria
+          }
         }
         # if(grepl("exoticas_total", input$sel_tematica)){
         #   indicador <- paste0(input$sel_tipo, "_", tematica, input$exoticas_categoria)
@@ -445,7 +444,10 @@ server <-  function(input, output, session) {
       }else{
         # Case for non amenazadas, cites, exóticas
         if(inputs()$tipo == "especies" && is.null(inputs()$tematica)){
-          r$indicador <- paste0(input$sel_tipo, "_", input$especies_total_estimadas)
+          if(!is.null(input$especies_total_estimadas)){
+            r$indicador <- paste0(input$sel_tipo, "_region_", input$especies_total_estimadas)
+            r$especies_total_estimadas <- input$especies_total_estimadas
+          }
         }
 
       }
@@ -454,14 +456,11 @@ server <-  function(input, output, session) {
       if(is_exotica()){
         if(tematica %in% c("invasoras", "riesgo_invasion")) tematica <- "exoticas"
         indicador <-  paste0(input$sel_tipo, "_", inputs()$tematica)
-        message("is exotica tematica: ", tematica)
         if(inputs()$tematica == "riesgo_invasion"){
-          message("is_riesgo_invasion")
           indicador <-  paste0(input$sel_tipo, "_exoticas_", inputs()$tematica)
         }
         r$indicador <- indicador
         r$exotica_categoria <- inputs()$tematica
-        message("is exotica: r$indicador: ", r$indicador)
       }
     }
 
@@ -493,14 +492,28 @@ server <-  function(input, output, session) {
 
   output$breadcrumb <- renderText({
     req(data_params())
+    tematica <- NULL
+    message("BREADCRUMS tematica: ", data_params()$tematica)
+    if(!is.null(data_params()$tematica)){
+      if(data_params()$tematica == "exoticas"){
+        tematica <- r$exotica_categoria
+        message("  ", tematica)
+      }else{
+        tematica <- data_params()$tematica
+      }
+    }
+    message("especies total estimadas: ", r$especies_total_estimadas)
+    message("amenazadas categoria: ", r$amenazadas_categoria)
+
     text <- dstools::collapse(
       data_params()$region, data_params()$tipo,
-      data_params()$grupo, data_params()$tematica,
-      # r$exotica_categoria,
+      data_params()$grupo,
+      tematica,
       r$amenazadas_categoria,
       r$cites_categoria,
       r$especies_total_estimadas,
       collapse = " | ")
+    message("BREADCRUMB: ", text)
     text <- gsub("_", " ", text)
     text <- gsub("-", " ", text)
     text <- toupper(text)
@@ -579,6 +592,7 @@ server <-  function(input, output, session) {
     params <- data_params()
 
     palette <- NULL
+    palette_numeric <- NULL
     color_by <- NULL
 
     # if(!is.null(r$inputs$tematica)){
@@ -586,7 +600,7 @@ server <-  function(input, output, session) {
       # if(grepl("amenazadas", r$inputs$tematica)){
       if(!is.null(params$tematica)){
         if(grepl("amenazadas", params$tematica)){
-          palette <- c("#FF0000", "#FFA500", "#FFFF00")
+          # palette <- c("#FF0000", "#FFA500", "#FFFF00")
           palette <- c("#d9453d", "#d8783d", "#d7a900")
           color_by <- 1
         }
@@ -599,6 +613,7 @@ server <-  function(input, output, session) {
     opts <- list(
       data = dd,
       color_palette_categorical = palette,
+      color_palette_numeric = palette_numeric,
       color_by = color_by,
       con = con
     )
@@ -614,6 +629,9 @@ server <-  function(input, output, session) {
     if(current_chart() == "map") {
       opts$region <- params$region
       opts$indicador <- params$indicador
+      # Always need indicator for map, otherwise it can return multiple rows
+      # for a given geography
+      ### not working if(is_amenazadas_or_cites_or_exoticas() && is.null(params$indicator)) return()
       opts$conmap <- conmap
     }else{
       opts$con <- NULL

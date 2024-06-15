@@ -17,6 +17,17 @@ test_that("multiplication works", {
                  con = con,
                  region = input$region)
 
+  input <- list(
+    region = "colombia",
+    tipo = "especies",
+    subregiones = TRUE,
+    con = con
+  )
+  d <- do.call("sibdata", input)
+  choropleth_map(d = d,
+                 con = con,
+                 region = input$region)
+
   ###
   inp <- list(
     region = "colombia",
@@ -53,6 +64,40 @@ test_that("multiplication works", {
     tematica = inp$tematica,
     con = con
   )
+
+
+  input <- list(
+    region = "colombia",
+    # grupo = "aracnidos",
+    tipo = "registros",
+    tematica = "amenazadas_nacional",
+    subregiones = TRUE,
+    con = con
+  )
+  inp <- input
+  d <- do.call("sibdata", input)
+  choropleth_map(d = d,
+                 tematica = inp$tematica,
+                 con = con,
+                 region = inp$region)
+
+
+
+  input <- list(
+    region = "colombia",
+    # grupo = "aracnidos",
+    # tipo = "especies",
+    # tematica = "amenazadas_nacional",
+    indicador = "especies_amenazadas_nacional_vu",
+    subregiones = TRUE,
+    con = con
+  )
+  inp <- input
+  d <- do.call("sibdata", input)
+  choropleth_map(d = d,
+                 con = con,
+                 region = input$region,
+                 indicador = input$indicador)
 
 
 

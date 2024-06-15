@@ -178,5 +178,11 @@ test_that("sibdata works", {
   sibdata("colombia", tipo = "especies",
           tematica = 'OTRO', indicador = "registros_invasoras", con = con)
 
+  ##
+
+  sibdata(region = "colombia", tipo = "especies", grupo = "animales",
+          tematica = 'endemicas',
+          subregiones = TRUE, con = con)
+
 
 })

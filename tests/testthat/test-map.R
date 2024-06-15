@@ -3,25 +3,77 @@ test_that("multiplication works", {
   #dbdir <- sys_file_sibdata("db/sibdata.duckdb")
   con <- DBI::dbConnect(RSQLite::SQLite(), sys_file_sibdata("db/sibdata.sqlite"),
                         read_only = TRUE)
+
+  ind <- sibdata_indicadores(con)
+
+  input <- list(
+    region = "colombia",
+    tipo = "registros",
+    subregiones = TRUE,
+    con = con
+  )
+  d <- do.call("sibdata", input)
+  choropleth_map(d = d,
+                 con = con,
+                 region = input$region)
+
+  ###
+  inp <- list(
+    region = "colombia",
+    tipo = "especies",
+    indicador = "especies_region_total",
+    subregiones = TRUE,
+    con = con
+  )
+  d <- do.call("sibdata", inp)
+  choropleth_map(d = d,
+                 con = con,
+                 region = inp$region,
+                 indicador = inp$indicador)
+
+
   input <- list(
     region = "colombia",
     grupo = "animales",
     tipo = "especies",
     tematica = "endemicas",
-    subregiones = FALSE,
+    subregiones = TRUE,
     with_parent = FALSE,
     con = con
   )
   inp <- input
-  region <- inp$region
-  choropleth_map(
-    inp$region,
+
+  d <- do.call("sibdata", input)
+
+  choropleth_map(d = d,
+    region = inp$region,
     grupo = inp$grupo,
     tipo = inp$tipo,
     cobertura = inp$cobertura,
     tematica = inp$tematica,
     con = con
   )
+
+
+
+  # $ region     : chr "colombia"
+  # $ grupo      : chr "aracnidos"
+  # $ tipo       : chr "especies"
+  # $ tematica   : chr "migratorias"
+  input <- list(
+    region = "colombia",
+    grupo = "aracnidos",
+    tipo = "registros",
+    tematica = "migratorias",
+    subregiones = TRUE,
+    con = con
+  )
+  d <- do.call("sibdata", input)
+  choropleth_map(d = d,
+                 con = con,
+                 region = input$region)
+
+
 
 
   input <- list(

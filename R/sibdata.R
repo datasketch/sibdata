@@ -20,7 +20,7 @@ sibdata <- function(region = NULL,
   if(!is.null(indicador)){
     check_cases_values("indicador", indicador, con = con)
   }
-  d <- sibdata_wide(region,
+  d <- sibdata_wide(region = region,
                     tipo = tipo,
                     cobertura = cobertura,
                     tematica = tematica,
@@ -59,7 +59,7 @@ sibdata <- function(region = NULL,
 
 
 
-sibdata_wide <- function(region,
+sibdata_wide <- function(region = NULL,
                          tipo = NULL,
                          cobertura = NULL,
                          tematica = NULL,
@@ -68,6 +68,8 @@ sibdata_wide <- function(region,
                          subregiones = FALSE,
                          with_parent = FALSE,
                          con = NULL){
+  d <- NULL
+  if(is.null(region)) stop("Need a region")
   if(subregiones){
     if(!is.null(grupo)){
       d <- subregion_grupo(region, grupo, con = con)
@@ -81,7 +83,14 @@ sibdata_wide <- function(region,
   } else if(is.null(tematica) && !subregiones){
     d <- region_grupo(region, grupo, con = con)
   }
-  d <-  d |> sib_merge_region_label(con = con)
+  if(is.null(d)){
+    stop("Cannot calculate d with the combinations of inputs provided:",
+         paste("region=", region, "tipo=", tipo, "tematica=", tematica,
+               "grupo=", grupo, "indicador=", indicador, "subregiones=", subregiones,
+               "with_parent", with_parent)
+    )
+  }
+  d <-  sib_merge_region_label(d, con = con)
 
   if(!is.null(indicador)){
     sel_inds <- indicador

@@ -1,6 +1,7 @@
 
 #' @export
-choropleth_map <- function(region = NULL,
+choropleth_map <- function(data = NULL,
+                           region = NULL,
                            tipo = NULL,
                            cobertura = NULL,
                            tematica = NULL,
@@ -19,6 +20,9 @@ choropleth_map <- function(region = NULL,
 
   inp <- as.list(environment())
 
+  if(is.null(region))
+    stop("Need a region to plot map")
+
   if(region == "colombia"){
     inp$subregiones <- TRUE
     map_name <- "col_departments"
@@ -30,22 +34,30 @@ choropleth_map <- function(region = NULL,
     if(region_id == "bogota_dc") region_id <- "bogota_d_c"
     map_name <- paste0("col_municipalities_",region_id)
   } else{
-    return()
+    stop("No valid region")
   }
 
-  d <- sibdata(inp$region,
-               grupo = inp$grupo,
-               tipo = inp$tipo,
-               cobertura = inp$cobertura,
-               tematica = inp$tematica,
-               indicador = inp$indicador,
-               subregiones = inp$subregiones,
-               with_parent = inp$with_parent,
-               con = inp$con)
+
+  if(!is.null(data)){
+    d <- data}
+  else{
+    d <- sibdata(inp$region,
+                 grupo = inp$grupo,
+                 tipo = inp$tipo,
+                 cobertura = inp$cobertura,
+                 tematica = inp$tematica,
+                 indicador = inp$indicador,
+                 subregiones = inp$subregiones,
+                 with_parent = inp$with_parent,
+                 con = inp$con)
+
+  }
+
 
   # if(inp$tipo == "especies"){
   #   d <- d |> filter(grepl("total", indicador))
   # }
+  str(inp)
   if(!is.null(inp$indicador)){
     val <- inp$indicador
   }else{
@@ -53,15 +65,21 @@ choropleth_map <- function(region = NULL,
     val <- "count"
   }
 
+
   d0 <- d |> select(name = label, value = val) |>
-    mutate(name = toupper(name))
-  dmatch <- geotable::gt_match(d0, map_name, con = conmap) |>
-    select(name, value, "..gt_id")
+    mutate(name = toupper(name)) |>
+    filter(!is.na(value))
 
   sf <- geotable::gt_sf(map_name, con = conmap) |>
     geotable::rename_dotdot()
-
-  dgeo <- sf |> left_join(dmatch, by = "..gt_id")
+  if(nrow(d0) > 0){
+    dmatch <- geotable::gt_match(d0, map_name, con = conmap) |>
+      select(name, value, "..gt_id")
+    dgeo <- sf |> left_join(dmatch, by = "..gt_id")
+  }else{
+    dgeo <- sf
+    dgeo$value <- NA
+  }
 
   # Shutdown connection if it wasn't originally provided
   if(no_conmap){

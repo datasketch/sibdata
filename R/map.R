@@ -50,7 +50,7 @@ choropleth_map <- function(data = NULL,
     inp$subregiones <- TRUE
     region_id <- gsub("-", "_", region)
     if(region_id == "norte_santander") region_id <- "norte_de_santander"
-    if(region_id == "san_andres_y_providencia") region_id <- "archipielago_de_san_andres_providencia_y_santa_catalina"
+    if(region_id == "san_andres_providencia") region_id <- "san_andres_providencia_y_santa_catalina"
     if(region_id == "bogota_dc") region_id <- "bogota_d_c"
     map_name <- paste0("col_municipalities_",region_id)
   } else{
@@ -94,6 +94,7 @@ choropleth_map <- function(data = NULL,
     geotable::rename_dotdot()
   if(nrow(d0) > 1.5 * nrow(sf)){
     warning("Data may have repeated geographic rows, taking the first indicator found")
+    return()
   }
 
   if(nrow(d0) > 0){

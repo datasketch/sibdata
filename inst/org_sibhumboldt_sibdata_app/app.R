@@ -15,7 +15,7 @@ library(shinyjs)
 
 
 debug <- TRUE
-# debug <- FALSE
+debug <- FALSE
 
 dbdir <- "db/sibdata.sqlite"
 con <- DBI::dbConnect(RSQLite::SQLite(), dbdir, read_only = TRUE)
@@ -47,11 +47,11 @@ opts_grupo_biologico <- c("Todos" = "todos", opts_grupo_biologico)
 pais <- sib_available_regions(subtipo = "País", con = con)
 departamentos <- sib_available_regions(subtipo = "Departamento", con = con)
 opts_region <- c(pais, sort(departamentos))
-opts_region <- c(
-  opts_region,
-  "Resguardo Pialapí Pueblo Viejo" = "resguardo-indigena-pialapi-pueblo-viejo",
-  "Reserva Natural La Planada" = "reserva-natural-la-planada"
-)
+# opts_region <- c(
+#   opts_region,
+#   "Resguardo Pialapí Pueblo Viejo" = "resguardo-indigena-pialapi-pueblo-viejo",
+#   "Reserva Natural La Planada" = "reserva-natural-la-planada"
+# )
 
 
 opts_tematicas <- c(sib_available_tematicas(), "Ninguna" = "todas")
@@ -110,7 +110,7 @@ ui <- panelsPage(
           ),
           br(),
           uiOutput("viz"),
-          uiOutput("debug_table"),
+          # uiOutput("debug_table"),
           br()
         ),
         footer = ""),
@@ -139,7 +139,8 @@ server <-  function(input, output, session) {
     especies_total_estimadas = NULL,
     indicador = NULL,
     show_subcategoria = FALSE,
-    show_especies_total_estimadas = FALSE
+    show_especies_total_estimadas = FALSE,
+    breadcrumb = NULL
   )
 
   par <- list(region = NULL, tematica = NULL, grupo = NULL)
@@ -490,8 +491,9 @@ server <-  function(input, output, session) {
 
   #### BREADCRUMBS
 
-  output$breadcrumb <- renderText({
+  observe({
     req(data_params())
+    req(data())
     tematica <- NULL
     message("BREADCRUMS tematica: ", data_params()$tematica)
     if(!is.null(data_params()$tematica)){
@@ -533,8 +535,54 @@ server <-  function(input, output, session) {
     text <- gsub("ORQUIDEAS", "ORQUÍDEAS", text)
     text <- gsub("FANEROGAMAS", "FANERÓGAMAS", text)
     text <- gsub("DECAPODOS", "DECÁPODOS", text)
+        req(data_params())
+    req(data())
+    tematica <- NULL
+    message("BREADCRUMS tematica: ", data_params()$tematica)
+    if(!is.null(data_params()$tematica)){
+      if(data_params()$tematica == "exoticas"){
+        tematica <- r$exotica_categoria
+        message("  ", tematica)
+      }else{
+        tematica <- data_params()$tematica
+      }
+    }
+    message("especies total estimadas: ", r$especies_total_estimadas)
+    message("amenazadas categoria: ", r$amenazadas_categoria)
 
-    text
+    text <- dstools::collapse(
+      data_params()$region, data_params()$tipo,
+      data_params()$grupo,
+      tematica,
+      r$amenazadas_categoria,
+      r$cites_categoria,
+      r$especies_total_estimadas,
+      collapse = " | ")
+    message("BREADCRUMB: ", text)
+    text <- gsub("_", " ", text)
+    text <- gsub("-", " ", text)
+    text <- toupper(text)
+    text <- gsub("INVASION", "INVASIÓN", text)
+    text <- gsub("ENDEMICA", "ENDÉMICA", text)
+    text <- gsub("EXOTICA", "EXÓTICA", text)
+    ##
+    text <- gsub("ARACNIDOS", "ARÁCNIDOS", text)
+    text <- gsub("CRUSTACEOS", "CRUSTÁCEOS", text)
+    text <- gsub("DIPTEROS", "DÍPTEROS", text)
+    text <- gsub("MAMIFEROS", "MAMÍFEROS", text)
+    text <- gsub("DULCEACUICOLAS", "DULCEACUÍCOLAS", text)
+    text <- gsub("HEPATICAS", "HEPÁTICAS", text)
+    ##
+    text <- gsub("LIQUENES", "LÍQUENES", text)
+    text <- gsub("EPIFITAS", "EPÍFITAS", text)
+    text <- gsub("ORQUIDEAS", "ORQUÍDEAS", text)
+    text <- gsub("FANEROGAMAS", "FANERÓGAMAS", text)
+    text <- gsub("DECAPODOS", "DECÁPODOS", text)
+    r$breadcrumb <- text
+  })
+
+  output$breadcrumb <- renderText({
+    r$breadcrumb
   })
 
 
@@ -670,6 +718,7 @@ server <-  function(input, output, session) {
     if(is.null(current_chart())) return()
     # if(is.null(actual_but$active)) return()
     req(l_viz())
+    r$indicador
     if (current_chart() != "map") return()
     l_viz()
   })

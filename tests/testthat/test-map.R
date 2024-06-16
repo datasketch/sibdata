@@ -5,6 +5,7 @@ test_that("multiplication works", {
                         read_only = TRUE)
 
   ind <- sibdata_indicadores(con)
+  sib_available_regions("Departamento", con = con)
 
   input <- list(
     region = "colombia",
@@ -216,6 +217,22 @@ test_that("multiplication works", {
     tematica = inp$tematica,
     con = inp$con
   )
+
+  # Departamentos
+
+  input <- list(
+    # region = "san-andres-providencia",
+    region = "cauca",
+    tipo = "registros",
+    subregiones = TRUE,
+    con = con
+  )
+  d <- do.call("sibdata", input)
+  write_csv(d, "~/Downloads/sibdata_cauca.csv")
+  dmatch <- gt_match(d, "col_municipalities_cauca")
+  choropleth_map(d = d,
+                 con = con,
+                 region = input$region)
 
 
 })

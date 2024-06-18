@@ -121,6 +121,11 @@ test_that("sibdata works", {
           subregiones = TRUE,
           con = con)
 
+  ## riesgo invasion
+  sibdata("colombia", tematica = "exoticas_riesgo_invasion", con = con)
+
+
+
   # Region con grupo biologico
 
   z1 <- sibdata("colombia", grupo = "abejas", con = con)

@@ -195,8 +195,15 @@ select_indicator <- function(tipo = NULL,
       filter(tematica == cases$tematica)
     if(nrow(inds0) == 0){
       # Try with subtematica
-      inds <- inds |>
+      inds1 <- inds |>
         filter(subtematica == cases$tematica)
+      # Try with categorias tematicas
+      if(nrow(inds1) == 0){
+        inds <- inds |>
+          filter(categorias_tematicas == cases$tematica)
+      }else{
+        inds <- inds1
+      }
     }else{
       inds <- inds0
     }

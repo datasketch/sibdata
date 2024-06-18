@@ -17,51 +17,6 @@ library(shinyjs)
 debug <- TRUE
 debug <- FALSE
 
-dbdir <- "db/sibdata.sqlite"
-con <- DBI::dbConnect(RSQLite::SQLite(), dbdir, read_only = TRUE)
-
-
-av_grupos_int <- sib_available_grupos(tipo = "interes", con = con)
-opts_grupo_interes <-  c("Todos" = "todos", av_grupos_int)
-
-
-paste_dash <- function(str, times = 1){
-  paste(" ", paste0(rep("-",times-1), collapse = ""),str)
-}
-
-gru <- sibdata_grupo(con) |> collect() |> filter(tipo == "biologico")
-gru_tree <- data.tree::FromDataFrameNetwork(gru)
-gru_df <- data.tree::ToDataFrameNetwork(gru_tree,
-                                        direction = "descend",
-                                        "label", "level", "path")
-
-opt_gru <- gru_df |>
-  rowwise() |>
-  mutate(label = paste_dash(label, level)) |>
-  arrange(path)
-opts_grupo_biologico <- opt_gru$from
-names(opts_grupo_biologico) <- opt_gru$label
-opts_grupo_biologico <- c("Todos" = "todos", opts_grupo_biologico)
-
-
-pais <- sib_available_regions(subtipo = "País", con = con)
-departamentos <- sib_available_regions(subtipo = "Departamento", con = con)
-opts_region <- c(pais, sort(departamentos))
-# opts_region <- c(
-#   opts_region,
-#   "Resguardo Pialapí Pueblo Viejo" = "resguardo-indigena-pialapi-pueblo-viejo",
-#   "Reserva Natural La Planada" = "reserva-natural-la-planada"
-# )
-
-
-opts_tematicas <- c(sib_available_tematicas(), "Ninguna" = "todas")
-opts_tematicas_ex <- c("cites_i", "cites_ii","cites_i_ii", "cites_iii",
-                       "exoticas_total"
-                       #"exoticas", "invasoras", "riesgo_invasion"
-)
-opts_tematicas <- opts_tematicas[!opts_tematicas %in% opts_tematicas_ex]
-# opts_tematicas <- gsub("_","-",opts_tematicas) # hay diferencia entre sibdata y list_species
-# uno recibe _ y el otro -
 
 
 # UI ###############
@@ -129,6 +84,61 @@ ui <- panelsPage(
 ## SERVER ############
 
 server <-  function(input, output, session) {
+
+
+
+  dbdir <- "db/sibdata.sqlite"
+  con <- DBI::dbConnect(RSQLite::SQLite(), dbdir, read_only = TRUE)
+
+
+  av_grupos_int <- sib_available_grupos(tipo = "interes", con = con)
+  opts_grupo_interes <-  c("Todos" = "todos", av_grupos_int)
+
+
+  paste_dash <- function(str, times = 1){
+    paste(" ", paste0(rep("-",times-1), collapse = ""),str)
+  }
+
+  gru <- sibdata_grupo(con) |> collect() |> filter(tipo == "biologico")
+  gru_tree <- data.tree::FromDataFrameNetwork(gru)
+  gru_df <- data.tree::ToDataFrameNetwork(gru_tree,
+                                          direction = "descend",
+                                          "label", "level", "path")
+
+  opt_gru <- gru_df |>
+    rowwise() |>
+    mutate(label = paste_dash(label, level)) |>
+    arrange(path)
+  opts_grupo_biologico <- opt_gru$from
+  names(opts_grupo_biologico) <- opt_gru$label
+  opts_grupo_biologico <- c("Todos" = "todos", opts_grupo_biologico)
+
+
+  pais <- sib_available_regions(subtipo = "País", con = con)
+  departamentos <- sib_available_regions(subtipo = "Departamento", con = con)
+  opts_region <- c(pais, sort(departamentos))
+  # opts_region <- c(
+  #   opts_region,
+  #   "Resguardo Pialapí Pueblo Viejo" = "resguardo-indigena-pialapi-pueblo-viejo",
+  #   "Reserva Natural La Planada" = "reserva-natural-la-planada"
+  # )
+
+
+  opts_tematicas <- c(sib_available_tematicas(), "Ninguna" = "todas")
+  opts_tematicas_ex <- c("cites_i", "cites_ii","cites_i_ii", "cites_iii",
+                         "exoticas_total"
+                         #"exoticas", "invasoras", "riesgo_invasion"
+  )
+  opts_tematicas <- opts_tematicas[!opts_tematicas %in% opts_tematicas_ex]
+  # opts_tematicas <- gsub("_","-",opts_tematicas) # hay diferencia entre sibdata y list_species
+  # uno recibe _ y el otro -
+
+
+
+
+
+
+
 
   conmap <- gt_con()
 

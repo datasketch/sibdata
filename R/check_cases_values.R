@@ -12,7 +12,7 @@ check_cases_values <- function(param, value, con = NULL, ...){
       subtematica <- inds |> select("subtematica") |> pull(1) |> unique()
       values <- c(values, subtematica)
       ### TODO Quick hack to fix exóticas
-      if(tematica == "exoticas_riesgo_invasion")
+      if(param == "exoticas_riesgo_invasion")
         values <- c("exoticas_riesgo_invasion", values)
     }
     if(!value %in% values){

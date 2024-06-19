@@ -80,7 +80,8 @@ sibdata_wide <- function(region = NULL,
     d <- with_parent_tematica(region, con = con)
   } else if (is.null(grupo) && !subregiones){
     d <- region_tematica(region, con = con)
-  } else if(is.null(tematica) && !subregiones){
+  # } else if(is.null(tematica) && !subregiones){
+  } else if(!subregiones){
     d <- region_grupo(region, grupo, con = con)
   }
   if(is.null(d)){

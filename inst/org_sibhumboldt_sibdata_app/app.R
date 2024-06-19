@@ -12,6 +12,7 @@ library(geotable)
 library(sibdata)
 library(duckdbits)
 library(shinyjs)
+library(shinydisconnect)
 
 
 debug <- TRUE
@@ -22,6 +23,19 @@ debug <- FALSE
 # UI ###############
 
 ui <- panelsPage(
+  disconnectMessage(
+    text = "No fue posible hacer el cruce solicitado, si crees que este fue un error contáctanos",
+    refresh = "Limpiar filtros",
+    background = "#F0F0F0E4",
+    colour = "#09A274",
+    refreshColour = "#33B85F",
+    overlayColour = "#FFFFFF",
+    overlayOpacity = 0.39,
+    width = "full",
+    top = "center",
+    size = 22,
+    css = ""
+  ),
   tags$head(
     tags$link(rel="stylesheet", type="text/css", href="custom.css")
   ),
@@ -880,6 +894,11 @@ server <-  function(input, output, session) {
     DBI::dbDisconnect(con)
     gt_discon(conmap)
   })
+
+  observeEvent(input$disconnect, {
+    session$close()
+  })
+
 
 
 }

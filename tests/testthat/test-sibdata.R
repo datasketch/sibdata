@@ -126,6 +126,16 @@ test_that("sibdata works", {
 
 
 
+  ###
+  # Error
+  # region= antioquia tipo= registros tematica= amenazadas_nacional grupo= aracnidos indicador=  subregiones= FALSE
+
+  sibdata(region = "antioquia", tematica = "amenazadas_nacional", tipo = "registros",
+          grupo = "aracnidos",
+          subregiones = FALSE,
+          con = con)
+
+
   # Region con grupo biologico
 
   z1 <- sibdata("colombia", grupo = "abejas", con = con)

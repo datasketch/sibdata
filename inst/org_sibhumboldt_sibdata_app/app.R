@@ -28,7 +28,7 @@ ui <- panelsPage(
     refresh = "Limpiar filtros",
     background = "#F0F0F0E4",
     colour = "#09A274",
-    refreshColour = "#33B85F",
+    refreshColour = "#FFFFFF",
     overlayColour = "#FFFFFF",
     overlayOpacity = 0.39,
     width = "full",
@@ -36,11 +36,15 @@ ui <- panelsPage(
     size = 22,
     css = ""
   ),
+  tags$style(HTML("#ss-connect-dialog a::before {
+    background: #09A274 !important;
+  }")),
   tags$head(
     tags$link(rel="stylesheet", type="text/css", href="custom.css")
   ),
   panel(title = "Opciones", width = 280,
         body = div(
+          # actionButton("disconnect", "Good Bye!"),
           uiOutput("debug"),
           uiOutput("sel_region_"),
           hr(),
@@ -559,7 +563,7 @@ server <-  function(input, output, session) {
     text <- gsub("ORQUIDEAS", "ORQUÍDEAS", text)
     text <- gsub("FANEROGAMAS", "FANERÓGAMAS", text)
     text <- gsub("DECAPODOS", "DECÁPODOS", text)
-        req(data_params())
+    req(data_params())
     req(data())
     tematica <- NULL
     message("BREADCRUMS tematica: ", data_params()$tematica)

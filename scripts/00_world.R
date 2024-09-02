@@ -1,7 +1,7 @@
 library(sibdata)
 # library(ltgeo)
 # library(lfltmagic)
-library(geodato)
+library(geotable)
 library(tictoc)
 
 devtools::load_all()
@@ -36,7 +36,7 @@ ranking <- sibdata_ranking(con) |>
 
 country_ranking <- ranking |>
   select(puesto, pais) |>
-  gd_match(map_name = "world_countries", col = "pais")
+  gt_match_name(map_name = "world_countries", col = "pais")
 
 refs <- sibdata_referencia_estimada(con) |>
   collect()

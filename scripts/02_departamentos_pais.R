@@ -268,6 +268,13 @@ map(av_regions, safely(function(region){
 }))
 
 
+# map(av_regions, function(region){
+#   #region <- "boyaca"
+#   geojson <- paste0(save_path,"/",region,"/",region, ".geojson")
+#   file.rename(geojson, paste0(save_path,"/",region,"/",region, "_map.json"))
+# })
+
+
 toc()
 
 

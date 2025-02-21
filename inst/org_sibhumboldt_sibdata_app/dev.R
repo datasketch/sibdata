@@ -12,7 +12,7 @@ library(dbplyr)
 
 
 
-dbdir <- sys_file_sibdata("db/sibdata.duckdb")
+# dbdir <- sys_file_sibdata("db/sibdata.duckdb")
 con <- DBI::dbConnect(RSQLite::SQLite(), sys_file_sibdata("db/sibdata.sqlite"),
                       read_only = TRUE)
 

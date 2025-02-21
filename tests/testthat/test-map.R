@@ -29,6 +29,8 @@ test_that("multiplication works", {
                  con = con,
                  region = input$region)
 
+
+
   ###
   inp <- list(
     region = "colombia",
@@ -141,6 +143,32 @@ test_that("multiplication works", {
     con = con
   )
 
+  ## Check tooltips for munis with no data
+
+  input <- list(
+    region = "boyaca",
+    grupo = "animales",
+    tipo = "especies",
+    tematica = "cites_i",
+    subregiones = FALSE,
+    with_parent = FALSE
+  )
+  inp <- input
+  region <- inp$region
+  choropleth_map(
+    region = inp$region,
+    grupo = inp$grupo,
+    tipo = inp$tipo,
+    cobertura = inp$cobertura,
+    tematica = inp$tematica,
+    con = con
+  )
+
+
+
+
+
+
   # Colombia
 
   input <- list(
@@ -233,6 +261,29 @@ test_that("multiplication works", {
   choropleth_map(d = d,
                  con = con,
                  region = input$region)
+
+
+  ## Tooltips bogotá
+
+  input <- list(
+    region = "bogota-dc",
+    grupo = "animales",
+    tipo = "especies",
+    #tematica = "cites",
+    indicador = "cites_total",
+    subregiones = FALSE,
+    with_parent = FALSE
+  )
+  inp <- input
+  region <- inp$region
+  choropleth_map(
+    region = inp$region,
+    grupo = inp$grupo,
+    tipo = inp$tipo,
+    cobertura = inp$cobertura,
+    tematica = inp$tematica,
+    con = con
+  )
 
 
 })

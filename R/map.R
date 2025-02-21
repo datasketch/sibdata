@@ -84,6 +84,10 @@ choropleth_map <- function(data = NULL,
     val <- "count"
   }
 
+  if(region == "bogota-dc"){
+    d$label <- "BOGOTÁ"
+  }
+  str(d)
 
   d0 <- d |> select(name = label, value = val) |>
     mutate(name = toupper(name)) |>
@@ -126,8 +130,14 @@ choropleth_map <- function(data = NULL,
                   dstools::collapse(unique(d$indicador)))
   title <- sib_merge_ind_label(title, con = con)
 
+  # fix names
+  dgeo <- dgeo |>
+    mutate(name = ..gt_name)
+
+  str(dgeo)
+
   # Create the leaflet map
-  leaflet::leaflet(dgeo) |>
+  lt <- leaflet::leaflet(dgeo) |>
     leaflet::addPolygons(
       fillColor = ~pal(dgeo$value),
       weight = 1,
@@ -140,19 +150,27 @@ choropleth_map <- function(data = NULL,
         fillOpacity = 0.7,
         bringToFront = TRUE
       ),
-      label = ~paste0(dgeo$name, ": ", dgeo$value),
+      label = ~ifelse(is.na(dgeo$value),
+                      dgeo$name,
+                      paste0(dgeo$name, ": ", dgeo$value)),
       labelOptions = labelOptions(
         style = list("font-weight" = "normal", padding = "3px 8px"),
         textsize = "15px",
         direction = "auto"
       )
-    ) |>
-    leaflet::addLegend(
-      pal = pal,
-      values = dgeo$value,
-      title = title,
-      position = "bottomright"
-    ) |>
+    )
+
+  if(nrow(dgeo) > 1){
+    lt <- lt |>
+      leaflet::addLegend(
+        pal = pal,
+        values = dgeo$value,
+        title = title,
+        position = "bottomright"
+      )
+  }
+
+  lt |>
     leaflet.extras::setMapWidgetStyle(list(background = "#ffffff")) |>
     leaflet::addProviderTiles("")
 }

@@ -15,8 +15,8 @@ library(shinyjs)
 library(shinydisconnect)
 
 
-debug <- TRUE
 debug <- FALSE
+debug <- TRUE
 
 
 
@@ -106,7 +106,9 @@ server <-  function(input, output, session) {
 
 
   dbdir <- "db/sibdata.sqlite"
+  # dbdir <- "db/sibdata.duckdb"
   con <- DBI::dbConnect(RSQLite::SQLite(), dbdir, read_only = TRUE)
+  # con <- duckdb_con(db)
 
 
   av_grupos_int <- sib_available_grupos(tipo = "interes", con = con)
@@ -210,7 +212,16 @@ server <-  function(input, output, session) {
     req(input$sel_grupo_type)
 
     default_select <- NULL
-    if (!is.null(url_par()$grupo)) default_select <- tolower(url_par()$grupo)
+    if (!is.null(url_par()$grupo)){
+      default_select <- tolower(url_par()$grupo)
+      group_type <- sibdata_grupo(con) |>
+        filter(slug == "animales") |> collect() |>
+        pull(tipo)
+      updateSelectInput(session,
+                        inputId = "sel_grupo_type",
+                        selected = group_type)
+    }
+
     opts <- opts_grupo_interes
 
     list(
@@ -218,13 +229,13 @@ server <-  function(input, output, session) {
         condition = "input.sel_grupo_type == 'biologico'",
         selectInput("sel_grupo_bio",
                     "Seleccione grupo biológico",
-                    opts_grupo_biologico)
+                    opts_grupo_biologico, selected = default_select)
       ),
       conditionalPanel(
         condition = "input.sel_grupo_type != 'biologico'",
         selectInput("sel_grupo_int",
                     "Seleccione grupo de interés",
-                    opts_grupo_interes)
+                    opts_grupo_interes, selected = default_select)
       )
     )
 
@@ -890,7 +901,8 @@ server <-  function(input, output, session) {
                   ))
 
   })
-  downloadTableServer("species_table", element = reactive(data_especies()), formats = c("csv", "xlsx", "json"))
+  downloadTableServer("species_table", element = reactive(data_especies()),
+                      formats = c("csv", "xlsx", "json"))
 
 
   # Ensure the connection is closed when the session ends

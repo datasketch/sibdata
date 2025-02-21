@@ -15,8 +15,8 @@ library(shinyjs)
 library(shinydisconnect)
 
 
-debug <- FALSE
 debug <- TRUE
+debug <- FALSE
 
 
 

@@ -467,14 +467,19 @@ server <-  function(input, output, session) {
   ## DATA PARAMS ######
 
   data_params <- reactive({
+    message("==== data_params called ====")
+    message("Current inputs: region=", input$sel_region, 
+            ", tematica=", input$sel_tematica, 
+            ", grupo_type=", input$sel_grupo_type,
+            ", amenazadas_cat=", input$amenazadas_categoria,
+            ", cites_cat=", input$cites_categoria)
+    
     req(inputs())
     req(current_chart())
     input$chart_type
     inp <- inputs()
     tematica <- inp$tematica
-    # if(is.null(inp$region)) return()
-
-
+    
     # Update indicador
     r$indicador <- NULL
     r$amenazadas_categoria <- NULL
@@ -536,7 +541,12 @@ server <-  function(input, output, session) {
       subregiones <- TRUE
     }
 
-
+    # At the end, print the results
+    message("data_params returning: region=", inp$region, 
+            ", tipo=", inp$tipo,
+            ", tematica=", tematica,
+            ", indicador=", r$indicador)
+    
     list(region = inp$region,
          grupo = inp$grupo,
          tipo = inp$tipo,
@@ -616,22 +626,34 @@ server <-  function(input, output, session) {
   ### DATA #########
 
   data <- reactive({
-    if(is.null(data_params())) return()
+    message("==== data reactive called ====")
+    
+    if(is.null(data_params())) {
+      message("data_params() is NULL, returning NULL")
+      return()
+    }
+    
     params <- data_params()
-    # message("Tematica:", params$tematica)
-    # message("Indicador:", params$indicador)
-    d <- do.call("sibdata", params)
-
+    message("Calling sibdata with: region=", params$region,
+            ", tematica=", params$tematica,
+            ", indicador=", params$indicador)
+    
+    d <- tryCatch({
+      do.call("sibdata", params)
+    }, error = function(e) {
+      message("ERROR in sibdata call: ", e$message)
+      return(NULL)
+    })
+    
+    message("sibdata returned ", nrow(d), " rows")
+    
     if(current_chart() %in% c("pie", "donut", "treemap", "bar", "table")){
+      message("Merging indicator labels")
       d <- d |> sib_merge_ind_label(con = con)
     }
-
-    # if(is_amenazadas_or_cites_or_exoticas() && chart_type == "map"){
-    #   d <- data()
-    # }
-    # # If not is amenazadas_cites_exoticas
-    # input$especies_total_estimadas
-    d
+    
+    message("data reactive returning ", nrow(d), " rows")
+    return(d)
   })
 
 
@@ -656,15 +678,55 @@ server <-  function(input, output, session) {
 
 
   vizOps <- reactive({
+    message("==== vizOps called ====")
+    message("Current chart type: ", current_chart())
+    
     req(data_params())
     req(current_chart())
     req(data())
-    # req(available_charts())
-    # req(actual_but$active)
-    # req(r$active)
+    
     dd <- data()
     params <- data_params()
-
+    
+    message("vizOps received data_params: region=", params$region,
+            ", tematica=", params$tematica,
+            ", indicador=", params$indicador)
+    
+    # Debug column names before standardization
+    message("Original column names: ", paste(names(dd), collapse=", "))
+    
+    # Standardize column names for map
+    if(current_chart() == "map" && !is.null(params$indicador)) {
+      # Find the indicator column - it should be the last one
+      indicator_col <- NULL
+      for(colname in names(dd)) {
+        if(colname == params$indicador || grepl(params$indicador, colname)) {
+          indicator_col <- colname
+          break
+        }
+      }
+      
+      if(!is.null(indicator_col)) {
+        message("Found indicator column: ", indicator_col)
+        # ADD the value column without removing the original
+        dd$value <- dd[[indicator_col]]
+        
+        # Ensure we have count column if needed
+        if(!"count" %in% names(dd)) {
+          dd$count <- dd[[indicator_col]]
+        }
+        
+        # Ensure we have indicador column
+        if(!"indicador" %in% names(dd)) {
+          dd$indicador <- rep(params$indicador, nrow(dd))
+        }
+        
+        message("Standardized column names: ", paste(names(dd), collapse=", "))
+      } else {
+        message("WARNING: Could not find indicator column matching: ", params$indicador)
+      }
+    }
+    
     palette <- NULL
     palette_numeric <- NULL
     color_by <- NULL
@@ -710,6 +772,14 @@ server <-  function(input, output, session) {
     }else{
       opts$con <- NULL
     }
+    
+    # Add before the return
+    message("vizOps is returning options with data rows: ", nrow(dd))
+    if(current_chart() == "map") {
+      message("Map options: region=", params$region, 
+              ", indicador=", params$indicador)
+    }
+    
     opts
   })
 
@@ -717,18 +787,62 @@ server <-  function(input, output, session) {
 
 
   l_viz <- reactive({
+    # Add explicit print of dependency values
+    message("==== l_viz dependencies ====")
+    message("input$sel_region: ", input$sel_region)
+    message("input$sel_tematica: ", input$sel_tematica)
+    message("input$amenazadas_categoria: ", input$amenazadas_categoria)
+    message("input$cites_categoria: ", input$cites_categoria)
+    message("r$current_subcategory: ", r$current_subcategory)
+    message("r$indicador: ", r$indicador)
+    
     req(vizOps())
     req(current_chart())
-    # req(available_charts())
-    # if(is.null(actual_but$active)) return()
-    if(is.null(current_chart())) return()
+    
+    if(is.null(current_chart())) {
+      message("Returning NULL, no chart type")
+      return()
+    }
+    
     opts <- vizOps()
-    # is_amenazadas_or_cites_or_exoticas()
-    if ( current_chart() == "table") return()
+    message("l_viz received vizOps")
+    
+    if (current_chart() == "table") {
+      message("Table requested, returning NULL")
+      return()
+    }
+    
     viz <- paste0("hgmagic::hg_", current_chart(), "_CatNum")
-    if ( current_chart() == "map") viz <- "choropleth_map"
-    do.call(eval(parse(text=viz)), opts)
-    # NULL
+    if (current_chart() == "map") {
+      message("Creating map with: region=", opts$region, 
+              ", indicador=", opts$indicador)
+      
+      # Debug the data structure
+      message("Map data structure:")
+      message(paste(capture.output(str(opts$data)), collapse="\n"))
+      
+      # Check if the value column exists
+      if("value" %in% names(opts$data)) {
+        message("'value' column exists in data")
+      } else {
+        message("WARNING: 'value' column missing from data")
+        message("Available columns: ", paste(names(opts$data), collapse=", "))
+      }
+      
+      viz <- "choropleth_map"
+    }
+    
+    message("Calling function: ", viz)
+    result <- tryCatch({
+      do.call(eval(parse(text=viz)), opts)
+    }, error = function(e) {
+      message("ERROR in l_viz: ", e$message)  # Print the actual error message
+      message("Error details: ", paste(capture.output(print(e)), collapse="\n"))
+      NULL
+    })
+    
+    message("l_viz returning result: ", !is.null(result))
+    return(result)
   })
 
 
@@ -740,13 +854,40 @@ server <-  function(input, output, session) {
   })
 
   output$lflt_viz <- renderLeaflet({
-    # req(available_charts())
-    if(is.null(current_chart())) return()
-    # if(is.null(actual_but$active)) return()
-    req(l_viz())
-    r$indicador
-    if (current_chart() != "map") return()
-    l_viz()
+    message("==== renderLeaflet called ====")
+    message("Current chart type: ", current_chart())
+    message("Current amenazadas_categoria: ", input$amenazadas_categoria)
+    message("Current cites_categoria: ", input$cites_categoria)
+    message("Current r$current_subcategory: ", r$current_subcategory)
+    message("Current r$indicador: ", r$indicador)
+    
+    # Force reactivity on subcategory changes
+    if (!is.null(r$current_subcategory)) {
+      # This will invalidate the rendering when current_subcategory changes
+      message("Using subcategory for invalidation: ", r$current_subcategory)
+    }
+    
+    if(is.null(current_chart())) {
+      message("No chart type, not rendering map")
+      return()
+    }
+    
+    if (current_chart() != "map") {
+      message("Chart is not map, not rendering")
+      return()
+    }
+    
+    message("About to call l_viz() for map")
+    result <- tryCatch({
+      req(l_viz())
+      l_viz()
+    }, error = function(e) {
+      message("ERROR in renderLeaflet: ", e$message)
+      NULL
+    })
+    
+    message("Map rendering complete, returning result: ", !is.null(result))
+    return(result)
   })
 
   output$dt_sum <- renderDataTable({
@@ -911,13 +1052,32 @@ server <-  function(input, output, session) {
 
   # Update current_subcategory in the existing reactiveValues
   observe({
+    message("==== subcategory observer called ====")
+    message("Current inputs: amenazadas_cat=", input$amenazadas_categoria,
+            ", cites_cat=", input$cites_categoria)
+    
+    old_value <- r$current_subcategory
+    
     if (!is.null(input$amenazadas_categoria)) {
       r$current_subcategory <- input$amenazadas_categoria
+      message("==== Should trigger map update? ====")
+      message("Current chart: ", current_chart())
+      message("Setting r$current_subcategory to: ", input$amenazadas_categoria)
+      message("Current r$indicador: ", r$indicador)
     } else if (!is.null(input$cites_categoria)) {
       r$current_subcategory <- input$cites_categoria
+      message("==== Should trigger map update? ====")
+      message("Current chart: ", current_chart())
+      message("Setting r$current_subcategory to: ", input$cites_categoria)
+      message("Current r$indicador: ", r$indicador)
     } else {
       r$current_subcategory <- NULL
     }
+    
+    message("r$current_subcategory changed from ", 
+            ifelse(is.null(old_value), "NULL", old_value),
+            " to ", 
+            ifelse(is.null(r$current_subcategory), "NULL", r$current_subcategory))
   })
 
   # Modify the list_species output
@@ -959,7 +1119,19 @@ server <-  function(input, output, session) {
 
   # Update the species summary text
   output$species_summary <- renderText({
-    species_description()
+    message("==== species_summary output called ====")
+    message("Current tematica: ", input$sel_tematica)
+    message("Current amenazadas_categoria: ", input$amenazadas_categoria)
+    message("Current r$current_subcategory: ", r$current_subcategory)
+    
+    # Force dependency on current_subcategory to ensure updates
+    if (!is.null(r$current_subcategory)) {
+      message("Using r$current_subcategory: ", r$current_subcategory) 
+    }
+    
+    result <- species_description()
+    message("Rendered description: ", result)
+    result
   })
 
   # Keep the downloadTableServer
@@ -967,17 +1139,51 @@ server <-  function(input, output, session) {
 
   # Modify the species_description reactive to handle CITES I/II correctly
   species_description <- reactive({
+    # Add debug prints
+    message("==== species_description called ====")
+    message("Current tematica: ", input$sel_tematica)
+    message("Current amenazadas_categoria: ", input$amenazadas_categoria)
+    message("Current r$current_subcategory: ", r$current_subcategory)
+    
     req(data_especies())
 
     total <- nrow(data_especies())
-    message("TOTAL MOSTRANDO")
-    str(total)
+    message("TOTAL ROWS in data_especies: ", total)
+    
+    # Print the actual data we're working with
+    lsrows <- nrow(data_especies())
+    message("List species row count: ", lsrows)
 
     region <- input$sel_region
     region <- ifelse(is.null(region), "todas las regiones", region)
     region <- tools::toTitleCase(gsub("-", " ", region))
 
-    # Handle tematica and subcategories
+    # Get the actual tematica used in data_especies with subcategories
+    actual_tematica <- NULL
+    if (!is.null(input$sel_tematica) && input$sel_tematica != "todas") {
+      base_tematica <- gsub("_", "-", input$sel_tematica)
+      if (grepl("amenazadas", input$sel_tematica) && !is.null(input$amenazadas_categoria)) {
+        if (input$amenazadas_categoria != "_total") {
+          subcategoria <- substr(input$amenazadas_categoria, 2, nchar(input$amenazadas_categoria))
+          actual_tematica <- paste0(base_tematica, "-", subcategoria)
+        } else {
+          actual_tematica <- base_tematica
+        }
+      } else if (grepl("cites", input$sel_tematica) && !is.null(input$cites_categoria)) {
+        if (input$cites_categoria != "_total") {
+          subcategoria <- substr(input$cites_categoria, 2, nchar(input$cites_categoria))
+          subcategoria <- gsub("_", "-", subcategoria)
+          actual_tematica <- paste0("cites-", subcategoria)
+        } else {
+          actual_tematica <- base_tematica
+        }
+      } else {
+        actual_tematica <- base_tematica
+      }
+    }
+    message("Actual tematica used in data_especies: ", actual_tematica)
+
+    # Handle tematica and subcategories for description
     tematica_text <- input$sel_tematica
     if (!is.null(input$sel_tematica) && input$sel_tematica != "todas") {
       tematica_text <- gsub("_", " ", input$sel_tematica)
@@ -1004,6 +1210,7 @@ server <-  function(input, output, session) {
     } else {
       tematica_text <- "todas las temáticas"
     }
+    message("Final tematica_text for description: ", tematica_text)
 
     # Add grupo if selected
     grupo_text <- ""
@@ -1012,11 +1219,13 @@ server <-  function(input, output, session) {
       grupo_text <- paste("del grupo", grupo)
     }
 
-    sprintf("Mostrando %s especies para %s en %s %s",
-            format(total, big.mark = ","),
-            tematica_text,
-            region,
-            grupo_text)
+    result <- sprintf("Mostrando %s especies para %s en %s %s",
+                      format(total, big.mark = ","),
+                      tematica_text,
+                      region,
+                      grupo_text)
+    message("Final description: ", result)
+    result
   })
 
   # Ensure the connection is closed when the session ends
@@ -1028,6 +1237,36 @@ server <-  function(input, output, session) {
   observeEvent(input$disconnect, {
     session$close()
   })
+
+  # Add to observeEvent for chart_type changes
+  observeEvent(input$chart_type, {
+    message("==== chart_type changed ====")
+    message("New chart type: ", input$chart_type)
+  }, ignoreNULL = TRUE)
+
+  # Add to observeEvent for region changes  
+  observeEvent(input$sel_region, {
+    message("==== sel_region changed ====")
+    message("New region: ", input$sel_region)
+  }, ignoreNULL = TRUE)
+
+  # Add to observeEvent for tematica changes
+  observeEvent(input$sel_tematica, {
+    message("==== sel_tematica changed ====")
+    message("New tematica: ", input$sel_tematica)
+  }, ignoreNULL = TRUE)
+
+  # Add to observeEvent for amenazadas_categoria changes
+  observeEvent(input$amenazadas_categoria, {
+    message("==== amenazadas_categoria changed ====")
+    message("New category: ", input$amenazadas_categoria)
+  }, ignoreNULL = TRUE)
+
+  # Add to observeEvent for cites_categoria changes
+  observeEvent(input$cites_categoria, {
+    message("==== cites_categoria changed ====")
+    message("New category: ", input$cites_categoria)
+  }, ignoreNULL = TRUE)
 
 }
 

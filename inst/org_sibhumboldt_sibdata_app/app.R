@@ -14,8 +14,8 @@ library(shinyjs)
 library(shinydisconnect)
 
 
-debug <- TRUE
 debug <- FALSE
+debug <- TRUE
 
 
 
@@ -94,7 +94,14 @@ ui <- panelsPage(
                                        formats = c("csv", "xlsx", "json"),
                                        display = "dropdown",
                                        dropdownWidth = 200),
-        body = dataTableOutput("list_species")
+        body = div(
+          # Add summary text above the table
+          div(
+            style = "margin-bottom: 15px; padding: 10px; background-color: #f5f5f5; border-radius: 4px;",
+            textOutput("species_summary")
+          ),
+          dataTableOutput("list_species")
+        )
   )
 )
 
@@ -169,7 +176,8 @@ server <-  function(input, output, session) {
     indicador = NULL,
     show_subcategoria = FALSE,
     show_especies_total_estimadas = FALSE,
-    breadcrumb = NULL
+    breadcrumb = NULL,
+    current_subcategory = NULL
   )
 
   par <- list(region = NULL, tematica = NULL, grupo = NULL)
@@ -217,10 +225,10 @@ server <-  function(input, output, session) {
       group_type <- "biologico"  # default to biological
       # First check if it's in biological groups
       bio_exists <- sibdata_grupo(con) |>
-        filter(slug == default_select, tipo == "biologico") |> 
+        filter(slug == default_select, tipo == "biologico") |>
         collect() |>
         nrow() > 0
-      
+
       if (!bio_exists) {
         # If not in biological groups, check interest groups
         int_exists <- default_select %in% av_grupos_int
@@ -228,7 +236,7 @@ server <-  function(input, output, session) {
           group_type <- "interes"
         }
       }
-      
+
       updateRadioButtons(session,
                         inputId = "sel_grupo_type",
                         selected = group_type)
@@ -389,27 +397,27 @@ server <-  function(input, output, session) {
   output$debug1 <- renderPrint({
     # str(input$sel_tematica)
     # str(input$sel_grupo_type)
-    str("GRUPO")
-    str(sel_grupo())
+    # str("GRUPO")
+    # str(sel_grupo())
     # str(input$sel_grupo_bio)
     # str(input$sel_grupo_int)
     # str(input$chart_type)
-    str("INDICADOR")
-    str(r$indicador)
-
-    str("IS AMENAZADAS CITES O EXÓTICAS")
-    str(is_amenazadas_or_cites_or_exoticas())
-    str("SHOW SUBCATEGORIA")
-    str(r$show_subcategoria)
-    str("SHOW ESPECIES TOTALES ESTIMADAS")
-    str(r$show_especies_total_estimadas)
-    str("CURRENT_CHART")
+    # str("INDICADOR")
+    # str(r$indicador)
+    #
+    # str("IS AMENAZADAS CITES O EXÓTICAS")
+    # str(is_amenazadas_or_cites_or_exoticas())
+    # str("SHOW SUBCATEGORIA")
+    # str(r$show_subcategoria)
+    # str("SHOW ESPECIES TOTALES ESTIMADAS")
+    # str(r$show_especies_total_estimadas)
+    # str("CURRENT_CHART")
     #str(available_charts())
-    str(current_chart())
-    str("INPUTS")
-    str(inputs())
-    str("DATA_PARAMS")
-    str(data_params())
+    # str(current_chart())
+    # str("INPUTS")
+    # str(inputs())
+    # str("DATA_PARAMS")
+    # str(data_params())
   })
 
 
@@ -546,70 +554,37 @@ server <-  function(input, output, session) {
     req(data_params())
     req(data())
     tematica <- NULL
-    message("BREADCRUMS tematica: ", data_params()$tematica)
+    # message("BREADCRUMS tematica: ", data_params()$tematica)
     if(!is.null(data_params()$tematica)){
       if(data_params()$tematica == "exoticas"){
         tematica <- r$exotica_categoria
-        message("  ", tematica)
-      }else{
+        # message("  ", tematica)
+      } else if(data_params()$tematica == "cites" && !is.null(input$cites_categoria)) {
+        # Handle CITES categories the same way as in data_especies
+        tematica <- switch(input$cites_categoria,
+          "_total" = "cites",
+          "_i" = "cites-i",
+          "_ii" = "cites-ii",
+          "_iii" = "cites-iii",
+          "_i_ii" = "cites-i-ii",
+          "cites"  # default case
+        )
+      } else {
         tematica <- data_params()$tematica
       }
     }
-    message("especies total estimadas: ", r$especies_total_estimadas)
-    message("amenazadas categoria: ", r$amenazadas_categoria)
+    # message("especies total estimadas: ", r$especies_total_estimadas)
+    # message("amenazadas categoria: ", r$amenazadas_categoria)
 
     text <- dstools::collapse(
       data_params()$region, data_params()$tipo,
       data_params()$grupo,
-      tematica,
+      tematica,  # Now using the properly formatted CITES tematica
       r$amenazadas_categoria,
       r$cites_categoria,
       r$especies_total_estimadas,
       collapse = " | ")
-    message("BREADCRUMB: ", text)
-    text <- gsub("_", " ", text)
-    text <- gsub("-", " ", text)
-    text <- toupper(text)
-    text <- gsub("INVASION", "INVASIÓN", text)
-    text <- gsub("ENDEMICA", "ENDÉMICA", text)
-    text <- gsub("EXOTICA", "EXÓTICA", text)
-    ##
-    text <- gsub("ARACNIDOS", "ARÁCNIDOS", text)
-    text <- gsub("CRUSTACEOS", "CRUSTÁCEOS", text)
-    text <- gsub("DIPTEROS", "DÍPTEROS", text)
-    text <- gsub("MAMIFEROS", "MAMÍFEROS", text)
-    text <- gsub("DULCEACUICOLAS", "DULCEACUÍCOLAS", text)
-    text <- gsub("HEPATICAS", "HEPÁTICAS", text)
-    ##
-    text <- gsub("LIQUENES", "LÍQUENES", text)
-    text <- gsub("EPIFITAS", "EPÍFITAS", text)
-    text <- gsub("ORQUIDEAS", "ORQUÍDEAS", text)
-    text <- gsub("FANEROGAMAS", "FANERÓGAMAS", text)
-    text <- gsub("DECAPODOS", "DECÁPODOS", text)
-    req(data_params())
-    req(data())
-    tematica <- NULL
-    message("BREADCRUMS tematica: ", data_params()$tematica)
-    if(!is.null(data_params()$tematica)){
-      if(data_params()$tematica == "exoticas"){
-        tematica <- r$exotica_categoria
-        message("  ", tematica)
-      }else{
-        tematica <- data_params()$tematica
-      }
-    }
-    message("especies total estimadas: ", r$especies_total_estimadas)
-    message("amenazadas categoria: ", r$amenazadas_categoria)
-
-    text <- dstools::collapse(
-      data_params()$region, data_params()$tipo,
-      data_params()$grupo,
-      tematica,
-      r$amenazadas_categoria,
-      r$cites_categoria,
-      r$especies_total_estimadas,
-      collapse = " | ")
-    message("BREADCRUMB: ", text)
+    # message("BREADCRUMB: ", text)
     text <- gsub("_", " ", text)
     text <- gsub("-", " ", text)
     text <- toupper(text)
@@ -643,8 +618,8 @@ server <-  function(input, output, session) {
   data <- reactive({
     if(is.null(data_params())) return()
     params <- data_params()
-    message("Tematica:", params$tematica)
-    message("Indicador:", params$indicador)
+    # message("Tematica:", params$tematica)
+    # message("Indicador:", params$indicador)
     d <- do.call("sibdata", params)
 
     if(current_chart() %in% c("pie", "donut", "treemap", "bar", "table")){
@@ -664,10 +639,10 @@ server <-  function(input, output, session) {
 
   ### DEBUG 2 #####
   output$debug2 <- renderPrint({
-    str(is_amenazadas_or_cites_or_exoticas())
-    str(current_chart())
-    str(data())
-    str(vizOps())
+    # str(is_amenazadas_or_cites_or_exoticas())
+    # str(current_chart())
+    # str(data())
+    # str(vizOps())
     # str(input$sel_tematica)
     #str(l_viz())
   })
@@ -849,73 +824,200 @@ server <-  function(input, output, session) {
 
   ###### ESPECIES LIST #################
 
+  # Create a reactive for the species list that depends on subcategories
   data_especies <- reactive({
     req(input$sel_grupo_type)
     req(input$sel_tematica)
+
+    # Force reactivity on subcategory changes
+    r$current_subcategory
+
     grupo <-  input$sel_grupo_bio
     if (input$sel_grupo_type == "interes") grupo <- input$sel_grupo_int
     req(grupo)
     if (grupo == "todos") grupo <- NULL
-    tematica <- gsub("_", "-", input$sel_tematica) ## OJO quitar cuando se estandarice _ y - en amenazadas_nacional
+
+    # Handle the base tematica
+    tematica <- gsub("_", "-", input$sel_tematica)
     if (tematica == "todas") tematica <- NULL
-    l_s <- list_species(region = input$sel_region,
-                        grupo = grupo,
-                        tematica = tematica,
-                        #with_labels = TRUE
-                        con = con) |>
-      collect() |>
-      mutate(
-      ) |>
-      select(-species, -flagTAXO, -vernacular_name_es) |>
-      select(-any_of(c("slug_especie", "slug_tematica"))) |>
-      rename(
-        "Especie" = "label",
-        "Registros" = "registros",
-        "Reino" = "kingdom",
-        "GBIF" = "url_gbif",
-        "CBC" = "url_cbc",
-        "Filo" = "phylum",
-        "Clase" = "class",
-        "Orden" = "order",
-        "Familia" = "family",
-        "Género" = "genus"
-      )
+
+    # Debug messages for initial state
+    message("=== Initial Parameters ===")
+    message("Initial tematica: ", tematica)
+    message("CITES categoria: ", input$cites_categoria)
+    message("Amenazadas categoria: ", input$amenazadas_categoria)
+    message("Grupo: ", grupo)
+    message("Region: ", input$sel_region)
+
+    # Handle subcategories
+    if (!is.null(tematica)) {
+        # Handle Amenazadas (both Nacional and Global)
+        if (grepl("amenazadas", tematica) && !is.null(input$amenazadas_categoria)) {
+            if (input$amenazadas_categoria != "_total") {
+                subcategoria <- substr(input$amenazadas_categoria, 2, nchar(input$amenazadas_categoria))
+                tematica <- paste0(tematica, "-", subcategoria)
+            }
+        }
+
+        # Handle CITES
+        if (tematica == "cites" && !is.null(input$cites_categoria)) {
+            if (input$cites_categoria == "_total") {
+                tematica <- "cites"
+            } else {
+                subcategoria <- substr(input$cites_categoria, 2, nchar(input$cites_categoria))
+                subcategoria <- gsub("_", "-", subcategoria)
+                tematica <- paste0("cites-", subcategoria)
+            }
+        }
+    }
+
+    message("\n=== Final Parameters for list_species ===")
+    message("region = ", input$sel_region)
+    message("grupo = ", grupo)
+    message("tematica = ", tematica)
+
+    # Call list_species with the final tematica
+    l_s <- list_species(
+        region = input$sel_region,
+        grupo = grupo,
+        tematica = tematica,
+        con = con
+    ) |>
+        collect()
+
+    message("\n=== Results ===")
+    message("Number of rows returned: ", nrow(l_s))
+
+    # Continue with the data transformation
+    l_s <- l_s |>
+        select(-species, -flagTAXO, -vernacular_name_es) |>
+        select(-any_of(c("slug_especie", "slug_tematica"))) |>
+        rename(
+            "Especie" = "label",
+            "Registros" = "registros",
+            "Reino" = "kingdom",
+            "GBIF" = "url_gbif",
+            "CBC" = "url_cbc",
+            "Filo" = "phylum",
+            "Clase" = "class",
+            "Orden" = "order",
+            "Familia" = "family",
+            "Género" = "genus"
+        )
+
+    message("Final number of rows after transformation: ", nrow(l_s))
     l_s
   })
 
-  output$list_species <- renderDataTable({
+  # Update current_subcategory in the existing reactiveValues
+  observe({
+    if (!is.null(input$amenazadas_categoria)) {
+      r$current_subcategory <- input$amenazadas_categoria
+    } else if (!is.null(input$cites_categoria)) {
+      r$current_subcategory <- input$cites_categoria
+    } else {
+      r$current_subcategory <- NULL
+    }
+  })
 
+  # Modify the list_species output
+  output$list_species <- renderDataTable({
     req(data_especies())
     l_s <- data_especies()
-    l_s$GBIF <- ifelse(is.na(l_s$GBIF), "", paste0("<a href='",l_s$GBIF,"'  target='_blank'>","GBIF","</a>"))
-    l_s$CBC <- ifelse(is.na(l_s$CBC), "", paste0("<a href='",l_s$CBC,"'  target='_blank'>","CBC","</a>"))
-    # l_s$CBC[l_s$CBC == "<a href='NA'  target='_blank'>NA</a>"] <- ""
-    # l_s$GBIF[l_s$GBIF == "<a href='NA'  target='_blank'>NA</a>"] <- ""
-    DT::datatable(l_s,
+    l_s2 <- data_especies()
+
+    # Debug output
+    message("\n=== Table Update ===")
+    message("Current rows in table: ", nrow(l_s))
+    message("Current subcategory: ", r$current_subcategory)
+
+    l_s$GBIF <- ifelse(is.na(l_s$GBIF), "",
+                       paste0("<a href='", l_s$GBIF, "'  target='_blank'>", "GBIF", "</a>"))
+    l_s$CBC <- ifelse(is.na(l_s$CBC), "",
+                      paste0("<a href='", l_s$CBC, "'  target='_blank'>", "CBC", "</a>"))
+
+    message("DATA SPECIES L_S()")
+    str(l_s2)
+    DT::datatable(l_s2,
                   rownames = F,
                   selection = 'none',
                   escape = FALSE,
-                  #extensions = 'Buttons',
                   options = list(
                     dom = 'Bftsp',
-                    #buttons = c('copy', 'csv'),
                     language = list(url = '//cdn.datatables.net/plug-ins/1.10.11/i18n/Spanish.json'),
                     scrollX = T,
                     fixedColumns = TRUE,
                     fixedHeader = TRUE,
                     searching = FALSE,
                     info = FALSE,
-                    #scrollY = "700px",
                     initComplete = JS(
                       "function(settings, json) {",
                       "$(this.api().table().header()).css({'background-color': '#4ad3ac', 'color': '#ffffff'});",
                       "}")
                   ))
-
   })
-  downloadTableServer("species_table", element = reactive(data_especies()),
-                      formats = c("csv", "xlsx", "json"))
 
+  # Update the species summary text
+  output$species_summary <- renderText({
+    species_description()
+  })
+
+  # Keep the downloadTableServer
+  downloadTableServer("species_table", element = reactive(data_especies()), formats = c("csv", "xlsx", "json"))
+
+  # Modify the species_description reactive to handle CITES I/II correctly
+  species_description <- reactive({
+    req(data_especies())
+
+    total <- nrow(data_especies())
+    message("TOTAL MOSTRANDO")
+    str(total)
+
+    region <- input$sel_region
+    region <- ifelse(is.null(region), "todas las regiones", region)
+    region <- tools::toTitleCase(gsub("-", " ", region))
+
+    # Handle tematica and subcategories
+    tematica_text <- input$sel_tematica
+    if (!is.null(input$sel_tematica) && input$sel_tematica != "todas") {
+      tematica_text <- gsub("_", " ", input$sel_tematica)
+      tematica_text <- tools::toTitleCase(tematica_text)
+
+      # Add subcategory if present
+      if (grepl("amenazadas", input$sel_tematica) && !is.null(input$amenazadas_categoria)) {
+        if (input$amenazadas_categoria != "_total") {
+          cat <- toupper(gsub("_", "", input$amenazadas_categoria))
+          tematica_text <- paste(tematica_text, cat)
+        }
+      } else if (grepl("cites", input$sel_tematica) && !is.null(input$cites_categoria)) {
+        if (input$cites_categoria != "_total") {
+          # Special handling for CITES categories
+          cat <- switch(input$cites_categoria,
+                       "_i" = "I",
+                       "_ii" = "II",
+                       "_iii" = "III",
+                       "_i_ii" = "I/II",
+                       toupper(gsub("_", "", input$cites_categoria)))
+          tematica_text <- paste(tematica_text, cat)
+        }
+      }
+    } else {
+      tematica_text <- "todas las temáticas"
+    }
+
+    # Add grupo if selected
+    grupo_text <- ""
+    if (!is.null(sel_grupo()) && sel_grupo() != "todos") {
+      grupo <- tools::toTitleCase(gsub("-", " ", sel_grupo()))
+      grupo_text <- paste("del grupo", grupo)
+    }
+
+    sprintf("Mostrando %s especies para %s en %s %s",
+            format(total, big.mark = ","),
+            tematica_text,
+            region,
+            grupo_text)
+  })
 
   # Ensure the connection is closed when the session ends
   session$onSessionEnded(function() {
@@ -926,8 +1028,6 @@ server <-  function(input, output, session) {
   observeEvent(input$disconnect, {
     session$close()
   })
-
-
 
 }
 

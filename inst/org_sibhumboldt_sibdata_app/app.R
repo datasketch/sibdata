@@ -1,4 +1,3 @@
-
 library(tidyverse)
 library(shinypanels)
 library(shiny)
@@ -214,10 +213,23 @@ server <-  function(input, output, session) {
     default_select <- NULL
     if (!is.null(url_par()$grupo)){
       default_select <- tolower(url_par()$grupo)
-      group_type <- sibdata_grupo(con) |>
-        filter(slug == "animales") |> collect() |>
-        pull(tipo)
-      updateSelectInput(session,
+      # Fix: Check both biological and interest groups to determine correct type
+      group_type <- "biologico"  # default to biological
+      # First check if it's in biological groups
+      bio_exists <- sibdata_grupo(con) |>
+        filter(slug == default_select, tipo == "biologico") |> 
+        collect() |>
+        nrow() > 0
+      
+      if (!bio_exists) {
+        # If not in biological groups, check interest groups
+        int_exists <- default_select %in% av_grupos_int
+        if (int_exists) {
+          group_type <- "interes"
+        }
+      }
+      
+      updateRadioButtons(session,
                         inputId = "sel_grupo_type",
                         selected = group_type)
     }

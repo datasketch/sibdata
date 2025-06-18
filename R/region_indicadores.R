@@ -1,11 +1,15 @@
 
 #' @export
 region_indicadores <- function(region, indicadores, con = NULL){
+  #indicadores <- inds_exoticas
   sib_validate_indicadores(indicadores, con)
   d <- region_tematica(region, con) |> collect()
+  # message("d:")
+  # message(names(d)[grepl("^especies_exoticas_riesgo_invasion_total", names(d))])
   if(!all(indicadores %in% colnames(d))){
+    message("here")
     stop("Not all indicadores in region_tematica table: ",
-         mop::which_not_in(indicadores, names(d)))
+         dstools::which_not_in(indicadores, names(d)))
   }
   d <- d |>
     select(any_of(indicadores))
@@ -138,11 +142,11 @@ default_indicadores <- function(section){
       "especies_exoticas_total" = "especies_exoticas_total",
       "especies_exoticas" = "especies_exoticas",
       "especies_invasoras" = "especies_invasoras",
-      "especies_exoticas_riesgo_invasion" = "especies_exoticas_riesgo_invasion",
+      "especies_exoticas_riesgo_invasion_total" = "especies_exoticas_riesgo_invasion_total",
       "registros_exoticas_total" = "registros_exoticas_total",
       "registros_exoticas" = "registros_exoticas",
       "registros_invasoras" = "registros_invasoras",
-      "registros_exoticas_riesgo_invasion" = "registros_exoticas_riesgo_invasion"
+      "registros_exoticas_riesgo_invasion_total" = "registros_exoticas_riesgo_invasion_total"
     )
   }
   if(section == "inds_parent_exoticas"){
@@ -150,11 +154,11 @@ default_indicadores <- function(section){
       "parent_especies_exoticas_total" = "especies_exoticas_total",
       "parent_especies_exoticas" = "especies_exoticas",
       "parent_especies_invasoras" = "especies_invasoras",
-      "parent_especies_exoticas_riesgo_invasion" = "especies_exoticas_riesgo_invasion",
+      "parent_especies_exoticas_riesgo_invasion_total" = "especies_exoticas_riesgo_invasion_total",
       "parent_registros_exoticas_total" = "registros_exoticas_total",
       "parent_registros_exoticas" = "registros_exoticas",
       "parent_registros_invasoras" = "registros_invasoras",
-      "parent_registros_exoticas_riesgo_invasion" = "registros_exoticas_riesgo_invasion"
+      "parent_registros_exoticas_riesgo_invasion_total" = "registros_exoticas_riesgo_invasion_total"
     )
   }
 

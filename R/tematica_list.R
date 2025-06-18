@@ -276,8 +276,8 @@ tematica_list <- function(region, con){
     collect() |>
     distinct() |>
     slice(1:10)
-  esp_list_exoticas_riesgo_invasion <- list_species(region,
-                                                    tematica = "exotica-riesgo-invasion",
+  esp_list_exoticas_riesgo_invasion_total <- list_species(region,
+                                                    tematica = "exotica-riesgo-invasion-total",
                                                     con = con) |>
     select(label, slug_especie, registros, url_gbif, url_cbc, slug_tematica) |>
     arrange(desc(registros)) |>
@@ -296,7 +296,7 @@ tematica_list <- function(region, con){
     list(list_especies_exoticas_total = esp_list_exoticas_total,
          list_especies_exoticas = esp_list_exoticas,
          list_especies_invasoras = esp_list_invasoras,
-         list_especies_exoticas_riesgo_invasion = esp_list_exoticas_riesgo_invasion)
+         list_especies_exoticas_riesgo_invasion_total = esp_list_exoticas_riesgo_invasion_total)
   )
 
   list(

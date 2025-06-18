@@ -87,7 +87,7 @@ choropleth_map <- function(data = NULL,
   if(region == "bogota-dc"){
     d$label <- "BOGOTÁ"
   }
-  str(d)
+  # str(d)
 
   d0 <- d |> select(name = label, value = val) |>
     mutate(name = toupper(name)) |>
@@ -134,7 +134,7 @@ choropleth_map <- function(data = NULL,
   dgeo <- dgeo |>
     mutate(name = ..gt_name)
 
-  str(dgeo)
+  # str(dgeo)
 
   # Create the leaflet map
   lt <- leaflet::leaflet(dgeo) |>

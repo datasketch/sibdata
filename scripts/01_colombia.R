@@ -24,9 +24,10 @@ message("Save path: ", save_path)
 tic()
 
 
-con <- DBI::dbConnect(RSQLite::SQLite(), sys_file_sibdata("db/sibdata.sqlite"),
+# con <- DBI::dbConnect(RSQLite::SQLite(), sys_file_sibdata("db/sibdata.sqlite"),
+#                       read_only = TRUE)
+con <- DBI::dbConnect(RSQLite::SQLite(), "inst/db/sibdata.sqlite",
                       read_only = TRUE)
-
 region <- "colombia"
 
 
@@ -156,6 +157,7 @@ departamentos_lista <- tribble(
   "santander", "Santander",
   "tolima", "Tolima"
 )
+departamentos_lista <- deptos |> select(slug, label)
 
 l <- list(
   general_info = general_info,

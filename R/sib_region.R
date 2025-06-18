@@ -25,7 +25,7 @@ sib_region_general <- function(region, con){
 
   reg_data$subtipo <- tolower(reg_data$subtipo)
   reg_data$marino <- as.logical(reg_data$marino)
-  reg_data$fecha_corte <- as.character(reg_data$fecha_corte)
+  reg_data$fecha_corte <- makeup::makeup_dat(as.Date(reg_data$fecha_corte),"diciembre 12 de 2030", locale = "es")
   if(is.na(reg_data$marino))
     reg_data$marino <- FALSE
 

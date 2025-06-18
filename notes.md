@@ -2,9 +2,41 @@
 
 
 
+# 2025-05 
+
+Cambiaron la estructura del diccionario: exoticas_riesgo_invasión_total
+
+Data update
+
+Actualización deptos:
+
+Errores en:
+- Boyacá (boyaca slug repetido)
+- San Andrés
+- Reguardo y reserva: slides region_grupo falta algo
+
+[[4]]$error
+<simpleError in if (is.na(reg_data$marino)) reg_data$marino <- FALSE: the condition has length > 1>
+
+
+[[27]]$error
+<simpleError in gt_valid_map_name(map_name, con): col_municipalities_san_andres_providencia not available, check `available_maps()`>
+
+
+[[34]]$error
+<simpleError in make_region_slides(region, con, save_path = save_path): Revisar table region_grupo. No hay datos para reserva-forestal-la-planada>
+
+[[35]]$error
+<simpleError in make_region_slides(region, con, save_path = save_path): Revisar table region_grupo. No hay datos para resguardo-indigena-pialapi-pueblo-viejo>
 
 
 
+
+
+
+# 2025-02
+
+Dashboard
 
 - Mejorar selectize regions por lista país, departamento, terrotorios
 - Paste_dash -> Hacer funcones que retorne los nombres de regions nombrados, y de grupos biológicos

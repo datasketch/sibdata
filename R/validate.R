@@ -7,9 +7,13 @@ sib_validate_profile_type <- function(type){
 
 #' @export
 sib_validate_indicadores <- function(indicadores, con){
+  # message("indicadores:")
+  # message(names(indicadores)[grepl("^especies_exoticas_riesgo_invasion", names(indicadores))])
   available_indicadores <- sibdata_ind_meta(con) |> pull(indicador)
-  if(!all(indicadores %in% available_indicadores))
+  if(!all(indicadores %in% available_indicadores)){
+    message(dstools::which_not_in(indicadores, available_indicadores))
     stop("Not all indicadores in available_indicadores")
+  }
 }
 
 

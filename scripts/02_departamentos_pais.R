@@ -30,7 +30,8 @@ con <- DBI::dbConnect(RSQLite::SQLite(), sys_file_sibdata("db/sibdata.sqlite"),
 av_regions <- unname(sib_available_regions(subtipo = c("Departamento"), con = con))
 
 
-av_regions_top <- c("boyaca","narino","tolima", "santander")
+av_regions_top <- c("boyaca","narino","tolima", "santander",
+                    "amazonas", "caqueta", "guainia", "guaviare", "putumayo", "vaupes")
 av_regions_territorio <- c(
   "reserva-forestal-la-planada",
   "resguardo-indigena-pialapi-pueblo-viejo"

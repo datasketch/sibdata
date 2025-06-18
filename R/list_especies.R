@@ -36,7 +36,12 @@ list_species <- function(region,
                     "amenazadas-nacional-vu")
     } else if(tematica == "exoticas-total"){
       tematica <- c("exoticas", "exotica-riesgo-invasion", "invasoras")
-    }
+    } else if(tematica == "exotica-riesgo-invasion-total"){
+    tematica <- c("exotica-riesgo-invasion-bajo",
+                  "exotica-riesgo-invasion-moderado",
+                  "exotica-riesgo-invasion-moderado/ Alto",
+                  "exotica-riesgo-invasion-alto")
+  }
     esp_tem <- sibdata_especie_tematica(con) |>
       filter(slug_region == region) |>
       #filter(slug_tematica %like% paste0("%",tematica,"%"))

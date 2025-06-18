@@ -24,15 +24,34 @@ av_regions3 <- sib_available_regions(subtipo = c("Municipio"),
 
 av_regions4 <- sib_available_regions(subtipo = c("Municipio"),
                                      departamento = "boyaca", con = con)
+# Amazonas
+av_regions5 <- sib_available_regions(subtipo = c("Municipio"),
+                                     departamento = "amazonas", con = con)
+av_regions6 <- sib_available_regions(subtipo = c("Municipio"),
+                                     departamento = "caqueta", con = con)
+av_regions7 <- sib_available_regions(subtipo = c("Municipio"),
+                                     departamento = "guaviare", con = con)
+av_regions8 <- sib_available_regions(subtipo = c("Municipio"),
+                                     departamento = "guainia", con = con)
+av_regions9 <- sib_available_regions(subtipo = c("Municipio"),
+                                     departamento = "putumayo", con = con)
+av_regions10 <- sib_available_regions(subtipo = c("Municipio"),
+                                     departamento = "vaupes", con = con)
+
 
 av_regions <- c(
   # "reserva-forestal-la-planada",
   # "resguardo-indigena-pialapi-pueblo-viejo",
-
-  av_regions4,
-  av_regions3,
-  av_regions1,
-  av_regions2
+  # av_regions1,
+  # av_regions2
+  # av_regions3,
+  av_regions4
+  # av_regions5,
+  # av_regions6,
+  # av_regions7,
+  # av_regions8,
+  # av_regions9,
+  # av_regions10
 )
 
 n <- length(av_regions)
@@ -49,6 +68,7 @@ map(av_regions, function(region){
   message("................................. ",region, paste0("(",i," de ",n,")"))
   i <<- i + 1
   # region <- "tunja"
+  # region <- "boyaca-boy"
   # region <- "ibague"
   # region <- "chiquinquira"
   # region <- "alpujarra"

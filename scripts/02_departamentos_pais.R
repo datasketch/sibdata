@@ -36,6 +36,8 @@ av_regions_territorio <- c(
   "reserva-forestal-la-planada",
   "resguardo-indigena-pialapi-pueblo-viejo"
 )
+av_regions_amazonas <- c("amazonas", "caqueta", "guainia", "guaviare", "putumayo", "vaupes")
+
 #av_regions <- av_regions[!av_regions %in% av_regions_top]
 #av_regions <- c("boyaca","narino","tolima", "santander")
 
@@ -60,6 +62,8 @@ map(av_regions, safely(function(region){
   # region <- "la-guajira"
   # region <- "reserva-forestal-la-planada"
   # region <- "resguardo-indigena-pialapi-pueblo-viejo"
+  # region <- "region-amazonia"
+
   reserva_resguardo <- c("reserva-forestal-la-planada",
                          "resguardo-indigena-pialapi-pueblo-viejo")
 
@@ -111,13 +115,21 @@ map(av_regions, safely(function(region){
     bogota <- sibdata_departamento(con) |> collect() |> filter(cod_dane == "11")
     munis <- bogota |> mutate(cod_dane = "11001")
   }
+  if(region == "region-amazonia"){
+    cod_dane_deptos_amazonia <- sibdata_departamento(con) |> collect() |>
+      filter(slug %in% av_regions_amazonas) |> pull(cod_dane)
+    pattern <- paste0("^", paste(cod_dane_deptos_amazonia, collapse = "|"))
+    munis <- munis |>filter(str_detect(as.character(cod_dane), pattern))
+  }
+
+
   dd <- dd |>
     left_join(munis, by = c("slug_region" = "slug"))
 
   dd_esp <- dd |> select(cod_dane, value = especies_region_total, label, slug_region) |>
-    rename(n_especies = value)
+    rename(n_especies = value) |> distinct()
   dd_reg <- dd |> select(cod_dane, value = registros_region_total, label, slug_region) |>
-    rename(n_registros = value)
+    rename(n_registros = value) |> distinct()
 
   region_id <- region
   region_id <- gsub("-", "_", region_id)
@@ -134,17 +146,23 @@ map(av_regions, safely(function(region){
   # if(region == "la-guajira") region_nm <- "LA GUAJIRA"
   map_name <- paste0("col_municipalities_", region_id)
 
+  if(region == "region-amazonia"){
+    map_name <- "col_departments_amazonica"
+  }
+
+
   dd_map <- left_join(dd_esp, dd_reg) |>
     select(id = cod_dane, label, n_especies, n_registros)
+
 
   tj <- NULL
   if(!region %in% reserva_resguardo){
     conmap <- geotable::gt_con()
     tj <- geotable::gt_sf(map_name, con = conmap) |>
       select(-name)
-  #
-  #   tj <- geodato::gd_tj("col_municipalities") |>
-  #     filter(depto == toupper(region_nm))
+    #
+    #   tj <- geodato::gd_tj("col_municipalities") |>
+    #     filter(depto == toupper(region_nm))
     tj <- tj |> left_join(dd_map, by = "id")
   }
 

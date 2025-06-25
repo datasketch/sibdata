@@ -36,7 +36,8 @@ ranking <- sibdata_ranking(con) |>
 
 country_ranking <- ranking |>
   select(puesto, pais) |>
-  gt_match(map_name = "world_countries", col = "pais")
+  gt_match(map_name = "world_countries") |>
+  rename(lat = ..gt_lat, lon = ..gt_lon)
 
 refs <- sibdata_referencia_estimada(con) |>
   collect()

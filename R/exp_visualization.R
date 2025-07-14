@@ -2,7 +2,13 @@
 # Enhanced Visualization Module for SIB Data App (Phase 2)
 # Integrates all chart types with dynamic controls
 
-
+#' Visualization UI Module
+#'
+#' Creates the center panel visualization with chart selector and dynamic controls
+#'
+#' @param id Module ID
+#' @return UI elements for visualization
+#' @export
 exp_visualization_ui <- function(id) {
   ns <- NS(id)
   tagList(
@@ -64,6 +70,14 @@ exp_visualization_ui <- function(id) {
   )
 }
 
+#' Visualization Server Module
+#'
+#' Handles the server logic for visualization including chart rendering and data modals
+#'
+#' @param id Module ID
+#' @param r Reactive values object
+#' @param con Database connection
+#' @export
 exp_visualization_server <- function(id, r, con) {
   moduleServer(id, function(input, output, session) {
     ns <- session$ns

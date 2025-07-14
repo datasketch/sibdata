@@ -1,6 +1,13 @@
 # exp_inputs.R
 # Input Controls Module for SIB Data App (modular version)
 
+#' Input Controls UI Module
+#'
+#' Creates the left panel input controls for region, group, and theme selection
+#'
+#' @param id Module ID
+#' @return UI elements for input controls
+#' @export
 exp_inputs_ui <- function(id) {
   ns <- NS(id)
   tagList(
@@ -14,6 +21,15 @@ exp_inputs_ui <- function(id) {
   )
 }
 
+#' Input Controls Server Module
+#'
+#' Handles the server logic for input controls including region, group, and theme selection
+#'
+#' @param id Module ID
+#' @param r Reactive values object
+#' @param app_options Application options from database
+#' @param session_main Main session object (optional)
+#' @export
 exp_inputs_server <- function(id, r, app_options, session_main = NULL) {
   moduleServer(id, function(input, output, session) {
     ns <- session$ns

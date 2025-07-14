@@ -8,6 +8,7 @@
 #'
 #' @param id Module ID
 #' @return UI elements for data controls
+#' @export
 exp_data_controls_ui <- function(id) {
   ns <- NS(id)
   
@@ -28,6 +29,7 @@ exp_data_controls_ui <- function(id) {
 #' @param id Module ID
 #' @param r Reactive values object
 #' @return Server logic for data controls
+#' @export
 exp_data_controls_server <- function(id, r) {
   moduleServer(id, function(input, output, session) {
     ns <- session$ns

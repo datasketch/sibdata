@@ -8,6 +8,7 @@
 #' @param display Display type: "buttons" or "dropdown"
 #' @param dropdownLabel Label for dropdown
 #' @param dropdownWidth Width of dropdown
+#' @export
 downloadTableUI <- function(id, text = "Download", formats = NULL, 
                             display = c("buttons", "dropdown"),
                             dropdownLabel = "Download", dropdownWidth = 150) {
@@ -70,6 +71,7 @@ downloadTableUI <- function(id, text = "Download", formats = NULL,
 #' @param element Reactive expression returning data to download
 #' @param formats File formats to support
 #' @param file_prefix Prefix for downloaded files
+#' @export
 downloadTableServer <- function(id, element = NULL, formats, file_prefix = "table") {
   moduleServer(id, function(input, output, session) {
     ns <- session$ns

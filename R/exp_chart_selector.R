@@ -11,6 +11,7 @@ library(shinyinvoer)
 #'
 #' @param id Module ID
 #' @return UI elements for chart selector
+#' @export
 exp_chart_selector_ui <- function(id) {
   ns <- NS(id)
 
@@ -28,6 +29,7 @@ exp_chart_selector_ui <- function(id) {
 #' @param id Module ID
 #' @param r Reactive values object
 #' @return Server logic for chart selector
+#' @export
 exp_chart_selector_server <- function(id, r) {
   moduleServer(id, function(input, output, session) {
     ns <- session$ns
@@ -108,6 +110,7 @@ exp_chart_selector_server <- function(id, r) {
 #' @param tipo Data type ("registros" or "especies")
 #' @param tematica Thematic category
 #' @return Named vector of available charts
+#' @export
 get_available_charts <- function(tipo, tematica) {
   # Base chart types
   charts <- c("Mapa" = "map", "Torta" = "pie", "Dona" = "donut",

@@ -6,8 +6,9 @@
 
 #' Database connection helper
 #' @return DBI connection to SQLite database
+#' @export
 get_app_connection <- function() {
-  DBI::dbConnect(RSQLite::SQLite(), 
+  DBI::dbConnect(RSQLite::SQLite(),
                  sibdata:::sys_file_sibdata("db/sibdata.sqlite"),
                  read_only = TRUE)
 }
@@ -15,42 +16,43 @@ get_app_connection <- function() {
 #' Get available options for dropdowns
 #' @param con Database connection
 #' @return List of options for UI inputs
+#' @export
 get_app_options <- function(con) {
   # Biological groups with hierarchy
-  gru <- sibdata_grupo(con) |> 
-    dplyr::collect() |> 
+  gru <- sibdata_grupo(con) |>
+    dplyr::collect() |>
     dplyr::filter(tipo == "biologico")
-  
+
   gru_tree <- data.tree::FromDataFrameNetwork(gru)
   gru_df <- data.tree::ToDataFrameNetwork(gru_tree,
                                           direction = "descend",
                                           "label", "level", "path")
-  
+
   paste_dash <- function(str, times = 1) {
     paste(" ", paste0(rep("-", times-1), collapse = ""), str)
   }
-  
+
   opt_gru <- gru_df |>
     dplyr::rowwise() |>
     dplyr::mutate(label = paste_dash(label, level)) |>
     dplyr::arrange(path)
-  
+
   opts_grupo_biologico <- opt_gru$from
   names(opts_grupo_biologico) <- opt_gru$label
   opts_grupo_biologico <- c("Todos" = "todos", opts_grupo_biologico)
-  
+
   # Interest groups
   av_grupos_int <- sib_available_grupos(tipo = "interes", con = con)
   opts_grupo_interes <- c("Todos" = "todos", av_grupos_int)
-  
+
   # Regions
   pais <- sib_available_regions(subtipo = "País", con = con)
   departamentos <- sib_available_regions(subtipo = "Departamento", con = con)
   opts_region_raw <- c(pais, sort(departamentos))
-  
+
   # Remove duplicates - keep only first occurrence of each value
   opts_region <- opts_region_raw[!duplicated(opts_region_raw)]
-  
+
   message("🔧 Region deduplication:")
   message("  - Raw regions: ", length(opts_region_raw))
   message("  - After deduplication: ", length(opts_region))
@@ -58,14 +60,14 @@ get_app_options <- function(con) {
   if (length(duplicated_values) > 0) {
     message("  - Removed duplicates: ", paste(unique(duplicated_values), collapse = ", "))
   }
-  
+
   # Thematic categories
   all_tematicas <- sib_available_tematicas()
   opts_tematicas_ex <- c("cites_i", "cites_ii", "cites_i_ii", "cites_iii",
                          "exoticas_total")
   opts_tematicas <- all_tematicas[!all_tematicas %in% opts_tematicas_ex]
   opts_tematicas <- c(opts_tematicas, "Ninguna" = "todas")
-  
+
   list(
     region = opts_region,
     grupo_biologico = opts_grupo_biologico,
@@ -79,10 +81,10 @@ get_app_options <- function(con) {
 #' @return Formatted data frame
 format_species_data <- function(data) {
   if (is.null(data) || nrow(data) == 0) return(NULL)
-  
+
   vars <- c("label", "registros", "url_gbif", "url_cbc", "kingdom",
             "phylum", "class", "order", "family", "genus")
-  
+
   data |>
     dplyr::select(dplyr::any_of(vars)) |>
     dplyr::rename(
@@ -122,4 +124,4 @@ get_species_table_options <- function() {
 #' Helper for UI dividers
 divider <- function() {
   tags$hr()
-} 
+}

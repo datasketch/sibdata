@@ -1,6 +1,13 @@
 # exp_species_table.R
 # Species Table Module for SIB Data App (modular version)
 
+#' Species Table UI Module
+#'
+#' Creates the right panel species table with summary and download functionality
+#'
+#' @param id Module ID
+#' @return UI elements for species table
+#' @export
 exp_species_table_ui <- function(id) {
   ns <- NS(id)
   tagList(
@@ -21,6 +28,14 @@ exp_species_table_ui <- function(id) {
   )
 }
 
+#' Species Table Server Module
+#'
+#' Handles the server logic for species table including data fetching and modal display
+#'
+#' @param id Module ID
+#' @param r Reactive values object
+#' @param con Database connection
+#' @export
 exp_species_table_server <- function(id, r, con) {
   moduleServer(id, function(input, output, session) {
     ns <- session$ns

@@ -4,7 +4,7 @@
 \alias{get_app_connection}
 \title{Database connection helper}
 \usage{
-get_app_connection()
+get_app_connection(path = NULL)
 }
 \value{
 DBI connection to SQLite database

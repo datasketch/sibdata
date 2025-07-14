@@ -19,7 +19,7 @@ library(shinyinvoer)
 
 # Initialize app options (we'll create connection in server)
 # Temporary connection just for getting options
-temp_con <- get_app_connection()
+temp_con <- get_app_connection("db/sibdata.sqlite")
 app_options <- get_app_options(temp_con)
 DBI::dbDisconnect(temp_con)
 

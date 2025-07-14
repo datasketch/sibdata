@@ -7,9 +7,12 @@
 #' Database connection helper
 #' @return DBI connection to SQLite database
 #' @export
-get_app_connection <- function() {
+get_app_connection <- function(path = NULL) {
+  if(is.null(path)){
+    path <- sibdata:::sys_file_sibdata("db/sibdata.sqlite")
+  }
   DBI::dbConnect(RSQLite::SQLite(),
-                 sibdata:::sys_file_sibdata("db/sibdata.sqlite"),
+                 path,
                  read_only = TRUE)
 }
 

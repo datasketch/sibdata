@@ -1,3 +1,7 @@
+
+# remotes::install_github("datasketch/dsmods@3fc6c8")
+# remotes::install_github("datasketch/shinyinvoer@57d98b")
+
 library(tidyverse)
 library(shinypanels)
 library(shiny)

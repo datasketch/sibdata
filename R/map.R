@@ -98,7 +98,11 @@ choropleth_map <- function(data = NULL,
     geotable::rename_dotdot()
   if(nrow(d0) > 1.5 * nrow(sf)){
     warning("Data may have repeated geographic rows, taking the first indicator found")
-    return()
+    # Remove duplicates by taking the first occurrence of each geographic name
+    d0 <- d0 %>%
+      group_by(name) %>%
+      slice(1) %>%
+      ungroup()
   }
 
   if(nrow(d0) > 0){

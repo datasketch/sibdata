@@ -108,6 +108,7 @@ sibdata_wide <- function(region = NULL,
   # Si no hay GR definido
   d <- d |>
     select(contains(c("slug","label","grupo")), any_of(sel_inds)) |>
+    distinct() |>
     collect()
 
 

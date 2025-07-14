@@ -8,6 +8,7 @@
 
 #' @export
 sib_available_regions <- function(subtipo = NULL, departamento = NULL, con = con){
+
   regs <- sibdata_region(con) |> collect()
   reg_gr <- sibdata_region_grupo(con) |>
     #select(slug_region) |>
@@ -24,8 +25,8 @@ sib_available_regions <- function(subtipo = NULL, departamento = NULL, con = con
       filter(parent == departamento)
   }
 
-  av_regs <- regs |> pull(slug)
-  names(av_regs) <- regs |> pull(label)
+  av_regs <- regs |> distinct(slug) |> pull(slug)
+  names(av_regs) <- regs |> distinct(slug, .keep_all = TRUE) |> pull(label)
   av_regs
 }
 

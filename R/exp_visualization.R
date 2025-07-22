@@ -310,27 +310,11 @@ exp_visualization_server <- function(id, r, con) {
           if(r$chart_type %in% c("pie", "donut", "bar", "treemap")) {
             actionButton(ns("download_chart"), "Descargar gráfico",
                         class = "btn-sm btn-outline-secondary")
-          },
-          # Download dropdown
-          downloadTableUI(ns("dropdown_table"),
-                         dropdownLabel = "Descargar datos",
-                         formats = c("csv", "xlsx", "json"),
-                         display = "dropdown")
+          }
       )
     })
 
-    # Download table server
-    message("🔧 Initializing download server with ID: ", ns("dropdown_table"))
-    downloadTableServer("dropdown_table",
-                       element = reactive({
-                         message("📊 Download reactive called, main_data is null: ", is.null(r$main_data))
-                         if (!is.null(r$main_data)) {
-                           message("📊 Download reactive returning ", nrow(r$main_data), " rows")
-                         }
-                         r$main_data
-                       }),
-                       formats = c("csv", "xlsx", "json"),
-                       file_prefix = "sibdata")
+
 
     # Show map data modal
     observeEvent(input$show_map_data, {
@@ -339,7 +323,10 @@ exp_visualization_server <- function(id, r, con) {
       showModal(modalDialog(
         title = div(
           style = "display: flex; justify-content: space-between; align-items: center;",
-          span("Datos del Mapa"),
+          h5(paste("Indicador:", if(!is.null(r$indicador) && r$indicador != "" && !is.na(r$indicador)) {
+            # Show the indicator value directly for now
+            tools::toTitleCase(gsub("_", " ", r$indicador))
+          } else "N/A")),
           tags$button(
             type = "button",
             class = "close",
@@ -351,16 +338,10 @@ exp_visualization_server <- function(id, r, con) {
         ),
         size = "l",
         div(
-          h5(paste("Indicador:", if(!is.null(r$indicador) && r$indicador != "" && !is.na(r$indicador)) {
-            # Show the indicador value directly for now
-            tools::toTitleCase(gsub("_", " ", r$indicador))
-          } else "N/A")),
-          h6(paste("Región:", tools::toTitleCase(gsub("-", " ", r$sel_region)), "| Tipo:", tools::toTitleCase(r$sel_tipo))),
-          br(),
           div(style = "display: flex; justify-content: flex-end; margin-bottom: 10px;",
-              downloadTableUI(ns("map_modal_download"),
-                             dropdownLabel = "Descargar datos",
-                             formats = c("csv", "xlsx", "json"),
+              downloadTableUI(ns("map_modal_download"), 
+                             dropdownLabel = "Descargar datos", 
+                             formats = c("csv", "xlsx", "json"), 
                              display = "dropdown",
                              dropdownWidth = 200)
           ),
@@ -369,6 +350,15 @@ exp_visualization_server <- function(id, r, con) {
         footer = NULL,
         easyClose = TRUE
       ))
+
+      # Initialize download server after modal is shown
+      downloadTableServer("map_modal_download",
+                         element = reactive({
+                           req(r$map_data)
+                           r$map_data
+                         }),
+                         formats = c("csv", "xlsx", "json"),
+                         file_prefix = "datos_mapa")
     })
 
     # Show chart data modal
@@ -408,6 +398,15 @@ exp_visualization_server <- function(id, r, con) {
         footer = NULL,
         easyClose = TRUE
       ))
+
+      # Initialize download server after modal is shown
+      downloadTableServer("chart_modal_download",
+                         element = reactive({
+                           req(r$main_data)
+                           r$main_data
+                         }),
+                         formats = c("csv", "xlsx", "json"),
+                         file_prefix = "datos_grafico")
     })
 
     # Render map data table in modal
@@ -437,8 +436,8 @@ exp_visualization_server <- function(id, r, con) {
       # Select only the relevant columns
       display_data <- display_data[, cols_to_keep, drop = FALSE]
 
-      # Apply friendly column names
-      names(display_data) <- sib_merge_ind_label(names(display_data), con = con)
+      # Apply friendly column names (simplified to avoid errors)
+      names(display_data) <- gsub("_", " ", names(display_data))
 
       DT::datatable(
         display_data,
@@ -461,40 +460,7 @@ exp_visualization_server <- function(id, r, con) {
       )
     })
 
-    # Download map data server for modal
-    downloadTableServer("map_modal_download",
-                       element = reactive({
-                         req(r$map_data)
-                         # Select and format only relevant columns
-                         display_data <- r$map_data
-
-                         # Keep only label and the indicator column, remove slug_region and label_region
-                         cols_to_keep <- c("label")
-
-                         # Add the indicator column (find it dynamically)
-                         if (!is.null(r$indicador) && r$indicador %in% names(display_data)) {
-                           cols_to_keep <- c(cols_to_keep, r$indicador)
-                         } else {
-                           # If no specific indicator, keep all numeric columns except slug and label_region
-                           numeric_cols <- names(display_data)[sapply(display_data, is.numeric)]
-                           cols_to_keep <- c(cols_to_keep, numeric_cols)
-                         }
-
-                         # Remove duplicate columns and non-essential columns
-                         cols_to_exclude <- c("slug_region", "label_region")
-                         cols_to_keep <- cols_to_keep[!cols_to_keep %in% cols_to_exclude]
-                         cols_to_keep <- unique(cols_to_keep[cols_to_keep %in% names(display_data)])
-
-                         # Select only the relevant columns
-                         display_data <- display_data[, cols_to_keep, drop = FALSE]
-
-                         # Apply friendly column names
-                         names(display_data) <- sib_merge_ind_label(names(display_data), con = con)
-
-                         display_data
-                       }),
-                       formats = c("csv", "xlsx", "json"),
-                       file_prefix = "datos_mapa")
+    # Download map data server for modal - moved inside modal observer
 
     # Render chart data table in modal
     output$chart_data_table <- DT::renderDataTable({

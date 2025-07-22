@@ -29,11 +29,11 @@ ui <- fluidPage(
     # Left column - Input controls
     column(3,
            wellPanel(
-             h4("Debug - Reactive Values"),
-             div(class = "debug-container",
-                 verbatimTextOutput("debug_reactive")
-             ),
-             hr(),
+             # h4("Debug - Reactive Values"),
+             # div(class = "debug-container",
+             #     verbatimTextOutput("debug_reactive")
+             # ),
+             # hr(),
              h4("Opciones"),
              exp_inputs_ui("inputs")
            )
@@ -57,7 +57,6 @@ ui <- fluidPage(
 )
 
 server <- function(input, output, session) {
-
 
   message("🚀 SERVER STARTING")
 
@@ -121,6 +120,27 @@ server <- function(input, output, session) {
 
   exp_visualization_server("viz", r, con)
   message("✓ Visualization module initialized")
+
+  # Add dropdown click-outside behavior
+  observe({
+    shinyjs::runjs("
+      // Remove any existing event listeners
+      document.removeEventListener('click', window.dropdownClickHandler);
+
+      // Create new click handler
+      window.dropdownClickHandler = function(event) {
+        const dropdowns = document.querySelectorAll('.dropdown-details[open]');
+        dropdowns.forEach(function(dropdown) {
+          if (!dropdown.contains(event.target)) {
+            dropdown.removeAttribute('open');
+          }
+        });
+      };
+
+      // Add event listener
+      document.addEventListener('click', window.dropdownClickHandler);
+    ")
+  })
 
   # Central reactive conditions - chart availability and control visibility
   observe({
@@ -309,6 +329,21 @@ server <- function(input, output, session) {
     })
 
     message("🏁 DATA OBSERVER COMPLETED")
+  })
+
+  # Debug panel (only shown in debug mode)
+  output$debug_panel <- renderUI({
+    if (r$is_published) {
+      return(NULL)  # Hide debug panel in published mode
+    }
+
+    tagList(
+      h4("Debug - Reactive Values"),
+      div(class = "debug-container",
+          verbatimTextOutput("debug_reactive")
+      ),
+      hr()
+    )
   })
 
   # Debug output for reactive values

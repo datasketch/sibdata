@@ -172,13 +172,41 @@ body {
  display: none;
 }
 
+/* Download button styling */
 .dropdown-action-trigger {
     background-color: #09A274 !important;
-    border-radius: 3.35rem !important;
+    border-color: #09A274 !important;
+    color: white !important;
 }
 
 .dropdown-action-trigger:hover {
+    background-color: #078a63 !important;
+    border-color: #078a63 !important;
+    color: white !important;
+}
+
+/* Specific styling for download buttons */
+.btn-secondary.dropdown-action-trigger {
+    color: white !important;
     background-color: #09A274 !important;
+    border-color: #09A274 !important;
+}
+
+.btn-secondary.dropdown-action-trigger:hover {
+    color: white !important;
+    background-color: #078a63 !important;
+    border-color: #078a63 !important;
+}
+
+/* Download dropdown content styling */
+.dropdown-content .btn-link {
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-content .btn-link:hover {
+    background-color: #f8f9fa;
+    color: #333;
 }
 
 .dataTables_wrapper .dataTables_paginate {
@@ -207,11 +235,6 @@ body {
 
 .dropdown-details summary::-moz-list-bullet {
  list-style-type: none;
-}
-
-.dropdown-content .btn-link:hover {
- background-color: #f8f9fa !important;
- color: #333 !important;
 }
 
 .dropdown-details[open] .dropdown-content {
@@ -384,4 +407,24 @@ input[type="radio"]:checked {
 .well {
     scrollbar-width: thin;
     scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+}
+
+/* Make dropdowns close when clicking outside */
+.dropdown-details {
+    position: relative;
+}
+
+.dropdown-details[open] {
+    z-index: 1000;
+}
+
+/* Add click outside behavior via CSS */
+.dropdown-details[open]::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
 }

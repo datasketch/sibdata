@@ -11,20 +11,29 @@
 exp_species_table_ui <- function(id) {
   ns <- NS(id)
   tagList(
-    # Header with expand button
-    div(style = "display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;",
-        h5("Lista de Especies", style = "margin: 0;"),
-        actionButton(ns("expand_species"), "Ver lista completa", 
-                    class = "btn-sm btn-outline-info",
-                    icon = icon("expand"))
+    # Header with title and expand button
+    div(
+      style = "display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;",
+      h5(style = "margin: 0;", "Lista de Especies"),
+      actionButton(
+        ns("expand_species"),
+        "Ver lista completa",
+        class = "btn-sm btn-outline-info",
+        icon = icon("expand")
+      )
     ),
-    # Summary text above the table
+    
+    # Summary text
     div(
       class = "summary-text",
       textOutput(ns("species_summary"))
     ),
-    # Species data table
-    dataTableOutput(ns("list_species"))
+    
+    # Table container
+    div(
+      class = "species-table-container",
+      dataTableOutput(ns("list_species"))
+    )
   )
 }
 
@@ -39,10 +48,24 @@ exp_species_table_ui <- function(id) {
 exp_species_table_server <- function(id, r, con) {
   moduleServer(id, function(input, output, session) {
     ns <- session$ns
+    
+    message("🔧 SPECIES TABLE MODULE INITIALIZED")
+
+    # Observer to track region changes
+    observe({
+      message("🔄 REGION OBSERVER TRIGGERED")
+      message("Current r$sel_region: ", r$sel_region)
+    })
 
     # Fetch species data reactively
     data_especies <- reactive({
+      message("🔍 SPECIES DATA REACTIVE TRIGGERED")
+      message("r$sel_region: ", r$sel_region)
+      message("r$sel_grupo: ", r$sel_grupo)
+      message("r$sel_tematica: ", r$sel_tematica)
+      
       req(r$sel_region)
+      message("✓ r$sel_region requirement met")
       
       # Build parameters for list_species
       params <- list(
@@ -51,13 +74,13 @@ exp_species_table_server <- function(id, r, con) {
         tematica = r$sel_tematica
       )
       
+      message("=== Species query parameters ===")
+      message("Region: ", params$region)
+      message("Grupo: ", params$grupo)
+      message("Tematica: ", params$tematica)
+      
       # Call list_species with current parameters
       tryCatch({
-        message("=== Species query parameters ===")
-        message("Region: ", params$region)
-        message("Grupo: ", params$grupo)
-        message("Tematica: ", params$tematica)
-        
         l_s <- list_species(
           region = params$region,
           grupo = params$grupo,
@@ -70,12 +93,15 @@ exp_species_table_server <- function(id, r, con) {
         
         # Format for display
         if (nrow(l_s) > 0) {
-          format_species_data(l_s)
+          formatted_data <- format_species_data(l_s)
+          message("✓ Species data formatted successfully")
+          formatted_data
         } else {
+          message("⚠ No species data returned")
           NULL
         }
       }, error = function(e) {
-        message("Error fetching species data: ", e$message)
+        message("❌ Error fetching species data: ", e$message)
         message("Error details: ", conditionMessage(e))
         NULL
       })
@@ -83,14 +109,89 @@ exp_species_table_server <- function(id, r, con) {
     
     # Store species data in reactive values
     observe({
-      r$species_data <- data_especies()
+      message("🔄 UPDATING r$species_data")
+      species_data <- data_especies()
+      message("Species data rows: ", if(is.null(species_data)) "NULL" else nrow(species_data))
+      r$species_data <- species_data
+      message("✓ r$species_data updated")
+    })
+
+    # Independent species table renderer
+    observe({
+      req(r$species_data)
+      message("🎯 INDEPENDENT SPECIES TABLE RENDERER TRIGGERED")
+      
+      # Force the table to re-render
+      output$list_species <- renderDataTable({
+        message("🎨 RENDERING SPECIES TABLE (INDEPENDENT)")
+        
+        species_data <- r$species_data
+        message("Species data rows for table: ", nrow(species_data))
+        message("Species data columns: ", paste(names(species_data), collapse = ", "))
+
+        # Check if we have data to display
+        if (nrow(species_data) == 0) {
+          message("⚠ No data to display in table")
+          empty_df <- data.frame(
+            "No hay especies" = "No se encontraron especies para los filtros seleccionados"
+          )
+          return(DT::datatable(
+            empty_df,
+            rownames = FALSE,
+            options = list(
+              dom = 't',
+              searching = FALSE,
+              info = FALSE,
+              paging = FALSE
+            )
+          ))
+        }
+        
+        # Format links for GBIF and CBC columns
+        if ("GBIF" %in% names(species_data)) {
+          species_data$GBIF <- ifelse(
+            is.na(species_data$GBIF) | species_data$GBIF == "", 
+            "",
+            paste0("<a href='", species_data$GBIF, "' target='_blank'>GBIF</a>")
+          )
+        }
+        
+        if ("CBC" %in% names(species_data)) {
+          species_data$CBC <- ifelse(
+            is.na(species_data$CBC) | species_data$CBC == "", 
+            "",
+            paste0("<a href='", species_data$CBC, "' target='_blank'>CBC</a>")
+          )
+        }
+        
+        message("✓ Creating DataTable with ", nrow(species_data), " rows")
+
+        # Create the full species table with proper options
+        species_table <- DT::datatable(
+          species_data,
+          rownames = FALSE,
+          selection = 'none',
+          escape = FALSE,
+          options = c(
+            get_species_table_options(),
+            list(
+              scrollY = "300px",
+              scrollCollapse = TRUE
+            )
+          )
+        )
+        
+        message("✓ DataTable created successfully")
+        species_table
+      })
     })
 
     # Render summary text based on selected filters and actual data
     output$species_summary <- renderText({
-      req(data_especies())
+      message("📝 SPECIES SUMMARY RENDERED")
+      req(r$species_data)
       
-      total <- nrow(data_especies())
+      total <- nrow(r$species_data)
       region <- r$sel_region %||% "todas las regiones"
       region <- tools::toTitleCase(gsub("-", " ", region))
       
@@ -106,45 +207,15 @@ exp_species_table_server <- function(id, r, con) {
         grupo_text <- paste("del grupo", grupo)
       }
       
-      sprintf("Mostrando %s especies para %s en %s %s",
-              format(total, big.mark = ","),
-              tematica_text,
-              region,
-              grupo_text)
+      result <- sprintf("Mostrando %s especies para %s en %s %s",
+                        format(total, big.mark = ","),
+                        tematica_text,
+                        region,
+                        grupo_text)
+      message("Summary text: ", result)
+      result
     })
 
-    # Render species table with custom styling
-    output$list_species <- renderDataTable({
-      req(data_especies())
-      
-      species_data <- data_especies()
-      
-      # Format links for GBIF and CBC columns
-      if ("GBIF" %in% names(species_data)) {
-        species_data$GBIF <- ifelse(
-          is.na(species_data$GBIF) | species_data$GBIF == "", 
-          "",
-          paste0("<a href='", species_data$GBIF, "' target='_blank'>GBIF</a>")
-        )
-      }
-      
-      if ("CBC" %in% names(species_data)) {
-        species_data$CBC <- ifelse(
-          is.na(species_data$CBC) | species_data$CBC == "", 
-          "",
-          paste0("<a href='", species_data$CBC, "' target='_blank'>CBC</a>")
-        )
-      }
-      
-      DT::datatable(
-        species_data,
-        rownames = FALSE,
-        selection = 'none',
-        escape = FALSE,
-        options = get_species_table_options()
-      )
-    })
-    
     # Show species modal
     observeEvent(input$expand_species, {
       req(r$species_data)

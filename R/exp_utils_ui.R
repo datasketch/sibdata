@@ -5,12 +5,23 @@
 `%||%` <- function(x, y) if (is.null(x)) y else x
 
 #' Database connection helper
+#' @param path Path to database file (optional)
 #' @return DBI connection to SQLite database
 #' @export
 get_app_connection <- function(path = NULL) {
   if(is.null(path)){
     path <- sibdata:::sys_file_sibdata("db/sibdata.sqlite")
   }
+  
+  # Debug: Print database path information
+  message("🗄️ Database connection info:")
+  message("- Requested path: ", if(is.null(path)) "NULL (using default)" else path)
+  message("- Resolved path: ", path)
+  message("- File exists: ", file.exists(path))
+  if(file.exists(path)) {
+    message("- File size: ", file.size(path), " bytes")
+  }
+  
   DBI::dbConnect(RSQLite::SQLite(),
                  path,
                  read_only = TRUE)

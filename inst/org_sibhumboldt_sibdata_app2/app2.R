@@ -1,6 +1,8 @@
 # app2.R
 # Modular version of SIB Data App
 
+
+
 library(shiny)
 library(DT)
 library(tidyverse)
@@ -15,38 +17,10 @@ library(jsonlite)
 library(highcharter)
 library(hgmagic)
 library(shinyinvoer)
-
-
-# Initialize app options (we'll create connection in server)
-# Temporary connection just for getting options
-temp_con <- get_app_connection("db/sibdata.sqlite")
-app_options <- get_app_options(temp_con)
-DBI::dbDisconnect(temp_con)
-
-# Centralized reactive values
-r <- reactiveValues(
-  sel_region = NULL,
-  sel_grupo_type = "biologico",
-  sel_grupo = NULL,
-  sel_tematica = NULL,
-  sel_tipo = "registros",
-  chart_type = "map",
-  amenazadas_categoria = NULL,
-  cites_categoria = NULL,
-  exotica_categoria = NULL,
-  especies_total_estimadas = NULL,
-  indicador = NULL,
-  show_subcategoria = FALSE,
-  show_especies_total_estimadas = FALSE,
-  current_subcategory = NULL,
-  main_data = NULL,
-  species_data = NULL,
-  map_data = NULL,
-  breadcrumb = NULL,
-  available_charts = NULL
-)
+library(shinyjs)
 
 ui <- fluidPage(
+  useShinyjs(),
   tags$head(
     tags$link(rel="stylesheet", type="text/css", href="custom.css")
   ),
@@ -83,19 +57,59 @@ ui <- fluidPage(
 )
 
 server <- function(input, output, session) {
+
+
   message("🚀 SERVER STARTING")
 
+  # Create session-specific app options
+  temp_con <- get_app_connection("db/sibdata.sqlite")
+  app_options <- get_app_options(temp_con)
+  DBI::dbDisconnect(temp_con)
+  message("✓ App options loaded")
+
+  # Create session-specific reactive values
+  r <- reactiveValues(
+    sel_region = NULL,
+    sel_grupo_type = "biologico",
+    sel_grupo = NULL,
+    sel_tematica = NULL,
+    sel_tipo = "registros",
+    chart_type = "map",
+    amenazadas_categoria = NULL,
+    cites_categoria = NULL,
+    exotica_categoria = NULL,
+    especies_total_estimadas = NULL,
+    indicador = NULL,
+    show_subcategoria = FALSE,
+    show_especies_total_estimadas = FALSE,
+    current_subcategory = NULL,
+    main_data = NULL,
+    species_data = NULL,
+    map_data = NULL,
+    breadcrumb = NULL,
+    available_charts = NULL
+  )
+
   # Create database connection inside server
-  con <- get_app_connection()
+  con <- get_app_connection("db/sibdata.sqlite")
   message("✓ Database connection created")
 
-  # Initialize default values
-  message("🔧 INITIALIZING DEFAULT VALUES")
-  message("Setting defaults: region=colombia, tipo=registros, chart_type=map")
-  r$sel_region <- "colombia"
-  r$sel_tipo <- "registros"
-  r$chart_type <- "map"
-  message("✓ Default values set")
+  # Debug: Verify database tables exist
+  tryCatch({
+    tables <- DBI::dbListTables(con)
+    message("📊 Available database tables: ", paste(tables, collapse = ", "))
+
+    # Check for critical tables
+    required_tables <- c("especie_region", "ind_meta", "indicadores")
+    missing_tables <- required_tables[!required_tables %in% tables]
+    if(length(missing_tables) > 0) {
+      message("❌ Missing required tables: ", paste(missing_tables, collapse = ", "))
+    } else {
+      message("✅ All required tables found")
+    }
+  }, error = function(e) {
+    message("❌ Error checking database tables: ", e$message)
+  })
 
   # Initialize modules
   message("📦 INITIALIZING MODULES")

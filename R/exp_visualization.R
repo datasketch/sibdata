@@ -351,7 +351,10 @@ exp_visualization_server <- function(id, r, con) {
         ),
         size = "l",
         div(
-          h5(paste("Indicador:", sib_merge_ind_label(r$indicador, con = con))),
+          h5(paste("Indicador:", if(!is.null(r$indicador) && r$indicador != "" && !is.na(r$indicador)) {
+            # Show the indicador value directly for now
+            tools::toTitleCase(gsub("_", " ", r$indicador))
+          } else "N/A")),
           h6(paste("Región:", tools::toTitleCase(gsub("-", " ", r$sel_region)), "| Tipo:", tools::toTitleCase(r$sel_tipo))),
           br(),
           div(style = "display: flex; justify-content: flex-end; margin-bottom: 10px;",

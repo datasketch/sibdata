@@ -2,8 +2,6 @@
 # Image-based chart selector module for SIB Data App
 # Uses shinyinvoer::buttonImageInput like the original app
 
-library(shinyinvoer)
-
 #' Chart Selector UI Module
 #'
 #' Creates an image-based chart selector using shinyinvoer::buttonImageInput

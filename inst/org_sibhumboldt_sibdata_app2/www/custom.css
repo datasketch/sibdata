@@ -239,6 +239,19 @@ body {
     flex-direction: column;
 }
 
+/* Override for species table to ensure visibility */
+.species-table-container .dataTables_wrapper {
+    overflow: visible !important;
+    visibility: visible !important;
+    display: block !important;
+}
+
+.species-table-container .dataTables_wrapper .dataTables_scroll {
+    overflow: visible !important;
+    visibility: visible !important;
+    display: block !important;
+}
+
 .dataTables_wrapper .dataTables_scroll {
     flex: 1;
     overflow: auto;

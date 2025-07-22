@@ -34,6 +34,29 @@ exp_inputs_server <- function(id, r, app_options, session_main = NULL) {
   moduleServer(id, function(input, output, session) {
     ns <- session$ns
     
+    # Immediate initialization of default values
+    observe({
+      message("🚀 IMMEDIATE INITIALIZATION OF DEFAULTS")
+      
+      # Set default values for reactive values that don't depend on inputs
+      if (is.null(r$sel_tipo)) {
+        r$sel_tipo <- "registros"
+        message("✓ r$sel_tipo set to default: registros")
+      }
+      
+      if (is.null(r$chart_type)) {
+        r$chart_type <- "map"
+        message("✓ r$chart_type set to default: map")
+      }
+      
+      if (is.null(r$sel_grupo_type)) {
+        r$sel_grupo_type <- "biologico"
+        message("✓ r$sel_grupo_type set to default: biologico")
+      }
+      
+      message("✅ Default values initialized")
+    })
+    
     # URL parameter handling
     url_par <- reactive({
       if (!is.null(session_main)) {
@@ -115,22 +138,74 @@ exp_inputs_server <- function(id, r, app_options, session_main = NULL) {
       }
     })
 
+    # Initialize reactive values when UI is first rendered
+    observe({
+      # Wait for at least the region input to be available
+      req(input$sel_region)
+      
+      message("🚀 INITIALIZING REACTIVE VALUES FROM INPUTS")
+      
+      # Set region
+      if (!is.null(input$sel_region) && input$sel_region != "") {
+        r$sel_region <- input$sel_region
+        message("✓ r$sel_region initialized to: ", r$sel_region)
+      }
+      
+      # Set grupo type (with fallback)
+      if (!is.null(input$sel_grupo_type)) {
+        r$sel_grupo_type <- input$sel_grupo_type
+        message("✓ r$sel_grupo_type initialized to: ", r$sel_grupo_type)
+      } else {
+        r$sel_grupo_type <- "biologico"
+        message("✓ r$sel_grupo_type set to default: biologico")
+      }
+      
+      # Set grupo (with fallback)
+      if (!is.null(input$sel_grupo_type)) {
+        grupo <- sel_grupo()
+        if (!is.null(grupo) && grupo != "todos") {
+          r$sel_grupo <- grupo
+          message("✓ r$sel_grupo initialized to: ", r$sel_grupo)
+        }
+      }
+      
+      # Set tematica (with fallback)
+      if (!is.null(input$sel_tematica)) {
+        tematica <- input$sel_tematica
+        if (!is.null(tematica) && tematica != "todas") {
+          tematica <- gsub("_", "-", tematica)
+          r$sel_tematica <- tematica
+          message("✓ r$sel_tematica initialized to: ", r$sel_tematica)
+        }
+      }
+      
+      # Set default values for other reactive values
+      if (is.null(r$sel_tipo)) {
+        r$sel_tipo <- "registros"
+        message("✓ r$sel_tipo initialized to: ", r$sel_tipo)
+      }
+      
+      if (is.null(r$chart_type)) {
+        r$chart_type <- "map"
+        message("✓ r$chart_type initialized to: ", r$chart_type)
+      }
+      
+      message("✅ All reactive values initialized")
+    })
+
     # Update r reactive values on input changes
     observeEvent(input$sel_region, {
       message("🔧 Region input changed to: ", input$sel_region)
-      message("🔧 Input class: ", class(input$sel_region))
-      message("🔧 Input is null: ", is.null(input$sel_region))
-      message("🔧 Input length: ", length(input$sel_region))
-      if (!is.null(input$sel_region)) {
-        message("🔧 Input value: '", input$sel_region, "'")
+      if (!is.null(input$sel_region) && input$sel_region != "") {
+        r$sel_region <- input$sel_region
+        message("✓ r$sel_region updated to: ", r$sel_region)
       }
-      r$sel_region <- input$sel_region
-      message("✓ r$sel_region updated to: ", r$sel_region)
     }, ignoreNULL = FALSE)
     
     
     observeEvent(input$sel_grupo_type, {
       r$sel_grupo_type <- input$sel_grupo_type
+      message("✓ r$sel_grupo_type updated to: ", r$sel_grupo_type)
     })
     
     observeEvent(sel_grupo(), {
@@ -138,6 +213,7 @@ exp_inputs_server <- function(id, r, app_options, session_main = NULL) {
       grupo <- sel_grupo()
       if (!is.null(grupo) && grupo == "todos") grupo <- NULL
       r$sel_grupo <- grupo
+      message("✓ r$sel_grupo updated to: ", r$sel_grupo)
     })
     
     observeEvent(input$sel_tematica, {
@@ -150,7 +226,7 @@ exp_inputs_server <- function(id, r, app_options, session_main = NULL) {
       }
       
       r$sel_tematica <- tematica
-      message("Tematica updated to: ", tematica)
+      message("✓ r$sel_tematica updated to: ", r$sel_tematica)
     })
   })
 } 

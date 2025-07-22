@@ -116,6 +116,41 @@ exp_species_table_server <- function(id, r, con) {
       message("✓ r$species_data updated")
     })
 
+    # Force summary text to update when species data changes
+    observe({
+      req(r$species_data)
+      message("🔄 FORCING SUMMARY TEXT UPDATE")
+      
+      # Force the summary to re-render
+      output$species_summary <- renderText({
+        message("📝 SPECIES SUMMARY RENDERED")
+        
+        total <- nrow(r$species_data)
+        region <- r$sel_region %||% "todas las regiones"
+        region <- tools::toTitleCase(gsub("-", " ", region))
+        
+        tematica_text <- if (is.null(r$sel_tematica)) {
+          "todas las temáticas"
+        } else {
+          tools::toTitleCase(gsub("_", " ", r$sel_tematica))
+        }
+        
+        grupo_text <- ""
+        if (!is.null(r$sel_grupo)) {
+          grupo <- tools::toTitleCase(gsub("-", " ", r$sel_grupo))
+          grupo_text <- paste("del grupo", grupo)
+        }
+        
+        result <- sprintf("Mostrando %s especies para %s en %s %s",
+                          format(total, big.mark = ","),
+                          tematica_text,
+                          region,
+                          grupo_text)
+        message("Summary text: ", result)
+        result
+      })
+    })
+
     # Independent species table renderer
     observe({
       req(r$species_data)
@@ -184,36 +219,6 @@ exp_species_table_server <- function(id, r, con) {
         message("✓ DataTable created successfully")
         species_table
       })
-    })
-
-    # Render summary text based on selected filters and actual data
-    output$species_summary <- renderText({
-      message("📝 SPECIES SUMMARY RENDERED")
-      req(r$species_data)
-      
-      total <- nrow(r$species_data)
-      region <- r$sel_region %||% "todas las regiones"
-      region <- tools::toTitleCase(gsub("-", " ", region))
-      
-      tematica_text <- if (is.null(r$sel_tematica)) {
-        "todas las temáticas"
-      } else {
-        tools::toTitleCase(gsub("_", " ", r$sel_tematica))
-      }
-      
-      grupo_text <- ""
-      if (!is.null(r$sel_grupo)) {
-        grupo <- tools::toTitleCase(gsub("-", " ", r$sel_grupo))
-        grupo_text <- paste("del grupo", grupo)
-      }
-      
-      result <- sprintf("Mostrando %s especies para %s en %s %s",
-                        format(total, big.mark = ","),
-                        tematica_text,
-                        region,
-                        grupo_text)
-      message("Summary text: ", result)
-      result
     })
 
     # Show species modal

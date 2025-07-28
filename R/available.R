@@ -15,8 +15,19 @@ sib_available_regions <- function(subtipo = NULL, departamento = NULL, con = con
     collect()
   sel_subtipo <- subtipo
   if(!is.null(subtipo)){
-    regs <- regs |>
-      filter(subtipo %in% sel_subtipo)
+    if(subtipo == "Especial"){
+      sel_subtipo <- c(
+        "Territorios indígenas",
+        "Reservas forestales protectoras",
+        "Regiones naturales")
+      regs <- regs |>
+        filter(subtipo %in% sel_subtipo) |>
+        filter(parent != "0")
+    }else{
+      regs <- regs |>
+        filter(subtipo %in% sel_subtipo)
+
+    }
   }
   #regs <- regs |> semi_join(reg_gr, by = c("slug" = "slug_region"))
 
@@ -25,8 +36,12 @@ sib_available_regions <- function(subtipo = NULL, departamento = NULL, con = con
       filter(parent == departamento)
   }
 
-  av_regs <- regs |> distinct(slug) |> pull(slug)
-  names(av_regs) <- regs |> distinct(slug, .keep_all = TRUE) |> pull(label)
+  av_regs <- regs |>
+    distinct(slug) |>
+    pull(slug)
+  names(av_regs) <- regs |>
+    distinct(slug, .keep_all = TRUE) |>
+    pull(label)
   av_regs
 }
 

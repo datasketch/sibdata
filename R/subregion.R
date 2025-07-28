@@ -18,7 +18,7 @@ subregion_tematica <- function(region, con){
     dplyr::left_join(regs, by = "slug_region") |>
     dplyr::select(-fecha_corte) |>
     dplyr::relocate(slug_region, label, everything())
-  subreg_tematica
+  subreg_tematica |> distinct()
 }
 
 

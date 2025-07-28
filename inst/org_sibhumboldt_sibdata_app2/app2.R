@@ -29,11 +29,11 @@ ui <- fluidPage(
     # Left column - Input controls
     column(3,
            wellPanel(
-             # h4("Debug - Reactive Values"),
-             # div(class = "debug-container",
-             #     verbatimTextOutput("debug_reactive")
-             # ),
-             # hr(),
+             h4("Debug - Reactive Values"),
+             div(class = "debug-container",
+                 verbatimTextOutput("debug_reactive")
+             ),
+             hr(),
              h4("Opciones"),
              exp_inputs_ui("inputs")
            )

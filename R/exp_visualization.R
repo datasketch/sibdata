@@ -12,35 +12,12 @@
 exp_visualization_ui <- function(id) {
   ns <- NS(id)
   tagList(
-    # Chart selector first (matching original app header_right position)
-    div(style = "display: flex; justify-content: center; margin-bottom: 15px;",
-        div(
-          class = 'first-container',
-          exp_chart_selector_ui(ns("chart_selector"))
-        )
+    # Chart selector
+    div(style = "text-align: center; margin-bottom: 15px;",
+        exp_chart_selector_ui(ns("chart_selector"))
     ),
 
-    # Add CSS from original app for buttonImageInput styling
-    tags$style(HTML("
-      .buttons-group {
-        display: flex !important;
-        padding: 0px !important;
-      }
-      
-      .buttons-group,.button-style {
-        width: 30px !important;
-        height: 30px !important;
-      }
-      
-      .buttons-group .button-style.active-btn {
-        padding: 0px !important;
-        width: 30px !important;
-      }
-      
-      .button-checkmark {
-        display: none;
-      }
-    ")),
+
 
     # Type selector and data controls below
     div(style = "display: flex; justify-content: space-between;",
@@ -296,11 +273,6 @@ exp_visualization_server <- function(id, r, con) {
       req(r$chart_type)
 
       div(style = "display: flex; gap: 5px; justify-content: flex-end; align-items: center;",
-          # Map data button (only for maps)
-          if(r$chart_type == "map") {
-            actionButton(ns("show_map_data"), "Ver datos del mapa",
-                        class = "btn-sm btn-outline-info")
-          },
           # Chart data button (for charts)
           if(r$chart_type %in% c("pie", "donut", "bar", "treemap")) {
             actionButton(ns("show_chart_data"), "Ver datos del gráfico",

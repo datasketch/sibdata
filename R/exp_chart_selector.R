@@ -71,15 +71,15 @@ exp_chart_selector_server <- function(id, r) {
       message("Active chart: ", active_chart)
       message("Disabled charts: ", paste(names(all_charts[!all_charts %in% av_charts]), collapse = ", "))
 
-      # Create buttonImageInput exactly like original app
+      # Create buttonImageInput with grid layout for single row
       shinyinvoer::buttonImageInput(
         inputId = ns('chart_type'),
         images = all_charts,
         highlightColor = "#09A274",
-        button_width = 40,
+        button_width = 28,
         path = 'www/viz_icons',
         active = active_chart,
-        ncol = 8,
+        layout = "flex",
         disabled = all_charts[!all_charts %in% av_charts]
       )
     })

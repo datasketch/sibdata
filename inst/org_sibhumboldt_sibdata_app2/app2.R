@@ -3,6 +3,7 @@
 
 # Debug configuration
 DEBUG_MODE <- FALSE  # Set to FALSE to hide debug output
+options(timeout = 600)
 
 library(shiny)
 library(DT)

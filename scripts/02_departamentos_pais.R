@@ -64,6 +64,11 @@ map(av_regions, safely(function(region){
   # region <- "resguardo-indigena-pialapi-pueblo-viejo"
   # region <- "region-amazonia"
   # region <- "amazonas"
+  # region <- "vaupes"
+  # region <- "guainia"
+  # region <- "guaviare"
+  # region <- "caqueta"
+  # region <- "putumayo"
 
   reserva_resguardo <- c("reserva-forestal-la-planada",
                          "resguardo-indigena-pialapi-pueblo-viejo")

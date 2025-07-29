@@ -1,7 +1,8 @@
 # app2.R
 # Modular version of SIB Data App
 
-
+# Debug configuration
+DEBUG_MODE <- FALSE  # Set to FALSE to hide debug output
 
 library(shiny)
 library(DT)
@@ -19,6 +20,9 @@ library(hgmagic)
 library(shinyinvoer)
 library(shinyjs)
 
+# Source debug module
+source("exp_debug.R")
+
 ui <- fluidPage(
   useShinyjs(),
   tags$head(
@@ -29,11 +33,7 @@ ui <- fluidPage(
     # Left column - Input controls (25%)
     column(3, style = "padding: 0 5px;",
            wellPanel(
-             h4("Debug - Reactive Values"),
-             div(class = "debug-container",
-                 verbatimTextOutput("debug_reactive")
-             ),
-             hr(),
+             exp_debug_ui("debug", debug = DEBUG_MODE),
              h4("Opciones"),
              exp_inputs_ui("inputs")
            )
@@ -58,13 +58,13 @@ ui <- fluidPage(
 
 server <- function(input, output, session) {
 
-  message("🚀 SERVER STARTING")
+  if (DEBUG_MODE) message("🚀 SERVER STARTING")
 
   # Create session-specific app options
-  temp_con <- get_app_connection("db/sibdata.sqlite")
-  app_options <- get_app_options(temp_con)
+  temp_con <- get_app_connection("db/sibdata.sqlite", debug = DEBUG_MODE)
+  app_options <- get_app_options(temp_con, debug = DEBUG_MODE)
   DBI::dbDisconnect(temp_con)
-  message("✓ App options loaded")
+  if (DEBUG_MODE) message("✓ App options loaded")
 
   # Create session-specific reactive values
   r <- reactiveValues(
@@ -90,36 +90,39 @@ server <- function(input, output, session) {
   )
 
   # Create database connection inside server
-  con <- get_app_connection("db/sibdata.sqlite")
-  message("✓ Database connection created")
+  con <- get_app_connection("db/sibdata.sqlite", debug = DEBUG_MODE)
+  if (DEBUG_MODE) message("✓ Database connection created")
 
   # Debug: Verify database tables exist
   tryCatch({
     tables <- DBI::dbListTables(con)
-    message("📊 Available database tables: ", paste(tables, collapse = ", "))
+    if (DEBUG_MODE) message("📊 Available database tables: ", paste(tables, collapse = ", "))
 
     # Check for critical tables
     required_tables <- c("especie_region", "ind_meta", "indicadores")
     missing_tables <- required_tables[!required_tables %in% tables]
     if(length(missing_tables) > 0) {
-      message("❌ Missing required tables: ", paste(missing_tables, collapse = ", "))
+      if (DEBUG_MODE) message("❌ Missing required tables: ", paste(missing_tables, collapse = ", "))
     } else {
-      message("✅ All required tables found")
+      if (DEBUG_MODE) message("✅ All required tables found")
     }
   }, error = function(e) {
-    message("❌ Error checking database tables: ", e$message)
+    if (DEBUG_MODE) message("❌ Error checking database tables: ", e$message)
   })
 
   # Initialize modules
-  message("📦 INITIALIZING MODULES")
-  exp_inputs_server("inputs", r, app_options, session)
-  message("✓ Inputs module initialized")
+  if (DEBUG_MODE) message("📦 INITIALIZING MODULES")
+  exp_inputs_server("inputs", r, app_options, session, debug = DEBUG_MODE)
+  if (DEBUG_MODE) message("✓ Inputs module initialized")
 
-  exp_species_table_server("species", r, con)
-  message("✓ Species table module initialized")
+  exp_species_table_server("species", r, con, debug = DEBUG_MODE)
+  if (DEBUG_MODE) message("✓ Species table module initialized")
 
-  exp_visualization_server("viz", r, con)
-  message("✓ Visualization module initialized")
+  exp_visualization_server("viz", r, con, debug = DEBUG_MODE)
+  if (DEBUG_MODE) message("✓ Visualization module initialized")
+
+  exp_debug_server("debug", r, debug = DEBUG_MODE)
+  if (DEBUG_MODE) message("✓ Debug module initialized")
 
   # Add dropdown click-outside behavior
   observe({
@@ -144,7 +147,7 @@ server <- function(input, output, session) {
 
   # Central reactive conditions - chart availability and control visibility
   observe({
-    message("🔧 CENTRAL REACTIVE CONDITIONS")
+    if (DEBUG_MODE) message("🔧 CENTRAL REACTIVE CONDITIONS")
 
     # Helper function for special themes
     is_amenazadas_or_cites_or_exoticas <- function() {
@@ -182,34 +185,38 @@ server <- function(input, output, session) {
       if(!r$chart_type %in% r$available_charts) {
         old_chart <- r$chart_type
         r$chart_type <- r$available_charts[1]
-        message("Chart type changed due to availability: ", old_chart, " -> ", r$chart_type)
+        if (DEBUG_MODE) message("Chart type changed due to availability: ", old_chart, " -> ", r$chart_type)
       }
     }
 
-    message("✓ Available charts: ", paste(names(r$available_charts), collapse = ", "))
-    message("✓ Show subcategoria: ", r$show_subcategoria)
-    message("✓ Show especies total/estimadas: ", r$show_especies_total_estimadas)
+    if (DEBUG_MODE) {
+      message("✓ Available charts: ", paste(names(r$available_charts), collapse = ", "))
+      message("✓ Show subcategoria: ", r$show_subcategoria)
+      message("✓ Show especies total/estimadas: ", r$show_especies_total_estimadas)
+    }
   })
 
   # Central data management - compute indicator and fetch main data
   observe({
-    message("🔍 DATA OBSERVER TRIGGERED")
-    message("Current reactive values:")
-    message("- r$sel_region: ", r$sel_region)
-    message("- r$sel_tipo: ", r$sel_tipo)
-    message("- r$chart_type: ", r$chart_type)
-    message("- r$indicador: ", r$indicador)
+    if (DEBUG_MODE) {
+      message("🔍 DATA OBSERVER TRIGGERED")
+      message("Current reactive values:")
+      message("- r$sel_region: ", r$sel_region)
+      message("- r$sel_tipo: ", r$sel_tipo)
+      message("- r$chart_type: ", r$chart_type)
+      message("- r$indicador: ", r$indicador)
+    }
 
     req(r$sel_region)
-    message("✓ r$sel_region requirement met: ", r$sel_region)
+    if (DEBUG_MODE) message("✓ r$sel_region requirement met: ", r$sel_region)
 
     req(r$sel_tipo)
-    message("✓ r$sel_tipo requirement met: ", r$sel_tipo)
+    if (DEBUG_MODE) message("✓ r$sel_tipo requirement met: ", r$sel_tipo)
 
     req(r$chart_type)
-    message("✓ r$chart_type requirement met: ", r$chart_type)
+    if (DEBUG_MODE) message("✓ r$chart_type requirement met: ", r$chart_type)
 
-    message("=== COMPUTING INDICATOR ===")
+    if (DEBUG_MODE) message("=== COMPUTING INDICATOR ===")
 
     # Helper function for special themes
     is_amenazadas_or_cites_or_exoticas <- function() {
@@ -222,9 +229,9 @@ server <- function(input, output, session) {
 
     # Compute indicator for maps
     if(r$chart_type == "map") {
-      message("Chart type is map - computing indicator...")
+      if (DEBUG_MODE) message("Chart type is map - computing indicator...")
       if(is_amenazadas_or_cites_or_exoticas()) {
-        message("Special theme detected")
+        if (DEBUG_MODE) message("Special theme detected")
         if(!is.null(r$sel_tematica) && grepl("amenazadas", r$sel_tematica)) {
           # Use subcategory if available
           subcategory <- r$amenazadas_categoria %||% "_total"
@@ -239,7 +246,7 @@ server <- function(input, output, session) {
           r$indicador <- paste0(r$sel_tipo, "_", tematica_api, subcategory)
         }
       } else {
-        message("Regular theme")
+        if (DEBUG_MODE) message("Regular theme")
         if(r$sel_tipo == "especies" && is.null(r$sel_tematica)) {
           # Use total/estimadas if available
           total_est <- r$especies_total_estimadas %||% "total"
@@ -249,25 +256,27 @@ server <- function(input, output, session) {
         }
       }
     } else {
-      message("Chart type is not map - setting indicador to NULL")
+      if (DEBUG_MODE) message("Chart type is not map - setting indicador to NULL")
       r$indicador <- NULL
     }
 
-    message("Indicador changed from '", old_indicador, "' to '", r$indicador, "'")
+    if (DEBUG_MODE) message("Indicador changed from '", old_indicador, "' to '", r$indicador, "'")
 
     # Fetch main data
     tryCatch({
       fetch_start <- Sys.time()
-      message("=== STARTING DATA FETCH ===")
-      message("Fetch started at: ", fetch_start)
-      message("Parameters:")
-      message("- Region: ", r$sel_region)
-      message("- Grupo: ", r$sel_grupo)
-      message("- Tipo: ", r$sel_tipo)
-      message("- Tematica: ", r$sel_tematica)
-      message("- Indicador: ", r$indicador)
-      message("- Chart type: ", r$chart_type)
-      message("- Subregiones: ", if(r$chart_type == "map") TRUE else FALSE)
+      if (DEBUG_MODE) {
+        message("=== STARTING DATA FETCH ===")
+        message("Fetch started at: ", fetch_start)
+        message("Parameters:")
+        message("- Region: ", r$sel_region)
+        message("- Grupo: ", r$sel_grupo)
+        message("- Tipo: ", r$sel_tipo)
+        message("- Tematica: ", r$sel_tematica)
+        message("- Indicador: ", r$indicador)
+        message("- Chart type: ", r$chart_type)
+        message("- Subregiones: ", if(r$chart_type == "map") TRUE else FALSE)
+      }
 
       # Convert dashes to underscores for API compatibility
       tematica_api <- if(!is.null(r$sel_tematica)) gsub("-", "_", r$sel_tematica) else r$sel_tematica
@@ -286,28 +295,13 @@ server <- function(input, output, session) {
       fetch_end <- Sys.time()
       fetch_duration <- difftime(fetch_end, fetch_start, units = "secs")
 
-      message("✓ DATA FETCH COMPLETED in ", round(fetch_duration, 2), " seconds")
-      message("✓ Data rows: ", nrow(d))
-      message("✓ Data columns: ", paste(names(d), collapse = ", "))
+      if (DEBUG_MODE) {
+        message("✓ DATA FETCH COMPLETED in ", round(fetch_duration, 2), " seconds")
+        message("✓ Data rows: ", nrow(d))
+        message("✓ Data columns: ", paste(names(d), collapse = ", "))
 
-      # Debug: Print raw data structure
-      message("📊 RAW DATA DEBUG:")
-      if(nrow(d) > 0) {
-        for(i in 1:min(3, nrow(d))) {
-          row_data <- sapply(d[i,], function(x) if(is.null(x)) "NULL" else as.character(x))
-          message("Row ", i, ": ", paste(names(d), "=", row_data, collapse = " | "))
-        }
-      }
-
-      # For charts (not map/table), merge indicator labels
-      if(r$chart_type %in% c("pie", "donut", "treemap", "bar")) {
-        message("Merging indicator labels for chart type: ", r$chart_type)
-        d_before <- d
-        d <- d |> sib_merge_ind_label(con = con)
-        message("✓ Indicator labels merged")
-
-        # Debug: Print processed data structure
-        message("📊 PROCESSED DATA DEBUG:")
+        # Debug: Print raw data structure
+        message("📊 RAW DATA DEBUG:")
         if(nrow(d) > 0) {
           for(i in 1:min(3, nrow(d))) {
             row_data <- sapply(d[i,], function(x) if(is.null(x)) "NULL" else as.character(x))
@@ -316,57 +310,43 @@ server <- function(input, output, session) {
         }
       }
 
+      # For charts (not map/table), merge indicator labels
+      if(r$chart_type %in% c("pie", "donut", "treemap", "bar")) {
+        if (DEBUG_MODE) message("Merging indicator labels for chart type: ", r$chart_type)
+        d_before <- d
+        d <- d |> sib_merge_ind_label(con = con)
+        if (DEBUG_MODE) message("✓ Indicator labels merged")
+
+        # Debug: Print processed data structure
+        if (DEBUG_MODE) {
+          message("📊 PROCESSED DATA DEBUG:")
+          if(nrow(d) > 0) {
+            for(i in 1:min(3, nrow(d))) {
+              row_data <- sapply(d[i,], function(x) if(is.null(x)) "NULL" else as.character(x))
+              message("Row ", i, ": ", paste(names(d), "=", row_data, collapse = " | "))
+            }
+          }
+        }
+      }
+
       old_data_rows <- if(is.null(r$main_data)) 0 else nrow(r$main_data)
       r$main_data <- d
-      message("✓ r$main_data updated (was ", old_data_rows, " rows, now ", nrow(d), " rows)")
+      if (DEBUG_MODE) message("✓ r$main_data updated (was ", old_data_rows, " rows, now ", nrow(d), " rows)")
 
     }, error = function(e) {
-      message("❌ ERROR fetching main data:")
-      message("Error message: ", e$message)
-      message("Error details: ", conditionMessage(e))
+      if (DEBUG_MODE) {
+        message("❌ ERROR fetching main data:")
+        message("Error message: ", e$message)
+        message("Error details: ", conditionMessage(e))
+      }
       r$main_data <- NULL
-      message("✓ r$main_data set to NULL due to error")
+      if (DEBUG_MODE) message("✓ r$main_data set to NULL due to error")
     })
 
-    message("🏁 DATA OBSERVER COMPLETED")
+    if (DEBUG_MODE) message("🏁 DATA OBSERVER COMPLETED")
   })
 
-  # Debug panel (only shown in debug mode)
-  output$debug_panel <- renderUI({
-    if (r$is_published) {
-      return(NULL)  # Hide debug panel in published mode
-    }
 
-    tagList(
-      h4("Debug - Reactive Values"),
-      div(class = "debug-container",
-          verbatimTextOutput("debug_reactive")
-      ),
-      hr()
-    )
-  })
-
-  # Debug output for reactive values
-  output$debug_reactive <- renderPrint({
-    cat("=== Current Reactive Values ===\n")
-    cat("sel_region:", r$sel_region, "\n")
-    cat("sel_grupo_type:", r$sel_grupo_type, "\n")
-    cat("sel_grupo:", r$sel_grupo, "\n")
-    cat("sel_tematica:", r$sel_tematica, "\n")
-    cat("sel_tipo:", r$sel_tipo, "\n")
-    cat("chart_type:", r$chart_type, "\n")
-    cat("indicador:", r$indicador, "\n")
-    cat("breadcrumb:", r$breadcrumb, "\n")
-    cat("amenazadas_categoria:", r$amenazadas_categoria, "\n")
-    cat("cites_categoria:", r$cites_categoria, "\n")
-    cat("especies_total_estimadas:", r$especies_total_estimadas, "\n")
-    cat("show_subcategoria:", r$show_subcategoria, "\n")
-    cat("show_especies_total_estimadas:", r$show_especies_total_estimadas, "\n")
-    cat("available_charts:", paste(r$available_charts, collapse = ", "), "\n")
-    cat("main_data rows:", if(is.null(r$main_data)) "NULL" else nrow(r$main_data), "\n")
-    cat("species_data rows:", if(is.null(r$species_data)) "NULL" else nrow(r$species_data), "\n")
-    cat("map_data rows:", if(is.null(r$map_data)) "NULL" else nrow(r$map_data), "\n")
-  })
 
   # Close database connection when session ends
   session$onSessionEnded(function() {

@@ -54,14 +54,15 @@ exp_visualization_ui <- function(id) {
 #' @param id Module ID
 #' @param r Reactive values object
 #' @param con Database connection
+#' @param debug Boolean to control console debug output
 #' @export
-exp_visualization_server <- function(id, r, con) {
+exp_visualization_server <- function(id, r, con, debug = FALSE) {
   moduleServer(id, function(input, output, session) {
     ns <- session$ns
 
     # Initialize sub-modules
-    exp_chart_selector_server("chart_selector", r)
-    exp_data_controls_server("data_controls", r)
+    exp_chart_selector_server("chart_selector", r, debug = debug)
+    exp_data_controls_server("data_controls", r, debug = debug)
 
     # Update reactive values when inputs change
     observeEvent(input$sel_tipo, {
@@ -109,64 +110,72 @@ exp_visualization_server <- function(id, r, con) {
 
     # Map rendering - purely reactive to r values
     output$map_viz <- leaflet::renderLeaflet({
-      message("=== MAP RENDER CALLED ===")
-      message("Current state:")
-      message("- r$sel_region: ", r$sel_region)
-      message("- r$sel_tipo: ", r$sel_tipo)
-      message("- r$chart_type: ", r$chart_type)
-      message("- r$main_data is null: ", is.null(r$main_data))
-      if (!is.null(r$main_data)) {
-        message("- r$main_data rows: ", nrow(r$main_data))
+      if (debug) {
+        message("=== MAP RENDER CALLED ===")
+        message("Current state:")
+        message("- r$sel_region: ", r$sel_region)
+        message("- r$sel_tipo: ", r$sel_tipo)
+        message("- r$chart_type: ", r$chart_type)
+        message("- r$main_data is null: ", is.null(r$main_data))
+        if (!is.null(r$main_data)) {
+          message("- r$main_data rows: ", nrow(r$main_data))
+        }
       }
 
       req(r$sel_region)
-      message("✓ r$sel_region requirement met")
+      if (debug) message("✓ r$sel_region requirement met")
 
       req(r$sel_tipo)
-      message("✓ r$sel_tipo requirement met")
+      if (debug) message("✓ r$sel_tipo requirement met")
 
       req(r$chart_type == "map")
-      message("✓ r$chart_type == 'map' requirement met")
+      if (debug) message("✓ r$chart_type == 'map' requirement met")
 
       req(r$main_data)
-      message("✓ r$main_data requirement met")
+      if (debug) message("✓ r$main_data requirement met")
 
-      message("=== ALL REQUIREMENTS MET - Starting map render ===")
-      message("Using data from r$main_data with ", nrow(r$main_data), " rows")
+      if (debug) {
+        message("=== ALL REQUIREMENTS MET - Starting map render ===")
+        message("Using data from r$main_data with ", nrow(r$main_data), " rows")
+      }
 
       # Call choropleth_map function from R/map.R directly with r values
       tryCatch({
         start_time <- Sys.time()
-        message("Map render started at: ", start_time)
+        if (debug) message("Map render started at: ", start_time)
 
         # Get map connection
-        message("Getting geotable connection...")
+        if (debug) message("Getting geotable connection...")
         conmap <- geotable::gt_con()
-        message("✓ Got geotable connection")
+        if (debug) message("✓ Got geotable connection")
 
-        message("Calling choropleth_map with:")
-        message("- Data rows: ", nrow(r$main_data))
-        message("- Region: ", r$sel_region)
-        message("- Tipo: ", r$sel_tipo)
-        message("- Tematica: ", r$sel_tematica)
-        message("- Indicador: ", r$indicador)
+        if (debug) {
+          message("Calling choropleth_map with:")
+          message("- Data rows: ", nrow(r$main_data))
+          message("- Region: ", r$sel_region)
+          message("- Tipo: ", r$sel_tipo)
+          message("- Tematica: ", r$sel_tematica)
+          message("- Indicador: ", r$indicador)
+        }
 
         # Store the data that will be used for the map
         r$map_data <- r$main_data
 
         # Debug the data structure before calling choropleth_map
-        message("📊 DATA STRUCTURE DEBUG:")
-        message("Column names: ", paste(names(r$main_data), collapse = ", "))
-        message("First few rows:")
-        if (nrow(r$main_data) > 0) {
-          for(i in 1:min(3, nrow(r$main_data))) {
-            row_data <- paste(r$main_data[i,], collapse = " | ")
-            message("Row ", i, ": ", row_data)
+        if (debug) {
+          message("📊 DATA STRUCTURE DEBUG:")
+          message("Column names: ", paste(names(r$main_data), collapse = ", "))
+          message("First few rows:")
+          if (nrow(r$main_data) > 0) {
+            for(i in 1:min(3, nrow(r$main_data))) {
+              row_data <- paste(r$main_data[i,], collapse = " | ")
+              message("Row ", i, ": ", row_data)
+            }
           }
         }
 
         # Call the choropleth_map function with all necessary parameters
-        message("Calling choropleth_map function...")
+        if (debug) message("Calling choropleth_map function...")
         result <- choropleth_map(
           data = r$main_data,
           region = r$sel_region,
@@ -182,54 +191,60 @@ exp_visualization_server <- function(id, r, con) {
 
         end_time <- Sys.time()
         duration <- difftime(end_time, start_time, units = "secs")
-        message("✓ choropleth_map completed in ", round(duration, 2), " seconds")
-        message("✓ Result is null: ", is.null(result))
-        if (!is.null(result)) {
-          message("✓ Result class: ", class(result)[1])
+        if (debug) {
+          message("✓ choropleth_map completed in ", round(duration, 2), " seconds")
+          message("✓ Result is null: ", is.null(result))
+          if (!is.null(result)) {
+            message("✓ Result class: ", class(result)[1])
+          }
         }
 
-        message("=== MAP RENDER SUCCESSFUL ===")
+        if (debug) message("=== MAP RENDER SUCCESSFUL ===")
         return(result)
       }, error = function(e) {
-        message("❌ ERROR in map rendering:")
-        message("Error message: ", e$message)
-        message("Error details: ", conditionMessage(e))
-        message("Call stack: ", paste(capture.output(traceback()), collapse = "\n"))
+        if (debug) {
+          message("❌ ERROR in map rendering:")
+          message("Error message: ", e$message)
+          message("Error details: ", conditionMessage(e))
+          message("Call stack: ", paste(capture.output(traceback()), collapse = "\n"))
+        }
 
-        message("Returning fallback leaflet map...")
+        if (debug) message("Returning fallback leaflet map...")
         # Return a simple leaflet map as fallback
         fallback <- leaflet::leaflet() %>%
           leaflet::addTiles() %>%
           leaflet::setView(lng = -74.06, lat = 4.6, zoom = 6)
 
-        message("✓ Fallback map created")
+        if (debug) message("✓ Fallback map created")
         return(fallback)
       })
     })
 
     # Highcharts rendering for pie, donut, bar, treemap
     output$hgch_viz <- highcharter::renderHighchart({
-      message("=== HIGHCHART RENDER CALLED ===")
-      message("Chart type: ", r$chart_type)
+      if (debug) {
+        message("=== HIGHCHART RENDER CALLED ===")
+        message("Chart type: ", r$chart_type)
+      }
 
       req(r$chart_type %in% c("pie", "donut", "bar", "treemap"))
       req(r$main_data)
 
-      message("Creating hgmagic chart...")
+      if (debug) message("Creating hgmagic chart...")
 
       # Validate chart data
       if(!validate_chart_data(r$main_data, r$chart_type)) {
-        message("❌ Chart data validation failed")
+        if (debug) message("❌ Chart data validation failed")
         return(NULL)
       }
 
       # Create chart using hgmagic
       tryCatch({
         result <- create_hgmagic_chart(r$chart_type, r$main_data, r, con)
-        message("✓ hgmagic chart created")
+        if (debug) message("✓ hgmagic chart created")
         return(result)
       }, error = function(e) {
-        message("❌ ERROR creating hgmagic chart: ", e$message)
+        if (debug) message("❌ ERROR creating hgmagic chart: ", e$message)
         return(NULL)
       })
     })
@@ -273,12 +288,18 @@ exp_visualization_server <- function(id, r, con) {
       req(r$chart_type)
 
       div(style = "display: flex; gap: 5px; justify-content: flex-end; align-items: center;",
-          # Chart data button (for charts)
-          if(r$chart_type %in% c("pie", "donut", "bar", "treemap")) {
+          # Data button (for all chart types)
+          if(r$chart_type == "map") {
+            actionButton(ns("show_map_data"), "Ver datos del mapa",
+                        class = "btn-sm btn-outline-info")
+          } else if(r$chart_type == "table") {
+            actionButton(ns("show_table_data"), "Ver datos de la tabla",
+                        class = "btn-sm btn-outline-info")
+          } else {
             actionButton(ns("show_chart_data"), "Ver datos del gráfico",
                         class = "btn-sm btn-outline-info")
           },
-          # Chart download button (for highcharts)
+          # Chart download button (for highcharts only)
           if(r$chart_type %in% c("pie", "donut", "bar", "treemap")) {
             actionButton(ns("download_chart"), "Descargar gráfico",
                         class = "btn-sm btn-outline-secondary")
@@ -330,7 +351,57 @@ exp_visualization_server <- function(id, r, con) {
                            r$map_data
                          }),
                          formats = c("csv", "xlsx", "json"),
-                         file_prefix = "datos_mapa")
+                         file_prefix = "datos_mapa",
+                         debug = debug)
+    })
+
+    # Show table data modal
+    observeEvent(input$show_table_data, {
+      req(r$main_data)
+
+      showModal(modalDialog(
+        title = div(
+          style = "display: flex; justify-content: space-between; align-items: center;",
+          span("Datos de la Tabla"),
+          tags$button(
+            type = "button",
+            class = "close",
+            `data-dismiss` = "modal",
+            `aria-label` = "Close",
+            style = "font-size: 1.5rem; font-weight: bold; line-height: 1; color: #000; text-shadow: 0 1px 0 #fff; opacity: 0.5; border: none; background: none;",
+            HTML("&times;")
+          )
+        ),
+        size = "l",
+        div(
+          h5(paste("Tipo de visualización:", tools::toTitleCase(r$chart_type))),
+          h6(paste("Región:", tools::toTitleCase(gsub("-", " ", r$sel_region)), "| Tipo:", tools::toTitleCase(r$sel_tipo))),
+          if(!is.null(r$sel_tematica)) {
+            h6(paste("Temática:", tools::toTitleCase(gsub("-", " ", r$sel_tematica))))
+          },
+          br(),
+          div(style = "display: flex; justify-content: flex-end; margin-bottom: 10px;",
+              downloadTableUI(ns("table_modal_download"),
+                             dropdownLabel = "Descargar datos",
+                             formats = c("csv", "xlsx", "json"),
+                             display = "dropdown",
+                             dropdownWidth = 200)
+          ),
+          DT::dataTableOutput(ns("table_data_table"))
+        ),
+        footer = NULL,
+        easyClose = TRUE
+      ))
+
+      # Initialize download server after modal is shown
+      downloadTableServer("table_modal_download",
+                         element = reactive({
+                           req(r$main_data)
+                           r$main_data
+                         }),
+                         formats = c("csv", "xlsx", "json"),
+                         file_prefix = "datos_tabla",
+                         debug = debug)
     })
 
     # Show chart data modal
@@ -378,7 +449,8 @@ exp_visualization_server <- function(id, r, con) {
                            r$main_data
                          }),
                          formats = c("csv", "xlsx", "json"),
-                         file_prefix = "datos_grafico")
+                         file_prefix = "datos_grafico",
+                         debug = debug)
     })
 
     # Render map data table in modal
@@ -462,6 +534,34 @@ exp_visualization_server <- function(id, r, con) {
       )
     })
 
+    # Render table data table in modal
+    output$table_data_table <- DT::renderDataTable({
+      req(r$main_data)
+
+      # Use table data directly (already processed with labels)
+      display_data <- r$main_data
+
+      DT::datatable(
+        display_data,
+        rownames = FALSE,
+        selection = 'none',
+        escape = FALSE,
+        options = list(
+          dom = 'Bftsp',
+          language = list(url = '//cdn.datatables.net/plug-ins/1.10.11/i18n/Spanish.json'),
+          scrollX = TRUE,
+          scrollY = "400px",
+          pageLength = 15,
+          searching = TRUE,
+          initComplete = htmlwidgets::JS(
+            "function(settings, json) {",
+            "$(this.api().table().header()).css({'background-color': '#4ad3ac', 'color': '#ffffff'});",
+            "}"
+          )
+        )
+      )
+    })
+
     # Download chart data server for modal
     downloadTableServer("chart_modal_download",
                        element = reactive({
@@ -469,7 +569,8 @@ exp_visualization_server <- function(id, r, con) {
                          r$main_data
                        }),
                        formats = c("csv", "xlsx", "json"),
-                       file_prefix = "datos_grafico")
+                       file_prefix = "datos_grafico",
+                       debug = debug)
 
   })
 }

@@ -44,28 +44,33 @@ exp_species_table_ui <- function(id) {
 #' @param id Module ID
 #' @param r Reactive values object
 #' @param con Database connection
+#' @param debug Boolean to control console debug output
 #' @export
-exp_species_table_server <- function(id, r, con) {
+exp_species_table_server <- function(id, r, con, debug = FALSE) {
   moduleServer(id, function(input, output, session) {
     ns <- session$ns
     
-    message("🔧 SPECIES TABLE MODULE INITIALIZED")
+    if (debug) message("🔧 SPECIES TABLE MODULE INITIALIZED")
 
     # Observer to track region changes
     observe({
-      message("🔄 REGION OBSERVER TRIGGERED")
-      message("Current r$sel_region: ", r$sel_region)
+      if (debug) {
+        message("🔄 REGION OBSERVER TRIGGERED")
+        message("Current r$sel_region: ", r$sel_region)
+      }
     })
 
     # Fetch species data reactively
     data_especies <- reactive({
-      message("🔍 SPECIES DATA REACTIVE TRIGGERED")
-      message("r$sel_region: ", r$sel_region)
-      message("r$sel_grupo: ", r$sel_grupo)
-      message("r$sel_tematica: ", r$sel_tematica)
+      if (debug) {
+        message("🔍 SPECIES DATA REACTIVE TRIGGERED")
+        message("r$sel_region: ", r$sel_region)
+        message("r$sel_grupo: ", r$sel_grupo)
+        message("r$sel_tematica: ", r$sel_tematica)
+      }
       
       req(r$sel_region)
-      message("✓ r$sel_region requirement met")
+      if (debug) message("✓ r$sel_region requirement met")
       
       # Build parameters for list_species
       params <- list(
@@ -74,10 +79,12 @@ exp_species_table_server <- function(id, r, con) {
         tematica = r$sel_tematica
       )
       
-      message("=== Species query parameters ===")
-      message("Region: ", params$region)
-      message("Grupo: ", params$grupo)
-      message("Tematica: ", params$tematica)
+      if (debug) {
+        message("=== Species query parameters ===")
+        message("Region: ", params$region)
+        message("Grupo: ", params$grupo)
+        message("Tematica: ", params$tematica)
+      }
       
       # Call list_species with current parameters
       tryCatch({
@@ -89,41 +96,43 @@ exp_species_table_server <- function(id, r, con) {
         ) |>
           dplyr::collect()
         
-        message("Species query returned ", nrow(l_s), " rows")
+        if (debug) message("Species query returned ", nrow(l_s), " rows")
         
         # Format for display
         if (nrow(l_s) > 0) {
           formatted_data <- format_species_data(l_s)
-          message("✓ Species data formatted successfully")
+          if (debug) message("✓ Species data formatted successfully")
           formatted_data
         } else {
-          message("⚠ No species data returned")
+          if (debug) message("⚠ No species data returned")
           NULL
         }
       }, error = function(e) {
-        message("❌ Error fetching species data: ", e$message)
-        message("Error details: ", conditionMessage(e))
+        if (debug) {
+          message("❌ Error fetching species data: ", e$message)
+          message("Error details: ", conditionMessage(e))
+        }
         NULL
       })
     })
     
     # Store species data in reactive values
     observe({
-      message("🔄 UPDATING r$species_data")
+      if (debug) message("🔄 UPDATING r$species_data")
       species_data <- data_especies()
-      message("Species data rows: ", if(is.null(species_data)) "NULL" else nrow(species_data))
+      if (debug) message("Species data rows: ", if(is.null(species_data)) "NULL" else nrow(species_data))
       r$species_data <- species_data
-      message("✓ r$species_data updated")
+      if (debug) message("✓ r$species_data updated")
     })
 
     # Force summary text to update when species data changes
     observe({
       req(r$species_data)
-      message("🔄 FORCING SUMMARY TEXT UPDATE")
+      if (debug) message("🔄 FORCING SUMMARY TEXT UPDATE")
       
       # Force the summary to re-render
       output$species_summary <- renderText({
-        message("📝 SPECIES SUMMARY RENDERED")
+        if (debug) message("📝 SPECIES SUMMARY RENDERED")
         
         total <- nrow(r$species_data)
         region <- r$sel_region %||% "todas las regiones"
@@ -146,7 +155,7 @@ exp_species_table_server <- function(id, r, con) {
                           tematica_text,
                           region,
                           grupo_text)
-        message("Summary text: ", result)
+        if (debug) message("Summary text: ", result)
         result
       })
     })
@@ -154,19 +163,21 @@ exp_species_table_server <- function(id, r, con) {
     # Independent species table renderer
     observe({
       req(r$species_data)
-      message("🎯 INDEPENDENT SPECIES TABLE RENDERER TRIGGERED")
+      if (debug) message("🎯 INDEPENDENT SPECIES TABLE RENDERER TRIGGERED")
       
       # Force the table to re-render
       output$list_species <- renderDataTable({
-        message("🎨 RENDERING SPECIES TABLE (INDEPENDENT)")
+        if (debug) message("🎨 RENDERING SPECIES TABLE (INDEPENDENT)")
         
         species_data <- r$species_data
-        message("Species data rows for table: ", nrow(species_data))
-        message("Species data columns: ", paste(names(species_data), collapse = ", "))
+        if (debug) {
+          message("Species data rows for table: ", nrow(species_data))
+          message("Species data columns: ", paste(names(species_data), collapse = ", "))
+        }
 
         # Check if we have data to display
         if (nrow(species_data) == 0) {
-          message("⚠ No data to display in table")
+          if (debug) message("⚠ No data to display in table")
           empty_df <- data.frame(
             "No hay especies" = "No se encontraron especies para los filtros seleccionados"
           )
@@ -199,7 +210,7 @@ exp_species_table_server <- function(id, r, con) {
           )
         }
         
-        message("✓ Creating DataTable with ", nrow(species_data), " rows")
+        if (debug) message("✓ Creating DataTable with ", nrow(species_data), " rows")
 
         # Create the full species table with proper options
         species_table <- DT::datatable(
@@ -216,7 +227,7 @@ exp_species_table_server <- function(id, r, con) {
           )
         )
         
-        message("✓ DataTable created successfully")
+        if (debug) message("✓ DataTable created successfully")
         species_table
       })
     })
@@ -309,6 +320,7 @@ exp_species_table_server <- function(id, r, con) {
     downloadTableServer("species_modal_download", 
                        element = reactive(r$species_data), 
                        formats = c("csv", "xlsx", "json"),
-                       file_prefix = "especies")
+                       file_prefix = "especies",
+                       debug = debug)
   })
 } 

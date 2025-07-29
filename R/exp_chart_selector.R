@@ -26,9 +26,10 @@ exp_chart_selector_ui <- function(id) {
 #'
 #' @param id Module ID
 #' @param r Reactive values object
+#' @param debug Boolean to control console debug output
 #' @return Server logic for chart selector
 #' @export
-exp_chart_selector_server <- function(id, r) {
+exp_chart_selector_server <- function(id, r, debug = FALSE) {
   moduleServer(id, function(input, output, session) {
     ns <- session$ns
 
@@ -63,13 +64,15 @@ exp_chart_selector_server <- function(id, r) {
       # Update chart type in reactive values if it changed
       if(is.null(r$chart_type) || !r$chart_type %in% av_charts) {
         r$chart_type <- active_chart
-        message("Chart type automatically updated to: ", active_chart)
+        if (debug) message("Chart type automatically updated to: ", active_chart)
       }
 
-      message("=== Chart Selector UI Update ===")
-      message("Available charts: ", paste(names(av_charts), collapse = ", "))
-      message("Active chart: ", active_chart)
-      message("Disabled charts: ", paste(names(all_charts[!all_charts %in% av_charts]), collapse = ", "))
+      if (debug) {
+        message("=== Chart Selector UI Update ===")
+        message("Available charts: ", paste(names(av_charts), collapse = ", "))
+        message("Active chart: ", active_chart)
+        message("Disabled charts: ", paste(names(all_charts[!all_charts %in% av_charts]), collapse = ", "))
+      }
 
       # Create buttonImageInput with grid layout for single row
       shinyinvoer::buttonImageInput(
@@ -91,7 +94,7 @@ exp_chart_selector_server <- function(id, r) {
         # (availability is handled in the UI rendering)
         old_chart <- r$chart_type
         r$chart_type <- input$chart_type
-        message("Chart type saved to reactive values: ", old_chart, " -> ", input$chart_type)
+        if (debug) message("Chart type saved to reactive values: ", old_chart, " -> ", input$chart_type)
       }
     })
 

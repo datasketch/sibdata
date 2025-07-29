@@ -71,29 +71,30 @@ downloadTableUI <- function(id, text = "Download", formats = NULL,
 #' @param element Reactive expression returning data to download
 #' @param formats File formats to support
 #' @param file_prefix Prefix for downloaded files
+#' @param debug Boolean to control console debug output
 #' @export
-downloadTableServer <- function(id, element = NULL, formats, file_prefix = "table") {
+downloadTableServer <- function(id, element = NULL, formats, file_prefix = "table", debug = FALSE) {
   moduleServer(id, function(input, output, session) {
     ns <- session$ns
     tbl_formats <- formats
     
-    message("📥 Download server initialized for ID: ", id)
-    message("📥 Formats: ", paste(formats, collapse = ", "))
+    if (debug) message("📥 Download server initialized for ID: ", id)
+    if (debug) message("📥 Formats: ", paste(formats, collapse = ", "))
 
     lapply(tbl_formats, function(z) {
       handler_id <- paste0("DownloadTbl", z)
-      message("📥 Creating download handler: ", handler_id)
+      if (debug) message("📥 Creating download handler: ", handler_id)
       
       output[[handler_id]] <- downloadHandler(
         filename = function() {
           file_prefix_val <- if(is.reactive(file_prefix)) file_prefix() else file_prefix
           timestamp <- gsub("[ _:]", "-", substr(as.POSIXct(Sys.time()), 1, 19))
           filename <- paste0(file_prefix_val, "_", timestamp, ".", z)
-          message("📥 Download filename: ", filename)
+          if (debug) message("📥 Download filename: ", filename)
           filename
         },
         content = function(file) {
-          message("📥 Download content function called for format: ", z)
+          if (debug) message("📥 Download content function called for format: ", z)
           
           # Get data
           if(is.reactive(element)) {
@@ -102,18 +103,20 @@ downloadTableServer <- function(id, element = NULL, formats, file_prefix = "tabl
             data_val <- element
           }
           
-          message("📥 Data is null: ", is.null(data_val))
-          if (!is.null(data_val)) {
-            message("📥 Data rows: ", nrow(data_val))
-            message("📥 Data columns: ", ncol(data_val))
+          if (debug) {
+            message("📥 Data is null: ", is.null(data_val))
+            if (!is.null(data_val)) {
+              message("📥 Data rows: ", nrow(data_val))
+              message("📥 Data columns: ", ncol(data_val))
+            }
           }
           
           # Save table
           tryCatch({
             saveTable(data_val, filename = file, format = z)
-            message("📥 File saved successfully: ", file)
+            if (debug) message("📥 File saved successfully: ", file)
           }, error = function(e) {
-            message("📥 Error saving file: ", e$message)
+            if (debug) message("📥 Error saving file: ", e$message)
           })
         }
       )

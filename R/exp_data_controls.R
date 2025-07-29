@@ -28,9 +28,10 @@ exp_data_controls_ui <- function(id) {
 #'
 #' @param id Module ID
 #' @param r Reactive values object
+#' @param debug Boolean to control console debug output
 #' @return Server logic for data controls
 #' @export
-exp_data_controls_server <- function(id, r) {
+exp_data_controls_server <- function(id, r, debug = FALSE) {
   moduleServer(id, function(input, output, session) {
     ns <- session$ns
     
@@ -104,22 +105,22 @@ exp_data_controls_server <- function(id, r) {
     # Update reactive values when controls change
     observeEvent(input$amenazadas_categoria, {
       r$amenazadas_categoria <- input$amenazadas_categoria
-      message("Amenazadas categoria changed to: ", input$amenazadas_categoria)
+      if (debug) message("Amenazadas categoria changed to: ", input$amenazadas_categoria)
     })
     
     observeEvent(input$cites_categoria, {
       r$cites_categoria <- input$cites_categoria
-      message("CITES categoria changed to: ", input$cites_categoria)
+      if (debug) message("CITES categoria changed to: ", input$cites_categoria)
     })
     
     observeEvent(input$exoticas_categoria, {
       r$exoticas_categoria <- input$exoticas_categoria
-      message("Exoticas categoria changed to: ", input$exoticas_categoria)
+      if (debug) message("Exoticas categoria changed to: ", input$exoticas_categoria)
     })
     
     observeEvent(input$especies_total_estimadas, {
       r$especies_total_estimadas <- input$especies_total_estimadas
-      message("Especies total/estimadas changed to: ", input$especies_total_estimadas)
+      if (debug) message("Especies total/estimadas changed to: ", input$especies_total_estimadas)
     })
     
     # Update current subcategory tracker (from original app lines 1058-1085)
@@ -135,10 +136,12 @@ exp_data_controls_server <- function(id, r) {
       }
       
       if(!identical(old_value, r$current_subcategory)) {
-        message("Current subcategory changed from ", 
-                ifelse(is.null(old_value), "NULL", old_value),
-                " to ",
-                ifelse(is.null(r$current_subcategory), "NULL", r$current_subcategory))
+        if (debug) {
+          message("Current subcategory changed from ", 
+                  ifelse(is.null(old_value), "NULL", old_value),
+                  " to ",
+                  ifelse(is.null(r$current_subcategory), "NULL", r$current_subcategory))
+        }
       }
     })
     
@@ -152,8 +155,8 @@ exp_data_controls_server <- function(id, r) {
 #'
 #' @param r Reactive values object
 #' @return Updated indicator value
-update_indicator_from_controls <- function(r) {
-  message("=== Updating indicator from controls ===")
+update_indicator_from_controls <- function(r, debug = FALSE) {
+  if (debug) message("=== Updating indicator from controls ===")
   
   # Reset indicators
   old_indicador <- r$indicador
@@ -161,7 +164,7 @@ update_indicator_from_controls <- function(r) {
   
   # Only update indicator for maps
   if(r$chart_type == "map") {
-    message("Chart type is map - computing indicator...")
+    if (debug) message("Chart type is map - computing indicator...")
     
     # Special themes (amenazadas, cites, exoticas)
     if(!is.null(r$sel_tematica) && 
@@ -170,14 +173,14 @@ update_indicator_from_controls <- function(r) {
       if(grepl("amenazadas", r$sel_tematica)) {
         if(!is.null(r$amenazadas_categoria)) {
           r$indicador <- paste0(r$sel_tipo, "_", r$sel_tematica, r$amenazadas_categoria)
-          message("Amenazadas indicator: ", r$indicador)
+          if (debug) message("Amenazadas indicator: ", r$indicador)
         }
       }
       
       if(grepl("cites", r$sel_tematica)) {
         if(!is.null(r$cites_categoria)) {
           r$indicador <- paste0(r$sel_tipo, "_", r$sel_tematica, r$cites_categoria)
-          message("CITES indicator: ", r$indicador)
+          if (debug) message("CITES indicator: ", r$indicador)
         }
       }
       
@@ -186,7 +189,7 @@ update_indicator_from_controls <- function(r) {
       if(r$sel_tipo == "especies" && is.null(r$sel_tematica)) {
         if(!is.null(r$especies_total_estimadas)) {
           r$indicador <- paste0(r$sel_tipo, "_region_", r$especies_total_estimadas)
-          message("Especies total/estimadas indicator: ", r$indicador)
+          if (debug) message("Especies total/estimadas indicator: ", r$indicador)
         }
       }
     }
@@ -205,7 +208,7 @@ update_indicator_from_controls <- function(r) {
       
       r$indicador <- indicador
       r$exotica_categoria <- r$sel_tematica
-      message("Exoticas indicator: ", r$indicador)
+      if (debug) message("Exoticas indicator: ", r$indicador)
     }
   }
   
@@ -215,7 +218,7 @@ update_indicator_from_controls <- function(r) {
     r$especies_total_estimadas <- NULL
   }
   
-  message("Indicator updated from '", old_indicador, "' to '", r$indicador, "'")
+  if (debug) message("Indicator updated from '", old_indicador, "' to '", r$indicador, "'")
   return(r$indicador)
 }
 

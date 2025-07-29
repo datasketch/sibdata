@@ -22,8 +22,14 @@ navigation_trees <- function(type, region = NULL, con = con){
         select(-tipo)
     }
   } else if(type == "territorio"){
+    if(region %in% c("reserva-forestal-la-planada",
+                     "resguardo-indigena-pialapi-pueblo-viejo")){
+      return(list())
+    }
     table <- sibdata_territorio(con) |>
-      filter(slug_region == region | parent == region)
+      rename(slug_region = slug) |>
+      filter(slug_region == region | parent == region) |>
+      filter(parent != "region-amazonia")
 
   } else if(type == "tematica") {
     table <- sibdata_tematica(con) |>

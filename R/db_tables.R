@@ -160,6 +160,12 @@ sibdata_banner_images <- function(con){
   tbl(con, "banner_images")
 }
 
+#' @export
+sibdata_aporte_region_especial <- function(con){
+  # if(is.null(con)) con <- getOption("con")
+  tbl(con, "aporte_region_especial")
+}
+
 
 
 

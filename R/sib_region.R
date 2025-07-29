@@ -68,8 +68,9 @@ sib_region_general <- function(region, con){
   # Creditos fotos
 
   parent <- sib_parent_region(region, con)
-  if(parent %in% c("boyaca", "narino", "santander", "tolima"))
+  if(parent %in% c("boyaca", "narino", "santander", "tolima")){
     region <- parent
+  }
   creditos_banners <- sibdata_banner_images(con) |> collect()
   credito_foto <- creditos_banners |>
     filter(slug == region) |>
@@ -100,7 +101,7 @@ sib_calculate_region <- function(region, vars = NULL, con = NULL){
       stop("All vars must be in data")
     reg <- reg |> dplyr::select(any_of(vars))
   }
-  reg
+  reg |> distinct()
 }
 
 sib_region_marino <- function(con){

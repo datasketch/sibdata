@@ -38,7 +38,8 @@ ds$grupo <- ds$grupo |>
 ds$tematica <- ds$tematica |>
   mutate(icon = slug %in% available_icons)
 
-ds$territorio <- read_delim("data-raw/territorio.tsv")
+#ds$territorio <- read_delim("data-raw/territorio.tsv")
+ds$territorio <- ds$region
 
 region_table <- ds$region
 tematica_table <- ds$tematica

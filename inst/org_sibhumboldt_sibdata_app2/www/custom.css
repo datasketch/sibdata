@@ -34,84 +34,73 @@ body {
     overflow-x: hidden;
 }
 
-/* Full height layout */
+/* Full width layout for iframe embedding */
 .container-fluid {
     height: 100vh;
+    width: 100%;
     padding: 0;
     margin: 0;
     overflow-x: auto;
     overflow-y: hidden;
+    min-width: 1200px; /* Minimum width for horizontal scrolling */
 }
 
 .container-fluid .row {
     height: 100vh;
+    width: 100%;
     margin: 0;
-    padding-top: 15px;
+    padding: 15px 0 0 0;
     display: flex;
     flex-wrap: nowrap;
-    min-width: 100%;
+    min-width: 1200px;
 }
 
 .container-fluid .row [class*="col-"] {
     height: 100vh;
-    padding-left: 8px;
-    padding-right: 8px;
-    padding-top: 15px;
+    padding: 0 5px;
     overflow: visible;
     flex-shrink: 0;
 }
 
-/* Prevent Bootstrap responsive behavior and set minimum widths */
-.container-fluid .row .col-sm-3,
+/* Column proportions: 25% left, 50% center, 25% right */
 .container-fluid .row .col-3 {
-    min-width: 320px;
-    width: 320px;
-    flex-basis: 320px;
+    flex: 0 0 25%;
+    max-width: 25%;
+    min-width: 300px;
 }
 
-.container-fluid .row .col-sm-6,
 .container-fluid .row .col-6 {
-    min-width: 480px;
-    width: 480px;
-    flex-basis: 480px;
+    flex: 0 0 50%;
+    max-width: 50%;
+    min-width: 600px;
 }
 
-/* Override Bootstrap media queries for mobile */
-@media (max-width: 576px) {
-    .container-fluid .row .col-sm-3,
-    .container-fluid .row .col-3 {
-        min-width: 320px !important;
-        width: 320px !important;
-        flex-basis: 320px !important;
-        max-width: none !important;
+/* Override Bootstrap responsive behavior */
+@media (max-width: 1200px) {
+    .container-fluid {
+        min-width: 1200px !important;
+        overflow-x: auto !important;
     }
     
-    .container-fluid .row .col-sm-6,
+    .container-fluid .row {
+        min-width: 1200px !important;
+        flex-wrap: nowrap !important;
+    }
+    
+    .container-fluid .row .col-3 {
+        flex: 0 0 25% !important;
+        max-width: 25% !important;
+        min-width: 300px !important;
+    }
+    
     .container-fluid .row .col-6 {
-        min-width: 480px !important;
-        width: 480px !important;
-        flex-basis: 480px !important;
-        max-width: none !important;
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+        min-width: 600px !important;
     }
 }
 
-@media (max-width: 768px) {
-    .container-fluid .row .col-sm-3,
-    .container-fluid .row .col-3 {
-        min-width: 320px !important;
-        width: 320px !important;
-        flex-basis: 320px !important;
-        max-width: none !important;
-    }
-    
-    .container-fluid .row .col-sm-6,
-    .container-fluid .row .col-6 {
-        min-width: 480px !important;
-        width: 480px !important;
-        flex-basis: 480px !important;
-        max-width: none !important;
-    }
-}
+
 
 /* Panel headers */
 .well h4, .well h5 {

@@ -12,7 +12,7 @@ get_app_connection <- function(path = NULL) {
   if(is.null(path)){
     path <- sibdata:::sys_file_sibdata("db/sibdata.sqlite")
   }
-  
+
   # Debug: Print database path information
   message("🗄️ Database connection info:")
   message("- Requested path: ", if(is.null(path)) "NULL (using default)" else path)
@@ -21,7 +21,7 @@ get_app_connection <- function(path = NULL) {
   if(file.exists(path)) {
     message("- File size: ", file.size(path), " bytes")
   }
-  
+
   DBI::dbConnect(RSQLite::SQLite(),
                  path,
                  read_only = TRUE)
@@ -78,7 +78,7 @@ get_app_options <- function(con) {
   # Thematic categories
   all_tematicas <- sib_available_tematicas()
   opts_tematicas_ex <- c("cites_i", "cites_ii", "cites_i_ii", "cites_iii",
-                         "exoticas_total")
+                         "exoticas","invasoras","exoticas_riesgo_invasion")
   opts_tematicas <- all_tematicas[!all_tematicas %in% opts_tematicas_ex]
   opts_tematicas <- c(opts_tematicas, "Ninguna" = "todas")
 

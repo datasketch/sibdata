@@ -6,6 +6,9 @@
 \usage{
 get_app_connection(path = NULL)
 }
+\arguments{
+\item{path}{Path to database file (optional)}
+}
 \value{
 DBI connection to SQLite database
 }

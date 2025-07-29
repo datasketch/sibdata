@@ -26,8 +26,8 @@ ui <- fluidPage(
   ),
 
   fluidRow(
-    # Left column - Input controls
-    column(3,
+    # Left column - Input controls (25%)
+    column(3, style = "padding: 0 5px;",
            wellPanel(
              h4("Debug - Reactive Values"),
              div(class = "debug-container",
@@ -39,16 +39,16 @@ ui <- fluidPage(
            )
     ),
 
-    # Center column - Visualization
-    column(6,
+    # Center column - Visualization (50%)
+    column(6, style = "padding: 0 5px;",
            wellPanel(
              h4("Visualización"),
              exp_visualization_ui("viz")
            )
     ),
 
-    # Right column - Species table
-    column(3,
+    # Right column - Species table (25%)
+    column(3, style = "padding: 0 5px;",
            wellPanel(
              exp_species_table_ui("species")
            )

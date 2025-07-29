@@ -29,7 +29,8 @@ con <- DBI::dbConnect(RSQLite::SQLite(), sys_file_sibdata("db/sibdata.sqlite"),
                       read_only = TRUE)
 av_regions <- unname(sib_available_regions(subtipo = c("Especial"), con = con))
 
-av_regions_top <- c("region-amazonia")
+
+av_regions_top <- c("region-amazonia",  "reserva-forestal-la-planada","resguardo-indigena-pialapi-pueblo-viejo")
 av_regions_amazonas <- c("amazonas", "caqueta", "guainia",
                          "cauca", "meta",
                          "guaviare", "putumayo", "vaupes")
@@ -51,9 +52,7 @@ map(av_regions, safely(function(region){
   general_info <- sib_region_general(region, con)
 
   gallery <- list()
-  if(region %in% av_regions_top){
-    gallery <- make_gallery(region, con)
-  }
+  gallery <- make_gallery(region, con)
 
   #slides <- list()
   slides <- make_region_slides(region, con, save_path = save_path)

@@ -34,7 +34,7 @@ sib_merge_region_label <- function(d, slug = "slug_region", label = "label_regio
       left_join(regs_label, by = by, copy = TRUE) |>
       relocate(label_region, .after = slug_region)
   }
-  d2
+  d2 |> distinct()
 }
 
 

@@ -16,7 +16,9 @@ with_parent_tematica <- function(region, con = NULL){
 
 #' @export
 sib_parent_region <- function(region, con){
-  sibdata_region(con) |>
-    dplyr::filter(slug == region) |> dplyr::pull(parent)
+  parent <- sibdata_region(con) |>
+    dplyr::filter(slug == region) |>
+    dplyr::pull(parent)
+  parent[1]
 }
 

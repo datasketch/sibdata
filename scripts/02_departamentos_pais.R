@@ -63,6 +63,7 @@ map(av_regions, safely(function(region){
   # region <- "reserva-forestal-la-planada"
   # region <- "resguardo-indigena-pialapi-pueblo-viejo"
   # region <- "region-amazonia"
+  # region <- "amazonas"
 
   reserva_resguardo <- c("reserva-forestal-la-planada",
                          "resguardo-indigena-pialapi-pueblo-viejo")
@@ -72,7 +73,6 @@ map(av_regions, safely(function(region){
   nav_grupo_interes <- navigation_trees("grupo_interes", con = con)
 
   nav_territorio <- navigation_trees("territorio", region = region, con = con)
-
 
   general_info <- sib_region_general(region, con)
 

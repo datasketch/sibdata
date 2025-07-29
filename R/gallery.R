@@ -1,6 +1,20 @@
 
 make_gallery <- function(region, con){
 
+  gallery_regions <- c(
+    "colombia",
+    "boyaca",
+    "narino",
+    "tolima",
+    "santander",
+    "region-amazonia"
+  )
+  if(!region %in% gallery_regions){
+    warning("Trying create a gallery in non-valid region. Valid regions:\n",
+            toString(gallery_regions))
+    return(list())
+  }
+
   txts <- sibdata_dato_relevante(con) |>
     filter(slug_region == region) |>
     select(text = descripcion) |>

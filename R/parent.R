@@ -19,6 +19,10 @@ sib_parent_region <- function(region, con){
   parent <- sibdata_region(con) |>
     dplyr::filter(slug == region) |>
     dplyr::pull(parent)
-  parent[1]
+  parent <- parent[1]
+  if(parent == "regiones-naturales"){
+    parent <- "colombia"
+  }
+  parent
 }
 

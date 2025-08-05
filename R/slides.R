@@ -134,6 +134,10 @@ make_region_slides <- function(region, con, save_path = NULL){
     De estas {esp_depto_endemicas_str} especies son endémicas."
 
     title_tpl <- "¿Cómo está {regionLabel} frente al resto de {parentLabel}?"
+    if(region == "region-amazonia"){
+      title_tpl <- "¿Cómo esta la región Amazonia frente al resto de Colombia?"
+    }
+
 
     l <- list(
       id = "slide1",

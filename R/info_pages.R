@@ -29,31 +29,74 @@ info_pages <- function(con){
 #' @export
 info_publicador <- function(con){
 
-  which_regs <- c("boyaca", "narino", "tolima", "santander", "colombia")
-  which_regs <- sibdata_region(con) |> collect() |>
-    filter(parent %in% which_regs) |>
-    pull(slug)
+  deptos <- sibdata_departamento(con) |> pull(slug)
 
-  pub_col <- sibdata_region_publicador(con) |>
-    collect() |>
-    filter(slug_region == "colombia") |>
-    select(slug = slug_publicador, registros, especies)
+  which_regs <- c("colombia",
+                  deptos,
+                  "region-amazonia",
+                  "reserva-forestal-la-planada", "resguardo-indigena-pialapi-pueblo-viejo")
+  # which_regs <- sibdata_region(con) |> collect() |>
+  #   filter(parent %in% which_regs) |>
+  #   pull(slug)
+
+
+  pubs <- sibdata_publicador(con) |> collect() |>
+    rename(slug_publicador = slug,
+           especies_publicador = especies,
+           registros_publicador = registros)
+
   pub_reg <- sibdata_region_publicador(con) |>
     collect() |>
     filter(slug_region %in% which_regs) |>
     sib_merge_region_label("slug_region", con = con) |>
-    select(slug = slug_publicador, label_region) |>
-    distinct() |>
-    group_by(slug) |>
-    summarise(region = str_flatten(label_region, collapse = ", "))
+    left_join(pubs)
 
-  pubs <- sibdata_publicador(con) |>
-    collect() |>
-    dplyr::distinct() |>
-    left_join(pub_col, by = c("slug", "especies", "registros")) |>
-    left_join(pub_reg, by = "slug")
+  keys <- pub_reg |>
+    group_by(slug_region) |>
+    group_keys() |>
+    pull(slug_region)
+  pub_reg_list <- pub_reg |>
+    group_split(slug_region)
+  names(pub_reg_list) <- keys
 
-  pubs
+  pub_reg_list <- map(pub_reg_list, function(r){
+    # r <- pub_reg_list[[18]]
+    list(
+      publicadores = r |>
+        select(slug_publicador, label, registros, especies, tipo_publicador,
+               tipo_organizacion, tipo_publicador, pais_publicacion,
+               url_logo, url_socio),
+      stats = list(
+        total_publicadores = nrow(r),
+        nacionales = r |> filter(tipo_publicador == "Nacional") |> nrow(),
+        internacionales = r |> filter(tipo_publicador == "Internacional") |> nrow(),
+        tipo_organizacion = r |> count(tipo_organizacion),
+        registros_tipo_organizacion = r |>
+          select(tipo_organizacion, registros) |>
+          group_by(tipo_organizacion) |>
+          summarise(registros = sum(registros))
+      )
+    )
+  })
+
+  region_nav <- list(
+    nacional = "colombia",
+    Departamentos = deptos,
+    `Áreas protegidas` = "reserva-forestal-la-planada",
+    `Territorios indígenas` = "resguardo-indigena-pialapi-pueblo-viejo",
+    "Regiones naturales" =  "region-amazonia"
+  )
+
+  list(
+    region_publicador = pub_reg_list,
+    filters = list(
+      region = region_nav,
+      tipo_organizacion = pubs |> select(tipo_organizacion) |> distinct() |>
+        pull() |> sort(),
+      pais_publicacion = pubs |> select(pais_publicacion) |> distinct() |>
+        pull() |> sort()
+    )
+  )
 }
 
 

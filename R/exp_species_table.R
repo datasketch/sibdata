@@ -44,13 +44,23 @@ exp_species_table_ui <- function(id) {
 #' @param id Module ID
 #' @param r Reactive values object
 #' @param con Database connection
+#' @param session Shiny session object for URL parameter handling
 #' @param debug Boolean to control console debug output
 #' @export
-exp_species_table_server <- function(id, r, con, debug = FALSE) {
-  moduleServer(id, function(input, output, session) {
-    ns <- session$ns
+exp_species_table_server <- function(id, r, con, session = NULL, debug = FALSE) {
+  moduleServer(id, function(input, output, session_module) {
+    ns <- session_module$ns
     
     if (debug) message("🔧 SPECIES TABLE MODULE INITIALIZED")
+
+    # URL parameter handling for lista_especies
+    url_par <- reactive({
+      if (!is.null(session)) {
+        query <- parseQueryString(session$clientData$url_search)
+        return(query)
+      }
+      list()
+    })
 
     # Observer to track region changes
     observe({
@@ -232,8 +242,8 @@ exp_species_table_server <- function(id, r, con, debug = FALSE) {
       })
     })
 
-    # Show species modal
-    observeEvent(input$expand_species, {
+    # Function to show species modal
+    show_species_modal <- function() {
       req(r$species_data)
       
       showModal(modalDialog(
@@ -270,6 +280,28 @@ exp_species_table_server <- function(id, r, con, debug = FALSE) {
         footer = NULL,
         easyClose = TRUE
       ))
+    }
+
+    # Show species modal on button click
+    observeEvent(input$expand_species, {
+      show_species_modal()
+    })
+
+    # Auto-show species modal based on URL parameter
+    observe({
+      req(r$species_data)
+      
+      # Check if lista_especies parameter is present and true
+      if (!is.null(url_par()$lista_especies) && 
+          tolower(url_par()$lista_especies) == "true") {
+        
+        if (debug) message("🌐 URL parameter lista_especies=true detected - opening modal")
+        
+        # Use a small delay to ensure the modal renders properly
+        shinyjs::delay(500, {
+          show_species_modal()
+        })
+      }
     })
     
     # Render species table in modal

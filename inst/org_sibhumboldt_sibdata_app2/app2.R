@@ -116,7 +116,7 @@ server <- function(input, output, session) {
   exp_inputs_server("inputs", r, app_options, session, debug = DEBUG_MODE)
   if (DEBUG_MODE) message("✓ Inputs module initialized")
 
-  exp_species_table_server("species", r, con, debug = DEBUG_MODE)
+  exp_species_table_server("species", r, con, session, debug = DEBUG_MODE)
   if (DEBUG_MODE) message("✓ Species table module initialized")
 
   exp_visualization_server("viz", r, con, debug = DEBUG_MODE)

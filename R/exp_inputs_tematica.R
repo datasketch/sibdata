@@ -650,9 +650,12 @@ exp_inputs_tematica_server <- function(id, con, session_main = NULL, debug = FAL
             cat("  Creating children for:", x$slug, "(", length(x$children), "children)\n")
           }
 
-          # Add "Todas" option
-          choices <- c("Todas" = "todas")
-          names(choices) <- c("Todas")
+          # Add "Todas" option (except for amenazadas)
+          choices <- c()
+          if (x$slug != "amenazadas") {
+            choices <- c("Todas" = "todas")
+            names(choices) <- c("Todas")
+          }
 
           # Add actual children
           child_choices <- purrr::map_chr(x$children, ~.$slug)
@@ -795,17 +798,24 @@ exp_inputs_tematica_server <- function(id, con, session_main = NULL, debug = FAL
             cat("  ✓ Showing children for:", current_slug, "\n")
             shinyjs::show(children_id)
             
-            # Set "Todas" as default selection only if no selection exists
+            # Set default selection based on the category
             tryCatch({
               current_selection <- input[[children_id]]
               if (is.null(current_selection) || current_selection == "") {
-                updateRadioButtons(session, children_id, selected = "todas")
-                cat("  ✓ Set 'Todas' as default for:", current_slug, "\n")
+                if (current_slug == "amenazadas") {
+                  # For amenazadas, select the first option (amenazadas-global)
+                  updateRadioButtons(session, children_id, selected = "amenazadas-global")
+                  cat("  ✓ Set 'amenazadas-global' as default for:", current_slug, "\n")
+                } else {
+                  # For other categories, select "Todas"
+                  updateRadioButtons(session, children_id, selected = "todas")
+                  cat("  ✓ Set 'Todas' as default for:", current_slug, "\n")
+                }
               } else {
                 cat("  ✓ Keeping existing selection:", current_selection, "for:", current_slug, "\n")
               }
             }, error = function(e) {
-              cat("  ✗ Error setting 'Todas' for:", current_slug, "-", e$message, "\n")
+              cat("  ✗ Error setting default for:", current_slug, "-", e$message, "\n")
             })
             
             # Hide children for all other parents

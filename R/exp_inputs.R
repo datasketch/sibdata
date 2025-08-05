@@ -75,14 +75,24 @@ exp_inputs_ui <- function(id) {
         color: #006400;
       }
       
-      /* Style select inputs to match green theme */
+      /* Style selectize inputs to match green theme */
       .selectize-input {
         border-color: #ccc !important;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      }
+      
+      .selectize-input:hover {
+        border-color: #006400 !important;
       }
       
       .selectize-input:focus {
         border-color: #006400 !important;
         box-shadow: 0 0 0 0.2rem rgba(0, 100, 0, 0.25) !important;
+      }
+      
+      /* Override all selectize dropdown styling */
+      .selectize-dropdown {
+        border-color: #006400 !important;
       }
       
       .selectize-dropdown .active {
@@ -92,9 +102,91 @@ exp_inputs_ui <- function(id) {
       
       .selectize-dropdown .active:hover {
         background-color: #004d00 !important;
+        color: white !important;
       }
       
-      /* Style select elements */
+      .selectize-dropdown .option {
+        color: #333 !important;
+      }
+      
+      .selectize-dropdown .option:hover {
+        background-color: #e8f5e8 !important;
+        color: #333 !important;
+      }
+      
+      .selectize-dropdown .option.active {
+        background-color: #006400 !important;
+        color: white !important;
+      }
+      
+      .selectize-dropdown .option.active:hover {
+        background-color: #004d00 !important;
+        color: white !important;
+      }
+      
+      /* Override any blue styling */
+      .selectize-dropdown .option[data-selectable] {
+        color: #333 !important;
+      }
+      
+      .selectize-dropdown .option[data-selectable]:hover {
+        background-color: #e8f5e8 !important;
+        color: #333 !important;
+      }
+      
+      .selectize-dropdown .option[data-selectable].active {
+        background-color: #006400 !important;
+        color: white !important;
+      }
+      
+      .selectize-dropdown .option[data-selectable].active:hover {
+        background-color: #004d00 !important;
+        color: white !important;
+      }
+      
+      /* Target the selected state specifically */
+      .selectize-dropdown .option.selected {
+        background-color: #006400 !important;
+        color: white !important;
+      }
+      
+      .selectize-dropdown .option.selected:hover {
+        background-color: #004d00 !important;
+        color: white !important;
+      }
+      
+      /* Override any Bootstrap or default styling */
+      .selectize-dropdown .option.selected[data-selectable] {
+        background-color: #006400 !important;
+        color: white !important;
+      }
+      
+      .selectize-dropdown .option.selected[data-selectable]:hover {
+        background-color: #004d00 !important;
+        color: white !important;
+      }
+      
+      /* Force override with higher specificity */
+      .selectize-dropdown .option.selected[data-selectable][role='option'] {
+        background-color: #006400 !important;
+        color: white !important;
+      }
+      
+      .selectize-dropdown .option.selected[data-selectable][role='option']:hover {
+        background-color: #004d00 !important;
+        color: white !important;
+      }
+      
+      /* Style select elements (fallback) */
+      select {
+        border-color: #ccc;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      }
+      
+      select:hover {
+        border-color: #006400 !important;
+      }
+      
       select:focus {
         border-color: #006400 !important;
         box-shadow: 0 0 0 0.2rem rgba(0, 100, 0, 0.25) !important;
@@ -193,13 +285,15 @@ exp_inputs_server <- function(id, r, app_options, session_main = NULL, debug = F
       }
       
       if (input$sel_grupo_type == "biologico") {
-        selectInput(ns("sel_grupo_bio"), "Seleccione grupo biológico",
-                    app_options$grupo_biologico,
-                    selected = default_select %||% app_options$grupo_biologico[1])
+        selectizeInput(ns("sel_grupo_bio"), "Seleccione grupo biológico",
+                       app_options$grupo_biologico,
+                       selected = default_select %||% app_options$grupo_biologico[1],
+                       options = list(placeholder = "Buscar grupo...", searchField = "text"))
       } else {
-        selectInput(ns("sel_grupo_int"), "Seleccione grupo de interés",
-                    app_options$grupo_interes,
-                    selected = default_select %||% app_options$grupo_interes[1])
+        selectizeInput(ns("sel_grupo_int"), "Seleccione grupo de interés",
+                       app_options$grupo_interes,
+                       selected = default_select %||% app_options$grupo_interes[1],
+                       options = list(placeholder = "Buscar grupo...", searchField = "text"))
       }
     })
 

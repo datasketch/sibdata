@@ -63,19 +63,14 @@ exp_inputs_tematica_ui <- function(id) {
       .tematica-options {
         margin-bottom: 10px;
       }
-      .tematica-parent {
-        margin-bottom: 3px;
-      }
+ 
       .tematica-children {
         margin-left: 20px;
-        margin-top: 0px;
-        margin-bottom: 8px;
-        padding-left: 10px;
-        border-left: 2px solid #e9ecef;
+        margin-top: -15px;
+        margin-bottom: 0px;
+        padding-left: 0px;
       }
-      .tematica-child {
-        margin-bottom: 3px;
-      }
+    
       .tematica-actions {
         text-align: center;
       }
@@ -142,10 +137,7 @@ exp_inputs_tematica_ui <- function(id) {
         padding: 2px 0;
       }
 
-      .tematica-children .radio {
-        margin-bottom: 0;
-        padding: 2px 0;
-      }
+
       
       /* Style radio buttons to match checkboxes */
       .tematica-children input[type='radio'] {
@@ -279,6 +271,18 @@ exp_inputs_tematica_ui <- function(id) {
       
       .tematica-parent-content .checkbox {
         margin-right: 0;
+      }
+
+     .tematica-parent{
+        margin: 0;
+      }
+
+     .tematica-parent .checkbox{
+        margin: 0;
+      }
+
+      .tematica-parent-content > .form-group {
+        margin-bottom: 0px;
       }
       
       /* Radio option layout */

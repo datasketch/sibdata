@@ -2,7 +2,7 @@
 # Modular version of SIB Data App
 
 # Debug configuration
-DEBUG_MODE <- TRUE  # Set to FALSE to hide debug output
+DEBUG_MODE <- FALSE  # Set to FALSE to hide debug output
 options(timeout = 600)
 
 library(shiny)
@@ -70,7 +70,7 @@ server <- function(input, output, session) {
   # Create database connection inside server
   con <- get_app_connection("db/sibdata.sqlite", debug = DEBUG_MODE)
   if (DEBUG_MODE) message("✓ Database connection created")
-  
+
   # Add the connection to app_options for the tematica module
   app_options$con <- con
 

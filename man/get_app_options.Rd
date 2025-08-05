@@ -4,10 +4,12 @@
 \alias{get_app_options}
 \title{Get available options for dropdowns}
 \usage{
-get_app_options(con)
+get_app_options(con, debug = FALSE)
 }
 \arguments{
 \item{con}{Database connection}
+
+\item{debug}{Boolean to control console debug output}
 }
 \value{
 List of options for UI inputs

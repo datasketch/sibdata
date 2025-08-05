@@ -4,12 +4,14 @@
 \alias{exp_data_controls_server}
 \title{Data Controls Server Module}
 \usage{
-exp_data_controls_server(id, r)
+exp_data_controls_server(id, r, debug = FALSE)
 }
 \arguments{
 \item{id}{Module ID}
 
 \item{r}{Reactive values object}
+
+\item{debug}{Boolean to control console debug output}
 }
 \value{
 Server logic for data controls

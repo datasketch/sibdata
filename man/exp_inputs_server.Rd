@@ -4,7 +4,7 @@
 \alias{exp_inputs_server}
 \title{Input Controls Server Module}
 \usage{
-exp_inputs_server(id, r, app_options, session_main = NULL)
+exp_inputs_server(id, r, app_options, session_main = NULL, debug = FALSE)
 }
 \arguments{
 \item{id}{Module ID}
@@ -14,6 +14,8 @@ exp_inputs_server(id, r, app_options, session_main = NULL)
 \item{app_options}{Application options from database}
 
 \item{session_main}{Main session object (optional)}
+
+\item{debug}{Boolean to control console debug output}
 }
 \description{
 Handles the server logic for input controls including region, group, and theme selection

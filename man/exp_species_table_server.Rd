@@ -4,7 +4,7 @@
 \alias{exp_species_table_server}
 \title{Species Table Server Module}
 \usage{
-exp_species_table_server(id, r, con)
+exp_species_table_server(id, r, con, session = NULL, debug = FALSE)
 }
 \arguments{
 \item{id}{Module ID}
@@ -12,6 +12,10 @@ exp_species_table_server(id, r, con)
 \item{r}{Reactive values object}
 
 \item{con}{Database connection}
+
+\item{session}{Shiny session object for URL parameter handling}
+
+\item{debug}{Boolean to control console debug output}
 }
 \description{
 Handles the server logic for species table including data fetching and modal display

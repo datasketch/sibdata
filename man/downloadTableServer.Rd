@@ -4,7 +4,13 @@
 \alias{downloadTableServer}
 \title{Download Table Server}
 \usage{
-downloadTableServer(id, element = NULL, formats, file_prefix = "table")
+downloadTableServer(
+  id,
+  element = NULL,
+  formats,
+  file_prefix = "table",
+  debug = FALSE
+)
 }
 \arguments{
 \item{id}{Module ID}
@@ -14,6 +20,8 @@ downloadTableServer(id, element = NULL, formats, file_prefix = "table")
 \item{formats}{File formats to support}
 
 \item{file_prefix}{Prefix for downloaded files}
+
+\item{debug}{Boolean to control console debug output}
 }
 \description{
 Download Table Server

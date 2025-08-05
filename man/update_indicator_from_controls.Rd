@@ -4,7 +4,7 @@
 \alias{update_indicator_from_controls}
 \title{Update Indicator Based on Data Controls}
 \usage{
-update_indicator_from_controls(r)
+update_indicator_from_controls(r, debug = FALSE)
 }
 \arguments{
 \item{r}{Reactive values object}

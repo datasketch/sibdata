@@ -4,12 +4,14 @@
 \alias{exp_chart_selector_server}
 \title{Chart Selector Server Module}
 \usage{
-exp_chart_selector_server(id, r)
+exp_chart_selector_server(id, r, debug = FALSE)
 }
 \arguments{
 \item{id}{Module ID}
 
 \item{r}{Reactive values object}
+
+\item{debug}{Boolean to control console debug output}
 }
 \value{
 Server logic for chart selector

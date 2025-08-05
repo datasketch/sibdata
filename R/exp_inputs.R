@@ -17,7 +17,89 @@ exp_inputs_ui <- function(id) {
                  c("Biológico" = "biologico", "Interés de Conservación" = "interes")),
     uiOutput(ns("sel_grupo_opts")),
     hr(),
-    uiOutput(ns("sel_tematica_"))
+    uiOutput(ns("sel_tematica_")),
+    tags$style(HTML("
+      /* Style radio buttons to match tematica module green theme */
+      .radio input[type='radio'] {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        width: 14px;
+        height: 14px;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        outline: none;
+        cursor: pointer;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        vertical-align: middle;
+        top: -1px;
+      }
+      
+      .radio input[type='radio']:checked {
+        background-color: #006400 !important;
+        border-color: #006400 !important;
+      }
+      
+      .radio input[type='radio']:checked::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 4px;
+        height: 4px;
+        background-color: white;
+        border-radius: 50%;
+      }
+      
+      .radio input[type='radio']:hover {
+        border-color: #006400;
+      }
+      
+      .radio input[type='radio']:checked:hover {
+        background-color: #004d00 !important;
+        border-color: #004d00 !important;
+      }
+      
+      .radio label {
+        cursor: pointer;
+        font-weight: normal;
+        color: #333;
+        margin-left: 4px;
+        vertical-align: middle;
+      }
+      
+      .radio label:hover {
+        color: #006400;
+      }
+      
+      /* Style select inputs to match green theme */
+      .selectize-input {
+        border-color: #ccc !important;
+      }
+      
+      .selectize-input:focus {
+        border-color: #006400 !important;
+        box-shadow: 0 0 0 0.2rem rgba(0, 100, 0, 0.25) !important;
+      }
+      
+      .selectize-dropdown .active {
+        background-color: #006400 !important;
+        color: white !important;
+      }
+      
+      .selectize-dropdown .active:hover {
+        background-color: #004d00 !important;
+      }
+      
+      /* Style select elements */
+      select:focus {
+        border-color: #006400 !important;
+        box-shadow: 0 0 0 0.2rem rgba(0, 100, 0, 0.25) !important;
+      }
+    "))
   )
 }
 
@@ -121,14 +203,14 @@ exp_inputs_server <- function(id, r, app_options, session_main = NULL, debug = F
       }
     })
 
-    # Thematic selector
+    # Thematic selector - using the new exp_inputs_tematica module
+    # Create the tematica UI
+    sel_tematica_ui <- exp_inputs_tematica_ui("tematica")
+    
+    # Render the tematica UI
     output$sel_tematica_ <- renderUI({
-      req(app_options$tematicas)
-      default_select <- "todas"
-      if (!is.null(url_par()$tematica)) default_select <- tolower(url_par()$tematica)
-      radioButtons(ns("sel_tematica"), "Temática", 
-                   app_options$tematicas, 
-                   selected = default_select)
+      req(app_options$con)
+      sel_tematica_ui
     })
     
     # Get selected group (biology or interest)
@@ -172,28 +254,23 @@ exp_inputs_server <- function(id, r, app_options, session_main = NULL, debug = F
         }
       }
       
-      # Set tematica (with fallback)
-      if (!is.null(input$sel_tematica)) {
-        tematica <- input$sel_tematica
-        if (!is.null(tematica) && tematica != "todas") {
-          tematica <- gsub("_", "-", tematica)
-          r$sel_tematica <- tematica
-          if (debug) message("✓ r$sel_tematica initialized to: ", r$sel_tematica)
-        }
-      }
-      
-      # Set default values for other reactive values
-      if (is.null(r$sel_tipo)) {
-        r$sel_tipo <- "registros"
-        if (debug) message("✓ r$sel_tipo initialized to: ", r$sel_tipo)
-      }
-      
-      if (is.null(r$chart_type)) {
-        r$chart_type <- "map"
-        if (debug) message("✓ r$chart_type initialized to: ", r$chart_type)
-      }
-      
       if (debug) message("✅ All reactive values initialized")
+    })
+
+    # Initialize tematica module with proper parameters
+    # The new module expects: (id, con, session_main, debug)
+    selected_tematica <- exp_inputs_tematica_server("tematica", app_options$con, session_main, debug)
+    
+    # Handle tematica selection from the module
+    observe({
+      tematica <- selected_tematica()
+      if (!is.null(tematica)) {
+        r$sel_tematica <- tematica
+        if (debug) message("✓ r$sel_tematica updated to: ", r$sel_tematica)
+      } else {
+        r$sel_tematica <- NULL
+        if (debug) message("✓ r$sel_tematica set to NULL (no selection)")
+      }
     })
 
     # Update r reactive values on input changes
@@ -219,17 +296,6 @@ exp_inputs_server <- function(id, r, app_options, session_main = NULL, debug = F
       if (debug) message("✓ r$sel_grupo updated to: ", r$sel_grupo)
     })
     
-    observeEvent(input$sel_tematica, {
-      tematica <- input$sel_tematica
-      if (!is.null(tematica) && tematica == "todas") tematica <- NULL
-      
-      # Convert underscores to hyphens for consistency with list_species
-      if (!is.null(tematica)) {
-        tematica <- gsub("_", "-", tematica)
-      }
-      
-      r$sel_tematica <- tematica
-      if (debug) message("✓ r$sel_tematica updated to: ", r$sel_tematica)
-    })
+
   })
 } 

@@ -67,6 +67,13 @@ server <- function(input, output, session) {
   DBI::dbDisconnect(temp_con)
   if (DEBUG_MODE) message("✓ App options loaded")
 
+  # Create database connection inside server
+  con <- get_app_connection("db/sibdata.sqlite", debug = DEBUG_MODE)
+  if (DEBUG_MODE) message("✓ Database connection created")
+  
+  # Add the connection to app_options for the tematica module
+  app_options$con <- con
+
   # Create session-specific reactive values
   r <- reactiveValues(
     sel_region = NULL,
@@ -89,10 +96,6 @@ server <- function(input, output, session) {
     breadcrumb = NULL,
     available_charts = NULL
   )
-
-  # Create database connection inside server
-  con <- get_app_connection("db/sibdata.sqlite", debug = DEBUG_MODE)
-  if (DEBUG_MODE) message("✓ Database connection created")
 
   # Debug: Verify database tables exist
   tryCatch({

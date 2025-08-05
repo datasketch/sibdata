@@ -4,10 +4,12 @@
 \alias{get_app_connection}
 \title{Database connection helper}
 \usage{
-get_app_connection(path = NULL)
+get_app_connection(path = NULL, debug = FALSE)
 }
 \arguments{
 \item{path}{Path to database file (optional)}
+
+\item{debug}{Boolean to control console debug output}
 }
 \value{
 DBI connection to SQLite database

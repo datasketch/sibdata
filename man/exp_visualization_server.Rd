@@ -4,7 +4,7 @@
 \alias{exp_visualization_server}
 \title{Visualization Server Module}
 \usage{
-exp_visualization_server(id, r, con)
+exp_visualization_server(id, r, con, debug = FALSE)
 }
 \arguments{
 \item{id}{Module ID}
@@ -12,6 +12,8 @@ exp_visualization_server(id, r, con)
 \item{r}{Reactive values object}
 
 \item{con}{Database connection}
+
+\item{debug}{Boolean to control console debug output}
 }
 \description{
 Handles the server logic for visualization including chart rendering and data modals

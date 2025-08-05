@@ -49,7 +49,8 @@ list_species <- function(region,
 
     especies <- especies |>
       left_join(esp_tem, by = c("slug_region", "slug_especie")) |>
-      filter(!is.na(slug_tematica))
+      filter(!is.na(slug_tematica)) |>
+      sib_merge_tematica_label(con = con)
   }
 
   if(!is.null(grupo)){

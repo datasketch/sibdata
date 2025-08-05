@@ -132,6 +132,9 @@ d <- d |> sib_merge_ind_label(con = con)
 palette <- c("#FF0000", "#FFA500", "#FFFF00")
 hgmagic::hg_pie_CatNum(d, opts = list(color_palette_categorical = palette))
 
+
+## Cites
+
 input <- list(
   region = "boyaca",
   grupo = "animales",
@@ -160,6 +163,12 @@ opts <- list(
   )
 
 hgmagic::hg_pie_CatNum(d, opts = opts)
+
+esp <- list_species(region = inp$region,
+                    grupo = inp$grupo,
+                    tematica = inp$tematica,
+                    con = con) |> collect()
+
 
 
 ## Exoticas total

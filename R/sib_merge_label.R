@@ -100,4 +100,17 @@ sib_merge_especie_label <- function(x, con){
 }
 
 
+#' @export
+sib_merge_tematica_label <- function(d, con){
+
+  tematica_label <- sibdata_tematica(con) |>
+    select(slug_tematica = slug, tematica_label = label) |>
+    collect()
+
+  d |>
+    left_join(tematica_label, by = c("slug_tematica"), copy = TRUE)
+}
+
+
+
 

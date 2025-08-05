@@ -104,7 +104,9 @@ format_species_data <- function(data) {
 
   vars <- c("label", "registros", "url_gbif", "url_cbc", "kingdom",
             "phylum", "class", "order", "family", "genus")
-
+  if("tematica_label" %in% names(data)){
+    vars <- c(vars, "tematica_label")
+  }
   data |>
     dplyr::select(dplyr::any_of(vars)) |>
     dplyr::rename(
@@ -117,8 +119,10 @@ format_species_data <- function(data) {
       "Clase" = "class",
       "Orden" = "order",
       "Familia" = "family",
-      "Género" = "genus"
-    )
+      "Género" = "genus",
+      "Tematica" = "tematica_label"
+    ) |>
+    dplyr::relocate(dplyr::all_of("Tematica"), .after = "Registros")
 }
 
 #' Create DT options with custom styling

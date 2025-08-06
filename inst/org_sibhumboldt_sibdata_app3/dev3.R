@@ -52,10 +52,16 @@ d <- sibdata(inp$region,
 d
 hgmagic::hg_pie_CatNum(d)
 
+list_species(region = "colombia",
+             grupo = "",
+             tematica = "",
+             con = con)
 
 
-tematica <- "amenazadas-global"
-get_tematicas_tree(con)
+list_species(region = "colombia",
+             grupo = "",
+             tematica = "cites",
+             con = con)
 
 
 

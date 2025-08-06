@@ -63,22 +63,33 @@ get_app_options <- function(con, debug = FALSE) {
   av_grupos_int <- sib_available_grupos(tipo = "interes", con = con)
   opts_grupo_interes <- c("Todos" = "todos", av_grupos_int)
 
-  # Regions
+  # Regions - grouped by type
   pais <- sib_available_regions(subtipo = "País", con = con)
   departamentos <- sib_available_regions(subtipo = "Departamento", con = con)
-  opts_region_raw <- c(pais, sort(departamentos))
-
-  # Remove duplicates - keep only first occurrence of each value
+  especial <- sib_available_regions(subtipo = "Especial", con = con)
+  
+  # Create grouped options for selectize
+  opts_region_grouped <- list(
+    "Colombia" = pais,
+    "Departamentos" = sort(departamentos),
+    "Especial" = sort(especial)
+  )
+  
+  # Create flat list for backward compatibility and type detection
+  opts_region_raw <- c(pais, sort(departamentos), sort(especial))
   opts_region <- opts_region_raw[!duplicated(opts_region_raw)]
+  
+  # Create individual lists for type detection
+  region_colombia <- pais
+  region_departamentos <- sort(departamentos)
+  region_especial <- sort(especial)
 
   if (debug) {
-    message("🔧 Region deduplication:")
-    message("  - Raw regions: ", length(opts_region_raw))
-    message("  - After deduplication: ", length(opts_region))
-    duplicated_values <- opts_region_raw[duplicated(opts_region_raw)]
-    if (length(duplicated_values) > 0) {
-      message("  - Removed duplicates: ", paste(unique(duplicated_values), collapse = ", "))
-    }
+    message("🔧 Region grouping:")
+    message("  - Colombia regions: ", length(region_colombia))
+    message("  - Departamentos: ", length(region_departamentos))
+    message("  - Especial: ", length(region_especial))
+    message("  - Total unique regions: ", length(opts_region))
   }
 
   # Thematic categories
@@ -90,6 +101,10 @@ get_app_options <- function(con, debug = FALSE) {
 
   list(
     region = opts_region,
+    region_grouped = opts_region_grouped,
+    region_colombia = region_colombia,
+    region_departamentos = region_departamentos,
+    region_especial = region_especial,
     grupo_biologico = opts_grupo_biologico,
     grupo_interes = opts_grupo_interes,
     tematicas = opts_tematicas
@@ -107,7 +122,7 @@ format_species_data <- function(data) {
   if("tematica_label" %in% names(data)){
     vars <- c(vars, "tematica_label")
   }
-  data |>
+  formatted_data <- data |>
     dplyr::select(dplyr::any_of(vars)) |>
     dplyr::rename(
       "Especie" = "label",
@@ -119,10 +134,17 @@ format_species_data <- function(data) {
       "Clase" = "class",
       "Orden" = "order",
       "Familia" = "family",
-      "Género" = "genus",
-      "Tematica" = "tematica_label"
-    ) |>
-    dplyr::relocate(dplyr::all_of("Tematica"), .after = "Registros")
+      "Género" = "genus"
+    )
+
+  # Only rename and relocate tematica_label if it exists
+  if("tematica_label" %in% names(data)) {
+    formatted_data <- formatted_data |>
+      dplyr::rename("Tematica" = "tematica_label") |>
+      dplyr::relocate(dplyr::all_of("Tematica"), .after = "Registros")
+  }
+
+  formatted_data
 }
 
 #' Create DT options with custom styling

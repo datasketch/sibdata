@@ -9,6 +9,10 @@ list_species <- function(region,
   # tematica <- "endemicas"
   # tematica <- "cites-i"
   # grupo <- "hongos"
+  
+  # Convert empty strings and "todos" to NULL for consistent behavior
+  if(!is.null(grupo) && (grupo == "" || grupo == "todos")) grupo <- NULL
+  if(!is.null(tematica) && (tematica == "" || tematica == "todas")) tematica <- NULL
 
   esp_reg <- sibdata_especie_region(con) |>
     filter(slug_region == region)

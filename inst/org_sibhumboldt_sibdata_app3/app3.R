@@ -51,9 +51,7 @@ ui <- fluidPage(
     # Right column - Species table (25%)
     column(3, style = "padding: 0 5px;",
            wellPanel(
-             h4("Species Table"),
-             # Placeholder for species table module
-             p("Species table module will be added here")
+             exp_species_table_ui("species")
            )
     )
   )
@@ -120,6 +118,9 @@ server <- function(input, output, session) {
   if (DEBUG_MODE) message("📦 INITIALIZING MODULES")
   exp_inputs_server("inputs", r, app_options, session, debug = DEBUG_MODE)
   if (DEBUG_MODE) message("✓ Inputs module initialized")
+
+  exp_species_table_server("species", r, con, session, debug = DEBUG_MODE)
+  if (DEBUG_MODE) message("✓ Species table module initialized")
 
   exp_debug_server("debug", r, debug = DEBUG_MODE)
   if (DEBUG_MODE) message("✓ Debug module initialized")

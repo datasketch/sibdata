@@ -1,5 +1,5 @@
 # Test app for exp_inputs module
-# Tests the integration with exp_inputs_tematica module
+# Tests the integration with exp_inputs_grupo and exp_inputs_tematica modules
 
 library(shiny)
 library(shinyjs)
@@ -19,7 +19,7 @@ app_options$con <- con
 # Test UI - similar to app2.R but focused on inputs
 ui <- fluidPage(
   useShinyjs(),
-  titlePanel("Test exp_inputs Module"),
+  titlePanel("Test exp_inputs Module with Nested Submodules"),
   
   fluidRow(
     # Left column - Input controls (50%)
@@ -36,6 +36,9 @@ ui <- fluidPage(
              h4("Debug Output"),
              verbatimTextOutput("debug_output"),
              hr(),
+             h5("Current Grupo Selection:"),
+             textOutput("current_grupo"),
+             hr(),
              h5("Current Tematica Selection:"),
              textOutput("current_tematica"),
              hr(),
@@ -43,7 +46,10 @@ ui <- fluidPage(
              verbatimTextOutput("reactive_values"),
              hr(),
              h5("URL Parameters:"),
-             verbatimTextOutput("url_params")
+             verbatimTextOutput("url_params"),
+             hr(),
+             h5("Module Namespace Debug:"),
+             verbatimTextOutput("namespace_debug")
            )
     )
   )
@@ -92,6 +98,18 @@ server <- function(input, output, session) {
     cat("===================\n")
   })
   
+  # Current grupo selection
+  output$current_grupo <- renderText({
+    grupo_type <- r$sel_grupo_type
+    grupo_value <- r$sel_grupo
+    
+    if (is.null(grupo_type) || is.null(grupo_value)) {
+      "No grupo selected"
+    } else {
+      paste("Selected:", grupo_value, "(", grupo_type, ")")
+    }
+  })
+  
   # Current tematica selection
   output$current_tematica <- renderText({
     tematica <- r$sel_tematica
@@ -129,6 +147,34 @@ server <- function(input, output, session) {
     } else {
       cat("No URL parameters found\n")
     }
+    cat("=====================\n")
+  })
+  
+  # Namespace debug output
+  output$namespace_debug <- renderPrint({
+    cat("=== NAMESPACE DEBUG ===\n")
+    cat("Main session namespace test:", session$ns("test"), "\n")
+    cat("Expected grupo namespace:", session$ns("test_inputs-grupo"), "\n")
+    cat("Expected tematica namespace:", session$ns("test_inputs-tematica"), "\n")
+    
+    # Check if inputs exist
+    cat("\nInput existence check:\n")
+    cat("sel_region exists:", !is.null(input$sel_region), "\n")
+    
+    # Check for grupo-related inputs
+    grupo_inputs <- c("grupo_biologico", "grupo_interes", "grupo_biologico_children", "grupo_interes_children")
+    for (input_name in grupo_inputs) {
+      full_id <- paste0("test_inputs-", input_name)
+      cat(full_id, "exists:", !is.null(input[[input_name]]), "\n")
+    }
+    
+    # Check for tematica-related inputs (we'll check a few common ones)
+    tematica_inputs <- c("amenazadas", "amenazadas_children", "biologico", "biologico_children")
+    for (input_name in tematica_inputs) {
+      full_id <- paste0("test_inputs-", input_name)
+      cat(full_id, "exists:", !is.null(input[[input_name]]), "\n")
+    }
+    
     cat("=====================\n")
   })
   

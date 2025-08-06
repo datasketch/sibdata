@@ -53,6 +53,11 @@ exp_species_table_server <- function(id, r, con, session = NULL, debug = FALSE) 
     
     if (debug) message("🔧 SPECIES TABLE MODULE INITIALIZED")
 
+    # Track if lista_especies modal has been automatically shown from URL parameter in this session
+    auto_modal_shown <- reactiveVal(FALSE)
+    
+    if (debug) message("✓ Auto modal tracking initialized - auto_modal_shown = FALSE")
+
     # URL parameter handling for lista_especies
     url_par <- reactive({
       if (!is.null(session)) {
@@ -135,111 +140,99 @@ exp_species_table_server <- function(id, r, con, session = NULL, debug = FALSE) 
       if (debug) message("✓ r$species_data updated")
     })
 
-    # Force summary text to update when species data changes
-    observe({
-      req(r$species_data)
-      if (debug) message("🔄 FORCING SUMMARY TEXT UPDATE")
+    # Summary text renderer
+    output$species_summary <- renderText({
+      if (debug) message("📝 SPECIES SUMMARY RENDERED")
       
-      # Force the summary to re-render
-      output$species_summary <- renderText({
-        if (debug) message("📝 SPECIES SUMMARY RENDERED")
-        
-        total <- nrow(r$species_data)
-        region <- r$sel_region %||% "todas las regiones"
-        region <- tools::toTitleCase(gsub("-", " ", region))
-        
-        tematica_text <- if (is.null(r$sel_tematica)) {
-          "todas las temáticas"
-        } else {
-          tools::toTitleCase(gsub("_", " ", r$sel_tematica))
-        }
-        
-        grupo_text <- ""
-        if (!is.null(r$sel_grupo)) {
-          grupo <- tools::toTitleCase(gsub("-", " ", r$sel_grupo))
-          grupo_text <- paste("del grupo", grupo)
-        }
-        
-        result <- sprintf("Mostrando %s especies para %s en %s %s",
-                          format(total, big.mark = ","),
-                          tematica_text,
-                          region,
-                          grupo_text)
-        if (debug) message("Summary text: ", result)
-        result
-      })
+      total <- if(is.null(r$species_data)) 0 else nrow(r$species_data)
+      region <- r$sel_region %||% "todas las regiones"
+      region <- tools::toTitleCase(gsub("-", " ", region))
+      
+      tematica_text <- if (is.null(r$sel_tematica)) {
+        "todas las temáticas"
+      } else {
+        tools::toTitleCase(gsub("_", " ", r$sel_tematica))
+      }
+      
+      grupo_text <- ""
+      if (!is.null(r$sel_grupo)) {
+        grupo <- tools::toTitleCase(gsub("-", " ", r$sel_grupo))
+        grupo_text <- paste("del grupo", grupo)
+      }
+      
+      result <- sprintf("Mostrando %s especies para %s en %s %s",
+                        format(total, big.mark = ","),
+                        tematica_text,
+                        region,
+                        grupo_text)
+      if (debug) message("Summary text: ", result)
+      result
     })
 
-    # Independent species table renderer
-    observe({
-      req(r$species_data)
-      if (debug) message("🎯 INDEPENDENT SPECIES TABLE RENDERER TRIGGERED")
+    # Species table renderer
+    output$list_species <- renderDataTable({
+      if (debug) message("🎨 RENDERING SPECIES TABLE")
       
-      # Force the table to re-render
-      output$list_species <- renderDataTable({
-        if (debug) message("🎨 RENDERING SPECIES TABLE (INDEPENDENT)")
-        
-        species_data <- r$species_data
-        if (debug) {
-          message("Species data rows for table: ", nrow(species_data))
-          message("Species data columns: ", paste(names(species_data), collapse = ", "))
-        }
+      species_data <- r$species_data
+      if (debug) {
+        message("Species data rows for table: ", if(is.null(species_data)) "NULL" else nrow(species_data))
+        message("Species data columns: ", if(is.null(species_data)) "NULL" else paste(names(species_data), collapse = ", "))
+      }
 
-        # Check if we have data to display
-        if (nrow(species_data) == 0) {
-          if (debug) message("⚠ No data to display in table")
-          empty_df <- data.frame(
-            "No hay especies" = "No se encontraron especies para los filtros seleccionados"
-          )
-          return(DT::datatable(
-            empty_df,
-            rownames = FALSE,
-            options = list(
-              dom = 't',
-              searching = FALSE,
-              info = FALSE,
-              paging = FALSE
-            )
-          ))
-        }
-        
-        # Format links for GBIF and CBC columns
-        if ("GBIF" %in% names(species_data)) {
-          species_data$GBIF <- ifelse(
-            is.na(species_data$GBIF) | species_data$GBIF == "", 
-            "",
-            paste0("<a href='", species_data$GBIF, "' target='_blank'>GBIF</a>")
-          )
-        }
-        
-        if ("CBC" %in% names(species_data)) {
-          species_data$CBC <- ifelse(
-            is.na(species_data$CBC) | species_data$CBC == "", 
-            "",
-            paste0("<a href='", species_data$CBC, "' target='_blank'>CBC</a>")
-          )
-        }
-        
-        if (debug) message("✓ Creating DataTable with ", nrow(species_data), " rows")
-
-        # Create the full species table with proper options
-        species_table <- DT::datatable(
-          species_data,
+      # Check if we have data to display
+      if (is.null(species_data) || nrow(species_data) == 0) {
+        if (debug) message("⚠ No data to display in table")
+        empty_df <- data.frame(
+          "No hay especies" = "No se encontraron especies para los filtros seleccionados"
+        )
+        return(DT::datatable(
+          empty_df,
           rownames = FALSE,
-          selection = 'none',
-          escape = FALSE,
-          options = c(
-            get_species_table_options(),
-            list(
-              scrollY = "300px",
-              scrollCollapse = TRUE
-            )
+          options = list(
+            dom = 't',
+            searching = FALSE,
+            info = FALSE,
+            paging = FALSE
+          )
+        ))
+      }
+      
+      # Format links for GBIF and CBC columns
+      if ("GBIF" %in% names(species_data)) {
+        species_data$GBIF <- ifelse(
+          is.na(species_data$GBIF) | species_data$GBIF == "", 
+          "",
+          paste0("<a href='", species_data$GBIF, "' target='_blank'>GBIF</a>")
+        )
+      }
+      
+      if ("CBC" %in% names(species_data)) {
+        species_data$CBC <- ifelse(
+          is.na(species_data$CBC) | species_data$CBC == "", 
+          "",
+          paste0("<a href='", species_data$CBC, "' target='_blank'>CBC</a>")
+        )
+      }
+      
+      if (debug) message("✓ Creating DataTable with ", nrow(species_data), " rows")
+
+      # Create the full species table with proper options
+      species_table <- DT::datatable(
+        species_data,
+        rownames = FALSE,
+        selection = 'none',
+        escape = FALSE,
+        options = c(
+          get_species_table_options(),
+          list(
+            scrollY = "300px",
+            scrollCollapse = TRUE
           )
         )
-        
-        if (debug) message("✓ DataTable created successfully")
-        species_table
-      })
+      )
+      
+      if (debug) message("✓ DataTable created successfully")
+      species_table
     })
 
     # Function to show species modal
@@ -262,10 +255,11 @@ exp_species_table_server <- function(id, r, con, session = NULL, debug = FALSE) 
         size = "l",
         div(
           div(class = "summary-text", style = "margin-bottom: 15px;",
-              sprintf("Mostrando %s especies para %s en %s",
+              sprintf("Mostrando %s especies para %s en %s%s",
                      format(nrow(r$species_data), big.mark = ","),
                      if (is.null(r$sel_tematica)) "todas las temáticas" else tools::toTitleCase(gsub("_", " ", r$sel_tematica)),
-                     tools::toTitleCase(gsub("-", " ", r$sel_region %||% "Colombia"))
+                     tools::toTitleCase(gsub("-", " ", r$sel_region %||% "Colombia")),
+                     if (!is.null(r$sel_grupo)) paste(" del grupo", tools::toTitleCase(gsub("-", " ", r$sel_grupo))) else ""
               )
           ),
           div(style = "display: flex; justify-content: flex-end; margin-bottom: 10px;",
@@ -287,7 +281,7 @@ exp_species_table_server <- function(id, r, con, session = NULL, debug = FALSE) 
       show_species_modal()
     })
 
-    # Auto-show species modal based on URL parameter
+    # Auto-show species modal based on URL parameter (only once per session)
     observe({
       req(r$species_data)
       
@@ -295,12 +289,20 @@ exp_species_table_server <- function(id, r, con, session = NULL, debug = FALSE) 
       if (!is.null(url_par()$lista_especies) && 
           tolower(url_par()$lista_especies) == "true") {
         
-        if (debug) message("🌐 URL parameter lista_especies=true detected - opening modal")
-        
-        # Use a small delay to ensure the modal renders properly
-        shinyjs::delay(500, {
-          show_species_modal()
-        })
+        if (auto_modal_shown()) {
+          if (debug) message("⚠ Auto modal already shown in this session - skipping")
+        } else {
+          if (debug) message("🌐 URL parameter lista_especies=true detected - opening modal (first time)")
+          
+          # Mark auto modal as shown for this session
+          auto_modal_shown(TRUE)
+          if (debug) message("✓ Auto modal marked as shown for this session")
+          
+          # Use a small delay to ensure the modal renders properly
+          shinyjs::delay(500, {
+            show_species_modal()
+          })
+        }
       }
     })
     

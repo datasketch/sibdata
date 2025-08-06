@@ -37,11 +37,7 @@ exp_inputs_tematica_ui <- function(id) {
                     class = "btn-sm btn-outline-secondary tematica-clear-btn",
                     title = "Limpiar selección")
       ),
-      div(
-        id = ns("tematica_options"),
-        class = "tematica-options",
-        style = "min-height: 20px;"
-      )
+      uiOutput(ns("tematica_ui"))
     ),
     tags$style(HTML("
       .tematica-container {
@@ -139,48 +135,134 @@ exp_inputs_tematica_ui <- function(id) {
 
 
       
-      /* Style radio buttons to match checkboxes */
-      .tematica-children input[type='radio'] {
-        appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        width: 14px;
-        height: 14px;
-        border: 1px solid #ccc;
-        border-radius: 50%;
-        outline: none;
-        cursor: pointer;
-        position: relative;
-        margin: 0;
-        padding: 0;
-        vertical-align: middle;
-        top: -1px;
+      /* Style radio buttons to match checkboxes exactly */
+      .tematica-children input[type='radio'],
+      .tematica-children .radio input[type='radio'] {
+        appearance: none !important;
+        -webkit-appearance: none !important;
+        -moz-appearance: none !important;
+        width: 14px !important;
+        height: 14px !important;
+        border: 1px solid #ccc !important;
+        border-radius: 50% !important;
+        outline: none !important;
+        cursor: pointer !important;
+        position: relative !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        vertical-align: middle !important;
+        top: -1px !important;
+        background-color: transparent !important;
+        box-shadow: none !important;
       }
       
-      .tematica-children input[type='radio']:checked {
+      .tematica-children input[type='radio']:checked,
+      .tematica-children .radio input[type='radio']:checked {
         background-color: #006400 !important;
+        border-color: #006400 !important;
+        box-shadow: none !important;
+      }
+      
+      .tematica-children input[type='radio']:checked::after,
+      .tematica-children .radio input[type='radio']:checked::after {
+        content: '' !important;
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        width: 4px !important;
+        height: 4px !important;
+        background-color: white !important;
+        border-radius: 50% !important;
+        box-shadow: none !important;
+      }
+      
+      .tematica-children input[type='radio']:hover,
+      .tematica-children .radio input[type='radio']:hover {
         border-color: #006400 !important;
       }
       
-      .tematica-children input[type='radio']:checked::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 4px;
-        height: 4px;
-        background-color: white;
-        border-radius: 50%;
-      }
-      
-      .tematica-children input[type='radio']:hover {
-        border-color: #006400;
-      }
-      
-      .tematica-children input[type='radio']:checked:hover {
+      .tematica-children input[type='radio']:checked:hover,
+      .tematica-children .radio input[type='radio']:checked:hover {
         background-color: #004d00 !important;
         border-color: #004d00 !important;
+      }
+      
+      /* Override any Shiny-specific radio button styling */
+      .tematica-children .radio input[type='radio'] {
+        background-color: transparent !important;
+        border: 1px solid #ccc !important;
+        border-radius: 50% !important;
+        width: 14px !important;
+        height: 14px !important;
+        appearance: none !important;
+        -webkit-appearance: none !important;
+        -moz-appearance: none !important;
+        box-shadow: none !important;
+      }
+      
+      .tematica-children .radio input[type='radio']:checked {
+        background-color: #006400 !important;
+        border-color: #006400 !important;
+        box-shadow: none !important;
+      }
+      
+      .tematica-children .radio input[type='radio']:checked::after {
+        content: '' !important;
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        width: 4px !important;
+        height: 4px !important;
+        background-color: white !important;
+        border-radius: 50% !important;
+        box-shadow: none !important;
+      }
+      
+      /* Force exact same styling as checkboxes */
+      .tematica-children input[type='radio'],
+      .tematica-children .radio input[type='radio'],
+      .tematica-children .form-check input[type='radio'] {
+        appearance: none !important;
+        -webkit-appearance: none !important;
+        -moz-appearance: none !important;
+        width: 14px !important;
+        height: 14px !important;
+        border: 1px solid #ccc !important;
+        border-radius: 50% !important;
+        outline: none !important;
+        cursor: pointer !important;
+        position: relative !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        vertical-align: middle !important;
+        top: -1px !important;
+        background-color: transparent !important;
+        box-shadow: none !important;
+      }
+      
+      .tematica-children input[type='radio']:checked,
+      .tematica-children .radio input[type='radio']:checked,
+      .tematica-children .form-check input[type='radio']:checked {
+        background-color: #006400 !important;
+        border-color: #006400 !important;
+        box-shadow: none !important;
+      }
+      
+      .tematica-children input[type='radio']:checked::after,
+      .tematica-children .radio input[type='radio']:checked::after,
+      .tematica-children .form-check input[type='radio']:checked::after {
+        content: '' !important;
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        width: 4px !important;
+        height: 4px !important;
+        background-color: white !important;
+        border-radius: 50% !important;
+        box-shadow: none !important;
       }
       
       .tematica-children label {
@@ -450,7 +532,17 @@ exp_inputs_tematica_server <- function(id, con, session_main = NULL, debug = FAL
   moduleServer(id, function(input, output, session) {
     ns <- session$ns
 
-    tematica_tree <- get_tematicas_tree(con)
+    # Safely load tematica tree with error handling
+    tematica_tree <- tryCatch({
+      if (is.null(con) || !DBI::dbIsValid(con)) {
+        if (debug) cat("ERROR: Invalid database connection\n")
+        return(NULL)
+      }
+      get_tematicas_tree(con)
+    }, error = function(e) {
+      if (debug) cat("ERROR loading tematica tree:", e$message, "\n")
+      NULL
+    })
 
     if (debug) {
       cat("=== DEBUG: tematica_tree created ===\n")
@@ -485,13 +577,20 @@ exp_inputs_tematica_server <- function(id, con, session_main = NULL, debug = FAL
       list()
     })
 
-    # Set initial state from URL parameters
+    # Set initial state from URL parameters - delay to ensure UI is rendered first
     observe({
       req(tematica_tree)
-      req(url_par())
+      
+      # Only process URL parameters if session_main is available
+      if (is.null(session_main)) return()
+      
+      url_params <- url_par()
+      if (length(url_params) == 0) return()
 
-      tematica_param <- url_par()$tematica
+      tematica_param <- url_params$tematica
       if (!is.null(tematica_param) && tematica_param != "") {
+        # Delay execution to ensure UI inputs are created first
+        shinyjs::delay(500, {
         cat("=== DEBUG: Setting initial tematica from URL ===\n")
         cat("URL parameter tematica:", tematica_param, "\n")
 
@@ -568,11 +667,12 @@ exp_inputs_tematica_server <- function(id, con, session_main = NULL, debug = FAL
           cat("  ✗ Tematica not found in tree:", tematica_param, "\n")
         }
         cat("=== END DEBUG: URL parameter handling ===\n\n")
+        }) # End shinyjs::delay
       }
     })
 
-    # Create UI inputs dynamically and insert them into the container
-    observe({
+    # Create UI inputs using renderUI (works properly with nested modules)
+    output$tematica_ui <- renderUI({
       cat("=== DEBUG: renderUI function called ===\n")
       cat("tematica_tree is null:", is.null(tematica_tree), "\n")
       
@@ -604,7 +704,7 @@ exp_inputs_tematica_server <- function(id, con, session_main = NULL, debug = FAL
         }
 
         # Create first-level checkbox with info icon
-        parent_id <- ns(x$slug)
+        parent_id <- session$ns(x$slug)
         
         if (debug) {
           cat("  Parent ID with namespace:", parent_id, "\n")
@@ -671,7 +771,7 @@ exp_inputs_tematica_server <- function(id, con, session_main = NULL, debug = FAL
           }
 
           # Create radio buttons container with info icons
-          children_id <- ns(paste0(x$slug, "_children"))
+          children_id <- session$ns(paste0(x$slug, "_children"))
           
           # Create radio buttons using Shiny's radioButtons function for proper input registration
           children_input <- div(
@@ -744,33 +844,16 @@ exp_inputs_tematica_server <- function(id, con, session_main = NULL, debug = FAL
         cat("Final UI class:", class(final_ui), "\n")
         cat("Final UI length:", length(final_ui), "\n")
         cat("Final UI names:", names(final_ui), "\n")
+        cat("✓ renderUI completed\n")
       }
       
-      # Insert the UI into the container
-      # The container ID is "tematica-tematica_options" (without the parent namespace)
-      selector <- "#tematica-tematica_options"
-      if (debug) {
-        cat("InsertUI selector:", selector, "\n")
-        cat("Container ID in HTML:", "tematica-tematica_options", "\n")
-      }
-      
-      # Add a small delay to ensure container is ready
-      shinyjs::delay(100, {
-        insertUI(
-          selector = selector,
-          where = "afterBegin",
-          ui = final_ui,
-          immediate = TRUE
-        )
-        if (debug) {
-          cat("✓ InsertUI completed\n")
-        }
-      })
+      final_ui
     })
 
     # Handle first-level selection (single selection)
     # Create individual observeEvent for each checkbox to avoid race conditions
-    for (x in tematica_tree$children) {
+    if (!is.null(tematica_tree) && !is.null(tematica_tree$children)) {
+      for (x in tematica_tree$children) {
       local({
         current_slug <- x$slug
         observeEvent(input[[current_slug]], {
@@ -856,7 +939,8 @@ exp_inputs_tematica_server <- function(id, con, session_main = NULL, debug = FAL
           cat("=== END DEBUG: observeEvent for", current_slug, "===\n\n")
         }, ignoreInit = TRUE)
       })
-    }
+      } # End for loop
+    } # End if (!is.null(tematica_tree))
 
     # Handle clear button
     observeEvent(input$clear_tematica, {

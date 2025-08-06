@@ -34,6 +34,7 @@ exp_debug_server <- function(id, r, debug = FALSE) {
       output$debug_reactive <- renderPrint({
         cat("=== Current Reactive Values ===\n")
         cat("sel_region:", r$sel_region, "\n")
+        cat("sel_region_tipo:", r$sel_region_tipo, "\n")
         cat("sel_grupo_type:", r$sel_grupo_type, "\n")
         cat("sel_grupo:", r$sel_grupo, "\n")
         cat("sel_tematica:", r$sel_tematica, "\n")

@@ -63,7 +63,7 @@ exp_inputs_grupo_ui <- function(id) {
       }
       
       .grupo-type-children {
-        margin-left: 0px;
+        margin-left: 30px;
         margin-top: -15px;
         margin-bottom: 0px;
         padding-left: 10px;
@@ -129,6 +129,108 @@ exp_inputs_grupo_ui <- function(id) {
         margin-bottom: 0;
         padding: 2px 0;
       }
+      
+      /* Style selectize inputs to match green theme */
+      .selectize-input {
+        border-color: #ccc !important;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      }
+      
+      .selectize-input:hover {
+        border-color: #006400 !important;
+      }
+      
+      .selectize-input:focus {
+        border-color: #006400 !important;
+        box-shadow: 0 0 0 0.2rem rgba(0, 100, 0, 0.25) !important;
+      }
+      
+      /* Override all selectize dropdown styling */
+      .selectize-dropdown {
+        border-color: #006400 !important;
+      }
+      
+      .selectize-dropdown .active {
+        background-color: #006400 !important;
+        color: white !important;
+      }
+      
+      .selectize-dropdown .active:hover {
+        background-color: #004d00 !important;
+        color: white !important;
+      }
+      
+      .selectize-dropdown .option {
+        color: #333 !important;
+      }
+      
+      .selectize-dropdown .option:hover {
+        background-color: #e8f5e8 !important;
+        color: #333 !important;
+      }
+      
+      .selectize-dropdown .option.active {
+        background-color: #006400 !important;
+        color: white !important;
+      }
+      
+      .selectize-dropdown .option.active:hover {
+        background-color: #004d00 !important;
+        color: white !important;
+      }
+      
+      /* Override any blue styling */
+      .selectize-dropdown .option[data-selectable] {
+        color: #333 !important;
+      }
+      
+      .selectize-dropdown .option[data-selectable]:hover {
+        background-color: #e8f5e8 !important;
+        color: #333 !important;
+      }
+      
+      .selectize-dropdown .option[data-selectable].active {
+        background-color: #006400 !important;
+        color: white !important;
+      }
+      
+      .selectize-dropdown .option[data-selectable].active:hover {
+        background-color: #004d00 !important;
+        color: white !important;
+      }
+      
+      /* Target the selected state specifically */
+      .selectize-dropdown .option.selected {
+        background-color: #006400 !important;
+        color: white !important;
+      }
+      
+      .selectize-dropdown .option.selected:hover {
+        background-color: #004d00 !important;
+        color: white !important;
+      }
+      
+      /* Override any Bootstrap or default styling */
+      .selectize-dropdown .option.selected[data-selectable] {
+        background-color: #006400 !important;
+        color: white !important;
+      }
+      
+      .selectize-dropdown .option.selected[data-selectable]:hover {
+        background-color: #004d00 !important;
+        color: white !important;
+      }
+      
+      /* Force override with higher specificity */
+      .selectize-dropdown .option.selected[data-selectable][role='option'] {
+        background-color: #006400 !important;
+        color: white !important;
+      }
+      
+      .selectize-dropdown .option.selected[data-selectable][role='option']:hover {
+        background-color: #004d00 !important;
+        color: white !important;
+      }
     "))
   )
 }
@@ -149,6 +251,9 @@ exp_inputs_grupo_server <- function(id, app_options, session_main = NULL, debug 
 
     if (debug) {
       cat("=== DEBUG: Grupo module server started ===\n")
+      cat("Module ID passed to server:", id, "\n")
+      cat("Session namespace test:", ns("test"), "\n")
+      cat("Expected UI output ID:", ns("grupo_ui"), "\n")
       cat("App options available:", !is.null(app_options), "\n")
       if (!is.null(app_options)) {
         cat("Biological groups count:", length(app_options$grupo_biologico), "\n")
@@ -170,9 +275,14 @@ exp_inputs_grupo_server <- function(id, app_options, session_main = NULL, debug 
     observe({
       req(app_options$grupo_biologico)
       req(app_options$grupo_interes)
-      req(url_par())
+      
+      # Only process URL parameters if session_main is available
+      if (is.null(session_main)) return()
+      
+      url_params <- url_par()
+      if (length(url_params) == 0) return()
 
-      grupo_param <- url_par()$grupo
+      grupo_param <- url_params$grupo
       if (!is.null(grupo_param) && grupo_param != "") {
         cat("=== DEBUG: Setting initial grupo from URL ===\n")
         cat("URL parameter grupo:", grupo_param, "\n")
@@ -273,98 +383,152 @@ exp_inputs_grupo_server <- function(id, app_options, session_main = NULL, debug 
     })
 
     # Create UI inputs using renderUI with correct namespace
-    output$grupo_ui <- renderUI({
-      cat("=== DEBUG: Creating grupo UI ===\n")
-      cat("Session namespace test:", session$ns("test"), "\n")
-      cat("Module ID:", id, "\n")
-      cat("Session namespace for 'grupo_biologico':", session$ns("grupo_biologico"), "\n")
-      cat("Session namespace for 'grupo_interes':", session$ns("grupo_interes"), "\n")
-      cat("Session namespace for 'grupo_biologico_children':", session$ns("grupo_biologico_children"), "\n")
-      cat("Session namespace for 'grupo_interes_children':", session$ns("grupo_interes_children"), "\n")
-      
-      req(app_options$grupo_biologico)
-      req(app_options$grupo_interes)
-
+    if (debug) {
+      cat("=== DEBUG: About to assign output$grupo_ui ===\n")
+      cat("Available outputs:", names(output), "\n")
+      cat("Output namespace context:\n")
+      cat("  output$grupo_ui will be:", session$ns("grupo_ui"), "\n")
+      cat("  session object class:", class(session), "\n")
+      cat("  session$ns function test:", session$ns("test123"), "\n")
+    }
+    
+    tryCatch({
       if (debug) {
-        cat("Creating UI inputs\n")
+        cat("=== DEBUG: Registering renderUI reactive ===\n")
       }
+      
+      # Add a simple observe to trigger after a delay
+      observe({
+        shinyjs::delay(1000, {
+          if (debug) {
+            cat("=== DEBUG: Delayed trigger - testing if UI is connected ===\n")
+            cat("Trying to manually invalidate renderUI...\n")
+            # Try to manually trigger the renderUI
+            tryCatch({
+              result <- output$grupo_ui()
+              cat("Manual renderUI call result: ", class(result), "\n")
+            }, error = function(e) {
+              cat("Manual renderUI call failed:", e$message, "\n")
+            })
+          }
+        })
+      })
+      
+      output$grupo_ui <- renderUI({
+        cat("=== DEBUG: Creating grupo UI ===\n")
+        cat("Session namespace test:", session$ns("test"), "\n")
+        cat("Module ID:", id, "\n")
+        cat("App options available:", !is.null(app_options), "\n")
+        if (!is.null(app_options)) {
+          cat("grupo_biologico available:", !is.null(app_options$grupo_biologico), "\n")
+          cat("grupo_interes available:", !is.null(app_options$grupo_interes), "\n")
+          if (!is.null(app_options$grupo_biologico)) {
+            cat("grupo_biologico length:", length(app_options$grupo_biologico), "\n")
+          }
+          if (!is.null(app_options$grupo_interes)) {
+            cat("grupo_interes length:", length(app_options$grupo_interes), "\n")
+          }
+        }
+        cat("Session namespace for 'grupo_biologico':", session$ns("grupo_biologico"), "\n")
+        cat("Session namespace for 'grupo_interes':", session$ns("grupo_interes"), "\n")
+        cat("Session namespace for 'grupo_biologico_children':", session$ns("grupo_biologico_children"), "\n")
+        cat("Session namespace for 'grupo_interes_children':", session$ns("grupo_interes_children"), "\n")
+        
+        # Remove req() calls that might be blocking the renderUI
+        if (is.null(app_options$grupo_biologico) || is.null(app_options$grupo_interes)) {
+          cat("WARNING: app_options missing, returning placeholder\n")
+          return(div("Loading grupo options..."))
+        }
 
-      # Create list to hold all inputs
-      all_inputs <- list()
+        if (debug) {
+          cat("Creating UI inputs\n")
+        }
 
-      # Create checkbox for "Biológico"
-      biologico_input <- div(
-        class = "grupo-type-parent",
-        div(
-          class = "grupo-type-parent-content",
-          checkboxInput(session$ns("grupo_biologico"), "Biológico", value = FALSE)
+        # Create list to hold all inputs
+        all_inputs <- list()
+
+        # Create checkbox for "Biológico"
+        biologico_input <- div(
+          class = "grupo-type-parent",
+          div(
+            class = "grupo-type-parent-content",
+            checkboxInput(session$ns("grupo_biologico"), "Biológico", value = FALSE)
+          )
         )
-      )
-      all_inputs <- c(all_inputs, list(biologico_input))
+        all_inputs <- c(all_inputs, list(biologico_input))
 
-      if (debug) {
-        cat("  Created biologico checkbox with ID:", session$ns("grupo_biologico"), "\n")
-      }
+        if (debug) {
+          cat("  Created biologico checkbox with ID:", session$ns("grupo_biologico"), "\n")
+        }
 
-      # Create children container for "Biológico"
-      biologico_children_input <- div(
-        id = session$ns("grupo_biologico_children"),
-        class = "grupo-type-children",
-        style = "display: none;",
-        selectizeInput(session$ns("grupo_biologico_children"), "",
-                       app_options$grupo_biologico,
-                       selected = "todos",
-                       options = list(placeholder = "Buscar grupo...", searchField = "text"))
-      )
-      all_inputs <- c(all_inputs, list(biologico_children_input))
-
-      if (debug) {
-        cat("  Created biologico children with ID:", session$ns("grupo_biologico_children"), "\n")
-      }
-
-      # Create checkbox for "Interés de Conservación"
-      interes_input <- div(
-        class = "grupo-type-parent",
-        div(
-          class = "grupo-type-parent-content",
-          checkboxInput(session$ns("grupo_interes"), "Interés de Conservación", value = FALSE)
+        # Create children container for "Biológico"
+        biologico_children_input <- div(
+          id = session$ns("grupo_biologico_children"),
+          class = "grupo-type-children",
+          style = "display: none;",
+          selectizeInput(session$ns("grupo_biologico_children"), "",
+                         app_options$grupo_biologico,
+                         selected = "todos",
+                         options = list(placeholder = "Buscar grupo...", searchField = "text"))
         )
-      )
-      all_inputs <- c(all_inputs, list(interes_input))
+        all_inputs <- c(all_inputs, list(biologico_children_input))
 
+        if (debug) {
+          cat("  Created biologico children with ID:", session$ns("grupo_biologico_children"), "\n")
+        }
+
+        # Create checkbox for "Interés de Conservación"
+        interes_input <- div(
+          class = "grupo-type-parent",
+          div(
+            class = "grupo-type-parent-content",
+            checkboxInput(session$ns("grupo_interes"), "Interés de Conservación", value = FALSE)
+          )
+        )
+        all_inputs <- c(all_inputs, list(interes_input))
+
+        if (debug) {
+          cat("  Created interes checkbox with ID:", session$ns("grupo_interes"), "\n")
+        }
+
+        # Create children container for "Interés de Conservación"
+        interes_children_input <- div(
+          id = session$ns("grupo_interes_children"),
+          class = "grupo-type-children",
+          style = "display: none;",
+          selectizeInput(session$ns("grupo_interes_children"), "",
+                         app_options$grupo_interes,
+                         selected = "todos",
+                         options = list(placeholder = "Buscar grupo...", searchField = "text"))
+        )
+        all_inputs <- c(all_inputs, list(interes_children_input))
+
+        if (debug) {
+          cat("  Created interes children with ID:", session$ns("grupo_interes_children"), "\n")
+        }
+
+        if (debug) {
+          cat("Total inputs created:", length(all_inputs), "\n")
+          cat("=== END DEBUG: UI creation ===\n")
+        }
+
+        # Create the final UI
+        final_ui <- do.call(tagList, all_inputs)
+        
+        if (debug) {
+          cat("✓ renderUI completed\n")
+        }
+        
+        final_ui
+      })
+    
+    if (debug) {
+      cat("✓ output$grupo_ui assignment completed\n")
+    }
+    }, error = function(e) {
       if (debug) {
-        cat("  Created interes checkbox with ID:", session$ns("grupo_interes"), "\n")
+        cat("✗ ERROR in output$grupo_ui assignment:", e$message, "\n")
       }
-
-      # Create children container for "Interés de Conservación"
-      interes_children_input <- div(
-        id = session$ns("grupo_interes_children"),
-        class = "grupo-type-children",
-        style = "display: none;",
-        selectizeInput(session$ns("grupo_interes_children"), "",
-                       app_options$grupo_interes,
-                       selected = "todos",
-                       options = list(placeholder = "Buscar grupo...", searchField = "text"))
-      )
-      all_inputs <- c(all_inputs, list(interes_children_input))
-
-      if (debug) {
-        cat("  Created interes children with ID:", session$ns("grupo_interes_children"), "\n")
-      }
-
-      if (debug) {
-        cat("Total inputs created:", length(all_inputs), "\n")
-        cat("=== END DEBUG: UI creation ===\n")
-      }
-
-      # Create the final UI
-      final_ui <- do.call(tagList, all_inputs)
-      
-      if (debug) {
-        cat("✓ renderUI completed\n")
-      }
-      
-      final_ui
     })
 
     # Handle first-level selection (single selection)

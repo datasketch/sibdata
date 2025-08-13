@@ -158,8 +158,8 @@ choropleth_map <- function(data = NULL,
 
 
   pal <- leaflet::colorNumeric(
-    palette = palette_numeric,
-    domain = d0$value
+    palette = rev(palette_numeric),
+    domain = d0$value * -1
   )
 
   title <- ifelse(!is.null(inp$indicador), inp$indicador,
@@ -177,7 +177,7 @@ choropleth_map <- function(data = NULL,
   # Create the leaflet map
   lt <- leaflet::leaflet(dgeo) |>
     leaflet::addPolygons(
-      fillColor = ~pal(dgeo$value),
+      fillColor = ~pal(dgeo$value * -1),
       weight = 1,
       opacity = 1,
       color = "white",
@@ -202,9 +202,13 @@ choropleth_map <- function(data = NULL,
     lt <- lt |>
       leaflet::addLegend(
         pal = pal,
-        values = dgeo$value,
+        values = dgeo$value * -1,
         title = title,
-        position = "bottomright"
+        position = "bottomright",
+        bins = 5,
+        labFormat = leaflet::labelFormat(
+          transform = function(x) -1 * x
+        )
       )
   }
 

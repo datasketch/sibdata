@@ -55,7 +55,7 @@ exp_visualization3_ui <- function(id) {
 #' @param con Database connection
 #' @param debug Boolean to control console debug output
 #' @export
-exp_visualization3_server <- function(id, r, con, debug = FALSE) {
+exp_visualization3_server <- function(id, r, con, loading_fns = NULL, debug = FALSE) {
   moduleServer(id, function(input, output, session) {
     ns <- session$ns
 
@@ -249,6 +249,11 @@ exp_visualization3_server <- function(id, r, con, debug = FALSE) {
       req(r$sel_region)
       req(r$chart_type)  # Need chart_type to determine subregiones
 
+      # Show loading for data operations
+      if (!is.null(loading_fns)) {
+        loading_fns$show("Cargando datos...")
+      }
+
       # Set subregiones based on chart type
       use_subregiones <- r$chart_type == "map"
 
@@ -285,6 +290,11 @@ exp_visualization3_server <- function(id, r, con, debug = FALSE) {
         } else {
           message("❌ No data returned")
         }
+      }
+      
+      # Hide loading after data is processed
+      if (!is.null(loading_fns)) {
+        shinyjs::delay(100, loading_fns$hide())  # Small delay to ensure data is processed
       }
     })
 
@@ -546,7 +556,7 @@ exp_visualization3_server <- function(id, r, con, debug = FALSE) {
       })
     })
 
-    # Download controls UI
+    # Download controls UI - Main download functionality like app.R
     output$descargas <- renderUI({
       req(r$chart_type)
 
@@ -562,13 +572,194 @@ exp_visualization3_server <- function(id, r, con, debug = FALSE) {
             actionButton(ns("show_chart_data"), "Ver datos del gráfico",
                         class = "btn-sm btn-outline-info")
           },
-          # Chart download button (for highcharts only)
-          if(r$chart_type %in% c("pie", "donut", "bar", "treemap")) {
-            actionButton(ns("download_chart"), "Descargar gráfico",
-                        class = "btn-sm btn-outline-secondary")
-          }
+          # # Download buttons for charts and maps
+          # if(r$chart_type %in% c("pie", "donut", "bar", "treemap")) {
+          #   downloadButton(ns("download_chart"), "Descargar gráfico",
+          #                 class = "btn-sm btn-outline-secondary")
+          # } else if(r$chart_type == "map") {
+          #   downloadButton(ns("download_map"), "Descargar mapa",
+          #                 class = "btn-sm btn-outline-secondary")
+          # }
       )
     })
+
+    # Chart image download handler - for highcharter charts
+    output$download_chart <- downloadHandler(
+      filename = function() {
+        chart_type_name <- tools::toTitleCase(r$chart_type)
+        region_name <- gsub("-", "_", r$sel_region)
+        timestamp <- format(Sys.time(), "%Y%m%d_%H%M%S")
+        paste0("grafico_", chart_type_name, "_", region_name, "_", timestamp, ".png")
+      },
+      content = function(file) {
+        if (debug) message("📊 DOWNLOADING CHART IMAGE: ", file)
+        
+        # Show loading indicator
+        if (!is.null(loading_fns)) {
+          loading_fns$show("Generando imagen del gráfico...")
+        }
+        
+        # Create the chart using the same logic as the visualization
+        tryCatch({
+          # Validate that we have data and it's a highcharter chart type
+          req(r$main_data)
+          req(r$chart_type %in% c("pie", "donut", "bar", "treemap"))
+          
+          if (debug) {
+            message("Creating chart for download:")
+            message("- Chart type: ", r$chart_type)
+            message("- Data rows: ", nrow(r$main_data))
+          }
+          
+          # Create the chart using hgmagic (same as in the visualization)
+          chart <- create_hgmagic_chart(r$chart_type, r$main_data, r, con)
+          
+          # Export the chart to PNG 
+          # Method 1: Try using webshot if available
+          if (requireNamespace("webshot", quietly = TRUE)) {
+            temp_html <- tempfile(fileext = ".html")
+            htmlwidgets::saveWidget(chart, temp_html, selfcontained = TRUE)
+            
+            # Use webshot to convert HTML to PNG
+            webshot::webshot(temp_html, file, 
+                            vwidth = 800, vheight = 600, 
+                            delay = 2)
+            
+            # Clean up temporary file
+            unlink(temp_html)
+            
+          } else {
+            # Method 2: Fallback - save as HTML and inform user
+            html_file <- gsub("\\.png$", ".html", file)
+            htmlwidgets::saveWidget(chart, html_file, selfcontained = TRUE)
+            
+            # Create a message file instead of PNG
+            png(file, width = 800, height = 600)
+            plot.new()
+            text(0.5, 0.6, "Chart saved as HTML file", cex = 1.5, col = "blue")
+            text(0.5, 0.4, paste("Location:", basename(html_file)), cex = 1.2, col = "darkblue")
+            text(0.5, 0.3, "Open in browser to view", cex = 1, col = "gray")
+            dev.off()
+          }
+          
+          if (debug) message("✅ Chart downloaded successfully: ", file)
+          
+          # Hide loading indicator on success
+          if (!is.null(loading_fns)) {
+            loading_fns$hide()
+          }
+          
+        }, error = function(e) {
+          if (debug) message("❌ Error downloading chart: ", e$message)
+          
+          # Create a simple error image
+          png(file, width = 800, height = 600)
+          plot.new()
+          text(0.5, 0.5, paste("Error generating chart:\n", e$message), 
+               cex = 1.2, col = "red")
+          dev.off()
+          
+          # Hide loading indicator on error
+          if (!is.null(loading_fns)) {
+            loading_fns$hide()
+          }
+        })
+      }
+    )
+
+    # Map image download handler - for leaflet maps
+    output$download_map <- downloadHandler(
+      filename = function() {
+        region_name <- gsub("-", "_", r$sel_region)
+        timestamp <- format(Sys.time(), "%Y%m%d_%H%M%S")
+        paste0("mapa_", region_name, "_", timestamp, ".png")
+      },
+      content = function(file) {
+        if (debug) message("🗺️ DOWNLOADING MAP IMAGE: ", file)
+        
+        # Show loading indicator
+        if (!is.null(loading_fns)) {
+          loading_fns$show("Generando imagen del mapa...")
+        }
+        
+        tryCatch({
+          # Validate that we have data and it's a map
+          req(r$main_data)
+          req(r$chart_type == "map")
+          
+          if (debug) {
+            message("Creating map for download:")
+            message("- Region: ", r$sel_region)
+            message("- Data rows: ", nrow(r$main_data))
+            message("- Indicador: ", r$indicador)
+          }
+          
+          # Create the map using the same choropleth_map function
+          map <- choropleth_map(
+            data = r$main_data,
+            region = r$sel_region,
+            tipo = r$sel_tipo,
+            tematica = r$sel_tematica,
+            indicador = r$indicador,
+            grupo = r$sel_grupo,
+            subregiones = TRUE,
+            with_parent = FALSE,
+            con = con,
+            conmap = r$conmap
+          )
+          
+          # Export the map to PNG 
+          # Method 1: Try using webshot if available
+          if (requireNamespace("webshot", quietly = TRUE)) {
+            temp_html <- tempfile(fileext = ".html")
+            htmlwidgets::saveWidget(map, temp_html, selfcontained = TRUE)
+            
+            # Use webshot to convert HTML to PNG with larger size for maps
+            webshot::webshot(temp_html, file, 
+                            vwidth = 1000, vheight = 800, 
+                            delay = 3)  # Longer delay for maps to load
+            
+            # Clean up temporary file
+            unlink(temp_html)
+            
+          } else {
+            # Method 2: Fallback - save as HTML and inform user
+            html_file <- gsub("\\.png$", ".html", file)
+            htmlwidgets::saveWidget(map, html_file, selfcontained = TRUE)
+            
+            # Create a message file instead of PNG
+            png(file, width = 1000, height = 800)
+            plot.new()
+            text(0.5, 0.6, "Map saved as HTML file", cex = 1.5, col = "blue")
+            text(0.5, 0.4, paste("Location:", basename(html_file)), cex = 1.2, col = "darkblue")
+            text(0.5, 0.3, "Open in browser to view", cex = 1, col = "gray")
+            dev.off()
+          }
+          
+          if (debug) message("✅ Map downloaded successfully: ", file)
+          
+          # Hide loading indicator on success
+          if (!is.null(loading_fns)) {
+            loading_fns$hide()
+          }
+          
+        }, error = function(e) {
+          if (debug) message("❌ Error downloading map: ", e$message)
+          
+          # Create a simple error image
+          png(file, width = 1000, height = 800)
+          plot.new()
+          text(0.5, 0.5, paste("Error generating map:\n", e$message), 
+               cex = 1.2, col = "red")
+          dev.off()
+          
+          # Hide loading indicator on error
+          if (!is.null(loading_fns)) {
+            loading_fns$hide()
+          }
+        })
+      }
+    )
 
     # Show map data modal
     observeEvent(input$show_map_data, {

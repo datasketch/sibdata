@@ -4,7 +4,14 @@
 \alias{exp_species_table_server}
 \title{Species Table Server Module}
 \usage{
-exp_species_table_server(id, r, con, session = NULL, debug = FALSE)
+exp_species_table_server(
+  id,
+  r,
+  con,
+  session = NULL,
+  loading_fns = NULL,
+  debug = FALSE
+)
 }
 \arguments{
 \item{id}{Module ID}

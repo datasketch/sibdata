@@ -4,7 +4,7 @@
 \alias{exp_visualization3_server}
 \title{Visualization Server Module}
 \usage{
-exp_visualization3_server(id, r, con, debug = FALSE)
+exp_visualization3_server(id, r, con, loading_fns = NULL, debug = FALSE)
 }
 \arguments{
 \item{id}{Module ID}

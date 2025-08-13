@@ -47,7 +47,7 @@ exp_species_table_ui <- function(id) {
 #' @param session Shiny session object for URL parameter handling
 #' @param debug Boolean to control console debug output
 #' @export
-exp_species_table_server <- function(id, r, con, session = NULL, debug = FALSE) {
+exp_species_table_server <- function(id, r, con, session = NULL, loading_fns = NULL, debug = FALSE) {
   moduleServer(id, function(input, output, session_module) {
     ns <- session_module$ns
     
@@ -87,6 +87,11 @@ exp_species_table_server <- function(id, r, con, session = NULL, debug = FALSE) 
       req(r$sel_region)
       if (debug) message("✓ r$sel_region requirement met")
       
+      # Show loading for species data (can take time)
+      if (!is.null(loading_fns)) {
+        loading_fns$show("Cargando lista de especies...")
+      }
+      
       # Build parameters for list_species
       params <- list(
         region = r$sel_region,
@@ -114,7 +119,7 @@ exp_species_table_server <- function(id, r, con, session = NULL, debug = FALSE) 
         if (debug) message("Species query returned ", nrow(l_s), " rows")
         
         # Format for display
-        if (nrow(l_s) > 0) {
+        result <- if (nrow(l_s) > 0) {
           formatted_data <- format_species_data(l_s)
           if (debug) message("✓ Species data formatted successfully")
           formatted_data
@@ -122,11 +127,25 @@ exp_species_table_server <- function(id, r, con, session = NULL, debug = FALSE) 
           if (debug) message("⚠ No species data returned")
           NULL
         }
+        
+        # Hide loading after species data is processed
+        if (!is.null(loading_fns)) {
+          shinyjs::delay(100, loading_fns$hide())
+        }
+        
+        result
+        
       }, error = function(e) {
         if (debug) {
           message("❌ Error fetching species data: ", e$message)
           message("Error details: ", conditionMessage(e))
         }
+        
+        # Hide loading on error
+        if (!is.null(loading_fns)) {
+          loading_fns$hide()
+        }
+        
         NULL
       })
     })

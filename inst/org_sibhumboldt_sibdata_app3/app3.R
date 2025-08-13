@@ -21,12 +21,80 @@ library(hgmagic)
 library(shinyinvoer)
 library(shinyjs)
 
+# Optional dependency for chart image export
+if (requireNamespace("webshot", quietly = TRUE)) {
+  library(webshot)
+}
+
 # Debug module is available from sibdata package
 
 ui <- fluidPage(
   useShinyjs(),
   tags$head(
-    tags$link(rel="stylesheet", type="text/css", href="custom.css")
+    tags$link(rel="stylesheet", type="text/css", href="custom.css"),
+    # Loading spinner CSS
+    tags$style(HTML("
+      .loading-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.9);
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      
+      .spinner {
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #09A274;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 1s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      .loading-text {
+        margin-top: 20px;
+        font-size: 16px;
+        color: #09A274;
+        font-weight: 500;
+      }
+      
+      .section-loading {
+        position: relative;
+        opacity: 0.6;
+      }
+      
+      .section-loading::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 3px solid #f3f3f3;
+        border-top: 3px solid #09A274;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        animation: spin 1s linear infinite;
+        z-index: 1000;
+      }
+    "))
+  ),
+  
+  # Global loading overlay
+  div(id = "global-loading", class = "loading-overlay", style = "display: none;",
+      div(class = "spinner"),
+      div(id = "loading-text", class = "loading-text", "Cargando aplicación...")
   ),
 
   fluidRow(
@@ -61,6 +129,19 @@ ui <- fluidPage(
 server <- function(input, output, session) {
 
   if (DEBUG_MODE) message("🚀 SERVER STARTING")
+  
+  # Show loading on app start
+  shinyjs::show("global-loading")
+  
+  # Helper functions for loading management
+  show_loading <- function(text = "Cargando...") {
+    shinyjs::html("loading-text", text)
+    shinyjs::show("global-loading")
+  }
+  
+  hide_loading <- function() {
+    shinyjs::hide("global-loading")
+  }
 
   # Create session-specific app options
   con <- get_app_connection("db/sibdata.sqlite", debug = DEBUG_MODE)
@@ -110,10 +191,14 @@ server <- function(input, output, session) {
   exp_inputs_server("inputs", r, app_options, session, debug = DEBUG_MODE)
   if (DEBUG_MODE) message("✓ Inputs module initialized")
 
-  exp_visualization3_server("visualization", r, con, debug = DEBUG_MODE)
+  exp_visualization3_server("visualization", r, con, 
+                            loading_fns = list(show = show_loading, hide = hide_loading),
+                            debug = DEBUG_MODE)
   if (DEBUG_MODE) message("✓ Visualization module initialized")
 
-  exp_species_table_server("species", r, con, session, debug = DEBUG_MODE)
+  exp_species_table_server("species", r, con, session, 
+                           loading_fns = list(show = show_loading, hide = hide_loading),
+                           debug = DEBUG_MODE)
   if (DEBUG_MODE) message("✓ Species table module initialized")
 
   exp_debug_server("debug", r, debug = FALSE)
@@ -121,6 +206,19 @@ server <- function(input, output, session) {
 
   exp_debug2_server("debug2", r, debug = FALSE)
   if (DEBUG_MODE) message("✓ Debug2 module initialized")
+
+  # Hide loading spinner after all modules are initialized
+  observe({
+    # Wait for initial data to be ready
+    req(r$inputs_ready)
+    req(r$sel_region)
+    
+    # Small delay to ensure everything is rendered
+    shinyjs::delay(500, {
+      hide_loading()
+      if (DEBUG_MODE) message("✓ App fully loaded, hiding spinner")
+    })
+  })
 
   # Close database connection when session ends
   session$onSessionEnded(function() {

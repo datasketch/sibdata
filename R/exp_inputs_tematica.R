@@ -32,7 +32,7 @@ exp_inputs_tematica_ui <- function(id) {
       div(
         class = "tematica-header",
         h5("Temática"),
-        actionButton(ns("clear_tematica"), "", 
+        actionButton(ns("clear_tematica"), "",
                     icon = icon("refresh"),
                     class = "btn-sm btn-outline-secondary tematica-clear-btn",
                     title = "Limpiar selección")
@@ -59,14 +59,14 @@ exp_inputs_tematica_ui <- function(id) {
       .tematica-options {
         margin-bottom: 10px;
       }
- 
+
       .tematica-children {
         margin-left: 20px;
         margin-top: -15px;
         margin-bottom: 0px;
         padding-left: 0px;
       }
-    
+
       .tematica-actions {
         text-align: center;
       }
@@ -88,12 +88,12 @@ exp_inputs_tematica_ui <- function(id) {
         vertical-align: middle;
         top: -1px;
       }
-      
+
       .tematica-parent input[type='checkbox']:checked {
         background-color: #006400 !important;
         border-color: #006400 !important;
       }
-      
+
       .tematica-parent input[type='checkbox']:checked::after {
         content: '';
         position: absolute;
@@ -105,16 +105,16 @@ exp_inputs_tematica_ui <- function(id) {
         background-color: white;
         border-radius: 50%;
       }
-      
+
       .tematica-parent input[type='checkbox']:hover {
         border-color: #006400;
       }
-      
+
       .tematica-parent input[type='checkbox']:checked:hover {
         background-color: #004d00 !important;
         border-color: #004d00 !important;
       }
-      
+
       .tematica-parent label {
         cursor: pointer;
         font-weight: normal;
@@ -122,7 +122,7 @@ exp_inputs_tematica_ui <- function(id) {
         margin-left: 4px;
         vertical-align: middle;
       }
-      
+
       .tematica-parent label:hover {
         color: #006400;
       }
@@ -134,7 +134,7 @@ exp_inputs_tematica_ui <- function(id) {
       }
 
 
-      
+
       /* Style radio buttons to match checkboxes exactly */
       .tematica-children input[type='radio'],
       .tematica-children .radio input[type='radio'] {
@@ -155,14 +155,14 @@ exp_inputs_tematica_ui <- function(id) {
         background-color: transparent !important;
         box-shadow: none !important;
       }
-      
+
       .tematica-children input[type='radio']:checked,
       .tematica-children .radio input[type='radio']:checked {
         background-color: #006400 !important;
         border-color: #006400 !important;
         box-shadow: none !important;
       }
-      
+
       .tematica-children input[type='radio']:checked::after,
       .tematica-children .radio input[type='radio']:checked::after {
         content: '' !important;
@@ -176,18 +176,18 @@ exp_inputs_tematica_ui <- function(id) {
         border-radius: 50% !important;
         box-shadow: none !important;
       }
-      
+
       .tematica-children input[type='radio']:hover,
       .tematica-children .radio input[type='radio']:hover {
         border-color: #006400 !important;
       }
-      
+
       .tematica-children input[type='radio']:checked:hover,
       .tematica-children .radio input[type='radio']:checked:hover {
         background-color: #004d00 !important;
         border-color: #004d00 !important;
       }
-      
+
       /* Override any Shiny-specific radio button styling */
       .tematica-children .radio input[type='radio'] {
         background-color: transparent !important;
@@ -200,13 +200,13 @@ exp_inputs_tematica_ui <- function(id) {
         -moz-appearance: none !important;
         box-shadow: none !important;
       }
-      
+
       .tematica-children .radio input[type='radio']:checked {
         background-color: #006400 !important;
         border-color: #006400 !important;
         box-shadow: none !important;
       }
-      
+
       .tematica-children .radio input[type='radio']:checked::after {
         content: '' !important;
         position: absolute !important;
@@ -219,7 +219,7 @@ exp_inputs_tematica_ui <- function(id) {
         border-radius: 50% !important;
         box-shadow: none !important;
       }
-      
+
       /* Force exact same styling as checkboxes */
       .tematica-children input[type='radio'],
       .tematica-children .radio input[type='radio'],
@@ -241,7 +241,7 @@ exp_inputs_tematica_ui <- function(id) {
         background-color: transparent !important;
         box-shadow: none !important;
       }
-      
+
       .tematica-children input[type='radio']:checked,
       .tematica-children .radio input[type='radio']:checked,
       .tematica-children .form-check input[type='radio']:checked {
@@ -249,7 +249,7 @@ exp_inputs_tematica_ui <- function(id) {
         border-color: #006400 !important;
         box-shadow: none !important;
       }
-      
+
       .tematica-children input[type='radio']:checked::after,
       .tematica-children .radio input[type='radio']:checked::after,
       .tematica-children .form-check input[type='radio']:checked::after {
@@ -264,7 +264,7 @@ exp_inputs_tematica_ui <- function(id) {
         border-radius: 50% !important;
         box-shadow: none !important;
       }
-      
+
       .tematica-children label {
         cursor: pointer;
         font-weight: normal;
@@ -272,17 +272,17 @@ exp_inputs_tematica_ui <- function(id) {
         margin-left: 4px;
         vertical-align: middle;
       }
-      
+
       .tematica-children label:hover {
         color: #006400;
       }
-      
+
       /* Additional styling for Shiny radio buttons */
       .tematica-children .radio {
         margin-bottom: 0;
         padding: 2px 0;
       }
-      
+
       .tematica-children .radio label {
         cursor: pointer;
         font-weight: normal;
@@ -290,11 +290,11 @@ exp_inputs_tematica_ui <- function(id) {
         margin-left: 4px;
         vertical-align: middle;
       }
-      
+
       .tematica-children .radio label:hover {
         color: #006400;
       }
-      
+
       /* Info icon styling */
       .tematica-info-icon {
         color: #666;
@@ -303,16 +303,16 @@ exp_inputs_tematica_ui <- function(id) {
         cursor: help;
         transition: color 0.1s ease;
       }
-      
+
       .tematica-info-icon:hover {
         color: #006400;
       }
-      
+
       /* Faster tooltip appearance */
       .tematica-info-icon {
         position: relative;
       }
-      
+
       .tematica-info-icon:hover::after {
         content: attr(data-tooltip);
         position: absolute;
@@ -339,18 +339,18 @@ exp_inputs_tematica_ui <- function(id) {
         line-height: 1.5;
         word-wrap: break-word;
       }
-      
+
       @keyframes fadeIn {
         from { opacity: 0; }
         to { opacity: 1; }
       }
-      
+
       /* Parent content layout */
       .tematica-parent-content {
         display: flex;
         align-items: center;
       }
-      
+
       .tematica-parent-content .checkbox {
         margin-right: 0;
       }
@@ -366,25 +366,25 @@ exp_inputs_tematica_ui <- function(id) {
       .tematica-parent-content > .form-group {
         margin-bottom: 0px;
       }
-      
+
       /* Radio option layout */
       .tematica-radio-option {
         display: flex;
         align-items: center;
         margin-bottom: 2px;
       }
-      
+
       .tematica-radio-content {
         display: flex;
         align-items: center;
         width: 100%;
       }
-      
+
       .tematica-radio-option label {
         margin-left: 4px;
         margin-right: 4px;
       }
-      
+
       /* Tooltip icon styling for dynamically added icons */
       .tematica-dynamic-info-icon {
         color: #666;
@@ -393,11 +393,11 @@ exp_inputs_tematica_ui <- function(id) {
         cursor: help;
         transition: color 0.1s ease;
       }
-      
+
       .tematica-dynamic-info-icon:hover {
         color: #006400;
       }
-      
+
       .tematica-dynamic-info-icon:hover::after {
         content: attr(data-tooltip);
         position: absolute;
@@ -429,42 +429,42 @@ exp_inputs_tematica_ui <- function(id) {
       // Function to add tooltips to radio buttons
       function addTooltipsToRadioButtons() {
         console.log('Adding tooltips to radio buttons...');
-        
+
         // Find all tematica children containers
         const childrenContainers = document.querySelectorAll('.tematica-children');
         console.log('Found', childrenContainers.length, 'children containers');
-        
+
         childrenContainers.forEach((container, index) => {
           console.log('Processing container', index);
           const tooltipsData = container.getAttribute('data-tooltips');
           console.log('Tooltips data:', tooltipsData);
-          
+
           if (tooltipsData) {
             try {
               const tooltips = JSON.parse(tooltipsData);
               console.log('Parsed tooltips:', tooltips);
-              
+
               // Find all radio inputs in this container
               const radioInputs = container.querySelectorAll('input[type=\"radio\"]');
               console.log('Found', radioInputs.length, 'radio inputs');
-              
+
               // Process each radio input and find its corresponding label
               radioInputs.forEach((radioInput, index) => {
                 console.log('Processing radio input', index, 'with value:', radioInput.value);
                 console.log('Tooltip for this value:', tooltips[radioInput.value]);
-                
+
                 // Skip todas option - it doesn't need a tooltip
                 if (radioInput.value === 'todas') {
                   console.log('Skipping todas option');
                   return;
                 }
-                
+
                 if (tooltips[radioInput.value]) {
                   // Find the label that contains this radio input
                   const label = radioInput.closest('label');
                   if (label) {
                     console.log('Found label for', radioInput.value, ':', label.textContent.trim());
-                    
+
                     // Check if icon already exists
                     const existingIcon = label.querySelector('.tematica-dynamic-info-icon');
                     if (!existingIcon) {
@@ -473,7 +473,7 @@ exp_inputs_tematica_ui <- function(id) {
                       infoIcon.className = 'fas fa-info-circle tematica-dynamic-info-icon';
                       infoIcon.setAttribute('data-tooltip', tooltips[radioInput.value]);
                       infoIcon.style.position = 'relative';
-                      
+
                       // Append icon to label
                       label.appendChild(infoIcon);
                       console.log('Added tooltip icon for:', radioInput.value);
@@ -493,21 +493,21 @@ exp_inputs_tematica_ui <- function(id) {
           }
         });
       }
-      
+
       // Run when DOM is ready
       if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', addTooltipsToRadioButtons);
       } else {
         addTooltipsToRadioButtons();
       }
-      
+
       // Also run when Shiny updates the UI
       if (typeof Shiny !== 'undefined') {
         $(document).on('shiny:value', function(event) {
           console.log('Shiny value event triggered, adding tooltips...');
           setTimeout(addTooltipsToRadioButtons, 100);
         });
-        
+
         // Also run when children are shown
         $(document).on('shown', '.tematica-children', function() {
           console.log('Tematica children shown, adding tooltips...');
@@ -545,27 +545,10 @@ exp_inputs_tematica_server <- function(id, con, session_main = NULL, debug = FAL
     })
 
     if (debug) {
-      cat("=== DEBUG: tematica_tree created ===\n")
-      cat("tematica_tree is null:", is.null(tematica_tree), "\n")
-      if (!is.null(tematica_tree)) {
-        cat("tematica_tree has children:", !is.null(tematica_tree$children), "\n")
-        if (!is.null(tematica_tree$children)) {
-          cat("Number of children:", length(tematica_tree$children), "\n")
-        }
+      cat("=== DEBUG: Tematica module server started ===\n")
+      if (is.null(tematica_tree)) {
+        cat("ERROR: tematica_tree is NULL\n")
       }
-    }
-
-    if (debug) {
-      cat("=== DEBUG: Module server started ===\n")
-      cat("Tematicas tree type:", typeof(tematica_tree), "\n")
-      cat("Tematicas tree class:", class(tematica_tree), "\n")
-      if (is.list(tematica_tree)) {
-        cat("Tematicas tree names:", names(tematica_tree), "\n")
-        if (!is.null(tematica_tree$children)) {
-          cat("Number of children:", length(tematica_tree$children), "\n")
-        }
-      }
-      cat("==============================\n")
     }
 
     # URL parameter handling
@@ -580,19 +563,18 @@ exp_inputs_tematica_server <- function(id, con, session_main = NULL, debug = FAL
     # Set initial state from URL parameters - delay to ensure UI is rendered first
     observe({
       req(tematica_tree)
-      
+
       # Only process URL parameters if session_main is available
       if (is.null(session_main)) return()
-      
+
       url_params <- url_par()
       if (length(url_params) == 0) return()
 
       tematica_param <- url_params$tematica
       if (!is.null(tematica_param) && tematica_param != "") {
         # Delay execution to ensure UI inputs are created first
-        shinyjs::delay(500, {
-        cat("=== DEBUG: Setting initial tematica from URL ===\n")
-        cat("URL parameter tematica:", tematica_param, "\n")
+        shinyjs::delay(1000, {
+        if (debug) cat("Setting tematica from URL:", tematica_param, "\n")
 
         # Find the tematica in the tree
         l <- tematica_tree
@@ -603,7 +585,6 @@ exp_inputs_tematica_server <- function(id, con, session_main = NULL, debug = FAL
         for (x in l$children) {
           if (x$slug == tematica_param) {
             found_parent <- x$slug
-            cat("Found parent:", found_parent, "\n")
             break
           }
           # Check if it's a child slug (first level children)
@@ -612,7 +593,6 @@ exp_inputs_tematica_server <- function(id, con, session_main = NULL, debug = FAL
               if (child$slug == tematica_param) {
                 found_parent <- x$slug
                 found_child <- child$slug
-                cat("Found child:", found_child, "under parent:", found_parent, "\n")
                 break
               }
               # Check if it's a grandchild slug (second level children)
@@ -621,7 +601,6 @@ exp_inputs_tematica_server <- function(id, con, session_main = NULL, debug = FAL
                   if (grandchild$slug == tematica_param) {
                     found_parent <- x$slug
                     found_child <- grandchild$slug
-                    cat("Found grandchild:", found_child, "under parent:", found_parent, "\n")
                     break
                   }
                 }
@@ -634,82 +613,44 @@ exp_inputs_tematica_server <- function(id, con, session_main = NULL, debug = FAL
 
         if (!is.null(found_parent)) {
           # Set the parent checkbox
-          tryCatch({
-            updateCheckboxInput(session, found_parent, value = TRUE)
-            cat("  ✓ Set parent checkbox:", found_parent, "\n")
-
-            # Show children
-            children_id <- paste0(found_parent, "_children")
-            shinyjs::show(children_id)
-            cat("  ✓ Showed children for:", found_parent, "\n")
-
-            # Set child selection if found
-            if (!is.null(found_child)) {
-              tryCatch({
-                updateRadioButtons(session, children_id, selected = found_child)
-                cat("  ✓ Set child selection:", found_child, "\n")
-              }, error = function(e) {
-                cat("  ✗ Error setting child selection:", e$message, "\n")
-              })
-            } else {
-              # Set "Todas" as default
-              tryCatch({
-                updateRadioButtons(session, children_id, selected = "todas")
-                cat("  ✓ Set 'Todas' as default\n")
-              }, error = function(e) {
-                cat("  ✗ Error setting 'Todas':", e$message, "\n")
-              })
-            }
-          }, error = function(e) {
-            cat("  ✗ Error setting parent checkbox:", e$message, "\n")
-          })
+          updateCheckboxInput(session, found_parent, value = TRUE)
+          # Show children
+          children_id <- paste0(found_parent, "_children")
+          shinyjs::show(children_id)
+          # Set child selection if found
+          if (!is.null(found_child)) {
+            updateRadioButtons(session, children_id, selected = found_child)
+          } else {
+            # Set "Todas" as default
+            updateRadioButtons(session, children_id, selected = "todas")
+          }
         } else {
-          cat("  ✗ Tematica not found in tree:", tematica_param, "\n")
+          if (debug) cat("Tematica not found in tree:", tematica_param, "\n")
         }
-        cat("=== END DEBUG: URL parameter handling ===\n\n")
         }) # End shinyjs::delay
       }
     })
 
     # Create UI inputs using renderUI (works properly with nested modules)
     output$tematica_ui <- renderUI({
-      cat("=== DEBUG: renderUI function called ===\n")
-      cat("tematica_tree is null:", is.null(tematica_tree), "\n")
-      
       if (is.null(tematica_tree)) {
-        cat("ERROR: tematica_tree is NULL, cannot create UI\n")
+        if (debug) cat("ERROR: tematica_tree is NULL, cannot create UI\n")
         return(tags$p("Error: No tematica data available"))
       }
-      
-      req(tematica_tree)
 
-      if (debug) {
-        cat("=== DEBUG: Creating UI inputs ===\n")
-      }
+      req(tematica_tree)
 
       # Get the tree structure
       l <- tematica_tree
-
-      if (debug) {
-        cat("Tree structure received. Number of children:", length(l$children), "\n")
-      }
 
       # Create list to hold all inputs
       all_inputs <- list()
 
       # Process each first-level item
       purrr::walk(l$children, function(x) {
-        if (debug) {
-          cat("Processing item:", x$slug, "-", x$label, "\n")
-        }
-
         # Create first-level checkbox with info icon
         parent_id <- session$ns(x$slug)
-        
-        if (debug) {
-          cat("  Parent ID with namespace:", parent_id, "\n")
-        }
-        
+
         # Create info icon if tooltip or descripcion exists
         info_icon <- ""
         if (!is.null(x$tooltip) || !is.null(x$descripcion)) {
@@ -717,13 +658,13 @@ exp_inputs_tematica_server <- function(id, con, session_main = NULL, debug = FAL
           desc_text <- if (!is.null(x$descripcion)) x$descripcion else ""
           full_tooltip <- paste(tooltip_text, desc_text, sep = "\n\n")
           full_tooltip <- gsub("\n\n$", "", full_tooltip) # Remove trailing newlines
-          
+
           info_icon <- tags$i(
             class = "fas fa-info-circle tematica-info-icon",
             `data-tooltip` = full_tooltip
           )
         }
-        
+
         parent_input <- div(
           class = "tematica-parent",
           div(
@@ -734,25 +675,8 @@ exp_inputs_tematica_server <- function(id, con, session_main = NULL, debug = FAL
         )
         all_inputs <<- c(all_inputs, list(parent_input))
 
-        if (debug) {
-          cat("  Created checkbox with ID:", parent_id, "\n")
-        }
-
         # Create second-level radio buttons if children exist
-        if (debug) {
-          cat("  Checking children for:", x$slug, "\n")
-          cat("    x$children is null:", is.null(x$children), "\n")
-          cat("    x$children type:", typeof(x$children), "\n")
-          cat("    x$children class:", class(x$children), "\n")
-          if (!is.null(x$children)) {
-            cat("    x$children length:", length(x$children), "\n")
-          }
-        }
-
         if (!is.null(x$children) && is.list(x$children) && length(x$children) > 0) {
-          if (debug) {
-            cat("  Creating children for:", x$slug, "(", length(x$children), "children)\n")
-          }
 
           # Add "Todas" option (except for amenazadas)
           choices <- c()
@@ -766,13 +690,9 @@ exp_inputs_tematica_server <- function(id, con, session_main = NULL, debug = FAL
           names(child_choices) <- purrr::map_chr(x$children, ~.$label)
           choices <- c(choices, child_choices)
 
-          if (debug) {
-            cat("  Choices:", paste(names(choices), collapse = ", "), "\n")
-          }
-
           # Create radio buttons container with info icons
           children_id <- session$ns(paste0(x$slug, "_children"))
-          
+
           # Create radio buttons using Shiny's radioButtons function for proper input registration
           children_input <- div(
             id = children_id,
@@ -780,12 +700,12 @@ exp_inputs_tematica_server <- function(id, con, session_main = NULL, debug = FAL
             style = "display: none;",
             radioButtons(children_id, "", choices = choices, selected = character(0))
           )
-          
+
           # Store tooltip data for JavaScript to use later
           tooltip_data <- list()
           for (choice_name in names(choices)) {
             choice_value <- choices[choice_name]
-            
+
             # Find the corresponding child data for tooltip/descripcion
             child_data <- NULL
             if (choice_value != "todas") {
@@ -796,58 +716,27 @@ exp_inputs_tematica_server <- function(id, con, session_main = NULL, debug = FAL
                 }
               }
             }
-            
+
             # Create tooltip data if available
             if (!is.null(child_data) && (!is.null(child_data$tooltip) || !is.null(child_data$descripcion))) {
               tooltip_text <- if (!is.null(child_data$tooltip)) child_data$tooltip else ""
               desc_text <- if (!is.null(child_data$descripcion)) child_data$descripcion else ""
               full_tooltip <- paste(tooltip_text, desc_text, sep = "\n\n")
               full_tooltip <- gsub("\n\n$", "", full_tooltip) # Remove trailing newlines
-              
+
               tooltip_data[[choice_value]] <- full_tooltip
             }
           }
-          
+
           # Add tooltip data to the input for JavaScript access
           children_input$attribs[["data-tooltips"]] <- jsonlite::toJSON(tooltip_data)
-          
-          if (debug) {
-            cat("  Created children container with ID:", children_id, "\n")
-            cat("  Tooltip data count:", length(tooltip_data), "\n")
-          }
-          
-          # Debug: Print tooltip data
-          if (debug) {
-            cat("  Tooltip data for", x$slug, ":", jsonlite::toJSON(tooltip_data), "\n")
-          }
-          all_inputs <<- c(all_inputs, list(children_input))
 
-          if (debug) {
-            cat("  Created radio buttons with ID:", children_id, "\n")
-          }
-        } else {
-          if (debug) {
-            cat("  No children for:", x$slug, "\n")
-          }
+          all_inputs <<- c(all_inputs, list(children_input))
         }
       })
 
-      if (debug) {
-        cat("Total inputs created:", length(all_inputs), "\n")
-        cat("=== END DEBUG: UI creation ===\n")
-      }
-
       # Create the final UI
-      final_ui <- do.call(tagList, all_inputs)
-      
-      if (debug) {
-        cat("Final UI class:", class(final_ui), "\n")
-        cat("Final UI length:", length(final_ui), "\n")
-        cat("Final UI names:", names(final_ui), "\n")
-        cat("✓ renderUI completed\n")
-      }
-      
-      final_ui
+      do.call(tagList, all_inputs)
     })
 
     # Handle first-level selection (single selection)
@@ -860,83 +749,45 @@ exp_inputs_tematica_server <- function(id, con, session_main = NULL, debug = FAL
           req(tematica_tree)
           l <- tematica_tree
 
-          cat("=== DEBUG: observeEvent triggered for", current_slug, "===\n")
-          cat("Timestamp:", Sys.time(), "\n")
-          cat("Value:", input[[current_slug]], "\n")
-
-                    # If this checkbox is checked, uncheck all others
+          # If this checkbox is checked, uncheck all others
           if (isTRUE(input[[current_slug]])) {
-            cat("Checkbox", current_slug, "is checked. Unchecking others...\n")
-            
             # Uncheck all other checkboxes
             for (other_x in l$children) {
               if (other_x$slug != current_slug) {
-                tryCatch({
-                  updateCheckboxInput(session, other_x$slug, value = FALSE)
-                  cat("  ✓ Unchecked:", other_x$slug, "\n")
-                }, error = function(e) {
-                  cat("  ✗ Error unchecking:", other_x$slug, "-", e$message, "\n")
-                })
+                updateCheckboxInput(session, other_x$slug, value = FALSE)
               }
             }
-            
+
             # Show children for selected parent
             children_id <- paste0(current_slug, "_children")
-            cat("  ✓ Showing children for:", current_slug, "\n")
             shinyjs::show(children_id)
-            
+
             # Set default selection based on the category
-            tryCatch({
-              current_selection <- input[[children_id]]
-              if (is.null(current_selection) || current_selection == "") {
-                if (current_slug == "amenazadas") {
-                  # For amenazadas, select the first option (amenazadas-global)
-                  updateRadioButtons(session, children_id, selected = "amenazadas-global")
-                  cat("  ✓ Set 'amenazadas-global' as default for:", current_slug, "\n")
-                } else {
-                  # For other categories, select "Todas"
-                  updateRadioButtons(session, children_id, selected = "todas")
-                  cat("  ✓ Set 'Todas' as default for:", current_slug, "\n")
-                }
+            current_selection <- input[[children_id]]
+            if (is.null(current_selection) || current_selection == "") {
+              if (current_slug == "amenazadas") {
+                # For amenazadas, select the first option (amenazadas-global)
+                updateRadioButtons(session, children_id, selected = "amenazadas_global_total")
               } else {
-                cat("  ✓ Keeping existing selection:", current_selection, "for:", current_slug, "\n")
+                # For other categories, select "Todas"
+                updateRadioButtons(session, children_id, selected = "todas")
               }
-            }, error = function(e) {
-              cat("  ✗ Error setting default for:", current_slug, "-", e$message, "\n")
-            })
-            
+            }
+
             # Hide children for all other parents
             for (other_x in l$children) {
               if (other_x$slug != current_slug) {
                 other_children_id <- paste0(other_x$slug, "_children")
-                cat("  ✗ Hiding children for:", other_x$slug, "\n")
                 shinyjs::hide(other_children_id)
-                
-                tryCatch({
-                  updateRadioButtons(session, other_children_id, selected = character(0))
-                  cat("  ✓ Cleared radio buttons for:", other_x$slug, "\n")
-                }, error = function(e) {
-                  cat("  ✗ Error clearing radio buttons for:", other_x$slug, "-", e$message, "\n")
-                })
+                updateRadioButtons(session, other_children_id, selected = character(0))
               }
             }
           } else {
-            cat("Checkbox", current_slug, "is unchecked. Hiding its children...\n")
-            
             # Hide children for this unchecked parent
             children_id <- paste0(current_slug, "_children")
-            cat("  ✗ Hiding children for:", current_slug, "\n")
             shinyjs::hide(children_id)
-            
-            tryCatch({
-              updateRadioButtons(session, children_id, selected = character(0))
-              cat("  ✓ Cleared radio buttons for:", current_slug, "\n")
-            }, error = function(e) {
-              cat("  ✗ Error clearing radio buttons for:", current_slug, "-", e$message, "\n")
-            })
+            updateRadioButtons(session, children_id, selected = character(0))
           }
-
-          cat("=== END DEBUG: observeEvent for", current_slug, "===\n\n")
         }, ignoreInit = TRUE)
       })
       } # End for loop
@@ -944,20 +795,12 @@ exp_inputs_tematica_server <- function(id, con, session_main = NULL, debug = FAL
 
     # Handle clear button
     observeEvent(input$clear_tematica, {
-      cat("=== DEBUG: Clear button clicked ===\n")
-      cat("Timestamp:", Sys.time(), "\n")
-
       req(tematica_tree)
       l <- tematica_tree
 
       # Uncheck all first-level items
       for (x in l$children) {
-        tryCatch({
-          updateCheckboxInput(session, x$slug, value = FALSE)
-          cat("  ✓ Unchecked:", x$slug, "\n")
-        }, error = function(e) {
-          cat("  ✗ Error unchecking:", x$slug, "-", e$message, "\n")
-        })
+        updateCheckboxInput(session, x$slug, value = FALSE)
       }
 
       # Hide all children and clear selections
@@ -965,16 +808,9 @@ exp_inputs_tematica_server <- function(id, con, session_main = NULL, debug = FAL
         if (!is.null(x$children) && length(x$children) > 0) {
           children_id <- paste0(x$slug, "_children")
           shinyjs::hide(children_id)
-          cat("  ✓ Hidden children for:", x$slug, "\n")
-          tryCatch({
-            updateRadioButtons(session, children_id, selected = character(0))
-            cat("  ✓ Cleared radio buttons for:", x$slug, "\n")
-          }, error = function(e) {
-            cat("  ✗ Error clearing radio buttons for:", x$slug, "-", e$message, "\n")
-          })
+          updateRadioButtons(session, children_id, selected = character(0))
         }
       }
-      cat("=== END DEBUG: Clear button ===\n\n")
     })
 
 
@@ -984,53 +820,29 @@ exp_inputs_tematica_server <- function(id, con, session_main = NULL, debug = FAL
       req(tematica_tree)
       l <- tematica_tree
 
-      if (debug) {
-        cat("=== DEBUG: selected_tematica reactive triggered ===\n")
-        cat("Number of first-level items:", length(l$children), "\n")
-      }
-
       # Check for first-level selection
       for (i in seq_along(l$children)) {
         x <- l$children[[i]]
-        if (debug) {
-          cat("Checking item", i, ":", x$slug, "\n")
-        }
-
         input_value <- input[[x$slug]]
-        if (debug) {
-          cat("  Input value:", input_value, " (type:", typeof(input_value), ")\n")
-        }
 
         if (!is.null(input_value) && isTRUE(input_value)) {
-          if (debug) {
-            cat("  ✓ Item selected:", x$slug, "\n")
-          }
-
           # Check if a child is selected
           if (!is.null(x$children) && length(x$children) > 0) {
             children_id <- paste0(x$slug, "_children")
             child_selection <- input[[children_id]]
 
-            if (debug) {
-              cat("  Child selection:", child_selection, "\n")
-            }
-
             if (!is.null(child_selection) && child_selection != "") {
               if (child_selection == "todas") {
-                if (debug) cat("  Returning parent slug (todas):", x$slug, "\n")
                 return(x$slug)  # Return parent slug for "Todas"
               } else {
-                if (debug) cat("  Returning child slug:", child_selection, "\n")
                 return(child_selection)  # Return child slug
               }
             }
           }
-          if (debug) cat("  Returning parent slug (no child):", x$slug, "\n")
           return(x$slug)  # Return parent slug if no child selected
         }
       }
 
-      if (debug) cat("  No selection found, returning NULL\n")
       return(NULL)  # Nothing selected
     })
 

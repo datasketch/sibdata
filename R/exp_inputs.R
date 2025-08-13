@@ -64,14 +64,24 @@ exp_inputs_server <- function(id, r, app_options, session_main = NULL, debug = F
         if (debug) message("✓ r$chart_type set to default: map")
       }
       
-      if (is.null(r$sel_grupo_type)) {
-        r$sel_grupo_type <- "biologico"
-        if (debug) message("✓ r$sel_grupo_type set to default: biologico")
+      if (is.null(r$sel_grupo_tipo)) {
+        r$sel_grupo_tipo <- "biologico"
+        if (debug) message("✓ r$sel_grupo_tipo set to default: biologico")
       }
       
       if (is.null(r$sel_region_tipo)) {
         r$sel_region_tipo <- "Nacional"
         if (debug) message("✓ r$sel_region_tipo set to default: Nacional")
+      }
+      
+      if (is.null(r$is_special_region)) {
+        r$is_special_region <- FALSE
+        if (debug) message("✓ r$is_special_region set to default: FALSE")
+      }
+      
+      if (is.null(r$has_subtematica)) {
+        r$has_subtematica <- FALSE
+        if (debug) message("✓ r$has_subtematica set to default: FALSE")
       }
       
       if (debug) message("✅ Default values initialized")
@@ -133,10 +143,10 @@ exp_inputs_server <- function(id, r, app_options, session_main = NULL, debug = F
     observe({
       grupo_result <- selected_grupo()
       if (!is.null(grupo_result)) {
-        r$sel_grupo_type <- grupo_result$type
+        r$sel_grupo_tipo <- grupo_result$type
         r$sel_grupo <- grupo_result$value
         if (debug) {
-          message("✓ r$sel_grupo_type updated to: ", r$sel_grupo_type)
+          message("✓ r$sel_grupo_tipo updated to: ", r$sel_grupo_tipo)
           message("✓ r$sel_grupo updated to: ", r$sel_grupo)
         }
       } else {
@@ -168,15 +178,25 @@ exp_inputs_server <- function(id, r, app_options, session_main = NULL, debug = F
         
         r$sel_region_tipo <- region_tipo
         
+        # Set is_special_region based on specific regions
+        special_regions <- c("region-amazonia", "reserva-forestal-la-planada", 
+                           "resguardo-indigena-pialapi-pueblo-viejo", "bogota-dc")
+        r$is_special_region <- input$sel_region %in% special_regions
+        
         if (debug) {
           message("✓ r$sel_region initialized to: ", r$sel_region)
           message("✓ r$sel_region_tipo initialized to: ", r$sel_region_tipo)
+          message("✓ r$is_special_region initialized to: ", r$is_special_region)
         }
       }
       
       # Grupo initialization is now handled by the grupo module observer
       
       if (debug) message("✅ All reactive values initialized")
+      
+      # Set inputs ready flag after initialization
+      r$inputs_ready <- TRUE
+      if (debug) message("✅ Inputs module ready - setting r$inputs_ready = TRUE")
     })
 
     # Initialize tematica module with proper parameters
@@ -188,10 +208,22 @@ exp_inputs_server <- function(id, r, app_options, session_main = NULL, debug = F
       tematica <- selected_tematica()
       if (!is.null(tematica)) {
         r$sel_tematica <- tematica
-        if (debug) message("✓ r$sel_tematica updated to: ", r$sel_tematica)
+        
+        # Set has_subtematica based on specific tematicas
+        subtematica_themes <- c("amenazadas-nacional", "amenazadas-global", "cites", "exoticas-total")
+        r$has_subtematica <- tematica %in% subtematica_themes
+        
+        if (debug) {
+          message("✓ r$sel_tematica updated to: ", r$sel_tematica)
+          message("✓ r$has_subtematica updated to: ", r$has_subtematica)
+        }
       } else {
         r$sel_tematica <- NULL
-        if (debug) message("✓ r$sel_tematica set to NULL (no selection)")
+        r$has_subtematica <- FALSE
+        if (debug) {
+          message("✓ r$sel_tematica set to NULL (no selection)")
+          message("✓ r$has_subtematica set to FALSE (no selection)")
+        }
       }
     })
 
@@ -213,9 +245,15 @@ exp_inputs_server <- function(id, r, app_options, session_main = NULL, debug = F
         
         r$sel_region_tipo <- region_tipo
         
+        # Set is_special_region based on specific regions
+        special_regions <- c("region-amazonia", "reserva-forestal-la-planada", 
+                           "resguardo-indigena-pialapi-pueblo-viejo", "bogota-dc")
+        r$is_special_region <- input$sel_region %in% special_regions
+        
         if (debug) {
           message("✓ r$sel_region updated to: ", r$sel_region)
           message("✓ r$sel_region_tipo updated to: ", r$sel_region_tipo)
+          message("✓ r$is_special_region updated to: ", r$is_special_region)
         }
       }
     }, ignoreNULL = FALSE)

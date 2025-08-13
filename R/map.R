@@ -7,9 +7,6 @@ choropleth_map <- function(data = NULL,
                            tematica = NULL,
                            indicador = NULL,
                            grupo = NULL,
-                           subregiones = FALSE,
-                           with_parent = FALSE,
-                           tidy = TRUE,
                            n_especies = FALSE,
                            all_indicators = FALSE,
                            palette_numeric = NULL,
@@ -17,9 +14,15 @@ choropleth_map <- function(data = NULL,
                            conmap = NULL, ...) {
 
   no_conmap <- is.null(conmap)
-  conmap <- geotable::gt_con(conmap)
+  region_especial <- FALSE
+
+  if(is.null(conmap)){
+    conmap <- geotable::gt_con(conmap)
+  }
 
   inp <- as.list(environment())
+  inp$tidy <- TRUE
+  inp$subregiones <- TRUE # only for Colombia and departments
 
   palette_numeric <- palette_numeric %||% c("#b6ecbf", "#29567d")
   if(!is.null(inp$indicador)){
@@ -46,15 +49,35 @@ choropleth_map <- function(data = NULL,
   if(region == "colombia"){
     inp$subregiones <- TRUE
     map_name <- "col_departments"
+    region_codes <- sibdata_departamento(con) |>
+      select(slug_region = slug, cod_dane) |>
+      collect()
   } else if (region %in% sib_available_regions(subtipo = "Departamento", con = con)){
     inp$subregiones <- TRUE
     region_id <- gsub("-", "_", region)
     if(region_id == "norte_santander") region_id <- "norte_de_santander"
     if(region_id == "san_andres_providencia") region_id <- "san_andres_providencia_y_santa_catalina"
     if(region_id == "bogota_dc") region_id <- "bogota_d_c"
+    region_codes <- sibdata_municipio(con) |>
+      select(slug_region = slug, cod_dane) |>
+      filter(slug == region) |> collect()
     map_name <- paste0("col_municipalities_",region_id)
   } else{
-    stop("No valid region")
+    regiones_especiales <- c(
+      "region-amazonia",
+      "reserva-forestal-la-planada",
+      "resguardo-indigena-pialapi-pueblo-viejo"
+    )
+    region_especial <- TRUE
+    inp$subregiones <- FALSE
+    if(region %in% regiones_especiales){
+      geo_path <- glue::glue("geo/{region}.geojson")
+      sf <- sf::st_read(sys_file_sibdata(geo_path), quiet = TRUE)
+      lf <- basic_map(sf)
+        return(lf)
+    }else{
+      stop("No valid region")
+    }
   }
 
 
@@ -77,6 +100,8 @@ choropleth_map <- function(data = NULL,
   #   d <- d |> filter(grepl("total", indicador))
   # }
   # str(inp)
+
+  ## Only calculate sf merge d with Colombia and deptos
   if(!is.null(inp$indicador)){
     val <- inp$indicador
   }else{
@@ -89,30 +114,38 @@ choropleth_map <- function(data = NULL,
   }
   # str(d)
 
-  d0 <- d |> select(name = label, value = val) |>
-    mutate(name = toupper(name)) |>
-    filter(!is.na(value))
-  d0$name[d0$name == "BOGOTÁ, D. C."] <- "BOGOTÁ"
+  cols <- c("slug_region", "label", val)
+
+
+  d0 <- d |>
+    select(all_of(cols)) |>
+    left_join(region_codes) |>
+    rename(value = val)
+  # select(name = label, value = val) |>
+  # mutate(name = toupper(name)) |>
+  # filter(!is.na(value))
+  # d0$name[d0$name == "BOGOTÁ, D. C."] <- "BOGOTÁ"
 
   sf <- geotable::gt_sf(map_name, con = conmap) |>
     geotable::rename_dotdot()
-  if(nrow(d0) > 1.5 * nrow(sf)){
-    warning("Data may have repeated geographic rows, taking the first indicator found")
-    # Remove duplicates by taking the first occurrence of each geographic name
-    d0 <- d0 %>%
-      group_by(name) %>%
-      slice(1) %>%
-      ungroup()
-  }
+  # if(nrow(d0) > 1.5 * nrow(sf)){
+  #   warning("Data may have repeated geographic rows, taking the first indicator found")
+  #   # Remove duplicates by taking the first occurrence of each geographic name
+  #   d0 <- d0 %>%
+  #     group_by(name) %>%
+  #     slice(1) %>%
+  #     ungroup()
+  # }
 
   if(nrow(d0) > 0){
-    # message("nrow d0: ", nrow(d0))
-    dmatch <- geotable::gt_match(d0, map_name, unique = TRUE, con = conmap) |>
-      select(name, value, "..gt_id")
-    # message("dmatch")
-    # message("is null dmatch", is.null(dmatch))
-    # str(dmatch)
-    dgeo <- sf |> left_join(dmatch, by = "..gt_id")
+    # # message("nrow d0: ", nrow(d0))
+    # dmatch <- geotable::gt_match(d0, map_name, unique = TRUE, con = conmap) |>
+    #   select(name, value, "..gt_id")
+
+    dgeo <- sf |>
+      left_join(d0, by = c("..gt_id" = "cod_dane"))
+    #|>
+    #  select()
   }else{
     dgeo <- sf
     dgeo$value <- NA
@@ -123,7 +156,6 @@ choropleth_map <- function(data = NULL,
     geotable::gt_discon(conmap)
   }
 
-  # str(inp)
 
   pal <- leaflet::colorNumeric(
     palette = palette_numeric,
@@ -137,6 +169,8 @@ choropleth_map <- function(data = NULL,
   # fix names
   dgeo <- dgeo |>
     mutate(name = ..gt_name)
+
+
 
   # str(dgeo)
 
@@ -156,7 +190,7 @@ choropleth_map <- function(data = NULL,
       ),
       label = ~ifelse(is.na(dgeo$value),
                       dgeo$name,
-                      paste0(dgeo$name, ": ", dgeo$value)),
+                      paste0(dgeo$label, ": ", dgeo$value)),
       labelOptions = labelOptions(
         style = list("font-weight" = "normal", padding = "3px 8px"),
         textsize = "15px",
@@ -177,5 +211,32 @@ choropleth_map <- function(data = NULL,
   lt |>
     leaflet.extras::setMapWidgetStyle(list(background = "#ffffff")) |>
     leaflet::addProviderTiles("")
+}
+
+
+basic_map <- function(sf){
+
+
+  bounds <- as.vector(sf::st_bbox(sf))
+
+  leaflet::leaflet(sf) |>
+    leaflet::addPolygons(
+      fillColor = "#349434",
+      weight = 1,
+      opacity = 1,
+      color = "white",
+      label = sf$label,
+      options = leaflet::leafletOptions(
+        zoomControl = FALSE,
+        dragging = FALSE,
+        doubleClickZoom = FALSE,
+        scrollWheelZoom = FALSE,
+        minZoom = 3, maxZoom = 3
+        )
+    ) |>
+    leaflet::fitBounds(bounds[1], bounds[2], bounds[3], bounds[4]) |>
+    leaflet.extras::setMapWidgetStyle(list(background = "#ffffff")) |>
+    leaflet::addProviderTiles("", options = list(attribution = ""))
+
 }
 

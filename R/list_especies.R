@@ -7,12 +7,15 @@ list_species <- function(region,
                          con = NULL){
   # region <- "tolima"
   # tematica <- "endemicas"
+  # tematica <- "amenazadas_nacional_total"
   # tematica <- "cites-i"
   # grupo <- "hongos"
-  
+
+
   # Convert empty strings and "todos" to NULL for consistent behavior
   if(!is.null(grupo) && (grupo == "" || grupo == "todos")) grupo <- NULL
   if(!is.null(tematica) && (tematica == "" || tematica == "todas")) tematica <- NULL
+
 
   esp_reg <- sibdata_especie_region(con) |>
     filter(slug_region == region)
@@ -20,17 +23,14 @@ list_species <- function(region,
   especies <- esp_reg
 
   if(!is.null(tematica)){
-    # especies <- sibdata_especie_tematica(con = con) |>
-    #   filter(slug_region == region) |>
-    #   filter(slug_tematica %like% paste0("%",tematica,"%")) |>
-    #   left_join(esp_reg, by = c("slug_region", "slug_especie"))
+    tematica <- gsub("_", "-", tematica)
 
     if(tematica == "cites"){
       tematica <- c("cites-i", "cites-i_ii", "cites-ii", "cites-iii")
-    } else if(tematica == "amenazadas-global"){
+    } else if(tematica == "amenazadas-global-total"){
       tematica <- c("amenazadas-global-cr", "amenazadas-global-en",
                     "amenazadas-global-vu")
-    } else if(tematica == "amenazadas-nacional"){
+    } else if(tematica == "amenazadas-nacional-total"){
       tematica <- c("amenazadas-nacional-cr", "amenazadas-nacional-en",
                     "amenazadas-nacional-vu")
     } else if(tematica == "amenazadas"){
@@ -39,8 +39,8 @@ list_species <- function(region,
                     "amenazadas-nacional-cr", "amenazadas-nacional-en",
                     "amenazadas-nacional-vu")
     } else if(tematica == "exoticas-total"){
-      tematica <- c("exoticas", "exotica-riesgo-invasion", "invasoras")
-    } else if(tematica == "exotica-riesgo-invasion-total"){
+      tematica <- c("exoticas", "exoticas-riesgo-invasion-total", "invasoras")
+    } else if(tematica == "exoticas-riesgo-invasion-total"){
     tematica <- c("exotica-riesgo-invasion-bajo",
                   "exotica-riesgo-invasion-moderado",
                   "exotica-riesgo-invasion-moderado/ Alto",

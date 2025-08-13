@@ -27,10 +27,10 @@ list_species <- function(region,
 
     if(tematica == "cites"){
       tematica <- c("cites-i", "cites-i_ii", "cites-ii", "cites-iii")
-    } else if(tematica == "amenazadas-global-total"){
+    } else if(tematica == "amenazadas-global"){
       tematica <- c("amenazadas-global-cr", "amenazadas-global-en",
                     "amenazadas-global-vu")
-    } else if(tematica == "amenazadas-nacional-total"){
+    } else if(tematica == "amenazadas-nacional"){
       tematica <- c("amenazadas-nacional-cr", "amenazadas-nacional-en",
                     "amenazadas-nacional-vu")
     } else if(tematica == "amenazadas"){

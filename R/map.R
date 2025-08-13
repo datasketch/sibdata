@@ -13,6 +13,11 @@ choropleth_map <- function(data = NULL,
                            con = NULL,
                            conmap = NULL, ...) {
 
+
+  geo_path <- glue::glue("geo/region-amazonia.geojson")
+  sf <- sf::st_read(sys_file_sibdata(geo_path), quiet = TRUE)
+  return(basic_map(sf))
+
   no_conmap <- is.null(conmap)
   region_especial <- FALSE
 
@@ -21,6 +26,7 @@ choropleth_map <- function(data = NULL,
   }
 
   inp <- as.list(environment())
+
   inp$tidy <- TRUE
   inp$subregiones <- TRUE # only for Colombia and departments
 
@@ -92,7 +98,7 @@ choropleth_map <- function(data = NULL,
                  indicador = inp$indicador,
                  subregiones = inp$subregiones,
                  with_parent = inp$with_parent,
-                 con = inp$con)
+                 con = con)
 
   }
 

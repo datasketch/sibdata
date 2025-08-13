@@ -2,7 +2,7 @@
 # Modular version of SIB Data App - Recreated from scratch
 
 # Debug configuration
-DEBUG_MODE <- TRUE  # Set to FALSE to hide debug output
+DEBUG_MODE <- FALSE  # Set to FALSE to hide debug output
 options(timeout = 600)
 
 library(shiny)
@@ -33,7 +33,7 @@ ui <- fluidPage(
     # Left column - Input controls (25%)
     column(3, style = "padding: 0 5px;",
            wellPanel(
-             exp_debug_ui("debug", debug = DEBUG_MODE),
+             exp_debug_ui("debug"),
              h4("Opciones"),
              exp_inputs_ui("inputs")
            )
@@ -43,8 +43,9 @@ ui <- fluidPage(
     column(6, style = "padding: 0 5px;",
            wellPanel(
              h4("Visualización"),
-             # Placeholder for visualization module
-             p("Visualization module will be added here")
+             exp_visualization3_ui("visualization"),
+             # Add debug2 below visualization when debug mode is on
+             exp_debug2_ui("debug2")
            )
     ),
 
@@ -62,72 +63,69 @@ server <- function(input, output, session) {
   if (DEBUG_MODE) message("🚀 SERVER STARTING")
 
   # Create session-specific app options
-  temp_con <- get_app_connection("db/sibdata.sqlite", debug = DEBUG_MODE)
-  app_options <- get_app_options(temp_con, debug = DEBUG_MODE)
-  DBI::dbDisconnect(temp_con)
-  if (DEBUG_MODE) message("✓ App options loaded")
-
-  # Create database connection inside server
   con <- get_app_connection("db/sibdata.sqlite", debug = DEBUG_MODE)
-  if (DEBUG_MODE) message("✓ Database connection created")
-
-  # Add the connection to app_options for the tematica module
+  app_options <- get_app_options(con, debug = DEBUG_MODE)
   app_options$con <- con
+  conmap <- geotable::gt_con()
+
 
   # Create session-specific reactive values
   r <- reactiveValues(
     sel_region = NULL,
-    sel_grupo_type = "biologico",
+    sel_grupo_tipo = "biologico",
     sel_grupo = NULL,
     sel_tematica = NULL,
+    tematica = NULL,
     sel_tipo = "registros",
     chart_type = "map",
+    is_special_region = FALSE,
+    has_subtematica = FALSE,
+    inputs_ready = NULL,
+    # Data controls
     amenazadas_categoria = NULL,
     cites_categoria = NULL,
     exotica_categoria = NULL,
     especies_total_estimadas = NULL,
+    # Chart selector
+    available_charts = c("Mapa" = "map", "Tabla" = "table"),
     indicador = NULL,
-    show_subcategoria = FALSE,
-    show_especies_total_estimadas = FALSE,
-    current_subcategory = NULL,
-    main_data = NULL,
-    species_data = NULL,
-    map_data = NULL,
     breadcrumb = NULL,
-    available_charts = NULL
+    # Data storage for charts and modals
+    main_data = NULL,
+    map_data = NULL,
+    table_data = NULL,
+    chart_data = NULL,
+    current_chart_data = NULL,
+    # Error handling
+    viz_error = NULL,
+    # Database connections
+    con = con,
+    conmap = conmap
   )
 
-  # Debug: Verify database tables exist
-  tryCatch({
-    tables <- DBI::dbListTables(con)
-    if (DEBUG_MODE) message("📊 Available database tables: ", paste(tables, collapse = ", "))
 
-    # Check for critical tables
-    required_tables <- c("especie_region", "ind_meta", "indicadores")
-    missing_tables <- required_tables[!required_tables %in% tables]
-    if(length(missing_tables) > 0) {
-      if (DEBUG_MODE) message("❌ Missing required tables: ", paste(missing_tables, collapse = ", "))
-    } else {
-      if (DEBUG_MODE) message("✅ All required tables found")
-    }
-  }, error = function(e) {
-    if (DEBUG_MODE) message("❌ Error checking database tables: ", e$message)
-  })
 
   # Initialize modules
   if (DEBUG_MODE) message("📦 INITIALIZING MODULES")
   exp_inputs_server("inputs", r, app_options, session, debug = DEBUG_MODE)
   if (DEBUG_MODE) message("✓ Inputs module initialized")
 
+  exp_visualization3_server("visualization", r, con, debug = DEBUG_MODE)
+  if (DEBUG_MODE) message("✓ Visualization module initialized")
+
   exp_species_table_server("species", r, con, session, debug = DEBUG_MODE)
   if (DEBUG_MODE) message("✓ Species table module initialized")
 
-  exp_debug_server("debug", r, debug = DEBUG_MODE)
+  exp_debug_server("debug", r, debug = FALSE)
   if (DEBUG_MODE) message("✓ Debug module initialized")
+
+  exp_debug2_server("debug2", r, debug = FALSE)
+  if (DEBUG_MODE) message("✓ Debug2 module initialized")
 
   # Close database connection when session ends
   session$onSessionEnded(function() {
     DBI::dbDisconnect(con)
+    DBI::dbDisconnect(conmap)
   })
 }
 

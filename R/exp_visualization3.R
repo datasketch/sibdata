@@ -12,13 +12,9 @@
 exp_visualization3_ui <- function(id) {
   ns <- NS(id)
   tagList(
-    # Chart selector - conditional based on region type
+    # Chart selector - show when inputs are ready
     div(style = "text-align: center; margin-bottom: 15px;",
-        conditionalPanel(
-          condition = "output.show_chart_selector",
-          ns = ns,
-          exp_chart_selector_ui(ns("chart_selector"))
-        )
+        uiOutput(ns("chart_selector_container"))
     ),
 
     # Type selector and data controls below
@@ -77,11 +73,11 @@ exp_visualization3_server <- function(id, r, con, debug = FALSE) {
       if (debug) message("🔄 ESPECIES TOTAL/ESTIMADAS CHANGED to: ", r$especies_total_estimadas)
     })
 
-    # Sync amenazadas_categoria input with reactive values
-    observeEvent(input$amenazadas_categoria, {
-      r$amenazadas_categoria <- input$amenazadas_categoria
-      if (debug) message("🔄 AMENAZADAS CATEGORIA CHANGED to: ", r$amenazadas_categoria)
-    })
+    # # Sync amenazadas_categoria input with reactive values
+    # observeEvent(input$amenazadas_categoria, {
+    #   r$amenazadas_categoria <- input$amenazadas_categoria
+    #   if (debug) message("🔄 AMENAZADAS CATEGORIA CHANGED to: ", r$amenazadas_categoria)
+    # })
 
     # Simple data controls as renderUI - especies total/estimadas and amenazadas
     output$data_controls <- renderUI({
@@ -137,12 +133,18 @@ exp_visualization3_server <- function(id, r, con, debug = FALSE) {
       }
     })
 
-    # Initialize chart selector module
-    exp_chart_selector_server("chart_selector", r, debug = debug)
+    # Handle chart selection directly (no module needed)
+    observeEvent(input$chart_type, {
+      if(!is.null(input$chart_type)) {
+        old_chart <- r$chart_type
+        r$chart_type <- input$chart_type
+        if (debug) message("Chart type changed: ", old_chart, " -> ", input$chart_type)
+      }
+    })
 
     # Compute available charts based on tipo and tematica (from app.R lines 340-355)
     observe({
-      req(r$inputs_ready)
+      # REMOVED req(r$inputs_ready) to avoid circular dependency and timing issues
 
       if (debug) message("🎨 COMPUTING AVAILABLE CHARTS")
 
@@ -186,14 +188,53 @@ exp_visualization3_server <- function(id, r, con, debug = FALSE) {
       }
     })
 
-    # Output for conditional panel (chart selector visibility)
-    output$show_chart_selector <- reactive({
-      # Only show chart selector when inputs are ready
-      if (debug) cat("🔍 VIZ: Checking if inputs_ready:", r$inputs_ready, "\n")
-      if (!isTruthy(r$inputs_ready)) return(FALSE)
-      return(TRUE)
+    # Chart selector container - ALWAYS show with default values, no dependency on inputs_ready
+    output$chart_selector_container <- renderUI({
+      if (debug) cat("🔍 VIZ: Rendering chart selector (ALWAYS visible)\n")
+
+      # SIMPLIFIED APPROACH: Create chart selector directly instead of using module
+      # to avoid namespacing issues - similar to app2.R
+      # cat("📊 VIZ: Creating chart selector directly\n")
+
+      # All chart types available
+      all_charts <- c("Mapa" = "map", "Torta" = "pie", "Dona" = "donut",
+                      "Treemap" = "treemap", "Barras" = "bar", "Tabla" = "table")
+
+      # Get available charts from reactive values, with fallback to default
+      av_charts <- if (!is.null(r$available_charts) && length(r$available_charts) > 0) {
+        r$available_charts
+      } else {
+        # Default to map and table when nothing is set yet
+        c("Mapa" = "map", "Tabla" = "table")
+      }
+
+      # Set active chart (first available if current is not available)
+      active_chart <- if(!is.null(r$chart_type) && r$chart_type %in% av_charts) {
+        r$chart_type
+      } else {
+        av_charts[1]
+      }
+
+      # Update chart type in reactive values if it changed
+      if(is.null(r$chart_type) || !r$chart_type %in% av_charts) {
+        r$chart_type <- active_chart
+        if (debug) message("Chart type automatically updated to: ", active_chart)
+      }
+
+      # cat("📊 VIZ: Creating buttonImageInput with active:", active_chart, "\n")
+
+      # Create buttonImageInput directly
+      shinyinvoer::buttonImageInput(
+        inputId = ns('chart_type'),
+        images = all_charts,
+        highlightColor = "#09A274",
+        button_width = 28,
+        path = 'www/viz_icons',
+        active = active_chart,
+        layout = "flex",
+        disabled = all_charts[!all_charts %in% av_charts]
+      )
     })
-    outputOptions(output, "show_chart_selector", suspendWhenHidden = FALSE)
 
     # Render breadcrumb based on r values
     output$breadcrumb <- renderText({
@@ -252,57 +293,69 @@ exp_visualization3_server <- function(id, r, con, debug = FALSE) {
     output$viz_output <- renderUI({
       req(r$chart_type)
 
-      # Sys.sleep(0.5)
+      # Check if there's an error to display
+      if (!is.null(r$viz_error)) {
+        chart_output <- div(
+          h4("Error en la visualización", style = "color: red;"),
+          verbatimTextOutput(ns("error_display"))
+        )
+      } else {
+        # Normal visualization output
+        chart_output <- switch(r$chart_type,
+          "map" = leaflet::leafletOutput(ns("map_viz"), height = 450),
+          "table" = DT::dataTableOutput(ns("table_viz")),
+          "pie" = highcharter::highchartOutput(ns("hgch_viz"), height = 450),
+          "donut" = highcharter::highchartOutput(ns("hgch_viz"), height = 450),
+          "bar" = highcharter::highchartOutput(ns("hgch_viz"), height = 450),
+          "treemap" = highcharter::highchartOutput(ns("hgch_viz"), height = 450),
+          h3("Tipo de gráfico no soportado todavía")
+        )
+      }
 
-      switch(r$chart_type,
-        # "map" = leaflet::leafletOutput(ns("map_viz"), height = 450),
-        "table" = DT::dataTableOutput(ns("table_viz")),
-        "pie" = highcharter::highchartOutput(ns("hgch_viz"), height = 450),
-        "donut" = highcharter::highchartOutput(ns("hgch_viz"), height = 450),
-        "bar" = highcharter::highchartOutput(ns("hgch_viz"), height = 450),
-        "treemap" = highcharter::highchartOutput(ns("hgch_viz"), height = 450),
-        h3("Tipo de gráfico no soportado todavía")
-      )
-
-
+      # Return chart output only (debug2 is handled in main app UI)
+      chart_output
     })
 
 
 
 
-    # Map rendering - TEST WITH REAL DATA + GEOTABLE CONNECTION
+    # Error display output
+    output$error_display <- renderText({
+      req(r$viz_error)
+      r$viz_error
+    })
+
+    # Debug info is now handled by exp_debug2 module
+
+    # Map rendering - WITH PROPER ERROR HANDLING
     output$map_viz <- leaflet::renderLeaflet({
       req(r$inputs_ready)
       req(r$main_data)
       req(r$chart_type == "map")
 
+      # Clear any previous errors
+      r$viz_error <- NULL
+
       if (debug) {
-        message("🗺️ TESTING WITH REAL DATA + GEOTABLE CONNECTION")
+        message("🗺️ RENDERING MAP WITH ERROR HANDLING")
         message("- Data rows: ", nrow(r$main_data))
         message("- Region: ", r$sel_region)
         message("- Chart type: ", r$chart_type)
         message("- Conmap available: ", !is.null(r$conmap))
       }
 
-            # Store real map data for modal
+      # Store real map data for modal
       r$map_data <- r$main_data
       r$current_chart_data <- r$main_data
 
-      # Test accessing geotable connection and call choropleth_map
+      # Try to render the map, but capture errors properly
       tryCatch({
         if (!is.null(r$conmap)) {
           tables <- DBI::dbListTables(r$conmap)
           if (debug) message("✅ Geotable connection works, tables: ", length(tables))
         }
 
-        # NOW TEST THE ACTUAL CHOROPLETH_MAP FUNCTION
-        if (debug) message("🧪 TESTING choropleth_map() function...")
-
-        # FIX: Use only r$conmap to avoid database connection conflicts
-        if (debug) message("🔧 FIXED: Using only r$conmap connection to avoid conflicts")
-
-        # Monitor tematica UI during map rendering
-        if (debug) message("🔧 BEFORE choropleth_map: Checking if tematica UI exists")
+        if (debug) message("🧪 CALLING choropleth_map() function...")
 
         result <- choropleth_map(
           data = r$main_data,
@@ -317,19 +370,43 @@ exp_visualization3_server <- function(id, r, con, debug = FALSE) {
           conmap = r$conmap
         )
 
-        if (debug) message("🔧 AFTER choropleth_map: Map rendering completed")
-
         if (debug) message("✅ choropleth_map() completed successfully!")
         return(result)
 
       }, error = function(e) {
         if (debug) message("❌ ERROR with choropleth_map: ", e$message)
-        # Fallback to basic map
-        leaflet::leaflet() %>%
-          leaflet::addTiles() %>%
-          leaflet::setView(lng = -74.06, lat = 4.6, zoom = 6) %>%
-          leaflet::addMarkers(lng = -74.06, lat = 4.6,
-                             popup = paste("Error:", e$message))
+
+        # Create detailed error message
+        error_msg <- paste0(
+          "ERROR MESSAGE:\n",
+          e$message, "\n\n",
+          "FUNCTION INPUTS:\n",
+          "- region: ", r$sel_region, "\n",
+          "- tipo: ", r$sel_tipo, "\n",
+          "- tematica: ", r$sel_tematica, "\n",
+          "- indicador: ", r$indicador, "\n",
+          "- grupo: ", r$sel_grupo, "\n",
+          "- subregiones: TRUE\n",
+          "- with_parent: FALSE\n\n",
+          "DATA INFORMATION:\n",
+          if (!is.null(r$main_data)) {
+            paste0(
+              "- Data rows: ", nrow(r$main_data), "\n",
+              "- Data columns: ", ncol(r$main_data), "\n",
+              "- Column names: ", paste(names(r$main_data), collapse = ", "), "\n",
+              "- Data glimpse:\n",
+              paste(capture.output(utils::str(r$main_data)), collapse = "\n")
+            )
+          } else {
+            "- No data available (r$main_data is NULL)"
+          }
+        )
+
+        # Store error for display
+        r$viz_error <- error_msg
+
+        # Return NULL to trigger error display
+        return(NULL)
       })
     })
 
@@ -383,6 +460,11 @@ exp_visualization3_server <- function(id, r, con, debug = FALSE) {
       req(r$main_data)
       req(r$chart_type %in% c("pie", "donut", "bar", "treemap"))
 
+      # Clear any previous errors when rendering highcharts
+      if (r$chart_type %in% c("pie", "donut", "bar", "treemap")) {
+        r$viz_error <- NULL
+      }
+
       if (debug) {
         message("📊 RENDERING HIGHCHART:")
         message("- Chart type: ", r$chart_type)
@@ -396,6 +478,33 @@ exp_visualization3_server <- function(id, r, con, debug = FALSE) {
       # Validate chart data
       if(!validate_chart_data(r$main_data, r$chart_type)) {
         if (debug) message("❌ Chart data validation failed")
+
+        # Create error message for validation failure
+        error_msg <- paste0(
+          "ERROR MESSAGE:\n",
+          "Chart data validation failed for chart type: ", r$chart_type, "\n\n",
+          "FUNCTION INPUTS:\n",
+          "- region: ", r$sel_region, "\n",
+          "- tipo: ", r$sel_tipo, "\n",
+          "- tematica: ", r$sel_tematica, "\n",
+          "- indicador: ", r$indicador, "\n",
+          "- grupo: ", r$sel_grupo, "\n",
+          "- chart_type: ", r$chart_type, "\n\n",
+          "DATA INFORMATION:\n",
+          if (!is.null(r$main_data)) {
+            paste0(
+              "- Data rows: ", nrow(r$main_data), "\n",
+              "- Data columns: ", ncol(r$main_data), "\n",
+              "- Column names: ", paste(names(r$main_data), collapse = ", "), "\n",
+              "- Data glimpse:\n",
+              paste(capture.output(utils::str(r$main_data)), collapse = "\n")
+            )
+          } else {
+            "- No data available (r$main_data is NULL)"
+          }
+        )
+
+        r$viz_error <- error_msg
         return(NULL)
       }
 
@@ -406,6 +515,33 @@ exp_visualization3_server <- function(id, r, con, debug = FALSE) {
         return(result)
       }, error = function(e) {
         if (debug) message("❌ ERROR creating highchart: ", e$message)
+
+        # Create detailed error message
+        error_msg <- paste0(
+          "ERROR MESSAGE:\n",
+          e$message, "\n\n",
+          "FUNCTION INPUTS:\n",
+          "- region: ", r$sel_region, "\n",
+          "- tipo: ", r$sel_tipo, "\n",
+          "- tematica: ", r$sel_tematica, "\n",
+          "- indicador: ", r$indicador, "\n",
+          "- grupo: ", r$sel_grupo, "\n",
+          "- chart_type: ", r$chart_type, "\n\n",
+          "DATA INFORMATION:\n",
+          if (!is.null(r$main_data)) {
+            paste0(
+              "- Data rows: ", nrow(r$main_data), "\n",
+              "- Data columns: ", ncol(r$main_data), "\n",
+              "- Column names: ", paste(names(r$main_data), collapse = ", "), "\n",
+              "- Data glimpse:\n",
+              paste(capture.output(utils::str(r$main_data)), collapse = "\n")
+            )
+          } else {
+            "- No data available (r$main_data is NULL)"
+          }
+        )
+
+        r$viz_error <- error_msg
         return(NULL)
       })
     })
@@ -730,18 +866,14 @@ calculate_indicador <- function(r){
     if (!is.null(amenazadas_categoria) && amenazadas_categoria == "_total") {
       indicador <- NULL
     } else {
-      tem <- gsub("_total","", tematica)
-      indicador <- glue::glue("{regs_or_esps}_{tem}{amenazadas_categoria}")
+      indicador <- glue::glue("{regs_or_esps}_{tematica}{amenazadas_categoria}")
     }
   } else if (!is.null(r$sel_tematica) && grepl("cites", r$sel_tematica)) {
     # Cites tematica - return NULL for total categories
     if (r$sel_tematica == "cites") {
       indicador <- NULL  # Return NULL for "cites" (total)
     } else {
-      indicador <- case_when(
-        !grepl("_i", r$tematica) ~ glue::glue("{regs_or_esps}_{tematica}_total"),
-        TRUE ~ glue::glue("{regs_or_esps}_{tematica}")
-      )
+      indicador <- glue::glue("{regs_or_esps}_{tematica}")
     }
   } else if (!is.null(r$sel_tematica) && grepl("exoticas", r$sel_tematica)) {
     # Exóticas tematica - return NULL for total categories

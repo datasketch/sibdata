@@ -13,11 +13,6 @@ choropleth_map <- function(data = NULL,
                            con = NULL,
                            conmap = NULL, ...) {
 
-
-  geo_path <- glue::glue("geo/region-amazonia.geojson")
-  sf <- sf::st_read(sys_file_sibdata(geo_path), quiet = TRUE)
-  return(basic_map(sf))
-
   no_conmap <- is.null(conmap)
   region_especial <- FALSE
 
@@ -65,8 +60,7 @@ choropleth_map <- function(data = NULL,
     if(region_id == "san_andres_providencia") region_id <- "san_andres_providencia_y_santa_catalina"
     if(region_id == "bogota_dc") region_id <- "bogota_d_c"
     region_codes <- sibdata_municipio(con) |>
-      select(slug_region = slug, cod_dane) |>
-      filter(slug == region) |> collect()
+      select(slug_region = slug, cod_dane) |> collect()
     map_name <- paste0("col_municipalities_",region_id)
   } else{
     regiones_especiales <- c(

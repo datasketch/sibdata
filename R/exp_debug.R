@@ -5,20 +5,11 @@
 #' @param id Module ID
 #' @param debug Boolean to control whether debug output is shown
 #' @export
-exp_debug_ui <- function(id, debug = FALSE) {
+exp_debug_ui <- function(id) {
   ns <- NS(id)
 
-  if (!debug) {
-    return(NULL)  # Return NULL if debug is FALSE
-  }
+  uiOutput(ns("debug"))
 
-  tagList(
-    h4("Debug - Reactive Values"),
-    div(class = "debug-container",
-        verbatimTextOutput(ns("debug_reactive"))
-    ),
-    hr()
-  )
 }
 
 #' Debug Module Server
@@ -28,6 +19,22 @@ exp_debug_ui <- function(id, debug = FALSE) {
 #' @export
 exp_debug_server <- function(id, r, debug = FALSE) {
   moduleServer(id, function(input, output, session) {
+
+    ns <- session$ns
+
+    # message("DEBUG value: ", debug)
+    output$debug <- renderUI({
+      if(!debug) return(NULL)
+
+      tagList(
+        h4("Debug - Reactive Values"),
+        div(class = "debug-container",
+            verbatimTextOutput(ns("debug_reactive"))
+        ),
+        hr()
+      )
+
+    })
 
     # Only create debug output if debug is TRUE
     if (debug) {
@@ -46,9 +53,9 @@ exp_debug_server <- function(id, r, debug = FALSE) {
         cat("breadcrumb:", r$breadcrumb, "\n")
         cat("is_special_region:", r$is_special_region, "\n")
         cat("has_subtematica:", r$has_subtematica, "\n")
-        # cat("amenazadas_categoria:", r$amenazadas_categoria, "\n")
-        # cat("cites_categoria:", r$cites_categoria, "\n")
-        # cat("exotica_categoria:", r$exotica_categoria, "\n")
+        cat("amenazadas_categoria:", r$amenazadas_categoria, "\n")
+        cat("cites_categoria:", r$cites_categoria, "\n")
+        cat("exotica_categoria:", r$exotica_categoria, "\n")
         # cat("especies_total_estimadas:", r$especies_total_estimadas, "\n")
         # cat("show_subcategoria:", r$show_subcategoria, "\n")
         # cat("show_especies_total_estimadas:", r$show_especies_total_estimadas, "\n")
@@ -64,7 +71,16 @@ exp_debug_server <- function(id, r, debug = FALSE) {
           cat("current_chart_data for:", r$chart_type, "\n")
           cat("current_chart_data cols:", paste(names(r$current_chart_data), collapse = ", "), "\n")
         }
+
+        # Add main_data glimpse using dplyr::glimpse()
+        cat("--- MAIN DATA GLIMPSE ---\n")
+        if (!is.null(r$main_data)) {
+          dplyr::glimpse(r$main_data)
+        } else {
+          cat("main_data is NULL\n")
+        }
       })
     }
+
   })
 }

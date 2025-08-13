@@ -426,9 +426,6 @@ exp_inputs_tematica_ui <- function(id) {
       }
     ")),
     tags$script(HTML("
-      // TEMPORARILY DISABLED TOOLTIP SCRIPT FOR DEBUGGING
-      console.log('🔧 TOOLTIP SCRIPT DISABLED FOR DEBUGGING');
-      /*
       // Function to add tooltips to radio buttons
       function addTooltipsToRadioButtons() {
         console.log('Adding tooltips to radio buttons...');
@@ -517,8 +514,6 @@ exp_inputs_tematica_ui <- function(id) {
           setTimeout(addTooltipsToRadioButtons, 50);
         });
       }
-      */
-      console.log('🔧 END OF DISABLED TOOLTIP SCRIPT');
     "))
   )
 }
@@ -534,28 +529,28 @@ exp_inputs_tematica_ui <- function(id) {
 #' @return Reactive expression returning the selected tematica slug
 #' @export
 exp_inputs_tematica_server <- function(id, con, session_main = NULL, debug = FALSE) {
-  cat("🚨 exp_inputs_tematica_server CALLED with id:", id, "debug:", debug, "\n")
+  # cat("🚨 exp_inputs_tematica_server CALLED with id:", id, "debug:", debug, "\n")
   moduleServer(id, function(input, output, session) {
-    cat("🚨 moduleServer FUNCTION CALLED\n")
+    # cat("🚨 moduleServer FUNCTION CALLED\n")
     ns <- session$ns
 
     # Safely load tematica tree with error handling
     if (debug) cat("🔄 LOADING tematica tree from database...\n")
-    
+
     # Load tematica tree - let errors bubble up for debugging
     if (is.null(con) || !DBI::dbIsValid(con)) {
       if (debug) cat("❌ ERROR: Invalid database connection\n")
       stop("Invalid database connection")
     }
     if (debug) cat("✅ Database connection is valid\n")
-    
+
     tematica_tree <- get_tematicas_tree(con)
     if (debug) cat("✅ get_tematicas_tree() completed\n")
-    
-    cat("🔍 CHECKPOINT 0: Tree loaded, about to continue\n")
 
-    cat("🔍 CHECKPOINT 1: After tematica_tree loading\n")
-    
+    # cat("🔍 CHECKPOINT 0: Tree loaded, about to continue\n")
+
+    # cat("🔍 CHECKPOINT 1: After tematica_tree loading\n")
+
     if (debug) {
       cat("=== DEBUG: Tematica module server started ===\n")
       if (is.null(tematica_tree)) {
@@ -568,8 +563,8 @@ exp_inputs_tematica_server <- function(id, con, session_main = NULL, debug = FAL
       }
       cat("✅ About to create selected_tematica reactive\n")
     }
-    
-    cat("🔍 CHECKPOINT 2: About to create URL reactive\n")
+
+    # cat("🔍 CHECKPOINT 2: About to create URL reactive\n")
 
     # URL parameter handling
     url_par <- reactive({
@@ -579,8 +574,8 @@ exp_inputs_tematica_server <- function(id, con, session_main = NULL, debug = FAL
       }
       list()
     })
-    
-    cat("🔍 CHECKPOINT 3: URL reactive created\n")
+
+    # cat("🔍 CHECKPOINT 3: URL reactive created\n")
 
     # Set initial state from URL parameters - delay to ensure UI is rendered first
     observe({
@@ -654,25 +649,25 @@ exp_inputs_tematica_server <- function(id, con, session_main = NULL, debug = FAL
     })
 
     # Create UI inputs using renderUI (works properly with nested modules)
-    cat("🔍 CHECKPOINT 4: About to create renderUI\n")
-    
+    # cat("🔍 CHECKPOINT 4: About to create renderUI\n")
+
     output$tematica_ui <- renderUI({
       if (debug) cat("🎨 TEMATICA renderUI CALLED!\n")
-      
+
       if (is.null(tematica_tree)) {
         if (debug) cat("❌ ERROR: tematica_tree is NULL, cannot create UI\n")
         return(tags$p("Error: No tematica data available"))
       }
-      
+
       if (debug) cat("✅ tematica_tree is available, proceeding with UI creation\n")
 
       req(tematica_tree)
-      
+
       if (debug) cat("✅ req(tematica_tree) passed\n")
 
       # Get the tree structure
       l <- tematica_tree
-      
+
       if (debug) cat("✅ Got tree structure, children count:", length(l$children), "\n")
 
       # Create list to hold all inputs
@@ -771,31 +766,9 @@ exp_inputs_tematica_server <- function(id, con, session_main = NULL, debug = FAL
 
       # Create the final UI
       final_ui <- do.call(tagList, all_inputs)
-      
+
       if (debug) cat("✅ TEMATICA UI CREATED SUCCESSFULLY!\n")
-      
-      # Add JavaScript monitoring to track when UI disappears
-      final_ui <- tagList(
-        final_ui,
-        tags$script(HTML("
-          // Monitor tematica UI visibility
-          function checkTematicaVisibility() {
-            var container = document.querySelector('#inputs-tematica-tematica_ui');
-            var checkboxes = container ? container.querySelectorAll('input[type=\"checkbox\"]') : [];
-            console.log('📊 TEMATICA CHECK: Container exists:', !!container, 
-                       'Checkboxes found:', checkboxes.length,
-                       'Time:', new Date().toLocaleTimeString());
-            return checkboxes.length;
-          }
-          
-          // Check every 2 seconds
-          setInterval(checkTematicaVisibility, 2000);
-          
-          // Initial check
-          setTimeout(checkTematicaVisibility, 1000);
-        "))
-      )
-      
+
       return(final_ui)
     })
 
@@ -906,8 +879,8 @@ exp_inputs_tematica_server <- function(id, con, session_main = NULL, debug = FAL
       return(NULL)  # Nothing selected
     })
 
-    cat("🔍 CHECKPOINT 5: About to return selected_tematica\n")
-    
+    # cat("🔍 CHECKPOINT 5: About to return selected_tematica\n")
+
     # Return the reactive expression
     if (debug) cat("✅ RETURNING selected_tematica reactive\n")
     return(selected_tematica)

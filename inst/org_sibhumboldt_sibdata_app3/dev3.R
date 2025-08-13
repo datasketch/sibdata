@@ -16,6 +16,198 @@ library(dbplyr)
 con <- DBI::dbConnect(RSQLite::SQLite(), sys_file_sibdata("db/sibdata.sqlite"),
                       read_only = TRUE)
 
+conmap <- geotable::gt_con()
+# Do not forget to close the connection when done
+
+
+## VISUALIZATION3 MODULE
+
+### WHEN r$is_special_region is TRUE
+### show buttonImageInput only with the table
+### WHEN r$is_special_region is FALSE
+### show regular map of the regions
+### When r$has_subtematica is TRUE
+### Show also the buttonImageInput with the possibility to select chartypes
+### map, pie, donut, treemap, bars
+
+
+
+r <- list(
+  sel_region = "colombia",
+  sel_tipo = "registros",
+  sel_grupo_tipo = "biologico",
+  sel_grupo = NULL,
+  sel_tematica = "amenazadas_nacional",
+  sel_indicador = "amenazadas_nacional_total",
+  subregiones = FALSE,
+  with_parent = FALSE
+)
+# Convert dashes to underscores for API compatibility
+tematica_api <- if(!is.null(r$sel_tematica)) gsub("-", "_", r$sel_tematica) else r$sel_tematica
+
+d <- sibdata(
+  region = r$sel_region,
+  grupo = r$sel_grupo,
+  tipo = r$sel_tipo,
+  tematica = tematica_api,
+  indicador = r$indicador,
+  subregiones = TRUE, # Always TRUE for maps
+  with_parent = FALSE,
+  con = con
+)
+d
+data <- d
+
+result <- choropleth_map(
+  data = data,
+  region = r$sel_region,
+  tipo = r$sel_tipo,
+  tematica = r$sel_tematica,
+  indicador = r$indicador,
+  grupo = r$sel_grupo,
+  subregiones = TRUE,  # Always TRUE for maps
+  with_parent = FALSE,
+  con = con,
+  conmap = conmap
+)
+result
+
+
+
+## MAP example
+
+r <- list(
+  sel_region = "colombia",
+  sel_tipo = "especies",
+  sel_grupo_tipo = "biologico",
+  sel_grupo = NULL,
+  sel_tematica = "endemicas",
+  indicador = "registros_region_total",
+  subregiones = FALSE,
+  with_parent = FALSE
+)
+# Convert dashes to underscores for API compatibility
+tematica_api <- if(!is.null(r$sel_tematica)) gsub("-", "_", r$sel_tematica) else r$sel_tematica
+
+d <- sibdata(
+  region = r$sel_region,
+  grupo = r$sel_grupo,
+  tipo = r$sel_tipo,
+  tematica = tematica_api,
+  indicador = r$indicador,
+  subregiones = TRUE, # Always TRUE for maps
+  with_parent = FALSE,
+  con = con
+)
+
+data <- d
+
+result <- choropleth_map(
+  data = data,
+  region = r$sel_region,
+  tipo = r$sel_tipo,
+  tematica = r$sel_tematica,
+  indicador = r$indicador,
+  grupo = r$sel_grupo,
+  subregiones = TRUE,  # Always TRUE for maps
+  with_parent = FALSE,
+  con = con,
+  conmap = conmap
+)
+result
+
+# Map Deptos region - Amazonas
+# region: amazonas
+# grupo: NULL
+# tipo: registros
+# tematica: NULL
+# indicador: registros_region_total
+# subregiones: TRUE
+# with_parent: FALSE
+
+r <- list(
+  sel_region = "amazonas",
+  sel_tipo = "registros",
+  sel_grupo_tipo = "biologico",
+  sel_grupo = NULL,
+  sel_tematica = NULL,
+  sel_indicador = "especies_region_total",
+  subregiones = TRUE,
+  with_parent = FALSE
+)
+# Convert dashes to underscores for API compatibility
+tematica_api <- if(!is.null(r$sel_tematica)) gsub("-", "_", r$sel_tematica) else r$sel_tematica
+
+d <- sibdata(
+  region = r$sel_region,
+  grupo = r$sel_grupo,
+  tipo = r$sel_tipo,
+  tematica = tematica_api,
+  indicador = r$indicador,
+  subregiones = r$subregiones,
+  con = con
+)
+
+data <- d
+
+result <- choropleth_map(
+  data = data,
+  region = r$sel_region,
+  tipo = r$sel_tipo,
+  tematica = r$sel_tematica,
+  indicador = r$indicador,
+  grupo = r$sel_grupo,
+  con = con,
+  conmap = conmap
+)
+result
+
+
+
+
+# Map Special region
+## The map has no values
+
+r <- list(
+  sel_region = "region-amazonia",
+  sel_tipo = "especies",
+  sel_grupo_tipo = "biologico",
+  sel_grupo = NULL,
+  sel_tematica = "endemicas",
+  subregiones = FALSE,
+  with_parent = FALSE
+)
+# Convert dashes to underscores for API compatibility
+tematica_api <- if(!is.null(r$sel_tematica)) gsub("-", "_", r$sel_tematica) else r$sel_tematica
+
+d <- sibdata(
+  region = r$sel_region,
+  grupo = r$sel_grupo,
+  tipo = r$sel_tipo,
+  tematica = tematica_api,
+  indicador = r$indicador,
+  con = con
+)
+
+data <- d
+
+result <- choropleth_map(
+  data = data,
+  region = r$sel_region,
+  tipo = r$sel_tipo,
+  tematica = r$sel_tematica,
+  indicador = r$indicador,
+  grupo = r$sel_grupo,
+  con = con,
+  conmap = conmap
+)
+result
+
+
+
+
+
+## GENERAL INPUT COMBINATIONS
 
 av_grupos_bio <- sib_available_grupos(tipo = "biologico", con = con)
 opts_grupo_biologico <- c("Todos" = "todos", av_grupos_bio)
@@ -26,8 +218,6 @@ pais <- sib_available_regions(subtipo = "País", con = con)
 departamentos <- sib_available_regions(subtipo = "Departamento", con = con)
 
 opts_tematicas <- c("Todas" = "todas", sib_available_tematicas())
-
-
 
 
 input <- list(
@@ -125,6 +315,7 @@ input <- list(
   grupo = "animales",
   tipo = "especies",
   tematica = "amenazadas_nacional",
+  indicador <- NULL,
   subregiones = FALSE,
   with_parent = FALSE
 )
@@ -150,6 +341,7 @@ input <- list(
   grupo = "animales",
   tipo = "especies",
   tematica = "cites",
+  indicador = NULL,
   subregiones = FALSE,
   with_parent = FALSE
 )

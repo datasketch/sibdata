@@ -4,7 +4,7 @@
 \alias{exp_debug_ui}
 \title{Debug Module UI}
 \usage{
-exp_debug_ui(id, debug = FALSE)
+exp_debug_ui(id)
 }
 \arguments{
 \item{id}{Module ID}

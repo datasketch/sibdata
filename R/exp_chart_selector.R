@@ -11,12 +11,16 @@
 #' @return UI elements for chart selector
 #' @export
 exp_chart_selector_ui <- function(id) {
+  cat("📊 CHART SELECTOR UI CALLED with id:", id, "\n")
   ns <- NS(id)
 
-  tagList(
+  result <- tagList(
     # Chart type buttons (using buttonImageInput like original app)
     uiOutput(ns("chart_buttons"))
   )
+
+  cat("📊 CHART SELECTOR UI returning:", length(result), "elements\n")
+  return(result)
 }
 
 #' Chart Selector Server Module
@@ -30,7 +34,9 @@ exp_chart_selector_ui <- function(id) {
 #' @return Server logic for chart selector
 #' @export
 exp_chart_selector_server <- function(id, r, debug = FALSE) {
+  cat("📊 CHART SELECTOR SERVER CALLED with id:", id, "\n")
   moduleServer(id, function(input, output, session) {
+    cat("📊 CHART SELECTOR moduleServer CALLED\n")
     ns <- session$ns
 
     # Define all chart types (same as original app lines 360-361)
@@ -46,10 +52,65 @@ exp_chart_selector_server <- function(id, r, debug = FALSE) {
     # Available charts are now computed centrally in app2.R
     # This module just uses r$available_charts
 
+    # # Force trigger the renderUI by making it reactive to inputs_ready
+    # observeEvent(r$inputs_ready, {
+    #   if (debug) cat("📊 CHART SELECTOR observeEvent triggered, inputs_ready:", r$inputs_ready, "\n")
+    # })
+
+    # Force reactive dependencies with immediate initialization
+    observe({
+      cat("📊 CHART SELECTOR observe() triggered - checking reactive values\n")
+      cat("📊 r$inputs_ready:", tryCatch(r$inputs_ready, error = function(e) "ERROR"), "\n") 
+      cat("📊 r$available_charts length:", tryCatch(length(r$available_charts), error = function(e) "ERROR"), "\n")
+      cat("📊 r$sel_tipo:", tryCatch(r$sel_tipo, error = function(e) "ERROR"), "\n")
+      
+      # Force invalidation on all reactive values we care about
+      tryCatch({
+        temp <- r$inputs_ready
+        temp <- r$available_charts  
+        temp <- r$sel_tipo
+        cat("📊 All reactive dependencies accessed successfully\n")
+      }, error = function(e) {
+        cat("📊 ERROR accessing reactive dependencies:", e$message, "\n")
+      })
+    })
+    
+    # Additional immediate debugging
+    cat("📊 CHART SELECTOR moduleServer - adding immediate observe priority\n")
+    observe({
+      cat("📊 HIGH PRIORITY observe() in chart selector triggered\n")
+    }, priority = 1000)
+    
     # Generate chart buttons UI using buttonImageInput (original app lines 366-374)
     output$chart_buttons <- renderUI({
-      req(r$sel_tipo)
-      req(r$available_charts)
+      cat("📊 CHART SELECTOR moduleServer output$chart_buttons CALLED\n")
+
+      # CRITICAL FIX: Remove req(r$inputs_ready) to avoid circular dependency
+      # The container already handles inputs_ready dependency
+      
+      # Force reactive dependencies to trigger reactivity
+      sel_tipo <- r$sel_tipo
+      available_charts <- r$available_charts
+      chart_type <- r$chart_type
+
+      cat("📊 CHART BUTTONS renderUI called\n")
+      cat("📊 sel_tipo:", sel_tipo, "\n")
+      cat("📊 available_charts length:", if(is.null(available_charts)) "NULL" else length(available_charts), "\n")
+      cat("📊 available_charts names:", if(is.null(available_charts)) "NULL" else paste(names(available_charts), collapse = ", "), "\n")
+      cat("📊 chart_type:", chart_type, "\n")
+
+      # # Don't use req() - let's see what happens without it
+      # if (is.null(sel_tipo)) {
+      #   if (debug) cat("📊 sel_tipo is NULL, returning NULL\n")
+      #   return(NULL)
+      # }
+      #
+      # if (is.null(available_charts) || length(available_charts) == 0) {
+      #   if (debug) cat("📊 available_charts is NULL/empty, returning NULL\n")
+      #   return(NULL)
+      # }
+
+      if (debug) cat("📊 Validation passed, creating buttons\n")
 
       # Get available charts from centralized reactive values
       av_charts <- r$available_charts

@@ -7,6 +7,14 @@ sf <- st_read(sys_file_sibdata(geo_path), quiet = TRUE)
 sf <- sf |> select(id = dpto_ccdgo, label = dpto_cnmbr, slug_region = slug_regio)
 st_write(sf, "inst/geo/region-amazonia.geojson")
 
+sf_amazonia <- sf
+geo_path <- "static/data/colombia/colombia.geojson"
+sf <- st_read(geo_path, quiet = TRUE)
+sf <- sf |> filter(sf$id %in% sf_amazonia$id)
+st_write(sf, "inst/geo/region-amazonia-departamentos.geojson")
+
+
+
 # resguardo-indigena-pialapi-pueblo-viejo
 geo_path <- "data-raw/geo/Resguardo"
 sf <- st_read(sys_file_sibdata(geo_path), quiet = TRUE)

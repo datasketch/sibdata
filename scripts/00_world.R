@@ -1,6 +1,4 @@
 library(sibdata)
-# library(ltgeo)
-# library(lfltmagic)
 library(geotable)
 library(tictoc)
 
@@ -9,16 +7,9 @@ devtools::load_all()
 #here::i_am("static")
 
 here::dr_here()
-here::dr_here()
 save_path <- here::here("static", "data")
 message("Save path: ", save_path)
-# here::set_here()
-# here::dr_here()
-# setwd("../")
-# here::dr_here()
-# tic()
 
-#
 # con <- DBI::dbConnect(duckdb::duckdb(), "../inst/db/sibdata.duckdb",
 #                       read_only = TRUE)
 
@@ -60,16 +51,20 @@ ref_principal <- parse_ref(ranking$ref_id[1])
 #
 dato_relevante <- sibdata_dato_relevante(con) |> collect()
 
-# https://github.com/datasketch/sib-colombia/issues/14
-# Primer lugar en diversidad de aves, orquídeas y mariposas
-# El segundo en variedad de anfibios, peces dulceacuícolas, palmas y murciélagos
-# El sexto en mamíferos.
+# https://github.com/datasketch/sib-colombia/issues/99
+# 1er  País en diversidad de aves, orquídeas y mariposas.
+# 2do  País en diversidad de anfibios, peces dulceacuícolas, palmas y murciélagos.
+# 3er  País en diversidad de plantas.
+# 6to  País en diversidad de mamíferos.
+# 7mo  País en diversidad de reptiles.
 
 positions <- tibble::tribble(
   ~position,  ~position_text,
   1, "Primer lugar en diversidad de aves (42), orquídeas (41) y mariposas (13)",
   2, "Segundo en variedad de anfibios(52), peces dulceacuícolas(10), palmas(54) y murciélagos (53)",
-  3, "Sexto en mamíferos (55)"
+  3, "Tercero en diversidad de plantas",
+  6, "Sexto en mamíferos (55)",
+  7, "Séptimo en reptiles"
 )
 
 ref_ids <- c(42, 41, 13, 51, 52, 10, 53, 54, 53, 55)
@@ -93,6 +88,7 @@ lista_mapa <- list(
 regs <- sibdata_region_tematica(con) |> collect()
 
 destacados <- c(
+  "region-amazonia",
   "tolima", "boyaca", "narino", "santander",
   "resguardo-indigena-pialapi-pueblo-viejo",
   "reserva-forestal-la-planada"

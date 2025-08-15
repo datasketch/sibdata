@@ -108,7 +108,7 @@ map(av_regions, safely(function(region){
       left_join(deptos_amazonia, by = c("slug_region" = "slug")) |>
       rename(slug = slug_region)
     ## TODO merge aporte
-    geo_path <- sys_file_sibdata("geo/region-amazonia.geo.json")
+    geo_path <- sys_file_sibdata("geo/region-amazonia.geojson")
     geo <- sf::read_sf(geo_path) |>
       select(cod_dane = dpto_ccdgo,
              label_dpto = dpto_cnmbr,
@@ -122,7 +122,10 @@ map(av_regions, safely(function(region){
                  delete_dsn = TRUE)
 
   }
-
+  if(region %in% reserva_resguardo){
+    geo_path <- sys_file_sibdata(glue::glue("geo/{region}.geojson"))
+    tj <- sf::read_sf(geo_path)
+  }
 
 
   message("Message Territorio")
@@ -230,15 +233,29 @@ map(av_regions, safely(function(region){
   jsonlite::write_json(l, paste0(save_path,"/",region,"/",region, ".json"),
                        auto_unbox = TRUE, pretty =TRUE)
 
+  sf::write_sf(tj, paste0(save_path,"/",region,"/",region, ".geojson"),
+               delete_dsn = TRUE)
+
+  if(region == "region-amazonia"){
+    file.copy(sys_file_sibdata("geo/region-amazonia-municipios.json"),
+              paste0(save_path,"/",region, "/region-amazonia-municipios.json"))
+  }
+
   if(!region %in% reserva_resguardo){
-    sf::write_sf(tj, paste0(save_path,"/",region,"/",region, ".geojson"),
-                 delete_dsn = TRUE)
     opts <- list(main_border_width = 0.1,
                  main_border_color = "#007139",
                  fill_color = "#b3cfc0",
                  minor_border_color = "#007139",
                  minor_border_width = 0.1)
     gt_icon(map_name, opts = opts,
+            save_path = paste0(save_path,"/",region,"/",region, ".svg"))
+  }else{
+    opts <- list(main_border_width = 0.1,
+                 main_border_color = "#007139",
+                 fill_color = "#b3cfc0",
+                 minor_border_color = "#007139",
+                 minor_border_width = 0.1)
+    map_icon(sf = tj, opts = opts,
             save_path = paste0(save_path,"/",region,"/",region, ".svg"))
   }
 

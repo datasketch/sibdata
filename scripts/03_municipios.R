@@ -42,16 +42,16 @@ av_regions10 <- sib_available_regions(subtipo = c("Municipio"),
 av_regions <- c(
   # "reserva-forestal-la-planada",
   # "resguardo-indigena-pialapi-pueblo-viejo",
-  # av_regions1,
-  # av_regions2
-  # av_regions3,
-  av_regions4
-  # av_regions5,
-  # av_regions6,
-  # av_regions7,
-  # av_regions8,
-  # av_regions9,
-  # av_regions10
+  av_regions1,
+  av_regions2,
+  av_regions3,
+  av_regions4,
+  av_regions5,
+  av_regions6,
+  av_regions7,
+  av_regions8,
+  av_regions9,
+  av_regions10
 )
 
 n <- length(av_regions)
@@ -61,6 +61,7 @@ library(tictoc)
 
 tic()
 
+# av_regions <- rev(av_regions)
 
 map(av_regions, function(region){
   parent <- sib_parent_region(region, con = con)

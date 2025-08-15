@@ -32,10 +32,10 @@ av_regions <- unname(sib_available_regions(subtipo = c("Departamento"), con = co
 
 av_regions_top <- c("boyaca","narino","tolima", "santander",
                     "amazonas", "caqueta", "guainia", "guaviare", "putumayo", "vaupes")
-av_regions_territorio <- c(
-  "reserva-forestal-la-planada",
-  "resguardo-indigena-pialapi-pueblo-viejo"
-)
+# av_regions_territorio <- c(
+#   "reserva-forestal-la-planada",
+#   "resguardo-indigena-pialapi-pueblo-viejo"
+# )
 av_regions_amazonas <- c("amazonas", "caqueta", "guainia", "guaviare", "putumayo", "vaupes")
 
 #av_regions <- av_regions[!av_regions %in% av_regions_top]
@@ -69,6 +69,7 @@ map(av_regions, safely(function(region){
   # region <- "guaviare"
   # region <- "caqueta"
   # region <- "putumayo"
+  # region <- "san-andres-providencia"
 
   reserva_resguardo <- c("reserva-forestal-la-planada",
                          "resguardo-indigena-pialapi-pueblo-viejo")
@@ -120,13 +121,6 @@ map(av_regions, safely(function(region){
     bogota <- sibdata_departamento(con) |> collect() |> filter(cod_dane == "11")
     munis <- bogota |> mutate(cod_dane = "11001")
   }
-  if(region == "region-amazonia"){
-    cod_dane_deptos_amazonia <- sibdata_departamento(con) |> collect() |>
-      filter(slug %in% av_regions_amazonas) |> pull(cod_dane)
-    pattern <- paste0("^", paste(cod_dane_deptos_amazonia, collapse = "|"))
-    munis <- munis |>filter(str_detect(as.character(cod_dane), pattern))
-  }
-
 
   dd <- dd |>
     left_join(munis, by = c("slug_region" = "slug"))

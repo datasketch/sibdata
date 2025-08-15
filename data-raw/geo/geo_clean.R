@@ -12,8 +12,18 @@ geo_path <- "static/data/colombia/colombia.geojson"
 sf <- st_read(geo_path, quiet = TRUE)
 sf <- sf |> filter(sf$id %in% sf_amazonia$id)
 st_write(sf, "inst/geo/region-amazonia-departamentos.geojson")
-
-
+#municipios amazonia
+con <- DBI::dbConnect(RSQLite::SQLite(), sys_file_sibdata("db/sibdata.sqlite"),
+                      read_only = TRUE)
+deptos <- sf$id
+munis <- sibdata_municipio(con) |> collect() |>
+  mutate(depto_id = str_sub(cod_dane,1,2)) |>
+  filter(depto_id %in% sf$id) |>
+  select(slug, label, depto_id) |>
+  group_split(depto_id)
+names(munis) <- sf$id
+munis <- map(munis, as.data.frame)
+jsonlite::write_json(munis, "inst/geo/region-amazonia-municipios.json")
 
 # resguardo-indigena-pialapi-pueblo-viejo
 geo_path <- "data-raw/geo/Resguardo"

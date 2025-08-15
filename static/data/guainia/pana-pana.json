@@ -9,66 +9,232 @@
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
         "label": "Amenazadas",
+        "tooltip": "Temática definida según criterios establecidos por la Lista Roja de la Unión Internacional para la Conservación de la Naturaleza (UICN) a nivel global, y la Resolución vigente del Ministerio de Ambiente y Desarrollo Sostenible en el contexto nacional. Clasificadas en tres categorías de amenaza: Vulnerable (VU), En Peligro (EN) y En Peligro Crítico (CR).",
         "children": [
           {
-            "slug": "amenazadas-global",
+            "slug": "amenazadas_global",
             "activa": 1,
-            "descripcion": "La Lista Roja de UICN es un indicador crítico de la salud de la biodiversidad del mundo que permite agilizar acciones que fomente la conservación de la biodiversidad.",
             "icon": 0,
-            "icon_black": "static/icons/amenazadas-global-black.svg",
-            "icon_white": "static/icons/amenazadas-global-white.svg",
+            "icon_black": "static/icons/amenazadas_global-black.svg",
+            "icon_white": "static/icons/amenazadas_global-white.svg",
             "label": "Categoría UICN global",
-            "tooltip": "UICN (Unión Internacional para la Conservación de la Naturaleza)"
+            "tooltip": "La Lista Roja de la Unión Internacional para la Conservación de la Naturaleza (UICN) es un indicador crítico de la salud de la biodiversidad del mundo que permite agilizar acciones que fomente la conservación de la biodiversidad.",
+            "children": [
+              {
+                "slug": "amenazadas-global-cr",
+                "activa": 1,
+                "descripcion": "Categoría de amenaza. Se ha reducido el tamaño de la población o se ha presentado disminución en la extensión de presencia o área de ocupación que genera un riesgo de extinción extremadamente alto en vida silvestre.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-global-cr-black.svg",
+                "icon_white": "static/icons/amenazadas-global-cr-white.svg",
+                "label": "CR",
+                "orden": 10,
+                "tooltip": "En peligro crítico"
+              },
+              {
+                "slug": "amenazadas-global-dd",
+                "activa": 1,
+                "descripcion": "No se tiene la información adecuada para realizar una evaluación del riesgo de extensión basado en su distribución y/o condición de la población.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-global-dd-black.svg",
+                "icon_white": "static/icons/amenazadas-global-dd-white.svg",
+                "label": "DD",
+                "orden": 2,
+                "tooltip": "Datos insuficientes"
+              },
+              {
+                "slug": "amenazadas-global-en",
+                "activa": 1,
+                "descripcion": "Categoría de amenaza. Se ha reducido el tamaño de la población o se ha presentado disminución en la extensión de presencia o área de ocupación que genera un riesgo de extinción muy alto en vida silvestre.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-global-en-black.svg",
+                "icon_white": "static/icons/amenazadas-global-en-white.svg",
+                "label": "EN",
+                "orden": 9,
+                "tooltip": "En peligro"
+              },
+              {
+                "slug": "amenazadas-global-ew",
+                "activa": 1,
+                "descripcion": "El taxón solamente sobrevive en cultivo, cautividad o como poblaciones naturalizadas fuera de su distribución original.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-global-ew-black.svg",
+                "icon_white": "static/icons/amenazadas-global-ew-white.svg",
+                "label": "EW",
+                "orden": 11,
+                "tooltip": "Extinto en estado silvestre"
+              },
+              {
+                "slug": "amenazadas-global-ex",
+                "activa": 1,
+                "descripcion": "Hace referencia a un taxón en el cual el último individuo vivo ha muerto y no se han logrado encontrar nuevos registros en hábitats con condiciones apropiadas al ciclo de vida y formas del taxón.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-global-ex-black.svg",
+                "icon_white": "static/icons/amenazadas-global-ex-white.svg",
+                "label": "EX",
+                "orden": 12,
+                "tooltip": "Extinto"
+              },
+              {
+                "slug": "amenazadas-global-lc",
+                "activa": 1,
+                "descripcion": "Se realizó la evaluación de riesgo de extinción, pero no se cumplieron los criterios para definirlo en alguna categoría de amenaza.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-global-lc-black.svg",
+                "icon_white": "static/icons/amenazadas-global-lc-white.svg",
+                "label": "LC",
+                "orden": 4,
+                "tooltip": "Preocupación menor"
+              },
+              {
+                "slug": "amenazadas-global-lr-cd",
+                "activa": 1,
+                "descripcion": "Especies con bajo riesgo de amenaza, generalmente esta categoría se incluyen taxones ampliamente distribuidos.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-global-lr-cd-black.svg",
+                "icon_white": "static/icons/amenazadas-global-lr-cd-white.svg",
+                "label": "LR/cd",
+                "orden": 7,
+                "tooltip": "Menor riesgo / Dependiente de medidas de conservación"
+              },
+              {
+                "slug": "amenazadas-global-lr-lc",
+                "activa": 1,
+                "descripcion": "Se realizó la evaluación de riesgo de extinción, pero no se cumplieron los criterios para definirlo en alguna categoría de amenaza.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-global-lr-lc-black.svg",
+                "icon_white": "static/icons/amenazadas-global-lr-lc-white.svg",
+                "label": "LR/lc",
+                "orden": 3,
+                "tooltip": "Menor riesgo / Preocupación menor"
+              },
+              {
+                "slug": "amenazadas-global-lr-nt",
+                "activa": 1,
+                "descripcion": "Al realizar la evaluación no se encontraron los criterios para definirlo en alguna categoría de amenaza.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-global-lr-nt-black.svg",
+                "icon_white": "static/icons/amenazadas-global-lr-nt-white.svg",
+                "label": "LR/nt",
+                "orden": 5,
+                "tooltip": "Menor riesgo / Casi amenazado"
+              },
+              {
+                "slug": "amenazadas-global-ne",
+                "activa": 1,
+                "descripcion": "No se ha llevado a cabo el proceso de clasificación de acuerdo a los criterios establecidos.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-global-ne-black.svg",
+                "icon_white": "static/icons/amenazadas-global-ne-white.svg",
+                "label": "NE",
+                "orden": 1,
+                "tooltip": "No evaluado"
+              },
+              {
+                "slug": "amenazadas-global-nt",
+                "activa": 1,
+                "descripcion": "Al realizar la evaluación no se encontraron los criterios para definirse en alguna de las categorías de amenaza.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-global-nt-black.svg",
+                "icon_white": "static/icons/amenazadas-global-nt-white.svg",
+                "label": "NT",
+                "orden": 6,
+                "tooltip": "Casi amenazado"
+              },
+              {
+                "slug": "amenazadas-global-vu",
+                "activa": 1,
+                "descripcion": "Categoría de amenaza. Se ha reducido el tamaño de la población o se ha presentado disminución en la extensión de presencia o área de ocupación que genera un riesgo de extinción alto en vida silvestre.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-global-vu-black.svg",
+                "icon_white": "static/icons/amenazadas-global-vu-white.svg",
+                "label": "VU",
+                "orden": 8,
+                "tooltip": "Vulnerable"
+              }
+            ]
           },
           {
-            "slug": "amenazadas-nacional",
+            "slug": "amenazadas_nacional",
             "activa": 1,
-            "descripcion": "El Ministerio de Ambiente y Desarrollo Sostenible (MADS), junto con las entidades que conforman Sistema Nacional Ambiental (SINA) y diferentes investigadores, desarrollan procesos de evaluación sobre las especies de la diversidad biológica del país. Teniendo en cuanta información biológica, ecológica, poblacional y la metodología de categorización del UICUN, se categorizan las especies en los listados oficiales de especies amenazadas. Actualmente, estas especies se encuentran en la resolución 1912 de 2017 donde se estableció un listado de especies silvestres continentales y marino costeras que se encuentran amenazadas para Colombia",
             "icon": 0,
-            "icon_black": "static/icons/amenazadas-nacional-black.svg",
-            "icon_white": "static/icons/amenazadas-nacional-white.svg",
-            "label": "Categoría UICN nacional",
-            "tooltip": "Ministerio de Ambiente y Desarrollo Sostenible, resolución 1912 de 2017"
+            "icon_black": "static/icons/amenazadas_nacional-black.svg",
+            "icon_white": "static/icons/amenazadas_nacional-white.svg",
+            "label": "Categoría nacional (Res.0126/2024)",
+            "tooltip": "Listado de especies silvestres continentales y marino costeras que se encuentran amenazadas para Colombia de acuerdo a la Resolución 0126 de 2024 de Minambiente.",
+            "children": [
+              {
+                "slug": "amenazadas-nacional-cr",
+                "activa": 1,
+                "descripcion": "Especies que presentan un riesgo de extinción extremadamente alto en estado de vida silvestre.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-nacional-cr-black.svg",
+                "icon_white": "static/icons/amenazadas-nacional-cr-white.svg",
+                "label": "CR",
+                "orden": 3,
+                "tooltip": "En peligro crítico"
+              },
+              {
+                "slug": "amenazadas-nacional-en",
+                "activa": 1,
+                "descripcion": "Especies que presentan un riesgo de extinción muy alto en estado de vida silvestre.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-nacional-en-black.svg",
+                "icon_white": "static/icons/amenazadas-nacional-en-white.svg",
+                "label": "EN",
+                "orden": 2,
+                "tooltip": "En peligro"
+              },
+              {
+                "slug": "amenazadas-nacional-vu",
+                "activa": 1,
+                "descripcion": "Especies que presentan un riesgo de extinción alto en estado de vida silvestre.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-nacional-vu-black.svg",
+                "icon_white": "static/icons/amenazadas-nacional-vu-white.svg",
+                "label": "VU",
+                "orden": 1,
+                "tooltip": "Vulnerable"
+              }
+            ]
           }
         ]
       },
       {
         "slug": "cites",
         "activa": 1,
-        "descripcion": "CITES es un acuerdo internacional concertado entre los gobiernos que tiene como finalidad velar por que el comercio internacional de especímenes de animales y plantas silvestres no constituye una amenaza para la supervivencia de las especies.",
         "icon": 1,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
         "label": "CITES",
-        "tooltip": "Convención sobre el Comercio Internacional de Especies Amenazadas de Fauna y Flora Silvestres"
+        "tooltip": "CITES (Convención sobre el Comercio Internacional de Especies Amenazadas de Fauna y Flora Silvestres) es un acuerdo que tiene como finalidad velar por que el comercio internacional de especímenes de animales y plantas silvestres no constituye una amenaza para la supervivencia de las especies."
       },
       {
         "slug": "endemicas",
         "activa": 1,
-        "descripcion": "La distribución natural de la especie está limitada dentro del territorio Colombiano. En este grupo se incluyen las especie en las listas de referencia taxonómica (aves, peces dulceacuícolas, plantas y líquenes, mamíferos y coleópteros).",
         "icon": 1,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
-        "label": "Endémicas"
+        "label": "Endémicas",
+        "tooltip": "Especies cuya distribución natural está restringida exclusivamente al territorio colombiano, es decir, no se encuentran en estado silvestre en ninguna otra parte del mundo. La cifra contempla los grupos de aves, peces dulceacuícolas y marinos, plantas, líquenes, mamíferos, coleópteros, anfibios y mariposas."
       },
       {
-        "slug": "exoticas-invasoras",
+        "slug": "exoticas_total",
         "activa": 1,
-        "descripcion": "Se incluyen especies catalogadas como exóticas, exóticas con alto riesgo de invasión, invasoras catalogadas por el Registro mundial de especies introducidas e invasoras para Colombia y el Ministerio de Ambiente y Desarrollo Sostenible.",
         "icon": 0,
-        "icon_black": "static/icons/exoticas-invasoras-black.svg",
-        "icon_white": "static/icons/exoticas-invasoras-white.svg",
-        "label": "Exóticas"
+        "icon_black": "static/icons/exoticas_total-black.svg",
+        "icon_white": "static/icons/exoticas_total-white.svg",
+        "label": "Exóticas total",
+        "tooltip": "Se consideran las especies clasificadas como exóticas, exóticas con riesgo de invasión, invasoras y trasplantadas."
       },
       {
         "slug": "migratorias",
         "activa": 1,
-        "descripcion": "Especies que se desplazan estacional y cíclicamente de una región a otra por cambios en la disponibilidad de alimento, condiciones ambientales o zonas de reproducción y cría.",
         "icon": 0,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
         "label": "Migratorias",
-        "tooltip": "Temática aplicada solo a aves"
+        "tooltip": "Datos disponibles exclusivamente para aves. Incluye especies de aves que presentan desplazamientos estacionales y cíclicos entre distintas regiones, motivados por variaciones en la disponibilidad de alimento, condiciones ambientales, y la ubicación de zonas de reproducción y cría."
       }
     ]
   },
@@ -562,7 +728,7 @@
     "subtipo": "municipio",
     "label": "Pana Pana",
     "marino": false,
-    "fecha_corte": "20088",
+    "fecha_corte": "diciembre 31 de 2024",
     "estimada_region_ref_id": "NA",
     "marino_text": ".",
     "especies_region_total_str": "350",
@@ -571,7 +737,7 @@
     "referencia": [],
     "credito_foto": [],
     "parent": "guainia",
-    "parent_label": "Guainía"
+    "parent_label": ["Guainía", "Guainía"]
   },
   "gallery": [],
   "slides": [
@@ -713,8 +879,8 @@
       "slug": "cites",
       "cites_total_estimadas": 3688,
       "cites_i_estimadas": 60,
-      "cites_i_ii_estimadas": 3589,
-      "cites_ii_estimadas": 7,
+      "cites_i_ii_estimadas": 7,
+      "cites_ii_estimadas": 3589,
       "cites_iii_estimadas": 32,
       "especies_cites_total": 3,
       "especies_cites_i": "NA",
@@ -860,7 +1026,7 @@
       "species_list": []
     },
     {
-      "slug": "exoticas-invasoras",
+      "slug": "exoticas_total",
       "exoticas_total_estimadas": 1507,
       "exoticas_estimadas": 1327,
       "exoticas_riesgo_invasion_estimadas": 136,
@@ -902,7 +1068,7 @@
         }
       ],
       "list_especies_invasoras": [],
-      "list_especies_exoticas_riesgo_invasion": []
+      "list_especies_exoticas_riesgo_invasion_total": []
     }
   ],
   "grupos_biologicos": [
@@ -1168,6 +1334,12 @@
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
       "parent": [
+        {
+          "slug": "angiospermas",
+          "label": "Guainía",
+          "especies_region_total": 2639,
+          "registros_region_total": 49162
+        },
         {
           "slug": "angiospermas",
           "label": "Guainía",
@@ -1631,6 +1803,7 @@
             "registros": 1,
             "slug_especie": "swartzia-floribunda",
             "slug_tematica": "amenazadas-global-vu",
+            "tematica_label": "VU",
             "slug_grupo": "angiospermas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5351844",
@@ -1649,6 +1822,7 @@
             "registros": 1,
             "slug_especie": "bifrenaria-longicornis",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "angiospermas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2796065",
@@ -1665,6 +1839,7 @@
             "registros": 1,
             "slug_especie": "epistephium-parviflorum",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "angiospermas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2850033",
@@ -1684,6 +1859,7 @@
             "registros": 3,
             "slug_especie": "navia-acaulis",
             "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
             "slug_grupo": "angiospermas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2693468",
@@ -1701,6 +1877,7 @@
             "registros": 2,
             "slug_especie": "ampelozizyphus-kuripacorum",
             "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
             "slug_grupo": "angiospermas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/9184122",
@@ -1717,6 +1894,7 @@
             "registros": 2,
             "slug_especie": "axonopus-morronei",
             "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
             "slug_grupo": "angiospermas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/4145959",
@@ -1733,6 +1911,7 @@
             "registros": 1,
             "slug_especie": "palicourea-longiflora",
             "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
             "slug_grupo": "angiospermas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2898891",
@@ -1751,6 +1930,7 @@
             "registros": 1,
             "slug_especie": "commelina-diffusa",
             "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
             "slug_grupo": "angiospermas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2764202",
@@ -2028,6 +2208,12 @@
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
       "parent": [
+        {
+          "slug": "animales",
+          "label": "Guainía",
+          "especies_region_total": 1480,
+          "registros_region_total": 208968
+        },
         {
           "slug": "animales",
           "label": "Guainía",
@@ -2503,6 +2689,12 @@
           "label": "Guainía",
           "especies_region_total": 595,
           "registros_region_total": 203701
+        },
+        {
+          "slug": "aves",
+          "label": "Guainía",
+          "especies_region_total": 595,
+          "registros_region_total": 203701
         }
       ],
       "estimadas": {
@@ -2802,6 +2994,12 @@
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
       "parent": [
+        {
+          "slug": "gimnospermas",
+          "label": "Guainía",
+          "especies_region_total": 6,
+          "registros_region_total": 16
+        },
         {
           "slug": "gimnospermas",
           "label": "Guainía",
@@ -3110,6 +3308,12 @@
           "label": "Guainía",
           "especies_region_total": 97,
           "registros_region_total": 526
+        },
+        {
+          "slug": "helechos",
+          "label": "Guainía",
+          "especies_region_total": 97,
+          "registros_region_total": 526
         }
       ],
       "estimadas": {
@@ -3191,6 +3395,7 @@
             "registros": 1,
             "slug_especie": "cyathea-platylepis",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "helechos",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/3598193",
@@ -3470,6 +3675,12 @@
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
       "parent": [
+        {
+          "slug": "insectos",
+          "label": "Guainía",
+          "especies_region_total": 201,
+          "registros_region_total": 590
+        },
         {
           "slug": "insectos",
           "label": "Guainía",
@@ -3767,6 +3978,12 @@
           "label": "Guainía",
           "especies_region_total": 261,
           "registros_region_total": 842
+        },
+        {
+          "slug": "invertebrados",
+          "label": "Guainía",
+          "especies_region_total": 261,
+          "registros_region_total": 842
         }
       ],
       "estimadas": {
@@ -4059,6 +4276,12 @@
           "label": "Guainía",
           "especies_region_total": 82,
           "registros_region_total": 234
+        },
+        {
+          "slug": "mariposas",
+          "label": "Guainía",
+          "especies_region_total": 82,
+          "registros_region_total": 234
         }
       ],
       "estimadas": {
@@ -4341,6 +4564,12 @@
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
       "parent": [
+        {
+          "slug": "peces",
+          "label": "Guainía",
+          "especies_region_total": 476,
+          "registros_region_total": 3562
+        },
         {
           "slug": "peces",
           "label": "Guainía",
@@ -4796,6 +5025,12 @@
           "label": "Guainía",
           "especies_region_total": 407,
           "registros_region_total": 2623
+        },
+        {
+          "slug": "peces-dulceacuicolas",
+          "label": "Guainía",
+          "especies_region_total": 407,
+          "registros_region_total": 2623
         }
       ],
       "estimadas": {
@@ -5192,6 +5427,12 @@
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
       "parent": [
+        {
+          "slug": "plantas",
+          "label": "Guainía",
+          "especies_region_total": 2799,
+          "registros_region_total": 50569
+        },
         {
           "slug": "plantas",
           "label": "Guainía",
@@ -5671,6 +5912,7 @@
             "registros": 1,
             "slug_especie": "swartzia-floribunda",
             "slug_tematica": "amenazadas-global-vu",
+            "tematica_label": "VU",
             "slug_grupo": "plantas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5351844",
@@ -5689,6 +5931,7 @@
             "registros": 1,
             "slug_especie": "bifrenaria-longicornis",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "plantas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2796065",
@@ -5705,6 +5948,7 @@
             "registros": 1,
             "slug_especie": "cyathea-platylepis",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "plantas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/3598193",
@@ -5721,6 +5965,7 @@
             "registros": 1,
             "slug_especie": "epistephium-parviflorum",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "plantas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2850033",
@@ -5740,6 +5985,7 @@
             "registros": 3,
             "slug_especie": "navia-acaulis",
             "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
             "slug_grupo": "plantas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2693468",
@@ -5757,6 +6003,7 @@
             "registros": 2,
             "slug_especie": "ampelozizyphus-kuripacorum",
             "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
             "slug_grupo": "plantas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/9184122",
@@ -5773,6 +6020,7 @@
             "registros": 2,
             "slug_especie": "axonopus-morronei",
             "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
             "slug_grupo": "plantas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/4145959",
@@ -5789,6 +6037,7 @@
             "registros": 1,
             "slug_especie": "palicourea-longiflora",
             "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
             "slug_grupo": "plantas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2898891",
@@ -5807,6 +6056,7 @@
             "registros": 1,
             "slug_especie": "commelina-diffusa",
             "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
             "slug_grupo": "plantas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2764202",
@@ -6084,6 +6334,12 @@
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
       "parent": [
+        {
+          "slug": "vasculares",
+          "label": "Guainía",
+          "especies_region_total": 2760,
+          "registros_region_total": 49849
+        },
         {
           "slug": "vasculares",
           "label": "Guainía",
@@ -6547,6 +6803,7 @@
             "registros": 1,
             "slug_especie": "swartzia-floribunda",
             "slug_tematica": "amenazadas-global-vu",
+            "tematica_label": "VU",
             "slug_grupo": "vasculares",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5351844",
@@ -6565,6 +6822,7 @@
             "registros": 1,
             "slug_especie": "bifrenaria-longicornis",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "vasculares",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2796065",
@@ -6581,6 +6839,7 @@
             "registros": 1,
             "slug_especie": "cyathea-platylepis",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "vasculares",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/3598193",
@@ -6597,6 +6856,7 @@
             "registros": 1,
             "slug_especie": "epistephium-parviflorum",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "vasculares",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2850033",
@@ -6616,6 +6876,7 @@
             "registros": 3,
             "slug_especie": "navia-acaulis",
             "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
             "slug_grupo": "vasculares",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2693468",
@@ -6633,6 +6894,7 @@
             "registros": 2,
             "slug_especie": "ampelozizyphus-kuripacorum",
             "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
             "slug_grupo": "vasculares",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/9184122",
@@ -6649,6 +6911,7 @@
             "registros": 2,
             "slug_especie": "axonopus-morronei",
             "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
             "slug_grupo": "vasculares",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/4145959",
@@ -6665,6 +6928,7 @@
             "registros": 1,
             "slug_especie": "palicourea-longiflora",
             "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
             "slug_grupo": "vasculares",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2898891",
@@ -6683,6 +6947,7 @@
             "registros": 1,
             "slug_especie": "commelina-diffusa",
             "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
             "slug_grupo": "vasculares",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2764202",
@@ -6960,6 +7225,12 @@
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
       "parent": [
+        {
+          "slug": "vertebrados",
+          "label": "Guainía",
+          "especies_region_total": 1213,
+          "registros_region_total": 208108
+        },
         {
           "slug": "vertebrados",
           "label": "Guainía",
@@ -7438,6 +7709,12 @@
           "label": "Guainía",
           "especies_region_total": 71,
           "registros_region_total": 423
+        },
+        {
+          "slug": "bromelias-labiadas-pasifloras",
+          "label": "Guainía",
+          "especies_region_total": 71,
+          "registros_region_total": 423
         }
       ],
       "estimadas": {
@@ -7552,6 +7829,7 @@
             "registros": 3,
             "slug_especie": "navia-acaulis",
             "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
             "slug_grupo": "bromelias-labiadas-pasifloras",
             "tipo": "interes",
             "url_gbif": "https://www.gbif.org/species/2693468",
@@ -7830,6 +8108,12 @@
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
       "parent": [
+        {
+          "slug": "epifitas",
+          "label": "Guainía",
+          "especies_region_total": 67,
+          "registros_region_total": 326
+        },
         {
           "slug": "epifitas",
           "label": "Guainía",
@@ -8209,6 +8493,12 @@
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
       "parent": [
+        {
+          "slug": "fanerogamas",
+          "label": "Guainía",
+          "especies_region_total": 101,
+          "registros_region_total": 1159
+        },
         {
           "slug": "fanerogamas",
           "label": "Guainía",
@@ -8720,6 +9010,12 @@
           "label": "Guainía",
           "especies_region_total": 28,
           "registros_region_total": 410
+        },
+        {
+          "slug": "magnolias-afines",
+          "label": "Guainía",
+          "especies_region_total": 28,
+          "registros_region_total": 410
         }
       ],
       "estimadas": {
@@ -9038,6 +9334,12 @@
           "label": "Guainía",
           "especies_region_total": 75,
           "registros_region_total": 305
+        },
+        {
+          "slug": "orquideas",
+          "label": "Guainía",
+          "especies_region_total": 75,
+          "registros_region_total": 305
         }
       ],
       "estimadas": {
@@ -9104,6 +9406,7 @@
             "registros": 1,
             "slug_especie": "bifrenaria-longicornis",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "orquideas",
             "tipo": "interes",
             "url_gbif": "https://www.gbif.org/species/2796065",
@@ -9120,6 +9423,7 @@
             "registros": 1,
             "slug_especie": "epistephium-parviflorum",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "orquideas",
             "tipo": "interes",
             "url_gbif": "https://www.gbif.org/species/2850033",
@@ -9399,6 +9703,12 @@
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
       "parent": [
+        {
+          "slug": "palmas",
+          "label": "Guainía",
+          "especies_region_total": 54,
+          "registros_region_total": 25068
+        },
         {
           "slug": "palmas",
           "label": "Guainía",
@@ -9732,6 +10042,12 @@
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
       "parent": [
+        {
+          "slug": "pinos-afines",
+          "label": "Guainía",
+          "especies_region_total": 2,
+          "registros_region_total": 7
+        },
         {
           "slug": "pinos-afines",
           "label": "Guainía",

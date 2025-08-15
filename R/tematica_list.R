@@ -286,7 +286,7 @@ tematica_list <- function(region, con){
     slice(1:10)
 
   exoticas <- c(
-    list(slug = "exoticas-invasoras",
+    list(slug = "exoticas_total",
          exoticas_total_estimadas = estimadas$especies_exoticas_total_estimadas,
          exoticas_estimadas = estimadas$especies_exoticas_estimadas,
          exoticas_riesgo_invasion_estimadas = estimadas$especies_exoticas_riesgo_invasion_estimadas,

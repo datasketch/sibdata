@@ -34,9 +34,12 @@ navigation_trees <- function(type, region = NULL, con = con){
   } else if(type == "tematica") {
     table <- sibdata_tematica(con) |>
       filter(parent != "cites") |>
-      filter(parent != "amenazadas-global") |>
-      filter(parent != "amenazadas-nacional") |>
-      filter(parent != "exoticas-invasoras")
+      filter(parent != "amenazadas_global") |>
+      filter(parent != "amenazadas_nacional") |>
+      filter(parent != "exoticas_total") |>
+      group_by(parent) |>
+      arrange(slug)
+
   } else if(type == "region") {
     table <- sibdata_region(con)
   } else{

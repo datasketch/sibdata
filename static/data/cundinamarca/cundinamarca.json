@@ -29,66 +29,63 @@
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
         "label": "Amenazadas",
+        "tooltip": "Temática definida según criterios establecidos por la Lista Roja de la Unión Internacional para la Conservación de la Naturaleza (UICN) a nivel global, y la Resolución vigente del Ministerio de Ambiente y Desarrollo Sostenible en el contexto nacional. Clasificadas en tres categorías de amenaza: Vulnerable (VU), En Peligro (EN) y En Peligro Crítico (CR).",
         "children": [
           {
-            "slug": "amenazadas-global",
+            "slug": "amenazadas_global",
             "activa": 1,
-            "descripcion": "La Lista Roja de UICN es un indicador crítico de la salud de la biodiversidad del mundo que permite agilizar acciones que fomente la conservación de la biodiversidad.",
             "icon": 0,
-            "icon_black": "static/icons/amenazadas-global-black.svg",
-            "icon_white": "static/icons/amenazadas-global-white.svg",
+            "icon_black": "static/icons/amenazadas_global-black.svg",
+            "icon_white": "static/icons/amenazadas_global-white.svg",
             "label": "Categoría UICN global",
-            "tooltip": "UICN (Unión Internacional para la Conservación de la Naturaleza)"
+            "tooltip": "La Lista Roja de la Unión Internacional para la Conservación de la Naturaleza (UICN) es un indicador crítico de la salud de la biodiversidad del mundo que permite agilizar acciones que fomente la conservación de la biodiversidad."
           },
           {
-            "slug": "amenazadas-nacional",
+            "slug": "amenazadas_nacional",
             "activa": 1,
-            "descripcion": "El Ministerio de Ambiente y Desarrollo Sostenible (MADS), junto con las entidades que conforman Sistema Nacional Ambiental (SINA) y diferentes investigadores, desarrollan procesos de evaluación sobre las especies de la diversidad biológica del país. Teniendo en cuanta información biológica, ecológica, poblacional y la metodología de categorización del UICUN, se categorizan las especies en los listados oficiales de especies amenazadas. Actualmente, estas especies se encuentran en la resolución 1912 de 2017 donde se estableció un listado de especies silvestres continentales y marino costeras que se encuentran amenazadas para Colombia",
             "icon": 0,
-            "icon_black": "static/icons/amenazadas-nacional-black.svg",
-            "icon_white": "static/icons/amenazadas-nacional-white.svg",
-            "label": "Categoría UICN nacional",
-            "tooltip": "Ministerio de Ambiente y Desarrollo Sostenible, resolución 1912 de 2017"
+            "icon_black": "static/icons/amenazadas_nacional-black.svg",
+            "icon_white": "static/icons/amenazadas_nacional-white.svg",
+            "label": "Categoría nacional (Res.0126/2024)",
+            "tooltip": "Listado de especies silvestres continentales y marino costeras que se encuentran amenazadas para Colombia de acuerdo a la Resolución 0126 de 2024 de Minambiente."
           }
         ]
       },
       {
         "slug": "cites",
         "activa": 1,
-        "descripcion": "CITES es un acuerdo internacional concertado entre los gobiernos que tiene como finalidad velar por que el comercio internacional de especímenes de animales y plantas silvestres no constituye una amenaza para la supervivencia de las especies.",
         "icon": 1,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
         "label": "CITES",
-        "tooltip": "Convención sobre el Comercio Internacional de Especies Amenazadas de Fauna y Flora Silvestres"
+        "tooltip": "CITES (Convención sobre el Comercio Internacional de Especies Amenazadas de Fauna y Flora Silvestres) es un acuerdo que tiene como finalidad velar por que el comercio internacional de especímenes de animales y plantas silvestres no constituye una amenaza para la supervivencia de las especies."
       },
       {
         "slug": "endemicas",
         "activa": 1,
-        "descripcion": "La distribución natural de la especie está limitada dentro del territorio Colombiano. En este grupo se incluyen las especie en las listas de referencia taxonómica (aves, peces dulceacuícolas, plantas y líquenes, mamíferos y coleópteros).",
         "icon": 1,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
-        "label": "Endémicas"
+        "label": "Endémicas",
+        "tooltip": "Especies cuya distribución natural está restringida exclusivamente al territorio colombiano, es decir, no se encuentran en estado silvestre en ninguna otra parte del mundo. La cifra contempla los grupos de aves, peces dulceacuícolas y marinos, plantas, líquenes, mamíferos, coleópteros, anfibios y mariposas."
       },
       {
-        "slug": "exoticas-invasoras",
+        "slug": "exoticas_total",
         "activa": 1,
-        "descripcion": "Se incluyen especies catalogadas como exóticas, exóticas con alto riesgo de invasión, invasoras catalogadas por el Registro mundial de especies introducidas e invasoras para Colombia y el Ministerio de Ambiente y Desarrollo Sostenible.",
         "icon": 0,
-        "icon_black": "static/icons/exoticas-invasoras-black.svg",
-        "icon_white": "static/icons/exoticas-invasoras-white.svg",
-        "label": "Exóticas"
+        "icon_black": "static/icons/exoticas_total-black.svg",
+        "icon_white": "static/icons/exoticas_total-white.svg",
+        "label": "Exóticas total",
+        "tooltip": "Se consideran las especies clasificadas como exóticas, exóticas con riesgo de invasión, invasoras y trasplantadas."
       },
       {
         "slug": "migratorias",
         "activa": 1,
-        "descripcion": "Especies que se desplazan estacional y cíclicamente de una región a otra por cambios en la disponibilidad de alimento, condiciones ambientales o zonas de reproducción y cría.",
         "icon": 0,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
         "label": "Migratorias",
-        "tooltip": "Temática aplicada solo a aves"
+        "tooltip": "Datos disponibles exclusivamente para aves. Incluye especies de aves que presentan desplazamientos estacionales y cíclicos entre distintas regiones, motivados por variaciones en la disponibilidad de alimento, condiciones ambientales, y la ubicación de zonas de reproducción y cría."
       }
     ]
   },
@@ -2571,8 +2568,8 @@
       "slug": "cites",
       "cites_total_estimadas": 3688,
       "cites_i_estimadas": 60,
-      "cites_i_ii_estimadas": 3589,
-      "cites_ii_estimadas": 7,
+      "cites_i_ii_estimadas": 7,
+      "cites_ii_estimadas": 3589,
       "cites_iii_estimadas": 32,
       "especies_cites_total": 749,
       "especies_cites_i": 18,
@@ -2758,7 +2755,32 @@
           "slug_tematica": "cites-i"
         }
       ],
-      "list_especies_cites_i_ii": [],
+      "list_especies_cites_i_ii": [
+        {
+          "label": "Boa constrictor",
+          "slug_especie": "boa-constrictor",
+          "registros": 56,
+          "url_gbif": "https://www.gbif.org/species/2464899",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cae177f0106c67230e7473/summary",
+          "slug_tematica": "cites-i-ii"
+        },
+        {
+          "label": "Caiman crocodilus",
+          "slug_especie": "caiman-crocodilus",
+          "registros": 56,
+          "url_gbif": "https://www.gbif.org/species/8953936",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c92645f0106c67230e7437/summary",
+          "slug_tematica": "cites-i-ii"
+        },
+        {
+          "label": "Crocodylus acutus",
+          "slug_especie": "crocodylus-acutus",
+          "registros": 1,
+          "url_gbif": "https://www.gbif.org/species/2441329",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56718bdcf289f5a40c0cd305/summary",
+          "slug_tematica": "cites-i-ii"
+        }
+      ],
       "list_especies_cites_ii": [
         {
           "label": "Colibri coruscans",
@@ -3181,7 +3203,7 @@
       ]
     },
     {
-      "slug": "exoticas-invasoras",
+      "slug": "exoticas_total",
       "exoticas_total_estimadas": 1507,
       "exoticas_estimadas": 1327,
       "exoticas_riesgo_invasion_estimadas": 136,
@@ -3433,88 +3455,7 @@
           "slug_tematica": "invasoras"
         }
       ],
-      "list_especies_exoticas_riesgo_invasion_total": [
-        {
-          "label": "Bubulcus ibis",
-          "slug_especie": "bubulcus-ibis",
-          "registros": 24003,
-          "url_gbif": "https://www.gbif.org/species/2480830",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c20d14f0106c67230e7320/summary",
-          "slug_tematica": "exotica-riesgo-invasion-alto"
-        },
-        {
-          "label": "Acacia decurrens",
-          "slug_especie": "acacia-decurrens",
-          "registros": 12571,
-          "url_gbif": "https://www.gbif.org/species/2979778",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c3d1e2f0106c67230e7360/summary",
-          "slug_tematica": "exotica-riesgo-invasion-alto"
-        },
-        {
-          "label": "Columba livia",
-          "slug_especie": "columba-livia",
-          "registros": 6990,
-          "url_gbif": "https://www.gbif.org/species/2495414",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4b5f1f0106c67230e7387/summary",
-          "slug_tematica": "exotica-riesgo-invasion-alto"
-        },
-        {
-          "label": "Acacia melanoxylon",
-          "slug_especie": "acacia-melanoxylon",
-          "registros": 2841,
-          "url_gbif": "https://www.gbif.org/species/2979000",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/595e5f352f4fd7bc7f3a210a/summary",
-          "slug_tematica": "exotica-riesgo-invasion-bajo"
-        },
-        {
-          "label": "Thunbergia alata",
-          "slug_especie": "thunbergia-alata",
-          "registros": 743,
-          "url_gbif": "https://www.gbif.org/species/5415463",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7aaf583c45700544e42c6/summary",
-          "slug_tematica": "exotica-riesgo-invasion-alto"
-        },
-        {
-          "label": "Digitalis purpurea",
-          "slug_especie": "digitalis-purpurea",
-          "registros": 725,
-          "url_gbif": "https://www.gbif.org/species/5414995",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cfcb063c16479905cba804/summary",
-          "slug_tematica": "exotica-riesgo-invasion-moderado"
-        },
-        {
-          "label": "Pteridium aquilinum",
-          "slug_especie": "pteridium-aquilinum",
-          "registros": 523,
-          "url_gbif": "https://www.gbif.org/species/5275012",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e79bb383c45700544e422b/summary",
-          "slug_tematica": "exotica-riesgo-invasion-alto"
-        },
-        {
-          "label": "Eucalyptus camaldulensis",
-          "slug_especie": "eucalyptus-camaldulensis",
-          "registros": 520,
-          "url_gbif": "https://www.gbif.org/species/3176197",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e783d783c45700544e4092/summary",
-          "slug_tematica": "exotica-riesgo-invasion-alto"
-        },
-        {
-          "label": "Anas platyrhynchos",
-          "slug_especie": "anas-platyrhynchos",
-          "registros": 430,
-          "url_gbif": "https://www.gbif.org/species/9761484",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c02fc4f0106c67230e72f8/summary",
-          "slug_tematica": "exotica-riesgo-invasion-alto"
-        },
-        {
-          "label": "Taraxacum officinale",
-          "slug_especie": "taraxacum-officinale",
-          "registros": 256,
-          "url_gbif": "https://www.gbif.org/species/5394163",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7aa0883c45700544e42c0/summary",
-          "slug_tematica": "exotica-riesgo-invasion-alto"
-        }
-      ]
+      "list_especies_exoticas_riesgo_invasion_total": []
     }
   ],
   "grupos_biologicos": [

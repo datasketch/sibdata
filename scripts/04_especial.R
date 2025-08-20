@@ -110,8 +110,8 @@ map(av_regions, safely(function(region){
     ## TODO merge aporte
     geo_path <- sys_file_sibdata("geo/region-amazonia.geojson")
     geo <- sf::read_sf(geo_path) |>
-      select(cod_dane = dpto_ccdgo,
-             label_dpto = dpto_cnmbr,
+      select(cod_dane = id,
+             label_dpto = label,
              geometry)
     geo_map1 <- geo |>
       left_join(dd)
@@ -238,24 +238,26 @@ map(av_regions, safely(function(region){
 
   if(region == "region-amazonia"){
     file.copy(sys_file_sibdata("geo/region-amazonia-municipios.json"),
-              paste0(save_path,"/",region, "/region-amazonia-municipios.json"))
+              paste0(save_path,"/",region, "/region-amazonia-municipios.json"),
+              overwrite = TRUE)
   }
 
-  if(!region %in% reserva_resguardo){
+
+  if(region == "region-amazonia"){
+      opts <- list(main_border_width = 0.1,
+                   main_border_color = "#007139",
+                   fill_color = "#b3cfc0",
+                   minor_border_color = "#007139",
+                   minor_border_width = 0.1)
+      map_icon(sf = tj, opts = opts,
+               save_path = paste0(save_path,"/",region,"/",region, ".svg"))
+  } else if(!region %in% c(reserva_resguardo, "region-amazonia")){
     opts <- list(main_border_width = 0.1,
                  main_border_color = "#007139",
                  fill_color = "#b3cfc0",
                  minor_border_color = "#007139",
                  minor_border_width = 0.1)
     gt_icon(map_name, opts = opts,
-            save_path = paste0(save_path,"/",region,"/",region, ".svg"))
-  }else{
-    opts <- list(main_border_width = 0.1,
-                 main_border_color = "#007139",
-                 fill_color = "#b3cfc0",
-                 minor_border_color = "#007139",
-                 minor_border_width = 0.1)
-    map_icon(sf = tj, opts = opts,
             save_path = paste0(save_path,"/",region,"/",region, ".svg"))
   }
 

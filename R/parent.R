@@ -23,6 +23,14 @@ sib_parent_region <- function(region, con){
   if(parent == "regiones-naturales"){
     parent <- "colombia"
   }
+  if(region == "region-amazonia"){
+    parent = "colombia"
+  }
+  reserva_resguardo <- c("reserva-forestal-la-planada",
+    "resguardo-indigena-pialapi-pueblo-viejo")
+  if(region %in% reserva_resguardo){
+    parent <- "narino"
+  }
   parent
 }
 

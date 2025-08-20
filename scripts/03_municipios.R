@@ -61,7 +61,7 @@ library(tictoc)
 
 tic()
 
-# av_regions <- rev(av_regions)
+av_regions <- rev(av_regions)
 
 map(av_regions, function(region){
   parent <- sib_parent_region(region, con = con)

@@ -11,10 +11,10 @@ make_region_slides <- function(region, con, save_path = NULL){
   subregs <- sib_available_subregions(region, con)
   parent <- sib_parent_region(region, con)
 
-  if(region == "resguardo-indigena-pialapi-pueblo-viejo" ||
-     region == "reserva-forestal-la-planada"){
-    parent <- "colombia"
-  }
+  # if(region == "resguardo-indigena-pialapi-pueblo-viejo" ||
+  #    region == "reserva-forestal-la-planada"){
+  #   parent <- "narino"
+  # }
 
   reg_labels <- sib_region_labels(con) |> collect()
 
@@ -122,16 +122,33 @@ make_region_slides <- function(region, con, save_path = NULL){
     esp_colombia <- reg_vs_parent |>
       filter(slug_region == "colombia") |> pull(especies_region_total)
     esp_colombia_str <- makeup::makeup(esp_colombia,"45.343,00")
+
+    esp_parent <- reg_vs_parent |>
+      filter(slug_region == parent) |> pull(especies_region_total)
+    esp_parent_str <- makeup::makeup(esp_parent,"45.343,00")
+
     esp_depto <- reg_vs_parent |>
-      filter(slug_region != "colombia") |> pull(especies_region_total)
+      filter(slug_region != "colombia") |>
+      filter(slug_region != parent) |>
+      pull(especies_region_total)
     esp_depto_str <- makeup::makeup(esp_depto,"45.343,00")
     esp_depto_endemicas <- reg_vs_parent |>
-      filter(slug_region != "colombia") |> pull(especies_endemicas)
+      filter(slug_region != "colombia") |>
+      filter(slug_region != parent) |>
+      pull(especies_endemicas)
     esp_depto_endemicas_str <- makeup::makeup(esp_depto_endemicas,"45.343,00")
 
     description_tpl <- "De las {esp_colombia_str} especies observadas en Colombia,
     departamento de {regionLabel} aporta {esp_depto_str}, equivalentes a {proportion}%.
     De estas {esp_depto_endemicas_str} especies son endémicas."
+
+    reserva_resguardo <- c("reserva-forestal-la-planada",
+                           "resguardo-indigena-pialapi-pueblo-viejo")
+    if(region %in% reserva_resguardo){
+      description_tpl <- "De las {esp_parent_str} especies observadas en Nariño,
+    {regionLabel} aporta {esp_depto_str}, equivalentes a {proportion}%.
+    De estas {esp_depto_endemicas_str} especies son endémicas."
+    }
 
     title_tpl <- "¿Cómo está {regionLabel} frente al resto de {parentLabel}?"
     if(region == "region-amazonia"){

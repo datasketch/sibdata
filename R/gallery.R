@@ -22,28 +22,35 @@ make_gallery <- function(region, con){
 
   imgs <- sibdata_gallery_images(con) |>
     filter(slug_region == region) |>
-    select(image = img_link) |>
+    select(image = img_link, credit = credito) |>
     collect()
 
-  if(region == "region-amazonia"){
-    txts <- bind_rows(txts, txts) |> slice(1:8)
-    imgs <- sibdata_gallery_images(con) |>
-      filter(slug_region == "colombia") |>
-      select(image = img_link) |>
-      collect()
-  }
+  # if(region == "region-amazonia"){
+  #   txts <- bind_rows(txts, txts) |> slice(1:8)
+  #   imgs <- sibdata_gallery_images(con) |>
+  #     filter(slug_region == "colombia") |>
+  #     select(image = img_link) |>
+  #     collect()
+  # }
 
 
 
-  n <- min(nrow(txts), nrow(imgs), 7)
-  txts <- txts |> slice(1:(n+1))
-  imgs <- imgs |> slice(c(1:(n),1))
+  # n <- min(nrow(txts), nrow(imgs), 7)
+  # txts <- txts |> slice(1:(n+1))
+  # imgs <- imgs |> slice(c(1:(n),1))
+  #
+  # gal <- bind_cols(txts, imgs) |>
+  #   pivot_longer(text:image) |>
+  #   rownames_to_column(var = "id") |>
+  #   pivot_wider(id_cols = "id", names_from = "name", values_from = "value") |>
+  #   slice(1:15)
 
-  gal <- bind_cols(txts, imgs) |>
-    pivot_longer(text:image) |>
-    rownames_to_column(var = "id") |>
-    pivot_wider(id_cols = "id", names_from = "name", values_from = "value") |>
-    slice(1:15)
+  n <- min(nrow(txts), nrow(imgs), 6)
+  txts <- txts |> slice(1:(n))
+  imgs <- imgs |> slice(c(1:(n)))
+
+  gal <- cbind(txts, imgs)
+
 
   gal
 }

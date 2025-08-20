@@ -9,66 +9,63 @@
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
         "label": "Amenazadas",
+        "tooltip": "Temática definida según criterios establecidos por la Lista Roja de la Unión Internacional para la Conservación de la Naturaleza (UICN) a nivel global, y la Resolución vigente del Ministerio de Ambiente y Desarrollo Sostenible en el contexto nacional. Clasificadas en tres categorías de amenaza: Vulnerable (VU), En Peligro (EN) y En Peligro Crítico (CR).",
         "children": [
           {
-            "slug": "amenazadas-global",
+            "slug": "amenazadas_global",
             "activa": 1,
-            "descripcion": "La Lista Roja de UICN es un indicador crítico de la salud de la biodiversidad del mundo que permite agilizar acciones que fomente la conservación de la biodiversidad.",
             "icon": 0,
-            "icon_black": "static/icons/amenazadas-global-black.svg",
-            "icon_white": "static/icons/amenazadas-global-white.svg",
+            "icon_black": "static/icons/amenazadas_global-black.svg",
+            "icon_white": "static/icons/amenazadas_global-white.svg",
             "label": "Categoría UICN global",
-            "tooltip": "UICN (Unión Internacional para la Conservación de la Naturaleza)"
+            "tooltip": "La Lista Roja de la Unión Internacional para la Conservación de la Naturaleza (UICN) es un indicador crítico de la salud de la biodiversidad del mundo que permite agilizar acciones que fomente la conservación de la biodiversidad."
           },
           {
-            "slug": "amenazadas-nacional",
+            "slug": "amenazadas_nacional",
             "activa": 1,
-            "descripcion": "El Ministerio de Ambiente y Desarrollo Sostenible (MADS), junto con las entidades que conforman Sistema Nacional Ambiental (SINA) y diferentes investigadores, desarrollan procesos de evaluación sobre las especies de la diversidad biológica del país. Teniendo en cuanta información biológica, ecológica, poblacional y la metodología de categorización del UICUN, se categorizan las especies en los listados oficiales de especies amenazadas. Actualmente, estas especies se encuentran en la resolución 1912 de 2017 donde se estableció un listado de especies silvestres continentales y marino costeras que se encuentran amenazadas para Colombia",
             "icon": 0,
-            "icon_black": "static/icons/amenazadas-nacional-black.svg",
-            "icon_white": "static/icons/amenazadas-nacional-white.svg",
-            "label": "Categoría UICN nacional",
-            "tooltip": "Ministerio de Ambiente y Desarrollo Sostenible, resolución 1912 de 2017"
+            "icon_black": "static/icons/amenazadas_nacional-black.svg",
+            "icon_white": "static/icons/amenazadas_nacional-white.svg",
+            "label": "Categoría nacional (Res.0126/2024)",
+            "tooltip": "Listado de especies silvestres continentales y marino costeras que se encuentran amenazadas para Colombia de acuerdo a la Resolución 0126 de 2024 de Minambiente."
           }
         ]
       },
       {
         "slug": "cites",
         "activa": 1,
-        "descripcion": "CITES es un acuerdo internacional concertado entre los gobiernos que tiene como finalidad velar por que el comercio internacional de especímenes de animales y plantas silvestres no constituye una amenaza para la supervivencia de las especies.",
         "icon": 1,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
         "label": "CITES",
-        "tooltip": "Convención sobre el Comercio Internacional de Especies Amenazadas de Fauna y Flora Silvestres"
+        "tooltip": "CITES (Convención sobre el Comercio Internacional de Especies Amenazadas de Fauna y Flora Silvestres) es un acuerdo que tiene como finalidad velar por que el comercio internacional de especímenes de animales y plantas silvestres no constituye una amenaza para la supervivencia de las especies."
       },
       {
         "slug": "endemicas",
         "activa": 1,
-        "descripcion": "La distribución natural de la especie está limitada dentro del territorio Colombiano. En este grupo se incluyen las especie en las listas de referencia taxonómica (aves, peces dulceacuícolas, plantas y líquenes, mamíferos y coleópteros).",
         "icon": 1,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
-        "label": "Endémicas"
+        "label": "Endémicas",
+        "tooltip": "Especies cuya distribución natural está restringida exclusivamente al territorio colombiano, es decir, no se encuentran en estado silvestre en ninguna otra parte del mundo. La cifra contempla los grupos de aves, peces dulceacuícolas y marinos, plantas, líquenes, mamíferos, coleópteros, anfibios y mariposas."
       },
       {
-        "slug": "exoticas-invasoras",
+        "slug": "exoticas_total",
         "activa": 1,
-        "descripcion": "Se incluyen especies catalogadas como exóticas, exóticas con alto riesgo de invasión, invasoras catalogadas por el Registro mundial de especies introducidas e invasoras para Colombia y el Ministerio de Ambiente y Desarrollo Sostenible.",
         "icon": 0,
-        "icon_black": "static/icons/exoticas-invasoras-black.svg",
-        "icon_white": "static/icons/exoticas-invasoras-white.svg",
-        "label": "Exóticas"
+        "icon_black": "static/icons/exoticas_total-black.svg",
+        "icon_white": "static/icons/exoticas_total-white.svg",
+        "label": "Exóticas total",
+        "tooltip": "Se consideran las especies clasificadas como exóticas, exóticas con riesgo de invasión, invasoras y trasplantadas."
       },
       {
         "slug": "migratorias",
         "activa": 1,
-        "descripcion": "Especies que se desplazan estacional y cíclicamente de una región a otra por cambios en la disponibilidad de alimento, condiciones ambientales o zonas de reproducción y cría.",
         "icon": 0,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
         "label": "Migratorias",
-        "tooltip": "Temática aplicada solo a aves"
+        "tooltip": "Datos disponibles exclusivamente para aves. Incluye especies de aves que presentan desplazamientos estacionales y cíclicos entre distintas regiones, motivados por variaciones en la disponibilidad de alimento, condiciones ambientales, y la ubicación de zonas de reproducción y cría."
       }
     ]
   },
@@ -562,7 +559,7 @@
     "subtipo": "municipio",
     "label": "Cartagena del Chairá",
     "marino": false,
-    "fecha_corte": "20088",
+    "fecha_corte": "diciembre 31 de 2024",
     "estimada_region_ref_id": "NA",
     "marino_text": ".",
     "especies_region_total_str": "995",
@@ -571,7 +568,7 @@
     "referencia": [],
     "credito_foto": [],
     "parent": "caqueta",
-    "parent_label": "Caquetá"
+    "parent_label": ["Caquetá", "Caquetá"]
   },
   "gallery": [],
   "slides": [
@@ -1167,8 +1164,8 @@
       "slug": "cites",
       "cites_total_estimadas": 3688,
       "cites_i_estimadas": 60,
-      "cites_i_ii_estimadas": 3589,
-      "cites_ii_estimadas": 7,
+      "cites_i_ii_estimadas": 7,
+      "cites_ii_estimadas": 3589,
       "cites_iii_estimadas": 32,
       "especies_cites_total": 91,
       "especies_cites_i": 4,
@@ -1305,7 +1302,16 @@
           "slug_tematica": "cites-i"
         }
       ],
-      "list_especies_cites_i_ii": [],
+      "list_especies_cites_i_ii": [
+        {
+          "label": "Boa constrictor",
+          "slug_especie": "boa-constrictor",
+          "registros": 1,
+          "url_gbif": "https://www.gbif.org/species/2464899",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cae177f0106c67230e7473/summary",
+          "slug_tematica": "cites-i-ii"
+        }
+      ],
       "list_especies_cites_ii": [
         {
           "label": "Ara severus",
@@ -1634,7 +1640,7 @@
       ]
     },
     {
-      "slug": "exoticas-invasoras",
+      "slug": "exoticas_total",
       "exoticas_total_estimadas": 1507,
       "exoticas_estimadas": 1327,
       "exoticas_riesgo_invasion_estimadas": 136,
@@ -1766,7 +1772,7 @@
         }
       ],
       "list_especies_invasoras": [],
-      "list_especies_exoticas_riesgo_invasion": []
+      "list_especies_exoticas_riesgo_invasion_total": []
     }
   ],
   "grupos_biologicos": [
@@ -2037,6 +2043,12 @@
           "label": "Caquetá",
           "especies_region_total": 44,
           "registros_region_total": 3902
+        },
+        {
+          "slug": "abejas",
+          "label": "Caquetá",
+          "especies_region_total": 44,
+          "registros_region_total": 3902
         }
       ],
       "estimadas": {
@@ -2077,6 +2089,7 @@
             "registros": 1,
             "slug_especie": "apis-mellifera",
             "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
             "slug_grupo": "abejas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/1341976",
@@ -2359,6 +2372,12 @@
           "label": "Caquetá",
           "especies_region_total": 143,
           "registros_region_total": 2766
+        },
+        {
+          "slug": "anfibios",
+          "label": "Caquetá",
+          "especies_region_total": 143,
+          "registros_region_total": 2766
         }
       ],
       "estimadas": {
@@ -2570,6 +2589,7 @@
             "registros": 5,
             "slug_especie": "ameerega-trivittata",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "anfibios",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2429038",
@@ -2587,6 +2607,7 @@
             "registros": 2,
             "slug_especie": "teratohyla-midas",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "anfibios",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/7908072",
@@ -2603,6 +2624,7 @@
             "registros": 1,
             "slug_especie": "ameerega-hahneli",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "anfibios",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2429007",
@@ -2620,6 +2642,7 @@
             "registros": 1,
             "slug_especie": "hyalinobatrachium-cappellei",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "anfibios",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/8428241",
@@ -2904,6 +2927,12 @@
           "label": "Caquetá",
           "especies_region_total": 6335,
           "registros_region_total": 91877
+        },
+        {
+          "slug": "angiospermas",
+          "label": "Caquetá",
+          "especies_region_total": 6335,
+          "registros_region_total": 91877
         }
       ],
       "estimadas": {
@@ -3077,6 +3106,7 @@
             "registros": 1,
             "slug_especie": "cedrela-odorata",
             "slug_tematica": "amenazadas-nacional-en",
+            "tematica_label": "EN",
             "slug_grupo": "angiospermas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/3190511",
@@ -3096,6 +3126,7 @@
             "registros": 1,
             "slug_especie": "cedrela-odorata",
             "slug_tematica": "amenazadas-global-vu",
+            "tematica_label": "VU",
             "slug_grupo": "angiospermas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/3190511",
@@ -3115,6 +3146,7 @@
             "registros": 3,
             "slug_especie": "ionopsis-utricularioides",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "angiospermas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5321877",
@@ -3131,6 +3163,7 @@
             "registros": 3,
             "slug_especie": "pseudorhipsalis-amazonica",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "angiospermas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/7283573",
@@ -3147,6 +3180,7 @@
             "registros": 1,
             "slug_especie": "cedrela-odorata",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "angiospermas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/3190511",
@@ -3164,6 +3198,7 @@
             "registros": 1,
             "slug_especie": "epidendrum-compressum",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "angiospermas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5320004",
@@ -3180,6 +3215,7 @@
             "registros": 1,
             "slug_especie": "epiphyllum-phyllanthus",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "angiospermas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5384030",
@@ -3197,6 +3233,7 @@
             "registros": 1,
             "slug_especie": "scaphyglottis-stellata",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "angiospermas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2847064",
@@ -3216,6 +3253,7 @@
             "registros": 2,
             "slug_especie": "besleria-inaequalis",
             "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
             "slug_grupo": "angiospermas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/3825605",
@@ -3232,6 +3270,7 @@
             "registros": 2,
             "slug_especie": "palicourea-longiflora",
             "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
             "slug_grupo": "angiospermas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2898891",
@@ -3248,6 +3287,7 @@
             "registros": 1,
             "slug_especie": "miconia-submacrophylla",
             "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
             "slug_grupo": "angiospermas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/3865575",
@@ -3266,6 +3306,7 @@
             "registros": 2,
             "slug_especie": "averrhoa-carambola",
             "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
             "slug_grupo": "angiospermas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2891641",
@@ -3282,6 +3323,7 @@
             "registros": 1,
             "slug_especie": "anacardium-occidentale",
             "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
             "slug_grupo": "angiospermas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5421368",
@@ -3299,6 +3341,7 @@
             "registros": 1,
             "slug_especie": "cymbopogon-citratus",
             "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
             "slug_grupo": "angiospermas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2705275",
@@ -3316,6 +3359,7 @@
             "registros": 1,
             "slug_especie": "heterotis-rotundifolia",
             "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
             "slug_grupo": "angiospermas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5599385",
@@ -3332,6 +3376,7 @@
             "registros": 1,
             "slug_especie": "lantana-camara",
             "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
             "slug_grupo": "angiospermas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2925303",
@@ -3349,6 +3394,7 @@
             "registros": 1,
             "slug_especie": "ocimum-gratissimum",
             "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
             "slug_grupo": "angiospermas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2927094",
@@ -3630,6 +3676,12 @@
           "label": "Caquetá",
           "especies_region_total": 3346,
           "registros_region_total": 251872
+        },
+        {
+          "slug": "animales",
+          "label": "Caquetá",
+          "especies_region_total": 3346,
+          "registros_region_total": 251872
         }
       ],
       "estimadas": {
@@ -3818,6 +3870,7 @@
             "registros": 16,
             "slug_especie": "icterus-icterus",
             "slug_tematica": "amenazadas-nacional-vu",
+            "tematica_label": "VU",
             "slug_grupo": "animales",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5229915",
@@ -3835,6 +3888,7 @@
             "registros": 8,
             "slug_especie": "panthera-onca",
             "slug_tematica": "amenazadas-nacional-vu",
+            "tematica_label": "VU",
             "slug_grupo": "animales",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5219426",
@@ -3852,6 +3906,7 @@
             "registros": 7,
             "slug_especie": "tapirus-terrestris",
             "slug_tematica": "amenazadas-nacional-vu",
+            "tematica_label": "VU",
             "slug_grupo": "animales",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2440898",
@@ -3869,6 +3924,7 @@
             "registros": 5,
             "slug_especie": "tayassu-pecari",
             "slug_tematica": "amenazadas-nacional-en",
+            "tematica_label": "EN",
             "slug_grupo": "animales",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2440993",
@@ -3886,6 +3942,7 @@
             "registros": 4,
             "slug_especie": "lagothrix-lagothricha",
             "slug_tematica": "amenazadas-nacional-vu",
+            "tematica_label": "VU",
             "slug_grupo": "animales",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5786085",
@@ -3903,6 +3960,7 @@
             "registros": 2,
             "slug_especie": "myrmecophaga-tridactyla",
             "slug_tematica": "amenazadas-nacional-vu",
+            "tematica_label": "VU",
             "slug_grupo": "animales",
             "tipo": "biologico",
             "vernacular_name_es": "perrito venadero | perro de monte",
@@ -3921,6 +3979,7 @@
             "registros": 1,
             "slug_especie": "brachyplatystoma-rousseauxii",
             "slug_tematica": "amenazadas-nacional-vu",
+            "tematica_label": "VU",
             "slug_grupo": "animales",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2338831",
@@ -3936,6 +3995,7 @@
             "registros": 1,
             "slug_especie": "podocnemis-unifilis",
             "slug_tematica": "amenazadas-nacional-en",
+            "tematica_label": "EN",
             "slug_grupo": "animales",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2442782",
@@ -3952,6 +4012,7 @@
             "registros": 1,
             "slug_especie": "pseudoplatystoma-punctifer",
             "slug_tematica": "amenazadas-nacional-vu",
+            "tematica_label": "VU",
             "slug_grupo": "animales",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/7879329",
@@ -3969,6 +4030,7 @@
             "registros": 7,
             "slug_especie": "tapirus-terrestris",
             "slug_tematica": "amenazadas-global-vu",
+            "tematica_label": "VU",
             "slug_grupo": "animales",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2440898",
@@ -3986,6 +4048,7 @@
             "registros": 5,
             "slug_especie": "tayassu-pecari",
             "slug_tematica": "amenazadas-global-vu",
+            "tematica_label": "VU",
             "slug_grupo": "animales",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2440993",
@@ -4003,6 +4066,7 @@
             "registros": 4,
             "slug_especie": "lagothrix-lagothricha",
             "slug_tematica": "amenazadas-global-vu",
+            "tematica_label": "VU",
             "slug_grupo": "animales",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5786085",
@@ -4020,6 +4084,7 @@
             "registros": 2,
             "slug_especie": "chelonoidis-denticulatus",
             "slug_tematica": "amenazadas-global-vu",
+            "tematica_label": "VU",
             "slug_grupo": "animales",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5220281",
@@ -4036,6 +4101,7 @@
             "registros": 2,
             "slug_especie": "myrmecophaga-tridactyla",
             "slug_tematica": "amenazadas-global-vu",
+            "tematica_label": "VU",
             "slug_grupo": "animales",
             "tipo": "biologico",
             "vernacular_name_es": "perrito venadero | perro de monte",
@@ -4054,6 +4120,7 @@
             "registros": 2,
             "slug_especie": "tringa-flavipes",
             "slug_tematica": "amenazadas-global-vu",
+            "tematica_label": "VU",
             "slug_grupo": "animales",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2481721",
@@ -4071,6 +4138,7 @@
             "registros": 1,
             "slug_especie": "brachyplatystoma-rousseauxii",
             "slug_tematica": "amenazadas-global-vu",
+            "tematica_label": "VU",
             "slug_grupo": "animales",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2338831",
@@ -4086,6 +4154,7 @@
             "registros": 1,
             "slug_especie": "chaetura-pelagica",
             "slug_tematica": "amenazadas-global-vu",
+            "tematica_label": "VU",
             "slug_grupo": "animales",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/4409023",
@@ -4103,6 +4172,7 @@
             "registros": 1,
             "slug_especie": "podocnemis-unifilis",
             "slug_tematica": "amenazadas-global-vu",
+            "tematica_label": "VU",
             "slug_grupo": "animales",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2442782",
@@ -4121,6 +4191,7 @@
             "registros": 70,
             "slug_especie": "ara-severus",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "animales",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5959228",
@@ -4138,6 +4209,7 @@
             "registros": 70,
             "slug_especie": "rupornis-magnirostris",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "animales",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5844398",
@@ -4155,6 +4227,7 @@
             "registros": 65,
             "slug_especie": "amazona-ochrocephala",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "animales",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2479612",
@@ -4172,6 +4245,7 @@
             "registros": 62,
             "slug_especie": "brotogeris-cyanoptera",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "animales",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2479576",
@@ -4189,6 +4263,7 @@
             "registros": 50,
             "slug_especie": "amazona-amazonica",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "animales",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2479666",
@@ -4205,6 +4280,7 @@
             "registros": 50,
             "slug_especie": "eudocimus-ruber",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "animales",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5229204",
@@ -4222,6 +4298,7 @@
             "registros": 48,
             "slug_especie": "pionus-menstruus",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "animales",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2479902",
@@ -4239,6 +4316,7 @@
             "registros": 46,
             "slug_especie": "ara-ararauna",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "animales",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5959231",
@@ -4256,6 +4334,7 @@
             "registros": 45,
             "slug_especie": "daptrius-ater",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "animales",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2481073",
@@ -4273,6 +4352,7 @@
             "registros": 44,
             "slug_especie": "anthracothorax-nigricollis",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "animales",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2476718",
@@ -4292,6 +4372,7 @@
             "registros": 87,
             "slug_especie": "tyrannus-melancholicus",
             "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
             "slug_grupo": "animales",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5229662",
@@ -4309,6 +4390,7 @@
             "registros": 36,
             "slug_especie": "cathartes-aura",
             "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
             "slug_grupo": "animales",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2481930",
@@ -4326,6 +4408,7 @@
             "registros": 25,
             "slug_especie": "progne-tapera",
             "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
             "slug_grupo": "animales",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2489136",
@@ -4343,6 +4426,7 @@
             "registros": 24,
             "slug_especie": "elanoides-forficatus",
             "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
             "slug_grupo": "animales",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2480461",
@@ -4360,6 +4444,7 @@
             "registros": 16,
             "slug_especie": "vireo-olivaceus",
             "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
             "slug_grupo": "animales",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2487430",
@@ -4377,6 +4462,7 @@
             "registros": 15,
             "slug_especie": "actitis-macularius",
             "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
             "slug_grupo": "animales",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2481798",
@@ -4394,6 +4480,7 @@
             "registros": 14,
             "slug_especie": "tyrannus-savana",
             "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
             "slug_grupo": "animales",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5229693",
@@ -4411,6 +4498,7 @@
             "registros": 12,
             "slug_especie": "myiodynastes-maculatus",
             "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
             "slug_grupo": "animales",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2483497",
@@ -4428,6 +4516,7 @@
             "registros": 12,
             "slug_especie": "pandion-haliaetus",
             "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
             "slug_grupo": "animales",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2480726",
@@ -4445,6 +4534,7 @@
             "registros": 12,
             "slug_especie": "porphyrio-flavirostris",
             "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
             "slug_grupo": "animales",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5228154",
@@ -4465,6 +4555,7 @@
             "registros": 1,
             "slug_especie": "apis-mellifera",
             "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
             "slug_grupo": "animales",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/1341976",
@@ -4742,6 +4833,12 @@
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
       "parent": [
+        {
+          "slug": "aracnidos",
+          "label": "Caquetá",
+          "especies_region_total": 49,
+          "registros_region_total": 321
+        },
         {
           "slug": "aracnidos",
           "label": "Caquetá",
@@ -5050,6 +5147,12 @@
           "label": "Caquetá",
           "especies_region_total": 1034,
           "registros_region_total": 209952
+        },
+        {
+          "slug": "aves",
+          "label": "Caquetá",
+          "especies_region_total": 1034,
+          "registros_region_total": 209952
         }
       ],
       "estimadas": {
@@ -5227,6 +5330,7 @@
             "registros": 16,
             "slug_especie": "icterus-icterus",
             "slug_tematica": "amenazadas-nacional-vu",
+            "tematica_label": "VU",
             "slug_grupo": "aves",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5229915",
@@ -5246,6 +5350,7 @@
             "registros": 2,
             "slug_especie": "tringa-flavipes",
             "slug_tematica": "amenazadas-global-vu",
+            "tematica_label": "VU",
             "slug_grupo": "aves",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2481721",
@@ -5263,6 +5368,7 @@
             "registros": 1,
             "slug_especie": "chaetura-pelagica",
             "slug_tematica": "amenazadas-global-vu",
+            "tematica_label": "VU",
             "slug_grupo": "aves",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/4409023",
@@ -5282,6 +5388,7 @@
             "registros": 70,
             "slug_especie": "ara-severus",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "aves",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5959228",
@@ -5299,6 +5406,7 @@
             "registros": 70,
             "slug_especie": "rupornis-magnirostris",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "aves",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5844398",
@@ -5316,6 +5424,7 @@
             "registros": 65,
             "slug_especie": "amazona-ochrocephala",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "aves",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2479612",
@@ -5333,6 +5442,7 @@
             "registros": 62,
             "slug_especie": "brotogeris-cyanoptera",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "aves",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2479576",
@@ -5350,6 +5460,7 @@
             "registros": 50,
             "slug_especie": "amazona-amazonica",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "aves",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2479666",
@@ -5366,6 +5477,7 @@
             "registros": 50,
             "slug_especie": "eudocimus-ruber",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "aves",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5229204",
@@ -5383,6 +5495,7 @@
             "registros": 48,
             "slug_especie": "pionus-menstruus",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "aves",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2479902",
@@ -5400,6 +5513,7 @@
             "registros": 46,
             "slug_especie": "ara-ararauna",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "aves",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5959231",
@@ -5417,6 +5531,7 @@
             "registros": 45,
             "slug_especie": "daptrius-ater",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "aves",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2481073",
@@ -5434,6 +5549,7 @@
             "registros": 44,
             "slug_especie": "anthracothorax-nigricollis",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "aves",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2476718",
@@ -5453,6 +5569,7 @@
             "registros": 87,
             "slug_especie": "tyrannus-melancholicus",
             "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
             "slug_grupo": "aves",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5229662",
@@ -5470,6 +5587,7 @@
             "registros": 36,
             "slug_especie": "cathartes-aura",
             "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
             "slug_grupo": "aves",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2481930",
@@ -5487,6 +5605,7 @@
             "registros": 25,
             "slug_especie": "progne-tapera",
             "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
             "slug_grupo": "aves",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2489136",
@@ -5504,6 +5623,7 @@
             "registros": 24,
             "slug_especie": "elanoides-forficatus",
             "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
             "slug_grupo": "aves",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2480461",
@@ -5521,6 +5641,7 @@
             "registros": 16,
             "slug_especie": "vireo-olivaceus",
             "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
             "slug_grupo": "aves",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2487430",
@@ -5538,6 +5659,7 @@
             "registros": 15,
             "slug_especie": "actitis-macularius",
             "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
             "slug_grupo": "aves",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2481798",
@@ -5555,6 +5677,7 @@
             "registros": 14,
             "slug_especie": "tyrannus-savana",
             "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
             "slug_grupo": "aves",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5229693",
@@ -5572,6 +5695,7 @@
             "registros": 12,
             "slug_especie": "myiodynastes-maculatus",
             "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
             "slug_grupo": "aves",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2483497",
@@ -5589,6 +5713,7 @@
             "registros": 12,
             "slug_especie": "pandion-haliaetus",
             "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
             "slug_grupo": "aves",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2480726",
@@ -5606,6 +5731,7 @@
             "registros": 12,
             "slug_especie": "porphyrio-flavirostris",
             "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
             "slug_grupo": "aves",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5228154",
@@ -5885,6 +6011,12 @@
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
       "parent": [
+        {
+          "slug": "bacterias",
+          "label": "Caquetá",
+          "especies_region_total": 424,
+          "registros_region_total": 66287
+        },
         {
           "slug": "bacterias",
           "label": "Caquetá",
@@ -6177,6 +6309,12 @@
           "label": "Caquetá",
           "especies_region_total": 24,
           "registros_region_total": 868
+        },
+        {
+          "slug": "chromista",
+          "label": "Caquetá",
+          "especies_region_total": 24,
+          "registros_region_total": 868
         }
       ],
       "estimadas": {
@@ -6459,6 +6597,12 @@
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
       "parent": [
+        {
+          "slug": "dipteros",
+          "label": "Caquetá",
+          "especies_region_total": 104,
+          "registros_region_total": 2820
+        },
         {
           "slug": "dipteros",
           "label": "Caquetá",
@@ -6776,6 +6920,12 @@
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
       "parent": [
+        {
+          "slug": "escarabajos",
+          "label": "Caquetá",
+          "especies_region_total": 198,
+          "registros_region_total": 5464
+        },
         {
           "slug": "escarabajos",
           "label": "Caquetá",
@@ -7320,6 +7470,12 @@
           "label": "Caquetá",
           "especies_region_total": 17,
           "registros_region_total": 106
+        },
+        {
+          "slug": "gimnospermas",
+          "label": "Caquetá",
+          "especies_region_total": 17,
+          "registros_region_total": 106
         }
       ],
       "estimadas": {
@@ -7618,6 +7774,12 @@
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
       "parent": [
+        {
+          "slug": "helechos",
+          "label": "Caquetá",
+          "especies_region_total": 426,
+          "registros_region_total": 4832
+        },
         {
           "slug": "helechos",
           "label": "Caquetá",
@@ -8031,6 +8193,12 @@
           "label": "Caquetá",
           "especies_region_total": 305,
           "registros_region_total": 15388
+        },
+        {
+          "slug": "hongos",
+          "label": "Caquetá",
+          "especies_region_total": 305,
+          "registros_region_total": 15388
         }
       ],
       "estimadas": {
@@ -8360,6 +8528,12 @@
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
       "parent": [
+        {
+          "slug": "hormigas",
+          "label": "Caquetá",
+          "especies_region_total": 205,
+          "registros_region_total": 2856
+        },
         {
           "slug": "hormigas",
           "label": "Caquetá",
@@ -8953,6 +9127,12 @@
           "label": "Caquetá",
           "especies_region_total": 1150,
           "registros_region_total": 26174
+        },
+        {
+          "slug": "insectos",
+          "label": "Caquetá",
+          "especies_region_total": 1150,
+          "registros_region_total": 26174
         }
       ],
       "estimadas": {
@@ -9166,6 +9346,7 @@
             "registros": 1,
             "slug_especie": "apis-mellifera",
             "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
             "slug_grupo": "insectos",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/1341976",
@@ -9448,6 +9629,12 @@
           "label": "Caquetá",
           "especies_region_total": 1277,
           "registros_region_total": 27395
+        },
+        {
+          "slug": "invertebrados",
+          "label": "Caquetá",
+          "especies_region_total": 1277,
+          "registros_region_total": 27395
         }
       ],
       "estimadas": {
@@ -9646,6 +9833,7 @@
             "registros": 1,
             "slug_especie": "apis-mellifera",
             "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
             "slug_grupo": "invertebrados",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/1341976",
@@ -9928,6 +10116,12 @@
           "label": "Caquetá",
           "especies_region_total": 196,
           "registros_region_total": 5269
+        },
+        {
+          "slug": "mamiferos",
+          "label": "Caquetá",
+          "especies_region_total": 196,
+          "registros_region_total": 5269
         }
       ],
       "estimadas": {
@@ -10106,6 +10300,7 @@
             "registros": 8,
             "slug_especie": "panthera-onca",
             "slug_tematica": "amenazadas-nacional-vu",
+            "tematica_label": "VU",
             "slug_grupo": "mamiferos",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5219426",
@@ -10123,6 +10318,7 @@
             "registros": 7,
             "slug_especie": "tapirus-terrestris",
             "slug_tematica": "amenazadas-nacional-vu",
+            "tematica_label": "VU",
             "slug_grupo": "mamiferos",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2440898",
@@ -10140,6 +10336,7 @@
             "registros": 5,
             "slug_especie": "tayassu-pecari",
             "slug_tematica": "amenazadas-nacional-en",
+            "tematica_label": "EN",
             "slug_grupo": "mamiferos",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2440993",
@@ -10157,6 +10354,7 @@
             "registros": 4,
             "slug_especie": "lagothrix-lagothricha",
             "slug_tematica": "amenazadas-nacional-vu",
+            "tematica_label": "VU",
             "slug_grupo": "mamiferos",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5786085",
@@ -10174,6 +10372,7 @@
             "registros": 2,
             "slug_especie": "myrmecophaga-tridactyla",
             "slug_tematica": "amenazadas-nacional-vu",
+            "tematica_label": "VU",
             "slug_grupo": "mamiferos",
             "tipo": "biologico",
             "vernacular_name_es": "perrito venadero | perro de monte",
@@ -10194,6 +10393,7 @@
             "registros": 7,
             "slug_especie": "tapirus-terrestris",
             "slug_tematica": "amenazadas-global-vu",
+            "tematica_label": "VU",
             "slug_grupo": "mamiferos",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2440898",
@@ -10211,6 +10411,7 @@
             "registros": 5,
             "slug_especie": "tayassu-pecari",
             "slug_tematica": "amenazadas-global-vu",
+            "tematica_label": "VU",
             "slug_grupo": "mamiferos",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2440993",
@@ -10228,6 +10429,7 @@
             "registros": 4,
             "slug_especie": "lagothrix-lagothricha",
             "slug_tematica": "amenazadas-global-vu",
+            "tematica_label": "VU",
             "slug_grupo": "mamiferos",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5786085",
@@ -10245,6 +10447,7 @@
             "registros": 2,
             "slug_especie": "myrmecophaga-tridactyla",
             "slug_tematica": "amenazadas-global-vu",
+            "tematica_label": "VU",
             "slug_grupo": "mamiferos",
             "tipo": "biologico",
             "vernacular_name_es": "perrito venadero | perro de monte",
@@ -10265,6 +10468,7 @@
             "registros": 12,
             "slug_especie": "cuniculus-paca",
             "slug_tematica": "cites-iii",
+            "tematica_label": "Apéndice CITES III",
             "slug_grupo": "mamiferos",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/4263039",
@@ -10282,6 +10486,7 @@
             "registros": 8,
             "slug_especie": "panthera-onca",
             "slug_tematica": "cites-i",
+            "tematica_label": "Apéndice CITES I",
             "slug_grupo": "mamiferos",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5219426",
@@ -10299,6 +10504,7 @@
             "registros": 7,
             "slug_especie": "tapirus-terrestris",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "mamiferos",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2440898",
@@ -10316,6 +10522,7 @@
             "registros": 5,
             "slug_especie": "leopardus-pardalis",
             "slug_tematica": "cites-i",
+            "tematica_label": "Apéndice CITES I",
             "slug_grupo": "mamiferos",
             "tipo": "biologico",
             "vernacular_name_es": "chucha común",
@@ -10334,6 +10541,7 @@
             "registros": 5,
             "slug_especie": "tayassu-pecari",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "mamiferos",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2440993",
@@ -10351,6 +10559,7 @@
             "registros": 4,
             "slug_especie": "lagothrix-lagothricha",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "mamiferos",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5786085",
@@ -10368,6 +10577,7 @@
             "registros": 4,
             "slug_especie": "leopardus-wiedii",
             "slug_tematica": "cites-i",
+            "tematica_label": "Apéndice CITES I",
             "slug_grupo": "mamiferos",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2434950",
@@ -10385,6 +10595,7 @@
             "registros": 2,
             "slug_especie": "myrmecophaga-tridactyla",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "mamiferos",
             "tipo": "biologico",
             "vernacular_name_es": "perrito venadero | perro de monte",
@@ -10403,6 +10614,7 @@
             "registros": 2,
             "slug_especie": "puma-concolor",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "mamiferos",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2435099",
@@ -10420,6 +10632,7 @@
             "registros": 1,
             "slug_especie": "alouatta-seniculus",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "mamiferos",
             "tipo": "biologico",
             "vernacular_name_es": "tití | tití blanco | tití leoncito | tití pielroja",
@@ -10701,6 +10914,12 @@
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
       "parent": [
+        {
+          "slug": "mariposas",
+          "label": "Caquetá",
+          "especies_region_total": 332,
+          "registros_region_total": 3469
+        },
         {
           "slug": "mariposas",
           "label": "Caquetá",
@@ -11234,6 +11453,12 @@
           "label": "Caquetá",
           "especies_region_total": 146,
           "registros_region_total": 895
+        },
+        {
+          "slug": "musgos",
+          "label": "Caquetá",
+          "especies_region_total": 146,
+          "registros_region_total": 895
         }
       ],
       "estimadas": {
@@ -11552,6 +11777,12 @@
           "label": "Caquetá",
           "especies_region_total": 188,
           "registros_region_total": 1186
+        },
+        {
+          "slug": "no-vasculares",
+          "label": "Caquetá",
+          "especies_region_total": 188,
+          "registros_region_total": 1186
         }
       ],
       "estimadas": {
@@ -11865,6 +12096,12 @@
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
       "parent": [
+        {
+          "slug": "peces",
+          "label": "Caquetá",
+          "especies_region_total": 498,
+          "registros_region_total": 3796
+        },
         {
           "slug": "peces",
           "label": "Caquetá",
@@ -12449,6 +12686,7 @@
             "registros": 1,
             "slug_especie": "brachyplatystoma-rousseauxii",
             "slug_tematica": "amenazadas-nacional-vu",
+            "tematica_label": "VU",
             "slug_grupo": "peces",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2338831",
@@ -12464,6 +12702,7 @@
             "registros": 1,
             "slug_especie": "pseudoplatystoma-punctifer",
             "slug_tematica": "amenazadas-nacional-vu",
+            "tematica_label": "VU",
             "slug_grupo": "peces",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/7879329",
@@ -12481,6 +12720,7 @@
             "registros": 1,
             "slug_especie": "brachyplatystoma-rousseauxii",
             "slug_tematica": "amenazadas-global-vu",
+            "tematica_label": "VU",
             "slug_grupo": "peces",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2338831",
@@ -12760,6 +13000,12 @@
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
       "parent": [
+        {
+          "slug": "peces-dulceacuicolas",
+          "label": "Caquetá",
+          "especies_region_total": 387,
+          "registros_region_total": 1831
+        },
         {
           "slug": "peces-dulceacuicolas",
           "label": "Caquetá",
@@ -13240,6 +13486,7 @@
             "registros": 1,
             "slug_especie": "brachyplatystoma-rousseauxii",
             "slug_tematica": "amenazadas-nacional-vu",
+            "tematica_label": "VU",
             "slug_grupo": "peces-dulceacuicolas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2338831",
@@ -13255,6 +13502,7 @@
             "registros": 1,
             "slug_especie": "pseudoplatystoma-punctifer",
             "slug_tematica": "amenazadas-nacional-vu",
+            "tematica_label": "VU",
             "slug_grupo": "peces-dulceacuicolas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/7879329",
@@ -13272,6 +13520,7 @@
             "registros": 1,
             "slug_especie": "brachyplatystoma-rousseauxii",
             "slug_tematica": "amenazadas-global-vu",
+            "tematica_label": "VU",
             "slug_grupo": "peces-dulceacuicolas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2338831",
@@ -13556,6 +13805,12 @@
           "label": "Caquetá",
           "especies_region_total": 7027,
           "registros_region_total": 99069
+        },
+        {
+          "slug": "plantas",
+          "label": "Caquetá",
+          "especies_region_total": 7027,
+          "registros_region_total": 99069
         }
       ],
       "estimadas": {
@@ -13750,6 +14005,7 @@
             "registros": 1,
             "slug_especie": "cedrela-odorata",
             "slug_tematica": "amenazadas-nacional-en",
+            "tematica_label": "EN",
             "slug_grupo": "plantas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/3190511",
@@ -13769,6 +14025,7 @@
             "registros": 1,
             "slug_especie": "cedrela-odorata",
             "slug_tematica": "amenazadas-global-vu",
+            "tematica_label": "VU",
             "slug_grupo": "plantas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/3190511",
@@ -13788,6 +14045,7 @@
             "registros": 3,
             "slug_especie": "ionopsis-utricularioides",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "plantas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5321877",
@@ -13804,6 +14062,7 @@
             "registros": 3,
             "slug_especie": "pseudorhipsalis-amazonica",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "plantas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/7283573",
@@ -13820,6 +14079,7 @@
             "registros": 1,
             "slug_especie": "cedrela-odorata",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "plantas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/3190511",
@@ -13837,6 +14097,7 @@
             "registros": 1,
             "slug_especie": "epidendrum-compressum",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "plantas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5320004",
@@ -13853,6 +14114,7 @@
             "registros": 1,
             "slug_especie": "epiphyllum-phyllanthus",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "plantas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5384030",
@@ -13870,6 +14132,7 @@
             "registros": 1,
             "slug_especie": "scaphyglottis-stellata",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "plantas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2847064",
@@ -13889,6 +14152,7 @@
             "registros": 2,
             "slug_especie": "besleria-inaequalis",
             "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
             "slug_grupo": "plantas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/3825605",
@@ -13905,6 +14169,7 @@
             "registros": 2,
             "slug_especie": "palicourea-longiflora",
             "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
             "slug_grupo": "plantas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2898891",
@@ -13921,6 +14186,7 @@
             "registros": 1,
             "slug_especie": "miconia-submacrophylla",
             "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
             "slug_grupo": "plantas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/3865575",
@@ -13939,6 +14205,7 @@
             "registros": 2,
             "slug_especie": "averrhoa-carambola",
             "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
             "slug_grupo": "plantas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2891641",
@@ -13955,6 +14222,7 @@
             "registros": 1,
             "slug_especie": "anacardium-occidentale",
             "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
             "slug_grupo": "plantas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5421368",
@@ -13972,6 +14240,7 @@
             "registros": 1,
             "slug_especie": "cymbopogon-citratus",
             "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
             "slug_grupo": "plantas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2705275",
@@ -13989,6 +14258,7 @@
             "registros": 1,
             "slug_especie": "heterotis-rotundifolia",
             "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
             "slug_grupo": "plantas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5599385",
@@ -14005,6 +14275,7 @@
             "registros": 1,
             "slug_especie": "lantana-camara",
             "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
             "slug_grupo": "plantas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2925303",
@@ -14022,6 +14293,7 @@
             "registros": 1,
             "slug_especie": "ocimum-gratissimum",
             "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
             "slug_grupo": "plantas",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2927094",
@@ -14298,6 +14570,12 @@
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
       "parent": [
+        {
+          "slug": "protozoos",
+          "label": "Caquetá",
+          "especies_region_total": 13,
+          "registros_region_total": 57
+        },
         {
           "slug": "protozoos",
           "label": "Caquetá",
@@ -14585,6 +14863,12 @@
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
       "parent": [
+        {
+          "slug": "reptiles",
+          "label": "Caquetá",
+          "especies_region_total": 159,
+          "registros_region_total": 1318
+        },
         {
           "slug": "reptiles",
           "label": "Caquetá",
@@ -14977,6 +15261,7 @@
             "registros": 1,
             "slug_especie": "podocnemis-unifilis",
             "slug_tematica": "amenazadas-nacional-en",
+            "tematica_label": "EN",
             "slug_grupo": "reptiles",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2442782",
@@ -14995,6 +15280,7 @@
             "registros": 2,
             "slug_especie": "chelonoidis-denticulatus",
             "slug_tematica": "amenazadas-global-vu",
+            "tematica_label": "VU",
             "slug_grupo": "reptiles",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5220281",
@@ -15011,6 +15297,7 @@
             "registros": 1,
             "slug_especie": "podocnemis-unifilis",
             "slug_tematica": "amenazadas-global-vu",
+            "tematica_label": "VU",
             "slug_grupo": "reptiles",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2442782",
@@ -15029,6 +15316,7 @@
             "registros": 2,
             "slug_especie": "chelonoidis-denticulatus",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "reptiles",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5220281",
@@ -15045,6 +15333,7 @@
             "registros": 1,
             "slug_especie": "corallus-hortulana",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "reptiles",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2464951",
@@ -15061,6 +15350,7 @@
             "registros": 1,
             "slug_especie": "eunectes-murinus",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "reptiles",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5225712",
@@ -15077,6 +15367,7 @@
             "registros": 1,
             "slug_especie": "iguana-iguana",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "reptiles",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2459658",
@@ -15093,6 +15384,7 @@
             "registros": 1,
             "slug_especie": "kinosternon-scorpioides",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "reptiles",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2442361",
@@ -15109,6 +15401,7 @@
             "registros": 1,
             "slug_especie": "paleosuchus-palpebrosus",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "reptiles",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2441396",
@@ -15125,6 +15418,7 @@
             "registros": 1,
             "slug_especie": "podocnemis-unifilis",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "reptiles",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2442782",
@@ -15409,6 +15703,12 @@
           "label": "Caquetá",
           "especies_region_total": 6839,
           "registros_region_total": 97598
+        },
+        {
+          "slug": "vasculares",
+          "label": "Caquetá",
+          "especies_region_total": 6839,
+          "registros_region_total": 97598
         }
       ],
       "estimadas": {
@@ -15582,6 +15882,7 @@
             "registros": 1,
             "slug_especie": "cedrela-odorata",
             "slug_tematica": "amenazadas-nacional-en",
+            "tematica_label": "EN",
             "slug_grupo": "vasculares",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/3190511",
@@ -15601,6 +15902,7 @@
             "registros": 1,
             "slug_especie": "cedrela-odorata",
             "slug_tematica": "amenazadas-global-vu",
+            "tematica_label": "VU",
             "slug_grupo": "vasculares",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/3190511",
@@ -15620,6 +15922,7 @@
             "registros": 3,
             "slug_especie": "ionopsis-utricularioides",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "vasculares",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5321877",
@@ -15636,6 +15939,7 @@
             "registros": 3,
             "slug_especie": "pseudorhipsalis-amazonica",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "vasculares",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/7283573",
@@ -15652,6 +15956,7 @@
             "registros": 1,
             "slug_especie": "cedrela-odorata",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "vasculares",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/3190511",
@@ -15669,6 +15974,7 @@
             "registros": 1,
             "slug_especie": "epidendrum-compressum",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "vasculares",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5320004",
@@ -15685,6 +15991,7 @@
             "registros": 1,
             "slug_especie": "epiphyllum-phyllanthus",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "vasculares",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5384030",
@@ -15702,6 +16009,7 @@
             "registros": 1,
             "slug_especie": "scaphyglottis-stellata",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "vasculares",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2847064",
@@ -15721,6 +16029,7 @@
             "registros": 2,
             "slug_especie": "besleria-inaequalis",
             "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
             "slug_grupo": "vasculares",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/3825605",
@@ -15737,6 +16046,7 @@
             "registros": 2,
             "slug_especie": "palicourea-longiflora",
             "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
             "slug_grupo": "vasculares",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2898891",
@@ -15753,6 +16063,7 @@
             "registros": 1,
             "slug_especie": "miconia-submacrophylla",
             "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
             "slug_grupo": "vasculares",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/3865575",
@@ -15771,6 +16082,7 @@
             "registros": 2,
             "slug_especie": "averrhoa-carambola",
             "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
             "slug_grupo": "vasculares",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2891641",
@@ -15787,6 +16099,7 @@
             "registros": 1,
             "slug_especie": "anacardium-occidentale",
             "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
             "slug_grupo": "vasculares",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5421368",
@@ -15804,6 +16117,7 @@
             "registros": 1,
             "slug_especie": "cymbopogon-citratus",
             "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
             "slug_grupo": "vasculares",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2705275",
@@ -15821,6 +16135,7 @@
             "registros": 1,
             "slug_especie": "heterotis-rotundifolia",
             "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
             "slug_grupo": "vasculares",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5599385",
@@ -15837,6 +16152,7 @@
             "registros": 1,
             "slug_especie": "lantana-camara",
             "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
             "slug_grupo": "vasculares",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2925303",
@@ -15854,6 +16170,7 @@
             "registros": 1,
             "slug_especie": "ocimum-gratissimum",
             "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
             "slug_grupo": "vasculares",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2927094",
@@ -16135,6 +16452,12 @@
           "label": "Caquetá",
           "especies_region_total": 2030,
           "registros_region_total": 223105
+        },
+        {
+          "slug": "vertebrados",
+          "label": "Caquetá",
+          "especies_region_total": 2030,
+          "registros_region_total": 223105
         }
       ],
       "estimadas": {
@@ -16338,6 +16661,7 @@
             "registros": 16,
             "slug_especie": "icterus-icterus",
             "slug_tematica": "amenazadas-nacional-vu",
+            "tematica_label": "VU",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5229915",
@@ -16355,6 +16679,7 @@
             "registros": 8,
             "slug_especie": "panthera-onca",
             "slug_tematica": "amenazadas-nacional-vu",
+            "tematica_label": "VU",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5219426",
@@ -16372,6 +16697,7 @@
             "registros": 7,
             "slug_especie": "tapirus-terrestris",
             "slug_tematica": "amenazadas-nacional-vu",
+            "tematica_label": "VU",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2440898",
@@ -16389,6 +16715,7 @@
             "registros": 5,
             "slug_especie": "tayassu-pecari",
             "slug_tematica": "amenazadas-nacional-en",
+            "tematica_label": "EN",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2440993",
@@ -16406,6 +16733,7 @@
             "registros": 4,
             "slug_especie": "lagothrix-lagothricha",
             "slug_tematica": "amenazadas-nacional-vu",
+            "tematica_label": "VU",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5786085",
@@ -16423,6 +16751,7 @@
             "registros": 2,
             "slug_especie": "myrmecophaga-tridactyla",
             "slug_tematica": "amenazadas-nacional-vu",
+            "tematica_label": "VU",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
             "vernacular_name_es": "perrito venadero | perro de monte",
@@ -16441,6 +16770,7 @@
             "registros": 1,
             "slug_especie": "brachyplatystoma-rousseauxii",
             "slug_tematica": "amenazadas-nacional-vu",
+            "tematica_label": "VU",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2338831",
@@ -16456,6 +16786,7 @@
             "registros": 1,
             "slug_especie": "podocnemis-unifilis",
             "slug_tematica": "amenazadas-nacional-en",
+            "tematica_label": "EN",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2442782",
@@ -16472,6 +16803,7 @@
             "registros": 1,
             "slug_especie": "pseudoplatystoma-punctifer",
             "slug_tematica": "amenazadas-nacional-vu",
+            "tematica_label": "VU",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/7879329",
@@ -16489,6 +16821,7 @@
             "registros": 7,
             "slug_especie": "tapirus-terrestris",
             "slug_tematica": "amenazadas-global-vu",
+            "tematica_label": "VU",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2440898",
@@ -16506,6 +16839,7 @@
             "registros": 5,
             "slug_especie": "tayassu-pecari",
             "slug_tematica": "amenazadas-global-vu",
+            "tematica_label": "VU",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2440993",
@@ -16523,6 +16857,7 @@
             "registros": 4,
             "slug_especie": "lagothrix-lagothricha",
             "slug_tematica": "amenazadas-global-vu",
+            "tematica_label": "VU",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5786085",
@@ -16540,6 +16875,7 @@
             "registros": 2,
             "slug_especie": "chelonoidis-denticulatus",
             "slug_tematica": "amenazadas-global-vu",
+            "tematica_label": "VU",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5220281",
@@ -16556,6 +16892,7 @@
             "registros": 2,
             "slug_especie": "myrmecophaga-tridactyla",
             "slug_tematica": "amenazadas-global-vu",
+            "tematica_label": "VU",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
             "vernacular_name_es": "perrito venadero | perro de monte",
@@ -16574,6 +16911,7 @@
             "registros": 2,
             "slug_especie": "tringa-flavipes",
             "slug_tematica": "amenazadas-global-vu",
+            "tematica_label": "VU",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2481721",
@@ -16591,6 +16929,7 @@
             "registros": 1,
             "slug_especie": "brachyplatystoma-rousseauxii",
             "slug_tematica": "amenazadas-global-vu",
+            "tematica_label": "VU",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2338831",
@@ -16606,6 +16945,7 @@
             "registros": 1,
             "slug_especie": "chaetura-pelagica",
             "slug_tematica": "amenazadas-global-vu",
+            "tematica_label": "VU",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/4409023",
@@ -16623,6 +16963,7 @@
             "registros": 1,
             "slug_especie": "podocnemis-unifilis",
             "slug_tematica": "amenazadas-global-vu",
+            "tematica_label": "VU",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2442782",
@@ -16641,6 +16982,7 @@
             "registros": 70,
             "slug_especie": "ara-severus",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5959228",
@@ -16658,6 +17000,7 @@
             "registros": 70,
             "slug_especie": "rupornis-magnirostris",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5844398",
@@ -16675,6 +17018,7 @@
             "registros": 65,
             "slug_especie": "amazona-ochrocephala",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2479612",
@@ -16692,6 +17036,7 @@
             "registros": 62,
             "slug_especie": "brotogeris-cyanoptera",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2479576",
@@ -16709,6 +17054,7 @@
             "registros": 50,
             "slug_especie": "amazona-amazonica",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2479666",
@@ -16725,6 +17071,7 @@
             "registros": 50,
             "slug_especie": "eudocimus-ruber",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5229204",
@@ -16742,6 +17089,7 @@
             "registros": 48,
             "slug_especie": "pionus-menstruus",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2479902",
@@ -16759,6 +17107,7 @@
             "registros": 46,
             "slug_especie": "ara-ararauna",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5959231",
@@ -16776,6 +17125,7 @@
             "registros": 45,
             "slug_especie": "daptrius-ater",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2481073",
@@ -16793,6 +17143,7 @@
             "registros": 44,
             "slug_especie": "anthracothorax-nigricollis",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2476718",
@@ -16812,6 +17163,7 @@
             "registros": 87,
             "slug_especie": "tyrannus-melancholicus",
             "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5229662",
@@ -16829,6 +17181,7 @@
             "registros": 36,
             "slug_especie": "cathartes-aura",
             "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2481930",
@@ -16846,6 +17199,7 @@
             "registros": 25,
             "slug_especie": "progne-tapera",
             "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2489136",
@@ -16863,6 +17217,7 @@
             "registros": 24,
             "slug_especie": "elanoides-forficatus",
             "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2480461",
@@ -16880,6 +17235,7 @@
             "registros": 16,
             "slug_especie": "vireo-olivaceus",
             "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2487430",
@@ -16897,6 +17253,7 @@
             "registros": 15,
             "slug_especie": "actitis-macularius",
             "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2481798",
@@ -16914,6 +17271,7 @@
             "registros": 14,
             "slug_especie": "tyrannus-savana",
             "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5229693",
@@ -16931,6 +17289,7 @@
             "registros": 12,
             "slug_especie": "myiodynastes-maculatus",
             "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2483497",
@@ -16948,6 +17307,7 @@
             "registros": 12,
             "slug_especie": "pandion-haliaetus",
             "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/2480726",
@@ -16965,6 +17325,7 @@
             "registros": 12,
             "slug_especie": "porphyrio-flavirostris",
             "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
             "url_gbif": "https://www.gbif.org/species/5228154",
@@ -17246,6 +17607,12 @@
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
       "parent": [
+        {
+          "slug": "algas",
+          "label": "Caquetá",
+          "especies_region_total": 17,
+          "registros_region_total": 168
+        },
         {
           "slug": "algas",
           "label": "Caquetá",
@@ -17538,6 +17905,12 @@
           "label": "Caquetá",
           "especies_region_total": 214,
           "registros_region_total": 1903
+        },
+        {
+          "slug": "bromelias-labiadas-pasifloras",
+          "label": "Caquetá",
+          "especies_region_total": 214,
+          "registros_region_total": 1903
         }
       ],
       "estimadas": {
@@ -17698,6 +18071,7 @@
             "registros": 1,
             "slug_especie": "ocimum-gratissimum",
             "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
             "slug_grupo": "bromelias-labiadas-pasifloras",
             "tipo": "interes",
             "url_gbif": "https://www.gbif.org/species/2927094",
@@ -17974,6 +18348,12 @@
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
       "parent": [
+        {
+          "slug": "epifitas",
+          "label": "Caquetá",
+          "especies_region_total": 376,
+          "registros_region_total": 3475
+        },
         {
           "slug": "epifitas",
           "label": "Caquetá",
@@ -18272,6 +18652,7 @@
             "registros": 3,
             "slug_especie": "pseudorhipsalis-amazonica",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "epifitas",
             "tipo": "interes",
             "url_gbif": "https://www.gbif.org/species/7283573",
@@ -18288,6 +18669,7 @@
             "registros": 1,
             "slug_especie": "epidendrum-compressum",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "epifitas",
             "tipo": "interes",
             "url_gbif": "https://www.gbif.org/species/5320004",
@@ -18304,6 +18686,7 @@
             "registros": 1,
             "slug_especie": "epiphyllum-phyllanthus",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "epifitas",
             "tipo": "interes",
             "url_gbif": "https://www.gbif.org/species/5384030",
@@ -18589,6 +18972,12 @@
           "label": "Caquetá",
           "especies_region_total": 10,
           "registros_region_total": 37
+        },
+        {
+          "slug": "especies-maderables",
+          "label": "Caquetá",
+          "especies_region_total": 10,
+          "registros_region_total": 37
         }
       ],
       "estimadas": {
@@ -18624,6 +19013,7 @@
             "registros": 1,
             "slug_especie": "cedrela-odorata",
             "slug_tematica": "amenazadas-nacional-en",
+            "tematica_label": "EN",
             "slug_grupo": "especies-maderables",
             "tipo": "interes",
             "url_gbif": "https://www.gbif.org/species/3190511",
@@ -18643,6 +19033,7 @@
             "registros": 1,
             "slug_especie": "cedrela-odorata",
             "slug_tematica": "amenazadas-global-vu",
+            "tematica_label": "VU",
             "slug_grupo": "especies-maderables",
             "tipo": "interes",
             "url_gbif": "https://www.gbif.org/species/3190511",
@@ -18662,6 +19053,7 @@
             "registros": 1,
             "slug_especie": "cedrela-odorata",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "especies-maderables",
             "tipo": "interes",
             "url_gbif": "https://www.gbif.org/species/3190511",
@@ -18942,6 +19334,12 @@
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
       "parent": [
+        {
+          "slug": "fanerogamas",
+          "label": "Caquetá",
+          "especies_region_total": 137,
+          "registros_region_total": 3324
+        },
         {
           "slug": "fanerogamas",
           "label": "Caquetá",
@@ -19406,6 +19804,12 @@
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
       "parent": [
+        {
+          "slug": "magnolias-afines",
+          "label": "Caquetá",
+          "especies_region_total": 54,
+          "registros_region_total": 2110
+        },
         {
           "slug": "magnolias-afines",
           "label": "Caquetá",
@@ -19880,6 +20284,12 @@
           "label": "Caquetá",
           "especies_region_total": 264,
           "registros_region_total": 1311
+        },
+        {
+          "slug": "orquideas",
+          "label": "Caquetá",
+          "especies_region_total": 264,
+          "registros_region_total": 1311
         }
       ],
       "estimadas": {
@@ -19992,6 +20402,7 @@
             "registros": 3,
             "slug_especie": "ionopsis-utricularioides",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "orquideas",
             "tipo": "interes",
             "url_gbif": "https://www.gbif.org/species/5321877",
@@ -20008,6 +20419,7 @@
             "registros": 1,
             "slug_especie": "epidendrum-compressum",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "orquideas",
             "tipo": "interes",
             "url_gbif": "https://www.gbif.org/species/5320004",
@@ -20024,6 +20436,7 @@
             "registros": 1,
             "slug_especie": "scaphyglottis-stellata",
             "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
             "slug_grupo": "orquideas",
             "tipo": "interes",
             "url_gbif": "https://www.gbif.org/species/2847064",
@@ -20303,6 +20716,12 @@
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
       "parent": [
+        {
+          "slug": "palmas",
+          "label": "Caquetá",
+          "especies_region_total": 114,
+          "registros_region_total": 6175
+        },
         {
           "slug": "palmas",
           "label": "Caquetá",
@@ -20669,6 +21088,12 @@
       "registros_salobres_amenazadas_global_lr_lc": "NA",
       "registros_salobres_amenazadas_global_lr_nt": "NA",
       "parent": [
+        {
+          "slug": "pinos-afines",
+          "label": "Caquetá",
+          "especies_region_total": 9,
+          "registros_region_total": 63
+        },
         {
           "slug": "pinos-afines",
           "label": "Caquetá",

@@ -47,7 +47,7 @@ ui <- fluidPage(
         align-items: center;
         flex-direction: column;
       }
-      
+
       .spinner {
         border: 4px solid #f3f3f3;
         border-top: 4px solid #09A274;
@@ -56,24 +56,24 @@ ui <- fluidPage(
         height: 50px;
         animation: spin 1s linear infinite;
       }
-      
+
       @keyframes spin {
         0% { transform: rotate(0deg); }
         100% { transform: rotate(360deg); }
       }
-      
+
       .loading-text {
         margin-top: 20px;
         font-size: 16px;
         color: #09A274;
         font-weight: 500;
       }
-      
+
       .section-loading {
         position: relative;
         opacity: 0.6;
       }
-      
+
       .section-loading::after {
         content: '';
         position: absolute;
@@ -90,7 +90,7 @@ ui <- fluidPage(
       }
     "))
   ),
-  
+
   # Global loading overlay
   div(id = "global-loading", class = "loading-overlay", style = "display: none;",
       div(class = "spinner"),
@@ -129,16 +129,16 @@ ui <- fluidPage(
 server <- function(input, output, session) {
 
   if (DEBUG_MODE) message("🚀 SERVER STARTING")
-  
+
   # Show loading on app start
   shinyjs::show("global-loading")
-  
+
   # Helper functions for loading management
   show_loading <- function(text = "Cargando...") {
     shinyjs::html("loading-text", text)
     shinyjs::show("global-loading")
   }
-  
+
   hide_loading <- function() {
     shinyjs::hide("global-loading")
   }
@@ -191,12 +191,12 @@ server <- function(input, output, session) {
   exp_inputs_server("inputs", r, app_options, session, debug = DEBUG_MODE)
   if (DEBUG_MODE) message("✓ Inputs module initialized")
 
-  exp_visualization3_server("visualization", r, con, 
+  exp_visualization3_server("visualization", r, con,
                             loading_fns = list(show = show_loading, hide = hide_loading),
                             debug = DEBUG_MODE)
   if (DEBUG_MODE) message("✓ Visualization module initialized")
 
-  exp_species_table_server("species", r, con, session, 
+  exp_species_table_server("species", r, con, session,
                            loading_fns = list(show = show_loading, hide = hide_loading),
                            debug = DEBUG_MODE)
   if (DEBUG_MODE) message("✓ Species table module initialized")
@@ -212,7 +212,7 @@ server <- function(input, output, session) {
     # Wait for initial data to be ready
     req(r$inputs_ready)
     req(r$sel_region)
-    
+
     # Small delay to ensure everything is rendered
     shinyjs::delay(500, {
       hide_loading()

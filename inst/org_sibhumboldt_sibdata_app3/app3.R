@@ -158,7 +158,7 @@ server <- function(input, output, session) {
     sel_tematica = NULL,
     tematica = NULL,
     sel_tipo = "registros",
-    chart_type = "map",
+    chart_type = "cards",
     is_special_region = FALSE,
     has_subtematica = FALSE,
     inputs_ready = NULL,
@@ -167,8 +167,8 @@ server <- function(input, output, session) {
     cites_categoria = NULL,
     exotica_categoria = NULL,
     especies_total_estimadas = NULL,
-    # Chart selector
-    available_charts = c("Mapa" = "map", "Tabla" = "table"),
+    # Chart selector - include cards first by default
+    available_charts = c("Tarjetas" = "cards", "Mapa" = "map", "Tabla" = "table"),
     indicador = NULL,
     breadcrumb = NULL,
     # Data storage for charts and modals
@@ -201,10 +201,10 @@ server <- function(input, output, session) {
                            debug = DEBUG_MODE)
   if (DEBUG_MODE) message("✓ Species table module initialized")
 
-  exp_debug_server("debug", r, debug = FALSE)
+  exp_debug_server("debug", r, debug = DEBUG_MODE)
   if (DEBUG_MODE) message("✓ Debug module initialized")
 
-  exp_debug2_server("debug2", r, debug = FALSE)
+  exp_debug2_server("debug2", r, debug = DEBUG_MODE)
   if (DEBUG_MODE) message("✓ Debug2 module initialized")
 
   # Hide loading spinner after all modules are initialized

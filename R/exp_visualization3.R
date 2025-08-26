@@ -148,11 +148,11 @@ exp_visualization3_server <- function(id, r, con, loading_fns = NULL, debug = FA
 
       if (debug) message("🎨 COMPUTING AVAILABLE CHARTS")
 
-      # All chart types available
-      all_charts <- c("Mapa" = "map", "Torta" = "pie", "Dona" = "donut",
+      # All chart types available (Cards first)
+      all_charts <- c("Tarjetas" = "cards", "Mapa" = "map", "Torta" = "pie", "Dona" = "donut",
                       "Treemap" = "treemap", "Barras" = "bar", "Tabla" = "table")
-      map_table <- c("Mapa" = "map", "Tabla" = "table")
-      map_table_bar <- c("Mapa" = "map", "Tabla" = "table", "Barras" = "bar")
+      map_table <- c("Tarjetas" = "cards", "Mapa" = "map", "Tabla" = "table")
+      map_table_bar <- c("Tarjetas" = "cards", "Mapa" = "map", "Tabla" = "table", "Barras" = "bar")
 
       # Check if amenazadas with total category selected
       is_amenazadas_total <- !is.null(r$sel_tematica) &&
@@ -161,30 +161,57 @@ exp_visualization3_server <- function(id, r, con, loading_fns = NULL, debug = FA
                             r$amenazadas_categoria == "_total"
 
       # Determine available charts based on rules
-      if ((!is.null(r$has_subtematica) && r$has_subtematica) || is_amenazadas_total) {
-        # For tematicas with subtematicas OR amenazadas with total: ALL charts available
-        r$available_charts <- all_charts
+      # Special-case regions where map should be disabled
+      special_regions_disable_map <- c(
+        "region-amazonia",
+        "reserva-forestal-la-planada",
+        "resguardo-indigena-pialapi-pueblo-viejo",
+        "bogota-dc"
+      )
+      is_special_region_selected <- !is.null(r$sel_region) && r$sel_region %in% special_regions_disable_map
+
+      computed_available <- NULL
+      if (!is.null(r$has_subtematica) && r$has_subtematica) {
+        # When subtematicas are present, disable map (multiple subcategories)
+        computed_available <- all_charts[all_charts != "map"]
+      } else if (is_amenazadas_total) {
+        # Amenazadas total: all charts available (including map)
+        computed_available <- all_charts
       } else {
         # Regular themes
         if (!is.null(r$sel_tipo) && r$sel_tipo == "registros") {
-          r$available_charts <- map_table
+          computed_available <- map_table
         } else if (!is.null(r$sel_tipo) && r$sel_tipo == "especies") {
-          r$available_charts <- map_table_bar
+          computed_available <- map_table_bar
         } else {
-          r$available_charts <- map_table  # default
+          computed_available <- map_table  # default
         }
       }
 
-      # Ensure current chart is available, default to map
+      # If region is one of the special cases, remove map from available charts
+      if (is_special_region_selected) {
+        computed_available <- computed_available[computed_available != "map"]
+        if (debug) message("🛑 Map disabled due to special region: ", r$sel_region)
+      }
+
+      # Only update available charts if changed, to avoid reactive loops
+      if (is.null(r$available_charts) || !identical(unname(r$available_charts), unname(computed_available))) {
+        r$available_charts <- computed_available
+      }
+
+      # Ensure current chart is available, default to cards
       if (is.null(r$chart_type) || !r$chart_type %in% r$available_charts) {
-        r$chart_type <- "map"  # Always default to map
-        if (debug) message("✓ Chart type set to default: map")
+        if (!identical(r$chart_type, "cards")) {
+          r$chart_type <- "cards"  # Default to cards
+          if (debug) message("✓ Chart type set to default: cards")
+        }
       }
 
       if (debug) {
         message("✓ Available charts: ", paste(names(r$available_charts), collapse = ", "))
         message("✓ Current chart type: ", r$chart_type)
         message("✓ Is amenazadas total: ", is_amenazadas_total)
+        message("✓ Is special region (map disabled): ", ifelse(is_special_region_selected, "TRUE", "FALSE"))
       }
     })
 
@@ -196,16 +223,16 @@ exp_visualization3_server <- function(id, r, con, loading_fns = NULL, debug = FA
       # to avoid namespacing issues - similar to app2.R
       # cat("📊 VIZ: Creating chart selector directly\n")
 
-      # All chart types available
-      all_charts <- c("Mapa" = "map", "Torta" = "pie", "Dona" = "donut",
+      # All chart types available (Cards first)
+      all_charts <- c("Tarjetas" = "cards", "Mapa" = "map", "Torta" = "pie", "Dona" = "donut",
                       "Treemap" = "treemap", "Barras" = "bar", "Tabla" = "table")
 
       # Get available charts from reactive values, with fallback to default
       av_charts <- if (!is.null(r$available_charts) && length(r$available_charts) > 0) {
         r$available_charts
       } else {
-        # Default to map and table when nothing is set yet
-        c("Mapa" = "map", "Tabla" = "table")
+        # Default to cards, map and table when nothing is set yet
+        c("Tarjetas" = "cards", "Mapa" = "map", "Tabla" = "table")
       }
 
       # Set active chart (first available if current is not available)
@@ -312,6 +339,7 @@ exp_visualization3_server <- function(id, r, con, loading_fns = NULL, debug = FA
       } else {
         # Normal visualization output
         chart_output <- switch(r$chart_type,
+          "cards" = uiOutput(ns("cards_viz")),
           "map" = leaflet::leafletOutput(ns("map_viz"), height = 450),
           "table" = DT::dataTableOutput(ns("table_viz")),
           "pie" = highcharter::highchartOutput(ns("hgch_viz"), height = 450),
@@ -324,6 +352,128 @@ exp_visualization3_server <- function(id, r, con, loading_fns = NULL, debug = FA
 
       # Return chart output only (debug2 is handled in main app UI)
       chart_output
+    })
+
+    # Cards rendering - show basic indicators (no temática) or all indicators for temática
+    output$cards_viz <- renderUI({
+      req(r$inputs_ready)
+      req(r$sel_region)
+
+      # Clear any previous errors for cards
+      r$viz_error <- NULL
+
+      # Styles
+      card_css <- "display: flex; gap: 12px; justify-content: space-between; flex-wrap: wrap;"
+      box_css <- "flex: 1; min-width: 180px; border: 1px solid #e6e6e6; border-radius: 8px; padding: 16px; background: #ffffff; box-shadow: 0 1px 2px rgba(0,0,0,0.05);"
+      value_css <- "font-size: 28px; font-weight: 700; color: #09A274; margin: 0;"
+      label_css <- "font-size: 13px; color: #666666; margin: 0; margin-top: 6px;"
+
+      # If no temática selected: show registros/especies totals
+      if (is.null(r$sel_tematica)) {
+        fetch_indicator_value <- function(ind_key) {
+          d <- tryCatch({
+            sibdata(
+              region = r$sel_region,
+              grupo = r$sel_grupo,
+              tipo = if (grepl("^especies", ind_key)) "especies" else "registros",
+              tematica = NULL,
+              indicador = ind_key,
+              subregiones = FALSE,
+              with_parent = FALSE,
+              con = con
+            )
+          }, error = function(e) {
+            if (debug) message("❌ ERROR fetching ", ind_key, ": ", e$message)
+            NULL
+          })
+          if (is.null(d) || !ind_key %in% names(d)) return(NA_real_)
+          val <- suppressWarnings(as.numeric(d[[ind_key]][1]))
+          if (is.na(val)) 0 else val
+        }
+
+        ind_regs <- "registros_region_total"
+        ind_esps <- "especies_region_total"
+        val_regs <- fetch_indicator_value(ind_regs)
+        val_esps <- fetch_indicator_value(ind_esps)
+
+        labels <- sib_merge_ind_label(c(ind_regs, ind_esps), con = con)
+        if (!is.null(names(labels)) && all(names(labels) != "")) {
+          label_regs <- labels[[ind_regs]]
+          label_esps <- labels[[ind_esps]]
+        } else {
+          label_regs <- labels[1]
+          label_esps <- labels[2]
+        }
+
+        r$current_chart_data <- data.frame(
+          indicador = c(ind_regs, ind_esps),
+          etiqueta = unname(labels),
+          valor = c(val_regs, val_esps),
+          stringsAsFactors = FALSE
+        )
+
+        return(div(
+          style = card_css,
+          div(style = box_css,
+              p(style = value_css, format(val_regs, big.mark = ",", scientific = FALSE)),
+              p(style = label_css, label_regs)
+          ),
+          div(style = box_css,
+              p(style = value_css, format(val_esps, big.mark = ",", scientific = FALSE)),
+              p(style = label_css, label_esps)
+          )
+        ))
+      }
+
+      # When temática selected: fetch all relevant indicators (tidy) and render one card per indicator
+      d <- tryCatch({
+        sibdata(
+          region = r$sel_region,
+          grupo = r$sel_grupo,
+          tipo = NULL,
+          tematica = r$tematica,
+          indicador = NULL,
+          subregiones = FALSE,
+          with_parent = FALSE,
+          con = con
+        )
+      }, error = function(e){
+        if (debug) message("❌ ERROR fetching cards (temática): ", e$message)
+        NULL
+      })
+
+      if (is.null(d) || nrow(d) == 0) {
+        r$current_chart_data <- NULL
+        return(div("No hay datos disponibles para las tarjetas."))
+      }
+
+      # Summarize by indicator
+      d2 <- d |>
+        dplyr::group_by(indicador) |>
+        dplyr::summarise(valor = sum(count, na.rm = TRUE), .groups = "drop") |>
+        dplyr::arrange(dplyr::desc(valor))
+
+      inds <- d2$indicador
+      labels_vec <- sib_merge_ind_label(inds, con = con)
+      etiqueta <- as.character(labels_vec)
+
+      r$current_chart_data <- data.frame(
+        indicador = inds,
+        etiqueta = etiqueta,
+        valor = d2$valor,
+        stringsAsFactors = FALSE
+      )
+
+      boxes <- lapply(seq_len(nrow(r$current_chart_data)), function(i){
+        val <- r$current_chart_data$valor[i]
+        lab <- r$current_chart_data$etiqueta[i]
+        div(style = box_css,
+            p(style = value_css, format(val, big.mark = ",", scientific = FALSE)),
+            p(style = label_css, lab)
+        )
+      })
+
+      do.call(div, c(list(style = card_css), boxes))
     })
 
 
@@ -896,8 +1046,8 @@ exp_visualization3_server <- function(id, r, con, loading_fns = NULL, debug = FA
       # Initialize download server after modal is shown
       downloadTableServer("chart_modal_download",
                          element = reactive({
-                           req(r$main_data)
-                           r$main_data
+                           req(r$current_chart_data)
+                           r$current_chart_data
                          }),
                          formats = c("csv", "xlsx", "json"),
                          file_prefix = "datos_grafico",
@@ -957,10 +1107,10 @@ exp_visualization3_server <- function(id, r, con, loading_fns = NULL, debug = FA
 
     # Render chart data table in modal
     output$chart_data_table <- DT::renderDataTable({
-      req(r$main_data)
+      req(r$current_chart_data)
 
-      # Use chart data directly
-      display_data <- r$main_data
+      # Use current chart data (works for cards and charts)
+      display_data <- r$current_chart_data
 
       DT::datatable(
         display_data,

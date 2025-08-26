@@ -37,7 +37,8 @@ av_regions9 <- sib_available_regions(subtipo = c("Municipio"),
                                      departamento = "putumayo", con = con)
 av_regions10 <- sib_available_regions(subtipo = c("Municipio"),
                                      departamento = "vaupes", con = con)
-
+av_regions11 <- sib_available_regions(subtipo = c("Municipio"),
+                                    departamento = "cauca", con = con)
 
 av_regions <- c(
   # "reserva-forestal-la-planada",
@@ -51,8 +52,11 @@ av_regions <- c(
   av_regions7,
   av_regions8,
   av_regions9,
-  av_regions10
+  av_regions10,
+  av_regions11
 )
+
+
 
 n <- length(av_regions)
 i <<- 1

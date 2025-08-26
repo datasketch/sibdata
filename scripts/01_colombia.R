@@ -187,7 +187,7 @@ sf::write_sf(tj, paste0("static/data/",region,"/",region, ".geojson"),
 
 
 
-toc()
+toc() # 120 segs
 
 
 

@@ -17,7 +17,8 @@ write_csv(ind_meta, "data-raw/diccionaries/ind_meta.csv")
 
 # Textos
 
-ss <- "https://docs.google.com/spreadsheets/d/1-FiWbPN7Zn4SQJQ9bhQ542JuZnAzV4FRb-mqUzEDsUM/edit#gid=1694674636"
+#ss <- "https://docs.google.com/spreadsheets/d/1-FiWbPN7Zn4SQJQ9bhQ542JuZnAzV4FRb-mqUzEDsUM/edit#gid=1694674636"
+ss <- "https://docs.google.com/spreadsheets/d/1XDWW2ZQwEId7-LqfF-PwlAB_vYDIM-bD5eqoBXvV7Rc/edit?gid=1741256568#gid=1741256568"
 
 imagenes <- googlesheets4::read_sheet(ss, sheet = "imagenes_galeria")
 destacados_imagenes <- imagenes |>
@@ -30,15 +31,14 @@ banner_imagenes <- banners |>
   filter(!is.na(slug))
 write_csv(banner_imagenes, "data-raw/banner_images.csv", na = "")
 
-
-
 preg_frecuentes <- googlesheets4::read_sheet(ss, sheet = "Preguntas frecuentes")
 write_csv(preg_frecuentes, "data-raw/preg_frecuentes.csv")
 
 glosario <- googlesheets4::read_sheet(ss, sheet = "Glosario")
 write_csv(glosario, "data-raw/glosario.csv")
 
-
+referencias_home <- googlesheets4::read_sheet(ss, sheet = "Referencias-Home")
+write_csv(referencias_home, "data-raw/referencias_home.csv")
 
 
 

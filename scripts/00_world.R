@@ -47,29 +47,41 @@ parse_ref <- function(str){
 ref_principal <- parse_ref(ranking$ref_id[1])
 
 
-
-#
 dato_relevante <- sibdata_dato_relevante(con) |> collect()
 
-# https://github.com/datasketch/sib-colombia/issues/99
-# 1er  País en diversidad de aves, orquídeas y mariposas.
-# 2do  País en diversidad de anfibios, peces dulceacuícolas, palmas y murciélagos.
-# 3er  País en diversidad de plantas.
-# 6to  País en diversidad de mamíferos.
-# 7mo  País en diversidad de reptiles.
+positions <- sibdata_referencias_home(con) |>
+  filter(active == 1) |>
+  select(-active) |>
+  collect()
 
-positions <- tibble::tribble(
-  ~position,  ~position_text,
-  1, "Primer lugar en diversidad de aves (42), orquídeas (41) y mariposas (13)",
-  2, "Segundo en variedad de anfibios(52), peces dulceacuícolas(10), palmas(54) y murciélagos (53)",
-  3, "Tercero en diversidad de plantas",
-  6, "Sexto en mamíferos (55)",
-  7, "Séptimo en reptiles"
-)
+# positions <- tibble::tribble(
+#   ~position, ~suffix,  ~position_text,
+#   1, "er", "Primer lugar en diversidad de aves (111), orquídeas (41) y mariposas (13)",
+#   2, "do","Segundo en variedad de anfibios(52), peces dulceacuícolas(10), palmas(54) y murciélagos (53)",
+#   3, "er", "Tercero en diversidad de plantas(115)",
+#   6, "to", "Sexto en mamíferos (55)",
+#   7, "mo","Séptimo en reptiles(6)"
+# )
 
-ref_ids <- c(42, 41, 13, 51, 52, 10, 53, 54, 53, 55)
+extract_numbers <- function(text_vector) {
+  # Extract all contents inside parentheses
+  matches <- regmatches(text_vector, gregexpr("\\(([^)]+)\\)", text_vector))
+  # Flatten and split by "|"
+  numbers <- unlist(lapply(matches, function(x) {
+    # Remove parentheses
+    inside <- gsub("[()]", "", x)
+    # Split by "|" and trim spaces
+    unlist(strsplit(inside, "\\|")) |> trimws()
+  }))
+  # Convert to numeric
+  as.numeric(numbers)
+}
+
+ref_ids <- extract_numbers(positions$position_text)
+#ref_ids <- c(42, 41, 13, 51, 52, 10, 53, 54, 53, 55)
+
 position_refs <- refs |>
-  select(ref_id, label, zotero) |>
+  select(ref_id, label, -zotero) |>
   filter(ref_id %in% ref_ids)
 
 lista_mapa <- list(
@@ -87,12 +99,17 @@ lista_mapa <- list(
 
 regs <- sibdata_region_tematica(con) |> collect()
 
+# destacados <- c(
+#   "region-amazonia",
+#   "tolima", "boyaca", "narino", "santander",
+#   "resguardo-indigena-pialapi-pueblo-viejo",
+#   "reserva-forestal-la-planada"
+# )
 destacados <- c(
-  "region-amazonia",
-  "tolima", "boyaca", "narino", "santander",
-  "resguardo-indigena-pialapi-pueblo-viejo",
-  "reserva-forestal-la-planada"
+  "amazonas", "caqueta", "cauca", "guainia", "guaviare", "meta",
+  "putumayo", "vaupes"
 )
+
 
 destacados_regiones <- regs |>
   select(slug_region,

@@ -32,16 +32,11 @@ av_regions <- unname(sib_available_regions(subtipo = c("Departamento"), con = co
 
 av_regions_top <- c("boyaca","narino","tolima", "santander",
                     "amazonas", "caqueta", "guainia", "guaviare", "putumayo", "vaupes")
-# av_regions_territorio <- c(
-#   "reserva-forestal-la-planada",
-#   "resguardo-indigena-pialapi-pueblo-viejo"
-# )
+
 av_regions_amazonas <- c("amazonas", "caqueta", "guainia", "guaviare", "putumayo", "vaupes")
 
 #av_regions <- av_regions[!av_regions %in% av_regions_top]
 #av_regions <- c("boyaca","narino","tolima", "santander")
-
-av_regions <- c(av_regions, av_regions_territorio)
 
 
 map(av_regions, safely(function(region){
@@ -293,7 +288,7 @@ map(av_regions, safely(function(region){
 # })
 
 
-toc()
+toc() # 2:15:00
 
 
 

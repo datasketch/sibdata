@@ -12,22 +12,191 @@
         "tooltip": "Temática definida según criterios establecidos por la Lista Roja de la Unión Internacional para la Conservación de la Naturaleza (UICN) a nivel global, y la Resolución vigente del Ministerio de Ambiente y Desarrollo Sostenible en el contexto nacional. Clasificadas en tres categorías de amenaza: Vulnerable (VU), En Peligro (EN) y En Peligro Crítico (CR).",
         "children": [
           {
-            "slug": "amenazadas_global",
+            "slug": "amenazadas-global",
             "activa": 1,
             "icon": 0,
-            "icon_black": "static/icons/amenazadas_global-black.svg",
-            "icon_white": "static/icons/amenazadas_global-white.svg",
+            "icon_black": "static/icons/amenazadas-global-black.svg",
+            "icon_white": "static/icons/amenazadas-global-white.svg",
             "label": "Categoría UICN global",
-            "tooltip": "La Lista Roja de la Unión Internacional para la Conservación de la Naturaleza (UICN) es un indicador crítico de la salud de la biodiversidad del mundo que permite agilizar acciones que fomente la conservación de la biodiversidad."
+            "tooltip": "La Lista Roja de la Unión Internacional para la Conservación de la Naturaleza (UICN) es un indicador crítico de la salud de la biodiversidad del mundo que permite agilizar acciones que fomente la conservación de la biodiversidad.",
+            "children": [
+              {
+                "slug": "amenazadas-global-cr",
+                "activa": 1,
+                "descripcion": "Categoría de amenaza. Se ha reducido el tamaño de la población o se ha presentado disminución en la extensión de presencia o área de ocupación que genera un riesgo de extinción extremadamente alto en vida silvestre.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-global-cr-black.svg",
+                "icon_white": "static/icons/amenazadas-global-cr-white.svg",
+                "label": "CR",
+                "orden": 10,
+                "tooltip": "En peligro crítico"
+              },
+              {
+                "slug": "amenazadas-global-dd",
+                "activa": 1,
+                "descripcion": "No se tiene la información adecuada para realizar una evaluación del riesgo de extensión basado en su distribución y/o condición de la población.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-global-dd-black.svg",
+                "icon_white": "static/icons/amenazadas-global-dd-white.svg",
+                "label": "DD",
+                "orden": 2,
+                "tooltip": "Datos insuficientes"
+              },
+              {
+                "slug": "amenazadas-global-en",
+                "activa": 1,
+                "descripcion": "Categoría de amenaza. Se ha reducido el tamaño de la población o se ha presentado disminución en la extensión de presencia o área de ocupación que genera un riesgo de extinción muy alto en vida silvestre.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-global-en-black.svg",
+                "icon_white": "static/icons/amenazadas-global-en-white.svg",
+                "label": "EN",
+                "orden": 9,
+                "tooltip": "En peligro"
+              },
+              {
+                "slug": "amenazadas-global-ew",
+                "activa": 1,
+                "descripcion": "El taxón solamente sobrevive en cultivo, cautividad o como poblaciones naturalizadas fuera de su distribución original.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-global-ew-black.svg",
+                "icon_white": "static/icons/amenazadas-global-ew-white.svg",
+                "label": "EW",
+                "orden": 11,
+                "tooltip": "Extinto en estado silvestre"
+              },
+              {
+                "slug": "amenazadas-global-ex",
+                "activa": 1,
+                "descripcion": "Hace referencia a un taxón en el cual el último individuo vivo ha muerto y no se han logrado encontrar nuevos registros en hábitats con condiciones apropiadas al ciclo de vida y formas del taxón.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-global-ex-black.svg",
+                "icon_white": "static/icons/amenazadas-global-ex-white.svg",
+                "label": "EX",
+                "orden": 12,
+                "tooltip": "Extinto"
+              },
+              {
+                "slug": "amenazadas-global-lc",
+                "activa": 1,
+                "descripcion": "Se realizó la evaluación de riesgo de extinción, pero no se cumplieron los criterios para definirlo en alguna categoría de amenaza.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-global-lc-black.svg",
+                "icon_white": "static/icons/amenazadas-global-lc-white.svg",
+                "label": "LC",
+                "orden": 4,
+                "tooltip": "Preocupación menor"
+              },
+              {
+                "slug": "amenazadas-global-lr-cd",
+                "activa": 1,
+                "descripcion": "Especies con bajo riesgo de amenaza, generalmente esta categoría se incluyen taxones ampliamente distribuidos.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-global-lr-cd-black.svg",
+                "icon_white": "static/icons/amenazadas-global-lr-cd-white.svg",
+                "label": "LR/cd",
+                "orden": 7,
+                "tooltip": "Menor riesgo / Dependiente de medidas de conservación"
+              },
+              {
+                "slug": "amenazadas-global-lr-lc",
+                "activa": 1,
+                "descripcion": "Se realizó la evaluación de riesgo de extinción, pero no se cumplieron los criterios para definirlo en alguna categoría de amenaza.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-global-lr-lc-black.svg",
+                "icon_white": "static/icons/amenazadas-global-lr-lc-white.svg",
+                "label": "LR/lc",
+                "orden": 3,
+                "tooltip": "Menor riesgo / Preocupación menor"
+              },
+              {
+                "slug": "amenazadas-global-lr-nt",
+                "activa": 1,
+                "descripcion": "Al realizar la evaluación no se encontraron los criterios para definirlo en alguna categoría de amenaza.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-global-lr-nt-black.svg",
+                "icon_white": "static/icons/amenazadas-global-lr-nt-white.svg",
+                "label": "LR/nt",
+                "orden": 5,
+                "tooltip": "Menor riesgo / Casi amenazado"
+              },
+              {
+                "slug": "amenazadas-global-ne",
+                "activa": 1,
+                "descripcion": "No se ha llevado a cabo el proceso de clasificación de acuerdo a los criterios establecidos.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-global-ne-black.svg",
+                "icon_white": "static/icons/amenazadas-global-ne-white.svg",
+                "label": "NE",
+                "orden": 1,
+                "tooltip": "No evaluado"
+              },
+              {
+                "slug": "amenazadas-global-nt",
+                "activa": 1,
+                "descripcion": "Al realizar la evaluación no se encontraron los criterios para definirse en alguna de las categorías de amenaza.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-global-nt-black.svg",
+                "icon_white": "static/icons/amenazadas-global-nt-white.svg",
+                "label": "NT",
+                "orden": 6,
+                "tooltip": "Casi amenazado"
+              },
+              {
+                "slug": "amenazadas-global-vu",
+                "activa": 1,
+                "descripcion": "Categoría de amenaza. Se ha reducido el tamaño de la población o se ha presentado disminución en la extensión de presencia o área de ocupación que genera un riesgo de extinción alto en vida silvestre.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-global-vu-black.svg",
+                "icon_white": "static/icons/amenazadas-global-vu-white.svg",
+                "label": "VU",
+                "orden": 8,
+                "tooltip": "Vulnerable"
+              }
+            ]
           },
           {
-            "slug": "amenazadas_nacional",
+            "slug": "amenazadas-nacional",
             "activa": 1,
             "icon": 0,
-            "icon_black": "static/icons/amenazadas_nacional-black.svg",
-            "icon_white": "static/icons/amenazadas_nacional-white.svg",
+            "icon_black": "static/icons/amenazadas-nacional-black.svg",
+            "icon_white": "static/icons/amenazadas-nacional-white.svg",
             "label": "Categoría nacional (Res.0126/2024)",
-            "tooltip": "Listado de especies silvestres continentales y marino costeras que se encuentran amenazadas para Colombia de acuerdo a la Resolución 0126 de 2024 de Minambiente."
+            "tooltip": "Listado de especies silvestres continentales y marino costeras que se encuentran amenazadas para Colombia de acuerdo a la Resolución 0126 de 2024 de Minambiente.",
+            "children": [
+              {
+                "slug": "amenazadas-nacional-cr",
+                "activa": 1,
+                "descripcion": "Especies que presentan un riesgo de extinción extremadamente alto en estado de vida silvestre.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-nacional-cr-black.svg",
+                "icon_white": "static/icons/amenazadas-nacional-cr-white.svg",
+                "label": "CR",
+                "orden": 3,
+                "tooltip": "En peligro crítico"
+              },
+              {
+                "slug": "amenazadas-nacional-en",
+                "activa": 1,
+                "descripcion": "Especies que presentan un riesgo de extinción muy alto en estado de vida silvestre.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-nacional-en-black.svg",
+                "icon_white": "static/icons/amenazadas-nacional-en-white.svg",
+                "label": "EN",
+                "orden": 2,
+                "tooltip": "En peligro"
+              },
+              {
+                "slug": "amenazadas-nacional-vu",
+                "activa": 1,
+                "descripcion": "Especies que presentan un riesgo de extinción alto en estado de vida silvestre.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-nacional-vu-black.svg",
+                "icon_white": "static/icons/amenazadas-nacional-vu-white.svg",
+                "label": "VU",
+                "orden": 1,
+                "tooltip": "Vulnerable"
+              }
+            ]
           }
         ]
       },
@@ -50,11 +219,11 @@
         "tooltip": "Especies cuya distribución natural está restringida exclusivamente al territorio colombiano, es decir, no se encuentran en estado silvestre en ninguna otra parte del mundo. La cifra contempla los grupos de aves, peces dulceacuícolas y marinos, plantas, líquenes, mamíferos, coleópteros, anfibios y mariposas."
       },
       {
-        "slug": "exoticas_total",
+        "slug": "exoticas-total",
         "activa": 1,
         "icon": 0,
-        "icon_black": "static/icons/exoticas_total-black.svg",
-        "icon_white": "static/icons/exoticas_total-white.svg",
+        "icon_black": "static/icons/exoticas-total-black.svg",
+        "icon_white": "static/icons/exoticas-total-white.svg",
         "label": "Exóticas total",
         "tooltip": "Se consideran las especies clasificadas como exóticas, exóticas con riesgo de invasión, invasoras y trasplantadas."
       },
@@ -1672,28 +1841,49 @@
       ]
     },
     {
-      "slug": "exoticas_total",
+      "slug": "exoticas-total",
       "exoticas_total_estimadas": 1507,
       "exoticas_estimadas": 1327,
       "exoticas_riesgo_invasion_estimadas": 136,
       "exoticas_invasoras_estimadas": 26,
+      "exoticas_trasplantadas_estimadas": 18,
       "especies_exoticas_total": 37,
       "especies_exoticas": 26,
       "especies_invasoras": "NA",
       "especies_exoticas_riesgo_invasion_total": 7,
+      "especies_trasplantadas": 4,
       "registros_exoticas_total": 3315,
       "registros_exoticas": 153,
       "registros_invasoras": 0,
       "registros_exoticas_riesgo_invasion_total": 12,
+      "registros_trasplantadas": 3150,
       "parent_especies_exoticas_total": 196,
       "parent_especies_exoticas": 142,
       "parent_especies_invasoras": 3,
       "parent_especies_exoticas_riesgo_invasion_total": 41,
+      "parent_especies_trasplantadas": 10,
       "parent_registros_exoticas_total": 9884,
       "parent_registros_exoticas": 981,
       "parent_registros_invasoras": 52,
       "parent_registros_exoticas_riesgo_invasion_total": 1434,
+      "parent_registros_trasplantadas": 7417,
       "list_especies_exoticas_total": [
+        {
+          "label": "Podocnemis expansa",
+          "slug_especie": "podocnemis-expansa",
+          "registros": 2654,
+          "url_gbif": "https://www.gbif.org/species/2442795",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/567055daf289f5a40c0cd2d5/summary",
+          "slug_tematica": "trasplantadas"
+        },
+        {
+          "label": "Podocnemis unifilis",
+          "slug_especie": "podocnemis-unifilis",
+          "registros": 492,
+          "url_gbif": "https://www.gbif.org/species/2442782",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56707a81f289f5a40c0cd2de/summary",
+          "slug_tematica": "trasplantadas"
+        },
         {
           "label": "Capsicum chinense",
           "slug_especie": "capsicum-chinense",
@@ -1749,26 +1939,12 @@
           "slug_tematica": "exoticas"
         },
         {
-          "label": "Syngonium podophyllum",
-          "slug_especie": "syngonium-podophyllum",
+          "label": "Paroaria gularis",
+          "slug_especie": "paroaria-gularis",
           "registros": 3,
-          "url_gbif": "https://www.gbif.org/species/2867866",
-          "slug_tematica": "exoticas"
-        },
-        {
-          "label": "Citrus reticulata",
-          "slug_especie": "citrus-reticulata",
-          "registros": 2,
-          "url_gbif": "https://www.gbif.org/species/3190172",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/594023402f4fd7bc7f393b1e/summary",
-          "slug_tematica": "exoticas"
-        },
-        {
-          "label": "Gomphrena globosa",
-          "slug_especie": "gomphrena-globosa",
-          "registros": 2,
-          "url_gbif": "https://www.gbif.org/species/3084908",
-          "slug_tematica": "exoticas"
+          "url_gbif": "https://www.gbif.org/species/2492082",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e6478883c45700544e3ea7/summary",
+          "slug_tematica": "trasplantadas"
         }
       ],
       "list_especies_exoticas": [
@@ -1850,7 +2026,98 @@
         }
       ],
       "list_especies_invasoras": [],
-      "list_especies_exoticas_riesgo_invasion_total": []
+      "list_especies_exoticas_riesgo_invasion_total": [
+        {
+          "label": "Bubulcus ibis",
+          "slug_especie": "bubulcus-ibis",
+          "registros": 3,
+          "url_gbif": "https://www.gbif.org/species/2480830",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c20d14f0106c67230e7320/summary",
+          "slug_tematica": "exotica-riesgo-invasion-alto"
+        },
+        {
+          "label": "Sphenoclea zeylanica",
+          "slug_especie": "sphenoclea-zeylanica",
+          "registros": 3,
+          "url_gbif": "https://www.gbif.org/species/3158672",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5915f733f827bf0c0ced441e/summary",
+          "slug_tematica": "exotica-riesgo-invasion-moderado"
+        },
+        {
+          "label": "Kalanchoe pinnata",
+          "slug_especie": "kalanchoe-pinnata",
+          "registros": 2,
+          "url_gbif": "https://www.gbif.org/species/2985930",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/59152fa2f827bf0c0ced3b50/summary",
+          "slug_tematica": "exotica-riesgo-invasion-moderado"
+        },
+        {
+          "label": "Azolla filiculoides",
+          "slug_especie": "azolla-filiculoides",
+          "registros": 1,
+          "url_gbif": "https://www.gbif.org/species/2650107",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d04c673c16479905cba818/summary",
+          "slug_tematica": "exotica-riesgo-invasion-alto"
+        },
+        {
+          "label": "Pistia stratiotes",
+          "slug_especie": "pistia-stratiotes",
+          "registros": 1,
+          "url_gbif": "https://www.gbif.org/species/2870583",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7980683c45700544e41db/summary",
+          "slug_tematica": "exotica-riesgo-invasion-alto"
+        },
+        {
+          "label": "Salvinia auriculata",
+          "slug_especie": "salvinia-auriculata",
+          "registros": 1,
+          "url_gbif": "https://www.gbif.org/species/5274861",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5e59ae4b49ec9418588eb9c8/summary",
+          "slug_tematica": "exotica-riesgo-invasion-alto"
+        },
+        {
+          "label": "Thunbergia alata",
+          "slug_especie": "thunbergia-alata",
+          "registros": 1,
+          "url_gbif": "https://www.gbif.org/species/5415463",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7aaf583c45700544e42c6/summary",
+          "slug_tematica": "exotica-riesgo-invasion-alto"
+        }
+      ],
+      "list_especies_trasplantadas": [
+        {
+          "label": "Podocnemis expansa",
+          "slug_especie": "podocnemis-expansa",
+          "registros": 2654,
+          "url_gbif": "https://www.gbif.org/species/2442795",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/567055daf289f5a40c0cd2d5/summary",
+          "slug_tematica": "trasplantadas"
+        },
+        {
+          "label": "Podocnemis unifilis",
+          "slug_especie": "podocnemis-unifilis",
+          "registros": 492,
+          "url_gbif": "https://www.gbif.org/species/2442782",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56707a81f289f5a40c0cd2de/summary",
+          "slug_tematica": "trasplantadas"
+        },
+        {
+          "label": "Paroaria gularis",
+          "slug_especie": "paroaria-gularis",
+          "registros": 3,
+          "url_gbif": "https://www.gbif.org/species/2492082",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e6478883c45700544e3ea7/summary",
+          "slug_tematica": "trasplantadas"
+        },
+        {
+          "label": "Caquetaia kraussii",
+          "slug_especie": "caquetaia-kraussii",
+          "registros": 1,
+          "url_gbif": "https://www.gbif.org/species/2371467",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/596ed6d92f4fd7bc7f3a5020/summary",
+          "slug_tematica": "trasplantadas"
+        }
+      ]
     }
   ],
   "grupos_biologicos": [
@@ -4893,7 +5160,77 @@
             "genus": "Apistogramma"
           }
         ],
-        "exoticas-total": []
+        "exoticas-total": [
+          {
+            "label": "Podocnemis expansa",
+            "registros": 2654,
+            "slug_especie": "podocnemis-expansa",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2442795",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/567055daf289f5a40c0cd2d5/summary",
+            "species": "Podocnemis expansa",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Testudines",
+            "family": "Podocnemididae",
+            "genus": "Podocnemis"
+          },
+          {
+            "label": "Podocnemis unifilis",
+            "registros": 492,
+            "slug_especie": "podocnemis-unifilis",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2442782",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56707a81f289f5a40c0cd2de/summary",
+            "species": "Podocnemis unifilis",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Testudines",
+            "family": "Podocnemididae",
+            "genus": "Podocnemis"
+          },
+          {
+            "label": "Paroaria gularis",
+            "registros": 3,
+            "slug_especie": "paroaria-gularis",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2492082",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e6478883c45700544e3ea7/summary",
+            "species": "Paroaria gularis",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Thraupidae",
+            "genus": "Paroaria"
+          },
+          {
+            "label": "Caquetaia kraussii",
+            "registros": 1,
+            "slug_especie": "caquetaia-kraussii",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2371467",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/596ed6d92f4fd7bc7f3a5020/summary",
+            "species": "Caquetaia kraussii",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Perciformes",
+            "family": "Cichlidae",
+            "genus": "Caquetaia"
+          }
+        ]
       }
     },
     {
@@ -6232,7 +6569,26 @@
             "genus": "Chlorostilbon"
           }
         ],
-        "exoticas-total": []
+        "exoticas-total": [
+          {
+            "label": "Paroaria gularis",
+            "registros": 3,
+            "slug_especie": "paroaria-gularis",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2492082",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e6478883c45700544e3ea7/summary",
+            "species": "Paroaria gularis",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Thraupidae",
+            "genus": "Paroaria"
+          }
+        ]
       }
     },
     {
@@ -15653,7 +16009,25 @@
             "genus": "Apistogramma"
           }
         ],
-        "exoticas-total": []
+        "exoticas-total": [
+          {
+            "label": "Caquetaia kraussii",
+            "registros": 1,
+            "slug_especie": "caquetaia-kraussii",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "peces",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2371467",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/596ed6d92f4fd7bc7f3a5020/summary",
+            "species": "Caquetaia kraussii",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Perciformes",
+            "family": "Cichlidae",
+            "genus": "Caquetaia"
+          }
+        ]
       }
     },
     {
@@ -16461,7 +16835,25 @@
             "genus": "Apistogramma"
           }
         ],
-        "exoticas-total": []
+        "exoticas-total": [
+          {
+            "label": "Caquetaia kraussii",
+            "registros": 1,
+            "slug_especie": "caquetaia-kraussii",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "peces-dulceacuicolas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2371467",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/596ed6d92f4fd7bc7f3a5020/summary",
+            "species": "Caquetaia kraussii",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Perciformes",
+            "family": "Cichlidae",
+            "genus": "Caquetaia"
+          }
+        ]
       }
     },
     {
@@ -18888,7 +19280,42 @@
         ],
         "migratorias": [],
         "endemicas": [],
-        "exoticas-total": []
+        "exoticas-total": [
+          {
+            "label": "Podocnemis expansa",
+            "registros": 2654,
+            "slug_especie": "podocnemis-expansa",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "reptiles",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2442795",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/567055daf289f5a40c0cd2d5/summary",
+            "species": "Podocnemis expansa",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Testudines",
+            "family": "Podocnemididae",
+            "genus": "Podocnemis"
+          },
+          {
+            "label": "Podocnemis unifilis",
+            "registros": 492,
+            "slug_especie": "podocnemis-unifilis",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "reptiles",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2442782",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56707a81f289f5a40c0cd2de/summary",
+            "species": "Podocnemis unifilis",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Testudines",
+            "family": "Podocnemididae",
+            "genus": "Podocnemis"
+          }
+        ]
       }
     },
     {
@@ -21388,7 +21815,77 @@
             "genus": "Apistogramma"
           }
         ],
-        "exoticas-total": []
+        "exoticas-total": [
+          {
+            "label": "Podocnemis expansa",
+            "registros": 2654,
+            "slug_especie": "podocnemis-expansa",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2442795",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/567055daf289f5a40c0cd2d5/summary",
+            "species": "Podocnemis expansa",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Testudines",
+            "family": "Podocnemididae",
+            "genus": "Podocnemis"
+          },
+          {
+            "label": "Podocnemis unifilis",
+            "registros": 492,
+            "slug_especie": "podocnemis-unifilis",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2442782",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56707a81f289f5a40c0cd2de/summary",
+            "species": "Podocnemis unifilis",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Testudines",
+            "family": "Podocnemididae",
+            "genus": "Podocnemis"
+          },
+          {
+            "label": "Paroaria gularis",
+            "registros": 3,
+            "slug_especie": "paroaria-gularis",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2492082",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e6478883c45700544e3ea7/summary",
+            "species": "Paroaria gularis",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Thraupidae",
+            "genus": "Paroaria"
+          },
+          {
+            "label": "Caquetaia kraussii",
+            "registros": 1,
+            "slug_especie": "caquetaia-kraussii",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2371467",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/596ed6d92f4fd7bc7f3a5020/summary",
+            "species": "Caquetaia kraussii",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Perciformes",
+            "family": "Cichlidae",
+            "genus": "Caquetaia"
+          }
+        ]
       }
     }
   ],

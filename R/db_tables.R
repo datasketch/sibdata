@@ -166,6 +166,11 @@ sibdata_aporte_region_especial <- function(con){
   tbl(con, "aporte_region_especial")
 }
 
+#' @export
+sibdata_referencias_home <- function(con){
+  tbl(con, "referencias_home")
+}
+
 
 
 

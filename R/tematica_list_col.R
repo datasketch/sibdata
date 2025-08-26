@@ -207,7 +207,7 @@ tematica_list_col <- function(region, con){
     collect() |>
     distinct() |>
     slice(1:10)
-  esp_list_cites_i_ii <- list_species(region, tematica = "cites-i-ii", con = con) |>
+  esp_list_cites_i_ii <- list_species(region, tematica = "cites-i_ii", con = con) |>
     select(label, slug_especie, registros, url_gbif, url_cbc, slug_tematica) |>
     arrange(desc(registros)) |>
     collect() |>
@@ -250,7 +250,7 @@ tematica_list_col <- function(region, con){
 
   endemicas <- c(
     list(slug = "endemicas",
-         endemcias_estimadas = estimadas$especies_endemicas_estimadas),
+         endemicas_estimadas = estimadas$especies_endemicas_estimadas),
     region_indicadores(region, inds_endemicas, con = con),
     region_indicadores(parent_region, inds_parent_endemicas, con = con),
     list(list_especies_endemicas = NULL),
@@ -306,8 +306,14 @@ tematica_list_col <- function(region, con){
     distinct() |>
     slice(1:10)
   esp_list_exoticas_riesgo_invasion_total <- list_species(region,
-                                                    tematica = "exotica-riesgo-invasion-total",
+                                                    tematica = "exoticas-riesgo-invasion-total",
                                                     con = con) |>
+    select(label, slug_especie, registros, url_gbif, url_cbc, slug_tematica) |>
+    arrange(desc(registros)) |>
+    collect() |>
+    distinct() |>
+    slice(1:10)
+  esp_list_trasplantadas <- list_species(region, tematica = "trasplantadas", con = con) |>
     select(label, slug_especie, registros, url_gbif, url_cbc, slug_tematica) |>
     arrange(desc(registros)) |>
     collect() |>
@@ -315,17 +321,19 @@ tematica_list_col <- function(region, con){
     slice(1:10)
 
   exoticas <- c(
-    list(slug = "exoticas-invasoras",
+    list(slug = "exoticas-total",
          exoticas_total_estimadas = estimadas$especies_exoticas_total_estimadas,
          exoticas_estimadas = estimadas$especies_exoticas_estimadas,
          exoticas_riesgo_invasion_estimadas = estimadas$especies_exoticas_riesgo_invasion_estimadas,
-         exoticas_invasoras_estimadas = estimadas$especies_invasoras_estimadas),
+         exoticas_invasoras_estimadas = estimadas$especies_invasoras_estimadas,
+         exoticas_trasplantadas_estimadas = estimadas$especies_trasplantadas_estimadas),
     region_indicadores(region, inds_exoticas, con = con),
     region_indicadores(parent_region, inds_parent_exoticas, con = con),
     list(list_especies_exoticas_total = esp_list_exoticas_total,
          list_especies_exoticas = esp_list_exoticas,
          list_especies_invasoras = esp_list_invasoras,
-         list_especies_exoticas_riesgo_invasion_total = esp_list_exoticas_riesgo_invasion_total)
+         list_especies_exoticas_riesgo_invasion_total = esp_list_exoticas_riesgo_invasion_total,
+         list_especies_trasplantadas = esp_list_trasplantadas)
   )
 
   list(

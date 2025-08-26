@@ -10,6 +10,8 @@ list_species <- function(region,
   # tematica <- "amenazadas_nacional_total"
   # tematica <- "cites-i"
   # grupo <- "hongos"
+  # tematica <- "trasplantadas"
+  # tematica <- "exoticas-total"
 
 
   # Convert empty strings and "todos" to NULL for consistent behavior
@@ -39,7 +41,8 @@ list_species <- function(region,
                     "amenazadas-nacional-cr", "amenazadas-nacional-en",
                     "amenazadas-nacional-vu")
     } else if(tematica == "exoticas-total"){
-      tematica <- c("exoticas", "exoticas-riesgo-invasion-total", "invasoras")
+      tematica <- c("exoticas", "exoticas-riesgo-invasion-total",
+                    "invasoras", "trasplantadas")
     } else if(tematica == "exoticas-riesgo-invasion-total"){
     tematica <- c("exotica-riesgo-invasion-bajo",
                   "exotica-riesgo-invasion-moderado",

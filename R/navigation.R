@@ -36,7 +36,7 @@ navigation_trees <- function(type, region = NULL, con = con){
       filter(parent != "cites") |>
       filter(parent != "amenazadas_global") |>
       filter(parent != "amenazadas_nacional") |>
-      filter(parent != "exoticas_total") |>
+      filter(parent != "exoticas-total") |>
       group_by(parent) |>
       arrange(slug)
 

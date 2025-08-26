@@ -55,7 +55,6 @@ ind_meta <- read_csv("data-raw/diccionaries/ind_meta.csv")
 ds$ind_meta <- ind_meta
 
 
-
 # Add imagenes a destacadas
 gallery_images <- read_csv("data-raw/gallery_images.csv")
 ds$gallery_images <- gallery_images
@@ -69,6 +68,8 @@ ds$preg_frecuentes <- preg_frecuentes
 glosario <- read_csv("data-raw/glosario.csv")
 ds$glosario <- glosario
 
+referencias_home <- read_csv("data-raw/referencias_home.csv")
+ds$referencias_home <- referencias_home
 
 #saveRDS(ds, "data-raw/ds.rds")
 #usethis::use_data(ds, internal = TRUE, overwrite = TRUE)

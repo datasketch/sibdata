@@ -143,10 +143,12 @@ default_indicadores <- function(section){
       "especies_exoticas" = "especies_exoticas",
       "especies_invasoras" = "especies_invasoras",
       "especies_exoticas_riesgo_invasion_total" = "especies_exoticas_riesgo_invasion_total",
+      "especies_trasplantadas" = "especies_trasplantadas",
       "registros_exoticas_total" = "registros_exoticas_total",
       "registros_exoticas" = "registros_exoticas",
       "registros_invasoras" = "registros_invasoras",
-      "registros_exoticas_riesgo_invasion_total" = "registros_exoticas_riesgo_invasion_total"
+      "registros_exoticas_riesgo_invasion_total" = "registros_exoticas_riesgo_invasion_total",
+      "registros_trasplantadas" = "registros_trasplantadas"
     )
   }
   if(section == "inds_parent_exoticas"){
@@ -155,10 +157,12 @@ default_indicadores <- function(section){
       "parent_especies_exoticas" = "especies_exoticas",
       "parent_especies_invasoras" = "especies_invasoras",
       "parent_especies_exoticas_riesgo_invasion_total" = "especies_exoticas_riesgo_invasion_total",
+      "parent_especies_trasplantadas" = "especies_trasplantadas",
       "parent_registros_exoticas_total" = "registros_exoticas_total",
       "parent_registros_exoticas" = "registros_exoticas",
       "parent_registros_invasoras" = "registros_invasoras",
-      "parent_registros_exoticas_riesgo_invasion_total" = "registros_exoticas_riesgo_invasion_total"
+      "parent_registros_exoticas_riesgo_invasion_total" = "registros_exoticas_riesgo_invasion_total",
+      "parent_registros_trasplantadas" = "registros_trasplantadas"
     )
   }
 

@@ -271,7 +271,7 @@ map(av_regions, safely(function(region){
 # })
 
 
-toc()
+toc() # 3:30 mins
 
 
 

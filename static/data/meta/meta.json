@@ -32,22 +32,191 @@
         "tooltip": "Temática definida según criterios establecidos por la Lista Roja de la Unión Internacional para la Conservación de la Naturaleza (UICN) a nivel global, y la Resolución vigente del Ministerio de Ambiente y Desarrollo Sostenible en el contexto nacional. Clasificadas en tres categorías de amenaza: Vulnerable (VU), En Peligro (EN) y En Peligro Crítico (CR).",
         "children": [
           {
-            "slug": "amenazadas_global",
+            "slug": "amenazadas-global",
             "activa": 1,
             "icon": 0,
-            "icon_black": "static/icons/amenazadas_global-black.svg",
-            "icon_white": "static/icons/amenazadas_global-white.svg",
+            "icon_black": "static/icons/amenazadas-global-black.svg",
+            "icon_white": "static/icons/amenazadas-global-white.svg",
             "label": "Categoría UICN global",
-            "tooltip": "La Lista Roja de la Unión Internacional para la Conservación de la Naturaleza (UICN) es un indicador crítico de la salud de la biodiversidad del mundo que permite agilizar acciones que fomente la conservación de la biodiversidad."
+            "tooltip": "La Lista Roja de la Unión Internacional para la Conservación de la Naturaleza (UICN) es un indicador crítico de la salud de la biodiversidad del mundo que permite agilizar acciones que fomente la conservación de la biodiversidad.",
+            "children": [
+              {
+                "slug": "amenazadas-global-cr",
+                "activa": 1,
+                "descripcion": "Categoría de amenaza. Se ha reducido el tamaño de la población o se ha presentado disminución en la extensión de presencia o área de ocupación que genera un riesgo de extinción extremadamente alto en vida silvestre.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-global-cr-black.svg",
+                "icon_white": "static/icons/amenazadas-global-cr-white.svg",
+                "label": "CR",
+                "orden": 10,
+                "tooltip": "En peligro crítico"
+              },
+              {
+                "slug": "amenazadas-global-dd",
+                "activa": 1,
+                "descripcion": "No se tiene la información adecuada para realizar una evaluación del riesgo de extensión basado en su distribución y/o condición de la población.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-global-dd-black.svg",
+                "icon_white": "static/icons/amenazadas-global-dd-white.svg",
+                "label": "DD",
+                "orden": 2,
+                "tooltip": "Datos insuficientes"
+              },
+              {
+                "slug": "amenazadas-global-en",
+                "activa": 1,
+                "descripcion": "Categoría de amenaza. Se ha reducido el tamaño de la población o se ha presentado disminución en la extensión de presencia o área de ocupación que genera un riesgo de extinción muy alto en vida silvestre.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-global-en-black.svg",
+                "icon_white": "static/icons/amenazadas-global-en-white.svg",
+                "label": "EN",
+                "orden": 9,
+                "tooltip": "En peligro"
+              },
+              {
+                "slug": "amenazadas-global-ew",
+                "activa": 1,
+                "descripcion": "El taxón solamente sobrevive en cultivo, cautividad o como poblaciones naturalizadas fuera de su distribución original.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-global-ew-black.svg",
+                "icon_white": "static/icons/amenazadas-global-ew-white.svg",
+                "label": "EW",
+                "orden": 11,
+                "tooltip": "Extinto en estado silvestre"
+              },
+              {
+                "slug": "amenazadas-global-ex",
+                "activa": 1,
+                "descripcion": "Hace referencia a un taxón en el cual el último individuo vivo ha muerto y no se han logrado encontrar nuevos registros en hábitats con condiciones apropiadas al ciclo de vida y formas del taxón.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-global-ex-black.svg",
+                "icon_white": "static/icons/amenazadas-global-ex-white.svg",
+                "label": "EX",
+                "orden": 12,
+                "tooltip": "Extinto"
+              },
+              {
+                "slug": "amenazadas-global-lc",
+                "activa": 1,
+                "descripcion": "Se realizó la evaluación de riesgo de extinción, pero no se cumplieron los criterios para definirlo en alguna categoría de amenaza.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-global-lc-black.svg",
+                "icon_white": "static/icons/amenazadas-global-lc-white.svg",
+                "label": "LC",
+                "orden": 4,
+                "tooltip": "Preocupación menor"
+              },
+              {
+                "slug": "amenazadas-global-lr-cd",
+                "activa": 1,
+                "descripcion": "Especies con bajo riesgo de amenaza, generalmente esta categoría se incluyen taxones ampliamente distribuidos.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-global-lr-cd-black.svg",
+                "icon_white": "static/icons/amenazadas-global-lr-cd-white.svg",
+                "label": "LR/cd",
+                "orden": 7,
+                "tooltip": "Menor riesgo / Dependiente de medidas de conservación"
+              },
+              {
+                "slug": "amenazadas-global-lr-lc",
+                "activa": 1,
+                "descripcion": "Se realizó la evaluación de riesgo de extinción, pero no se cumplieron los criterios para definirlo en alguna categoría de amenaza.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-global-lr-lc-black.svg",
+                "icon_white": "static/icons/amenazadas-global-lr-lc-white.svg",
+                "label": "LR/lc",
+                "orden": 3,
+                "tooltip": "Menor riesgo / Preocupación menor"
+              },
+              {
+                "slug": "amenazadas-global-lr-nt",
+                "activa": 1,
+                "descripcion": "Al realizar la evaluación no se encontraron los criterios para definirlo en alguna categoría de amenaza.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-global-lr-nt-black.svg",
+                "icon_white": "static/icons/amenazadas-global-lr-nt-white.svg",
+                "label": "LR/nt",
+                "orden": 5,
+                "tooltip": "Menor riesgo / Casi amenazado"
+              },
+              {
+                "slug": "amenazadas-global-ne",
+                "activa": 1,
+                "descripcion": "No se ha llevado a cabo el proceso de clasificación de acuerdo a los criterios establecidos.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-global-ne-black.svg",
+                "icon_white": "static/icons/amenazadas-global-ne-white.svg",
+                "label": "NE",
+                "orden": 1,
+                "tooltip": "No evaluado"
+              },
+              {
+                "slug": "amenazadas-global-nt",
+                "activa": 1,
+                "descripcion": "Al realizar la evaluación no se encontraron los criterios para definirse en alguna de las categorías de amenaza.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-global-nt-black.svg",
+                "icon_white": "static/icons/amenazadas-global-nt-white.svg",
+                "label": "NT",
+                "orden": 6,
+                "tooltip": "Casi amenazado"
+              },
+              {
+                "slug": "amenazadas-global-vu",
+                "activa": 1,
+                "descripcion": "Categoría de amenaza. Se ha reducido el tamaño de la población o se ha presentado disminución en la extensión de presencia o área de ocupación que genera un riesgo de extinción alto en vida silvestre.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-global-vu-black.svg",
+                "icon_white": "static/icons/amenazadas-global-vu-white.svg",
+                "label": "VU",
+                "orden": 8,
+                "tooltip": "Vulnerable"
+              }
+            ]
           },
           {
-            "slug": "amenazadas_nacional",
+            "slug": "amenazadas-nacional",
             "activa": 1,
             "icon": 0,
-            "icon_black": "static/icons/amenazadas_nacional-black.svg",
-            "icon_white": "static/icons/amenazadas_nacional-white.svg",
+            "icon_black": "static/icons/amenazadas-nacional-black.svg",
+            "icon_white": "static/icons/amenazadas-nacional-white.svg",
             "label": "Categoría nacional (Res.0126/2024)",
-            "tooltip": "Listado de especies silvestres continentales y marino costeras que se encuentran amenazadas para Colombia de acuerdo a la Resolución 0126 de 2024 de Minambiente."
+            "tooltip": "Listado de especies silvestres continentales y marino costeras que se encuentran amenazadas para Colombia de acuerdo a la Resolución 0126 de 2024 de Minambiente.",
+            "children": [
+              {
+                "slug": "amenazadas-nacional-cr",
+                "activa": 1,
+                "descripcion": "Especies que presentan un riesgo de extinción extremadamente alto en estado de vida silvestre.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-nacional-cr-black.svg",
+                "icon_white": "static/icons/amenazadas-nacional-cr-white.svg",
+                "label": "CR",
+                "orden": 3,
+                "tooltip": "En peligro crítico"
+              },
+              {
+                "slug": "amenazadas-nacional-en",
+                "activa": 1,
+                "descripcion": "Especies que presentan un riesgo de extinción muy alto en estado de vida silvestre.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-nacional-en-black.svg",
+                "icon_white": "static/icons/amenazadas-nacional-en-white.svg",
+                "label": "EN",
+                "orden": 2,
+                "tooltip": "En peligro"
+              },
+              {
+                "slug": "amenazadas-nacional-vu",
+                "activa": 1,
+                "descripcion": "Especies que presentan un riesgo de extinción alto en estado de vida silvestre.",
+                "icon": 0,
+                "icon_black": "static/icons/amenazadas-nacional-vu-black.svg",
+                "icon_white": "static/icons/amenazadas-nacional-vu-white.svg",
+                "label": "VU",
+                "orden": 1,
+                "tooltip": "Vulnerable"
+              }
+            ]
           }
         ]
       },
@@ -70,11 +239,11 @@
         "tooltip": "Especies cuya distribución natural está restringida exclusivamente al territorio colombiano, es decir, no se encuentran en estado silvestre en ninguna otra parte del mundo. La cifra contempla los grupos de aves, peces dulceacuícolas y marinos, plantas, líquenes, mamíferos, coleópteros, anfibios y mariposas."
       },
       {
-        "slug": "exoticas_total",
+        "slug": "exoticas-total",
         "activa": 1,
         "icon": 0,
-        "icon_black": "static/icons/exoticas_total-black.svg",
-        "icon_white": "static/icons/exoticas_total-white.svg",
+        "icon_black": "static/icons/exoticas-total-black.svg",
+        "icon_white": "static/icons/exoticas-total-white.svg",
         "label": "Exóticas total",
         "tooltip": "Se consideran las especies clasificadas como exóticas, exóticas con riesgo de invasión, invasoras y trasplantadas."
       },
@@ -2702,27 +2871,32 @@
       ]
     },
     {
-      "slug": "exoticas_total",
+      "slug": "exoticas-total",
       "exoticas_total_estimadas": 1507,
       "exoticas_estimadas": 1327,
       "exoticas_riesgo_invasion_estimadas": 136,
       "exoticas_invasoras_estimadas": 26,
+      "exoticas_trasplantadas_estimadas": 18,
       "especies_exoticas_total": 454,
       "especies_exoticas": 363,
       "especies_invasoras": 7,
       "especies_exoticas_riesgo_invasion_total": 71,
+      "especies_trasplantadas": 13,
       "registros_exoticas_total": 87750,
       "registros_exoticas": 47683,
       "registros_invasoras": 155,
       "registros_exoticas_riesgo_invasion_total": 37277,
+      "registros_trasplantadas": 2635,
       "parent_especies_exoticas_total": 1244,
       "parent_especies_exoticas": 1096,
       "parent_especies_invasoras": 22,
       "parent_especies_exoticas_riesgo_invasion_total": 111,
+      "parent_especies_trasplantadas": 15,
       "parent_registros_exoticas_total": 876100,
       "parent_registros_exoticas": 362615,
       "parent_registros_invasoras": 96619,
       "parent_registros_exoticas_riesgo_invasion_total": 329555,
+      "parent_registros_trasplantadas": 87311,
       "list_especies_exoticas_total": [
         {
           "label": "Bos taurus",
@@ -2741,12 +2915,27 @@
           "slug_tematica": "exoticas"
         },
         {
+          "label": "Paroaria nigrogenis",
+          "slug_especie": "paroaria-nigrogenis",
+          "registros": 1540,
+          "url_gbif": "https://www.gbif.org/species/5845551",
+          "slug_tematica": "trasplantadas"
+        },
+        {
           "label": "Canis lupus",
           "slug_especie": "canis-lupus",
           "registros": 1493,
           "url_gbif": "https://www.gbif.org/species/5219173",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56ccfbfb207ecea54a561e5a/summary",
           "slug_tematica": "exoticas"
+        },
+        {
+          "label": "Paroaria gularis",
+          "slug_especie": "paroaria-gularis",
+          "registros": 535,
+          "url_gbif": "https://www.gbif.org/species/2492082",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e6478883c45700544e3ea7/summary",
+          "slug_tematica": "trasplantadas"
         },
         {
           "label": "Spathiphyllum cannifolium",
@@ -2763,42 +2952,26 @@
           "slug_tematica": "exoticas"
         },
         {
+          "label": "Podocnemis unifilis",
+          "slug_especie": "podocnemis-unifilis",
+          "registros": 202,
+          "url_gbif": "https://www.gbif.org/species/2442782",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56707a81f289f5a40c0cd2de/summary",
+          "slug_tematica": "trasplantadas"
+        },
+        {
+          "label": "Boa constrictor",
+          "slug_especie": "boa-constrictor",
+          "registros": 145,
+          "url_gbif": "https://www.gbif.org/species/2464899",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cae177f0106c67230e7473/summary",
+          "slug_tematica": "trasplantadas"
+        },
+        {
           "label": "Astrocaryum aculeatum",
           "slug_especie": "astrocaryum-aculeatum",
           "registros": 88,
           "url_gbif": "https://www.gbif.org/species/2733384",
-          "slug_tematica": "exoticas"
-        },
-        {
-          "label": "Psidium guajava",
-          "slug_especie": "psidium-guajava",
-          "registros": 83,
-          "url_gbif": "https://www.gbif.org/species/5420380",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/5948609c2f4fd7bc7f39699c/summary",
-          "slug_tematica": "exoticas"
-        },
-        {
-          "label": "Caladium bicolor",
-          "slug_especie": "caladium-bicolor",
-          "registros": 81,
-          "url_gbif": "https://www.gbif.org/species/2868390",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56d7bd213c16479905cba93c/summary",
-          "slug_tematica": "exoticas"
-        },
-        {
-          "label": "Lantana camara",
-          "slug_especie": "lantana-camara",
-          "registros": 68,
-          "url_gbif": "https://www.gbif.org/species/2925303",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/594944a42f4fd7bc7f397513/summary",
-          "slug_tematica": "exoticas"
-        },
-        {
-          "label": "Anacardium occidentale",
-          "slug_especie": "anacardium-occidentale",
-          "registros": 54,
-          "url_gbif": "https://www.gbif.org/species/5421368",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e5064083c45700544e3e6f/summary",
           "slug_tematica": "exoticas"
         }
       ],
@@ -2937,7 +3110,165 @@
           "slug_tematica": "invasoras"
         }
       ],
-      "list_especies_exoticas_riesgo_invasion_total": []
+      "list_especies_exoticas_riesgo_invasion_total": [
+        {
+          "label": "Bubulcus ibis",
+          "slug_especie": "bubulcus-ibis",
+          "registros": 18285,
+          "url_gbif": "https://www.gbif.org/species/2480830",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c20d14f0106c67230e7320/summary",
+          "slug_tematica": "exotica-riesgo-invasion-alto"
+        },
+        {
+          "label": "Gallus gallus",
+          "slug_especie": "gallus-gallus",
+          "registros": 12941,
+          "url_gbif": "https://www.gbif.org/species/9326020",
+          "slug_tematica": "exotica-riesgo-invasion-moderado"
+        },
+        {
+          "label": "Columba livia",
+          "slug_especie": "columba-livia",
+          "registros": 3062,
+          "url_gbif": "https://www.gbif.org/species/2495414",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4b5f1f0106c67230e7387/summary",
+          "slug_tematica": "exotica-riesgo-invasion-alto"
+        },
+        {
+          "label": "Acacia mangium",
+          "slug_especie": "acacia-mangium",
+          "registros": 565,
+          "url_gbif": "https://www.gbif.org/species/2979091",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/595d2d742f4fd7bc7f3a1722/summary",
+          "slug_tematica": "exotica-riesgo-invasion-moderado"
+        },
+        {
+          "label": "Felis catus",
+          "slug_especie": "felis-catus",
+          "registros": 565,
+          "url_gbif": "https://www.gbif.org/species/2435035",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c5e3a7f0106c67230e73ad/summary",
+          "slug_tematica": "exotica-riesgo-invasion-alto"
+        },
+        {
+          "label": "Sus scrofa",
+          "slug_especie": "sus-scrofa",
+          "registros": 382,
+          "url_gbif": "https://www.gbif.org/species/7705930",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cc7b75207ecea54a561e30/summary",
+          "slug_tematica": "exotica-riesgo-invasion-alto"
+        },
+        {
+          "label": "Urochloa brizantha",
+          "slug_especie": "urochloa-brizantha",
+          "registros": 192,
+          "url_gbif": "https://www.gbif.org/species/2705862",
+          "slug_tematica": "exotica-riesgo-invasion-alto"
+        },
+        {
+          "label": "Numida meleagris",
+          "slug_especie": "numida-meleagris",
+          "registros": 124,
+          "url_gbif": "https://www.gbif.org/species/2473341",
+          "slug_tematica": "exotica-riesgo-invasion-moderado"
+        },
+        {
+          "label": "Meleagris gallopavo",
+          "slug_especie": "meleagris-gallopavo",
+          "registros": 123,
+          "url_gbif": "https://www.gbif.org/species/9606290",
+          "slug_tematica": "exotica-riesgo-invasion-moderado"
+        },
+        {
+          "label": "Lonchura malacca",
+          "slug_especie": "lonchura-malacca",
+          "registros": 92,
+          "url_gbif": "https://www.gbif.org/species/2493626",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e639db83c45700544e3ea1/summary",
+          "slug_tematica": "exotica-riesgo-invasion-alto"
+        }
+      ],
+      "list_especies_trasplantadas": [
+        {
+          "label": "Paroaria nigrogenis",
+          "slug_especie": "paroaria-nigrogenis",
+          "registros": 1540,
+          "url_gbif": "https://www.gbif.org/species/5845551",
+          "slug_tematica": "trasplantadas"
+        },
+        {
+          "label": "Paroaria gularis",
+          "slug_especie": "paroaria-gularis",
+          "registros": 535,
+          "url_gbif": "https://www.gbif.org/species/2492082",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e6478883c45700544e3ea7/summary",
+          "slug_tematica": "trasplantadas"
+        },
+        {
+          "label": "Podocnemis unifilis",
+          "slug_especie": "podocnemis-unifilis",
+          "registros": 202,
+          "url_gbif": "https://www.gbif.org/species/2442782",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56707a81f289f5a40c0cd2de/summary",
+          "slug_tematica": "trasplantadas"
+        },
+        {
+          "label": "Boa constrictor",
+          "slug_especie": "boa-constrictor",
+          "registros": 145,
+          "url_gbif": "https://www.gbif.org/species/2464899",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cae177f0106c67230e7473/summary",
+          "slug_tematica": "trasplantadas"
+        },
+        {
+          "label": "Tupinambis teguixin",
+          "slug_especie": "tupinambis-teguixin",
+          "registros": 85,
+          "url_gbif": "https://www.gbif.org/species/2471948",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e0f3ed83c45700544e3cfc/summary",
+          "slug_tematica": "trasplantadas"
+        },
+        {
+          "label": "Piaractus brachypomus",
+          "slug_especie": "piaractus-brachypomus",
+          "registros": 63,
+          "url_gbif": "https://www.gbif.org/species/2353225",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5938ac322f4fd7bc7f3853fb/summary",
+          "slug_tematica": "trasplantadas"
+        },
+        {
+          "label": "Podocnemis lewyana",
+          "slug_especie": "podocnemis-lewyana",
+          "registros": 30,
+          "url_gbif": "https://www.gbif.org/species/2442789",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5670695cf289f5a40c0cd2d6/summary",
+          "slug_tematica": "trasplantadas"
+        },
+        {
+          "label": "Caquetaia kraussii",
+          "slug_especie": "caquetaia-kraussii",
+          "registros": 12,
+          "url_gbif": "https://www.gbif.org/species/2371467",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/596ed6d92f4fd7bc7f3a5020/summary",
+          "slug_tematica": "trasplantadas"
+        },
+        {
+          "label": "Macrobrachium amazonicum",
+          "slug_especie": "macrobrachium-amazonicum",
+          "registros": 10,
+          "url_gbif": "https://www.gbif.org/species/2224710",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/597243592f4fd7bc7f3a824e/summary",
+          "slug_tematica": "trasplantadas"
+        },
+        {
+          "label": "Podocnemis expansa",
+          "slug_especie": "podocnemis-expansa",
+          "registros": 7,
+          "url_gbif": "https://www.gbif.org/species/2442795",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/567055daf289f5a40c0cd2d5/summary",
+          "slug_tematica": "trasplantadas"
+        }
+      ]
     }
   ],
   "grupos_biologicos": [
@@ -7347,6 +7678,23 @@
             "genus": "Equus"
           },
           {
+            "label": "Paroaria nigrogenis",
+            "registros": 1540,
+            "slug_especie": "paroaria-nigrogenis",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5845551",
+            "species": "Paroaria nigrogenis",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Thraupidae",
+            "genus": "Paroaria"
+          },
+          {
             "label": "Canis lupus",
             "registros": 1493,
             "slug_especie": "canis-lupus",
@@ -7365,6 +7713,92 @@
             "genus": "Canis"
           },
           {
+            "label": "Paroaria gularis",
+            "registros": 535,
+            "slug_especie": "paroaria-gularis",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2492082",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e6478883c45700544e3ea7/summary",
+            "species": "Paroaria gularis",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Thraupidae",
+            "genus": "Paroaria"
+          },
+          {
+            "label": "Podocnemis unifilis",
+            "registros": 202,
+            "slug_especie": "podocnemis-unifilis",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2442782",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56707a81f289f5a40c0cd2de/summary",
+            "species": "Podocnemis unifilis",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Testudines",
+            "family": "Podocnemididae",
+            "genus": "Podocnemis"
+          },
+          {
+            "label": "Boa constrictor",
+            "registros": 145,
+            "slug_especie": "boa-constrictor",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2464899",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cae177f0106c67230e7473/summary",
+            "species": "Boa constrictor",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Squamata",
+            "family": "Boidae",
+            "genus": "Boa"
+          },
+          {
+            "label": "Tupinambis teguixin",
+            "registros": 85,
+            "slug_especie": "tupinambis-teguixin",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2471948",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e0f3ed83c45700544e3cfc/summary",
+            "species": "Tupinambis teguixin",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Squamata",
+            "family": "Teiidae",
+            "genus": "Tupinambis"
+          },
+          {
+            "label": "Piaractus brachypomus",
+            "registros": 63,
+            "slug_especie": "piaractus-brachypomus",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2353225",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/5938ac322f4fd7bc7f3853fb/summary",
+            "species": "Piaractus brachypomus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Characiformes",
+            "family": "Serrasalmidae",
+            "genus": "Piaractus"
+          },
+          {
             "label": "Paratrechina fulva",
             "registros": 53,
             "slug_especie": "paratrechina-fulva",
@@ -7381,113 +7815,6 @@
             "order": "Hymenoptera",
             "family": "Formicidae",
             "genus": "Paratrechina"
-          },
-          {
-            "label": "Lissachatina fulica",
-            "registros": 48,
-            "slug_especie": "lissachatina-fulica",
-            "slug_tematica": "invasoras",
-            "tematica_label": "Invasoras",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/8790531",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/59723b5c2f4fd7bc7f3a7e51/summary",
-            "species": "Lissachatina fulica",
-            "kingdom": "Animalia",
-            "phylum": "Mollusca",
-            "class": "Gastropoda",
-            "order": "Stylommatophora",
-            "family": "Achatinidae",
-            "genus": "Lissachatina"
-          },
-          {
-            "label": "Apis mellifera",
-            "registros": 30,
-            "slug_especie": "apis-mellifera",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/1341976",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/58b995177bd3becd0fc7395e/summary",
-            "species": "Apis mellifera",
-            "kingdom": "Animalia",
-            "phylum": "Arthropoda",
-            "class": "Insecta",
-            "order": "Hymenoptera",
-            "family": "Apidae",
-            "genus": "Apis"
-          },
-          {
-            "label": "Monomorium floricola",
-            "registros": 27,
-            "slug_especie": "monomorium-floricola",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/1314699",
-            "species": "Monomorium floricola",
-            "kingdom": "Animalia",
-            "phylum": "Arthropoda",
-            "class": "Insecta",
-            "order": "Hymenoptera",
-            "family": "Formicidae",
-            "genus": "Monomorium"
-          },
-          {
-            "label": "Cavia porcellus",
-            "registros": 26,
-            "slug_especie": "cavia-porcellus",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "vernacular_name_es": "erizo",
-            "url_gbif": "https://www.gbif.org/species/5219702",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/5ce71f778fe61bf73db11365/summary",
-            "species": "Cavia porcellus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Mammalia",
-            "order": "Rodentia",
-            "family": "Caviidae",
-            "genus": "Cavia"
-          },
-          {
-            "label": "Oreochromis niloticus",
-            "registros": 23,
-            "slug_especie": "oreochromis-niloticus",
-            "slug_tematica": "invasoras",
-            "tematica_label": "Invasoras",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/4285694",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/593f5b232f4fd7bc7f38b39d/summary",
-            "species": "Oreochromis niloticus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "order": "Perciformes",
-            "family": "Cichlidae",
-            "genus": "Oreochromis"
-          },
-          {
-            "label": "Aedes albopictus",
-            "registros": 21,
-            "slug_especie": "aedes-albopictus",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/1651430",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e036ca83c45700544e3cb6/summary",
-            "species": "Aedes albopictus",
-            "kingdom": "Animalia",
-            "phylum": "Arthropoda",
-            "class": "Insecta",
-            "order": "Diptera",
-            "family": "Culicidae",
-            "genus": "Aedes"
           }
         ]
       }
@@ -9660,6 +9987,41 @@
         ],
         "exoticas-total": [
           {
+            "label": "Paroaria nigrogenis",
+            "registros": 1540,
+            "slug_especie": "paroaria-nigrogenis",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5845551",
+            "species": "Paroaria nigrogenis",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Thraupidae",
+            "genus": "Paroaria"
+          },
+          {
+            "label": "Paroaria gularis",
+            "registros": 535,
+            "slug_especie": "paroaria-gularis",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2492082",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e6478883c45700544e3ea7/summary",
+            "species": "Paroaria gularis",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Thraupidae",
+            "genus": "Paroaria"
+          },
+          {
             "label": "Melopsittacus undulatus",
             "registros": 3,
             "slug_especie": "melopsittacus-undulatus",
@@ -11003,7 +11365,26 @@
         "cites": [],
         "migratorias": [],
         "endemicas": [],
-        "exoticas-total": []
+        "exoticas-total": [
+          {
+            "label": "Macrobrachium amazonicum",
+            "registros": 10,
+            "slug_especie": "macrobrachium-amazonicum",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "crustaceos",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2224710",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/597243592f4fd7bc7f3a824e/summary",
+            "species": "Macrobrachium amazonicum",
+            "kingdom": "Animalia",
+            "phylum": "Arthropoda",
+            "class": "Malacostraca",
+            "order": "Decapoda",
+            "family": "Palaemonidae",
+            "genus": "Macrobrachium"
+          }
+        ]
       }
     },
     {
@@ -11509,7 +11890,26 @@
         "cites": [],
         "migratorias": [],
         "endemicas": [],
-        "exoticas-total": []
+        "exoticas-total": [
+          {
+            "label": "Macrobrachium amazonicum",
+            "registros": 10,
+            "slug_especie": "macrobrachium-amazonicum",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "decapodos",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2224710",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/597243592f4fd7bc7f3a824e/summary",
+            "species": "Macrobrachium amazonicum",
+            "kingdom": "Animalia",
+            "phylum": "Arthropoda",
+            "class": "Malacostraca",
+            "order": "Decapoda",
+            "family": "Palaemonidae",
+            "genus": "Macrobrachium"
+          }
+        ]
       }
     },
     {
@@ -18897,6 +19297,24 @@
             "order": "Araneae",
             "family": "Araneidae",
             "genus": "Cyrtophora"
+          },
+          {
+            "label": "Macrobrachium amazonicum",
+            "registros": 10,
+            "slug_especie": "macrobrachium-amazonicum",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "invertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2224710",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/597243592f4fd7bc7f3a824e/summary",
+            "species": "Macrobrachium amazonicum",
+            "kingdom": "Animalia",
+            "phylum": "Arthropoda",
+            "class": "Malacostraca",
+            "order": "Decapoda",
+            "family": "Palaemonidae",
+            "genus": "Macrobrachium"
           }
         ]
       }
@@ -24508,6 +24926,23 @@
         ],
         "exoticas-total": [
           {
+            "label": "Piaractus brachypomus",
+            "registros": 63,
+            "slug_especie": "piaractus-brachypomus",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "peces",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2353225",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/5938ac322f4fd7bc7f3853fb/summary",
+            "species": "Piaractus brachypomus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Characiformes",
+            "family": "Serrasalmidae",
+            "genus": "Piaractus"
+          },
+          {
             "label": "Oreochromis niloticus",
             "registros": 23,
             "slug_especie": "oreochromis-niloticus",
@@ -24523,6 +24958,23 @@
             "order": "Perciformes",
             "family": "Cichlidae",
             "genus": "Oreochromis"
+          },
+          {
+            "label": "Caquetaia kraussii",
+            "registros": 12,
+            "slug_especie": "caquetaia-kraussii",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "peces",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2371467",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/596ed6d92f4fd7bc7f3a5020/summary",
+            "species": "Caquetaia kraussii",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Perciformes",
+            "family": "Cichlidae",
+            "genus": "Caquetaia"
           },
           {
             "label": "Oreochromis mossambicus",
@@ -24541,6 +24993,40 @@
             "genus": "Oreochromis"
           },
           {
+            "label": "Colossoma macropomum",
+            "registros": 4,
+            "slug_especie": "colossoma-macropomum",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "peces",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2353152",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/5938a6e22f4fd7bc7f3852fd/summary",
+            "species": "Colossoma macropomum",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Characiformes",
+            "family": "Serrasalmidae",
+            "genus": "Colossoma"
+          },
+          {
+            "label": "Arapaima gigas",
+            "registros": 1,
+            "slug_especie": "arapaima-gigas",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "peces",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5212877",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/592d8ef6f827bf0c0cede227/summary",
+            "species": "Arapaima gigas",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Osteoglossiformes",
+            "family": "Arapaimidae",
+            "genus": "Arapaima"
+          },
+          {
             "label": "Betta splendens",
             "registros": 1,
             "slug_especie": "betta-splendens",
@@ -24555,6 +25041,23 @@
             "order": "Perciformes",
             "family": "Osphronemidae",
             "genus": "Betta"
+          },
+          {
+            "label": "Grundulus bogotensis",
+            "registros": 1,
+            "slug_especie": "grundulus-bogotensis",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "peces",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2354248",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/59df9d025f369343443023d0/summary",
+            "species": "Grundulus bogotensis",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Characiformes",
+            "family": "Characidae",
+            "genus": "Grundulus"
           }
         ]
       }
@@ -25700,7 +26203,93 @@
             "genus": "Creagrutus"
           }
         ],
-        "exoticas-total": []
+        "exoticas-total": [
+          {
+            "label": "Piaractus brachypomus",
+            "registros": 63,
+            "slug_especie": "piaractus-brachypomus",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "peces-dulceacuicolas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2353225",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/5938ac322f4fd7bc7f3853fb/summary",
+            "species": "Piaractus brachypomus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Characiformes",
+            "family": "Serrasalmidae",
+            "genus": "Piaractus"
+          },
+          {
+            "label": "Caquetaia kraussii",
+            "registros": 12,
+            "slug_especie": "caquetaia-kraussii",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "peces-dulceacuicolas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2371467",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/596ed6d92f4fd7bc7f3a5020/summary",
+            "species": "Caquetaia kraussii",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Perciformes",
+            "family": "Cichlidae",
+            "genus": "Caquetaia"
+          },
+          {
+            "label": "Colossoma macropomum",
+            "registros": 4,
+            "slug_especie": "colossoma-macropomum",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "peces-dulceacuicolas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2353152",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/5938a6e22f4fd7bc7f3852fd/summary",
+            "species": "Colossoma macropomum",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Characiformes",
+            "family": "Serrasalmidae",
+            "genus": "Colossoma"
+          },
+          {
+            "label": "Arapaima gigas",
+            "registros": 1,
+            "slug_especie": "arapaima-gigas",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "peces-dulceacuicolas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5212877",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/592d8ef6f827bf0c0cede227/summary",
+            "species": "Arapaima gigas",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Osteoglossiformes",
+            "family": "Arapaimidae",
+            "genus": "Arapaima"
+          },
+          {
+            "label": "Grundulus bogotensis",
+            "registros": 1,
+            "slug_especie": "grundulus-bogotensis",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "peces-dulceacuicolas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2354248",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/59df9d025f369343443023d0/summary",
+            "species": "Grundulus bogotensis",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Characiformes",
+            "family": "Characidae",
+            "genus": "Grundulus"
+          }
+        ]
       }
     },
     {
@@ -28850,7 +29439,93 @@
         ],
         "migratorias": [],
         "endemicas": [],
-        "exoticas-total": []
+        "exoticas-total": [
+          {
+            "label": "Podocnemis unifilis",
+            "registros": 202,
+            "slug_especie": "podocnemis-unifilis",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "reptiles",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2442782",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56707a81f289f5a40c0cd2de/summary",
+            "species": "Podocnemis unifilis",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Testudines",
+            "family": "Podocnemididae",
+            "genus": "Podocnemis"
+          },
+          {
+            "label": "Boa constrictor",
+            "registros": 145,
+            "slug_especie": "boa-constrictor",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "reptiles",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2464899",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cae177f0106c67230e7473/summary",
+            "species": "Boa constrictor",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Squamata",
+            "family": "Boidae",
+            "genus": "Boa"
+          },
+          {
+            "label": "Tupinambis teguixin",
+            "registros": 85,
+            "slug_especie": "tupinambis-teguixin",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "reptiles",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2471948",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e0f3ed83c45700544e3cfc/summary",
+            "species": "Tupinambis teguixin",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Squamata",
+            "family": "Teiidae",
+            "genus": "Tupinambis"
+          },
+          {
+            "label": "Podocnemis lewyana",
+            "registros": 30,
+            "slug_especie": "podocnemis-lewyana",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "reptiles",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2442789",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/5670695cf289f5a40c0cd2d6/summary",
+            "species": "Podocnemis lewyana",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Testudines",
+            "family": "Podocnemididae",
+            "genus": "Podocnemis"
+          },
+          {
+            "label": "Podocnemis expansa",
+            "registros": 7,
+            "slug_especie": "podocnemis-expansa",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "reptiles",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2442795",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/567055daf289f5a40c0cd2d5/summary",
+            "species": "Podocnemis expansa",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Testudines",
+            "family": "Podocnemididae",
+            "genus": "Podocnemis"
+          }
+        ]
       }
     },
     {
@@ -32098,6 +32773,23 @@
             "genus": "Equus"
           },
           {
+            "label": "Paroaria nigrogenis",
+            "registros": 1540,
+            "slug_especie": "paroaria-nigrogenis",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5845551",
+            "species": "Paroaria nigrogenis",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Thraupidae",
+            "genus": "Paroaria"
+          },
+          {
             "label": "Canis lupus",
             "registros": 1493,
             "slug_especie": "canis-lupus",
@@ -32116,140 +32808,107 @@
             "genus": "Canis"
           },
           {
-            "label": "Cavia porcellus",
-            "registros": 26,
-            "slug_especie": "cavia-porcellus",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
+            "label": "Paroaria gularis",
+            "registros": 535,
+            "slug_especie": "paroaria-gularis",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
-            "vernacular_name_es": "erizo",
-            "url_gbif": "https://www.gbif.org/species/5219702",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/5ce71f778fe61bf73db11365/summary",
-            "species": "Cavia porcellus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Mammalia",
-            "order": "Rodentia",
-            "family": "Caviidae",
-            "genus": "Cavia"
-          },
-          {
-            "label": "Oreochromis niloticus",
-            "registros": 23,
-            "slug_especie": "oreochromis-niloticus",
-            "slug_tematica": "invasoras",
-            "tematica_label": "Invasoras",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/4285694",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/593f5b232f4fd7bc7f38b39d/summary",
-            "species": "Oreochromis niloticus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "order": "Perciformes",
-            "family": "Cichlidae",
-            "genus": "Oreochromis"
-          },
-          {
-            "label": "Oreochromis mossambicus",
-            "registros": 9,
-            "slug_especie": "oreochromis-mossambicus",
-            "slug_tematica": "invasoras",
-            "tematica_label": "Invasoras",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2372396",
-            "species": "Oreochromis mossambicus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "order": "Perciformes",
-            "family": "Cichlidae",
-            "genus": "Oreochromis"
-          },
-          {
-            "label": "Equus asinus",
-            "registros": 4,
-            "slug_especie": "equus-asinus",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "flagTAXO": "Ausente en lista taxonómica",
-            "species": "Equus asinus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Mammalia",
-            "order": "Perissodactyla",
-            "family": "Equidae",
-            "genus": "Equus"
-          },
-          {
-            "label": "Melopsittacus undulatus",
-            "registros": 3,
-            "slug_especie": "melopsittacus-undulatus",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2479798",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e63f4483c45700544e3ea2/summary",
-            "species": "Melopsittacus undulatus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Psittaciformes",
-            "family": "Psittacidae",
-            "genus": "Melopsittacus"
-          },
-          {
-            "label": "Betta splendens",
-            "registros": 1,
-            "slug_especie": "betta-splendens",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2393998",
-            "species": "Betta splendens",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "order": "Perciformes",
-            "family": "Osphronemidae",
-            "genus": "Betta"
-          },
-          {
-            "label": "Bubalus bubalis",
-            "registros": 1,
-            "slug_especie": "bubalus-bubalis",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "species": "Bubalus bubalis",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Mammalia",
-            "order": "Artiodactyla",
-            "family": "Bovidae",
-            "genus": "Bubalus"
-          },
-          {
-            "label": "Serinus canaria",
-            "registros": 1,
-            "slug_especie": "serinus-canaria",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2494303",
-            "species": "Serinus canaria",
+            "url_gbif": "https://www.gbif.org/species/2492082",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e6478883c45700544e3ea7/summary",
+            "species": "Paroaria gularis",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Aves",
             "order": "Passeriformes",
-            "family": "Fringillidae",
-            "genus": "Serinus"
+            "family": "Thraupidae",
+            "genus": "Paroaria"
+          },
+          {
+            "label": "Podocnemis unifilis",
+            "registros": 202,
+            "slug_especie": "podocnemis-unifilis",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2442782",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56707a81f289f5a40c0cd2de/summary",
+            "species": "Podocnemis unifilis",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Testudines",
+            "family": "Podocnemididae",
+            "genus": "Podocnemis"
+          },
+          {
+            "label": "Boa constrictor",
+            "registros": 145,
+            "slug_especie": "boa-constrictor",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2464899",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cae177f0106c67230e7473/summary",
+            "species": "Boa constrictor",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Squamata",
+            "family": "Boidae",
+            "genus": "Boa"
+          },
+          {
+            "label": "Tupinambis teguixin",
+            "registros": 85,
+            "slug_especie": "tupinambis-teguixin",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2471948",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e0f3ed83c45700544e3cfc/summary",
+            "species": "Tupinambis teguixin",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Squamata",
+            "family": "Teiidae",
+            "genus": "Tupinambis"
+          },
+          {
+            "label": "Piaractus brachypomus",
+            "registros": 63,
+            "slug_especie": "piaractus-brachypomus",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2353225",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/5938ac322f4fd7bc7f3853fb/summary",
+            "species": "Piaractus brachypomus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Characiformes",
+            "family": "Serrasalmidae",
+            "genus": "Piaractus"
+          },
+          {
+            "label": "Podocnemis lewyana",
+            "registros": 30,
+            "slug_especie": "podocnemis-lewyana",
+            "slug_tematica": "trasplantadas",
+            "tematica_label": "Trasplantadas",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2442789",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/5670695cf289f5a40c0cd2d6/summary",
+            "species": "Podocnemis lewyana",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Testudines",
+            "family": "Podocnemididae",
+            "genus": "Podocnemis"
           }
         ]
       }

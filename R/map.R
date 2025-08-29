@@ -165,6 +165,7 @@ choropleth_map <- function(data = NULL,
   title <- ifelse(!is.null(inp$indicador), inp$indicador,
                   dstools::collapse(unique(d$indicador)))
   title <- sib_merge_ind_label(title, con = con)
+  title <- gsub("registros", "observaciones", title)
 
   # fix names
   dgeo <- dgeo |>

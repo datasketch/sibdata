@@ -57,12 +57,26 @@ prepare_chart_data <- function(data, chart_type, r, con) {
   message("Data rows: ", nrow(data))
   if(nrow(data) > 0) {
     message("Sample data:")
-    for(i in 1:min(3, nrow(data))) {
+    for(i in seq_len(min(3, nrow(data)))) {
       row_data <- sapply(data[i,], function(x) if(is.null(x)) "NULL" else as.character(x))
       message("Row ", i, ": ", paste(names(data), "=", row_data, collapse = " | "))
     }
   }
   
+  # Replace indicator slugs with human-friendly labels for legend/axes
+  if ("indicador" %in% names(data)) {
+    # Safely coerce to character first
+    ind_vec <- as.character(data$indicador)
+    # Merge labels using DB dictionary
+    labeled <- tryCatch({
+      sib_merge_ind_label(ind_vec, con = con)
+    }, error = function(e) {
+      message("⚠️ Could not merge indicator labels: ", e$message)
+      ind_vec
+    })
+    data$indicador <- as.character(labeled)
+  }
+
   # Ensure we have the required columns
   if(!"count" %in% names(data) && "value" %in% names(data)) {
     data$count <- data$value

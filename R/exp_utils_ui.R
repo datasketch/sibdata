@@ -67,18 +67,18 @@ get_app_options <- function(con, debug = FALSE) {
   pais <- sib_available_regions(subtipo = "País", con = con)
   departamentos <- sib_available_regions(subtipo = "Departamento", con = con)
   especial <- sib_available_regions(subtipo = "Especial", con = con)
-  
+
   # Create grouped options for selectize
   opts_region_grouped <- list(
     "Colombia" = pais,
     "Departamentos" = sort(departamentos),
     "Especial" = sort(especial)
   )
-  
+
   # Create flat list for backward compatibility and type detection
   opts_region_raw <- c(pais, sort(departamentos), sort(especial))
   opts_region <- opts_region_raw[!duplicated(opts_region_raw)]
-  
+
   # Create individual lists for type detection
   region_colombia <- pais
   region_departamentos <- sort(departamentos)
@@ -126,7 +126,7 @@ format_species_data <- function(data) {
     dplyr::select(dplyr::any_of(vars)) |>
     dplyr::rename(
       "Especie" = "label",
-      "Registros" = "registros",
+      "Observaciones" = "registros",
       "Reino" = "kingdom",
       "GBIF" = "url_gbif",
       "CBC" = "url_cbc",
@@ -141,7 +141,7 @@ format_species_data <- function(data) {
   if("tematica_label" %in% names(data)) {
     formatted_data <- formatted_data |>
       dplyr::rename("Tematica" = "tematica_label") |>
-      dplyr::relocate(dplyr::all_of("Tematica"), .after = "Registros")
+      dplyr::relocate(dplyr::all_of("Tematica"), .after = "Observaciones")
   }
 
   formatted_data

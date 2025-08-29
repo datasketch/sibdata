@@ -106,6 +106,7 @@ regs <- sibdata_region_tematica(con) |> collect()
 #   "reserva-forestal-la-planada"
 # )
 destacados <- c(
+  "region-amazonia",
   "amazonas", "caqueta", "cauca", "guainia", "guaviare", "meta",
   "putumayo", "vaupes"
 )

@@ -29,6 +29,7 @@ con <- DBI::dbConnect(RSQLite::SQLite(), sys_file_sibdata("db/sibdata.sqlite"),
                       read_only = TRUE)
 av_regions <- unname(sib_available_regions(subtipo = c("Especial"), con = con))
 
+reserva_resguardo <- c("reserva-forestal-la-planada","resguardo-indigena-pialapi-pueblo-viejo")
 
 av_regions_top <- c("region-amazonia",  "reserva-forestal-la-planada","resguardo-indigena-pialapi-pueblo-viejo")
 av_regions_amazonas <- c("amazonas", "caqueta", "guainia",
@@ -41,6 +42,7 @@ map(av_regions, safely(function(region){
   # region <- "reserva-forestal-la-planada"
   # region <- "resguardo-indigena-pialapi-pueblo-viejo"
   # region <- "region-amazonia"
+
 
   nav_tematica <- navigation_trees("tematica", con = con)
   nav_grupo_biologico <- navigation_trees("grupo_biologico", con = con)

@@ -110,6 +110,15 @@ map(av_regions, safely(function(region){
       left_join(deptos_amazonia, by = c("slug_region" = "slug")) |>
       rename(slug = slug_region)
     ## TODO merge aporte
+    aporte <- sibdata_aporte_region_especial(con) |> collect() |>
+      filter(slug_region_especial == "region-amazonia") |>
+      select(-slug_region_especial) |>
+      select(slug_region, pct_aporte_registros_region,
+             pct_aporte_especies_region,
+             aporte_registros_region = registros_region_total,
+             aporte_especies_region = especies_region_total,) |>
+      rename(slug = slug_region)
+
     geo_path <- sys_file_sibdata("geo/region-amazonia.geojson")
     geo <- sf::read_sf(geo_path) |>
       select(cod_dane = id,
@@ -117,9 +126,11 @@ map(av_regions, safely(function(region){
              geometry)
     geo_map1 <- geo |>
       left_join(dd)
+    geo_map2 <- geo_map1 |>
+      left_join(aporte)
     # geo_map2 <- dd |>
     #   left_join(geo)
-    tj <- geo_map1
+    tj <- geo_map2
     sf::write_sf(tj, paste0(save_path,"/",region,"/",region, ".geojson"),
                  delete_dsn = TRUE)
 

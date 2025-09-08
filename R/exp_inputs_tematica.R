@@ -638,8 +638,12 @@ exp_inputs_tematica_server <- function(id, con, session_main = NULL, debug = FAL
           if (!is.null(found_child)) {
             updateRadioButtons(session, children_id, selected = found_child)
           } else {
-            # Set "Todas" as default
-            updateRadioButtons(session, children_id, selected = "todas")
+            # Set default based on category (amenazadas has no "Todas")
+            if (identical(found_parent, "amenazadas")) {
+              updateRadioButtons(session, children_id, selected = "amenazadas-global")
+            } else {
+              updateRadioButtons(session, children_id, selected = "todas")
+            }
           }
         } else {
           if (debug) cat("Tematica not found in tree:", tematica_param, "\n")
@@ -797,10 +801,11 @@ exp_inputs_tematica_server <- function(id, con, session_main = NULL, debug = FAL
 
             # Set default selection based on the category
             current_selection <- input[[children_id]]
-            if (is.null(current_selection) || current_selection == "") {
+            # Ensure a child option is always selected (handle NULL/""/character(0))
+            if (length(current_selection) == 0 || identical(current_selection, "")) {
               if (current_slug == "amenazadas") {
                 # For amenazadas, select the first option (amenazadas-global)
-                updateRadioButtons(session, children_id, selected = "amenazadas_global")
+                updateRadioButtons(session, children_id, selected = "amenazadas-global")
               } else {
                 # For other categories, select "Todas"
                 updateRadioButtons(session, children_id, selected = "todas")
@@ -870,7 +875,21 @@ exp_inputs_tematica_server <- function(id, con, session_main = NULL, debug = FAL
               } else {
                 return(child_selection)  # Return child slug
               }
+            } else {
+              # If no child is selected in the UI, force-select a default so the selector reflects the state
+              if (identical(x$slug, "amenazadas")) {
+                updateRadioButtons(session, children_id, selected = "amenazadas-global")
+                return("amenazadas-global")
+              } else {
+                updateRadioButtons(session, children_id, selected = "todas")
+                return(x$slug)
+              }
             }
+          }
+          # Ensure amenazadas never returns parent-only selection
+          if (identical(x$slug, "amenazadas")) {
+            updateRadioButtons(session, paste0(x$slug, "_children"), selected = "amenazadas-global")
+            return("amenazadas-global")
           }
           return(x$slug)  # Return parent slug if no child selected
         }

@@ -95,7 +95,8 @@ get_app_options <- function(con, debug = FALSE) {
   # Thematic categories
   all_tematicas <- sib_available_tematicas()
   opts_tematicas_ex <- c("cites_i", "cites_ii", "cites_i_ii", "cites_iii",
-                         "exoticas","invasoras","exoticas_riesgo_invasion")
+                         "exoticas","invasoras","exoticas_riesgo_invasion",
+                         "trasplantadas")
   opts_tematicas <- all_tematicas[!all_tematicas %in% opts_tematicas_ex]
   opts_tematicas <- c(opts_tematicas, "Ninguna" = "todas")
 

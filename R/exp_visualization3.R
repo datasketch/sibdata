@@ -88,8 +88,8 @@ exp_visualization3_server <- function(id, r, con, loading_fns = NULL, debug = FA
         is.null(r$sel_tematica) &&
         (!is.null(r$is_special_region) && !r$is_special_region)
 
-      # Show amenazadas selector when tematica contains "amenazadas"
-      show_amenazadas <- !is.null(r$sel_tematica) && grepl("amenazadas", r$sel_tematica)
+      # Show amenazadas selector via reactive flag maintained elsewhere
+      show_amenazadas <- isTRUE(r$show_categoria_amenaza)
 
       if (debug) {
         message("🎛️ DATA CONTROLS RENDERING:")
@@ -106,21 +106,54 @@ exp_visualization3_server <- function(id, r, con, loading_fns = NULL, debug = FA
                     selected = "total")
       } else if (show_amenazadas) {
         selectInput(ns("amenazadas_categoria"),
-                    "Categoría Amenaza",
+                    HTML("<span style=\"color:#09A274; font-weight:600;\">Categoría Amenaza</span>"),
                     choices = c("Total amenazadas" = "_total",
                                 "EN" = "_en",
                                 "CR" = "_cr",
                                 "VU" = "_vu"),
-                    selected = "_total")
+                    selected = if (!is.null(r$amenazadas_categoria)) r$amenazadas_categoria else "_total")
       } else {
         NULL
       }
     })
 
-
-    # Create indicador
+    # Maintain a reactive flag to show/hide the Amenazadas subcategory selector
     observe({
-      r$amenazadas_categoria <- input$amenazadas_categoria
+      sel_tematica <- r$sel_tematica
+      chart_type <- r$chart_type
+      is_special <- isTRUE(r$is_special_region)
+
+      show_flag <- !is.null(sel_tematica) &&
+        grepl("^amenazadas", sel_tematica) &&
+        !identical(chart_type, "cards") &&
+        !is_special
+
+      # Update flag if changed
+      if (!identical(isTRUE(r$show_categoria_amenaza), show_flag)) {
+        r$show_categoria_amenaza <- show_flag
+        if (debug) message("🔁 show_categoria_amenaza -> ", show_flag)
+      }
+
+      # When hiding selector, default categoria to _total to avoid stale values
+      if (!show_flag) {
+        if (!identical(r$amenazadas_categoria, "_total")) {
+          r$amenazadas_categoria <- "_total"
+          if (debug) message("↩︎ amenazadas_categoria reset to _total (selector hidden)")
+        }
+      }
+    })
+
+
+    # Sync amenazadas_categoria only when input changes (avoid NULL flapping)
+    observeEvent(input$amenazadas_categoria, {
+      if (!is.null(input$amenazadas_categoria)) {
+        r$amenazadas_categoria <- input$amenazadas_categoria
+        if (debug) message("🔗 amenazadas_categoria synced from input: ", r$amenazadas_categoria)
+      }
+    }, ignoreInit = TRUE)
+
+    # Create indicador based on current r values
+    observe({
       indicador <- calculate_indicador(r)
       r$indicador <- indicador
 
@@ -148,11 +181,11 @@ exp_visualization3_server <- function(id, r, con, loading_fns = NULL, debug = FA
 
       if (debug) message("🎨 COMPUTING AVAILABLE CHARTS")
 
-      # All chart types available (Cards first)
-      all_charts <- c("Tarjetas" = "cards", "Mapa" = "map", "Torta" = "pie", "Dona" = "donut",
+      # All chart types available (Map first, Cards second)
+      all_charts <- c("Mapa" = "map", "Tarjetas" = "cards", "Torta" = "pie", "Dona" = "donut",
                       "Treemap" = "treemap", "Barras" = "bar", "Tabla" = "table")
-      map_table <- c("Tarjetas" = "cards", "Mapa" = "map", "Tabla" = "table")
-      map_table_bar <- c("Tarjetas" = "cards", "Mapa" = "map", "Tabla" = "table", "Barras" = "bar")
+      map_table <- c("Mapa" = "map", "Tarjetas" = "cards", "Tabla" = "table")
+      map_table_bar <- c("Mapa" = "map", "Tarjetas" = "cards", "Tabla" = "table", "Barras" = "bar")
 
       # Check if amenazadas with total category selected
       is_amenazadas_total <- !is.null(r$sel_tematica) &&
@@ -169,11 +202,15 @@ exp_visualization3_server <- function(id, r, con, loading_fns = NULL, debug = FA
         "bogota-dc"
       )
       is_special_region_selected <- !is.null(r$sel_region) && r$sel_region %in% special_regions_disable_map
+      # Keep reactive flag in sync
+      if (isTRUE(is_special_region_selected) != isTRUE(r$is_special_region)) {
+        r$is_special_region <- is_special_region_selected
+      }
 
       computed_available <- NULL
       if (!is.null(r$has_subtematica) && r$has_subtematica) {
-        # When subtematicas are present, disable map (multiple subcategories)
-        computed_available <- all_charts[all_charts != "map"]
+        # Keep all charts; map should only be disabled for special regions
+        computed_available <- all_charts
       } else if (is_amenazadas_total) {
         # Amenazadas total: all charts available (including map)
         computed_available <- all_charts
@@ -199,11 +236,19 @@ exp_visualization3_server <- function(id, r, con, loading_fns = NULL, debug = FA
         r$available_charts <- computed_available
       }
 
-      # Ensure current chart is available, default to cards
+      # Ensure current chart is available, default to map when available, else cards, else first
       if (is.null(r$chart_type) || !r$chart_type %in% r$available_charts) {
-        if (!identical(r$chart_type, "cards")) {
-          r$chart_type <- "cards"  # Default to cards
-          if (debug) message("✓ Chart type set to default: cards")
+        av_values <- unname(r$available_charts)
+        default_chart <- if ("map" %in% av_values) {
+          "map"
+        } else if ("cards" %in% av_values) {
+          "cards"
+        } else {
+          av_values[1]
+        }
+        if (!identical(r$chart_type, default_chart)) {
+          r$chart_type <- default_chart
+          if (debug) message("✓ Chart type set to default: ", default_chart)
         }
       }
 
@@ -223,16 +268,16 @@ exp_visualization3_server <- function(id, r, con, loading_fns = NULL, debug = FA
       # to avoid namespacing issues - similar to app2.R
       # cat("📊 VIZ: Creating chart selector directly\n")
 
-      # All chart types available (Cards first)
-      all_charts <- c("Tarjetas" = "cards", "Mapa" = "map", "Torta" = "pie", "Dona" = "donut",
+      # All chart types available (Map first, Cards second)
+      all_charts <- c("Mapa" = "map", "Tarjetas" = "cards", "Torta" = "pie", "Dona" = "donut",
                       "Treemap" = "treemap", "Barras" = "bar", "Tabla" = "table")
 
       # Get available charts from reactive values, with fallback to default
       av_charts <- if (!is.null(r$available_charts) && length(r$available_charts) > 0) {
         r$available_charts
       } else {
-        # Default to cards, map and table when nothing is set yet
-        c("Tarjetas" = "cards", "Mapa" = "map", "Tabla" = "table")
+        # Default to map, cards and table when nothing is set yet
+        c("Mapa" = "map", "Tarjetas" = "cards", "Tabla" = "table")
       }
 
       # Set active chart (first available if current is not available)
@@ -364,8 +409,10 @@ exp_visualization3_server <- function(id, r, con, loading_fns = NULL, debug = FA
 
       # Styles
       card_css <- "display: flex; gap: 12px; justify-content: space-between; flex-wrap: wrap;"
-      box_css <- "flex: 1; min-width: 180px; border: 1px solid #e6e6e6; border-radius: 8px; padding: 16px; background: #ffffff; box-shadow: 0 1px 2px rgba(0,0,0,0.05);"
-      value_css <- "font-size: 28px; font-weight: 700; color: #09A274; margin: 0;"
+      box_css_active <- "flex: 1; min-width: 180px; border: 1px solid #4ad3ac; border-radius: 8px; padding: 16px; background: #F2FBF8; box-shadow: 0 1px 2px rgba(0,0,0,0.05);"
+      box_css_inactive <- "flex: 1; min-width: 180px; border: 1px solid #e6e6e6; border-radius: 8px; padding: 16px; background: #f7f7f7; box-shadow: 0 1px 2px rgba(0,0,0,0.03);"
+      value_css_active <- "font-size: 28px; font-weight: 700; color: #09A274; margin: 0;"
+      value_css_inactive <- "font-size: 28px; font-weight: 700; color: #999999; margin: 0;"
       label_css <- "font-size: 13px; color: #666666; margin: 0; margin-top: 6px;"
 
       # If no temática selected: show registros/especies totals
@@ -412,14 +459,21 @@ exp_visualization3_server <- function(id, r, con, loading_fns = NULL, debug = FA
           stringsAsFactors = FALSE
         )
 
+        # Determine which tipo is active
+        is_especies <- identical(r$sel_tipo, "especies")
+        box1_style <- if (is_especies) box_css_inactive else box_css_active  # registros card
+        val1_style <- if (is_especies) value_css_inactive else value_css_active
+        box2_style <- if (is_especies) box_css_active else box_css_inactive  # especies card
+        val2_style <- if (is_especies) value_css_active else value_css_inactive
+
         return(div(
           style = card_css,
-          div(style = box_css,
-              p(style = value_css, format(val_regs, big.mark = ",", scientific = FALSE)),
+          div(style = box1_style,
+              p(style = val1_style, format(val_regs, big.mark = ",", scientific = FALSE)),
               p(style = label_css, label_regs)
           ),
-          div(style = box_css,
-              p(style = value_css, format(val_esps, big.mark = ",", scientific = FALSE)),
+          div(style = box2_style,
+              p(style = val2_style, format(val_esps, big.mark = ",", scientific = FALSE)),
               p(style = label_css, label_esps)
           )
         ))
@@ -453,6 +507,8 @@ exp_visualization3_server <- function(id, r, con, loading_fns = NULL, debug = FA
         dplyr::summarise(valor = sum(count, na.rm = TRUE), .groups = "drop") |>
         dplyr::arrange(dplyr::desc(valor))
 
+      # Do NOT filter by subcategory for cards; show all subcategories as cards
+
       inds <- d2$indicador
       labels_vec <- sib_merge_ind_label(inds, con = con)
       etiqueta <- as.character(labels_vec)
@@ -467,8 +523,32 @@ exp_visualization3_server <- function(id, r, con, loading_fns = NULL, debug = FA
       boxes <- lapply(seq_len(nrow(r$current_chart_data)), function(i){
         val <- r$current_chart_data$valor[i]
         lab <- r$current_chart_data$etiqueta[i]
-        div(style = box_css,
-            p(style = value_css, format(val, big.mark = ",", scientific = FALSE)),
+        ind_slug <- r$current_chart_data$indicador[i]
+        ind_tipo <- if (grepl("^especies", ind_slug)) "especies" else "registros"
+
+        # Active by tipo
+        active_by_tipo <- identical(ind_tipo, r$sel_tipo)
+
+        # Additionally highlight when subcategory matches (amenazadas/cites)
+        active_by_subcat <- FALSE
+        if (!is.null(r$sel_tematica) && grepl("amenazadas", r$sel_tematica)) {
+          if (!is.null(r$amenazadas_categoria) && r$amenazadas_categoria != "_total") {
+            active_by_subcat <- grepl(paste0(r$amenazadas_categoria, "$"), ind_slug)
+          }
+        }
+        if (!is.null(r$sel_tematica) && grepl("cites", r$sel_tematica)) {
+          if (!is.null(r$tematica) && r$tematica != "cites") {
+            suf <- sub("^cites_", "", r$tematica)  # i, ii, iii, i_ii
+            active_by_subcat <- active_by_subcat || grepl(paste0("cites_", suf, "$"), ind_slug)
+          }
+        }
+
+        is_active <- active_by_tipo || active_by_subcat
+
+        div(style = if (is_active) box_css_active else box_css_inactive,
+            p(style = if (is_active) value_css_active else value_css_inactive,
+              format(val, big.mark = ",", scientific = FALSE)
+            ),
             p(style = label_css, lab)
         )
       })
@@ -588,9 +668,29 @@ exp_visualization3_server <- function(id, r, con, loading_fns = NULL, debug = FA
         message("- Table data columns: ", paste(names(r$current_chart_data), collapse = ", "))
       }
 
-      # Format column names for display
+      # Format data and column names for display
       display_data <- d
+      # Normalize region columns: keep only Region from label_region
+      if ("label_region" %in% names(display_data)) {
+        display_data$Región <- display_data$label_region
+        display_data$label_region <- NULL
+      }
+      if ("slug_region" %in% names(display_data)) {
+        display_data$slug_region <- NULL
+      }
+      if ("indicador" %in% names(display_data)) {
+        display_data$indicador <- as.character(
+          sib_merge_ind_label(as.character(display_data$indicador), con = con)
+        )
+      }
       names(display_data) <- sib_merge_ind_label(names(display_data), con = con)
+      # Force friendly headers for common english columns
+      if ("indicator" %in% names(display_data)) {
+        names(display_data)[names(display_data) == "indicator"] <- "Indicador"
+      }
+      if ("count" %in% names(display_data)) {
+        names(display_data)[names(display_data) == "count"] <- "Número"
+      }
 
       DT::datatable(
         display_data,
@@ -1111,6 +1211,19 @@ exp_visualization3_server <- function(id, r, con, loading_fns = NULL, debug = FA
 
       # Use current chart data (works for cards and charts)
       display_data <- r$current_chart_data
+      # Normalize region columns: keep only Region from label_region
+      if ("label_region" %in% names(display_data)) {
+        display_data$Region <- display_data$label_region
+        display_data$label_region <- NULL
+      }
+      if ("slug_region" %in% names(display_data)) {
+        display_data$slug_region <- NULL
+      }
+      if ("indicador" %in% names(display_data)) {
+        display_data$indicador <- as.character(
+          sib_merge_ind_label(as.character(display_data$indicador), con = con)
+        )
+      }
 
       DT::datatable(
         display_data,
@@ -1139,6 +1252,19 @@ exp_visualization3_server <- function(id, r, con, loading_fns = NULL, debug = FA
 
       # Use table data directly
       display_data <- r$main_data
+      # Normalize region columns: keep only Region from label_region
+      if ("label_region" %in% names(display_data)) {
+        display_data$Region <- display_data$label_region
+        display_data$label_region <- NULL
+      }
+      if ("slug_region" %in% names(display_data)) {
+        display_data$slug_region <- NULL
+      }
+      if ("indicador" %in% names(display_data)) {
+        display_data$indicador <- as.character(
+          sib_merge_ind_label(as.character(display_data$indicador), con = con)
+        )
+      }
 
       DT::datatable(
         display_data,

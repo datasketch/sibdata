@@ -2,7 +2,7 @@
 # Modular version of SIB Data App - Recreated from scratch
 
 # Debug configuration
-DEBUG_MODE <- FALSE  # Set to FALSE to hide debug output
+DEBUG_MODE <- TRUE  # Set to FALSE to hide debug output
 options(timeout = 600)
 
 library(shiny)
@@ -158,7 +158,7 @@ server <- function(input, output, session) {
     sel_tematica = NULL,
     tematica = NULL,
     sel_tipo = "registros",
-    chart_type = "cards",
+    chart_type = "map",
     is_special_region = FALSE,
     has_subtematica = FALSE,
     inputs_ready = NULL,

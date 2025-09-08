@@ -162,10 +162,19 @@ choropleth_map <- function(data = NULL,
     domain = d0$value * -1
   )
 
-  title <- ifelse(!is.null(inp$indicador), inp$indicador,
-                  dstools::collapse(unique(d$indicador)))
-  title <- sib_merge_ind_label(title, con = con)
-  title <- gsub("registros", "observaciones", title)
+  # Build human-friendly legend title
+  inds_for_title <- if (!is.null(inp$indicador)) inp$indicador else unique(d$indicador)
+  # Normalize 'observaciones_' slugs to dictionary keys ('registros_') before merging labels
+  inds_for_title <- gsub("^observaciones_", "registros_", inds_for_title)
+  # Merge labels for each indicator and collapse if multiple
+  title_labels <- tryCatch({
+    sib_merge_ind_label(inds_for_title, con = con)
+  }, error = function(e){
+    inds_for_title
+  })
+  title <- dstools::collapse(unique(title_labels))
+  # Use Observaciones instead of registros in display
+  title <- gsub("[Rr]egistros", "Observaciones", title)
 
   # fix names
   dgeo <- dgeo |>

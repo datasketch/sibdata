@@ -641,6 +641,8 @@ exp_inputs_tematica_server <- function(id, con, session_main = NULL, debug = FAL
             # Set default based on category (amenazadas has no "Todas")
             if (identical(found_parent, "amenazadas")) {
               updateRadioButtons(session, children_id, selected = "amenazadas-global")
+              shinyjs::show(session$ns("amenazadas_categoria"))
+              updateRadioButtons(session, "amenazadas_categoria", selected = "_total")
             } else {
               updateRadioButtons(session, children_id, selected = "todas")
             }
@@ -732,6 +734,24 @@ exp_inputs_tematica_server <- function(id, con, session_main = NULL, debug = FAL
             radioButtons(children_id, "", choices = choices, selected = character(0))
           )
 
+          # Special: Amenazadas category selector (EN, CR, VU) under selected child
+          if (identical(x$slug, "amenazadas")) {
+            amen_cats_id <- session$ns("amenazadas_categoria")
+            amen_cat_input <- div(
+              id = amen_cats_id,
+              class = "tematica-children",
+              style = "display: none; margin-left: 36px;",
+              radioButtons(amen_cats_id, NULL,
+                          choices = c("Total amenazadas" = "_total",
+                                      "EN" = "_en",
+                                      "CR" = "_cr",
+                                      "VU" = "_vu"),
+                          selected = character(0))
+            )
+            all_inputs <<- c(all_inputs, list(children_input, amen_cat_input))
+          } else {
+            all_inputs <<- c(all_inputs, list(children_input))
+          }
           # Store tooltip data for JavaScript to use later
           tooltip_data <- list()
           for (choice_name in names(choices)) {
@@ -760,9 +780,7 @@ exp_inputs_tematica_server <- function(id, con, session_main = NULL, debug = FAL
           }
 
           # Add tooltip data to the input for JavaScript access
-          children_input$attribs[["data-tooltips"]] <- jsonlite::toJSON(tooltip_data)
-
-          all_inputs <<- c(all_inputs, list(children_input))
+          children_input$attribs[["data-tooltips"]] <- jsonlite::toJSON(tooltip_data, auto_unbox = TRUE)
         }
       })
 
@@ -799,6 +817,14 @@ exp_inputs_tematica_server <- function(id, con, session_main = NULL, debug = FAL
             children_id <- paste0(current_slug, "_children")
             shinyjs::show(children_id)
 
+            # If Amenazadas selected, show category selector and default to _total
+            if (identical(current_slug, "amenazadas")) {
+              shinyjs::show("amenazadas_categoria")
+              if (is.null(input[["amenazadas_categoria"]]) || identical(input[["amenazadas_categoria"]], "")) {
+                updateRadioButtons(session, "amenazadas_categoria", selected = "_total")
+              }
+            }
+
             # Set default selection based on the category
             current_selection <- input[[children_id]]
             # Ensure a child option is always selected (handle NULL/""/character(0))
@@ -825,11 +851,28 @@ exp_inputs_tematica_server <- function(id, con, session_main = NULL, debug = FAL
             children_id <- paste0(current_slug, "_children")
             shinyjs::hide(children_id)
             updateRadioButtons(session, children_id, selected = character(0))
+
+            # Hide Amenazadas category selector when unchecking amenazadas
+            if (identical(current_slug, "amenazadas")) {
+              shinyjs::hide("amenazadas_categoria")
+              updateRadioButtons(session, "amenazadas_categoria", selected = character(0))
+            }
           }
         }, ignoreInit = TRUE)
       })
       } # End for loop
     } # End if (!is.null(tematica_tree))
+
+    # Show Amenazadas categories whenever an Amenazadas child is selected
+    observeEvent(input[["amenazadas_children"]], {
+      sel <- input[["amenazadas_children"]]
+      if (!is.null(sel) && sel != "") {
+        shinyjs::show("amenazadas_categoria")
+        if (is.null(input[["amenazadas_categoria"]]) || identical(input[["amenazadas_categoria"]], "")) {
+          updateRadioButtons(session, "amenazadas_categoria", selected = "_total")
+        }
+      }
+    }, ignoreInit = TRUE)
 
     # Handle clear button
     observeEvent(input$clear_tematica, {
@@ -849,11 +892,15 @@ exp_inputs_tematica_server <- function(id, con, session_main = NULL, debug = FAL
           updateRadioButtons(session, children_id, selected = character(0))
         }
       }
+
+      # Hide and reset amenazadas categoria
+      shinyjs::hide("amenazadas_categoria")
+      updateRadioButtons(session, "amenazadas_categoria", selected = character(0))
     })
 
 
 
-    # Return selected tematica slug
+    # Return selected tematica and subtematica (when applicable)
     selected_tematica <- reactive({
       req(tematica_tree)
       l <- tematica_tree
@@ -870,28 +917,60 @@ exp_inputs_tematica_server <- function(id, con, session_main = NULL, debug = FAL
             child_selection <- input[[children_id]]
 
             if (!is.null(child_selection) && child_selection != "") {
+              # Build structured response
               if (child_selection == "todas") {
-                return(x$slug)  # Return parent slug for "Todas"
-              } else {
-                return(child_selection)  # Return child slug
+                # For "Todas", expose only parent tematica and no subtematica
+                return(list(tematica = x$slug, subtematica = NULL))
               }
+
+              # Amenazadas: compose subtematica using category radios
+              if (identical(x$slug, "amenazadas")) {
+                # Child is either amenazadas-global or amenazadas-nacional
+                cat_val <- input[["amenazadas_categoria"]] %||% "_total"
+                # Build subtematica only for EN/CR/VU (not for _total)
+                sub_slug <- if (identical(cat_val, "_total")) {
+                  NULL
+                } else {
+                  paste0(child_selection, "-", sub("^_", "", cat_val))
+                }
+                return(list(tematica = child_selection,
+                            subtematica = sub_slug,
+                            amenazadas_categoria = cat_val))
+              }
+
+              # For specific children, only certain parents should expose subtematica
+              expose_as_sub <- x$slug %in% c("cites", "exoticas-total")
+              if (expose_as_sub) {
+                return(list(tematica = x$slug, subtematica = child_selection))
+              }
+
+              # Default behavior: return only tematica (child slug) and no subtematica
+              return(list(tematica = child_selection, subtematica = NULL))
             } else {
               # If no child is selected in the UI, force-select a default so the selector reflects the state
               if (identical(x$slug, "amenazadas")) {
                 updateRadioButtons(session, children_id, selected = "amenazadas-global")
-                return("amenazadas-global")
+                if (is.null(input[["amenazadas_categoria"]]) || identical(input[["amenazadas_categoria"]], "")) {
+                  updateRadioButtons(session, "amenazadas_categoria", selected = "_total")
+                }
+                return(list(tematica = "amenazadas-global", subtematica = NULL,
+                            amenazadas_categoria = input[["amenazadas_categoria"]] %||% "_total"))
               } else {
                 updateRadioButtons(session, children_id, selected = "todas")
-                return(x$slug)
+                return(list(tematica = x$slug, subtematica = NULL))
               }
             }
           }
           # Ensure amenazadas never returns parent-only selection
           if (identical(x$slug, "amenazadas")) {
             updateRadioButtons(session, paste0(x$slug, "_children"), selected = "amenazadas-global")
-            return("amenazadas-global")
+            if (is.null(input[["amenazadas_categoria"]]) || identical(input[["amenazadas_categoria"]], "")) {
+              updateRadioButtons(session, "amenazadas_categoria", selected = "_total")
+            }
+            return(list(tematica = "amenazadas-global", subtematica = NULL,
+                        amenazadas_categoria = input[["amenazadas_categoria"]] %||% "_total"))
           }
-          return(x$slug)  # Return parent slug if no child selected
+          return(list(tematica = x$slug, subtematica = NULL))  # Return parent slug if no child selected
         }
       }
 

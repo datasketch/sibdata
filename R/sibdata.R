@@ -17,9 +17,8 @@ sibdata <- function(region = NULL,
   if(!is.null(cobertura)) check_cases_values("cobertura", cobertura, con = con)
   if(!is.null(tematica)) check_cases_values("tematica", tematica, con = con)
   if(!is.null(grupo)) check_cases_values("grupo", grupo, con = con)
-  if(!is.null(indicador)){
-    check_cases_values("indicador", indicador, con = con)
-  }
+  if(!is.null(indicador)){check_cases_values("indicador", indicador, con = con)}
+
   d <- sibdata_wide(region = region,
                     tipo = tipo,
                     cobertura = cobertura,
@@ -181,6 +180,10 @@ select_indicator <- function(tipo = NULL,
   cases <- list(tipo = tipo,
                 cobertura = cobertura,
                 tematica = tematica)
+
+  # if(cases$tematica == "exoticas_total"){
+  #   cases$tematica <- "exoticas"
+  # }
 
   inds <- sibdata_indicadores(con)
 

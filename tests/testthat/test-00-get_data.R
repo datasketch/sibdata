@@ -2,6 +2,7 @@ test_that("Check temática", {
 
   # test_dir <- here::here()
   # warning(test_dir)
+  #tematica <- read_delim("data-raw/db-cifras-sib/tematica.tsv")
   tematica <- read_delim("../../data-raw/db-cifras-sib/tematica.tsv")
   tematica <- tematica |>
     filter(activa == 1) |>
@@ -11,5 +12,12 @@ test_that("Check temática", {
   l <- data.tree::ToListExplicit(tree, unname = TRUE, nameName = "slug",
                                  childrenName = "children")
   expect_equal(l$slug, "0")
+
+
+  # Exoticas total
+  expect_true("exoticas-total" %in% tematica$parent)
+
+  #
+
 
 })

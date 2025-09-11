@@ -29,7 +29,16 @@ server <- function(input, output, session) {
   selected_tematica <- exp_inputs_tematica_server("test_tematica", con, session, debug = TRUE)
 
   output$selected_tematica <- renderPrint({
-    cat("Selected tematica:", selected_tematica(), "\n")
+    sel <- selected_tematica()
+    if (is.null(sel)) {
+      cat("Selected tematica: NULL\n")
+    } else {
+      cat("Selected tematica:", sel$tematica, "\n")
+      cat("Selected subtematica:", if (is.null(sel$subtematica)) "NULL" else sel$subtematica, "\n")
+      if (!is.null(sel$amenazadas_categoria)) {
+        cat("Amenazadas categoria:", sel$amenazadas_categoria, "\n")
+      }
+    }
   })
 
   # output$tree_structure <- renderPrint({

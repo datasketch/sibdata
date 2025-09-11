@@ -79,7 +79,7 @@ exp_visualization3_server <- function(id, r, con, loading_fns = NULL, debug = FA
     #   if (debug) message("🔄 AMENAZADAS CATEGORIA CHANGED to: ", r$amenazadas_categoria)
     # })
 
-    # Simple data controls as renderUI - especies total/estimadas and amenazadas
+    # Simple data controls as renderUI - especies total/estimadas
     output$data_controls <- renderUI({
 
       # Show especies total/estimadas selector when:
@@ -88,8 +88,8 @@ exp_visualization3_server <- function(id, r, con, loading_fns = NULL, debug = FA
         is.null(r$sel_tematica) &&
         (!is.null(r$is_special_region) && !r$is_special_region)
 
-      # Show amenazadas selector via reactive flag maintained elsewhere
-      show_amenazadas <- isTRUE(r$show_categoria_amenaza)
+      # Amenazadas selector moved to temática module; keep flag false here
+      show_amenazadas <- FALSE
 
       if (debug) {
         message("🎛️ DATA CONTROLS RENDERING:")
@@ -104,53 +104,12 @@ exp_visualization3_server <- function(id, r, con, loading_fns = NULL, debug = FA
                     "Total o Estimadas",
                     choices = c("Total" = "total", "Estimadas" = "estimadas"),
                     selected = "total")
-      } else if (show_amenazadas) {
-        selectInput(ns("amenazadas_categoria"),
-                    HTML("<span style=\"color:#09A274; font-weight:600;\">Categoría Amenaza</span>"),
-                    choices = c("Total amenazadas" = "_total",
-                                "EN" = "_en",
-                                "CR" = "_cr",
-                                "VU" = "_vu"),
-                    selected = if (!is.null(r$amenazadas_categoria)) r$amenazadas_categoria else "_total")
       } else {
         NULL
       }
     })
 
-    # Maintain a reactive flag to show/hide the Amenazadas subcategory selector
-    observe({
-      sel_tematica <- r$sel_tematica
-      chart_type <- r$chart_type
-      is_special <- isTRUE(r$is_special_region)
-
-      show_flag <- !is.null(sel_tematica) &&
-        grepl("^amenazadas", sel_tematica) &&
-        !identical(chart_type, "cards") &&
-        !is_special
-
-      # Update flag if changed
-      if (!identical(isTRUE(r$show_categoria_amenaza), show_flag)) {
-        r$show_categoria_amenaza <- show_flag
-        if (debug) message("🔁 show_categoria_amenaza -> ", show_flag)
-      }
-
-      # When hiding selector, default categoria to _total to avoid stale values
-      if (!show_flag) {
-        if (!identical(r$amenazadas_categoria, "_total")) {
-          r$amenazadas_categoria <- "_total"
-          if (debug) message("↩︎ amenazadas_categoria reset to _total (selector hidden)")
-        }
-      }
-    })
-
-
-    # Sync amenazadas_categoria only when input changes (avoid NULL flapping)
-    observeEvent(input$amenazadas_categoria, {
-      if (!is.null(input$amenazadas_categoria)) {
-        r$amenazadas_categoria <- input$amenazadas_categoria
-        if (debug) message("🔗 amenazadas_categoria synced from input: ", r$amenazadas_categoria)
-      }
-    }, ignoreInit = TRUE)
+    # Amenazadas category selector now handled by temática module; no UI or syncing here
 
     # Create indicador based on current r values
     observe({
@@ -160,7 +119,8 @@ exp_visualization3_server <- function(id, r, con, loading_fns = NULL, debug = FA
       if (debug) {
         message("🔧 INDICADOR UPDATED:")
         message("- sel_tipo: ", r$sel_tipo)
-        message("- tematica: ", r$tematica)
+        message("- tematica: ", if (is.null(r$sel_tematica)) "NULL" else gsub("-", "_", r$sel_tematica))
+        message("- subtematica: ", if (is.null(r$sel_subtematica)) "NULL" else r$sel_subtematica)
         message("- amenazadas_categoria: ", r$amenazadas_categoria)
         message("- indicador: ", r$indicador)
       }
@@ -344,7 +304,7 @@ exp_visualization3_server <- function(id, r, con, loading_fns = NULL, debug = FA
         region = r$sel_region,
         grupo = r$sel_grupo,
         tipo = r$sel_tipo,
-        tematica = r$tematica,  # Fixed typo
+        tematica = compute_tematica_slug(r),
         indicador = r$indicador,
         subregiones = use_subregiones, # TRUE for maps, FALSE for other charts
         with_parent = FALSE,
@@ -485,7 +445,7 @@ exp_visualization3_server <- function(id, r, con, loading_fns = NULL, debug = FA
           region = r$sel_region,
           grupo = r$sel_grupo,
           tipo = NULL,
-          tematica = r$tematica,
+          tematica = compute_tematica_slug(r),
           indicador = NULL,
           subregiones = FALSE,
           with_parent = FALSE,
@@ -537,8 +497,9 @@ exp_visualization3_server <- function(id, r, con, loading_fns = NULL, debug = FA
           }
         }
         if (!is.null(r$sel_tematica) && grepl("cites", r$sel_tematica)) {
-          if (!is.null(r$tematica) && r$tematica != "cites") {
-            suf <- sub("^cites_", "", r$tematica)  # i, ii, iii, i_ii
+          # New behavior: parent tematica = cites; subtematica in r$sel_subtematica
+          if (!is.null(r$sel_subtematica)) {
+            suf <- sub("^cites_", "", gsub("-", "_", r$sel_subtematica))
             active_by_subcat <- active_by_subcat || grepl(paste0("cites_", suf, "$"), ind_slug)
           }
         }
@@ -1314,6 +1275,15 @@ create_breadcrumb <- function(r){
 }
 
 
+compute_tematica_slug <- function(r){
+  # Determine the tematica argument to pass to data functions
+  # Use parent temática from selection; for amenazadas with category != _total,
+  # still pass the parent temática (e.g., amenazadas_global/nacional) so data
+  # includes all subcategories; indicator filters will narrow as needed.
+  if (is.null(r$sel_tematica)) return(NULL)
+  return(gsub("-", "_", r$sel_tematica))
+}
+
 calculate_indicador <- function(r){
   regs_or_esps <- r$sel_tipo
   tematica <- if(!is.null(r$sel_tematica)){
@@ -1336,17 +1306,29 @@ calculate_indicador <- function(r){
       indicador <- glue::glue("{regs_or_esps}_{tematica}{amenazadas_categoria}")
     }
   } else if (!is.null(r$sel_tematica) && grepl("cites", r$sel_tematica)) {
-    # Cites tematica - return NULL for total categories
+    # New CITES behavior: parent tematica fixed to 'cites' and subtematica in r$sel_subtematica
     if (r$sel_tematica == "cites") {
-      indicador <- NULL  # Return NULL for "cites" (total)
+      # When only parent selected (or 'Todas'), no specific indicator
+      indicador <- NULL
     } else {
+      # Backward compatibility (shouldn't happen with new module)
       indicador <- glue::glue("{regs_or_esps}_{tematica}")
     }
+    # If explicit subtematica provided, build indicator from it
+    if (!is.null(r$sel_subtematica)) {
+      sub_slug <- gsub("-", "_", r$sel_subtematica)
+      indicador <- glue::glue("{regs_or_esps}_{sub_slug}")
+    }
   } else if (!is.null(r$sel_tematica) && grepl("exoticas", r$sel_tematica)) {
-    # Exóticas tematica - return NULL for total categories
+    # New Exóticas behavior: parent may be 'exoticas-total' with subtematica
     if (r$sel_tematica == "exoticas-total") {
-      indicador <- NULL  # Return NULL for "exoticas-total" (total)
+      indicador <- NULL
+      if (!is.null(r$sel_subtematica)) {
+        sub_slug <- gsub("-", "_", r$sel_subtematica)
+        indicador <- glue::glue("{regs_or_esps}_{sub_slug}")
+      }
     } else {
+      # Existing direct child selection behavior remains
       indicador <- glue::glue("{regs_or_esps}_{tematica}")
     }
   } else {

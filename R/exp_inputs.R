@@ -206,25 +206,36 @@ exp_inputs_server <- function(id, r, app_options, session_main = NULL, debug = F
       if (debug) cat("🔍 TEMATICA OBSERVER TRIGGERED\n")
       if (debug) cat("🔍 selected_tematica function available:", !is.null(selected_tematica), "\n")
 
-      tematica <- selected_tematica()
-      if (debug) cat("🔍 selected_tematica() returned:", tematica, "\n")
+      tem_sel <- selected_tematica()
+      if (debug) cat("🔍 selected_tematica() returned:", paste(capture.output(str(tem_sel)), collapse = " "), "\n")
 
-      if (!is.null(tematica)) {
-        r$sel_tematica <- tematica
+      if (!is.null(tem_sel)) {
+        # tem_sel is a list with fields tematica and subtematica
+        r$sel_tematica <- tem_sel$tematica
+        r$sel_subtematica <- tem_sel$subtematica
+        if (!is.null(tem_sel$amenazadas_categoria)) {
+          r$amenazadas_categoria <- tem_sel$amenazadas_categoria
+        }
 
-        # Set has_subtematica based on specific tematicas
+        # Set has_subtematica based on specific tematicas (parents that have sub-levels)
         subtematica_themes <- c("amenazadas-nacional", "amenazadas-global", "cites", "exoticas-total")
-        r$has_subtematica <- tematica %in% subtematica_themes
+        r$has_subtematica <- r$sel_tematica %in% subtematica_themes
 
         if (debug) {
           message("✓ r$sel_tematica updated to: ", r$sel_tematica)
+          message("✓ r$sel_subtematica updated to: ", if (is.null(r$sel_subtematica)) "NULL" else r$sel_subtematica)
+          message("✓ r$amenazadas_categoria updated to: ", if (is.null(r$amenazadas_categoria)) "NULL" else r$amenazadas_categoria)
           message("✓ r$has_subtematica updated to: ", r$has_subtematica)
         }
       } else {
         r$sel_tematica <- NULL
+        r$sel_subtematica <- NULL
+        r$amenazadas_categoria <- NULL
         r$has_subtematica <- FALSE
         if (debug) {
           message("✓ r$sel_tematica set to NULL (no selection)")
+          message("✓ r$sel_subtematica set to NULL (no selection)")
+          message("✓ r$amenazadas_categoria set to NULL (no selection)")
           message("✓ r$has_subtematica set to FALSE (no selection)")
         }
       }

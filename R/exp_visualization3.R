@@ -1299,25 +1299,22 @@ calculate_indicador <- function(r){
       TRUE ~ "registros_region_total"
     )
   } else if (!is.null(r$sel_tematica) && grepl("amenazadas", r$sel_tematica)) {
-    # Amenazadas tematica - return NULL when _total category is selected
+    # Amenazadas tematica
     if (!is.null(amenazadas_categoria) && amenazadas_categoria == "_total") {
-      indicador <- NULL
+      # Total for amenazadas (global or nacional)
+      indicador <- glue::glue("{regs_or_esps}_{tematica}_total")
     } else {
       indicador <- glue::glue("{regs_or_esps}_{tematica}{amenazadas_categoria}")
     }
   } else if (!is.null(r$sel_tematica) && grepl("cites", r$sel_tematica)) {
-    # New CITES behavior: parent tematica fixed to 'cites' and subtematica in r$sel_subtematica
-    if (r$sel_tematica == "cites") {
-      # When only parent selected (or 'Todas'), no specific indicator
-      indicador <- NULL
-    } else {
-      # Backward compatibility (shouldn't happen with new module)
-      indicador <- glue::glue("{regs_or_esps}_{tematica}")
-    }
-    # If explicit subtematica provided, build indicator from it
-    if (!is.null(r$sel_subtematica)) {
+    # CITES behavior with new module:
+    # - With subtemática -> use it (e.g., especies_cites_i_ii)
+    # - Without subtemática -> total (e.g., especies_cites_total)
+    if (!is.null(r$sel_subtematica) && nzchar(r$sel_subtematica)) {
       sub_slug <- gsub("-", "_", r$sel_subtematica)
       indicador <- glue::glue("{regs_or_esps}_{sub_slug}")
+    } else {
+      indicador <- glue::glue("{regs_or_esps}_cites_total")
     }
   } else if (!is.null(r$sel_tematica) && grepl("exoticas", r$sel_tematica)) {
     # New Exóticas behavior: parent may be 'exoticas-total' with subtematica

@@ -46,6 +46,7 @@ exp_debug_server <- function(id, r, debug = FALSE) {
         cat("sel_grupo_tipo:", r$sel_grupo_tipo, "\n")
         cat("sel_grupo:", r$sel_grupo, "\n")
         cat("sel_tematica:", r$sel_tematica, "\n")
+        cat("sel_subtematica:", r$sel_subtematica, "\n")
         cat("sel_tipo:", r$sel_tipo, "\n")
         cat("tematica:", r$tematica, "\n")
         cat("indicador:", r$indicador, "\n")

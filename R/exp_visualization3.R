@@ -168,21 +168,23 @@ exp_visualization3_server <- function(id, r, con, loading_fns = NULL, debug = FA
       }
 
       computed_available <- NULL
-      if (!is.null(r$has_subtematica) && r$has_subtematica) {
-        # Keep all charts; map should only be disabled for special regions
-        computed_available <- all_charts
-      } else if (is_amenazadas_total) {
-        # Amenazadas total: all charts available (including map)
+      # Allow full chart set only for specific tematicas
+      allow_full_charts <- FALSE
+      if(!is.null(r$tematica)){
+        allow_full_charts <- is.null(r$sel_subtematica) && r$tematica %in% c("amenazadas_global", "amenazadas_nacional", "cites")
+      }
+      # if(!is.null(r$tematica) && r$tematica == "exoticas-total"){
+      #   allow_full_charts <- FALSE
+      # }
+      # Exóticas: restrict to map, cards, table (disable pie/donut/treemap/bars)
+      if (!is.null(r$sel_tematica) && grepl("exoticas", r$sel_tematica)) {
+        computed_available <- map_table
+      } else if (allow_full_charts || is_amenazadas_total) {
+        # For allowed tematicas (and amenazadas total), enable all charts
         computed_available <- all_charts
       } else {
-        # Regular themes
-        if (!is.null(r$sel_tipo) && r$sel_tipo == "registros") {
-          computed_available <- map_table
-        } else if (!is.null(r$sel_tipo) && r$sel_tipo == "especies") {
-          computed_available <- map_table_bar
-        } else {
-          computed_available <- map_table  # default
-        }
+        # Default: restrict to map, cards, table
+        computed_available <- map_table
       }
 
       # If region is one of the special cases, remove map from available charts
@@ -1298,20 +1300,6 @@ calculate_indicador <- function(r){
       r$sel_tipo == "especies" && r$especies_total_estimadas == "estimadas" ~ "especies_region_estimadas",
       TRUE ~ "registros_region_total"
     )
-  } else if (!is.null(r$sel_tematica) && (grepl("amenazadas", r$sel_tematica) || grepl("cites", r$sel_tematica))) {
-    # Unified behavior for Amenazadas and CITES
-    # - Maps: use total indicator
-    # - Parents with subcategories: return NULL to fetch all subcategories
-    if (!is.null(r$chart_type) && r$chart_type == "map") {
-      # For amenazadas parents, tematica already includes the scope (global/nacional)
-      # For cites parent, tematica == "cites"
-      indicador <- glue::glue("{regs_or_esps}_{tematica}_total")
-    } else if (isTRUE(r$has_subtematica)) {
-      indicador <- NULL
-    } else {
-      # Fallback for direct child themes without subcategories
-      indicador <- glue::glue("{regs_or_esps}_{tematica}")
-    }
   } else if (!is.null(r$sel_tematica) && grepl("exoticas", r$sel_tematica)) {
     # New Exóticas behavior: parent may be 'exoticas-total' with subtematica
     if (r$sel_tematica == "exoticas-total") {
@@ -1322,6 +1310,22 @@ calculate_indicador <- function(r){
       }
     } else {
       # Existing direct child selection behavior remains
+      indicador <- glue::glue("{regs_or_esps}_{tematica}")
+    }
+  } else if (!is.null(r$sel_subtematica) && nzchar(r$sel_subtematica)) {
+    # When a subtematica is selected (e.g., cites-i or amenazadas_global_en)
+    sub_slug <- gsub("-", "_", r$sel_subtematica)
+    indicador <- glue::glue("{regs_or_esps}_{sub_slug}")
+  } else if (!is.null(r$sel_tematica) && (grepl("amenazadas", r$sel_tematica) || grepl("cites", r$sel_tematica))) {
+    # Unified behavior for Amenazadas and CITES
+    # - Maps: use total indicator
+    # - Parents with subcategories: return NULL to fetch all subcategories
+    if (!is.null(r$chart_type) && r$chart_type == "map") {
+      indicador <- glue::glue("{regs_or_esps}_{tematica}_total")
+    } else if (isTRUE(r$has_subtematica)) {
+      indicador <- NULL
+    } else {
+      # Fallback for direct child themes without subcategories
       indicador <- glue::glue("{regs_or_esps}_{tematica}")
     }
   } else {

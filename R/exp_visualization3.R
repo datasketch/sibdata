@@ -1298,23 +1298,19 @@ calculate_indicador <- function(r){
       r$sel_tipo == "especies" && r$especies_total_estimadas == "estimadas" ~ "especies_region_estimadas",
       TRUE ~ "registros_region_total"
     )
-  } else if (!is.null(r$sel_tematica) && grepl("amenazadas", r$sel_tematica)) {
-    # Amenazadas tematica
-    if (!is.null(amenazadas_categoria) && amenazadas_categoria == "_total") {
-      # Total for amenazadas (global or nacional)
+  } else if (!is.null(r$sel_tematica) && (grepl("amenazadas", r$sel_tematica) || grepl("cites", r$sel_tematica))) {
+    # Unified behavior for Amenazadas and CITES
+    # - Maps: use total indicator
+    # - Parents with subcategories: return NULL to fetch all subcategories
+    if (!is.null(r$chart_type) && r$chart_type == "map") {
+      # For amenazadas parents, tematica already includes the scope (global/nacional)
+      # For cites parent, tematica == "cites"
       indicador <- glue::glue("{regs_or_esps}_{tematica}_total")
+    } else if (isTRUE(r$has_subtematica)) {
+      indicador <- NULL
     } else {
-      indicador <- glue::glue("{regs_or_esps}_{tematica}{amenazadas_categoria}")
-    }
-  } else if (!is.null(r$sel_tematica) && grepl("cites", r$sel_tematica)) {
-    # CITES behavior with new module:
-    # - With subtemática -> use it (e.g., especies_cites_i_ii)
-    # - Without subtemática -> total (e.g., especies_cites_total)
-    if (!is.null(r$sel_subtematica) && nzchar(r$sel_subtematica)) {
-      sub_slug <- gsub("-", "_", r$sel_subtematica)
-      indicador <- glue::glue("{regs_or_esps}_{sub_slug}")
-    } else {
-      indicador <- glue::glue("{regs_or_esps}_cites_total")
+      # Fallback for direct child themes without subcategories
+      indicador <- glue::glue("{regs_or_esps}_{tematica}")
     }
   } else if (!is.null(r$sel_tematica) && grepl("exoticas", r$sel_tematica)) {
     # New Exóticas behavior: parent may be 'exoticas-total' with subtematica

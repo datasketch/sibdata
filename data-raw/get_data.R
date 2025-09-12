@@ -7,7 +7,8 @@ library(googlesheets4)
 #googlesheets4::gs4_deauth()
 #googlesheets4::gs4_auth()
 # Diccionario 2025
-ss <- "https://docs.google.com/spreadsheets/d/159R8DZUiIqd8Uh4h5-BfJoLD48cLvME5fgDMCH7z9mM/edit?usp=sharing"
+ss <- "https://docs.google.com/spreadsheets/d/1m4pO9EhVJJMZZc2MwZpYz6w8C3qLgxLPwhkd9ht51zI/edit?gid=0#gid=0"
+# ss <- "https://docs.google.com/spreadsheets/d/159R8DZUiIqd8Uh4h5-BfJoLD48cLvME5fgDMCH7z9mM/edit?usp=sharing"
 # Diccionario 2022
 # ss <- "https://docs.google.com/spreadsheets/d/1m1OAQ6Xhn-gHbIoRSHlK_MFN8aFxsSuQwy4OgIJhftQ/edit#gid=0"
 

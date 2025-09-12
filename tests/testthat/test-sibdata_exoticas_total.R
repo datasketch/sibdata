@@ -56,10 +56,22 @@ test_that("multiplication works", {
 
 
 
-    # sel_tematica: exoticas-riesgo-invasion
-    # sel_tipo: registros
-    # tematica: exoticas_riesgo_invasion
-    # indicador: registros_exoticas_riesgo_invasion
+    # Exóticas total
+    region <- "colombia"
+    # tematica <- "cites"
+    tematica <- "amenazadas_global"
+    tipo <- "registros"
+    # indicador <- "especies_cites_total"
+    indicador <- "especies_amenazadas_global_total"
+    x1 <- sibdata(region = region,
+                  tipo = tipo,
+                  tematica = tematica,
+                  indicador = indicador,
+                  subregiones =  TRUE,
+                  with_parent = FALSE,
+                  con = con)
+    expect_true(nrow(x1) == 33)
+
 
 
     expect_equal(names(x1), c("indicador", "count"))

@@ -19,6 +19,7 @@ unlink("data-raw/downloads",
 # Get data form googlesheets
 source("data-raw/get_data.R")
 
+#pats <- read_delim("data-raw/db-cifras-sib/patrocinador.tsv")
 files <- list.files("data-raw/db-cifras-sib", full.names = TRUE)
 table_names <- gsub(".tsv", "",basename(files))
 
@@ -37,7 +38,7 @@ ds$grupo <- ds$grupo |>
   mutate(icon = slug %in% available_icons)
 
 # temp
-ds$tematica <- read_delim("data-raw/tematica.tsv")
+# ds$tematica <- read_delim("data-raw/tematica.tsv")
 ds$tematica <- ds$tematica |>
   mutate(icon = slug %in% available_icons)
 

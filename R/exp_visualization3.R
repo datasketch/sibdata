@@ -270,9 +270,17 @@ exp_visualization3_server <- function(id, r, con, loading_fns = NULL, debug = FA
       )
     })
 
-    # Render breadcrumb based on r values
+    # Keep breadcrumb in sync with relevant inputs
+    observe({
+      # Dependencies
+      r$sel_tematica; r$tematica; r$sel_tipo; r$sel_region; r$sel_grupo; r$amenazadas_categoria; r$sel_subtematica
+      r$breadcrumb <- create_breadcrumb(r)
+    })
+
+    # Render breadcrumb text
     output$breadcrumb <- renderText({
-      create_breadcrumb(r)
+      req(r$breadcrumb)
+      r$breadcrumb
     })
 
 
@@ -1272,10 +1280,33 @@ create_breadcrumb <- function(r){
   region <- tools::toTitleCase(gsub("-", " ", r$sel_region))
   tipo_text <- if (r$sel_tipo == "registros") "Observaciones" else "Especies"
 
+  # Prefer subtemática when defined; otherwise use temática
   tematica_text <- if (is.null(r$sel_tematica)) {
     "todas las temáticas"
+  } else if (!is.null(r$sel_subtematica) && nzchar(r$sel_subtematica)) {
+    # Special-case CITES to ensure roman numerals are UPPER CASE (I, II, III)
+    if (grepl("^cites", r$sel_subtematica)) {
+      suf <- sub("^cites[-_]", "", r$sel_subtematica)
+      roman <- toupper(gsub("-", " ", suf))
+      paste("CITES", roman)
+    } else {
+      tools::toTitleCase(gsub("-", " ", r$sel_subtematica))
+    }
+  } else if (!is.null(r$amenazadas_categoria) && r$amenazadas_categoria != "_total" &&
+             !is.null(r$tematica) && grepl("amenazadas", r$tematica)) {
+    # Amenazadas: show subcategory plus scope (global/nacional)
+    scope <- if (grepl("global", r$tematica)) "categoría global"
+             else if (grepl("nacional", r$tematica)) "categoría nacional" else ""
+    sub_lab <- toupper(sub("^_", "", r$amenazadas_categoria))
+    paste(sub_lab, scope)
   } else {
-    tools::toTitleCase(gsub("-", " ", r$sel_tematica))
+    tem_slug <- if (!is.null(r$tematica)) r$tematica else gsub("-", "_", r$sel_tematica)
+    # Special-case CITES when no subtemática: keep acronym uppercase
+    if (identical(tem_slug, "cites")) {
+      "CITES"
+    } else {
+      tools::toTitleCase(gsub("_", " ", tem_slug))
+    }
   }
 
   grupo_text <- ""

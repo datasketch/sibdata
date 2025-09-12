@@ -345,12 +345,45 @@ exp_visualization3_server <- function(id, r, con, loading_fns = NULL, debug = FA
     output$viz_output <- renderUI({
       req(r$chart_type)
 
-      # Check if there's an error to display
-      if (!is.null(r$viz_error)) {
-        chart_output <- div(
-          h4("Error en la visualización", style = "color: red;"),
-          verbatimTextOutput(ns("error_display"))
+      # Helper to render a friendly no-data message
+      render_no_data_box <- function(){
+        div(style = "border: 1px solid #4ad3ac; background: #F2FBF8; color: #09A274; padding: 16px; border-radius: 8px; text-align: center;",
+            div(style = "font-size: 18px; font-weight: 600;", "Los filtros no arrojaron resultados"),
+            div(style = "font-size: 14px; margin-top: 6px;", "Por favor amplía la búsqueda con categorías más genéricas")
         )
+      }
+
+      # Detect no-data scenarios for any visualization type
+      no_rows <- is.null(r$main_data) || (is.data.frame(r$main_data) && nrow(r$main_data) == 0)
+
+      # Additional guard: if we have rows but every numeric value relevant to the
+      # visualization is NA or 0, treat as no-data. Prefer the active indicador → count → any numeric.
+      no_numeric_values <- FALSE
+      if (!no_rows && is.data.frame(r$main_data)) {
+        if (!is.null(r$indicador) && r$indicador %in% names(r$main_data)) {
+          vals <- r$main_data[[r$indicador]]
+          no_numeric_values <- all(is.na(vals) | vals == 0)
+        } else if ("count" %in% names(r$main_data)) {
+          v <- r$main_data$count
+          no_numeric_values <- all(is.na(v) | v == 0)
+        } else {
+          numeric_cols <- names(r$main_data)[sapply(r$main_data, is.numeric)]
+          if (length(numeric_cols) > 0) {
+            # If all numeric columns are entirely NA or 0, consider it no-data
+            no_numeric_values <- all(sapply(numeric_cols, function(nm) {
+              v <- r$main_data[[nm]]
+              all(is.na(v) | v == 0)
+            }))
+          }
+        }
+      }
+
+      # Prefer showing a friendly no-data message over a raw error block
+      if (no_rows || no_numeric_values) {
+        chart_output <- render_no_data_box()
+      } else if (!is.null(r$viz_error)) {
+        # Keep error details available for debug modules, but avoid breaking the UI
+        chart_output <- render_no_data_box()
       } else {
         # Normal visualization output
         chart_output <- switch(r$chart_type,
@@ -472,7 +505,10 @@ exp_visualization3_server <- function(id, r, con, loading_fns = NULL, debug = FA
 
       if (is.null(d) || nrow(d) == 0) {
         r$current_chart_data <- NULL
-        return(div("No hay datos disponibles para las tarjetas."))
+        return(div(style = "border: 1px solid #4ad3ac; background: #F2FBF8; color: #09A274; padding: 16px; border-radius: 8px; text-align: center;",
+                   div(style = "font-size: 18px; font-weight: 600;", "Los filtros no arrojaron resultados"),
+                   div(style = "font-size: 14px; margin-top: 6px;", "Por favor amplía la búsqueda con categorías más genéricas")
+        ))
       }
 
       # Summarize by indicator

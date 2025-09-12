@@ -153,8 +153,8 @@ format_species_data <- function(data) {
   # Only rename and relocate tematica_label if it exists
   if("tematica_label" %in% names(data)) {
     formatted_data <- formatted_data |>
-      dplyr::rename("Tematica" = "tematica_label") |>
-      dplyr::relocate(dplyr::all_of("Tematica"), .after = "Observaciones")
+      dplyr::rename("Temática" = "tematica_label") |>
+      dplyr::relocate(dplyr::all_of("Temática"), .after = "Observaciones")
   }
 
   formatted_data

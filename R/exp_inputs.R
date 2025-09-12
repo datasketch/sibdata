@@ -144,10 +144,15 @@ exp_inputs_server <- function(id, r, app_options, session_main = NULL, debug = F
       grupo_result <- selected_grupo()
       if (!is.null(grupo_result)) {
         r$sel_grupo_tipo <- grupo_result$type
-        r$sel_grupo <- grupo_result$value
+        # Normalize "todos" (or empty) to NULL so data functions see no filter
+        selected_value <- grupo_result$value
+        if (!is.null(selected_value) && (identical(tolower(selected_value), "todos") || identical(selected_value, ""))) {
+          selected_value <- NULL
+        }
+        r$sel_grupo <- selected_value
         if (debug) {
           message("✓ r$sel_grupo_tipo updated to: ", r$sel_grupo_tipo)
-          message("✓ r$sel_grupo updated to: ", r$sel_grupo)
+          message("✓ r$sel_grupo updated to: ", if (is.null(r$sel_grupo)) "NULL" else r$sel_grupo)
         }
       } else {
         r$sel_grupo <- NULL
@@ -242,7 +247,7 @@ exp_inputs_server <- function(id, r, app_options, session_main = NULL, debug = F
 
       # CRITICAL FIX: Add delay to ensure tematica UI is fully rendered before setting inputs_ready
       # This prevents race conditions between tematica renderUI and map renderLeaflet
-      shinyjs::delay(500, {
+      shinyjs::delay(600, {
         r$inputs_ready <- TRUE
         if (debug) message("✅ Inputs module ready - setting r$inputs_ready = TRUE (with delay)")
         if (debug) cat("🔍 TIMING: inputs_ready set AFTER tematica UI stabilization delay\n")

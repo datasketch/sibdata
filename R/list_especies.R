@@ -5,10 +5,12 @@ list_species <- function(region,
                          grupo = NULL,
                          tematica = NULL, with_labels = FALSE,
                          con = NULL){
+  # region <- "colombia"
   # region <- "tolima"
   # tematica <- "endemicas"
-  # tematica <- "amenazadas_nacional_total"
+  # tematica <- "amenazadas-nacional"
   # tematica <- "cites-i"
+  # tematica <- "exoticas-riesgo-invasion-total"
   # grupo <- "hongos"
   # tematica <- "trasplantadas"
   # tematica <- "exoticas-total"
@@ -28,7 +30,7 @@ list_species <- function(region,
     tematica <- gsub("_", "-", tematica)
 
     if(tematica == "cites"){
-      tematica <- c("cites-i", "cites-i_ii", "cites-ii", "cites-iii")
+      tematica <- c("cites-i", "cites-i-ii", "cites-ii", "cites-iii")
     } else if(tematica == "amenazadas-global"){
       tematica <- c("amenazadas-global-cr", "amenazadas-global-en",
                     "amenazadas-global-vu")
@@ -43,12 +45,13 @@ list_species <- function(region,
     } else if(tematica == "exoticas-total"){
       tematica <- c("exoticas", "exoticas-riesgo-invasion-total",
                     "invasoras", "trasplantadas")
-    } else if(tematica == "exoticas-riesgo-invasion-total"){
-    tematica <- c("exotica-riesgo-invasion-bajo",
-                  "exotica-riesgo-invasion-moderado",
-                  "exotica-riesgo-invasion-moderado/ Alto",
-                  "exotica-riesgo-invasion-alto")
-  }
+    }
+    # else if(tematica == "exoticas-riesgo-invasion-total"){
+    #   tematica <- c("exotica-riesgo-invasion-bajo",
+    #                 "exotica-riesgo-invasion-moderado",
+    #                 "exotica-riesgo-invasion-moderado/ Alto",
+    #                 "exotica-riesgo-invasion-alto")
+    # }
     esp_tem <- sibdata_especie_tematica(con) |>
       filter(slug_region == region) |>
       #filter(slug_tematica %like% paste0("%",tematica,"%"))

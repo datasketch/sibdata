@@ -93,17 +93,27 @@ exp_species_table_server <- function(id, r, con, session = NULL, loading_fns = N
       }
       
       # Build parameters for list_species
+      # Prefer subtemática when present; else use temática (hyphens/underscores handled downstream)
+      tem_param <- NULL
+      if (!is.null(r$sel_subtematica) && nzchar(r$sel_subtematica)) {
+        tem_param <- r$sel_subtematica
+      } else if (!is.null(r$sel_tematica) && nzchar(r$sel_tematica)) {
+        tem_param <- r$sel_tematica
+      } else if (!is.null(r$tematica) && nzchar(r$tematica)) {
+        tem_param <- r$tematica
+      }
+
       params <- list(
         region = r$sel_region,
         grupo = r$sel_grupo,
-        tematica = r$sel_tematica
+        tematica = tem_param
       )
       
       if (debug) {
         message("=== Species query parameters ===")
         message("Region: ", params$region)
         message("Grupo: ", params$grupo)
-        message("Tematica: ", params$tematica)
+        message("Tematica (effective): ", if (is.null(params$tematica)) "NULL" else params$tematica)
       }
       
       # Call list_species with current parameters
@@ -163,24 +173,43 @@ exp_species_table_server <- function(id, r, con, session = NULL, loading_fns = N
     output$species_summary <- renderText({
       if (debug) message("📝 SPECIES SUMMARY RENDERED")
       
-      total <- if(is.null(r$species_data)) 0 else nrow(r$species_data)
+      # Always use the current species list row count
+      total <- if (is.null(r$species_data)) 0 else nrow(r$species_data)
+      
+      # Region label
       region <- r$sel_region %||% "todas las regiones"
       region <- tools::toTitleCase(gsub("-", " ", region))
       
-      tematica_text <- if (is.null(r$sel_tematica)) {
-        "todas las temáticas"
+      # Temática label: prefer subtemática; handle CITES casing and roman numerals
+      tem_slug <- if (!is.null(r$sel_subtematica) && nzchar(r$sel_subtematica)) {
+        r$sel_subtematica
+      } else if (!is.null(r$sel_tematica) && nzchar(r$sel_tematica)) {
+        r$sel_tematica
       } else {
-        tools::toTitleCase(gsub("_", " ", r$sel_tematica))
+        NULL
+      }
+      tematica_text <- if (is.null(tem_slug)) {
+        "todas las temáticas"
+      } else if (grepl("^cites", tem_slug)) {
+        suf <- sub("^cites[-_]", "", tem_slug)
+        roman <- toupper(gsub("-", " ", suf))
+        paste("CITES", roman)
+      } else {
+        parts <- unlist(strsplit(tem_slug, "[-_]"))
+        paste(tools::toTitleCase(parts), collapse = "-")
       }
       
-      grupo_text <- ""
-      if (!is.null(r$sel_grupo)) {
-        grupo <- tools::toTitleCase(gsub("-", " ", r$sel_grupo))
-        grupo_text <- paste("del grupo", grupo)
+      # Grupo label: show 'Todos' when no group selected
+      grupo_val <- r$sel_grupo
+      grupo_label <- if (is.null(grupo_val) || grupo_val == "" || tolower(grupo_val) == "todos") {
+        "Todos"
+      } else {
+        tools::toTitleCase(gsub("-", " ", grupo_val))
       }
+      grupo_text <- paste("del grupo", grupo_label)
       
       result <- sprintf("Mostrando %s especies para %s en %s %s",
-                        format(total, big.mark = ","),
+                        format(total, big.mark = ",", scientific = FALSE),
                         tematica_text,
                         region,
                         grupo_text)
@@ -202,7 +231,8 @@ exp_species_table_server <- function(id, r, con, session = NULL, loading_fns = N
       if (is.null(species_data) || nrow(species_data) == 0) {
         if (debug) message("⚠ No data to display in table")
         empty_df <- data.frame(
-          "No hay especies" = "No se encontraron especies para los filtros seleccionados"
+          "No hay especies" = "No se encontraron especies para los filtros seleccionados",
+          check.names = FALSE
         )
         return(DT::datatable(
           empty_df,
@@ -274,12 +304,32 @@ exp_species_table_server <- function(id, r, con, session = NULL, loading_fns = N
         size = "l",
         div(
           div(class = "summary-text", style = "margin-bottom: 15px;",
-              sprintf("Mostrando %s especies para %s en %s%s",
-                     format(nrow(r$species_data), big.mark = ","),
-                     if (is.null(r$sel_tematica)) "todas las temáticas" else tools::toTitleCase(gsub("_", " ", r$sel_tematica)),
-                     tools::toTitleCase(gsub("-", " ", r$sel_region %||% "Colombia")),
-                     if (!is.null(r$sel_grupo)) paste(" del grupo", tools::toTitleCase(gsub("-", " ", r$sel_grupo))) else ""
-              )
+              {
+                total <- if (is.null(r$species_data)) 0 else nrow(r$species_data)
+                region <- tools::toTitleCase(gsub("-", " ", r$sel_region %||% "Colombia"))
+                tem_slug <- if (!is.null(r$sel_subtematica) && nzchar(r$sel_subtematica)) r$sel_subtematica else r$sel_tematica
+                tem_txt <- if (is.null(tem_slug)) {
+                  "todas las temáticas"
+                } else if (grepl("^cites", tem_slug)) {
+                  suf <- sub("^cites[-_]", "", tem_slug)
+                  roman <- toupper(gsub("-", " ", suf))
+                  paste("CITES", roman)
+                } else {
+                  parts <- unlist(strsplit(tem_slug, "[-_]"))
+                  paste(tools::toTitleCase(parts), collapse = "-")
+                }
+                grupo_val <- r$sel_grupo
+                grupo_label <- if (is.null(grupo_val) || grupo_val == "" || tolower(grupo_val) == "todos") {
+                  "Todos"
+                } else {
+                  tools::toTitleCase(gsub("-", " ", grupo_val))
+                }
+                sprintf("Mostrando %s especies para %s en %s del grupo %s",
+                        format(total, big.mark = ",", scientific = FALSE),
+                        tem_txt,
+                        region,
+                        grupo_label)
+              }
           ),
           div(style = "display: flex; justify-content: flex-end; margin-bottom: 10px;",
               downloadTableUI(ns("species_modal_download"), 

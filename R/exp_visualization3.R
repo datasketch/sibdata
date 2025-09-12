@@ -414,6 +414,10 @@ exp_visualization3_server <- function(id, r, con, loading_fns = NULL, debug = FA
           label_esps <- labels[2]
         }
 
+        # Replace any occurrences of "registros" with "observaciones" in card labels
+        label_regs <- gsub("(?i)registros", "Observaciones", label_regs, perl = TRUE)
+        label_esps <- gsub("(?i)registros", "Observaciones", label_esps, perl = TRUE)
+
         r$current_chart_data <- data.frame(
           indicador = c(ind_regs, ind_esps),
           etiqueta = unname(labels),
@@ -474,6 +478,8 @@ exp_visualization3_server <- function(id, r, con, loading_fns = NULL, debug = FA
       inds <- d2$indicador
       labels_vec <- sib_merge_ind_label(inds, con = con)
       etiqueta <- as.character(labels_vec)
+      # Replace any occurrences of "registros" with "observaciones" in card labels
+      etiqueta <- gsub("(?i)registros", "observaciones", etiqueta, perl = TRUE)
 
       r$current_chart_data <- data.frame(
         indicador = inds,
@@ -481,6 +487,20 @@ exp_visualization3_server <- function(id, r, con, loading_fns = NULL, debug = FA
         valor = d2$valor,
         stringsAsFactors = FALSE
       )
+
+      # Determine subcategory matching pattern and whether it exists among indicators
+      subcat_pattern <- NULL
+      if (!is.null(r$sel_tematica) && grepl("amenazadas", r$sel_tematica)) {
+        if (!is.null(r$amenazadas_categoria) && r$amenazadas_categoria != "_total") {
+          subcat_pattern <- paste0(r$amenazadas_categoria, "$")
+        }
+      } else if (!is.null(r$sel_tematica) && grepl("cites", r$sel_tematica)) {
+        if (!is.null(r$sel_subtematica) && nzchar(r$sel_subtematica)) {
+          sub_slug <- gsub("-", "_", r$sel_subtematica)
+          subcat_pattern <- paste0(sub_slug, "$")
+        }
+      }
+      any_sub_present <- !is.null(subcat_pattern) && any(grepl(subcat_pattern, r$current_chart_data$indicador))
 
       boxes <- lapply(seq_len(nrow(r$current_chart_data)), function(i){
         val <- r$current_chart_data$valor[i]
@@ -491,22 +511,15 @@ exp_visualization3_server <- function(id, r, con, loading_fns = NULL, debug = FA
         # Active by tipo
         active_by_tipo <- identical(ind_tipo, r$sel_tipo)
 
-        # Additionally highlight when subcategory matches (amenazadas/cites)
-        active_by_subcat <- FALSE
-        if (!is.null(r$sel_tematica) && grepl("amenazadas", r$sel_tematica)) {
-          if (!is.null(r$amenazadas_categoria) && r$amenazadas_categoria != "_total") {
-            active_by_subcat <- grepl(paste0(r$amenazadas_categoria, "$"), ind_slug)
-          }
-        }
-        if (!is.null(r$sel_tematica) && grepl("cites", r$sel_tematica)) {
-          # New behavior: parent tematica = cites; subtematica in r$sel_subtematica
-          if (!is.null(r$sel_subtematica)) {
-            suf <- sub("^cites_", "", gsub("-", "_", r$sel_subtematica))
-            active_by_subcat <- active_by_subcat || grepl(paste0("cites_", suf, "$"), ind_slug)
-          }
-        }
+        # Active by subcategory (when selected)
+        active_by_subcat <- !is.null(subcat_pattern) && grepl(subcat_pattern, ind_slug)
 
-        is_active <- active_by_tipo || active_by_subcat
+        # Require subcategory match if selected and present; else fallback to tipo-only
+        is_active <- if (!is.null(subcat_pattern) && any_sub_present) {
+          active_by_tipo && active_by_subcat
+        } else {
+          active_by_tipo
+        }
 
         div(style = if (is_active) box_css_active else box_css_inactive,
             p(style = if (is_active) value_css_active else value_css_inactive,

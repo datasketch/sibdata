@@ -590,7 +590,7 @@ exp_inputs_tematica_server <- function(id, con, session_main = NULL, debug = FAL
       tematica_param <- url_params$tematica
       if (!is.null(tematica_param) && tematica_param != "") {
         # Delay execution to ensure UI inputs are created first
-        shinyjs::delay(800, {
+        shinyjs::delay(1000, {
         if (debug) cat("Setting tematica from URL:", tematica_param, "\n")
 
         # Find the tematica in the tree

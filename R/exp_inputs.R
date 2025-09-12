@@ -242,7 +242,7 @@ exp_inputs_server <- function(id, r, app_options, session_main = NULL, debug = F
 
       # CRITICAL FIX: Add delay to ensure tematica UI is fully rendered before setting inputs_ready
       # This prevents race conditions between tematica renderUI and map renderLeaflet
-      shinyjs::delay(1200, {
+      shinyjs::delay(1000, {
         r$inputs_ready <- TRUE
         if (debug) message("✅ Inputs module ready - setting r$inputs_ready = TRUE (with delay)")
         if (debug) cat("🔍 TIMING: inputs_ready set AFTER tematica UI stabilization delay\n")

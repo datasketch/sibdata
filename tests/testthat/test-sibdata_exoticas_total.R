@@ -3,6 +3,10 @@ test_that("multiplication works", {
     con <- DBI::dbConnect(RSQLite::SQLite(),
                           sys_file_sibdata("db/sibdata.sqlite"),
                           read_only = TRUE)
+    con <- duckdb::dbConnect(duckdb::duckdb(dbdir = sys_file_sibdata("db/sibdata.duckdb"),
+                                            read_only = TRUE))
+
+
     on.exit(DBI::dbDisconnect(con))
 
     # sel_region: colombia
@@ -28,7 +32,7 @@ test_that("multiplication works", {
                   con = con)
     expect_true(nrow(x1) == 1)
 
-    indicador <- "registros_exotica_riesgo_invasion_total"
+    indicador <- "registros_exoticas_riesgo_invasion_total"
     x1 <- sibdata(region = region,
                   indicador = indicador,
                   con = con)

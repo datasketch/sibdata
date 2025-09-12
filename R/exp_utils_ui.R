@@ -10,24 +10,36 @@
 #' @return DBI connection to SQLite database
 #' @export
 get_app_connection <- function(path = NULL, debug = FALSE) {
-  if(is.null(path)){
-    path <- sibdata:::sys_file_sibdata("db/sibdata.sqlite")
+  # Resolve default database path if not provided
+  if (is.null(path)) {
+    duckdb_default <- sibdata:::sys_file_sibdata("db/sibdata.duckdb")
+    sqlite_default <- sibdata:::sys_file_sibdata("db/sibdata.sqlite")
+    path <- if (file.exists(duckdb_default)) duckdb_default else sqlite_default
   }
 
-  # Debug: Print database path information
+  # Determine engine by file extension
+  is_duckdb <- grepl("\\.duckdb$", path, ignore.case = TRUE)
+
+  # Debug: Print database path and engine information
   if (debug) {
     message("🗄️ Database connection info:")
-    message("- Requested path: ", if(is.null(path)) "NULL (using default)" else path)
     message("- Resolved path: ", path)
     message("- File exists: ", file.exists(path))
-    if(file.exists(path)) {
+    message("- Engine: ", if (is_duckdb) "DuckDB" else "SQLite")
+    if (file.exists(path)) {
       message("- File size: ", file.size(path), " bytes")
     }
   }
 
-  DBI::dbConnect(RSQLite::SQLite(),
-                 path,
-                 read_only = TRUE)
+  if (is_duckdb) {
+    DBI::dbConnect(duckdb::duckdb(),
+                   path,
+                   read_only = TRUE)
+  } else {
+    DBI::dbConnect(RSQLite::SQLite(),
+                   path,
+                   read_only = TRUE)
+  }
 }
 
 #' Get available options for dropdowns

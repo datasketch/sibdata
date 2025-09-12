@@ -144,7 +144,8 @@ server <- function(input, output, session) {
   }
 
   # Create session-specific app options
-  con <- get_app_connection("db/sibdata.sqlite", debug = DEBUG_MODE)
+  # con <- get_app_connection("db/sibdata.sqlite", debug = DEBUG_MODE)
+  con <- get_app_connection("db/sibdata.duckdb", debug = DEBUG_MODE)
   app_options <- get_app_options(con, debug = DEBUG_MODE)
   app_options$con <- con
   conmap <- geotable::gt_con()

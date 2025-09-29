@@ -25,15 +25,18 @@ str(getwd())
 tic()
 
 
-con <- DBI::dbConnect(RSQLite::SQLite(), sys_file_sibdata("db/sibdata.sqlite"),
+# con <- DBI::dbConnect(RSQLite::SQLite(), sys_file_sibdata("db/sibdata.sqlite"),
+#                       read_only = TRUE)
+con <- DBI::dbConnect(duckdb::duckdb(), sys_file_sibdata("db/sibdata.duckdb"),
                       read_only = TRUE)
+
 av_regions <- unname(sib_available_regions(subtipo = c("Departamento"), con = con))
 
 
 av_regions_top <- c("boyaca","narino","tolima", "santander",
                     "amazonas", "caqueta", "guainia", "guaviare", "putumayo", "vaupes")
 
-av_regions_amazonas <- c("amazonas", "caqueta", "guainia", "guaviare", "putumayo", "vaupes")
+av_regions_amazonas <- c("amazonas", "caqueta", "guainia", "guaviare", "putumayo", "vaupes", "meta")
 
 #av_regions <- av_regions[!av_regions %in% av_regions_top]
 #av_regions <- c("boyaca","narino","tolima", "santander")
@@ -65,6 +68,7 @@ map(av_regions, safely(function(region){
   # region <- "caqueta"
   # region <- "putumayo"
   # region <- "san-andres-providencia"
+  # region <- "meta"
 
   reserva_resguardo <- c("reserva-forestal-la-planada",
                          "resguardo-indigena-pialapi-pueblo-viejo")
@@ -288,7 +292,7 @@ map(av_regions, safely(function(region){
 # })
 
 
-toc() # 2:15:00
+toc() # 34:12
 
 
 

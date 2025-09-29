@@ -109,7 +109,6 @@ map(av_regions, safely(function(region){
       filter(slug_region %in% av_regions_amazonas) |>
       left_join(deptos_amazonia, by = c("slug_region" = "slug")) |>
       rename(slug = slug_region)
-    ## TODO merge aporte
     aporte <- sibdata_aporte_region_especial(con) |> collect() |>
       filter(slug_region_especial == "region-amazonia") |>
       select(-slug_region_especial) |>

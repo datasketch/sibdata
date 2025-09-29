@@ -9,8 +9,10 @@ devtools::load_all()
 # here::dr_here()
 
 
-con <- DBI::dbConnect(RSQLite::SQLite(), sys_file_sibdata("db/sibdata.sqlite"),
-                      read_only = TRUE)
+# con <- DBI::dbConnect(RSQLite::SQLite(), sys_file_sibdata("db/sibdata.sqlite"),
+#                       read_only = TRUE)
+con <- DBI::dbConnect(duckdb::duckdb(), sys_file_sibdata("db/sibdata.duckdb"),
+               read_only = TRUE)
 
 #av_regions <- sib_available_regions(subtipo = c("Municipio"))
 av_regions2 <- sib_available_regions(subtipo = c("Municipio"),
@@ -39,6 +41,10 @@ av_regions10 <- sib_available_regions(subtipo = c("Municipio"),
                                      departamento = "vaupes", con = con)
 av_regions11 <- sib_available_regions(subtipo = c("Municipio"),
                                     departamento = "cauca", con = con)
+av_regions12 <- sib_available_regions(subtipo = c("Municipio"),
+                                      departamento = "meta", con = con)
+
+
 
 av_regions <- c(
   # "reserva-forestal-la-planada",
@@ -53,8 +59,10 @@ av_regions <- c(
   av_regions8,
   av_regions9,
   av_regions10,
-  av_regions11
+  av_regions11,
+  av_regions12
 )
+# av_regions <- av_regions12
 
 
 
@@ -68,6 +76,8 @@ tic()
 av_regions <- av_regions
 
 map(av_regions, function(region){
+
+  #region <- "puerto-lopez"
   parent <- sib_parent_region(region, con = con)
   message("\n################################  ", parent)
   message("................................. ",region, paste0("(",i," de ",n,")"))
@@ -94,6 +104,7 @@ map(av_regions, function(region){
   # No hay galería
   gallery <- list()
 
+
   slides <- make_region_slides2(region, con = con)
 
   parent <- sib_parent_region(region, con = con)
@@ -104,14 +115,6 @@ map(av_regions, function(region){
     collect() |>
     filter(slug == parent_depto) |> pull(label)
 
-
-
-  if(region == "reserva-forestal-la-planada"){
-    parent <- "narino"
-  }
-  if(region == "resguardo-indigena-pialapi-pueblo-viejo"){
-    parent <- "narino"
-  }
 
   reg_gr_bio <- list()
   reg_gr_int <- list()

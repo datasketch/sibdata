@@ -23,16 +23,18 @@ ui <- fluidPage(
   
   fluidRow(
     # Left column - Input controls (50%)
-    column(6, style = "padding: 0 5px;",
+    column(4, style = "padding: 0 5px;",
            wellPanel(
              h4("Input Controls"),
              exp_inputs_ui("test_inputs")
            )
     ),
-    
-    # Right column - Debug output (50%)
-    column(6, style = "padding: 0 5px;",
+    # Middle column - Viz inputs and selections
+    column(4, style = "padding: 0 5px;",
            wellPanel(
+             h4("Viz Inputs"),
+             exp_viz_inputs_ui("viz"),
+             hr(),
              h4("Debug Output"),
              verbatimTextOutput("debug_output"),
              hr(),
@@ -42,11 +44,21 @@ ui <- fluidPage(
              h5("Current Tematica Selection:"),
              textOutput("current_tematica"),
              hr(),
-             h5("Reactive Values:"),
-             verbatimTextOutput("reactive_values"),
+             h5("Current Subtematica Selection:"),
+             textOutput("current_subtematica"),
+             hr(),
+             h5("Breadcrumb:"),
+             textOutput("breadcrumb_debug"),
              hr(),
              h5("URL Parameters:"),
-             verbatimTextOutput("url_params"),
+             verbatimTextOutput("url_params")
+           )
+    ),
+    # Right column - Detailed debug (reactive values and namespace)
+    column(4, style = "padding: 0 5px;",
+           wellPanel(
+             h5("Reactive Values:"),
+             verbatimTextOutput("reactive_values"),
              hr(),
              h5("Module Namespace Debug:"),
              verbatimTextOutput("namespace_debug")
@@ -64,12 +76,24 @@ server <- function(input, output, session) {
     sel_grupo_type = "biologico",
     sel_grupo = NULL,
     sel_tematica = NULL,
+    sel_subtematica = NULL,
+    sel_region_tipo = NULL,
+    is_special_region = FALSE,
+    has_subtematica = FALSE,
+    inputs_ready = NULL,
+    amenazadas_categoria = NULL,
     sel_tipo = "registros",
-    chart_type = "map"
+    chart_type = "map",
+    tematica = NULL,
+    indicador = NULL,
+    breadcrumb = NULL
   )
   
   # Initialize the inputs module
   exp_inputs_server("test_inputs", r, app_options, session, debug = TRUE)
+
+  # Initialize visualization inputs module (computes tematica, indicador, breadcrumb)
+  exp_viz_inputs_server("viz", r, debug = TRUE)
   
   # Create a reactive expression to track all reactive values
   reactive_values_tracker <- reactive({
@@ -78,8 +102,11 @@ server <- function(input, output, session) {
       sel_grupo_type = r$sel_grupo_type,
       sel_grupo = r$sel_grupo,
       sel_tematica = r$sel_tematica,
+      sel_subtematica = r$sel_subtematica,
       sel_tipo = r$sel_tipo,
-      chart_type = r$chart_type
+      chart_type = r$chart_type,
+      tematica = r$tematica,
+      indicador = r$indicador
     )
   })
   
@@ -120,6 +147,16 @@ server <- function(input, output, session) {
     }
   })
   
+  # Current subtematica selection
+  output$current_subtematica <- renderText({
+    subtematica <- r$sel_subtematica
+    if (is.null(subtematica) || subtematica == "") {
+      "No subtematica selected"
+    } else {
+      paste("Selected:", subtematica)
+    }
+  })
+  
   # Reactive values output
   output$reactive_values <- renderPrint({
     # Force reactivity by accessing the tracker
@@ -131,9 +168,17 @@ server <- function(input, output, session) {
     cat("sel_grupo_type:", r$sel_grupo_type, "\n")
     cat("sel_grupo:", r$sel_grupo, "\n")
     cat("sel_tematica:", r$sel_tematica, "\n")
+    cat("sel_subtematica:", r$sel_subtematica, "\n")
     cat("sel_tipo:", r$sel_tipo, "\n")
     cat("chart_type:", r$chart_type, "\n")
+    cat("tematica:", r$tematica, "\n")
+    cat("indicador:", r$indicador, "\n")
     cat("=====================\n")
+  })
+
+  # Expose breadcrumb for debug
+  output$breadcrumb_debug <- renderText({
+    r$breadcrumb %||% "(no breadcrumb)"
   })
   
   # URL parameters output

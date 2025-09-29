@@ -4,7 +4,7 @@ library(googlesheets4)
 
 ## Dictionary from Googlesheets
 
-#googlesheets4::gs4_deauth()
+googlesheets4::gs4_deauth()
 #googlesheets4::gs4_auth()
 # Diccionario 2025
 ss <- "https://docs.google.com/spreadsheets/d/1m4pO9EhVJJMZZc2MwZpYz6w8C3qLgxLPwhkd9ht51zI/edit?gid=0#gid=0"

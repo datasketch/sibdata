@@ -33,6 +33,7 @@ navigation_trees <- function(type, region = NULL, con = con){
 
   } else if(type == "tematica") {
     table <- sibdata_tematica(con) |>
+      collect() |>
       filter(parent != "cites") |>
       filter(parent != "amenazadas_global") |>
       filter(parent != "amenazadas_nacional") |>
@@ -47,7 +48,12 @@ navigation_trees <- function(type, region = NULL, con = con){
   }
 
   if("activa" %in% colnames(table)){
-    table <- table |> dplyr::filter(activa)
+    if(is.character(table$activa)){
+      table <- table |> dplyr::filter(activa == "TRUE")
+    }else if(is.logical(table$activa)){
+      table <- table |> dplyr::filter(activa)
+    }
+
   }
 
   # Add icon URLs

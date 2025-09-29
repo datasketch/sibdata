@@ -11,11 +11,6 @@ make_region_slides <- function(region, con, save_path = NULL){
   subregs <- sib_available_subregions(region, con)
   parent <- sib_parent_region(region, con)
 
-  # if(region == "resguardo-indigena-pialapi-pueblo-viejo" ||
-  #    region == "reserva-forestal-la-planada"){
-  #   parent <- "narino"
-  # }
-
   reg_labels <- sib_region_labels(con) |> collect()
 
   reg_gr_bio <- sibdata_region_grupo(con) |>
@@ -149,10 +144,18 @@ make_region_slides <- function(region, con, save_path = NULL){
     {regionLabel} aporta {esp_depto_str}, equivalentes a {proportion}%.
     De estas {esp_depto_endemicas_str} especies son endémicas."
     }
+    if(region == "region-amazonia"){
+      description_tpl <- "De las {esp_colombia_str} especies observadas en Colombia,
+    la región Amazonía aporta {esp_depto_str}, equivalentes a {proportion}%.
+    De estas {esp_depto_endemicas_str} especies son endémicas."
+
+    }
+
+
 
     title_tpl <- "¿Cómo está {regionLabel} frente al resto de {parentLabel}?"
     if(region == "region-amazonia"){
-      title_tpl <- "¿Cómo esta la región Amazonia frente al resto de Colombia?"
+      title_tpl <- "¿Cómo esta la región Amazonía frente al resto de Colombia?"
     }
 
 

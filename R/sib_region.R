@@ -49,6 +49,11 @@ sib_region_general <- function(region, con){
     del SiB Colombia. Estos datos respaldan la existencia de {especies_region_total_str} especies
     en el territorio nacional{marino_text}"
   }
+  if(region == "region-amazonia"){
+    intro_tpl <- "A través del SiB Colombia se han publicado {registros_region_total_str} observaciones
+  para la región natual de la Amazonía. Estos datos hacen referencia a un total de
+  {especies_region_total_str} especies{marino_text}"
+  }
 
   reg_data$especies_region_total_str <- makeup::makeup(reg_data$especies_region_total,"45.343,00")
   reg_data$registros_region_total_str <- makeup::makeup(reg_data$registros_region_total,"45.343,00")

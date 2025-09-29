@@ -293,4 +293,6 @@ exp_inputs_server <- function(id, r, app_options, session_main = NULL, debug = F
     # Set inputs ready flag at the very end of module initialization
 
   })
+
+  r
 }

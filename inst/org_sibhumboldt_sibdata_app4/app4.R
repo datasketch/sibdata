@@ -2,7 +2,7 @@
 # Modular version of SIB Data App - Recreated from scratch
 
 # Debug configuration
-DEBUG_MODE <- TRUE  # Set to FALSE to hide debug output
+DEBUG_MODE <- FALSE  # Set to FALSE to hide debug output
 options(timeout = 600)
 
 library(shiny)
@@ -110,11 +110,10 @@ ui <- fluidPage(
     # Center column - Visualization (50%)
     column(6, style = "padding: 0 5px;",
            wellPanel(
-             h4("Tipo y Vista"),
+             h4(style = "margin-top: 5px; margin-bottom: 10px;", "Visualización"),
              exp_viz_inputs_ui("viz_inputs"),
-             hr(),
              # Breadcrumb and download row
-             div(style = "display: flex; justify-content: flex-end; margin-bottom: 10px;",
+             div(style = "display: flex; justify-content: flex-end; margin-bottom: 5px; margin-top: 5px;",
                  uiOutput("descargas")
              ),
              # Dynamic chart output based on chart_type

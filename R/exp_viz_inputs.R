@@ -12,18 +12,19 @@
 exp_viz_inputs_ui <- function(id) {
   ns <- NS(id)
   tagList(
-    div(style = "text-align: center; margin-bottom: 10px;",
-        uiOutput(ns("chart_selector_container"))
+    div(style = "display: flex; align-items: center; gap: 15px; margin-bottom: 5px;",
+        div(style = "flex: 1; text-align: center;",
+            uiOutput(ns("chart_selector_container"))
+        ),
+        div(style = "flex: 0 0 auto; min-width: 180px;",
+            selectInput(ns("sel_tipo"), "Tipo",
+                        choices = c("Observaciones" = "registros",
+                                    "Especies" = "especies"),
+                        selected = "registros")
+        )
     ),
-    div(style = "margin-top: 10px;",
-        selectInput(ns("sel_tipo"), "Tipo",
-                    choices = c("Observaciones" = "registros",
-                                "Especies" = "especies"),
-                    selected = "registros")
-    ),
-    hr(),
     # Breadcrumb acts as chart title - no label needed
-    div(style = "font-weight: 600; font-size: 16px; margin-bottom: 10px;",
+    div(style = "font-weight: 600; font-size: 16px; margin-bottom: 5px; margin-top: 5px;",
         textOutput(ns("breadcrumb"))
     )
   )

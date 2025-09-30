@@ -16,7 +16,7 @@
     "especies_region_total_str": "80.346",
     "registros_region_total_str": "33.185.913",
     "main_text": "A diciembre 31 de 2024, se han publicado 33.185.913 observaciones a través\ndel SiB Colombia. Estos datos respaldan la existencia de 80.346 especies\nen el territorio nacional; de las cuales 76.194 habitan al interior del\ncontinente y 7.812 en el mar.",
-    "referencia": "Arbeláez-Cortés, E. (2013). Knowledge of Colombian biodiversity: published and indexed. Biodiversity and Conservation, 22(12), 2875–2906. https://doi.org/10.1007/s10531-013-0560-y",
+    "referencia": "Arbeláez-Cortés, E. (2013). DESCRIBIENDO ESPECIES: UN PANORAMA DE LA BIODIVERSIDAD COLOMBIANA EN EL ÁMBITO MUNDIAL. Acta Biológica Colombiana, 18(1), 165-178. Retrieved September 10, 2025, from http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-548X2013000100012&lng=en&tlng=es",
     "credito_foto": "Paisaje de Montaña"
   },
   "nav_tematica": {
@@ -24,7 +24,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": 1,
+        "activa": "TRUE",
         "icon": 1,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -33,196 +33,27 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": 1,
+            "activa": "TRUE",
             "icon": 0,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
             "label": "Categoría UICN global",
-            "tooltip": "La Lista Roja de la Unión Internacional para la Conservación de la Naturaleza (UICN) es un indicador crítico de la salud de la biodiversidad del mundo que permite agilizar acciones que fomente la conservación de la biodiversidad.",
-            "children": [
-              {
-                "slug": "amenazadas-global-cr",
-                "activa": 1,
-                "descripcion": "Categoría de amenaza. Se ha reducido el tamaño de la población o se ha presentado disminución en la extensión de presencia o área de ocupación que genera un riesgo de extinción extremadamente alto en vida silvestre.",
-                "icon": 0,
-                "icon_black": "static/icons/amenazadas-global-cr-black.svg",
-                "icon_white": "static/icons/amenazadas-global-cr-white.svg",
-                "label": "CR",
-                "orden": 10,
-                "tooltip": "En peligro crítico"
-              },
-              {
-                "slug": "amenazadas-global-dd",
-                "activa": 1,
-                "descripcion": "No se tiene la información adecuada para realizar una evaluación del riesgo de extensión basado en su distribución y/o condición de la población.",
-                "icon": 0,
-                "icon_black": "static/icons/amenazadas-global-dd-black.svg",
-                "icon_white": "static/icons/amenazadas-global-dd-white.svg",
-                "label": "DD",
-                "orden": 2,
-                "tooltip": "Datos insuficientes"
-              },
-              {
-                "slug": "amenazadas-global-en",
-                "activa": 1,
-                "descripcion": "Categoría de amenaza. Se ha reducido el tamaño de la población o se ha presentado disminución en la extensión de presencia o área de ocupación que genera un riesgo de extinción muy alto en vida silvestre.",
-                "icon": 0,
-                "icon_black": "static/icons/amenazadas-global-en-black.svg",
-                "icon_white": "static/icons/amenazadas-global-en-white.svg",
-                "label": "EN",
-                "orden": 9,
-                "tooltip": "En peligro"
-              },
-              {
-                "slug": "amenazadas-global-ew",
-                "activa": 1,
-                "descripcion": "El taxón solamente sobrevive en cultivo, cautividad o como poblaciones naturalizadas fuera de su distribución original.",
-                "icon": 0,
-                "icon_black": "static/icons/amenazadas-global-ew-black.svg",
-                "icon_white": "static/icons/amenazadas-global-ew-white.svg",
-                "label": "EW",
-                "orden": 11,
-                "tooltip": "Extinto en estado silvestre"
-              },
-              {
-                "slug": "amenazadas-global-ex",
-                "activa": 1,
-                "descripcion": "Hace referencia a un taxón en el cual el último individuo vivo ha muerto y no se han logrado encontrar nuevos registros en hábitats con condiciones apropiadas al ciclo de vida y formas del taxón.",
-                "icon": 0,
-                "icon_black": "static/icons/amenazadas-global-ex-black.svg",
-                "icon_white": "static/icons/amenazadas-global-ex-white.svg",
-                "label": "EX",
-                "orden": 12,
-                "tooltip": "Extinto"
-              },
-              {
-                "slug": "amenazadas-global-lc",
-                "activa": 1,
-                "descripcion": "Se realizó la evaluación de riesgo de extinción, pero no se cumplieron los criterios para definirlo en alguna categoría de amenaza.",
-                "icon": 0,
-                "icon_black": "static/icons/amenazadas-global-lc-black.svg",
-                "icon_white": "static/icons/amenazadas-global-lc-white.svg",
-                "label": "LC",
-                "orden": 4,
-                "tooltip": "Preocupación menor"
-              },
-              {
-                "slug": "amenazadas-global-lr-cd",
-                "activa": 1,
-                "descripcion": "Especies con bajo riesgo de amenaza, generalmente esta categoría se incluyen taxones ampliamente distribuidos.",
-                "icon": 0,
-                "icon_black": "static/icons/amenazadas-global-lr-cd-black.svg",
-                "icon_white": "static/icons/amenazadas-global-lr-cd-white.svg",
-                "label": "LR/cd",
-                "orden": 7,
-                "tooltip": "Menor riesgo / Dependiente de medidas de conservación"
-              },
-              {
-                "slug": "amenazadas-global-lr-lc",
-                "activa": 1,
-                "descripcion": "Se realizó la evaluación de riesgo de extinción, pero no se cumplieron los criterios para definirlo en alguna categoría de amenaza.",
-                "icon": 0,
-                "icon_black": "static/icons/amenazadas-global-lr-lc-black.svg",
-                "icon_white": "static/icons/amenazadas-global-lr-lc-white.svg",
-                "label": "LR/lc",
-                "orden": 3,
-                "tooltip": "Menor riesgo / Preocupación menor"
-              },
-              {
-                "slug": "amenazadas-global-lr-nt",
-                "activa": 1,
-                "descripcion": "Al realizar la evaluación no se encontraron los criterios para definirlo en alguna categoría de amenaza.",
-                "icon": 0,
-                "icon_black": "static/icons/amenazadas-global-lr-nt-black.svg",
-                "icon_white": "static/icons/amenazadas-global-lr-nt-white.svg",
-                "label": "LR/nt",
-                "orden": 5,
-                "tooltip": "Menor riesgo / Casi amenazado"
-              },
-              {
-                "slug": "amenazadas-global-ne",
-                "activa": 1,
-                "descripcion": "No se ha llevado a cabo el proceso de clasificación de acuerdo a los criterios establecidos.",
-                "icon": 0,
-                "icon_black": "static/icons/amenazadas-global-ne-black.svg",
-                "icon_white": "static/icons/amenazadas-global-ne-white.svg",
-                "label": "NE",
-                "orden": 1,
-                "tooltip": "No evaluado"
-              },
-              {
-                "slug": "amenazadas-global-nt",
-                "activa": 1,
-                "descripcion": "Al realizar la evaluación no se encontraron los criterios para definirse en alguna de las categorías de amenaza.",
-                "icon": 0,
-                "icon_black": "static/icons/amenazadas-global-nt-black.svg",
-                "icon_white": "static/icons/amenazadas-global-nt-white.svg",
-                "label": "NT",
-                "orden": 6,
-                "tooltip": "Casi amenazado"
-              },
-              {
-                "slug": "amenazadas-global-vu",
-                "activa": 1,
-                "descripcion": "Categoría de amenaza. Se ha reducido el tamaño de la población o se ha presentado disminución en la extensión de presencia o área de ocupación que genera un riesgo de extinción alto en vida silvestre.",
-                "icon": 0,
-                "icon_black": "static/icons/amenazadas-global-vu-black.svg",
-                "icon_white": "static/icons/amenazadas-global-vu-white.svg",
-                "label": "VU",
-                "orden": 8,
-                "tooltip": "Vulnerable"
-              }
-            ]
+            "tooltip": "La Lista Roja de la Unión Internacional para la Conservación de la Naturaleza (UICN) es un indicador crítico de la salud de la biodiversidad del mundo que permite agilizar acciones que fomente la conservación de la biodiversidad."
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": 1,
+            "activa": "TRUE",
             "icon": 0,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
             "label": "Categoría nacional (Res.0126/2024)",
-            "tooltip": "Listado de especies silvestres continentales y marino costeras que se encuentran amenazadas para Colombia de acuerdo a la Resolución 0126 de 2024 de Minambiente.",
-            "children": [
-              {
-                "slug": "amenazadas-nacional-cr",
-                "activa": 1,
-                "descripcion": "Especies que presentan un riesgo de extinción extremadamente alto en estado de vida silvestre.",
-                "icon": 0,
-                "icon_black": "static/icons/amenazadas-nacional-cr-black.svg",
-                "icon_white": "static/icons/amenazadas-nacional-cr-white.svg",
-                "label": "CR",
-                "orden": 3,
-                "tooltip": "En peligro crítico"
-              },
-              {
-                "slug": "amenazadas-nacional-en",
-                "activa": 1,
-                "descripcion": "Especies que presentan un riesgo de extinción muy alto en estado de vida silvestre.",
-                "icon": 0,
-                "icon_black": "static/icons/amenazadas-nacional-en-black.svg",
-                "icon_white": "static/icons/amenazadas-nacional-en-white.svg",
-                "label": "EN",
-                "orden": 2,
-                "tooltip": "En peligro"
-              },
-              {
-                "slug": "amenazadas-nacional-vu",
-                "activa": 1,
-                "descripcion": "Especies que presentan un riesgo de extinción alto en estado de vida silvestre.",
-                "icon": 0,
-                "icon_black": "static/icons/amenazadas-nacional-vu-black.svg",
-                "icon_white": "static/icons/amenazadas-nacional-vu-white.svg",
-                "label": "VU",
-                "orden": 1,
-                "tooltip": "Vulnerable"
-              }
-            ]
+            "tooltip": "Listado de especies silvestres continentales y marino costeras que se encuentran amenazadas para Colombia de acuerdo a la Resolución 0126 de 2024 de Minambiente."
           }
         ]
       },
       {
         "slug": "cites",
-        "activa": 1,
+        "activa": "TRUE",
         "icon": 1,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -231,7 +62,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": 1,
+        "activa": "TRUE",
         "icon": 1,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -240,7 +71,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": 1,
+        "activa": "TRUE",
         "icon": 0,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -249,7 +80,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": 1,
+        "activa": "TRUE",
         "icon": 0,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -2889,6 +2720,14 @@
       "parent_registros_trasplantadas": [],
       "list_especies_exoticas_total": [
         {
+          "label": "Bubulcus ibis",
+          "slug_especie": "bubulcus-ibis",
+          "registros": 177214,
+          "url_gbif": "https://www.gbif.org/species/2480830",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c20d14f0106c67230e7320/summary",
+          "slug_tematica": "exoticas-riesgo-invasion-total"
+        },
+        {
           "label": "Bos taurus",
           "slug_especie": "bos-taurus",
           "registros": 150258,
@@ -2913,6 +2752,14 @@
           "slug_tematica": "trasplantadas"
         },
         {
+          "label": "Columba livia",
+          "slug_especie": "columba-livia",
+          "registros": 55472,
+          "url_gbif": "https://www.gbif.org/species/2495414",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4b5f1f0106c67230e7387/summary",
+          "slug_tematica": "exoticas-riesgo-invasion-total"
+        },
+        {
           "label": "Cordia alliodora",
           "slug_especie": "cordia-alliodora",
           "registros": 17770,
@@ -2929,40 +2776,26 @@
           "slug_tematica": "exoticas"
         },
         {
+          "label": "Acacia decurrens",
+          "slug_especie": "acacia-decurrens",
+          "registros": 15708,
+          "url_gbif": "https://www.gbif.org/species/2979778",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c3d1e2f0106c67230e7360/summary",
+          "slug_tematica": "exoticas-riesgo-invasion-total"
+        },
+        {
+          "label": "Gallus gallus",
+          "slug_especie": "gallus-gallus",
+          "registros": 15070,
+          "url_gbif": "https://www.gbif.org/species/9326020",
+          "slug_tematica": "exoticas-riesgo-invasion-total"
+        },
+        {
           "label": "Eucalyptus globulus",
           "slug_especie": "eucalyptus-globulus",
           "registros": 13620,
           "url_gbif": "https://www.gbif.org/species/3176787",
           "slug_tematica": "exoticas"
-        },
-        {
-          "label": "Equus caballus",
-          "slug_especie": "equus-caballus",
-          "registros": 10619,
-          "url_gbif": "https://www.gbif.org/species/2440886",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c506e3f0106c67230e7395/summary",
-          "slug_tematica": "exoticas"
-        },
-        {
-          "label": "Pinus radiata",
-          "slug_especie": "pinus-radiata",
-          "registros": 9643,
-          "url_gbif": "https://www.gbif.org/species/5285727",
-          "slug_tematica": "exoticas"
-        },
-        {
-          "label": "Pinus patula",
-          "slug_especie": "pinus-patula",
-          "registros": 7431,
-          "url_gbif": "https://www.gbif.org/species/5285090",
-          "slug_tematica": "exoticas"
-        },
-        {
-          "label": "Paroaria nigrogenis",
-          "slug_especie": "paroaria-nigrogenis",
-          "registros": 5642,
-          "url_gbif": "https://www.gbif.org/species/5845551",
-          "slug_tematica": "trasplantadas"
         }
       ],
       "list_especies_exoticas": [
@@ -3131,7 +2964,7 @@
           "registros": 177214,
           "url_gbif": "https://www.gbif.org/species/2480830",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56c20d14f0106c67230e7320/summary",
-          "slug_tematica": "exotica-riesgo-invasion-alto"
+          "slug_tematica": "exoticas-riesgo-invasion-total"
         },
         {
           "label": "Columba livia",
@@ -3139,7 +2972,7 @@
           "registros": 55472,
           "url_gbif": "https://www.gbif.org/species/2495414",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56c4b5f1f0106c67230e7387/summary",
-          "slug_tematica": "exotica-riesgo-invasion-alto"
+          "slug_tematica": "exoticas-riesgo-invasion-total"
         },
         {
           "label": "Acacia decurrens",
@@ -3147,14 +2980,14 @@
           "registros": 15708,
           "url_gbif": "https://www.gbif.org/species/2979778",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56c3d1e2f0106c67230e7360/summary",
-          "slug_tematica": "exotica-riesgo-invasion-alto"
+          "slug_tematica": "exoticas-riesgo-invasion-total"
         },
         {
           "label": "Gallus gallus",
           "slug_especie": "gallus-gallus",
           "registros": 15070,
           "url_gbif": "https://www.gbif.org/species/9326020",
-          "slug_tematica": "exotica-riesgo-invasion-moderado"
+          "slug_tematica": "exoticas-riesgo-invasion-total"
         },
         {
           "label": "Leucaena leucocephala",
@@ -3162,7 +2995,7 @@
           "registros": 6411,
           "url_gbif": "https://www.gbif.org/species/2970418",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56e789da83c45700544e40fa/summary",
-          "slug_tematica": "exotica-riesgo-invasion-alto"
+          "slug_tematica": "exoticas-riesgo-invasion-total"
         },
         {
           "label": "Lonchura malacca",
@@ -3170,14 +3003,14 @@
           "registros": 5563,
           "url_gbif": "https://www.gbif.org/species/2493626",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56e639db83c45700544e3ea1/summary",
-          "slug_tematica": "exotica-riesgo-invasion-alto"
+          "slug_tematica": "exoticas-riesgo-invasion-total"
         },
         {
           "label": "Trichopodus pectoralis",
           "slug_especie": "trichopodus-pectoralis",
           "registros": 5398,
           "url_gbif": "https://www.gbif.org/species/5211177",
-          "slug_tematica": "exotica-riesgo-invasion-alto"
+          "slug_tematica": "exoticas-riesgo-invasion-total"
         },
         {
           "label": "Acacia melanoxylon",
@@ -3185,7 +3018,7 @@
           "registros": 4063,
           "url_gbif": "https://www.gbif.org/species/2979000",
           "url_cbc": "https://catalogo.biodiversidad.co/file/595e5f352f4fd7bc7f3a210a/summary",
-          "slug_tematica": "exotica-riesgo-invasion-bajo"
+          "slug_tematica": "exoticas-riesgo-invasion-total"
         },
         {
           "label": "Sus scrofa",
@@ -3193,7 +3026,7 @@
           "registros": 3174,
           "url_gbif": "https://www.gbif.org/species/7705930",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56cc7b75207ecea54a561e30/summary",
-          "slug_tematica": "exotica-riesgo-invasion-alto"
+          "slug_tematica": "exoticas-riesgo-invasion-total"
         },
         {
           "label": "Cenchrus clandestinus",
@@ -3201,7 +3034,7 @@
           "registros": 3066,
           "url_gbif": "https://www.gbif.org/species/5828201",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56e7782683c45700544e401e/summary",
-          "slug_tematica": "exotica-riesgo-invasion-alto"
+          "slug_tematica": "exoticas-riesgo-invasion-total"
         }
       ],
       "list_especies_trasplantadas": [
@@ -6280,6 +6113,24 @@
             "genus": "Gliricidia"
           },
           {
+            "label": "Acacia decurrens",
+            "registros": 15708,
+            "slug_especie": "acacia-decurrens",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "angiospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2979778",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c3d1e2f0106c67230e7360/summary",
+            "species": "Acacia decurrens",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Fabales",
+            "family": "Fabaceae",
+            "genus": "Acacia"
+          },
+          {
             "label": "Eucalyptus globulus",
             "registros": 13620,
             "slug_especie": "eucalyptus-globulus",
@@ -6295,6 +6146,42 @@
             "order": "Myrtales",
             "family": "Myrtaceae",
             "genus": "Eucalyptus"
+          },
+          {
+            "label": "Leucaena leucocephala",
+            "registros": 6411,
+            "slug_especie": "leucaena-leucocephala",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "angiospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2970418",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e789da83c45700544e40fa/summary",
+            "species": "Leucaena leucocephala",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Fabales",
+            "family": "Fabaceae",
+            "genus": "Leucaena"
+          },
+          {
+            "label": "Acacia melanoxylon",
+            "registros": 4063,
+            "slug_especie": "acacia-melanoxylon",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "angiospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2979000",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/595e5f352f4fd7bc7f3a210a/summary",
+            "species": "Acacia melanoxylon",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Fabales",
+            "family": "Fabaceae",
+            "genus": "Acacia"
           },
           {
             "label": "Solanum tuberosum",
@@ -6367,58 +6254,6 @@
             "order": "Fabales",
             "family": "Fabaceae",
             "genus": "Genista"
-          },
-          {
-            "label": "Jatropha curcas",
-            "registros": 3016,
-            "slug_especie": "jatropha-curcas",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "angiospermas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3072953",
-            "species": "Jatropha curcas",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Malpighiales",
-            "family": "Euphorbiaceae",
-            "genus": "Jatropha"
-          },
-          {
-            "label": "Vachellia farnesiana",
-            "registros": 2542,
-            "slug_especie": "vachellia-farnesiana",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "angiospermas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2979265",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/595d2c1f2f4fd7bc7f3a167a/summary",
-            "species": "Vachellia farnesiana",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Fabales",
-            "family": "Fabaceae",
-            "genus": "Vachellia"
-          },
-          {
-            "label": "Solanum nigrum",
-            "registros": 2294,
-            "slug_especie": "solanum-nigrum",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "angiospermas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/8968455",
-            "species": "Solanum nigrum",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Solanales",
-            "family": "Solanaceae",
-            "genus": "Solanum"
           }
         ]
       }
@@ -7747,6 +7582,24 @@
         ],
         "exoticas-total": [
           {
+            "label": "Bubulcus ibis",
+            "registros": 177214,
+            "slug_especie": "bubulcus-ibis",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2480830",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c20d14f0106c67230e7320/summary",
+            "species": "Bubulcus ibis",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Pelecaniformes",
+            "family": "Ardeidae",
+            "genus": "Bubulcus"
+          },
+          {
             "label": "Bos taurus",
             "registros": 150258,
             "slug_especie": "bos-taurus",
@@ -7799,6 +7652,41 @@
             "genus": "Caquetaia"
           },
           {
+            "label": "Columba livia",
+            "registros": 55472,
+            "slug_especie": "columba-livia",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2495414",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c4b5f1f0106c67230e7387/summary",
+            "species": "Columba livia",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Columbiformes",
+            "family": "Columbidae",
+            "genus": "Columba"
+          },
+          {
+            "label": "Gallus gallus",
+            "registros": 15070,
+            "slug_especie": "gallus-gallus",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/9326020",
+            "species": "Gallus gallus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Galliformes",
+            "family": "Phasianidae",
+            "genus": "Gallus"
+          },
+          {
             "label": "Equus caballus",
             "registros": 10619,
             "slug_especie": "equus-caballus",
@@ -7834,6 +7722,24 @@
             "genus": "Paroaria"
           },
           {
+            "label": "Lonchura malacca",
+            "registros": 5563,
+            "slug_especie": "lonchura-malacca",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2493626",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e639db83c45700544e3ea1/summary",
+            "species": "Lonchura malacca",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Estrildidae",
+            "genus": "Lonchura"
+          },
+          {
             "label": "Canis lupus",
             "registros": 5491,
             "slug_especie": "canis-lupus",
@@ -7850,75 +7756,6 @@
             "order": "Carnivora",
             "family": "Canidae",
             "genus": "Canis"
-          },
-          {
-            "label": "Paroaria gularis",
-            "registros": 5441,
-            "slug_especie": "paroaria-gularis",
-            "slug_tematica": "trasplantadas",
-            "tematica_label": "Trasplantadas",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2492082",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e6478883c45700544e3ea7/summary",
-            "species": "Paroaria gularis",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Thraupidae",
-            "genus": "Paroaria"
-          },
-          {
-            "label": "Podocnemis expansa",
-            "registros": 4573,
-            "slug_especie": "podocnemis-expansa",
-            "slug_tematica": "trasplantadas",
-            "tematica_label": "Trasplantadas",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2442795",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/567055daf289f5a40c0cd2d5/summary",
-            "species": "Podocnemis expansa",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Testudines",
-            "family": "Podocnemididae",
-            "genus": "Podocnemis"
-          },
-          {
-            "label": "Apis mellifera",
-            "registros": 3802,
-            "slug_especie": "apis-mellifera",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/1341976",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/58b995177bd3becd0fc7395e/summary",
-            "species": "Apis mellifera",
-            "kingdom": "Animalia",
-            "phylum": "Arthropoda",
-            "class": "Insecta",
-            "order": "Hymenoptera",
-            "family": "Apidae",
-            "genus": "Apis"
-          },
-          {
-            "label": "Bubalus bubalis",
-            "registros": 2708,
-            "slug_especie": "bubalus-bubalis",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "species": "Bubalus bubalis",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Mammalia",
-            "order": "Artiodactyla",
-            "family": "Bovidae",
-            "genus": "Bubalus"
           }
         ]
       }
@@ -8975,6 +8812,23 @@
             "order": "Araneae",
             "family": "Araneidae",
             "genus": "Cyrtophora"
+          },
+          {
+            "label": "Tetranychus urticae",
+            "registros": 20,
+            "slug_especie": "tetranychus-urticae",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "aracnidos",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2130185",
+            "species": "Tetranychus urticae",
+            "kingdom": "Animalia",
+            "phylum": "Arthropoda",
+            "class": "Arachnida",
+            "order": "Trombidiformes",
+            "family": "Tetranychidae",
+            "genus": "Tetranychus"
           },
           {
             "label": "Raoiella indica",
@@ -10922,6 +10776,59 @@
         ],
         "exoticas-total": [
           {
+            "label": "Bubulcus ibis",
+            "registros": 177214,
+            "slug_especie": "bubulcus-ibis",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2480830",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c20d14f0106c67230e7320/summary",
+            "species": "Bubulcus ibis",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Pelecaniformes",
+            "family": "Ardeidae",
+            "genus": "Bubulcus"
+          },
+          {
+            "label": "Columba livia",
+            "registros": 55472,
+            "slug_especie": "columba-livia",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2495414",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c4b5f1f0106c67230e7387/summary",
+            "species": "Columba livia",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Columbiformes",
+            "family": "Columbidae",
+            "genus": "Columba"
+          },
+          {
+            "label": "Gallus gallus",
+            "registros": 15070,
+            "slug_especie": "gallus-gallus",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/9326020",
+            "species": "Gallus gallus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Galliformes",
+            "family": "Phasianidae",
+            "genus": "Gallus"
+          },
+          {
             "label": "Paroaria nigrogenis",
             "registros": 5642,
             "slug_especie": "paroaria-nigrogenis",
@@ -10937,6 +10844,24 @@
             "order": "Passeriformes",
             "family": "Thraupidae",
             "genus": "Paroaria"
+          },
+          {
+            "label": "Lonchura malacca",
+            "registros": 5563,
+            "slug_especie": "lonchura-malacca",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2493626",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e639db83c45700544e3ea1/summary",
+            "species": "Lonchura malacca",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Estrildidae",
+            "genus": "Lonchura"
           },
           {
             "label": "Paroaria gularis",
@@ -10955,6 +10880,42 @@
             "order": "Passeriformes",
             "family": "Thraupidae",
             "genus": "Paroaria"
+          },
+          {
+            "label": "Anas platyrhynchos",
+            "registros": 2161,
+            "slug_especie": "anas-platyrhynchos",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/9761484",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c02fc4f0106c67230e72f8/summary",
+            "species": "Anas platyrhynchos",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Anseriformes",
+            "family": "Anatidae",
+            "genus": "Anas"
+          },
+          {
+            "label": "Passer domesticus",
+            "registros": 1570,
+            "slug_especie": "passer-domesticus",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5231190",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e64aa683c45700544e3eab/summary",
+            "species": "Passer domesticus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Passeridae",
+            "genus": "Passer"
           },
           {
             "label": "Serinus canaria",
@@ -10989,112 +10950,6 @@
             "order": "Anseriformes",
             "family": "Anatidae",
             "genus": "Alopochen"
-          },
-          {
-            "label": "Streptopelia decaocto",
-            "registros": 283,
-            "slug_especie": "streptopelia-decaocto",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2495696",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e66e3983c45700544e3eb9/summary",
-            "species": "Streptopelia decaocto",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Columbiformes",
-            "family": "Columbidae",
-            "genus": "Streptopelia"
-          },
-          {
-            "label": "Lonchura atricapilla",
-            "registros": 232,
-            "slug_especie": "lonchura-atricapilla",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2493623",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e6352083c45700544e3ea0/summary",
-            "species": "Lonchura atricapilla",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Estrildidae",
-            "genus": "Lonchura"
-          },
-          {
-            "label": "Melopsittacus undulatus",
-            "registros": 40,
-            "slug_especie": "melopsittacus-undulatus",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2479798",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e63f4483c45700544e3ea2/summary",
-            "species": "Melopsittacus undulatus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Psittaciformes",
-            "family": "Psittacidae",
-            "genus": "Melopsittacus"
-          },
-          {
-            "label": "Streptopelia roseogrisea",
-            "registros": 30,
-            "slug_especie": "streptopelia-roseogrisea",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2495688",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e6cdb583c45700544e3ec2/summary",
-            "species": "Streptopelia roseogrisea",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Columbiformes",
-            "family": "Columbidae",
-            "genus": "Streptopelia"
-          },
-          {
-            "label": "Aix galericulata",
-            "registros": 19,
-            "slug_especie": "aix-galericulata",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "flagTAXO": "Ausente en lista taxonómica",
-            "species": "Aix galericulata",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Anseriformes",
-            "family": "Anatidae",
-            "genus": "Aix"
-          },
-          {
-            "label": "Nymphicus hollandicus",
-            "registros": 11,
-            "slug_especie": "nymphicus-hollandicus",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2479977",
-            "species": "Nymphicus hollandicus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Psittaciformes",
-            "family": "Psittacidae",
-            "genus": "Nymphicus"
           }
         ]
       }
@@ -13630,6 +13485,24 @@
             "order": "Decapoda",
             "family": "Portunidae",
             "genus": "Callinectes"
+          },
+          {
+            "label": "Macrobrachium rosenbergii",
+            "registros": 1,
+            "slug_especie": "macrobrachium-rosenbergii",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "crustaceos",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2224546",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/597244ed2f4fd7bc7f3a835a/summary",
+            "species": "Macrobrachium rosenbergii",
+            "kingdom": "Animalia",
+            "phylum": "Arthropoda",
+            "class": "Malacostraca",
+            "order": "Decapoda",
+            "family": "Palaemonidae",
+            "genus": "Macrobrachium"
           }
         ]
       }
@@ -14458,6 +14331,24 @@
             "order": "Decapoda",
             "family": "Portunidae",
             "genus": "Callinectes"
+          },
+          {
+            "label": "Macrobrachium rosenbergii",
+            "registros": 1,
+            "slug_especie": "macrobrachium-rosenbergii",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "decapodos",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2224546",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/597244ed2f4fd7bc7f3a835a/summary",
+            "species": "Macrobrachium rosenbergii",
+            "kingdom": "Animalia",
+            "phylum": "Arthropoda",
+            "class": "Malacostraca",
+            "order": "Decapoda",
+            "family": "Palaemonidae",
+            "genus": "Macrobrachium"
           }
         ]
       }
@@ -16235,6 +16126,23 @@
         ],
         "exoticas-total": [
           {
+            "label": "Digitonthophagus gazella",
+            "registros": 568,
+            "slug_especie": "digitonthophagus-gazella",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "escarabajos",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/1092466",
+            "species": "Digitonthophagus gazella",
+            "kingdom": "Animalia",
+            "phylum": "Arthropoda",
+            "class": "Insecta",
+            "order": "Coleoptera",
+            "family": "Scarabaeidae",
+            "genus": "Digitonthophagus"
+          },
+          {
             "label": "Anthonomus grandis",
             "registros": 40,
             "slug_especie": "anthonomus-grandis",
@@ -17963,6 +17871,24 @@
             "genus": "Pinus"
           },
           {
+            "label": "Pinus caribaea",
+            "registros": 186,
+            "slug_especie": "pinus-caribaea",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "gimnospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5285740",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e793a183c45700544e4195/summary",
+            "species": "Pinus caribaea",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Pinopsida",
+            "order": "Pinales",
+            "family": "Pinaceae",
+            "genus": "Pinus"
+          },
+          {
             "label": "Pinus oocarpa",
             "registros": 133,
             "slug_especie": "pinus-oocarpa",
@@ -18086,24 +18012,6 @@
             "order": "Pinales",
             "family": "Cupressaceae",
             "genus": "Cryptomeria"
-          },
-          {
-            "label": "Araucaria angustifolia",
-            "registros": 24,
-            "slug_especie": "araucaria-angustifolia",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "gimnospermas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2684940",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56d0ba5d3c16479905cba833/summary",
-            "species": "Araucaria angustifolia",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Pinopsida",
-            "order": "Pinales",
-            "family": "Araucariaceae",
-            "genus": "Araucaria"
           }
         ]
       }
@@ -19108,6 +19016,42 @@
         ],
         "exoticas-total": [
           {
+            "label": "Pteridium aquilinum",
+            "registros": 908,
+            "slug_especie": "pteridium-aquilinum",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "helechos",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5275012",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e79bb383c45700544e422b/summary",
+            "species": "Pteridium aquilinum",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Polypodiopsida",
+            "order": "Polypodiales",
+            "family": "Dennstaedtiaceae",
+            "genus": "Pteridium"
+          },
+          {
+            "label": "Nephrolepis cordifolia",
+            "registros": 458,
+            "slug_especie": "nephrolepis-cordifolia",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "helechos",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2650930",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e78d9c83c45700544e413d/summary",
+            "species": "Nephrolepis cordifolia",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Polypodiopsida",
+            "order": "Polypodiales",
+            "family": "Nephrolepidaceae",
+            "genus": "Nephrolepis"
+          },
+          {
             "label": "Pityrogramma ebenea",
             "registros": 370,
             "slug_especie": "pityrogramma-ebenea",
@@ -19125,6 +19069,24 @@
             "genus": "Pityrogramma"
           },
           {
+            "label": "Azolla filiculoides",
+            "registros": 298,
+            "slug_especie": "azolla-filiculoides",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "helechos",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2650107",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56d04c673c16479905cba818/summary",
+            "species": "Azolla filiculoides",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Polypodiopsida",
+            "order": "Salviniales",
+            "family": "Salviniaceae",
+            "genus": "Azolla"
+          },
+          {
             "label": "Macrothelypteris torresiana",
             "registros": 165,
             "slug_especie": "macrothelypteris-torresiana",
@@ -19140,6 +19102,24 @@
             "order": "Polypodiales",
             "family": "Thelypteridaceae",
             "genus": "Macrothelypteris"
+          },
+          {
+            "label": "Salvinia auriculata",
+            "registros": 156,
+            "slug_especie": "salvinia-auriculata",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "helechos",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5274861",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/5e59ae4b49ec9418588eb9c8/summary",
+            "species": "Salvinia auriculata",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Polypodiopsida",
+            "order": "Salviniales",
+            "family": "Salviniaceae",
+            "genus": "Salvinia"
           },
           {
             "label": "Nephrolepis brownii",
@@ -19209,76 +19189,6 @@
             "order": "Polypodiales",
             "family": "Pteridaceae",
             "genus": "Pteris"
-          },
-          {
-            "label": "Rumohra adiantiformis",
-            "registros": 9,
-            "slug_especie": "rumohra-adiantiformis",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "helechos",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2650944",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e8366383c45700544e43a1/summary",
-            "species": "Rumohra adiantiformis",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Polypodiopsida",
-            "order": "Polypodiales",
-            "family": "Dryopteridaceae",
-            "genus": "Rumohra"
-          },
-          {
-            "label": "Davallia canariensis",
-            "registros": 7,
-            "slug_especie": "davallia-canariensis",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "helechos",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/4204692",
-            "species": "Davallia canariensis",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Polypodiopsida",
-            "order": "Polypodiales",
-            "family": "Davalliaceae",
-            "genus": "Davallia"
-          },
-          {
-            "label": "Salvinia molesta",
-            "registros": 4,
-            "slug_especie": "salvinia-molesta",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "helechos",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5274863",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e79da083c45700544e423d/summary",
-            "species": "Salvinia molesta",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Polypodiopsida",
-            "order": "Salviniales",
-            "family": "Salviniaceae",
-            "genus": "Salvinia"
-          },
-          {
-            "label": "Microsorum punctatum",
-            "registros": 3,
-            "slug_especie": "microsorum-punctatum",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "helechos",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2650536",
-            "species": "Microsorum punctatum",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Polypodiopsida",
-            "order": "Polypodiales",
-            "family": "Polypodiaceae",
-            "genus": "Microsorum"
           }
         ]
       }
@@ -21775,6 +21685,23 @@
             "order": "Hymenoptera",
             "family": "Formicidae",
             "genus": "Linepithema"
+          },
+          {
+            "label": "Pheidole megacephala",
+            "registros": 14,
+            "slug_especie": "pheidole-megacephala",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "hormigas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/1322635",
+            "species": "Pheidole megacephala",
+            "kingdom": "Animalia",
+            "phylum": "Arthropoda",
+            "class": "Insecta",
+            "order": "Hymenoptera",
+            "family": "Formicidae",
+            "genus": "Pheidole"
           }
         ]
       }
@@ -22913,6 +22840,23 @@
             "genus": "Culex"
           },
           {
+            "label": "Digitonthophagus gazella",
+            "registros": 568,
+            "slug_especie": "digitonthophagus-gazella",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "insectos",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/1092466",
+            "species": "Digitonthophagus gazella",
+            "kingdom": "Animalia",
+            "phylum": "Arthropoda",
+            "class": "Insecta",
+            "order": "Coleoptera",
+            "family": "Scarabaeidae",
+            "genus": "Digitonthophagus"
+          },
+          {
             "label": "Tapinoma melanocephalum",
             "registros": 465,
             "slug_especie": "tapinoma-melanocephalum",
@@ -22980,23 +22924,6 @@
             "order": "Diptera",
             "family": "Tephritidae",
             "genus": "Ceratitis"
-          },
-          {
-            "label": "Anthonomus grandis",
-            "registros": 40,
-            "slug_especie": "anthonomus-grandis",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "insectos",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5013559",
-            "species": "Anthonomus grandis",
-            "kingdom": "Animalia",
-            "phylum": "Arthropoda",
-            "class": "Insecta",
-            "order": "Coleoptera",
-            "family": "Curculionidae",
-            "genus": "Anthonomus"
           }
         ]
       }
@@ -24298,6 +24225,23 @@
             "genus": "Lissachatina"
           },
           {
+            "label": "Digitonthophagus gazella",
+            "registros": 568,
+            "slug_especie": "digitonthophagus-gazella",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "invertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/1092466",
+            "species": "Digitonthophagus gazella",
+            "kingdom": "Animalia",
+            "phylum": "Arthropoda",
+            "class": "Insecta",
+            "order": "Coleoptera",
+            "family": "Scarabaeidae",
+            "genus": "Digitonthophagus"
+          },
+          {
             "label": "Cornu aspersum",
             "registros": 469,
             "slug_especie": "cornu-aspersum",
@@ -24314,23 +24258,6 @@
             "order": "Stylommatophora",
             "family": "Helicidae",
             "genus": "Cornu"
-          },
-          {
-            "label": "Tapinoma melanocephalum",
-            "registros": 465,
-            "slug_especie": "tapinoma-melanocephalum",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "invertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/1316805",
-            "species": "Tapinoma melanocephalum",
-            "kingdom": "Animalia",
-            "phylum": "Arthropoda",
-            "class": "Insecta",
-            "order": "Hymenoptera",
-            "family": "Formicidae",
-            "genus": "Tapinoma"
           }
         ]
       }
@@ -25564,6 +25491,24 @@
             "genus": "Canis"
           },
           {
+            "label": "Sus scrofa",
+            "registros": 3174,
+            "slug_especie": "sus-scrofa",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "mamiferos",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/7705930",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cc7b75207ecea54a561e30/summary",
+            "species": "Sus scrofa",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Artiodactyla",
+            "family": "Suidae",
+            "genus": "Sus"
+          },
+          {
             "label": "Bubalus bubalis",
             "registros": 2708,
             "slug_especie": "bubalus-bubalis",
@@ -25578,6 +25523,60 @@
             "order": "Artiodactyla",
             "family": "Bovidae",
             "genus": "Bubalus"
+          },
+          {
+            "label": "Felis catus",
+            "registros": 2327,
+            "slug_especie": "felis-catus",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "mamiferos",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2435035",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c5e3a7f0106c67230e73ad/summary",
+            "species": "Felis catus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Carnivora",
+            "family": "Felidae",
+            "genus": "Felis"
+          },
+          {
+            "label": "Rattus rattus",
+            "registros": 504,
+            "slug_especie": "rattus-rattus",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "mamiferos",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2439270",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cbb061207ecea54a561dfc/summary",
+            "species": "Rattus rattus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Rodentia",
+            "family": "Muridae",
+            "genus": "Rattus"
+          },
+          {
+            "label": "Mus musculus",
+            "registros": 501,
+            "slug_especie": "mus-musculus",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "mamiferos",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/7429082",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c8a2bdf0106c67230e7434/summary",
+            "species": "Mus musculus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Rodentia",
+            "family": "Muridae",
+            "genus": "Mus"
           },
           {
             "label": "Cavia porcellus",
@@ -25599,91 +25598,22 @@
             "genus": "Cavia"
           },
           {
-            "label": "Equus asinus",
-            "registros": 20,
-            "slug_especie": "equus-asinus",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
+            "label": "Rattus norvegicus",
+            "registros": 234,
+            "slug_especie": "rattus-norvegicus",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
             "slug_grupo": "mamiferos",
             "tipo": "biologico",
-            "flagTAXO": "Ausente en lista taxonómica",
-            "species": "Equus asinus",
+            "url_gbif": "https://www.gbif.org/species/2439261",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cba754207ecea54a561dfb/summary",
+            "species": "Rattus norvegicus",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Mammalia",
-            "order": "Perissodactyla",
-            "family": "Equidae",
-            "genus": "Equus"
-          },
-          {
-            "label": "Oryctolagus cuniculus",
-            "registros": 11,
-            "slug_especie": "oryctolagus-cuniculus",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "mamiferos",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2436940",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c6bc06f0106c67230e73e3/summary",
-            "species": "Oryctolagus cuniculus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Mammalia",
-            "order": "Lagomorpha",
-            "family": "Leporidae",
-            "genus": "Oryctolagus"
-          },
-          {
-            "label": "Hippopotamus amphibius",
-            "registros": 7,
-            "slug_especie": "hippopotamus-amphibius",
-            "slug_tematica": "invasoras",
-            "tematica_label": "Invasoras",
-            "slug_grupo": "mamiferos",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2441247",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c600d0f0106c67230e73b0/summary",
-            "species": "Hippopotamus amphibius",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Mammalia",
-            "order": "Artiodactyla",
-            "family": "Hippopotamidae",
-            "genus": "Hippopotamus"
-          },
-          {
-            "label": "Lama glama",
-            "registros": 7,
-            "slug_especie": "lama-glama",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "mamiferos",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5220190",
-            "species": "Lama glama",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Mammalia",
-            "order": "Artiodactyla",
-            "family": "Camelidae",
-            "genus": "Lama"
-          },
-          {
-            "label": "Panthera leo",
-            "registros": 4,
-            "slug_especie": "panthera-leo",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "mamiferos",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5219404",
-            "species": "Panthera leo",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Mammalia",
-            "order": "Carnivora",
-            "family": "Felidae",
-            "genus": "Panthera"
+            "order": "Rodentia",
+            "family": "Muridae",
+            "genus": "Rattus"
           }
         ]
       }
@@ -28446,6 +28376,41 @@
             "genus": "Cornu"
           },
           {
+            "label": "Melanoides tuberculata",
+            "registros": 134,
+            "slug_especie": "melanoides-tuberculata",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "moluscos",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2300939",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/594079b32f4fd7bc7f394719/summary",
+            "species": "Melanoides tuberculata",
+            "kingdom": "Animalia",
+            "phylum": "Mollusca",
+            "class": "Gastropoda",
+            "family": "Thiaridae",
+            "genus": "Melanoides"
+          },
+          {
+            "label": "Corbicula fluminea",
+            "registros": 47,
+            "slug_especie": "corbicula-fluminea",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "moluscos",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5189033",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/597235c82f4fd7bc7f3a7b76/summary",
+            "species": "Corbicula fluminea",
+            "kingdom": "Animalia",
+            "phylum": "Mollusca",
+            "class": "Bivalvia",
+            "order": "Venerida",
+            "family": "Cyrenidae",
+            "genus": "Corbicula"
+          },
+          {
             "label": "Deroceras reticulatum",
             "registros": 29,
             "slug_especie": "deroceras-reticulatum",
@@ -28545,23 +28510,6 @@
             "order": "Stylommatophora",
             "family": "Arionidae",
             "genus": "Arion"
-          },
-          {
-            "label": "Ambigolimax valentianus",
-            "registros": 1,
-            "slug_especie": "ambigolimax-valentianus",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "moluscos",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/8014163",
-            "species": "Ambigolimax valentianus",
-            "kingdom": "Animalia",
-            "phylum": "Mollusca",
-            "class": "Gastropoda",
-            "order": "Stylommatophora",
-            "family": "Limacidae",
-            "genus": "Ambigolimax"
           }
         ]
       }
@@ -31700,6 +31648,22 @@
             "genus": "Caquetaia"
           },
           {
+            "label": "Trichopodus pectoralis",
+            "registros": 5398,
+            "slug_especie": "trichopodus-pectoralis",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "peces",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5211177",
+            "species": "Trichopodus pectoralis",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Perciformes",
+            "family": "Osphronemidae",
+            "genus": "Trichopodus"
+          },
+          {
             "label": "Colossoma macropomum",
             "registros": 1257,
             "slug_especie": "colossoma-macropomum",
@@ -31732,6 +31696,23 @@
             "order": "Salmoniformes",
             "family": "Salmonidae",
             "genus": "Oncorhynchus"
+          },
+          {
+            "label": "Poecilia reticulata",
+            "registros": 929,
+            "slug_especie": "poecilia-reticulata",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "peces",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2350050",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/596f438d2f4fd7bc7f3a527b/summary",
+            "species": "Poecilia reticulata",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Cyprinodontiformes",
+            "family": "Poeciliidae",
+            "genus": "Poecilia"
           },
           {
             "label": "Piaractus brachypomus",
@@ -31799,38 +31780,6 @@
             "order": "Siluriformes",
             "family": "Trichomycteridae",
             "genus": "Eremophilus"
-          },
-          {
-            "label": "Cyprinus carpio",
-            "registros": 88,
-            "slug_especie": "cyprinus-carpio",
-            "slug_tematica": "invasoras",
-            "tematica_label": "Invasoras",
-            "slug_grupo": "peces",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/4286975",
-            "species": "Cyprinus carpio",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "order": "Cypriniformes",
-            "family": "Cyprinidae",
-            "genus": "Cyprinus"
-          },
-          {
-            "label": "Micropterus salmoides",
-            "registros": 60,
-            "slug_especie": "micropterus-salmoides",
-            "slug_tematica": "invasoras",
-            "tematica_label": "Invasoras",
-            "slug_grupo": "peces",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2394563",
-            "species": "Micropterus salmoides",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "order": "Perciformes",
-            "family": "Centrarchidae",
-            "genus": "Micropterus"
           }
         ]
       }
@@ -35259,6 +35208,24 @@
             "genus": "Gliricidia"
           },
           {
+            "label": "Acacia decurrens",
+            "registros": 15708,
+            "slug_especie": "acacia-decurrens",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "plantas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2979778",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c3d1e2f0106c67230e7360/summary",
+            "species": "Acacia decurrens",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Fabales",
+            "family": "Fabaceae",
+            "genus": "Acacia"
+          },
+          {
             "label": "Eucalyptus globulus",
             "registros": 13620,
             "slug_especie": "eucalyptus-globulus",
@@ -35310,6 +35277,42 @@
             "genus": "Pinus"
           },
           {
+            "label": "Leucaena leucocephala",
+            "registros": 6411,
+            "slug_especie": "leucaena-leucocephala",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "plantas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2970418",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e789da83c45700544e40fa/summary",
+            "species": "Leucaena leucocephala",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Fabales",
+            "family": "Fabaceae",
+            "genus": "Leucaena"
+          },
+          {
+            "label": "Acacia melanoxylon",
+            "registros": 4063,
+            "slug_especie": "acacia-melanoxylon",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "plantas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2979000",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/595e5f352f4fd7bc7f3a210a/summary",
+            "species": "Acacia melanoxylon",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Fabales",
+            "family": "Fabaceae",
+            "genus": "Acacia"
+          },
+          {
             "label": "Solanum tuberosum",
             "registros": 3885,
             "slug_especie": "solanum-tuberosum",
@@ -35344,59 +35347,6 @@
             "order": "Fabales",
             "family": "Fabaceae",
             "genus": "Ulex"
-          },
-          {
-            "label": "Psidium guajava",
-            "registros": 3250,
-            "slug_especie": "psidium-guajava",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "plantas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5420380",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/5948609c2f4fd7bc7f39699c/summary",
-            "species": "Psidium guajava",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Myrtales",
-            "family": "Myrtaceae",
-            "genus": "Psidium"
-          },
-          {
-            "label": "Genista monspessulana",
-            "registros": 3215,
-            "slug_especie": "genista-monspessulana",
-            "slug_tematica": "invasoras",
-            "tematica_label": "Invasoras",
-            "slug_grupo": "plantas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5347796",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7856583c45700544e40ac/summary",
-            "species": "Genista monspessulana",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Fabales",
-            "family": "Fabaceae",
-            "genus": "Genista"
-          },
-          {
-            "label": "Jatropha curcas",
-            "registros": 3016,
-            "slug_especie": "jatropha-curcas",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "plantas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3072953",
-            "species": "Jatropha curcas",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Malpighiales",
-            "family": "Euphorbiaceae",
-            "genus": "Jatropha"
           }
         ]
       }
@@ -36623,6 +36573,23 @@
             "genus": "Iguana"
           },
           {
+            "label": "Caiman crocodilus",
+            "registros": 6106,
+            "slug_especie": "caiman-crocodilus",
+            "slug_tematica": "cites-i-ii",
+            "tematica_label": "Apéndice CITES I-II",
+            "slug_grupo": "reptiles",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/8953936",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c92645f0106c67230e7437/summary",
+            "species": "Caiman crocodilus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Crocodylia",
+            "family": "Alligatoridae",
+            "genus": "Caiman"
+          },
+          {
             "label": "Caretta caretta",
             "registros": 5474,
             "slug_especie": "caretta-caretta",
@@ -36742,38 +36709,21 @@
             "genus": "Podocnemis"
           },
           {
-            "label": "Kinosternon leucostomum",
-            "registros": 1004,
-            "slug_especie": "kinosternon-leucostomum",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
+            "label": "Boa constrictor",
+            "registros": 1142,
+            "slug_especie": "boa-constrictor",
+            "slug_tematica": "cites-i-ii",
+            "tematica_label": "Apéndice CITES I-II",
             "slug_grupo": "reptiles",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2442350",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56d97f1c3c16479905cba999/summary",
-            "species": "Kinosternon leucostomum",
+            "url_gbif": "https://www.gbif.org/species/2464899",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cae177f0106c67230e7473/summary",
+            "species": "Boa constrictor",
             "kingdom": "Animalia",
             "phylum": "Chordata",
-            "class": "Testudines",
-            "family": "Kinosternidae",
-            "genus": "Kinosternon"
-          },
-          {
-            "label": "Eretmochelys imbricata",
-            "registros": 920,
-            "slug_especie": "eretmochelys-imbricata",
-            "slug_tematica": "cites-i",
-            "tematica_label": "Apéndice CITES I",
-            "slug_grupo": "reptiles",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/8841716",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/5ce8210e8fe61bf73db1181e/summary",
-            "species": "Eretmochelys imbricata",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Testudines",
-            "family": "Cheloniidae",
-            "genus": "Eretmochelys"
+            "class": "Squamata",
+            "family": "Boidae",
+            "genus": "Boa"
           }
         ],
         "migratorias": [],
@@ -36812,6 +36762,23 @@
             "class": "Testudines",
             "family": "Podocnemididae",
             "genus": "Podocnemis"
+          },
+          {
+            "label": "Hemidactylus frenatus",
+            "registros": 2215,
+            "slug_especie": "hemidactylus-frenatus",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "reptiles",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5959976",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56d20fcd3c16479905cba85d/summary",
+            "species": "Hemidactylus frenatus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Squamata",
+            "family": "Gekkonidae",
+            "genus": "Hemidactylus"
           },
           {
             "label": "Podocnemis lewyana",
@@ -36879,6 +36846,55 @@
             "class": "Squamata",
             "family": "Dactyloidae",
             "genus": "Anolis"
+          },
+          {
+            "label": "Lepidodactylus lugubris",
+            "registros": 946,
+            "slug_especie": "lepidodactylus-lugubris",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "reptiles",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/9164170",
+            "species": "Lepidodactylus lugubris",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Squamata",
+            "family": "Gekkonidae",
+            "genus": "Lepidodactylus"
+          },
+          {
+            "label": "Hemidactylus mabouia",
+            "registros": 309,
+            "slug_especie": "hemidactylus-mabouia",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "reptiles",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5959942",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56d43dec3c16479905cba879/summary",
+            "species": "Hemidactylus mabouia",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Squamata",
+            "family": "Gekkonidae",
+            "genus": "Hemidactylus"
+          },
+          {
+            "label": "Hemidactylus angulatus",
+            "registros": 300,
+            "slug_especie": "hemidactylus-angulatus",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "reptiles",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5221556",
+            "species": "Hemidactylus angulatus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Squamata",
+            "family": "Gekkonidae",
+            "genus": "Hemidactylus"
           }
         ]
       }
@@ -38609,6 +38625,24 @@
             "genus": "Gliricidia"
           },
           {
+            "label": "Acacia decurrens",
+            "registros": 15708,
+            "slug_especie": "acacia-decurrens",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "vasculares",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2979778",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c3d1e2f0106c67230e7360/summary",
+            "species": "Acacia decurrens",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Fabales",
+            "family": "Fabaceae",
+            "genus": "Acacia"
+          },
+          {
             "label": "Eucalyptus globulus",
             "registros": 13620,
             "slug_especie": "eucalyptus-globulus",
@@ -38660,6 +38694,42 @@
             "genus": "Pinus"
           },
           {
+            "label": "Leucaena leucocephala",
+            "registros": 6411,
+            "slug_especie": "leucaena-leucocephala",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "vasculares",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2970418",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e789da83c45700544e40fa/summary",
+            "species": "Leucaena leucocephala",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Fabales",
+            "family": "Fabaceae",
+            "genus": "Leucaena"
+          },
+          {
+            "label": "Acacia melanoxylon",
+            "registros": 4063,
+            "slug_especie": "acacia-melanoxylon",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "vasculares",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2979000",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/595e5f352f4fd7bc7f3a210a/summary",
+            "species": "Acacia melanoxylon",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Fabales",
+            "family": "Fabaceae",
+            "genus": "Acacia"
+          },
+          {
             "label": "Solanum tuberosum",
             "registros": 3885,
             "slug_especie": "solanum-tuberosum",
@@ -38694,59 +38764,6 @@
             "order": "Fabales",
             "family": "Fabaceae",
             "genus": "Ulex"
-          },
-          {
-            "label": "Psidium guajava",
-            "registros": 3250,
-            "slug_especie": "psidium-guajava",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "vasculares",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5420380",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/5948609c2f4fd7bc7f39699c/summary",
-            "species": "Psidium guajava",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Myrtales",
-            "family": "Myrtaceae",
-            "genus": "Psidium"
-          },
-          {
-            "label": "Genista monspessulana",
-            "registros": 3215,
-            "slug_especie": "genista-monspessulana",
-            "slug_tematica": "invasoras",
-            "tematica_label": "Invasoras",
-            "slug_grupo": "vasculares",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5347796",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7856583c45700544e40ac/summary",
-            "species": "Genista monspessulana",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Fabales",
-            "family": "Fabaceae",
-            "genus": "Genista"
-          },
-          {
-            "label": "Jatropha curcas",
-            "registros": 3016,
-            "slug_especie": "jatropha-curcas",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "vasculares",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3072953",
-            "species": "Jatropha curcas",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Malpighiales",
-            "family": "Euphorbiaceae",
-            "genus": "Jatropha"
           }
         ]
       }
@@ -40091,6 +40108,24 @@
         ],
         "exoticas-total": [
           {
+            "label": "Bubulcus ibis",
+            "registros": 177214,
+            "slug_especie": "bubulcus-ibis",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2480830",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c20d14f0106c67230e7320/summary",
+            "species": "Bubulcus ibis",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Pelecaniformes",
+            "family": "Ardeidae",
+            "genus": "Bubulcus"
+          },
+          {
             "label": "Bos taurus",
             "registros": 150258,
             "slug_especie": "bos-taurus",
@@ -40143,6 +40178,41 @@
             "genus": "Caquetaia"
           },
           {
+            "label": "Columba livia",
+            "registros": 55472,
+            "slug_especie": "columba-livia",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2495414",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c4b5f1f0106c67230e7387/summary",
+            "species": "Columba livia",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Columbiformes",
+            "family": "Columbidae",
+            "genus": "Columba"
+          },
+          {
+            "label": "Gallus gallus",
+            "registros": 15070,
+            "slug_especie": "gallus-gallus",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/9326020",
+            "species": "Gallus gallus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Galliformes",
+            "family": "Phasianidae",
+            "genus": "Gallus"
+          },
+          {
             "label": "Equus caballus",
             "registros": 10619,
             "slug_especie": "equus-caballus",
@@ -40178,6 +40248,24 @@
             "genus": "Paroaria"
           },
           {
+            "label": "Lonchura malacca",
+            "registros": 5563,
+            "slug_especie": "lonchura-malacca",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2493626",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e639db83c45700544e3ea1/summary",
+            "species": "Lonchura malacca",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Estrildidae",
+            "genus": "Lonchura"
+          },
+          {
             "label": "Canis lupus",
             "registros": 5491,
             "slug_especie": "canis-lupus",
@@ -40194,74 +40282,6 @@
             "order": "Carnivora",
             "family": "Canidae",
             "genus": "Canis"
-          },
-          {
-            "label": "Paroaria gularis",
-            "registros": 5441,
-            "slug_especie": "paroaria-gularis",
-            "slug_tematica": "trasplantadas",
-            "tematica_label": "Trasplantadas",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2492082",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e6478883c45700544e3ea7/summary",
-            "species": "Paroaria gularis",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Thraupidae",
-            "genus": "Paroaria"
-          },
-          {
-            "label": "Podocnemis expansa",
-            "registros": 4573,
-            "slug_especie": "podocnemis-expansa",
-            "slug_tematica": "trasplantadas",
-            "tematica_label": "Trasplantadas",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2442795",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/567055daf289f5a40c0cd2d5/summary",
-            "species": "Podocnemis expansa",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Testudines",
-            "family": "Podocnemididae",
-            "genus": "Podocnemis"
-          },
-          {
-            "label": "Bubalus bubalis",
-            "registros": 2708,
-            "slug_especie": "bubalus-bubalis",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "species": "Bubalus bubalis",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Mammalia",
-            "order": "Artiodactyla",
-            "family": "Bovidae",
-            "genus": "Bubalus"
-          },
-          {
-            "label": "Podocnemis unifilis",
-            "registros": 2262,
-            "slug_especie": "podocnemis-unifilis",
-            "slug_tematica": "trasplantadas",
-            "tematica_label": "Trasplantadas",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2442782",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56707a81f289f5a40c0cd2de/summary",
-            "species": "Podocnemis unifilis",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Testudines",
-            "family": "Podocnemididae",
-            "genus": "Podocnemis"
           }
         ]
       }
@@ -42099,6 +42119,23 @@
         ],
         "exoticas-total": [
           {
+            "label": "Tectona grandis",
+            "registros": 1660,
+            "slug_especie": "tectona-grandis",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "bromelias-labiadas-pasifloras",
+            "tipo": "interes",
+            "url_gbif": "https://www.gbif.org/species/2925649",
+            "species": "Tectona grandis",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Lamiales",
+            "family": "Lamiaceae",
+            "genus": "Tectona"
+          },
+          {
             "label": "Gmelina arborea",
             "registros": 542,
             "slug_especie": "gmelina-arborea",
@@ -42251,23 +42288,6 @@
             "order": "Lamiales",
             "family": "Lamiaceae",
             "genus": "Thymus"
-          },
-          {
-            "label": "Marrubium vulgare",
-            "registros": 58,
-            "slug_especie": "marrubium-vulgare",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "bromelias-labiadas-pasifloras",
-            "tipo": "interes",
-            "url_gbif": "https://www.gbif.org/species/2927069",
-            "species": "Marrubium vulgare",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Lamiales",
-            "family": "Lamiaceae",
-            "genus": "Marrubium"
           }
         ]
       }
@@ -51161,6 +51181,24 @@
             "genus": "Astrocaryum"
           },
           {
+            "label": "Elaeis guineensis",
+            "registros": 698,
+            "slug_especie": "elaeis-guineensis",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "palmas",
+            "tipo": "interes",
+            "url_gbif": "https://www.gbif.org/species/2731882",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e33ced83c45700544e3dbc/summary",
+            "species": "Elaeis guineensis",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Liliopsida",
+            "order": "Arecales",
+            "family": "Arecaceae",
+            "genus": "Elaeis"
+          },
+          {
             "label": "Dypsis lutescens",
             "registros": 281,
             "slug_especie": "dypsis-lutescens",
@@ -51301,24 +51339,6 @@
             "order": "Arecales",
             "family": "Arecaceae",
             "genus": "Washingtonia"
-          },
-          {
-            "label": "Syagrus romanzoffiana",
-            "registros": 24,
-            "slug_especie": "syagrus-romanzoffiana",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "palmas",
-            "tipo": "interes",
-            "url_gbif": "https://www.gbif.org/species/5293897",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e83ad583c45700544e43ca/summary",
-            "species": "Syagrus romanzoffiana",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Liliopsida",
-            "order": "Arecales",
-            "family": "Arecaceae",
-            "genus": "Syagrus"
           }
         ]
       }
@@ -52133,6 +52153,24 @@
             "genus": "Pinus"
           },
           {
+            "label": "Pinus caribaea",
+            "registros": 186,
+            "slug_especie": "pinus-caribaea",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "pinos-afines",
+            "tipo": "interes",
+            "url_gbif": "https://www.gbif.org/species/5285740",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e793a183c45700544e4195/summary",
+            "species": "Pinus caribaea",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Pinopsida",
+            "order": "Pinales",
+            "family": "Pinaceae",
+            "genus": "Pinus"
+          },
+          {
             "label": "Pinus oocarpa",
             "registros": 133,
             "slug_especie": "pinus-oocarpa",
@@ -52256,24 +52294,6 @@
             "order": "Pinales",
             "family": "Cupressaceae",
             "genus": "Cryptomeria"
-          },
-          {
-            "label": "Araucaria angustifolia",
-            "registros": 24,
-            "slug_especie": "araucaria-angustifolia",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "pinos-afines",
-            "tipo": "interes",
-            "url_gbif": "https://www.gbif.org/species/2684940",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56d0ba5d3c16479905cba833/summary",
-            "species": "Araucaria angustifolia",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Pinopsida",
-            "order": "Pinales",
-            "family": "Araucariaceae",
-            "genus": "Araucaria"
           }
         ]
       }

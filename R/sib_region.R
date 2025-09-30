@@ -51,7 +51,7 @@ sib_region_general <- function(region, con){
   }
   if(region == "region-amazonia"){
     intro_tpl <- "A través del SiB Colombia se han publicado {registros_region_total_str} observaciones
-  para la región natual de la Amazonía. Estos datos hacen referencia a un total de
+  para la región natural de la Amazonía. Estos datos hacen referencia a un total de
   {especies_region_total_str} especies{marino_text}"
   }
 

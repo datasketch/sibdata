@@ -15,7 +15,7 @@
     "marino_text": ".",
     "especies_region_total_str": "16.991",
     "registros_region_total_str": "1.720.528",
-    "main_text": "A través del SiB Colombia se han publicado 1.720.528 observaciones\npara el regiones naturales de Región Amazonía. Estos datos hacen referencia a un total de\n16.991 especies.",
+    "main_text": "A través del SiB Colombia se han publicado 1.720.528 observaciones\npara la región natural de la Amazonía. Estos datos hacen referencia a un total de\n16.991 especies.",
     "referencia": [],
     "credito_foto": []
   },
@@ -24,8 +24,8 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": 1,
-        "icon": 1,
+        "activa": "TRUE",
+        "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
         "label": "Amenazadas",
@@ -33,197 +33,28 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": 1,
-            "icon": 0,
+            "activa": "TRUE",
+            "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
             "label": "Categoría UICN global",
-            "tooltip": "La Lista Roja de la Unión Internacional para la Conservación de la Naturaleza (UICN) es un indicador crítico de la salud de la biodiversidad del mundo que permite agilizar acciones que fomente la conservación de la biodiversidad.",
-            "children": [
-              {
-                "slug": "amenazadas-global-cr",
-                "activa": 1,
-                "descripcion": "Categoría de amenaza. Se ha reducido el tamaño de la población o se ha presentado disminución en la extensión de presencia o área de ocupación que genera un riesgo de extinción extremadamente alto en vida silvestre.",
-                "icon": 0,
-                "icon_black": "static/icons/amenazadas-global-cr-black.svg",
-                "icon_white": "static/icons/amenazadas-global-cr-white.svg",
-                "label": "CR",
-                "orden": 10,
-                "tooltip": "En peligro crítico"
-              },
-              {
-                "slug": "amenazadas-global-dd",
-                "activa": 1,
-                "descripcion": "No se tiene la información adecuada para realizar una evaluación del riesgo de extensión basado en su distribución y/o condición de la población.",
-                "icon": 0,
-                "icon_black": "static/icons/amenazadas-global-dd-black.svg",
-                "icon_white": "static/icons/amenazadas-global-dd-white.svg",
-                "label": "DD",
-                "orden": 2,
-                "tooltip": "Datos insuficientes"
-              },
-              {
-                "slug": "amenazadas-global-en",
-                "activa": 1,
-                "descripcion": "Categoría de amenaza. Se ha reducido el tamaño de la población o se ha presentado disminución en la extensión de presencia o área de ocupación que genera un riesgo de extinción muy alto en vida silvestre.",
-                "icon": 0,
-                "icon_black": "static/icons/amenazadas-global-en-black.svg",
-                "icon_white": "static/icons/amenazadas-global-en-white.svg",
-                "label": "EN",
-                "orden": 9,
-                "tooltip": "En peligro"
-              },
-              {
-                "slug": "amenazadas-global-ew",
-                "activa": 1,
-                "descripcion": "El taxón solamente sobrevive en cultivo, cautividad o como poblaciones naturalizadas fuera de su distribución original.",
-                "icon": 0,
-                "icon_black": "static/icons/amenazadas-global-ew-black.svg",
-                "icon_white": "static/icons/amenazadas-global-ew-white.svg",
-                "label": "EW",
-                "orden": 11,
-                "tooltip": "Extinto en estado silvestre"
-              },
-              {
-                "slug": "amenazadas-global-ex",
-                "activa": 1,
-                "descripcion": "Hace referencia a un taxón en el cual el último individuo vivo ha muerto y no se han logrado encontrar nuevos registros en hábitats con condiciones apropiadas al ciclo de vida y formas del taxón.",
-                "icon": 0,
-                "icon_black": "static/icons/amenazadas-global-ex-black.svg",
-                "icon_white": "static/icons/amenazadas-global-ex-white.svg",
-                "label": "EX",
-                "orden": 12,
-                "tooltip": "Extinto"
-              },
-              {
-                "slug": "amenazadas-global-lc",
-                "activa": 1,
-                "descripcion": "Se realizó la evaluación de riesgo de extinción, pero no se cumplieron los criterios para definirlo en alguna categoría de amenaza.",
-                "icon": 0,
-                "icon_black": "static/icons/amenazadas-global-lc-black.svg",
-                "icon_white": "static/icons/amenazadas-global-lc-white.svg",
-                "label": "LC",
-                "orden": 4,
-                "tooltip": "Preocupación menor"
-              },
-              {
-                "slug": "amenazadas-global-lr-cd",
-                "activa": 1,
-                "descripcion": "Especies con bajo riesgo de amenaza, generalmente esta categoría se incluyen taxones ampliamente distribuidos.",
-                "icon": 0,
-                "icon_black": "static/icons/amenazadas-global-lr-cd-black.svg",
-                "icon_white": "static/icons/amenazadas-global-lr-cd-white.svg",
-                "label": "LR/cd",
-                "orden": 7,
-                "tooltip": "Menor riesgo / Dependiente de medidas de conservación"
-              },
-              {
-                "slug": "amenazadas-global-lr-lc",
-                "activa": 1,
-                "descripcion": "Se realizó la evaluación de riesgo de extinción, pero no se cumplieron los criterios para definirlo en alguna categoría de amenaza.",
-                "icon": 0,
-                "icon_black": "static/icons/amenazadas-global-lr-lc-black.svg",
-                "icon_white": "static/icons/amenazadas-global-lr-lc-white.svg",
-                "label": "LR/lc",
-                "orden": 3,
-                "tooltip": "Menor riesgo / Preocupación menor"
-              },
-              {
-                "slug": "amenazadas-global-lr-nt",
-                "activa": 1,
-                "descripcion": "Al realizar la evaluación no se encontraron los criterios para definirlo en alguna categoría de amenaza.",
-                "icon": 0,
-                "icon_black": "static/icons/amenazadas-global-lr-nt-black.svg",
-                "icon_white": "static/icons/amenazadas-global-lr-nt-white.svg",
-                "label": "LR/nt",
-                "orden": 5,
-                "tooltip": "Menor riesgo / Casi amenazado"
-              },
-              {
-                "slug": "amenazadas-global-ne",
-                "activa": 1,
-                "descripcion": "No se ha llevado a cabo el proceso de clasificación de acuerdo a los criterios establecidos.",
-                "icon": 0,
-                "icon_black": "static/icons/amenazadas-global-ne-black.svg",
-                "icon_white": "static/icons/amenazadas-global-ne-white.svg",
-                "label": "NE",
-                "orden": 1,
-                "tooltip": "No evaluado"
-              },
-              {
-                "slug": "amenazadas-global-nt",
-                "activa": 1,
-                "descripcion": "Al realizar la evaluación no se encontraron los criterios para definirse en alguna de las categorías de amenaza.",
-                "icon": 0,
-                "icon_black": "static/icons/amenazadas-global-nt-black.svg",
-                "icon_white": "static/icons/amenazadas-global-nt-white.svg",
-                "label": "NT",
-                "orden": 6,
-                "tooltip": "Casi amenazado"
-              },
-              {
-                "slug": "amenazadas-global-vu",
-                "activa": 1,
-                "descripcion": "Categoría de amenaza. Se ha reducido el tamaño de la población o se ha presentado disminución en la extensión de presencia o área de ocupación que genera un riesgo de extinción alto en vida silvestre.",
-                "icon": 0,
-                "icon_black": "static/icons/amenazadas-global-vu-black.svg",
-                "icon_white": "static/icons/amenazadas-global-vu-white.svg",
-                "label": "VU",
-                "orden": 8,
-                "tooltip": "Vulnerable"
-              }
-            ]
+            "tooltip": "La Lista Roja de la Unión Internacional para la Conservación de la Naturaleza (UICN) es un indicador crítico de la salud de la biodiversidad del mundo que permite agilizar acciones que fomente la conservación de la biodiversidad."
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": 1,
-            "icon": 0,
+            "activa": "TRUE",
+            "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
             "label": "Categoría nacional (Res.0126/2024)",
-            "tooltip": "Listado de especies silvestres continentales y marino costeras que se encuentran amenazadas para Colombia de acuerdo a la Resolución 0126 de 2024 de Minambiente.",
-            "children": [
-              {
-                "slug": "amenazadas-nacional-cr",
-                "activa": 1,
-                "descripcion": "Especies que presentan un riesgo de extinción extremadamente alto en estado de vida silvestre.",
-                "icon": 0,
-                "icon_black": "static/icons/amenazadas-nacional-cr-black.svg",
-                "icon_white": "static/icons/amenazadas-nacional-cr-white.svg",
-                "label": "CR",
-                "orden": 3,
-                "tooltip": "En peligro crítico"
-              },
-              {
-                "slug": "amenazadas-nacional-en",
-                "activa": 1,
-                "descripcion": "Especies que presentan un riesgo de extinción muy alto en estado de vida silvestre.",
-                "icon": 0,
-                "icon_black": "static/icons/amenazadas-nacional-en-black.svg",
-                "icon_white": "static/icons/amenazadas-nacional-en-white.svg",
-                "label": "EN",
-                "orden": 2,
-                "tooltip": "En peligro"
-              },
-              {
-                "slug": "amenazadas-nacional-vu",
-                "activa": 1,
-                "descripcion": "Especies que presentan un riesgo de extinción alto en estado de vida silvestre.",
-                "icon": 0,
-                "icon_black": "static/icons/amenazadas-nacional-vu-black.svg",
-                "icon_white": "static/icons/amenazadas-nacional-vu-white.svg",
-                "label": "VU",
-                "orden": 1,
-                "tooltip": "Vulnerable"
-              }
-            ]
+            "tooltip": "Listado de especies silvestres continentales y marino costeras que se encuentran amenazadas para Colombia de acuerdo a la Resolución 0126 de 2024 de Minambiente."
           }
         ]
       },
       {
         "slug": "cites",
-        "activa": 1,
-        "icon": 1,
+        "activa": "TRUE",
+        "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
         "label": "CITES",
@@ -231,8 +62,8 @@
       },
       {
         "slug": "endemicas",
-        "activa": 1,
-        "icon": 1,
+        "activa": "TRUE",
+        "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
         "label": "Endémicas",
@@ -240,8 +71,8 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": 1,
-        "icon": 0,
+        "activa": "TRUE",
+        "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
         "label": "Exóticas total",
@@ -249,8 +80,8 @@
       },
       {
         "slug": "migratorias",
-        "activa": 1,
-        "icon": 0,
+        "activa": "TRUE",
+        "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
         "label": "Migratorias",
@@ -263,95 +94,95 @@
     "children": [
       {
         "slug": "animales",
-        "icon": 1,
+        "icon": true,
         "icon_black": "static/icons/animales-black.svg",
         "icon_white": "static/icons/animales-white.svg",
         "label": "Animales",
-        "marino": 0,
+        "marino": false,
         "children": [
           {
             "slug": "vertebrados",
-            "icon": 0,
+            "icon": false,
             "icon_black": "static/icons/vertebrados-black.svg",
             "icon_white": "static/icons/vertebrados-white.svg",
             "label": "Vertebrados",
-            "marino": 0,
+            "marino": false,
             "children": [
               {
                 "slug": "mamiferos",
-                "icon": 0,
+                "icon": false,
                 "icon_black": "static/icons/mamiferos-black.svg",
                 "icon_white": "static/icons/mamiferos-white.svg",
                 "label": "Mamíferos",
-                "marino": 0,
+                "marino": false,
                 "children": [
                   {
                     "slug": "mamiferos-marinos",
-                    "icon": 0,
+                    "icon": false,
                     "icon_black": "static/icons/mamiferos-marinos-black.svg",
                     "icon_white": "static/icons/mamiferos-marinos-white.svg",
                     "label": "Mamíferos Marinos",
-                    "marino": 1
+                    "marino": true
                   }
                 ]
               },
               {
                 "slug": "aves",
-                "icon": 0,
+                "icon": false,
                 "icon_black": "static/icons/aves-black.svg",
                 "icon_white": "static/icons/aves-white.svg",
                 "label": "Aves",
-                "marino": 0
+                "marino": false
               },
               {
                 "slug": "reptiles",
-                "icon": 0,
+                "icon": false,
                 "icon_black": "static/icons/reptiles-black.svg",
                 "icon_white": "static/icons/reptiles-white.svg",
                 "label": "Reptiles",
-                "marino": 0,
+                "marino": false,
                 "children": [
                   {
                     "slug": "tortugas-marinas",
-                    "icon": 0,
+                    "icon": false,
                     "icon_black": "static/icons/tortugas-marinas-black.svg",
                     "icon_white": "static/icons/tortugas-marinas-white.svg",
                     "label": "Tortugas Marinas",
-                    "marino": 1
+                    "marino": true
                   }
                 ]
               },
               {
                 "slug": "anfibios",
-                "icon": 0,
+                "icon": false,
                 "icon_black": "static/icons/anfibios-black.svg",
                 "icon_white": "static/icons/anfibios-white.svg",
                 "label": "Anfibios",
-                "marino": 0
+                "marino": false
               },
               {
                 "slug": "peces",
-                "icon": 0,
+                "icon": false,
                 "icon_black": "static/icons/peces-black.svg",
                 "icon_white": "static/icons/peces-white.svg",
                 "label": "Peces",
-                "marino": 0,
+                "marino": false,
                 "children": [
                   {
                     "slug": "peces-marinos",
-                    "icon": 0,
+                    "icon": false,
                     "icon_black": "static/icons/peces-marinos-black.svg",
                     "icon_white": "static/icons/peces-marinos-white.svg",
                     "label": "Peces Marinos",
-                    "marino": 1
+                    "marino": true
                   },
                   {
                     "slug": "peces-dulceacuicolas",
-                    "icon": 0,
+                    "icon": false,
                     "icon_black": "static/icons/peces-dulceacuicolas-black.svg",
                     "icon_white": "static/icons/peces-dulceacuicolas-white.svg",
                     "label": "Peces dulceacuícolas",
-                    "marino": 0
+                    "marino": false
                   }
                 ]
               }
@@ -359,117 +190,117 @@
           },
           {
             "slug": "invertebrados",
-            "icon": 0,
+            "icon": false,
             "icon_black": "static/icons/invertebrados-black.svg",
             "icon_white": "static/icons/invertebrados-white.svg",
             "label": "Invertebrados",
-            "marino": 0,
+            "marino": false,
             "children": [
               {
                 "slug": "insectos",
-                "icon": 0,
+                "icon": false,
                 "icon_black": "static/icons/insectos-black.svg",
                 "icon_white": "static/icons/insectos-white.svg",
                 "label": "Insectos",
-                "marino": 0,
+                "marino": false,
                 "children": [
                   {
                     "slug": "escarabajos",
-                    "icon": 0,
+                    "icon": false,
                     "icon_black": "static/icons/escarabajos-black.svg",
                     "icon_white": "static/icons/escarabajos-white.svg",
                     "label": "Escarabajos",
-                    "marino": 0
+                    "marino": false
                   },
                   {
                     "slug": "mariposas",
-                    "icon": 0,
+                    "icon": false,
                     "icon_black": "static/icons/mariposas-black.svg",
                     "icon_white": "static/icons/mariposas-white.svg",
                     "label": "Mariposas",
-                    "marino": 0
+                    "marino": false
                   },
                   {
                     "slug": "dipteros",
-                    "icon": 0,
+                    "icon": false,
                     "icon_black": "static/icons/dipteros-black.svg",
                     "icon_white": "static/icons/dipteros-white.svg",
                     "label": "Dípteros",
-                    "marino": 0
+                    "marino": false
                   },
                   {
                     "slug": "hormigas",
-                    "icon": 0,
+                    "icon": false,
                     "icon_black": "static/icons/hormigas-black.svg",
                     "icon_white": "static/icons/hormigas-white.svg",
                     "label": "Hormigas",
-                    "marino": 0
+                    "marino": false
                   },
                   {
                     "slug": "abejas",
-                    "icon": 0,
+                    "icon": false,
                     "icon_black": "static/icons/abejas-black.svg",
                     "icon_white": "static/icons/abejas-white.svg",
                     "label": "Abejas",
-                    "marino": 0
+                    "marino": false
                   }
                 ]
               },
               {
                 "slug": "aracnidos",
-                "icon": 0,
+                "icon": false,
                 "icon_black": "static/icons/aracnidos-black.svg",
                 "icon_white": "static/icons/aracnidos-white.svg",
                 "label": "Arácnidos",
-                "marino": 0
+                "marino": false
               },
               {
                 "slug": "moluscos",
-                "icon": 0,
+                "icon": false,
                 "icon_black": "static/icons/moluscos-black.svg",
                 "icon_white": "static/icons/moluscos-white.svg",
                 "label": "Moluscos",
-                "marino": 0
+                "marino": false
               },
               {
                 "slug": "crustaceos",
-                "icon": 0,
+                "icon": false,
                 "icon_black": "static/icons/crustaceos-black.svg",
                 "icon_white": "static/icons/crustaceos-white.svg",
                 "label": "Crustáceos",
-                "marino": 0
+                "marino": false
               },
               {
                 "slug": "equinodermos",
-                "icon": 0,
+                "icon": false,
                 "icon_black": "static/icons/equinodermos-black.svg",
                 "icon_white": "static/icons/equinodermos-white.svg",
                 "label": "Equinodermos",
-                "marino": 1
+                "marino": true
               },
               {
                 "slug": "esponjas",
-                "icon": 0,
+                "icon": false,
                 "icon_black": "static/icons/esponjas-black.svg",
                 "icon_white": "static/icons/esponjas-white.svg",
                 "label": "Esponjas",
-                "marino": 1
+                "marino": true
               },
               {
                 "slug": "corales",
-                "icon": 0,
+                "icon": false,
                 "icon_black": "static/icons/corales-black.svg",
                 "icon_white": "static/icons/corales-white.svg",
                 "label": "Corales",
-                "marino": 1
+                "marino": true
               },
               {
                 "slug": "medusas",
-                "icon": 0,
+                "icon": false,
                 "icon_black": "static/icons/medusas-black.svg",
                 "icon_white": "static/icons/medusas-white.svg",
                 "label": "Medusas",
-                "marino": 1
+                "marino": true
               }
             ]
           }
@@ -477,110 +308,110 @@
       },
       {
         "slug": "plantas",
-        "icon": 1,
+        "icon": true,
         "icon_black": "static/icons/plantas-black.svg",
         "icon_white": "static/icons/plantas-white.svg",
         "label": "Plantas",
-        "marino": 0,
+        "marino": false,
         "children": [
           {
             "slug": "angiospermas",
-            "icon": 0,
+            "icon": false,
             "icon_black": "static/icons/angiospermas-black.svg",
             "icon_white": "static/icons/angiospermas-white.svg",
             "label": "Angiospermas",
-            "marino": 0
+            "marino": false
           },
           {
             "slug": "gimnospermas",
-            "icon": 0,
+            "icon": false,
             "icon_black": "static/icons/gimnospermas-black.svg",
             "icon_white": "static/icons/gimnospermas-white.svg",
             "label": "Gimnospermas",
-            "marino": 0
+            "marino": false
           },
           {
             "slug": "helechos",
-            "icon": 0,
+            "icon": false,
             "icon_black": "static/icons/helechos-black.svg",
             "icon_white": "static/icons/helechos-white.svg",
             "label": "Helechos",
-            "marino": 0
+            "marino": false
           },
           {
             "slug": "musgos",
-            "icon": 0,
+            "icon": false,
             "icon_black": "static/icons/musgos-black.svg",
             "icon_white": "static/icons/musgos-white.svg",
             "label": "Musgos",
-            "marino": 0
+            "marino": false
           },
           {
             "slug": "hepaticas",
-            "icon": 0,
+            "icon": false,
             "icon_black": "static/icons/hepaticas-black.svg",
             "icon_white": "static/icons/hepaticas-white.svg",
             "label": "Hepáticas",
-            "marino": 0
+            "marino": false
           },
           {
             "slug": "antocerotas",
-            "icon": 0,
+            "icon": false,
             "icon_black": "static/icons/antocerotas-black.svg",
             "icon_white": "static/icons/antocerotas-white.svg",
             "label": "Antocerotas",
-            "marino": 0
+            "marino": false
           }
         ]
       },
       {
         "slug": "hongos",
         "descripcion": "Este grupo incluye únicamente al reino Fungi. Excluye especies de Chromistas como pseudohongos y Protozoos como los mixomicetos.",
-        "icon": 1,
+        "icon": true,
         "icon_black": "static/icons/hongos-black.svg",
         "icon_white": "static/icons/hongos-white.svg",
         "label": "Hongos",
-        "marino": 0
+        "marino": false
       },
       {
         "slug": "archeas",
-        "icon": 1,
+        "icon": true,
         "icon_black": "static/icons/archeas-black.svg",
         "icon_white": "static/icons/archeas-white.svg",
         "label": "Archeas",
-        "marino": 0
+        "marino": false
       },
       {
         "slug": "bacterias",
-        "icon": 1,
+        "icon": true,
         "icon_black": "static/icons/bacterias-black.svg",
         "icon_white": "static/icons/bacterias-white.svg",
         "label": "Bacterias",
-        "marino": 0
+        "marino": false
       },
       {
         "slug": "chromista",
-        "icon": 1,
+        "icon": true,
         "icon_black": "static/icons/chromista-black.svg",
         "icon_white": "static/icons/chromista-white.svg",
         "label": "Cromistas",
-        "marino": 0
+        "marino": false
       },
       {
         "slug": "protozoos",
-        "icon": 1,
+        "icon": true,
         "icon_black": "static/icons/protozoos-black.svg",
         "icon_white": "static/icons/protozoos-white.svg",
         "label": "Protozoos",
-        "marino": 0
+        "marino": false
       },
       {
         "slug": "virus",
-        "icon": 1,
+        "icon": true,
         "icon_black": "static/icons/virus-black.svg",
         "icon_white": "static/icons/virus-white.svg",
         "label": "Virus",
-        "marino": 0
+        "marino": false
       }
     ]
   },
@@ -590,149 +421,149 @@
       {
         "slug": "algas",
         "descripcion": "Las algas son organismos con una alta variedad de formas, hábitats y estrategias ecológicas y fisiológicas de supervivencia que las convierten en excelentes bioindicadores de calidad en diferentes ecosistemas. Están involucradas en la cadena alimenticia de la mayoría de especies del planeta, ayudan a la producción de oxígeno y a la regulación del clima.",
-        "icon": 1,
+        "icon": true,
         "icon_black": "static/icons/algas-black.svg",
         "icon_white": "static/icons/algas-white.svg",
         "label": "Algas",
-        "marino": 0,
+        "marino": false,
         "ref_id": 74
       },
       {
         "slug": "liquenes",
         "descripcion": "Se estima que en Colombia existen aproximadamente 3.600 especies de líquenes; la cifra reportada en el SiB Colombia oscila en los 2.000. El bosque de montaña es donde mayor cantidad de especies se han observado. Con estos organismos se puede hacer monitoreo del aire, perturbación antrópica y cambio climático de manera muy precisa y a bajo costo.",
-        "icon": 1,
+        "icon": true,
         "icon_black": "static/icons/liquenes-black.svg",
         "icon_white": "static/icons/liquenes-white.svg",
         "label": "Líquenes",
-        "marino": 0,
+        "marino": false,
         "ref_id": 70
       },
       {
         "slug": "epifitas",
         "descripcion": "Aproximadamente el 20 % del total de epífitas a nivel mundial, se encuentra en Colombia. Son una de las especies más diversas de los Andes tropicales y cumplen un papel preponderante en la biomasa y el reciclaje de nutrientes. Además, estas plantas proporcionan alimentación y refugio para otros organismos como anfibios e insectos.",
-        "icon": 1,
+        "icon": true,
         "icon_black": "static/icons/epifitas-black.svg",
         "icon_white": "static/icons/epifitas-white.svg",
         "label": "Epífitas",
-        "marino": 0
+        "marino": false
       },
       {
         "slug": "orquideas",
         "descripcion": "Las orquídeas están presente en casi todos los ecosistemas naturales, se consideran importantes indicadores de la calidad ambiental en trópicos y son la base para la supervivencia de abejas, moscas y mariposas, también proveen servicios al bienestar humano como la protección de cuencas hidrográficas y de suelos, sin embargo diferentes prácticas humanas como la deforestación, el comercio ilegal entre otras, ha puesto en peligro de extinción a muchas especies.",
-        "icon": 1,
+        "icon": true,
         "icon_black": "static/icons/orquideas-black.svg",
         "icon_white": "static/icons/orquideas-white.svg",
         "label": "Orquídeas",
-        "marino": 0,
+        "marino": false,
         "ref_id": 69
       },
       {
         "slug": "magnolias-afines",
         "descripcion": "Este grupo de interés comprende las especies de las familias magnoliáceas que son conocidas frecuentemente como magnolios, los podocarpáceas, llamados pinos colombianos y las miristicáceas, comúnmente nombradas como otobos o cuángares. Todas son altamente conocidas por las características de su madera lo que las hace importantes para la economía del país. Esto ha hecho que una gran cantidad de especies se encuentren amenazadas, especialmente aquellas ubicadas en la región Andina.",
-        "icon": 0,
+        "icon": false,
         "icon_black": "static/icons/magnolias-afines-black.svg",
         "icon_white": "static/icons/magnolias-afines-white.svg",
         "label": "Magnolias y afines",
-        "marino": 0,
+        "marino": false,
         "ref_id": 75
       },
       {
         "slug": "palmas",
         "descripcion": "Colombia es el tercer país con mayor diversidad de palmas en el mundo. Es en la región Andina donde vive un gran número de especies endémicas y su hábitat por excelencia es el bosque, por lo que la deforestación es uno de los grandes peligros. En total, 54 especies de palmas colombianas se encuentran en alguna categoría de amenaza.",
-        "icon": 1,
+        "icon": true,
         "icon_black": "static/icons/palmas-black.svg",
         "icon_white": "static/icons/palmas-white.svg",
         "label": "Palmas",
-        "marino": 0,
+        "marino": false,
         "ref_id": 54
       },
       {
         "slug": "frailejones",
         "descripcion": "En Colombia, se encuentran 91 especies de frailejones ubicados principalmente en la cordillera Oriental. Esta especie se enfrenta a varias amenazas para su conservación como la pérdida de hábitat, cambio de uso de suelo por minería o usos agropecuarios. Por su densidad y abundancia, su aporte a la biomasa, sus numerosas interacciones ecológicas y los servicios ecosistémicos que prestan, son considerados clave para el sostenimiento del ecosistema de páramo.",
-        "icon": 1,
+        "icon": true,
         "icon_black": "static/icons/frailejones-black.svg",
         "icon_white": "static/icons/frailejones-white.svg",
         "label": "Frailejones",
-        "marino": 0,
+        "marino": false,
         "ref_id": 71
       },
       {
         "slug": "bromelias-labiadas-pasifloras",
         "descripcion": "Las familias de Bromelias, Lamiáceas y Pasifloráceas proporcionan albergue a otras especies y son parte importante de redes ecológicas en diferentes ecosistemas. Adicionalmente, son fuente de comida, aceites esenciales, fibras, metabolitos secundarios de uso farmacéutico y cosméticos, además de ser usadas como plantas ornamentales.",
-        "icon": 0,
+        "icon": false,
         "icon_black": "static/icons/bromelias-labiadas-pasifloras-black.svg",
         "icon_white": "static/icons/bromelias-labiadas-pasifloras-white.svg",
         "label": "Bromelias, labiadas y pasifloras",
-        "marino": 0,
+        "marino": false,
         "ref_id": 76
       },
       {
         "slug": "pinos-afines",
         "descripcion": "Las especies nativas de este grupo tienen diferentes usos maderabñe, ornamentales y paisajísticos. Además de estar integrados en programas de manejo y estabilización del recurso hídrico, reducción de la erosión en microcuencas y enriquecimiento de bosques naturales. Sin embargo, se estima que debido al deterioro de su hábitat, la explotación actual y potencial, el tamaño de sus poblaciones se está reduciendo.",
-        "icon": 0,
+        "icon": false,
         "icon_black": "static/icons/pinos-afines-black.svg",
         "icon_white": "static/icons/pinos-afines-white.svg",
         "label": "Pinos y afines",
-        "marino": 0,
+        "marino": false,
         "ref_id": 77
       },
       {
         "slug": "fanerogamas",
         "descripcion": "Colombia es uno de los países con mayor diversidad de fanerógamas en el mundo. Estas plantas corresponden a árboles y arbustos. Las especies encontradas en Colombia se encuentran amenazadas por la sobreexplotación del recurso o cambios drásticos en su hábitat y en el caso de las especies con distribución restringida, aumenta el grado de amenaza, especialmente por la falta información disponible que dificulta la implementación de planes de manejo para su conservación.",
-        "icon": 1,
+        "icon": true,
         "icon_black": "static/icons/fanerogamas-black.svg",
         "icon_white": "static/icons/fanerogamas-white.svg",
         "label": "Fanerógamas",
-        "marino": 0,
+        "marino": false,
         "ref_id": 78
       },
       {
         "slug": "pastos-marinos",
         "descripcion": "Los pastos marinos se encuentran en aguas con poca profundidad, por lo cual se toman como indicadores del estado de salud de las zonas costeras, además de ofrecer protección contra la erosión. Son hábitat y alimento para diversas especies de interés comercial, proveen oxígeno a la columna del agua, mantienen la biodiversidad de organismos y son uno de los ecosistemas considerados con mayor capacidad de secuestro de carbono frente a otros ecosistemas terrestres. Por todos estos servicios se encuentra regulado su uso, criterios de estudio y conservación.",
-        "icon": 0,
+        "icon": false,
         "icon_black": "static/icons/pastos-marinos-black.svg",
         "icon_white": "static/icons/pastos-marinos-white.svg",
         "label": "Pastos Marinos",
-        "marino": 1,
+        "marino": true,
         "ref_id": 45
       },
       {
         "slug": "especies-maderables",
         "descripcion": "En 2020 se publicó la caracterización de las 30 especies forestales maderables con mayor movilidad en Colombia. Estas especies representan el 70% del volumen de madera proveniente de bosque natural comercializado a nivel nacional. Y son utilizadas en la construcción, producción de chapas y contrachapados, maderas para muebles, componentes para muebles y carpintería.",
-        "icon": 0,
+        "icon": false,
         "icon_black": "static/icons/especies-maderables-black.svg",
         "icon_white": "static/icons/especies-maderables-white.svg",
         "label": "Especies Maderables",
-        "marino": 0,
+        "marino": false,
         "ref_id": 46
       },
       {
         "slug": "mangles",
         "descripcion": "Los manglares ofrecen servicios ecosistémicos como la mitigación de la erosión, reducción del oleaje, retención, fijación, estabilización y acreción del suelo, además de aumentar la resiliencia de la zona costera frente a escenarios de cambio climático. Sin embargo, diferentes factores ejercen presión en la conservación de los manglares, como el cambio en el uso del suelo, incluida la expansión de la frontera urbana, hotelera, agropecuaria e industrial; la demanda de recursos, la exposición a eventos de índole natural asociados con la dinámica costera, la exposición a sustancias contaminantes producto de derrames incidentales en las zonas costeras.",
-        "icon": 1,
+        "icon": true,
         "icon_black": "static/icons/mangles-black.svg",
         "icon_white": "static/icons/mangles-white.svg",
         "label": "Mangles",
-        "marino": 1,
+        "marino": true,
         "ref_id": 45
       },
       {
         "slug": "zamias",
         "descripcion": "Colombia es uno de los países con mayor número de especies de zamias en el mundo. Del total de especies, más del 50% se encuentran en alguna categoría de amenaza como consecuencia de la transformación del hábitat y eso indiscriminado de estas. Además, de estar catalogadas dentro de los apéndices CITES. Debido a la gran importan importancia de las especies de Zamia para Colombia, su grado de amenaza y las oportunidades de conservación, el país cuenta con un Plan de acción para la conservación de as zamias en Colombia.",
-        "icon": 1,
+        "icon": true,
         "icon_black": "static/icons/zamias-black.svg",
         "icon_white": "static/icons/zamias-white.svg",
         "label": "Zamias",
-        "marino": 0,
+        "marino": false,
         "ref_id": 72
       },
       {
         "slug": "decapodos",
-        "icon": 0,
+        "icon": false,
         "icon_black": "static/icons/decapodos-black.svg",
         "icon_white": "static/icons/decapodos-white.svg",
         "label": "Decápodos",
-        "marino": 0
+        "marino": false
       }
     ]
   },
@@ -749,7 +580,7 @@
   },
   "gallery": [
     {
-      "text": "La región Amazonia es clave para la conservación de especies emblemáticas como el jaguar (Panthera onca) y el delfín rosado (Inia geoffrensis).",
+      "text": "La región Amazonía es clave para la conservación de especies emblemáticas como el jaguar (Panthera onca) y el delfín rosado (Inia geoffrensis).",
       "image": "https://gitlab.com/sib-colombia/cifras-biodiversidad/-/raw/main/Imágenes/Región Amazonía/1-delfin-rosado.jpg",
       "credit": "Foto: Sergio Martínez, iNaturalist"
     },
@@ -783,8 +614,8 @@
     {
       "id": "slide1",
       "layout": "title/(text|chart)",
-      "title": "¿Cómo esta la región Amazonia frente al resto de Colombia?",
-      "description": "De las 80.346 especies observadas en Colombia,\ndepartamento de Región Amazonía aporta 16.991, equivalentes a 21.1%.\nDe estas 454 especies son endémicas.",
+      "title": "¿Cómo esta la región Amazonía frente al resto de Colombia?",
+      "description": "De las 80.346 especies observadas en Colombia,\nla región Amazonía aporta 16.991, equivalentes a 21.1%.\nDe estas 454 especies son endémicas.",
       "waffle": [
         {
           "slug_region": "colombia",
@@ -2034,17 +1865,17 @@
           "slug_tematica": "amenazadas-global-cr"
         },
         {
-          "label": "Aniba novogranatensis",
-          "slug_especie": "aniba-novogranatensis",
-          "registros": 2,
-          "url_gbif": "https://www.gbif.org/species/7462426",
-          "slug_tematica": "amenazadas-global-cr"
-        },
-        {
           "label": "Serrasalmus nalseni",
           "slug_especie": "serrasalmus-nalseni",
           "registros": 2,
           "url_gbif": "https://www.gbif.org/species/2354123",
+          "slug_tematica": "amenazadas-global-cr"
+        },
+        {
+          "label": "Aniba novogranatensis",
+          "slug_especie": "aniba-novogranatensis",
+          "registros": 2,
+          "url_gbif": "https://www.gbif.org/species/7462426",
           "slug_tematica": "amenazadas-global-cr"
         },
         {
@@ -2735,6 +2566,14 @@
       "parent_registros_trasplantadas": 87311,
       "list_especies_exoticas_total": [
         {
+          "label": "Bubulcus ibis",
+          "slug_especie": "bubulcus-ibis",
+          "registros": 6848,
+          "url_gbif": "https://www.gbif.org/species/2480830",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c20d14f0106c67230e7320/summary",
+          "slug_tematica": "exoticas-riesgo-invasion-total"
+        },
+        {
           "label": "Podocnemis expansa",
           "slug_especie": "podocnemis-expansa",
           "registros": 4302,
@@ -2757,6 +2596,22 @@
           "url_gbif": "https://www.gbif.org/species/2442782",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56707a81f289f5a40c0cd2de/summary",
           "slug_tematica": "trasplantadas"
+        },
+        {
+          "label": "Columba livia",
+          "slug_especie": "columba-livia",
+          "registros": 1461,
+          "url_gbif": "https://www.gbif.org/species/2495414",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4b5f1f0106c67230e7387/summary",
+          "slug_tematica": "exoticas-riesgo-invasion-total"
+        },
+        {
+          "label": "Sus scrofa",
+          "slug_especie": "sus-scrofa",
+          "registros": 373,
+          "url_gbif": "https://www.gbif.org/species/7705930",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cc7b75207ecea54a561e30/summary",
+          "slug_tematica": "exoticas-riesgo-invasion-total"
         },
         {
           "label": "Culex quinquefasciatus",
@@ -2786,27 +2641,6 @@
           "registros": 188,
           "url_gbif": "https://www.gbif.org/species/2932942",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56e6241283c45700544e3e9c/summary",
-          "slug_tematica": "exoticas"
-        },
-        {
-          "label": "Spathiphyllum cannifolium",
-          "slug_especie": "spathiphyllum-cannifolium",
-          "registros": 186,
-          "url_gbif": "https://www.gbif.org/species/2869701",
-          "slug_tematica": "exoticas"
-        },
-        {
-          "label": "Aedes aegypti",
-          "slug_especie": "aedes-aegypti",
-          "registros": 149,
-          "url_gbif": "https://www.gbif.org/species/1651891",
-          "slug_tematica": "exoticas"
-        },
-        {
-          "label": "Capsicum frutescens",
-          "slug_especie": "capsicum-frutescens",
-          "registros": 133,
-          "url_gbif": "https://www.gbif.org/species/6402384",
           "slug_tematica": "exoticas"
         }
       ],
@@ -2936,7 +2770,87 @@
           "slug_tematica": "invasoras"
         }
       ],
-      "list_especies_exoticas_riesgo_invasion_total": [],
+      "list_especies_exoticas_riesgo_invasion_total": [
+        {
+          "label": "Bubulcus ibis",
+          "slug_especie": "bubulcus-ibis",
+          "registros": 6848,
+          "url_gbif": "https://www.gbif.org/species/2480830",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c20d14f0106c67230e7320/summary",
+          "slug_tematica": "exoticas-riesgo-invasion-total"
+        },
+        {
+          "label": "Columba livia",
+          "slug_especie": "columba-livia",
+          "registros": 1461,
+          "url_gbif": "https://www.gbif.org/species/2495414",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4b5f1f0106c67230e7387/summary",
+          "slug_tematica": "exoticas-riesgo-invasion-total"
+        },
+        {
+          "label": "Sus scrofa",
+          "slug_especie": "sus-scrofa",
+          "registros": 373,
+          "url_gbif": "https://www.gbif.org/species/7705930",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cc7b75207ecea54a561e30/summary",
+          "slug_tematica": "exoticas-riesgo-invasion-total"
+        },
+        {
+          "label": "Hemidactylus mabouia",
+          "slug_especie": "hemidactylus-mabouia",
+          "registros": 56,
+          "url_gbif": "https://www.gbif.org/species/5959942",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d43dec3c16479905cba879/summary",
+          "slug_tematica": "exoticas-riesgo-invasion-total"
+        },
+        {
+          "label": "Pistia stratiotes",
+          "slug_especie": "pistia-stratiotes",
+          "registros": 33,
+          "url_gbif": "https://www.gbif.org/species/2870583",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7980683c45700544e41db/summary",
+          "slug_tematica": "exoticas-riesgo-invasion-total"
+        },
+        {
+          "label": "Neustanthus phaseoloides",
+          "slug_especie": "neustanthus-phaseoloides",
+          "registros": 31,
+          "url_gbif": "https://www.gbif.org/species/2977687",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5915ef88f827bf0c0ced42a6/summary",
+          "slug_tematica": "exoticas-riesgo-invasion-total"
+        },
+        {
+          "label": "Guadua superba",
+          "slug_especie": "guadua-superba",
+          "registros": 21,
+          "url_gbif": "https://www.gbif.org/species/4128212",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7858c83c45700544e40af/summary",
+          "slug_tematica": "exoticas-riesgo-invasion-total"
+        },
+        {
+          "label": "Hemidactylus frenatus",
+          "slug_especie": "hemidactylus-frenatus",
+          "registros": 21,
+          "url_gbif": "https://www.gbif.org/species/5959976",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d20fcd3c16479905cba85d/summary",
+          "slug_tematica": "exoticas-riesgo-invasion-total"
+        },
+        {
+          "label": "Salvinia auriculata",
+          "slug_especie": "salvinia-auriculata",
+          "registros": 19,
+          "url_gbif": "https://www.gbif.org/species/5274861",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5e59ae4b49ec9418588eb9c8/summary",
+          "slug_tematica": "exoticas-riesgo-invasion-total"
+        },
+        {
+          "label": "Syzygium malaccense",
+          "slug_especie": "syzygium-malaccense",
+          "registros": 19,
+          "url_gbif": "https://www.gbif.org/species/3184509",
+          "slug_tematica": "exoticas-riesgo-invasion-total"
+        }
+      ],
       "list_especies_trasplantadas": [
         {
           "label": "Podocnemis expansa",
@@ -4582,6 +4496,23 @@
             "genus": "Scinax"
           },
           {
+            "label": "Pristimantis savagei",
+            "registros": 3,
+            "slug_especie": "pristimantis-savagei",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "anfibios",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2425157",
+            "species": "Pristimantis savagei",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Amphibia",
+            "order": "Anura",
+            "family": "Craugastoridae",
+            "genus": "Pristimantis"
+          },
+          {
             "label": "Elachistocleis sikuani",
             "registros": 3,
             "slug_especie": "elachistocleis-sikuani",
@@ -4614,23 +4545,6 @@
             "order": "Anura",
             "family": "Microhylidae",
             "genus": "Elachistocleis"
-          },
-          {
-            "label": "Pristimantis savagei",
-            "registros": 3,
-            "slug_especie": "pristimantis-savagei",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "anfibios",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2425157",
-            "species": "Pristimantis savagei",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Amphibia",
-            "order": "Anura",
-            "family": "Craugastoridae",
-            "genus": "Pristimantis"
           }
         ],
         "exoticas-total": []
@@ -6288,14 +6202,14 @@
       },
       "subgrupo_especies": [
         {
-          "slug_grupo": "invertebrados",
-          "label_grupo": "Invertebrados",
-          "especies_region_total": 3256
-        },
-        {
           "slug_grupo": "vertebrados",
           "label_grupo": "Vertebrados",
           "especies_region_total": 3090
+        },
+        {
+          "slug_grupo": "invertebrados",
+          "label_grupo": "Invertebrados",
+          "especies_region_total": 3256
         }
       ],
       "species_list_top": [
@@ -7382,6 +7296,24 @@
         ],
         "exoticas-total": [
           {
+            "label": "Bubulcus ibis",
+            "registros": 6848,
+            "slug_especie": "bubulcus-ibis",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2480830",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c20d14f0106c67230e7320/summary",
+            "species": "Bubulcus ibis",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Pelecaniformes",
+            "family": "Ardeidae",
+            "genus": "Bubulcus"
+          },
+          {
             "label": "Podocnemis expansa",
             "registros": 4302,
             "slug_especie": "podocnemis-expansa",
@@ -7432,6 +7364,42 @@
             "class": "Testudines",
             "family": "Podocnemididae",
             "genus": "Podocnemis"
+          },
+          {
+            "label": "Columba livia",
+            "registros": 1461,
+            "slug_especie": "columba-livia",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2495414",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c4b5f1f0106c67230e7387/summary",
+            "species": "Columba livia",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Columbiformes",
+            "family": "Columbidae",
+            "genus": "Columba"
+          },
+          {
+            "label": "Sus scrofa",
+            "registros": 373,
+            "slug_especie": "sus-scrofa",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/7705930",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cc7b75207ecea54a561e30/summary",
+            "species": "Sus scrofa",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Artiodactyla",
+            "family": "Suidae",
+            "genus": "Sus"
           },
           {
             "label": "Culex quinquefasciatus",
@@ -7502,58 +7470,6 @@
             "order": "Artiodactyla",
             "family": "Bovidae",
             "genus": "Bos"
-          },
-          {
-            "label": "Boa constrictor",
-            "registros": 37,
-            "slug_especie": "boa-constrictor",
-            "slug_tematica": "trasplantadas",
-            "tematica_label": "Trasplantadas",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2464899",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56cae177f0106c67230e7473/summary",
-            "species": "Boa constrictor",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Squamata",
-            "family": "Boidae",
-            "genus": "Boa"
-          },
-          {
-            "label": "Piaractus brachypomus",
-            "registros": 19,
-            "slug_especie": "piaractus-brachypomus",
-            "slug_tematica": "trasplantadas",
-            "tematica_label": "Trasplantadas",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2353225",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/5938ac322f4fd7bc7f3853fb/summary",
-            "species": "Piaractus brachypomus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "order": "Characiformes",
-            "family": "Serrasalmidae",
-            "genus": "Piaractus"
-          },
-          {
-            "label": "Lissachatina fulica",
-            "registros": 16,
-            "slug_especie": "lissachatina-fulica",
-            "slug_tematica": "invasoras",
-            "tematica_label": "Invasoras",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/8790531",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/59723b5c2f4fd7bc7f3a7e51/summary",
-            "species": "Lissachatina fulica",
-            "kingdom": "Animalia",
-            "phylum": "Mollusca",
-            "class": "Gastropoda",
-            "order": "Stylommatophora",
-            "family": "Achatinidae",
-            "genus": "Lissachatina"
           }
         ]
       }
@@ -10011,6 +9927,24 @@
         ],
         "exoticas-total": [
           {
+            "label": "Bubulcus ibis",
+            "registros": 6848,
+            "slug_especie": "bubulcus-ibis",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2480830",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c20d14f0106c67230e7320/summary",
+            "species": "Bubulcus ibis",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Pelecaniformes",
+            "family": "Ardeidae",
+            "genus": "Bubulcus"
+          },
+          {
             "label": "Paroaria gularis",
             "registros": 3820,
             "slug_especie": "paroaria-gularis",
@@ -10027,6 +9961,42 @@
             "order": "Passeriformes",
             "family": "Thraupidae",
             "genus": "Paroaria"
+          },
+          {
+            "label": "Columba livia",
+            "registros": 1461,
+            "slug_especie": "columba-livia",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2495414",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c4b5f1f0106c67230e7387/summary",
+            "species": "Columba livia",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Columbiformes",
+            "family": "Columbidae",
+            "genus": "Columba"
+          },
+          {
+            "label": "Lonchura malacca",
+            "registros": 13,
+            "slug_especie": "lonchura-malacca",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2493626",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e639db83c45700544e3ea1/summary",
+            "species": "Lonchura malacca",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Estrildidae",
+            "genus": "Lonchura"
           },
           {
             "label": "Paroaria nigrogenis",
@@ -10046,6 +10016,59 @@
             "genus": "Paroaria"
           },
           {
+            "label": "Gallus gallus",
+            "registros": 12,
+            "slug_especie": "gallus-gallus",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/9326020",
+            "species": "Gallus gallus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Galliformes",
+            "family": "Phasianidae",
+            "genus": "Gallus"
+          },
+          {
+            "label": "Passer domesticus",
+            "registros": 3,
+            "slug_especie": "passer-domesticus",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5231190",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e64aa683c45700544e3eab/summary",
+            "species": "Passer domesticus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Passeridae",
+            "genus": "Passer"
+          },
+          {
+            "label": "Anser anser",
+            "registros": 2,
+            "slug_especie": "anser-anser",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2498036",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c666e0f0106c67230e73c0/summary",
+            "species": "Anser anser",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Anseriformes",
+            "family": "Anatidae",
+            "genus": "Anser"
+          },
+          {
             "label": "Lonchura atricapilla",
             "registros": 2,
             "slug_especie": "lonchura-atricapilla",
@@ -10062,6 +10085,23 @@
             "order": "Passeriformes",
             "family": "Estrildidae",
             "genus": "Lonchura"
+          },
+          {
+            "label": "Numida meleagris",
+            "registros": 2,
+            "slug_especie": "numida-meleagris",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2473341",
+            "species": "Numida meleagris",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Galliformes",
+            "family": "Numididae",
+            "genus": "Numida"
           }
         ]
       }
@@ -13391,7 +13431,25 @@
             "genus": "Taphrosoma"
           }
         ],
-        "exoticas-total": []
+        "exoticas-total": [
+          {
+            "label": "Digitonthophagus gazella",
+            "registros": 1,
+            "slug_especie": "digitonthophagus-gazella",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "escarabajos",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/1092466",
+            "species": "Digitonthophagus gazella",
+            "kingdom": "Animalia",
+            "phylum": "Arthropoda",
+            "class": "Insecta",
+            "order": "Coleoptera",
+            "family": "Scarabaeidae",
+            "genus": "Digitonthophagus"
+          }
+        ]
       }
     },
     {
@@ -14340,6 +14398,24 @@
             "order": "Cycadales",
             "family": "Cycadaceae",
             "genus": "Cycas"
+          },
+          {
+            "label": "Pinus caribaea",
+            "registros": 2,
+            "slug_especie": "pinus-caribaea",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "gimnospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5285740",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e793a183c45700544e4195/summary",
+            "species": "Pinus caribaea",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Pinopsida",
+            "order": "Pinales",
+            "family": "Pinaceae",
+            "genus": "Pinus"
           }
         ]
       }
@@ -15057,6 +15133,60 @@
         ],
         "exoticas-total": [
           {
+            "label": "Salvinia auriculata",
+            "registros": 19,
+            "slug_especie": "salvinia-auriculata",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "helechos",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5274861",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/5e59ae4b49ec9418588eb9c8/summary",
+            "species": "Salvinia auriculata",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Polypodiopsida",
+            "order": "Salviniales",
+            "family": "Salviniaceae",
+            "genus": "Salvinia"
+          },
+          {
+            "label": "Azolla filiculoides",
+            "registros": 11,
+            "slug_especie": "azolla-filiculoides",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "helechos",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2650107",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56d04c673c16479905cba818/summary",
+            "species": "Azolla filiculoides",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Polypodiopsida",
+            "order": "Salviniales",
+            "family": "Salviniaceae",
+            "genus": "Azolla"
+          },
+          {
+            "label": "Nephrolepis cordifolia",
+            "registros": 4,
+            "slug_especie": "nephrolepis-cordifolia",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "helechos",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2650930",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e78d9c83c45700544e413d/summary",
+            "species": "Nephrolepis cordifolia",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Polypodiopsida",
+            "order": "Polypodiales",
+            "family": "Nephrolepidaceae",
+            "genus": "Nephrolepis"
+          },
+          {
             "label": "Pteris cretica",
             "registros": 4,
             "slug_especie": "pteris-cretica",
@@ -15072,6 +15202,24 @@
             "order": "Polypodiales",
             "family": "Pteridaceae",
             "genus": "Pteris"
+          },
+          {
+            "label": "Pteridium aquilinum",
+            "registros": 2,
+            "slug_especie": "pteridium-aquilinum",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "helechos",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5275012",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e79bb383c45700544e422b/summary",
+            "species": "Pteridium aquilinum",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Polypodiopsida",
+            "order": "Polypodiales",
+            "family": "Dennstaedtiaceae",
+            "genus": "Pteridium"
           },
           {
             "label": "Nephrolepis brownii",
@@ -16036,6 +16184,23 @@
             "genus": "Bapalmuia"
           },
           {
+            "label": "Sticta andreana",
+            "registros": 1,
+            "slug_especie": "sticta-andreana",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "hongos",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5477090",
+            "species": "Sticta andreana",
+            "kingdom": "Fungi",
+            "phylum": "Ascomycota",
+            "class": "Lecanoromycetes",
+            "order": "Peltigerales",
+            "family": "Lobariaceae",
+            "genus": "Sticta"
+          },
+          {
             "label": "Chiodecton separatum",
             "registros": 1,
             "slug_especie": "chiodecton-separatum",
@@ -16068,23 +16233,6 @@
             "order": "Arthoniales",
             "family": "Roccellaceae",
             "genus": "Lecanactis"
-          },
-          {
-            "label": "Sticta andreana",
-            "registros": 1,
-            "slug_especie": "sticta-andreana",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "hongos",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5477090",
-            "species": "Sticta andreana",
-            "kingdom": "Fungi",
-            "phylum": "Ascomycota",
-            "class": "Lecanoromycetes",
-            "order": "Peltigerales",
-            "family": "Lobariaceae",
-            "genus": "Sticta"
           }
         ],
         "exoticas-total": []
@@ -16594,6 +16742,23 @@
             "order": "Hymenoptera",
             "family": "Formicidae",
             "genus": "Linepithema"
+          },
+          {
+            "label": "Pheidole megacephala",
+            "registros": 2,
+            "slug_especie": "pheidole-megacephala",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "hormigas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/1322635",
+            "species": "Pheidole megacephala",
+            "kingdom": "Animalia",
+            "phylum": "Arthropoda",
+            "class": "Insecta",
+            "order": "Hymenoptera",
+            "family": "Formicidae",
+            "genus": "Pheidole"
           }
         ]
       }
@@ -16876,9 +17041,14 @@
       },
       "subgrupo_especies": [
         {
-          "slug_grupo": "abejas",
-          "label_grupo": "Abejas",
-          "especies_region_total": 71
+          "slug_grupo": "escarabajos",
+          "label_grupo": "Escarabajos",
+          "especies_region_total": 509
+        },
+        {
+          "slug_grupo": "mariposas",
+          "label_grupo": "Mariposas",
+          "especies_region_total": 568
         },
         {
           "slug_grupo": "dipteros",
@@ -16886,19 +17056,14 @@
           "especies_region_total": 342
         },
         {
-          "slug_grupo": "escarabajos",
-          "label_grupo": "Escarabajos",
-          "especies_region_total": 509
-        },
-        {
           "slug_grupo": "hormigas",
           "label_grupo": "Hormigas",
           "especies_region_total": 466
         },
         {
-          "slug_grupo": "mariposas",
-          "label_grupo": "Mariposas",
-          "especies_region_total": 568
+          "slug_grupo": "abejas",
+          "label_grupo": "Abejas",
+          "especies_region_total": 71
         }
       ],
       "species_list_top": [
@@ -17379,6 +17544,40 @@
             "order": "Hymenoptera",
             "family": "Formicidae",
             "genus": "Linepithema"
+          },
+          {
+            "label": "Pheidole megacephala",
+            "registros": 2,
+            "slug_especie": "pheidole-megacephala",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "insectos",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/1322635",
+            "species": "Pheidole megacephala",
+            "kingdom": "Animalia",
+            "phylum": "Arthropoda",
+            "class": "Insecta",
+            "order": "Hymenoptera",
+            "family": "Formicidae",
+            "genus": "Pheidole"
+          },
+          {
+            "label": "Digitonthophagus gazella",
+            "registros": 1,
+            "slug_especie": "digitonthophagus-gazella",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "insectos",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/1092466",
+            "species": "Digitonthophagus gazella",
+            "kingdom": "Animalia",
+            "phylum": "Arthropoda",
+            "class": "Insecta",
+            "order": "Coleoptera",
+            "family": "Scarabaeidae",
+            "genus": "Digitonthophagus"
           }
         ]
       }
@@ -17661,9 +17860,19 @@
       },
       "subgrupo_especies": [
         {
+          "slug_grupo": "insectos",
+          "label_grupo": "Insectos",
+          "especies_region_total": 2782
+        },
+        {
           "slug_grupo": "aracnidos",
           "label_grupo": "Arácnidos",
           "especies_region_total": 226
+        },
+        {
+          "slug_grupo": "moluscos",
+          "label_grupo": "Moluscos",
+          "especies_region_total": 90
         },
         {
           "slug_grupo": "crustaceos",
@@ -17681,19 +17890,9 @@
           "especies_region_total": 0
         },
         {
-          "slug_grupo": "insectos",
-          "label_grupo": "Insectos",
-          "especies_region_total": 2782
-        },
-        {
           "slug_grupo": "medusas",
           "label_grupo": "Medusas",
           "especies_region_total": 0
-        },
-        {
-          "slug_grupo": "moluscos",
-          "label_grupo": "Moluscos",
-          "especies_region_total": 90
         }
       ],
       "species_list_top": [
@@ -19414,23 +19613,6 @@
             "genus": "Aotus"
           },
           {
-            "label": "Lonchorhina mankomara",
-            "registros": 1,
-            "slug_especie": "lonchorhina-mankomara",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "mamiferos",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/9567055",
-            "species": "Lonchorhina mankomara",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Mammalia",
-            "order": "Chiroptera",
-            "family": "Phyllostomidae",
-            "genus": "Lonchorhina"
-          },
-          {
             "label": "Saguinus oedipus",
             "registros": 1,
             "slug_especie": "saguinus-oedipus",
@@ -19447,9 +19629,44 @@
             "order": "Primates",
             "family": "Callitrichidae",
             "genus": "Saguinus"
+          },
+          {
+            "label": "Lonchorhina mankomara",
+            "registros": 1,
+            "slug_especie": "lonchorhina-mankomara",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "mamiferos",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/9567055",
+            "species": "Lonchorhina mankomara",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Chiroptera",
+            "family": "Phyllostomidae",
+            "genus": "Lonchorhina"
           }
         ],
         "exoticas-total": [
+          {
+            "label": "Sus scrofa",
+            "registros": 373,
+            "slug_especie": "sus-scrofa",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "mamiferos",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/7705930",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cc7b75207ecea54a561e30/summary",
+            "species": "Sus scrofa",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Artiodactyla",
+            "family": "Suidae",
+            "genus": "Sus"
+          },
           {
             "label": "Canis lupus",
             "registros": 199,
@@ -19487,6 +19704,24 @@
             "genus": "Bos"
           },
           {
+            "label": "Rattus rattus",
+            "registros": 5,
+            "slug_especie": "rattus-rattus",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "mamiferos",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2439270",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cbb061207ecea54a561dfc/summary",
+            "species": "Rattus rattus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Rodentia",
+            "family": "Muridae",
+            "genus": "Rattus"
+          },
+          {
             "label": "Cavia porcellus",
             "registros": 3,
             "slug_especie": "cavia-porcellus",
@@ -19504,6 +19739,42 @@
             "order": "Rodentia",
             "family": "Caviidae",
             "genus": "Cavia"
+          },
+          {
+            "label": "Felis catus",
+            "registros": 1,
+            "slug_especie": "felis-catus",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "mamiferos",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2435035",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c5e3a7f0106c67230e73ad/summary",
+            "species": "Felis catus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Carnivora",
+            "family": "Felidae",
+            "genus": "Felis"
+          },
+          {
+            "label": "Rattus norvegicus",
+            "registros": 1,
+            "slug_especie": "rattus-norvegicus",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "mamiferos",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2439261",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cba754207ecea54a561dfb/summary",
+            "species": "Rattus norvegicus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Rodentia",
+            "family": "Muridae",
+            "genus": "Rattus"
           }
         ]
       }
@@ -21209,6 +21480,24 @@
             "genus": "Lissachatina"
           },
           {
+            "label": "Corbicula fluminea",
+            "registros": 1,
+            "slug_especie": "corbicula-fluminea",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "moluscos",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5189033",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/597235c82f4fd7bc7f3a7b76/summary",
+            "species": "Corbicula fluminea",
+            "kingdom": "Animalia",
+            "phylum": "Mollusca",
+            "class": "Bivalvia",
+            "order": "Venerida",
+            "family": "Cyrenidae",
+            "genus": "Corbicula"
+          },
+          {
             "label": "Cornu aspersum",
             "registros": 1,
             "slug_especie": "cornu-aspersum",
@@ -22513,14 +22802,14 @@
       },
       "subgrupo_especies": [
         {
-          "slug_grupo": "peces-dulceacuicolas",
-          "label_grupo": "Peces dulceacuícolas",
-          "especies_region_total": 948
-        },
-        {
           "slug_grupo": "peces-marinos",
           "label_grupo": "Peces Marinos",
           "especies_region_total": 7
+        },
+        {
+          "slug_grupo": "peces-dulceacuicolas",
+          "label_grupo": "Peces dulceacuícolas",
+          "especies_region_total": 948
         }
       ],
       "species_list_top": [
@@ -23377,6 +23666,22 @@
             "genus": "Caquetaia"
           },
           {
+            "label": "Carassius auratus",
+            "registros": 1,
+            "slug_especie": "carassius-auratus",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "peces",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/4286942",
+            "species": "Carassius auratus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Cypriniformes",
+            "family": "Cyprinidae",
+            "genus": "Carassius"
+          },
+          {
             "label": "Gymnocorymbus ternetzi",
             "registros": 1,
             "slug_especie": "gymnocorymbus-ternetzi",
@@ -23823,20 +24128,6 @@
           "genus": "Tetragonopterus"
         },
         {
-          "label": "Hemigrammus ocellifer",
-          "registros": 111,
-          "slug_especie": "hemigrammus-ocellifer",
-          "slug_grupo": "peces-dulceacuicolas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2354330",
-          "species": "Hemigrammus ocellifer",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Characidae",
-          "genus": "Hemigrammus"
-        },
-        {
           "label": "Hypopygus lepturus",
           "registros": 111,
           "slug_especie": "hypopygus-lepturus",
@@ -23849,6 +24140,20 @@
           "order": "Gymnotiformes",
           "family": "Hypopomidae",
           "genus": "Hypopygus"
+        },
+        {
+          "label": "Hemigrammus ocellifer",
+          "registros": 111,
+          "slug_especie": "hemigrammus-ocellifer",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2354330",
+          "species": "Hemigrammus ocellifer",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Characidae",
+          "genus": "Hemigrammus"
         }
       ],
       "species_list_tematica": {
@@ -25302,11 +25607,6 @@
           "especies_region_total": 8643
         },
         {
-          "slug_grupo": "antocerotas",
-          "label_grupo": "Antocerotas",
-          "especies_region_total": 1
-        },
-        {
           "slug_grupo": "gimnospermas",
           "label_grupo": "Gimnospermas",
           "especies_region_total": 22
@@ -25317,14 +25617,19 @@
           "especies_region_total": 463
         },
         {
+          "slug_grupo": "musgos",
+          "label_grupo": "Musgos",
+          "especies_region_total": 219
+        },
+        {
           "slug_grupo": "hepaticas",
           "label_grupo": "Hepáticas",
           "especies_region_total": 161
         },
         {
-          "slug_grupo": "musgos",
-          "label_grupo": "Musgos",
-          "especies_region_total": 219
+          "slug_grupo": "antocerotas",
+          "label_grupo": "Antocerotas",
+          "especies_region_total": 1
         }
       ],
       "species_list_top": [
@@ -27726,6 +28031,23 @@
             "genus": "Podocnemis"
           },
           {
+            "label": "Caiman crocodilus",
+            "registros": 121,
+            "slug_especie": "caiman-crocodilus",
+            "slug_tematica": "cites-i-ii",
+            "tematica_label": "Apéndice CITES I-II",
+            "slug_grupo": "reptiles",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/8953936",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c92645f0106c67230e7437/summary",
+            "species": "Caiman crocodilus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Crocodylia",
+            "family": "Alligatoridae",
+            "genus": "Caiman"
+          },
+          {
             "label": "Iguana iguana",
             "registros": 80,
             "slug_especie": "iguana-iguana",
@@ -27794,6 +28116,23 @@
             "genus": "Chelus"
           },
           {
+            "label": "Boa constrictor",
+            "registros": 37,
+            "slug_especie": "boa-constrictor",
+            "slug_tematica": "cites-i-ii",
+            "tematica_label": "Apéndice CITES I-II",
+            "slug_grupo": "reptiles",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2464899",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cae177f0106c67230e7473/summary",
+            "species": "Boa constrictor",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Squamata",
+            "family": "Boidae",
+            "genus": "Boa"
+          },
+          {
             "label": "Epicrates cenchria",
             "registros": 36,
             "slug_especie": "epicrates-cenchria",
@@ -27826,40 +28165,6 @@
             "class": "Testudines",
             "family": "Testudinidae",
             "genus": "Chelonoidis"
-          },
-          {
-            "label": "Corallus hortulana",
-            "registros": 33,
-            "slug_especie": "corallus-hortulana",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "reptiles",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2464951",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56cdd073207ecea54a561e87/summary",
-            "species": "Corallus hortulana",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Squamata",
-            "family": "Boidae",
-            "genus": "Corallus"
-          },
-          {
-            "label": "Eunectes murinus",
-            "registros": 33,
-            "slug_especie": "eunectes-murinus",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "reptiles",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5225712",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56ce5cf13c16479905cba79d/summary",
-            "species": "Eunectes murinus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Squamata",
-            "family": "Boidae",
-            "genus": "Eunectes"
           }
         ],
         "migratorias": [],
@@ -27900,6 +28205,23 @@
             "genus": "Podocnemis"
           },
           {
+            "label": "Hemidactylus mabouia",
+            "registros": 56,
+            "slug_especie": "hemidactylus-mabouia",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "reptiles",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5959942",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56d43dec3c16479905cba879/summary",
+            "species": "Hemidactylus mabouia",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Squamata",
+            "family": "Gekkonidae",
+            "genus": "Hemidactylus"
+          },
+          {
             "label": "Boa constrictor",
             "registros": 37,
             "slug_especie": "boa-constrictor",
@@ -27917,6 +28239,23 @@
             "genus": "Boa"
           },
           {
+            "label": "Hemidactylus frenatus",
+            "registros": 21,
+            "slug_especie": "hemidactylus-frenatus",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "reptiles",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5959976",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56d20fcd3c16479905cba85d/summary",
+            "species": "Hemidactylus frenatus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Squamata",
+            "family": "Gekkonidae",
+            "genus": "Hemidactylus"
+          },
+          {
             "label": "Tupinambis teguixin",
             "registros": 9,
             "slug_especie": "tupinambis-teguixin",
@@ -27932,6 +28271,38 @@
             "class": "Squamata",
             "family": "Teiidae",
             "genus": "Tupinambis"
+          },
+          {
+            "label": "Hemidactylus angulatus",
+            "registros": 1,
+            "slug_especie": "hemidactylus-angulatus",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "reptiles",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5221556",
+            "species": "Hemidactylus angulatus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Squamata",
+            "family": "Gekkonidae",
+            "genus": "Hemidactylus"
+          },
+          {
+            "label": "Lepidodactylus lugubris",
+            "registros": 1,
+            "slug_especie": "lepidodactylus-lugubris",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "reptiles",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/9164170",
+            "species": "Lepidodactylus lugubris",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Squamata",
+            "family": "Gekkonidae",
+            "genus": "Lepidodactylus"
           }
         ]
       }
@@ -30010,9 +30381,9 @@
       },
       "subgrupo_especies": [
         {
-          "slug_grupo": "anfibios",
-          "label_grupo": "Anfibios",
-          "especies_region_total": 233
+          "slug_grupo": "mamiferos",
+          "label_grupo": "Mamíferos",
+          "especies_region_total": 224
         },
         {
           "slug_grupo": "aves",
@@ -30020,19 +30391,19 @@
           "especies_region_total": 1154
         },
         {
-          "slug_grupo": "mamiferos",
-          "label_grupo": "Mamíferos",
-          "especies_region_total": 224
+          "slug_grupo": "reptiles",
+          "label_grupo": "Reptiles",
+          "especies_region_total": 222
+        },
+        {
+          "slug_grupo": "anfibios",
+          "label_grupo": "Anfibios",
+          "especies_region_total": 233
         },
         {
           "slug_grupo": "peces",
           "label_grupo": "Peces",
           "especies_region_total": 1257
-        },
-        {
-          "slug_grupo": "reptiles",
-          "label_grupo": "Reptiles",
-          "especies_region_total": 222
         }
       ],
       "species_list_top": [
@@ -31119,6 +31490,24 @@
         ],
         "exoticas-total": [
           {
+            "label": "Bubulcus ibis",
+            "registros": 6848,
+            "slug_especie": "bubulcus-ibis",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2480830",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c20d14f0106c67230e7320/summary",
+            "species": "Bubulcus ibis",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Pelecaniformes",
+            "family": "Ardeidae",
+            "genus": "Bubulcus"
+          },
+          {
             "label": "Podocnemis expansa",
             "registros": 4302,
             "slug_especie": "podocnemis-expansa",
@@ -31171,6 +31560,42 @@
             "genus": "Podocnemis"
           },
           {
+            "label": "Columba livia",
+            "registros": 1461,
+            "slug_especie": "columba-livia",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2495414",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c4b5f1f0106c67230e7387/summary",
+            "species": "Columba livia",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Columbiformes",
+            "family": "Columbidae",
+            "genus": "Columba"
+          },
+          {
+            "label": "Sus scrofa",
+            "registros": 373,
+            "slug_especie": "sus-scrofa",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/7705930",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cc7b75207ecea54a561e30/summary",
+            "species": "Sus scrofa",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Artiodactyla",
+            "family": "Suidae",
+            "genus": "Sus"
+          },
+          {
             "label": "Canis lupus",
             "registros": 199,
             "slug_especie": "canis-lupus",
@@ -31207,6 +31632,23 @@
             "genus": "Bos"
           },
           {
+            "label": "Hemidactylus mabouia",
+            "registros": 56,
+            "slug_especie": "hemidactylus-mabouia",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5959942",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56d43dec3c16479905cba879/summary",
+            "species": "Hemidactylus mabouia",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Squamata",
+            "family": "Gekkonidae",
+            "genus": "Hemidactylus"
+          },
+          {
             "label": "Boa constrictor",
             "registros": 37,
             "slug_especie": "boa-constrictor",
@@ -31222,74 +31664,6 @@
             "class": "Squamata",
             "family": "Boidae",
             "genus": "Boa"
-          },
-          {
-            "label": "Piaractus brachypomus",
-            "registros": 19,
-            "slug_especie": "piaractus-brachypomus",
-            "slug_tematica": "trasplantadas",
-            "tematica_label": "Trasplantadas",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2353225",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/5938ac322f4fd7bc7f3853fb/summary",
-            "species": "Piaractus brachypomus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "order": "Characiformes",
-            "family": "Serrasalmidae",
-            "genus": "Piaractus"
-          },
-          {
-            "label": "Paroaria nigrogenis",
-            "registros": 13,
-            "slug_especie": "paroaria-nigrogenis",
-            "slug_tematica": "trasplantadas",
-            "tematica_label": "Trasplantadas",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5845551",
-            "species": "Paroaria nigrogenis",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Thraupidae",
-            "genus": "Paroaria"
-          },
-          {
-            "label": "Colossoma macropomum",
-            "registros": 9,
-            "slug_especie": "colossoma-macropomum",
-            "slug_tematica": "trasplantadas",
-            "tematica_label": "Trasplantadas",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2353152",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/5938a6e22f4fd7bc7f3852fd/summary",
-            "species": "Colossoma macropomum",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "order": "Characiformes",
-            "family": "Serrasalmidae",
-            "genus": "Colossoma"
-          },
-          {
-            "label": "Tupinambis teguixin",
-            "registros": 9,
-            "slug_especie": "tupinambis-teguixin",
-            "slug_tematica": "trasplantadas",
-            "tematica_label": "Trasplantadas",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2471948",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e0f3ed83c45700544e3cfc/summary",
-            "species": "Tupinambis teguixin",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Squamata",
-            "family": "Teiidae",
-            "genus": "Tupinambis"
           }
         ]
       }
@@ -35545,6 +35919,23 @@
         "migratorias": [],
         "endemicas": [
           {
+            "label": "Sticta andreana",
+            "registros": 1,
+            "slug_especie": "sticta-andreana",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "liquenes",
+            "tipo": "interes",
+            "url_gbif": "https://www.gbif.org/species/5477090",
+            "species": "Sticta andreana",
+            "kingdom": "Fungi",
+            "phylum": "Ascomycota",
+            "class": "Lecanoromycetes",
+            "order": "Peltigerales",
+            "family": "Lobariaceae",
+            "genus": "Sticta"
+          },
+          {
             "label": "Chiodecton separatum",
             "registros": 1,
             "slug_especie": "chiodecton-separatum",
@@ -35577,23 +35968,6 @@
             "order": "Arthoniales",
             "family": "Roccellaceae",
             "genus": "Lecanactis"
-          },
-          {
-            "label": "Sticta andreana",
-            "registros": 1,
-            "slug_especie": "sticta-andreana",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "liquenes",
-            "tipo": "interes",
-            "url_gbif": "https://www.gbif.org/species/5477090",
-            "species": "Sticta andreana",
-            "kingdom": "Fungi",
-            "phylum": "Ascomycota",
-            "class": "Lecanoromycetes",
-            "order": "Peltigerales",
-            "family": "Lobariaceae",
-            "genus": "Sticta"
           }
         ],
         "exoticas-total": []
@@ -38040,6 +38414,24 @@
             "genus": "Astrocaryum"
           },
           {
+            "label": "Elaeis guineensis",
+            "registros": 11,
+            "slug_especie": "elaeis-guineensis",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "palmas",
+            "tipo": "interes",
+            "url_gbif": "https://www.gbif.org/species/2731882",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e33ced83c45700544e3dbc/summary",
+            "species": "Elaeis guineensis",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Liliopsida",
+            "order": "Arecales",
+            "family": "Arecaceae",
+            "genus": "Elaeis"
+          },
+          {
             "label": "Dypsis lutescens",
             "registros": 3,
             "slug_especie": "dypsis-lutescens",
@@ -38519,6 +38911,24 @@
             "order": "Cycadales",
             "family": "Cycadaceae",
             "genus": "Cycas"
+          },
+          {
+            "label": "Pinus caribaea",
+            "registros": 2,
+            "slug_especie": "pinus-caribaea",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "pinos-afines",
+            "tipo": "interes",
+            "url_gbif": "https://www.gbif.org/species/5285740",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e793a183c45700544e4195/summary",
+            "species": "Pinus caribaea",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Pinopsida",
+            "order": "Pinales",
+            "family": "Pinaceae",
+            "genus": "Pinus"
           }
         ]
       }
@@ -39969,8 +40379,8 @@
           "especies_region_total": 11144,
           "registros_region_total": 435435,
           "label": "Caquetá",
-          "marino": 0,
-          "fecha_corte": 20095,
+          "marino": false,
+          "fecha_corte": "2025-01-07",
           "pct_aporte_registros_region": 0.13,
           "pct_aporte_especies_region": 0.46,
           "aporte_registros_region": 216302,
@@ -40055,8 +40465,8 @@
           "especies_region_total": 12173,
           "registros_region_total": 614175,
           "label": "Cauca",
-          "marino": 1,
-          "fecha_corte": 20095,
+          "marino": true,
+          "fecha_corte": "2025-01-07",
           "pct_aporte_registros_region": 0.02,
           "pct_aporte_especies_region": 0.05,
           "aporte_registros_region": 32521,
@@ -40758,8 +41168,8 @@
           "especies_region_total": 17022,
           "registros_region_total": 1890657,
           "label": "Meta",
-          "marino": 0,
-          "fecha_corte": 20095,
+          "marino": false,
+          "fecha_corte": "2025-01-07",
           "pct_aporte_registros_region": 0.17,
           "pct_aporte_especies_region": 0.3,
           "aporte_registros_region": 287679,
@@ -41212,8 +41622,8 @@
           "especies_region_total": 9094,
           "registros_region_total": 518333,
           "label": "Putumayo",
-          "marino": 0,
-          "fecha_corte": 20095,
+          "marino": false,
+          "fecha_corte": "2025-01-07",
           "pct_aporte_registros_region": 0.13,
           "pct_aporte_especies_region": 0.25,
           "aporte_registros_region": 223174,
@@ -42084,8 +42494,8 @@
           "especies_region_total": 11516,
           "registros_region_total": 474386,
           "label": "Amazonas",
-          "marino": 0,
-          "fecha_corte": 20095,
+          "marino": false,
+          "fecha_corte": "2025-01-07",
           "pct_aporte_registros_region": 0.26,
           "pct_aporte_especies_region": 0.6,
           "aporte_registros_region": 441740,
@@ -42858,8 +43268,8 @@
           "especies_region_total": 4343,
           "registros_region_total": 262293,
           "label": "Guainía",
-          "marino": 0,
-          "fecha_corte": 20095,
+          "marino": false,
+          "fecha_corte": "2025-01-07",
           "pct_aporte_registros_region": 0.06,
           "pct_aporte_especies_region": 0.21,
           "aporte_registros_region": 100703,
@@ -43566,8 +43976,8 @@
           "especies_region_total": 4759,
           "registros_region_total": 179350,
           "label": "Guaviare",
-          "marino": 0,
-          "fecha_corte": 20095,
+          "marino": false,
+          "fecha_corte": "2025-01-07",
           "pct_aporte_registros_region": 0.1,
           "pct_aporte_especies_region": 0.27,
           "aporte_registros_region": 172645,
@@ -44235,8 +44645,8 @@
           "especies_region_total": 6528,
           "registros_region_total": 262907,
           "label": "Vaupés",
-          "marino": 0,
-          "fecha_corte": 20095,
+          "marino": false,
+          "fecha_corte": "2025-01-07",
           "pct_aporte_registros_region": 0.14,
           "pct_aporte_especies_region": 0.33,
           "aporte_registros_region": 245764,
@@ -44261,6 +44671,13 @@
   "patrocinador": [
     {
       "slug_region": "region-amazonia",
+      "slug_patrocinador": "instituto-humboldt",
+      "imagen": "https://raw.githubusercontent.com/SIB-Colombia/logos/main/socio-SiB-iavh.png",
+      "titulo": "Instituto de Investigación de Recursos Biológicos Alexander von Humboldt",
+      "url": "http://www.humboldt.org.co/es/"
+    },
+    {
+      "slug_region": "region-amazonia",
       "slug_patrocinador": "fondo-para-la-vida",
       "imagen": "https://www.fiducoldex.com.co/sites/default/files/img/fondo-para-la-vida-y-la-biodiversidad-home.jpeg",
       "titulo": "Fondo para la vida y la Biodiversidad"
@@ -44276,13 +44693,6 @@
       "slug_patrocinador": "ideam",
       "imagen": "https://raw.githubusercontent.com/SIB-Colombia/logos/main/socio-SiB-ideam.png",
       "titulo": "Instituto de Hidrología, Meteorología y Estudios Ambientales (IDEAM)"
-    },
-    {
-      "slug_region": "region-amazonia",
-      "slug_patrocinador": "instituto-humboldt",
-      "imagen": "https://raw.githubusercontent.com/SIB-Colombia/logos/main/socio-SiB-iavh.png",
-      "titulo": "Instituto de Investigación de Recursos Biológicos Alexander von Humboldt",
-      "url": "http://www.humboldt.org.co/es/"
     },
     {
       "slug_region": "region-amazonia",
@@ -46470,212 +46880,32 @@
       "label": "Amazonas"
     },
     {
-      "slug": "caqueta",
-      "label": "Caquetá"
-    },
-    {
-      "slug": "cauca",
-      "label": "Cauca"
-    },
-    {
-      "slug": "guainia",
-      "label": "Guainía"
-    },
-    {
-      "slug": "guaviare",
-      "label": "Guaviare"
-    },
-    {
-      "slug": "meta",
-      "label": "Meta"
-    },
-    {
-      "slug": "putumayo",
-      "label": "Putumayo"
-    },
-    {
-      "slug": "vaupes",
-      "label": "Vaupés"
-    },
-    {
-      "slug": "albania-caq",
-      "label": "Albania"
-    },
-    {
-      "slug": "barrancominas",
-      "label": "Barrancominas"
-    },
-    {
       "slug": "belen-de-los-andaquies",
       "label": "Belén de los Andaquíes"
-    },
-    {
-      "slug": "cacahual",
-      "label": "Cacahual"
-    },
-    {
-      "slug": "calamar-guv",
-      "label": "Calamar"
-    },
-    {
-      "slug": "cartagena-del-chaira",
-      "label": "Cartagena del Chairá"
-    },
-    {
-      "slug": "caruru",
-      "label": "Carurú"
-    },
-    {
-      "slug": "curillo",
-      "label": "Curillo"
-    },
-    {
-      "slug": "el-doncello",
-      "label": "El Doncello"
-    },
-    {
-      "slug": "el-encanto",
-      "label": "El Encanto"
-    },
-    {
-      "slug": "el-paujil",
-      "label": "El Paujíl"
-    },
-    {
-      "slug": "el-retorno",
-      "label": "El Retorno"
     },
     {
       "slug": "florencia-caq",
       "label": "Florencia"
     },
     {
-      "slug": "fuente-de-oro",
-      "label": "Fuente de Oro"
+      "slug": "san-jose-del-fragua",
+      "label": "San José del Fragua"
     },
     {
-      "slug": "inirida",
-      "label": "Inírida"
+      "slug": "guaviare",
+      "label": "Guaviare"
+    },
+    {
+      "slug": "cacahual",
+      "label": "Cacahual"
     },
     {
       "slug": "la-chorrera",
       "label": "La Chorrera"
     },
     {
-      "slug": "la-guadalupe",
-      "label": "La Guadalupe"
-    },
-    {
-      "slug": "la-macarena",
-      "label": "La Macarena"
-    },
-    {
-      "slug": "la-montanita",
-      "label": "La Montañita"
-    },
-    {
-      "slug": "la-pedrera",
-      "label": "La Pedrera"
-    },
-    {
-      "slug": "la-victoria-ama",
-      "label": "La Victoria"
-    },
-    {
-      "slug": "leticia",
-      "label": "Leticia"
-    },
-    {
-      "slug": "mapiripan",
-      "label": "Mapiripán"
-    },
-    {
-      "slug": "mesetas",
-      "label": "Mesetas"
-    },
-    {
-      "slug": "milan",
-      "label": "Milán"
-    },
-    {
-      "slug": "miraflores-guv",
-      "label": "Miraflores"
-    },
-    {
-      "slug": "miriti-parana",
-      "label": "Mirití - Paraná"
-    },
-    {
-      "slug": "mitu",
-      "label": "Mitú"
-    },
-    {
-      "slug": "mocoa",
-      "label": "Mocoa"
-    },
-    {
-      "slug": "morelia",
-      "label": "Morelia"
-    },
-    {
-      "slug": "morichal",
-      "label": "Morichal"
-    },
-    {
-      "slug": "orito",
-      "label": "Orito"
-    },
-    {
-      "slug": "pacoa",
-      "label": "Pacoa"
-    },
-    {
-      "slug": "pana-pana",
-      "label": "Pana Pana"
-    },
-    {
-      "slug": "papunahua",
-      "label": "Papunahua"
-    },
-    {
-      "slug": "piamonte",
-      "label": "Piamonte"
-    },
-    {
-      "slug": "puerto-alegria",
-      "label": "Puerto Alegría"
-    },
-    {
-      "slug": "puerto-arica",
-      "label": "Puerto Arica"
-    },
-    {
-      "slug": "puerto-asis",
-      "label": "Puerto Asís"
-    },
-    {
-      "slug": "puerto-caicedo",
-      "label": "Puerto Caicedo"
-    },
-    {
-      "slug": "puerto-colombia-gua",
-      "label": "Puerto Colombia"
-    },
-    {
-      "slug": "puerto-concordia",
-      "label": "Puerto Concordia"
-    },
-    {
       "slug": "puerto-guzman",
       "label": "Puerto Guzmán"
-    },
-    {
-      "slug": "puerto-leguizamo",
-      "label": "Puerto Leguízamo"
-    },
-    {
-      "slug": "puerto-lleras",
-      "label": "Puerto Lleras"
     },
     {
       "slug": "puerto-narino",
@@ -46686,60 +46916,196 @@
       "label": "Puerto Rico"
     },
     {
-      "slug": "puerto-rico-met",
-      "label": "Puerto Rico"
+      "slug": "solano",
+      "label": "Solano"
     },
     {
-      "slug": "puerto-santander-ama",
-      "label": "Puerto Santander"
+      "slug": "uribe",
+      "label": "Uribe"
+    },
+    {
+      "slug": "el-encanto",
+      "label": "El Encanto"
+    },
+    {
+      "slug": "la-guadalupe",
+      "label": "La Guadalupe"
+    },
+    {
+      "slug": "meta",
+      "label": "Meta"
+    },
+    {
+      "slug": "el-paujil",
+      "label": "El Paujíl"
+    },
+    {
+      "slug": "la-victoria-ama",
+      "label": "La Victoria"
+    },
+    {
+      "slug": "caqueta",
+      "label": "Caquetá"
+    },
+    {
+      "slug": "guainia",
+      "label": "Guainía"
+    },
+    {
+      "slug": "morelia",
+      "label": "Morelia"
+    },
+    {
+      "slug": "morichal",
+      "label": "Morichal"
+    },
+    {
+      "slug": "piamonte",
+      "label": "Piamonte"
     },
     {
       "slug": "san-felipe",
       "label": "San Felipe"
     },
     {
-      "slug": "san-jose-del-fragua",
-      "label": "San José del Fragua"
+      "slug": "albania-caq",
+      "label": "Albania"
     },
     {
-      "slug": "san-jose-del-guaviare",
-      "label": "San José del Guaviare"
+      "slug": "calamar-guv",
+      "label": "Calamar"
     },
     {
-      "slug": "san-juan-de-arama",
-      "label": "San Juan de Arama"
+      "slug": "caruru",
+      "label": "Carurú"
     },
     {
-      "slug": "san-martin-met",
-      "label": "San Martín"
+      "slug": "el-doncello",
+      "label": "El Doncello"
     },
     {
-      "slug": "san-miguel-put",
-      "label": "San Miguel"
+      "slug": "miriti-parana",
+      "label": "Mirití - Paraná"
     },
     {
-      "slug": "san-vicente-del-caguan",
-      "label": "San Vicente del Caguán"
+      "slug": "curillo",
+      "label": "Curillo"
     },
     {
-      "slug": "solano",
-      "label": "Solano"
+      "slug": "el-retorno",
+      "label": "El Retorno"
     },
     {
-      "slug": "solita",
-      "label": "Solita"
+      "slug": "inirida",
+      "label": "Inírida"
     },
     {
-      "slug": "taraira",
-      "label": "Taraira"
+      "slug": "puerto-asis",
+      "label": "Puerto Asís"
     },
     {
       "slug": "tarapaca",
       "label": "Tarapacá"
     },
     {
-      "slug": "uribe",
-      "label": "Uribe"
+      "slug": "vistahermosa",
+      "label": "Vistahermosa"
+    },
+    {
+      "slug": "barrancominas",
+      "label": "Barrancominas"
+    },
+    {
+      "slug": "mesetas",
+      "label": "Mesetas"
+    },
+    {
+      "slug": "taraira",
+      "label": "Taraira"
+    },
+    {
+      "slug": "san-martin-met",
+      "label": "San Martín"
+    },
+    {
+      "slug": "villagarzon",
+      "label": "Villagarzón"
+    },
+    {
+      "slug": "cauca",
+      "label": "Cauca"
+    },
+    {
+      "slug": "putumayo",
+      "label": "Putumayo"
+    },
+    {
+      "slug": "la-macarena",
+      "label": "La Macarena"
+    },
+    {
+      "slug": "papunahua",
+      "label": "Papunahua"
+    },
+    {
+      "slug": "puerto-arica",
+      "label": "Puerto Arica"
+    },
+    {
+      "slug": "puerto-caicedo",
+      "label": "Puerto Caicedo"
+    },
+    {
+      "slug": "puerto-leguizamo",
+      "label": "Puerto Leguízamo"
+    },
+    {
+      "slug": "san-juan-de-arama",
+      "label": "San Juan de Arama"
+    },
+    {
+      "slug": "vaupes",
+      "label": "Vaupés"
+    },
+    {
+      "slug": "milan",
+      "label": "Milán"
+    },
+    {
+      "slug": "miraflores-guv",
+      "label": "Miraflores"
+    },
+    {
+      "slug": "pana-pana",
+      "label": "Pana Pana"
+    },
+    {
+      "slug": "puerto-lleras",
+      "label": "Puerto Lleras"
+    },
+    {
+      "slug": "san-jose-del-guaviare",
+      "label": "San José del Guaviare"
+    },
+    {
+      "slug": "san-vicente-del-caguan",
+      "label": "San Vicente del Caguán"
+    },
+    {
+      "slug": "la-montanita",
+      "label": "La Montañita"
+    },
+    {
+      "slug": "la-pedrera",
+      "label": "La Pedrera"
+    },
+    {
+      "slug": "pacoa",
+      "label": "Pacoa"
+    },
+    {
+      "slug": "san-miguel-put",
+      "label": "San Miguel"
     },
     {
       "slug": "valle-del-guamuez",
@@ -46750,16 +47116,60 @@
       "label": "Valparaíso"
     },
     {
-      "slug": "villagarzon",
-      "label": "Villagarzón"
-    },
-    {
-      "slug": "vistahermosa",
-      "label": "Vistahermosa"
+      "slug": "orito",
+      "label": "Orito"
     },
     {
       "slug": "yavarate",
       "label": "Yavaraté"
+    },
+    {
+      "slug": "fuente-de-oro",
+      "label": "Fuente de Oro"
+    },
+    {
+      "slug": "mapiripan",
+      "label": "Mapiripán"
+    },
+    {
+      "slug": "mocoa",
+      "label": "Mocoa"
+    },
+    {
+      "slug": "puerto-alegria",
+      "label": "Puerto Alegría"
+    },
+    {
+      "slug": "puerto-colombia-gua",
+      "label": "Puerto Colombia"
+    },
+    {
+      "slug": "puerto-concordia",
+      "label": "Puerto Concordia"
+    },
+    {
+      "slug": "puerto-rico-met",
+      "label": "Puerto Rico"
+    },
+    {
+      "slug": "solita",
+      "label": "Solita"
+    },
+    {
+      "slug": "cartagena-del-chaira",
+      "label": "Cartagena del Chairá"
+    },
+    {
+      "slug": "leticia",
+      "label": "Leticia"
+    },
+    {
+      "slug": "mitu",
+      "label": "Mitú"
+    },
+    {
+      "slug": "puerto-santander-ama",
+      "label": "Puerto Santander"
     }
   ],
   "departamentos_lista": [

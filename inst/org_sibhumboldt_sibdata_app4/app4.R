@@ -757,14 +757,19 @@ server <- function(input, output, session) {
 
   # Render map data table for modal
   output$map_data_table <- DT::renderDataTable({
-    req(r$main_data)
+    # Read reactive dependencies to ensure table updates when they change
+    sel_tipo <- r$sel_tipo
+    indicador <- r$indicador
+    main_data <- r$main_data
 
-    display_data <- r$main_data
+    req(main_data)
+
+    display_data <- main_data
 
     # Keep only label and indicator columns
     cols_to_keep <- c("label")
-    if (!is.null(r$indicador) && r$indicador %in% names(display_data)) {
-      cols_to_keep <- c(cols_to_keep, r$indicador)
+    if (!is.null(indicador) && indicador %in% names(display_data)) {
+      cols_to_keep <- c(cols_to_keep, indicador)
     } else {
       numeric_cols <- names(display_data)[sapply(display_data, is.numeric)]
       cols_to_keep <- c(cols_to_keep, numeric_cols)

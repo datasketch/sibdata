@@ -80,8 +80,8 @@ exp_viz_inputs_server <- function(id, r, debug = FALSE) {
     observe({
       # All chart types available (Map first, Cards second)
       all_charts <- c("Mapa" = "map", "Tarjetas" = "cards", "Torta" = "pie", "Dona" = "donut",
-                      "Treemap" = "treemap", "Barras" = "bar", "Tabla" = "table")
-      map_table <- c("Mapa" = "map", "Tarjetas" = "cards", "Tabla" = "table")
+                      "Treemap" = "treemap", "Barras" = "bar")
+      map_table <- c("Mapa" = "map", "Tarjetas" = "cards")
 
       # Amenazadas total selection
       is_amenazadas_total <- !is.null(r$sel_tematica) &&
@@ -143,9 +143,9 @@ exp_viz_inputs_server <- function(id, r, debug = FALSE) {
     output$chart_selector_container <- renderUI({
       # All chart types available
       all_charts <- c("Mapa" = "map", "Tarjetas" = "cards", "Torta" = "pie", "Dona" = "donut",
-                      "Treemap" = "treemap", "Barras" = "bar", "Tabla" = "table")
+                      "Treemap" = "treemap", "Barras" = "bar")
 
-      av_charts <- if (!is.null(r$available_charts) && length(r$available_charts) > 0) r$available_charts else c("Mapa" = "map", "Tarjetas" = "cards", "Tabla" = "table")
+      av_charts <- if (!is.null(r$available_charts) && length(r$available_charts) > 0) r$available_charts else c("Mapa" = "map", "Tarjetas" = "cards")
       active_chart <- if (!is.null(r$chart_type) && r$chart_type %in% av_charts) r$chart_type else av_charts[1]
 
       if (is.null(r$chart_type) || !r$chart_type %in% av_charts) {

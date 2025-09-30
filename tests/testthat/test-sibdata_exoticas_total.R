@@ -101,4 +101,13 @@ test_that("multiplication works", {
                   indicador = indicador,
                   con = con)
 
+    # Query all indicators for a tematica
+
+    x <- sibdata(region = region,
+            tematica = "exoticas_total",
+            all_indicators = TRUE,
+            con = con)
+    x <- x |> filter(!grepl("marinas|continentales|salobres", indicador))
+    x
+
 })

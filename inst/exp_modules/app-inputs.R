@@ -73,7 +73,7 @@ server <- function(input, output, session) {
   # Create reactive values object (same as in app2.R)
   r <- reactiveValues(
     sel_region = NULL,
-    sel_grupo_type = "biologico",
+    sel_grupo_tipo = "biologico",
     sel_grupo = NULL,
     sel_tematica = NULL,
     sel_subtematica = NULL,
@@ -99,7 +99,7 @@ server <- function(input, output, session) {
   reactive_values_tracker <- reactive({
     list(
       sel_region = r$sel_region,
-      sel_grupo_type = r$sel_grupo_type,
+      sel_grupo_tipo = r$sel_grupo_tipo,
       sel_grupo = r$sel_grupo,
       sel_tematica = r$sel_tematica,
       sel_subtematica = r$sel_subtematica,
@@ -127,13 +127,13 @@ server <- function(input, output, session) {
   
   # Current grupo selection
   output$current_grupo <- renderText({
-    grupo_type <- r$sel_grupo_type
+    grupo_tipo <- r$sel_grupo_tipo
     grupo_value <- r$sel_grupo
-    
-    if (is.null(grupo_type) || is.null(grupo_value)) {
+
+    if (is.null(grupo_tipo) || is.null(grupo_value)) {
       "No grupo selected"
     } else {
-      paste("Selected:", grupo_value, "(", grupo_type, ")")
+      paste("Selected:", grupo_value, "(", grupo_tipo, ")")
     }
   })
   
@@ -161,11 +161,11 @@ server <- function(input, output, session) {
   output$reactive_values <- renderPrint({
     # Force reactivity by accessing the tracker
     tracker <- reactive_values_tracker()
-    
+
     cat("=== REACTIVE VALUES ===\n")
     cat("Timestamp:", Sys.time(), "\n")
     cat("sel_region:", r$sel_region, "\n")
-    cat("sel_grupo_type:", r$sel_grupo_type, "\n")
+    cat("sel_grupo_tipo:", r$sel_grupo_tipo, "\n")
     cat("sel_grupo:", r$sel_grupo, "\n")
     cat("sel_tematica:", r$sel_tematica, "\n")
     cat("sel_subtematica:", r$sel_subtematica, "\n")

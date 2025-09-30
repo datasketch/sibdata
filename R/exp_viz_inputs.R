@@ -22,8 +22,10 @@ exp_viz_inputs_ui <- function(id) {
                     selected = "registros")
     ),
     hr(),
-    h5("Breadcrumb"),
-    textOutput(ns("breadcrumb"))
+    # Breadcrumb acts as chart title - no label needed
+    div(style = "font-weight: 600; font-size: 16px; margin-bottom: 10px;",
+        textOutput(ns("breadcrumb"))
+    )
   )
 }
 
@@ -47,23 +49,32 @@ exp_viz_inputs_server <- function(id, r, debug = FALSE) {
     }, ignoreInit = FALSE)
 
     # Compute tematica and indicador
+    # Use priority to ensure this runs before data fetching
     observe({
+      # Explicitly read all inputs that affect indicador calculation
+      sel_tipo <- r$sel_tipo
+      sel_tematica <- r$sel_tematica
+      sel_subtematica <- r$sel_subtematica
+      amenazadas_categoria <- r$amenazadas_categoria
+      chart_type <- r$chart_type
+      
       # tematica slug from selection
-      r$tematica <- if (!is.null(r$sel_tematica)) gsub("-", "_", r$sel_tematica) else r$sel_tematica
+      r$tematica <- if (!is.null(sel_tematica)) gsub("-", "_", sel_tematica) else sel_tematica
 
       # indicador based on current state
       r$indicador <- calculate_indicador_viz(r)
 
       if (debug) {
         message("🔧 VIZ INPUTS COMPUTE:")
-        message("- sel_tipo: ", r$sel_tipo)
-        message("- sel_tematica: ", r$sel_tematica)
-        message("- sel_subtematica: ", r$sel_subtematica)
-        message("- amenazadas_categoria: ", r$amenazadas_categoria)
-        message("- tematica: ", r$tematica)
-        message("- indicador: ", r$indicador)
+        message("  - sel_tipo: ", sel_tipo)
+        message("  - sel_tematica: ", sel_tematica)
+        message("  - sel_subtematica: ", sel_subtematica)
+        message("  - amenazadas_categoria: ", amenazadas_categoria)
+        message("  - chart_type: ", chart_type)
+        message("  - tematica: ", r$tematica)
+        message("  - indicador: ", r$indicador)
       }
-    })
+    }, priority = 10)
 
     # Compute available charts and ensure a valid active chart
     observe({
@@ -161,10 +172,24 @@ exp_viz_inputs_server <- function(id, r, debug = FALSE) {
       }
     }, ignoreInit = TRUE)
 
-    # Breadcrumb
+    # Breadcrumb - explicitly read all dependencies
     observe({
+      # Explicitly read all reactive values that affect breadcrumb
+      sel_region <- r$sel_region
+      sel_tipo <- r$sel_tipo
+      sel_tematica <- r$sel_tematica
+      sel_subtematica <- r$sel_subtematica
+      amenazadas_categoria <- r$amenazadas_categoria
+      tematica <- r$tematica
+      sel_grupo <- r$sel_grupo
+      
+      # Now compute breadcrumb with fresh values
       r$breadcrumb <- create_breadcrumb_viz(r)
-    })
+      
+      if (debug) {
+        message("🔖 BREADCRUMB updated: ", r$breadcrumb)
+      }
+    }, priority = 9)
 
     output$breadcrumb <- renderText({
       req(r$breadcrumb)
@@ -181,9 +206,11 @@ calculate_indicador_viz <- function(r){
   tematica <- if (!is.null(r$sel_tematica)) gsub("-", "_", r$sel_tematica) else r$sel_tematica
 
   if (is.null(tematica)) {
+    # Default especies_total_estimadas to "total" if not set
+    especies_est <- r$especies_total_estimadas %||% "total"
     indicador <- dplyr::case_when(
-      r$sel_tipo == "especies" && identical(r$especies_total_estimadas, "total") ~ "especies_region_total",
-      r$sel_tipo == "especies" && identical(r$especies_total_estimadas, "estimadas") ~ "especies_region_estimadas",
+      r$sel_tipo == "especies" && identical(especies_est, "total") ~ "especies_region_total",
+      r$sel_tipo == "especies" && identical(especies_est, "estimadas") ~ "especies_region_estimadas",
       TRUE ~ "registros_region_total"
     )
   } else if (!is.null(r$sel_tematica) && grepl("exoticas", r$sel_tematica)) {
@@ -252,5 +279,6 @@ create_breadcrumb_viz <- function(r){
   breadcrumb <- paste(tipo_text, "para", tematica_text, "en", region, grupo_text)
   return(breadcrumb)
 }
+
 
 

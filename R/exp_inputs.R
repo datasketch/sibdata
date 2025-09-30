@@ -53,16 +53,8 @@ exp_inputs_server <- function(id, r, app_options, session_main = NULL, debug = F
     observe({
       if (debug) message("🚀 IMMEDIATE INITIALIZATION OF DEFAULTS")
 
-      # Set default values for reactive values that don't depend on inputs
-      if (is.null(r$sel_tipo)) {
-        r$sel_tipo <- "registros"
-        if (debug) message("✓ r$sel_tipo set to default: registros")
-      }
-
-      if (is.null(r$chart_type)) {
-        r$chart_type <- "map"
-        if (debug) message("✓ r$chart_type set to default: map")
-      }
+      # NOTE: sel_tipo and chart_type are now managed by exp_viz_inputs module
+      # DO NOT set them here as it creates conflicts
 
       if (is.null(r$sel_grupo_tipo)) {
         r$sel_grupo_tipo <- "biologico"

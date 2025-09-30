@@ -30,41 +30,53 @@ exp_debug2_server <- function(id, r, debug = FALSE) {
             verbatimTextOutput(ns("debug_viz_reactive"))
         )
       )
-
     })
 
-    # Only create debug output if debug is TRUE
-    if (debug) {
-      output$debug_viz_reactive <- renderPrint({
+    # ALWAYS create debug output (it will just not be shown if debug=FALSE)
+    # This ensures the reactive context is properly established
+    output$debug_viz_reactive <- renderPrint({
+      # Explicitly read ALL reactive values at the start to ensure proper invalidation
+      # Read them in order of priority (most frequently changing first)
+      main_data <- r$main_data
+      sel_tipo <- r$sel_tipo
+      indicador <- r$indicador
+      sel_region <- r$sel_region
+      sel_grupo <- r$sel_grupo
+      tematica <- r$tematica
+      chart_type <- r$chart_type
+      inputs_ready <- r$inputs_ready
 
-        cat("=== SIBDATA FUNCTION INPUTS ===\n")
-        cat("region:", if(is.null(r$sel_region)) "NULL" else r$sel_region, "\n")
-        cat("grupo:", if(is.null(r$sel_grupo)) "NULL" else r$sel_grupo, "\n")
-        cat("tipo:", if(is.null(r$sel_tipo)) "NULL" else r$sel_tipo, "\n")
-        cat("tematica:", if(is.null(r$tematica)) "NULL" else r$tematica, "\n")
-        cat("indicador:", if(is.null(r$indicador)) "NULL" else r$indicador, "\n")
-        cat("subregiones:", if(!is.null(r$chart_type) && r$chart_type == "map") "TRUE" else "FALSE", "\n")
-        cat("with_parent: FALSE\n\n")
+      if (!debug) return(NULL)
 
-        cat("=== CURRENT CHART INFO ===\n")
-        cat("chart_type:", if(is.null(r$chart_type)) "NULL" else r$chart_type, "\n")
-        cat("inputs_ready:", if(is.null(r$inputs_ready)) "NULL" else as.character(r$inputs_ready), "\n\n")
+      cat("=== SIBDATA FUNCTION INPUTS ===\n")
+      cat("region:", if(is.null(sel_region)) "NULL" else sel_region, "\n")
+      cat("grupo:", if(is.null(sel_grupo)) "NULL" else sel_grupo, "\n")
+      cat("tipo:", if(is.null(sel_tipo)) "NULL" else sel_tipo, "\n")
+      cat("tematica:", if(is.null(tematica)) "NULL" else tematica, "\n")
+      cat("indicador:", if(is.null(indicador)) "NULL" else indicador, "\n")
+      cat("subregiones:", if(!is.null(chart_type) && chart_type == "map") "TRUE" else "FALSE", "\n")
+      cat("with_parent: FALSE\n\n")
 
-        cat("=== MAIN DATA (r$main_data) GLIMPSE ===\n")
-        if (!is.null(r$main_data)) {
-          dplyr::glimpse(r$main_data)
+      cat("=== CURRENT CHART INFO ===\n")
+      cat("chart_type:", if(is.null(chart_type)) "NULL" else chart_type, "\n")
+      cat("inputs_ready:", if(is.null(inputs_ready)) "NULL" else as.character(inputs_ready), "\n\n")
+
+      cat("=== MAIN DATA (r$main_data) GLIMPSE ===\n")
+      if (!is.null(main_data)) {
+        cat("Rows:", nrow(main_data), "\n")
+        cat("Columns:", paste(names(main_data), collapse = ", "), "\n")
+        dplyr::glimpse(main_data)
+      } else {
+        cat("r$main_data is NULL - no data available\n")
+        cat("REASON: ")
+        if (is.null(inputs_ready)) {
+          cat("inputs_ready is NULL - data fetching hasn't started\n")
+        } else if (!inputs_ready) {
+          cat("inputs_ready is FALSE - waiting for inputs to be ready\n")
         } else {
-          cat("r$main_data is NULL - no data available\n")
-          cat("REASON: ")
-          if (is.null(r$inputs_ready)) {
-            cat("inputs_ready is NULL - data fetching hasn't started\n")
-          } else if (!r$inputs_ready) {
-            cat("inputs_ready is FALSE - waiting for inputs to be ready\n")
-          } else {
-            cat("inputs_ready is TRUE but data is still NULL - possible error in data fetching\n")
-          }
+          cat("inputs_ready is TRUE but data is still NULL - possible error in data fetching\n")
         }
-      })
-    }
+      }
+    })
   })
 }

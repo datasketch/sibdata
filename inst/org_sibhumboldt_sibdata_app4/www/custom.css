@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+body {
+ font-family: 'Lato', sans-serif;
+ background-color: #ffffff;
+ margin: 0;
+ padding: 0;
+ height: 100vh;
+ overflow: hidden;
+}
+
+.text-malibu {
+    color: #09A274;
+}
+
+.top-malibu {
+    border-top: 2px solid #09A274;
+}
+
+/* Well panel styling to match original app */
+.well {
+    background-color: #ffffff;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    border-top: 4px solid #09A274;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 19px;
+    margin-bottom: 15px;
+    margin-top: 0;
+    height: calc(100vh - 30px);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Full width layout for iframe embedding */
+.container-fluid {
+    height: 100vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    min-width: 1200px; /* Minimum width for horizontal scrolling */
+}
+
+.container-fluid .row {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 15px 0 0 0;
+    display: flex;
+    flex-wrap: nowrap;
+    min-width: 1200px;
+}
+
+.container-fluid .row [class*="col-"] {
+    height: 100vh;
+    padding: 0 5px;
+    overflow: visible;
+    flex-shrink: 0;
+}
+
+/* Column proportions: 25% left, 50% center, 25% right */
+.container-fluid .row .col-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+    min-width: 300px;
+}
+
+.container-fluid .row .col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    min-width: 600px;
+}
+
+/* Override Bootstrap responsive behavior */
+@media (max-width: 1200px) {
+    .container-fluid {
+        min-width: 1200px !important;
+        overflow-x: auto !important;
+    }
+    
+    .container-fluid .row {
+        min-width: 1200px !important;
+        flex-wrap: nowrap !important;
+    }
+    
+    .container-fluid .row .col-3 {
+        flex: 0 0 25% !important;
+        max-width: 25% !important;
+        min-width: 300px !important;
+    }
+    
+    .container-fluid .row .col-6 {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+        min-width: 600px !important;
+    }
+}
+
+/* Panel headers */
+.well h4, .well h5 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* Form styling to match original */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+}
+
+.form-control:focus {
+    border-color: #09A274;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px rgba(9, 162, 116, 0.6);
+}
+
+.debug-container {
+ height: 300px !important;
+ min-height: 300px !important;
+ max-height: 300px !important;
+ overflow-y: auto;
+ border: 1px solid #ccc;
+ background-color: #f8f9fa;
+ padding: 10px;
+ flex-shrink: 0;
+ flex-grow: 0;
+}
+
+.first-container {
+ width: 300px;
+}
+
+/* Download button styling */
+.dropdown-action-trigger {
+    background-color: #09A274 !important;
+    border-color: #09A274 !important;
+    color: white !important;
+}
+
+.dropdown-action-trigger:hover {
+    background-color: #078a63 !important;
+    border-color: #078a63 !important;
+    color: white !important;
+}
+
+/* Specific styling for download buttons */
+.btn-secondary.dropdown-action-trigger {
+    color: white !important;
+    background-color: #09A274 !important;
+    border-color: #09A274 !important;
+}
+
+.btn-secondary.dropdown-action-trigger:hover {
+    color: white !important;
+    background-color: #078a63 !important;
+    border-color: #078a63 !important;
+}
+
+/* Download dropdown content styling */
+.dropdown-content .btn-link {
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-content .btn-link:hover {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+ text-align: left !important;
+ font-size: 11px !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+ padding: 0.5px;
+ font-size: 9px;
+}
+
+/* Custom dropdown styles */
+.dropdown-details[open] summary .dropdown-arrow {
+ transform: rotate(180deg);
+ transition: transform 0.2s ease;
+}
+
+.dropdown-details summary .dropdown-arrow {
+ transition: transform 0.2s ease;
+}
+
+.dropdown-details summary::-webkit-details-marker {
+ display: none;
+}
+
+.dropdown-details summary::-moz-list-bullet {
+ list-style-type: none;
+}
+
+.dropdown-details[open] .dropdown-content {
+ animation: dropdownFadeIn 0.15s ease-out;
+}
+
+@keyframes dropdownFadeIn {
+ from {
+   opacity: 0;
+   transform: translateY(-5px);
+ }
+ to {
+   opacity: 1;
+   transform: translateY(0);
+ }
+}
+
+/* Species table styling */
+.dataTables_wrapper {
+    background: white;
+    border-radius: 4px;
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Override for species table to ensure visibility */
+.species-table-container .dataTables_wrapper {
+    overflow: visible !important;
+    visibility: visible !important;
+    display: block !important;
+}
+
+.species-table-container .dataTables_wrapper .dataTables_scroll {
+    overflow: visible !important;
+    visibility: visible !important;
+    display: block !important;
+}
+
+.dataTables_wrapper .dataTables_scroll {
+    flex: 1;
+    overflow: auto;
+}
+
+.dataTables_wrapper .dataTables_scrollBody {
+    max-height: none !important;
+}
+
+.dataTables_wrapper .dataTable {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.dataTables_wrapper .dataTable thead th {
+    background-color: #4ad3ac !important;
+    color: #ffffff !important;
+    border: none;
+    padding: 12px 8px;
+    font-weight: 600;
+}
+
+.dataTables_wrapper .dataTable tbody td {
+    padding: 8px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.dataTables_wrapper .dataTable tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Radio button styling - comprehensive approach */
+/* Target the actual radio input */
+.shiny-input-radiogroup .radio input[type="radio"] {
+    accent-color: #09A274 !important;
+    color: #09A274 !important;
+}
+
+/* For webkit browsers - target the radio appearance */
+.shiny-input-radiogroup .radio input[type="radio"]:checked {
+    background-color: #09A274 !important;
+    border-color: #09A274 !important;
+    background-image: radial-gradient(circle, #ffffff 40%, #09A274 40%) !important;
+}
+
+/* Focus state */
+.shiny-input-radiogroup .radio input[type="radio"]:focus {
+    border-color: #09A274 !important;
+    box-shadow: 0 0 0 0.2rem rgba(9, 162, 116, 0.25) !important;
+    outline: none !important;
+}
+
+/* Alternative approach for older browsers */
+.radio input[type="radio"]:checked {
+    background-color: #09A274 !important;
+    border-color: #09A274 !important;
+}
+
+.radio input[type="radio"]:focus {
+    border-color: #09A274 !important;
+    box-shadow: 0 0 0 0.2rem rgba(9, 162, 116, 0.25) !important;
+}
+
+/* Ensure radio buttons have proper styling */
+input[type="radio"] {
+    accent-color: #09A274 !important;
+    -webkit-appearance: radio !important;
+    -moz-appearance: radio !important;
+    appearance: radio !important;
+}
+
+input[type="radio"]:checked {
+    background-color: #09A274 !important;
+    border-color: #09A274 !important;
+}
+
+/* For browsers that support accent-color (most modern browsers) */
+.shiny-input-radiogroup input[type="radio"] {
+    accent-color: #09A274 !important;
+}
+
+/* Summary text styling */
+.well .summary-text {
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Selectize styling */
+.selectize-control .selectize-input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.selectize-control .selectize-input.focus {
+    border-color: #09A274;
+    box-shadow: 0 0 8px rgba(9, 162, 116, 0.6);
+}
+
+/* Leaflet map container */
+.leaflet-container {
+    height: 450px !important;
+    width: 100% !important;
+    border-radius: 4px;
+    border: 1px solid #e3e3e3;
+}
+
+/* Subtle scrollbar styling for well panels */
+.well::-webkit-scrollbar {
+    width: 6px;
+}
+
+.well::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.well::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+
+.well::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* For Firefox */
+.well {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+}
+
+/* Make dropdowns close when clicking outside */
+.dropdown-details {
+    position: relative;
+}
+
+.dropdown-details[open] {
+    z-index: 1000;
+}
+
+/* Add click outside behavior via CSS */
+.dropdown-details[open]::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+} 

@@ -38,7 +38,7 @@ ds$grupo <- ds$grupo |>
   mutate(icon = slug %in% available_icons)
 
 # temp
-# ds$tematica <- read_delim("data-raw/tematica.tsv")
+ds$tematica <- read_delim("data-raw/tematica.tsv")
 ds$tematica <- ds$tematica |>
   mutate(icon = slug %in% available_icons)
 

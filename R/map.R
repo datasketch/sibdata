@@ -11,7 +11,15 @@ choropleth_map <- function(data = NULL,
                            all_indicators = FALSE,
                            palette_numeric = NULL,
                            con = NULL,
-                           conmap = NULL, ...) {
+                           conmap = NULL,
+                           debug = FALSE, ...) {
+
+  if (debug) {
+    message("🗺️ CHOROPLETH_MAP CALLED:")
+    message("- tipo: ", tipo)
+    message("- indicador: ", indicador)
+    message("- region: ", region)
+  }
 
   no_conmap <- is.null(conmap)
   region_especial <- FALSE

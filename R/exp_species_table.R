@@ -22,13 +22,13 @@ exp_species_table_ui <- function(id) {
         icon = icon("expand")
       )
     ),
-    
+
     # Summary text
     div(
       class = "summary-text",
       textOutput(ns("species_summary"))
     ),
-    
+
     # Table container
     div(
       class = "species-table-container",
@@ -50,12 +50,12 @@ exp_species_table_ui <- function(id) {
 exp_species_table_server <- function(id, r, con, session = NULL, loading_fns = NULL, debug = FALSE) {
   moduleServer(id, function(input, output, session_module) {
     ns <- session_module$ns
-    
+
     if (debug) message("🔧 SPECIES TABLE MODULE INITIALIZED")
 
     # Track if lista_especies modal has been automatically shown from URL parameter in this session
     auto_modal_shown <- reactiveVal(FALSE)
-    
+
     if (debug) message("✓ Auto modal tracking initialized - auto_modal_shown = FALSE")
 
     # URL parameter handling for lista_especies
@@ -77,45 +77,53 @@ exp_species_table_server <- function(id, r, con, session = NULL, loading_fns = N
 
     # Fetch species data reactively
     data_especies <- reactive({
+      # Explicitly read all reactive dependencies at the start to ensure proper reactivity
+      sel_region <- r$sel_region
+      sel_grupo <- r$sel_grupo
+      sel_tematica <- r$sel_tematica
+      sel_subtematica <- r$sel_subtematica
+      tematica <- r$tematica
+
       if (debug) {
         message("🔍 SPECIES DATA REACTIVE TRIGGERED")
-        message("r$sel_region: ", r$sel_region)
-        message("r$sel_grupo: ", r$sel_grupo)
-        message("r$sel_tematica: ", r$sel_tematica)
+        message("r$sel_region: ", sel_region)
+        message("r$sel_grupo: ", sel_grupo)
+        message("r$sel_tematica: ", sel_tematica)
+        message("r$sel_subtematica: ", sel_subtematica)
       }
-      
-      req(r$sel_region)
+
+      req(sel_region)
       if (debug) message("✓ r$sel_region requirement met")
-      
+
       # Show loading for species data (can take time)
       if (!is.null(loading_fns)) {
         loading_fns$show("Cargando lista de especies...")
       }
-      
+
       # Build parameters for list_species
       # Prefer subtemática when present; else use temática (hyphens/underscores handled downstream)
       tem_param <- NULL
-      if (!is.null(r$sel_subtematica) && nzchar(r$sel_subtematica)) {
-        tem_param <- r$sel_subtematica
-      } else if (!is.null(r$sel_tematica) && nzchar(r$sel_tematica)) {
-        tem_param <- r$sel_tematica
-      } else if (!is.null(r$tematica) && nzchar(r$tematica)) {
-        tem_param <- r$tematica
+      if (!is.null(sel_subtematica) && nzchar(sel_subtematica)) {
+        tem_param <- sel_subtematica
+      } else if (!is.null(sel_tematica) && nzchar(sel_tematica)) {
+        tem_param <- sel_tematica
+      } else if (!is.null(tematica) && nzchar(tematica)) {
+        tem_param <- tematica
       }
 
       params <- list(
-        region = r$sel_region,
-        grupo = r$sel_grupo,
+        region = sel_region,
+        grupo = sel_grupo,
         tematica = tem_param
       )
-      
+
       if (debug) {
         message("=== Species query parameters ===")
         message("Region: ", params$region)
         message("Grupo: ", params$grupo)
         message("Tematica (effective): ", if (is.null(params$tematica)) "NULL" else params$tematica)
       }
-      
+
       # Call list_species with current parameters
       tryCatch({
         l_s <- list_species(
@@ -125,9 +133,9 @@ exp_species_table_server <- function(id, r, con, session = NULL, loading_fns = N
           con = con
         ) |>
           dplyr::collect()
-        
+
         if (debug) message("Species query returned ", nrow(l_s), " rows")
-        
+
         # Format for display
         result <- if (nrow(l_s) > 0) {
           formatted_data <- format_species_data(l_s)
@@ -137,54 +145,74 @@ exp_species_table_server <- function(id, r, con, session = NULL, loading_fns = N
           if (debug) message("⚠ No species data returned")
           NULL
         }
-        
+
         # Hide loading after species data is processed
         if (!is.null(loading_fns)) {
           shinyjs::delay(100, loading_fns$hide())
         }
-        
+
         result
-        
+
       }, error = function(e) {
         if (debug) {
           message("❌ Error fetching species data: ", e$message)
           message("Error details: ", conditionMessage(e))
         }
-        
+
         # Hide loading on error
         if (!is.null(loading_fns)) {
           loading_fns$hide()
         }
-        
+
         NULL
       })
     })
-    
+
     # Store species data in reactive values
     observe({
-      if (debug) message("🔄 UPDATING r$species_data")
       species_data <- data_especies()
-      if (debug) message("Species data rows: ", if(is.null(species_data)) "NULL" else nrow(species_data))
+
+      if (debug) {
+        message("🔄 UPDATING r$species_data")
+        message("Species data rows: ", if(is.null(species_data)) "NULL" else nrow(species_data))
+      }
+
       r$species_data <- species_data
       if (debug) message("✓ r$species_data updated")
     })
 
     # Summary text renderer
     output$species_summary <- renderText({
-      if (debug) message("📝 SPECIES SUMMARY RENDERED")
-      
+      # Wait for data to be ready
+      req(r$species_data)
+
+      # Use isolate to prevent infinite loops while reading other reactive values
+      sel_region <- isolate(r$sel_region)
+      sel_grupo <- isolate(r$sel_grupo)
+      sel_tematica <- isolate(r$sel_tematica)
+      sel_subtematica <- isolate(r$sel_subtematica)
+
+      # Only r$species_data should trigger this reactive
+      species_data <- r$species_data
+
+      if (debug) {
+        message("📝 SPECIES SUMMARY RENDERED")
+        message("  - sel_grupo: ", if(is.null(sel_grupo)) "NULL" else sel_grupo)
+        message("  - species_data rows: ", if(is.null(species_data)) "NULL" else nrow(species_data))
+      }
+
       # Always use the current species list row count
-      total <- if (is.null(r$species_data)) 0 else nrow(r$species_data)
-      
+      total <- if (is.null(species_data)) 0 else nrow(species_data)
+
       # Region label
-      region <- r$sel_region %||% "todas las regiones"
+      region <- sel_region %||% "todas las regiones"
       region <- tools::toTitleCase(gsub("-", " ", region))
-      
+
       # Temática label: prefer subtemática; handle CITES casing and roman numerals
-      tem_slug <- if (!is.null(r$sel_subtematica) && nzchar(r$sel_subtematica)) {
-        r$sel_subtematica
-      } else if (!is.null(r$sel_tematica) && nzchar(r$sel_tematica)) {
-        r$sel_tematica
+      tem_slug <- if (!is.null(sel_subtematica) && nzchar(sel_subtematica)) {
+        sel_subtematica
+      } else if (!is.null(sel_tematica) && nzchar(sel_tematica)) {
+        sel_tematica
       } else {
         NULL
       }
@@ -198,16 +226,16 @@ exp_species_table_server <- function(id, r, con, session = NULL, loading_fns = N
         parts <- unlist(strsplit(tem_slug, "[-_]"))
         paste(tools::toTitleCase(parts), collapse = "-")
       }
-      
+
       # Grupo label: show 'Todos' when no group selected
-      grupo_val <- r$sel_grupo
+      grupo_val <- sel_grupo
       grupo_label <- if (is.null(grupo_val) || grupo_val == "" || tolower(grupo_val) == "todos") {
         "Todos"
       } else {
         tools::toTitleCase(gsub("-", " ", grupo_val))
       }
       grupo_text <- paste("del grupo", grupo_label)
-      
+
       result <- sprintf("Mostrando %s especies para %s en %s %s",
                         format(total, big.mark = ",", scientific = FALSE),
                         tematica_text,
@@ -220,7 +248,7 @@ exp_species_table_server <- function(id, r, con, session = NULL, loading_fns = N
     # Species table renderer
     output$list_species <- renderDataTable({
       if (debug) message("🎨 RENDERING SPECIES TABLE")
-      
+
       species_data <- r$species_data
       if (debug) {
         message("Species data rows for table: ", if(is.null(species_data)) "NULL" else nrow(species_data))
@@ -245,24 +273,24 @@ exp_species_table_server <- function(id, r, con, session = NULL, loading_fns = N
           )
         ))
       }
-      
+
       # Format links for GBIF and CBC columns
       if ("GBIF" %in% names(species_data)) {
         species_data$GBIF <- ifelse(
-          is.na(species_data$GBIF) | species_data$GBIF == "", 
+          is.na(species_data$GBIF) | species_data$GBIF == "",
           "",
           paste0("<a href='", species_data$GBIF, "' target='_blank'>GBIF</a>")
         )
       }
-      
+
       if ("CBC" %in% names(species_data)) {
         species_data$CBC <- ifelse(
-          is.na(species_data$CBC) | species_data$CBC == "", 
+          is.na(species_data$CBC) | species_data$CBC == "",
           "",
           paste0("<a href='", species_data$CBC, "' target='_blank'>CBC</a>")
         )
       }
-      
+
       if (debug) message("✓ Creating DataTable with ", nrow(species_data), " rows")
 
       # Create the full species table with proper options
@@ -279,7 +307,7 @@ exp_species_table_server <- function(id, r, con, session = NULL, loading_fns = N
           )
         )
       )
-      
+
       if (debug) message("✓ DataTable created successfully")
       species_table
     })
@@ -287,7 +315,7 @@ exp_species_table_server <- function(id, r, con, session = NULL, loading_fns = N
     # Function to show species modal
     show_species_modal <- function() {
       req(r$species_data)
-      
+
       showModal(modalDialog(
         title = div(
           style = "display: flex; justify-content: space-between; align-items: center;",
@@ -332,9 +360,9 @@ exp_species_table_server <- function(id, r, con, session = NULL, loading_fns = N
               }
           ),
           div(style = "display: flex; justify-content: flex-end; margin-bottom: 10px;",
-              downloadTableUI(ns("species_modal_download"), 
-                             dropdownLabel = "Descargar especies", 
-                             formats = c("csv", "xlsx", "json"), 
+              downloadTableUI(ns("species_modal_download"),
+                             dropdownLabel = "Descargar especies",
+                             formats = c("csv", "xlsx", "json"),
                              display = "dropdown",
                              dropdownWidth = 200)
           ),
@@ -353,20 +381,20 @@ exp_species_table_server <- function(id, r, con, session = NULL, loading_fns = N
     # Auto-show species modal based on URL parameter (only once per session)
     observe({
       req(r$species_data)
-      
+
       # Check if lista_especies parameter is present and true
-      if (!is.null(url_par()$lista_especies) && 
+      if (!is.null(url_par()$lista_especies) &&
           tolower(url_par()$lista_especies) == "true") {
-        
+
         if (auto_modal_shown()) {
           if (debug) message("⚠ Auto modal already shown in this session - skipping")
         } else {
           if (debug) message("🌐 URL parameter lista_especies=true detected - opening modal (first time)")
-          
+
           # Mark auto modal as shown for this session
           auto_modal_shown(TRUE)
           if (debug) message("✓ Auto modal marked as shown for this session")
-          
+
           # Use a small delay to ensure the modal renders properly
           shinyjs::delay(500, {
             show_species_modal()
@@ -374,30 +402,30 @@ exp_species_table_server <- function(id, r, con, session = NULL, loading_fns = N
         }
       }
     })
-    
+
     # Render species table in modal
     output$species_modal_table <- DT::renderDataTable({
       req(r$species_data)
-      
+
       species_data <- r$species_data
-      
+
       # Format links for GBIF and CBC columns
       if ("GBIF" %in% names(species_data)) {
         species_data$GBIF <- ifelse(
-          is.na(species_data$GBIF) | species_data$GBIF == "", 
+          is.na(species_data$GBIF) | species_data$GBIF == "",
           "",
           paste0("<a href='", species_data$GBIF, "' target='_blank'>GBIF</a>")
         )
       }
-      
+
       if ("CBC" %in% names(species_data)) {
         species_data$CBC <- ifelse(
-          is.na(species_data$CBC) | species_data$CBC == "", 
+          is.na(species_data$CBC) | species_data$CBC == "",
           "",
           paste0("<a href='", species_data$CBC, "' target='_blank'>CBC</a>")
         )
       }
-      
+
       DT::datatable(
         species_data,
         rownames = FALSE,
@@ -418,12 +446,12 @@ exp_species_table_server <- function(id, r, con, session = NULL, loading_fns = N
         )
       )
     })
-    
+
     # Download species table server for modal
-    downloadTableServer("species_modal_download", 
-                       element = reactive(r$species_data), 
+    downloadTableServer("species_modal_download",
+                       element = reactive(r$species_data),
                        formats = c("csv", "xlsx", "json"),
                        file_prefix = "especies",
                        debug = debug)
   })
-} 
+}

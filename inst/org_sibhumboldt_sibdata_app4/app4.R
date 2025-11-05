@@ -2,7 +2,7 @@
 # Modular version of SIB Data App - Recreated from scratch
 
 # Debug configuration
-DEBUG_MODE <- TRUE  # Set to FALSE to hide debug output
+DEBUG_MODE <- FALSE  # Set to FALSE to hide debug output
 options(timeout = 600)
 
 library(shiny)

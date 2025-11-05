@@ -4,12 +4,28 @@
 \name{sibdata-package}
 \alias{sibdata}
 \alias{sibdata-package}
-\title{sibdata: What the Package Does (One Line, Title Case)}
+\title{sibdata: Procesamiento y Visualización de Datos de Biodiversidad de Colombia}
 \description{
-What the package does (one paragraph).
+Motor de datos para la plataforma 'Biodiversidad en Cifras' (\url{https://cifras.biodiversidad.co}). Proporciona herramientas para consultar, analizar y visualizar datos de biodiversidad de Colombia. Incluye funciones para acceder a información de más de 80,000 especies, generar visualizaciones interactivas (mapas coropléticos, gráficos, tablas), y una aplicación Shiny completa para exploración de datos. Utiliza DuckDB para consultas analíticas eficientes y genera archivos JSON estáticos para sitios web de alto rendimiento. Datos proporcionados por el Sistema de Información sobre Biodiversidad de Colombia (SIB Colombia) y el Instituto Alexander von Humboldt.
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/datasketch/sibdata}
+  \item \url{https://cifras.biodiversidad.co}
+  \item Report bugs at \url{https://github.com/datasketch/sibdata/issues}
+}
+
 }
 \author{
-\strong{Maintainer}: First Last \email{first.last@example.com} (\href{https://orcid.org/YOUR-ORCID-ID}{ORCID})
+\strong{Maintainer}: Juan Pablo Marin Diaz \email{jpmarindiaz@datasketch.co} (\href{https://orcid.org/0009-0008-4450-3415}{ORCID})
+
+Other contributors:
+\itemize{
+  \item Datasketch (https://datasketch.co) [copyright holder]
+  \item Instituto Alexander von Humboldt (https://humboldt.org.co) [data contributor]
+  \item SIB Colombia (https://biodiversidad.co) [data contributor]
+}
 
 }
 \keyword{internal}

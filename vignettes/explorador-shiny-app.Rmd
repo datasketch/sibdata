@@ -1,0 +1,791 @@
+---
+title: "Explorador Interactivo - Aplicación Shiny"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Explorador Interactivo - Aplicación Shiny}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(sibdata)
+```
+
+# Explorador Interactivo - Aplicación Shiny v4
+
+## Introducción
+
+El explorador de biodiversidad es una aplicación Shiny que permite consultar y visualizar interactivamente los datos de biodiversidad de Colombia. La aplicación ofrece múltiples visualizaciones (mapas, gráficos, tablas) y permite filtrar por región, grupo biológico, y temáticas de conservación.
+
+**Versión actual:** 4 (más estable y moderna)  
+**Ubicación:** `inst/org_sibhumboldt_sibdata_app4/`
+
+### Características Principales
+
+- 🗺️ **Mapas coropléticos** interactivos con Leaflet
+- 📊 **Gráficos dinámicos** (barras, tortas, treemaps) con Highcharter
+- 📋 **Tablas de datos** con búsqueda y ordenamiento
+- 🃏 **Tarjetas informativas** con indicadores clave
+- 🔍 **Tabla de especies** con descarga de datos
+- 🎨 **Interfaz modular** y mantenible
+- 💾 **Conexión a DuckDB** para consultas rápidas
+
+## Arquitectura de la Aplicación
+
+### Estructura General
+
+La aplicación sigue una arquitectura **modular** basada en Shiny modules, lo que facilita el mantenimiento y la reutilización de componentes.
+
+```
+app4.R (aplicación principal)
+├── UI (interfaz de usuario)
+│   ├── Panel izquierdo (25%) - Controles de filtrado
+│   ├── Panel central (50%) - Visualizaciones
+│   └── Panel derecho (25%) - Tabla de especies
+│
+└── Server (lógica del servidor)
+    ├── Módulos de entrada (exp_inputs)
+    ├── Módulos de visualización (exp_viz_inputs)
+    ├── Renderización de gráficos
+    ├── Tabla de especies (exp_species_table)
+    └── Módulos de debug (opcional)
+```
+
+### Componentes Principales
+
+#### 1. **Archivo Principal: `app4.R`**
+
+Este es el punto de entrada de la aplicación. Contiene:
+
+- Configuración de dependencias
+- Definición de UI y server
+- Inicialización de módulos
+- Gestión de conexiones a bases de datos
+
+```{r app_basic, eval=FALSE}
+library(shiny)
+library(sibdata)
+library(leaflet)
+library(highcharter)
+library(DT)
+
+# Configuración de debug
+DEBUG_MODE <- FALSE
+
+# UI: tres columnas
+ui <- fluidPage(
+  column(3, exp_inputs_ui("inputs")),      # Controles
+  column(6, exp_viz_inputs_ui("viz")),     # Visualización
+  column(3, exp_species_table_ui("species")) # Especies
+)
+
+# Server: inicialización de módulos
+server <- function(input, output, session) {
+  # Conexión a base de datos
+  con <- get_app_connection("db/sibdata.duckdb")
+  
+  # Valores reactivos
+  r <- reactiveValues(
+    sel_region = NULL,
+    sel_grupo = NULL,
+    sel_tematica = NULL,
+    chart_type = "map"
+  )
+  
+  # Inicializar módulos
+  exp_inputs_server("inputs", r, app_options, session)
+  exp_viz_inputs_server("viz", r)
+  exp_species_table_server("species", r, con, session)
+}
+```
+
+## Módulos Principales
+
+### Módulo 1: Controles de Entrada (`exp_inputs`)
+
+**Ubicación:** `R/exp_inputs.R`
+
+**Función:** Gestiona los controles del panel izquierdo:
+
+- 📍 Selector de región (Colombia, departamentos, municipios)
+- 🦋 Selector de grupo biológico vs. temática
+- 🌿 Selector de grupo específico (mamíferos, aves, etc.)
+- 🔖 Selector de temática (amenazadas, CITES, endémicas, etc.)
+
+#### Estructura del Módulo
+
+```{r exp_inputs_example, eval=FALSE}
+# UI del módulo
+exp_inputs_ui <- function(id) {
+  ns <- NS(id)
+  tagList(
+    uiOutput(ns("sel_region_")),
+    hr(),
+    exp_inputs_grupo_ui(ns("grupo")),
+    hr(),
+    uiOutput(ns("sel_tematica_"))
+  )
+}
+
+# Server del módulo
+exp_inputs_server <- function(id, r, app_options, session_main, debug = FALSE) {
+  moduleServer(id, function(input, output, session) {
+    # Renderizar selector de región
+    output$sel_region_ <- renderUI({
+      selectInput(
+        session$ns("sel_region"),
+        "Región",
+        choices = app_options$region_grouped
+      )
+    })
+    
+    # Observar cambios en región
+    observeEvent(input$sel_region, {
+      r$sel_region <- input$sel_region
+    })
+  })
+}
+```
+
+#### Sub-módulo: Grupo Biológico (`exp_inputs_grupo`)
+
+**Ubicación:** `R/exp_inputs_grupo.R`
+
+Permite alternar entre:
+
+- **Grupo Biológico**: Filtrar por mamíferos, aves, plantas, etc.
+- **Temática**: Filtrar por especies amenazadas, CITES, endémicas, exóticas, etc.
+
+```{r grupo_example, eval=FALSE}
+exp_inputs_grupo_ui <- function(id) {
+  ns <- NS(id)
+  tagList(
+    # Botones para alternar entre grupo biológico y temática
+    radioButtons(
+      ns("grupo_tipo"),
+      "Filtrar por:",
+      choices = c("Grupo Biológico" = "biologico", 
+                  "Temática" = "tematica"),
+      selected = "biologico"
+    ),
+    # Selector dinámico
+    uiOutput(ns("selector_dinamico"))
+  )
+}
+```
+
+#### Sub-módulo: Temática (`exp_inputs_tematica`)
+
+**Ubicación:** `R/exp_inputs_tematica.R`
+
+Gestiona las opciones de temática con selectores jerárquicos:
+
+- Temática principal (amenazadas, CITES, etc.)
+- Sub-temáticas cuando aplican
+- Controles adicionales (categorías de amenaza, apéndices CITES)
+
+### Módulo 2: Controles de Visualización (`exp_viz_inputs`)
+
+**Ubicación:** `R/exp_viz_inputs.R`
+
+**Función:** Gestiona los controles de la visualización central:
+
+- 📊 Selector de tipo de visualización (mapa, tabla, gráficos)
+- 🔢 Toggle entre registros y especies
+- 📥 Opciones de descarga
+
+```{r viz_inputs_example, eval=FALSE}
+exp_viz_inputs_ui <- function(id) {
+  ns <- NS(id)
+  tagList(
+    # Selector de tipo de gráfico
+    div(
+      style = "display: flex; gap: 8px; justify-content: center;",
+      # Iconos clickeables para cada tipo de visualización
+      actionButton(ns("btn_cards"), "", icon = icon("th")),
+      actionButton(ns("btn_map"), "", icon = icon("map")),
+      actionButton(ns("btn_table"), "", icon = icon("table")),
+      actionButton(ns("btn_bar"), "", icon = icon("bar-chart"))
+    ),
+    # Toggle registros/especies
+    radioButtons(
+      ns("sel_tipo"),
+      NULL,
+      choices = c("Observaciones" = "registros", 
+                  "Especies" = "especies"),
+      selected = "registros",
+      inline = TRUE
+    )
+  )
+}
+```
+
+### Módulo 3: Tabla de Especies (`exp_species_table`)
+
+**Ubicación:** `R/exp_species_table.R`
+
+**Función:** Muestra una tabla detallada de las especies en la región seleccionada con opciones de descarga.
+
+```{r species_table_example, eval=FALSE}
+exp_species_table_ui <- function(id) {
+  ns <- NS(id)
+  tagList(
+    h4("Especies"),
+    downloadButton(ns("download_excel"), "Descargar Excel"),
+    DT::dataTableOutput(ns("species_table"))
+  )
+}
+
+exp_species_table_server <- function(id, r, con, session) {
+  moduleServer(id, function(input, output, session) {
+    # Obtener datos de especies
+    species_data <- reactive({
+      req(r$sel_region)
+      
+      query <- "SELECT * FROM especie_region WHERE slug_region = ?"
+      DBI::dbGetQuery(con, query, params = list(r$sel_region))
+    })
+    
+    # Renderizar tabla
+    output$species_table <- DT::renderDataTable({
+      DT::datatable(species_data(), options = list(pageLength = 15))
+    })
+    
+    # Descarga Excel
+    output$download_excel <- downloadHandler(
+      filename = function() {
+        paste0("especies_", r$sel_region, "_", Sys.Date(), ".xlsx")
+      },
+      content = function(file) {
+        openxlsx::write.xlsx(species_data(), file)
+      }
+    )
+  })
+}
+```
+
+## Flujo de Datos Reactivos
+
+### Sistema de Reactividad
+
+La aplicación utiliza un objeto `r` de tipo `reactiveValues` que actúa como un **estado global compartido** entre todos los módulos:
+
+```{r reactive_values, eval=FALSE}
+r <- reactiveValues(
+  # Selecciones del usuario
+  sel_region = NULL,          # Región seleccionada
+  sel_grupo_tipo = "biologico", # "biologico" o "tematica"
+  sel_grupo = NULL,           # Grupo biológico específico
+  sel_tematica = NULL,        # Temática seleccionada
+  sel_tipo = "registros",     # "registros" o "especies"
+  chart_type = "map",         # Tipo de visualización
+  
+  # Datos procesados
+  main_data = NULL,           # Datos principales
+  map_data = NULL,            # Datos para el mapa
+  chart_data = NULL,          # Datos para gráficos
+  table_data = NULL,          # Datos para tabla
+  
+  # Conexiones
+  con = con,                  # Conexión a DuckDB
+  conmap = conmap             # Conexión a geotable
+)
+```
+
+### Diagrama de Flujo
+
+```
+Usuario selecciona región
+         ↓
+r$sel_region actualizado
+         ↓
+Observador reactivo detecta cambio
+         ↓
+sibdata() consulta la base de datos
+         ↓
+Datos almacenados en r$main_data
+         ↓
+Renderización de visualización activa
+(mapa, gráfico, tabla, o tarjetas)
+```
+
+## Visualizaciones
+
+### 1. Mapa Coroplético (Leaflet)
+
+**Función principal:** `choropleth_map()` (en `R/map.R`)
+
+Muestra un mapa interactivo donde cada subregión (departamento o municipio) se colorea según el valor del indicador.
+
+```{r map_example, eval=FALSE}
+output$map_viz <- leaflet::renderLeaflet({
+  req(r$sel_region, r$chart_type == "map")
+  
+  # Obtener datos
+  d <- sibdata(
+    region = r$sel_region,
+    grupo = r$sel_grupo,
+    tipo = r$sel_tipo,
+    tematica = r$tematica,
+    indicador = r$indicador,
+    subregiones = TRUE,
+    con = con
+  )
+  
+  # Crear mapa
+  choropleth_map(
+    data = d,
+    region = r$sel_region,
+    tipo = r$sel_tipo,
+    con = con,
+    conmap = conmap
+  )
+})
+```
+
+### 2. Tarjetas Informativas
+
+Muestran los indicadores principales en formato de tarjetas grandes y visuales.
+
+```{r cards_example, eval=FALSE}
+output$cards_viz <- renderUI({
+  req(r$sel_region)
+  
+  # Sin temática: mostrar registros totales y especies totales
+  if (is.null(r$sel_tematica)) {
+    val_regs <- fetch_indicator("registros_region_total")
+    val_esps <- fetch_indicator("especies_region_total")
+    
+    return(
+      div(
+        style = "display: flex; gap: 12px;",
+        div(class = "card-box",
+            h2(format(val_regs, big.mark = ",")),
+            p("Observaciones")
+        ),
+        div(class = "card-box",
+            h2(format(val_esps, big.mark = ",")),
+            p("Especies")
+        )
+      )
+    )
+  }
+  
+  # Con temática: mostrar indicadores de la temática
+  # ...
+})
+```
+
+### 3. Gráficos Highcharter
+
+**Tipos disponibles:**
+
+- 📊 Barras (`bar`)
+- 🥧 Torta (`pie`)
+- 🍩 Dona (`donut`)
+- 🗺️ Treemap (`treemap`)
+
+```{r highcharts_example, eval=FALSE}
+output$hgch_viz <- highcharter::renderHighchart({
+  req(r$chart_type %in% c("pie", "donut", "bar", "treemap"))
+  
+  # Obtener datos
+  d <- sibdata(
+    region = r$sel_region,
+    grupo = r$sel_grupo,
+    tipo = r$sel_tipo,
+    tematica = r$tematica,
+    subregiones = FALSE,
+    con = con
+  )
+  
+  # Crear gráfico usando hgmagic
+  create_hgmagic_chart(r$chart_type, d, r, con)
+})
+```
+
+### 4. Tabla de Datos (DT)
+
+Tabla interactiva con búsqueda, ordenamiento y paginación.
+
+```{r table_example, eval=FALSE}
+output$table_viz <- DT::renderDataTable({
+  req(r$sel_region)
+  
+  # Obtener datos
+  d <- sibdata(
+    region = r$sel_region,
+    grupo = r$sel_grupo,
+    tipo = r$sel_tipo,
+    tematica = r$tematica,
+    indicador = r$indicador,
+    subregiones = TRUE,
+    con = con
+  )
+  
+  # Formatear tabla
+  DT::datatable(
+    d,
+    rownames = FALSE,
+    options = list(
+      pageLength = 15,
+      language = list(url = '//cdn.datatables.net/plug-ins/2.3.4/i18n/es-ES.json')
+    )
+  )
+})
+```
+
+## Función Principal: `sibdata()`
+
+La función `sibdata()` es el **corazón de la aplicación**. Consulta la base de datos y devuelve datos filtrados según los parámetros.
+
+**Ubicación:** `R/sibdata.R`
+
+### Parámetros
+
+```{r sibdata_params, eval=FALSE}
+sibdata(
+  region = "colombia",        # Región a consultar
+  tipo = "especies",          # "registros" o "especies"
+  cobertura = NULL,           # "marinas", "continentales", etc.
+  tematica = NULL,            # "amenazadas", "cites", "endemicas", etc.
+  indicador = NULL,           # Indicador específico
+  grupo = NULL,               # Grupo biológico
+  subregiones = FALSE,        # ¿Incluir subregiones?
+  with_parent = FALSE,        # ¿Incluir región padre?
+  tidy = TRUE,                # ¿Tidify los datos?
+  n_especies = FALSE,         # ¿Solo retornar número de especies?
+  all_indicators = FALSE,     # ¿Retornar todos los indicadores?
+  con = con                   # Conexión a base de datos
+)
+```
+
+### Ejemplos de Uso
+
+```{r sibdata_examples, eval=FALSE}
+# Ejemplo 1: Especies totales en Colombia
+d1 <- sibdata(
+  region = "colombia",
+  tipo = "especies",
+  con = con
+)
+
+# Ejemplo 2: Mamíferos en el Meta con subregiones
+d2 <- sibdata(
+  region = "meta",
+  grupo = "mamiferos",
+  tipo = "especies",
+  subregiones = TRUE,
+  con = con
+)
+
+# Ejemplo 3: Especies amenazadas en Antioquia
+d3 <- sibdata(
+  region = "antioquia",
+  tematica = "amenazadas",
+  tipo = "especies",
+  con = con
+)
+
+# Ejemplo 4: Número de especies endémicas en Colombia
+n <- sibdata(
+  region = "colombia",
+  tematica = "endemicas",
+  n_especies = TRUE,
+  con = con
+)
+```
+
+## Conexión a Base de Datos
+
+### DuckDB
+
+La aplicación usa **DuckDB** como base de datos principal por su velocidad y eficiencia en consultas analíticas.
+
+**Ubicación del archivo:** `inst/org_sibhumboldt_sibdata_app4/db/sibdata.duckdb`
+
+### Inicialización de Conexión
+
+```{r db_connection, eval=FALSE}
+# Función auxiliar para crear conexión
+con <- get_app_connection("db/sibdata.duckdb", debug = FALSE)
+
+# La función get_app_connection está en R/db.R
+get_app_connection <- function(db_path, debug = FALSE) {
+  if (!file.exists(db_path)) {
+    stop("Database file not found: ", db_path)
+  }
+  
+  con <- DBI::dbConnect(
+    duckdb::duckdb(),
+    dbdir = db_path,
+    read_only = TRUE
+  )
+  
+  if (debug) {
+    tables <- DBI::dbListTables(con)
+    message("✓ Connected to database with ", length(tables), " tables")
+  }
+  
+  return(con)
+}
+```
+
+### Cerrar Conexión
+
+Es importante cerrar la conexión cuando finaliza la sesión:
+
+```{r close_connection, eval=FALSE}
+session$onSessionEnded(function() {
+  DBI::dbDisconnect(con)
+  if (exists("conmap")) {
+    DBI::dbDisconnect(conmap)
+  }
+})
+```
+
+## Ejecutar la Aplicación
+
+### Modo Local (Desarrollo)
+
+```{r run_local, eval=FALSE}
+# Opción 1: Desde el directorio de la app
+setwd("inst/org_sibhumboldt_sibdata_app4")
+shiny::runApp()
+
+# Opción 2: Especificando la ruta
+shiny::runApp("inst/org_sibhumboldt_sibdata_app4")
+
+# Opción 3: Con puerto específico
+shiny::runApp(
+  "inst/org_sibhumboldt_sibdata_app4",
+  port = 3838,
+  host = "0.0.0.0"
+)
+```
+
+### Modo Debug
+
+Para ver mensajes de debug en la consola:
+
+```{r debug_mode, eval=FALSE}
+# Editar app4.R y cambiar:
+DEBUG_MODE <- TRUE  # Cambiar a TRUE
+
+# Luego ejecutar la app
+shiny::runApp("inst/org_sibhumboldt_sibdata_app4")
+```
+
+Los mensajes de debug muestran:
+
+- 🚀 Inicio de la aplicación
+- 📦 Inicialización de módulos
+- 📊 Renderización de visualizaciones
+- 🗺️ Consultas a base de datos
+- ✅ Confirmaciones de operaciones exitosas
+- ❌ Errores
+
+### Despliegue en Servidor
+
+La aplicación está lista para desplegarse en:
+
+- **Shiny Server**
+- **ShinyApps.io**
+- **RStudio Connect**
+- **Posit Cloud**
+
+#### Ejemplo de despliegue a ShinyApps.io:
+
+```{r deploy_shinyapps, eval=FALSE}
+library(rsconnect)
+
+# Configurar cuenta (primera vez)
+rsconnect::setAccountInfo(
+  name = "tu-cuenta",
+  token = "tu-token",
+  secret = "tu-secret"
+)
+
+# Desplegar
+rsconnect::deployApp(
+  appDir = "inst/org_sibhumboldt_sibdata_app4",
+  appName = "explorador-biodiversidad"
+)
+```
+
+## Personalización y Extensión
+
+### Agregar un Nuevo Tipo de Gráfico
+
+1. **Crear función de renderización** en `R/charts.R`:
+
+```{r new_chart, eval=FALSE}
+create_line_chart <- function(data, r, con) {
+  highcharter::hchart(
+    data,
+    "line",
+    highcharter::hcaes(x = label, y = count)
+  ) %>%
+    highcharter::hc_title(text = "Gráfico de Líneas")
+}
+```
+
+2. **Agregar al switch** en `app4.R`:
+
+```{r add_chart, eval=FALSE}
+output$chart_output <- renderUI({
+  switch(r$chart_type,
+    "map" = leaflet::leafletOutput("map_viz"),
+    "line" = highcharter::highchartOutput("hgch_viz"),  # NUEVO
+    # ... otros tipos
+  )
+})
+```
+
+3. **Agregar botón** en `exp_viz_inputs_ui()`:
+
+```{r add_button, eval=FALSE}
+actionButton(ns("btn_line"), "", icon = icon("line-chart"))
+```
+
+### Agregar una Nueva Temática
+
+1. **Asegurar que existe en la base de datos** (tabla `tematica`)
+
+2. **Crear controlador específico** (si requiere sub-categorías) en un nuevo archivo `R/exp_inputs_tematica_nueva.R`
+
+3. **Agregar al selector** en `exp_inputs_tematica_server()`
+
+### Modificar Estilos
+
+Los estilos CSS están en:
+
+- `inst/org_sibhumboldt_sibdata_app4/www/custom.css`
+
+```css
+/* Ejemplo: cambiar color primario */
+.btn-primary {
+  background-color: #09A274;
+  border-color: #09A274;
+}
+
+.card-box {
+  border: 1px solid #4ad3ac;
+  background: #F2FBF8;
+  border-radius: 8px;
+  padding: 16px;
+}
+```
+
+## Solución de Problemas
+
+### Error: "Database file not found"
+
+**Causa:** La base de datos DuckDB no existe en la ruta especificada.
+
+**Solución:**
+
+```{r fix_db, eval=FALSE}
+# Verificar que existe
+file.exists("inst/org_sibhumboldt_sibdata_app4/db/sibdata.duckdb")
+
+# Si no existe, copiar desde inst/db/
+file.copy(
+  "inst/db/sibdata.duckdb",
+  "inst/org_sibhumboldt_sibdata_app4/db/sibdata.duckdb"
+)
+```
+
+### Error: "Module not found"
+
+**Causa:** Funciones del paquete no están disponibles.
+
+**Solución:**
+
+```{r fix_module, eval=FALSE}
+# Cargar el paquete sibdata
+library(sibdata)
+
+# O reinstalar
+devtools::install()
+```
+
+### Mapa No Se Renderiza
+
+**Causa:** Problemas con la conexión `conmap` o datos geográficos faltantes.
+
+**Solución:**
+
+```{r fix_map, eval=FALSE}
+# Verificar conexión a geotable
+conmap <- geotable::gt_con()
+
+# Verificar que existen datos geográficos
+d <- sibdata(
+  region = "colombia",
+  subregiones = TRUE,
+  con = con
+)
+print(nrow(d))  # Debe tener filas
+```
+
+### Visualización Muy Lenta
+
+**Opciones de optimización:**
+
+```{r optimize, eval=FALSE}
+# 1. Aumentar timeout de conexión
+options(timeout = 600)
+
+# 2. Usar índices en queries
+# (ya implementado en las funciones de sibdata)
+
+# 3. Limitar número de filas en tablas
+DT::datatable(data, options = list(pageLength = 10))
+
+# 4. Usar cache para datos frecuentes
+data_cache <- memoise::memoise(sibdata)
+```
+
+## Recursos Adicionales
+
+### Documentación de Dependencias
+
+- **Shiny**: https://shiny.posit.co/
+- **Leaflet**: https://rstudio.github.io/leaflet/
+- **Highcharter**: https://jkunst.com/highcharter/
+- **DT**: https://rstudio.github.io/DT/
+- **DuckDB**: https://duckdb.org/
+
+### Tutoriales Recomendados
+
+- Shiny Modules: https://shiny.posit.co/r/articles/improve/modules/
+- Reactive Programming: https://shiny.posit.co/r/articles/build/reactivity-overview/
+
+### Estructura de Archivos
+
+```
+inst/org_sibhumboldt_sibdata_app4/
+├── app4.R                  # Aplicación principal
+├── dev4.R                  # Script de desarrollo
+├── db/
+│   └── sibdata.duckdb      # Base de datos
+├── www/
+│   ├── custom.css          # Estilos personalizados
+│   └── viz_icons/          # Iconos de visualización
+└── rsconnect/              # Configuración de despliegue
+```
+
+---
+
+**Versión del documento:** 1.0  
+**Fecha:** Noviembre 2025  
+**Autor:** Datasketch / Instituto Humboldt
+

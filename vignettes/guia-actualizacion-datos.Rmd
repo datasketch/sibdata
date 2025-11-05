@@ -1,0 +1,1047 @@
+---
+title: "Guía de Actualización de Datos - Biodiversidad en Cifras"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Guía de Actualización de Datos - Biodiversidad en Cifras}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(sibdata)
+```
+
+# Guía de Actualización de Datos
+## Plataforma Biodiversidad en Cifras
+
+## Introducción
+
+Este documento describe el proceso completo para actualizar los datos de la plataforma **Biodiversidad en Cifras**, desde la sincronización de datos fuente hasta la generación de archivos JSON que alimentan el sitio web.
+
+### Arquitectura del Sistema
+
+El sistema consta de tres componentes principales:
+
+1. **Scripts de Python (GitLab)**: Generan tablas con cifras y síntesis de biodiversidad
+2. **Paquete R (sibdata)**: Transforma tablas en bases de datos y archivos JSON
+3. **Sitio Web (Next.js)**: Lee archivos JSON estáticos para visualización
+
+Este documento se enfoca en el **componente 2**: el paquete R.
+
+## Prerrequisitos
+
+### Software Requerido
+
+- R versión 4.x o superior
+- RStudio (recomendado)
+- Git configurado con acceso a los repositorios
+- Conexión a internet para sincronización de datos
+
+### Dependencias del Paquete
+
+El paquete `sibdata` se instalará con sus dependencias automáticamente, pero asegúrese de tener instalado:
+
+- `devtools` - Para instalación desde GitHub
+- `DBI` - Para conexión a bases de datos
+- `RSQLite` - Driver de SQLite
+- `duckdb` - Base de datos analítica
+- `dplyr`, `tidyr` - Manipulación de datos
+- `jsonlite` - Generación de archivos JSON
+- `sf` - Procesamiento de datos geoespaciales
+
+## Paso 1: Instalación del Paquete R
+
+### Instalación desde GitHub
+
+Abra RStudio y ejecute:
+
+```{r instalacion, eval=FALSE}
+# Instalar remotes si no lo tiene
+install.packages("remotes")
+
+# Instalar el paquete sibdata desde GitHub
+remotes::install_github("datasketch/sibdata")
+
+# Cargar el paquete
+library(sibdata)
+```
+
+> **Nota**: El paquete pesa aproximadamente 200 MB porque incluye los datos directamente. La instalación puede tomar varios minutos.
+
+### Verificación de la Instalación
+
+Para verificar que el paquete se instaló correctamente:
+
+```{r verificacion, eval=FALSE}
+# Listar las funciones disponibles
+ls("package:sibdata")
+
+# Verificar la versión
+packageVersion("sibdata")
+```
+
+## Paso 2: Sincronización de Datos desde GitLab
+
+Este paso descarga los datos más recientes generados por los scripts de Python.
+
+**Script:** `DATASET.R`  
+**Ubicación:** `data-raw/DATASET.R`  
+**Función:** Sincroniza la información de GitLab localmente en su computador.
+
+**Ejecución:**
+
+```{r dataset, eval=FALSE}
+# Abrir el script
+source("data-raw/DATASET.R")
+```
+
+### ¿Qué hace este script?
+
+1. Lee directamente desde GitLab (sin transformaciones)
+2. Descarga todo como un archivo ZIP
+3. Descomprime el archivo
+4. Borra el ZIP temporal
+5. Guarda los datos en la carpeta `inst/extdata/cifras/`
+
+### Archivos Descargados
+
+Los datos quedan en formato TSV (Tab-Separated Values) en:
+
+```
+inst/
+  extdata/
+    cifras/
+      [todas las tablas generadas por Python]
+```
+
+**Tiempo Estimado:** 2-5 minutos dependiendo de la conexión a internet
+
+
+## Paso 3: Obtención de Datos Complementarios
+
+Descarga información editorial desde Google Sheets. Este script es ejecutado automáticamente por el script `DATASET.R`.
+
+**Script:** `get_data.R`  
+**Ubicación:** `data-raw/get_data.R`  
+**Función:** Obtiene datos complementarios de Google Sheets (imágenes, textos, tooltips, diccionarios).
+
+**Ejecución:**
+
+```{r getdata, eval=FALSE}
+# Abrir el script
+source("data-raw/get_data.R")
+```
+
+
+### ¿Qué descarga?
+
+- **Diccionario de datos**: Validación de nombres de tablas y columnas
+- **Imágenes**: URLs y metadatos de galerías fotográficas
+- **Banners**: Imágenes de fondo para cada departamento
+- **Preguntas frecuentes**: Contenido editorial
+- **Glosario**: Definiciones de términos
+- **Referencias**: Citas bibliográficas
+
+### Autenticación
+
+**Actual:** Requiere autenticación con cuenta de Google  
+**Recomendación:** Configurar las hojas de cálculo como públicas y eliminar la autenticación del código para simplificar el proceso.
+
+### Archivos Descargados
+
+Los datos complementarios se guardan en la misma carpeta que los datos de GitLab, integrándose en la estructura de datos del paquete.
+
+**Tiempo Estimado:** 1-2 minutos
+
+
+## Paso 4: Creación de Bases de Datos
+
+Los datos descargados se cargan en memoria y se guardan en bases de datos locales.
+
+### ¿Qué sucede automáticamente?
+
+Después de ejecutar `get_data.R`, los scripts automáticamente:
+
+1. Cargan todos los archivos en memoria como una lista de dataframes
+2. Crean base de datos SQLite (`inst/db/sibdata.sqlite`)
+3. Crean base de datos DuckDB (`inst/db/sibdata.duckdb`)
+
+### Bases de Datos Generadas
+
+**SQLite (140 MB)**
+
+- Base de datos relacional tradicional
+- Compatible con múltiples herramientas
+- Usada históricamente en el proyecto
+
+**DuckDB (40 MB)**
+
+- Base de datos analítica de columnas
+- Mejor compresión y velocidad
+- Recomendada para consultas analíticas
+- Actualmente usada en el explorador
+
+### Ubicación de las Bases de Datos
+
+```
+inst/
+  db/
+    sibdata.sqlite     # Base de datos SQLite
+    sibdata.duckdb     # Base de datos DuckDB
+```
+
+### Verificación
+
+Para verificar que las bases de datos se crearon correctamente:
+
+```{r verif_db, eval=FALSE}
+# Verificar tamaño de archivos
+file.info("inst/db/sibdata.sqlite")$size / 1024^2  # MB
+file.info("inst/db/sibdata.duckdb")$size / 1024^2  # MB
+
+# Verificar última modificación
+file.info("inst/db/sibdata.sqlite")$mtime
+```
+
+## Paso 5: Generación de Archivos JSON
+
+Este es el paso principal donde se generan todos los archivos JSON que el sitio web consume.
+
+### Estructura de Scripts
+
+Los scripts deben ejecutarse en el siguiente orden:
+
+```
+00_info_pages.R          # Páginas informativas
+00_world.R               # Mapa mundial
+01_colombia.R            # Datos de Colombia
+02_departamentos_pais.R  # Todos los departamentos
+03_municipios.R          # Todos los municipios
+04_especial.R            # Regiones especiales (Amazonía, etc.)
+```
+
+### Script 1: Páginas Informativas
+
+**Archivo:** `scripts/00_info_pages.R`
+
+**Genera:**
+
+- `static_data/tooltips.json`
+- `static_data/publicadores.json`
+- `static_data/preguntas_frecuentes.json`
+- `static_data/glosario.json`
+
+**Ejecución:**
+
+```{r infopages, eval=FALSE}
+source("scripts/00_info_pages.R")
+```
+
+**Tiempo:** ~30 segundos
+
+### Script 2: Mapa Mundial
+
+**Archivo:** `scripts/00_world.R`
+
+**Genera:**
+
+- `static/data/home.json` (contiene datos del mundo)
+
+**Contenido:**
+
+- Ranking de biodiversidad mundial
+- Posición de Colombia
+- Datos geográficos de países
+
+**Ejecución:**
+
+```{r world, eval=FALSE}
+source("scripts/00_world.R")
+```
+
+**Tiempo:** ~1 minuto
+### Script 3: Colombia
+
+**Archivo:** `scripts/01_colombia.R`
+
+**Genera:**
+
+- `static/data/colombia/colombia.json`
+
+**Contenido:**
+
+- Información general del país
+- Navegación temática (amenazadas, CITES, endémicas, exóticas, migratorias)
+- Navegación por grupos biológicos (37 grupos)
+- Galería de imágenes
+- Slides destacados
+- Datos de todos los grupos biológicos y temáticas
+- Mapa de departamentos
+
+**Ejecución:**
+
+```{r colombia, eval=FALSE}
+source("scripts/01_colombia.R")
+```
+
+**Tiempo:** ~2 minutos
+
+Estructura del JSON generado:
+
+```json
+{
+  "general_info": {
+    "num_especies": 60000,
+    "num_registros": 20000000,
+    "fecha_corte": "2024-12-31"
+  },
+  "nav_tematica": [
+    {
+      "slug": "amenazadas",
+      "label": "Amenazadas",
+      "parent": null,
+      "children": [...]
+    }
+  ],
+  "nav_grupo_biologico": [...],
+  "tematica": {
+    "amenazadas": {
+      "data": [...],
+      "top10": [...]
+    }
+  },
+  "grupos_biologicos": {
+    "mamiferos": {
+      "data": [...],
+      "top10": [...]
+    }
+  },
+  "slides": [...],
+  "galeria": [...],
+  "map_data": [...]
+}
+```
+### Script 4: Departamentos
+
+**Archivo:** `scripts/02_departamentos_pais.R`
+
+**Genera:** 32 archivos JSON (uno por departamento)
+
+```
+static/data/antioquia/antioquia.json
+static/data/amazonas/amazonas.json
+static/data/meta/meta.json
+etc.
+```
+
+**Contenido de cada JSON:**
+
+- Información general del departamento
+- Navegación temática y por grupos
+- Galería de imágenes (si aplica)
+- Slides comparativos con Colombia
+- Datos de grupos biológicos (36-37 grupos)
+- Mapa de municipios
+- TopoJSON para visualización geográfica
+- Iconos generados automáticamente
+- Información de patrocinadores
+
+**Ejecución:**
+
+```{r departamentos, eval=FALSE}
+# Ejecutar para todos los departamentos
+source("scripts/02_departamentos_pais.R")
+
+# O ejecutar para un departamento específico
+# (útil para pruebas)
+region <- "meta"
+# ... código del script
+```
+
+**Tiempo:**
+
+- Todos los departamentos: ~2 horas
+- Un departamento: ~2-5 minutos
+
+#### Ejemplo práctico - Generar datos del Meta:
+
+```{r ejemplo_meta, eval=FALSE}
+# Cargar librerías necesarias
+library(sibdata)
+
+# Definir la región
+region <- "meta"
+
+# Conectar a la base de datos
+con <- DBI::dbConnect(RSQLite::SQLite(), "inst/db/sibdata.sqlite")
+
+# Generar información general
+general_info <- sibdata_general_info(con, region = region)
+
+# Generar navegación
+nav_tematica <- navigation_tree(con, tipo = "tematica")
+nav_grupo_biologico <- navigation_tree(con, tipo = "grupo_biologico")
+
+# Generar slides
+slides <- create_slides(con, region = region)
+
+# Generar datos de grupos biológicos
+grupos_biologicos <- generate_grupos_biologicos(con, region = region)
+
+# Generar datos temáticos
+tematica <- generate_tematica(con, region = region)
+
+# Generar mapa de municipios
+map_data <- generate_map_data(con, region = region)
+
+# Combinar todo en un objeto
+data_completa <- list(
+  general_info = general_info,
+  nav_tematica = nav_tematica,
+  nav_grupo_biologico = nav_grupo_biologico,
+  slides = slides,
+  tematica = tematica,
+  grupos_biologicos = grupos_biologicos,
+  map_data = map_data,
+  topojson = generate_topojson(region)
+)
+
+# Guardar como JSON
+jsonlite::write_json(
+  data_completa,
+  path = paste0("static/data/", region, "/", region, ".json"),
+  auto_unbox = TRUE,
+  pretty = TRUE
+)
+
+# Cerrar conexión
+DBI::dbDisconnect(con)
+```
+### Script 5: Municipios
+
+**Archivo:** `scripts/03_municipios.R`
+
+**Genera:** ~1,122 archivos JSON (uno por municipio)
+
+Ejemplo de estructura de carpetas:
+
+```
+static/data/
+  antioquia/
+    municipios/
+      medellin.json
+      envigado.json
+      ...
+  meta/
+    municipios/
+      villavicencio.json
+      puerto_lopez.json
+      ...
+```
+
+**Contenido de cada JSON:**
+
+- Información general del municipio
+- Navegación heredada del departamento padre
+- Slides comparativos con el departamento
+- Datos de grupos biológicos presentes
+- Datos temáticos
+- Patrocinadores (heredados o específicos)
+- Publicadores con datos en el municipio
+- Iconos heredados del departamento
+
+**Ejecución:**
+
+```{r municipios, eval=FALSE}
+# Ejecutar para todos los municipios de todos los departamentos
+source("scripts/03_municipios.R")
+
+# O ejecutar para un departamento específico
+region_id <- 50  # Código DANE del Meta
+# ... código del script
+```
+
+**Tiempo:**
+
+- Todos los municipios: ~3-4 horas
+- Un departamento: ~10-20 minutos
+
+**Características especiales:**
+
+- **Herencia de información**: Los municipios heredan información del departamento padre:
+  - Iconos del mapa
+  - Patrocinadores (a menos que tengan específicos)
+  - Estructura de navegación
+- **Grupos biológicos variables**: Cada municipio puede tener diferente número de grupos biológicos dependiendo de los datos disponibles.
+- **Casos especiales**: Bogotá D.C. no tiene subdivisiones municipales.
+
+### Script 6: Regiones Especiales
+
+**Archivo:** `scripts/04_especial.R`
+
+**Genera:**
+
+- `static/data/region-amazonia/region-amazonia.json`
+- `static/data/reserva-forestal-la-planada/reserva-forestal-la-planada.json`
+- `static/data/resguardo-indigena-pialapi-pueblo-viejo/resguardo-indigena-pialapi-pueblo-viejo.json`
+
+**Regiones especiales actuales:**
+
+- **Región Amazonía**: Región biogeográfica que abarca porciones de 8 departamentos
+- **Reserva La Planada**: Área protegida
+- **Territorio Pialapi**: Territorio indígena
+
+**Contenido especial para Región Amazonía:**
+
+- Información agregada de 8 departamentos
+- Datos de aportes por departamento (especies y registros)
+- Porcentajes de contribución a la región
+- GeoJSON con límites parciales de departamentos
+- Listado de municipios amazónicos (100+)
+- Dashboard de tres paneles
+
+**Ejecución:**
+
+```{r especiales, eval=FALSE}
+source("scripts/04_especial.R")
+```
+
+**Tiempo:** ~5-10 minutos
+
+#### Procesamiento especial para Amazonía:
+
+```{r proc_amazonia, eval=FALSE}
+# Leer departamentos de la Amazonía
+departamentos_amazonia <- c(
+  "amazonas", "caqueta", "cauca", "guainia", 
+  "guaviare", "meta", "putumayo", "vaupes"
+)
+
+# Calcular aportes de cada departamento
+for(depto in departamentos_amazonia) {
+  aporte_especies <- calcular_aporte_especies(depto, "amazonia")
+  aporte_registros <- calcular_aporte_registros(depto, "amazonia")
+  porcentaje_especies <- (aporte_especies / total_amazonia) * 100
+  # ... más cálculos
+}
+
+# Generar GeoJSON con límites parciales
+geojson_amazonia <- create_partial_boundaries(departamentos_amazonia)
+
+# Generar listado de municipios
+municipios_amazonia <- get_municipios_by_region("amazonia")
+```
+
+## Paso 6: Verificación de Archivos Generados
+
+### Ubicación de Archivos JSON
+
+Todos los archivos JSON se guardan en la carpeta `static/data/`:
+
+```
+static/data/
+├── home.json
+├── colombia/
+│   └── colombia.json
+├── tooltips.json
+├── glosario.json
+├── preg_frecuentes.json
+├── publicador.json
+├── antioquia/
+│   ├── antioquia.json
+│   ├── antioquia.svg
+│   ├── antioquia.geojson
+│   └── municipios/
+│       ├── medellin.json
+│       └── ...
+├── meta/
+│   ├── meta.json
+│   ├── meta.svg
+│   ├── meta.geojson
+│   └── municipios/
+│       └── ...
+└── region-amazonia/
+    ├── region-amazonia.json
+    ├── region-amazonia.geojson
+    ├── region-amazonia.svg
+    └── region-amazonia-municipios.json
+```
+
+### Lista de Verificación
+
+✅ **Páginas informativas**
+
+```{r verif_info, eval=FALSE}
+file.exists("static/data/tooltips.json")
+file.exists("static/data/glosario.json")
+file.exists("static/data/preg_frecuentes.json")
+file.exists("static/data/publicador.json")
+```
+
+✅ **Páginas principales**
+
+```{r verif_main, eval=FALSE}
+file.exists("static/data/home.json")
+file.exists("static/data/colombia/colombia.json")
+```
+
+✅ **Departamentos (verificar algunos)**
+
+```{r verif_deptos, eval=FALSE}
+file.exists("static/data/antioquia/antioquia.json")
+file.exists("static/data/meta/meta.json")
+file.exists("static/data/amazonas/amazonas.json")
+```
+
+✅ **Municipios (verificar algunos)**
+
+```{r verif_munis, eval=FALSE}
+file.exists("static/data/antioquia/municipios/medellin.json")
+file.exists("static/data/meta/municipios/villavicencio.json")
+```
+
+✅ **Regiones especiales**
+
+```{r verif_especial, eval=FALSE}
+file.exists("static/data/region-amazonia/region-amazonia.json")
+```
+
+### Validación de Contenido
+
+Para verificar que un JSON tiene la estructura correcta:
+
+```{r valid_content, eval=FALSE}
+# Leer un JSON
+data <- jsonlite::read_json("static/data/colombia/colombia.json")
+
+# Verificar campos principales
+names(data)
+# Debe contener: general_info, nav_tematica, nav_grupo_biologico, 
+#                tematica, grupos_biologicos, slides, etc.
+
+# Verificar información general
+data$general_info$num_especies  # Debe ser un número > 0
+data$general_info$fecha_corte   # Debe ser una fecha
+
+# Verificar navegación
+length(data$nav_tematica)       # Debe tener categorías temáticas
+length(data$nav_grupo_biologico) # Debe tener grupos biológicos
+```
+
+### Verificación de Tamaños
+
+Los archivos JSON tienen tamaños esperados aproximados:
+
+- `colombia.json`: ~2 MB
+- Departamento promedio: ~1-2 MB
+- Municipio promedio: ~500 KB - 1 MB
+- `region-amazonia.json`: ~2 MB
+
+> **Nota**: Si un archivo es significativamente más pequeño o más grande, puede indicar un problema.
+
+## Paso 7: Integración con el Sitio Web Next.js
+
+### Copiar Archivos al Repositorio Web
+
+Los archivos generados en `static/data/` deben copiarse a la carpeta `public/data/` del repositorio Next.js.
+
+#### Opción 1: Manual
+
+```bash
+# Desde la carpeta del paquete R
+cp -r static/data/* /ruta/al/repo/sib-colombia/public/data/
+```
+
+#### Opción 2: Script automatizado (recomendado)
+
+Crear un script `update_data.R` en el repositorio web:
+
+```{r update_data, eval=FALSE}
+# update_data.R
+# Script para actualizar datos desde el paquete R
+
+# Ruta al paquete R instalado
+paquete_path <- system.file(package = "sibdata")
+static_data_path <- file.path(paquete_path, "static", "data")
+
+# Ruta destino en el proyecto Next.js
+destino_path <- "public/data"
+
+# Copiar archivos
+file.copy(
+  from = list.files(static_data_path, full.names = TRUE, recursive = TRUE),
+  to = destino_path,
+  overwrite = TRUE,
+  recursive = TRUE
+)
+
+cat("Datos actualizados exitosamente\n")
+```
+
+#### Opción 3: Descarga directa desde GitHub (para automatizar completamente)
+
+```{r github_download, eval=FALSE}
+# Script para descargar static/data desde GitHub
+# y actualizar public/data automáticamente
+
+library(httr)
+
+# URL del repositorio
+github_url <- "https://github.com/datasketch/sibdata/archive/refs/heads/main.zip"
+
+# Descargar y extraer
+download.file(github_url, "temp.zip")
+unzip("temp.zip", exdir = "temp")
+
+# Copiar solo la carpeta static/data
+file.copy(
+  "temp/sibdata-main/static/data",
+  "public/data",
+  overwrite = TRUE,
+  recursive = TRUE
+)
+
+# Limpiar archivos temporales
+unlink("temp.zip")
+unlink("temp", recursive = TRUE)
+```
+
+### Verificación en el Sitio Web
+
+Después de copiar los archivos:
+
+1. **Desarrollo local:**
+
+```bash
+cd sib-colombia
+npm install
+npm run dev
+```
+
+2. **Acceder a:** http://localhost:3000
+
+3. **Verificar:**
+   - Página principal carga correctamente
+   - Números de especies/registros son correctos
+   - Navegación funciona
+   - Mapas se visualizan
+   - Datos de departamentos cargan
+   - Explorador funciona
+
+
+
+
+## Errores Comunes y Soluciones
+
+### Error 1: Faltan Dependencias
+
+**Síntoma:** Error al instalar el paquete sobre dependencias faltantes
+
+**Solución:**
+
+```{r deps_error, eval=FALSE}
+# Instalar dependencias manualmente
+install.packages(c("DBI", "RSQLite", "duckdb", "dplyr", 
+                   "tidyr", "jsonlite", "sf"))
+```
+
+### Error 2: Error al Conectar a GitLab
+
+**Síntoma:** `dataset.R` falla al descargar datos
+
+**Solución:**
+
+- Verificar conexión a internet
+- Verificar permisos de acceso al repositorio GitLab
+- Comprobar que la URL del repositorio es correcta
+
+### Error 3: Autenticación Google Sheets
+
+**Síntoma:** `get_data.R` solicita autenticación
+
+**Solución temporal:**
+
+```{r gs4_auth, eval=FALSE}
+# Autenticarse manualmente
+library(googlesheets4)
+gs4_auth()
+```
+
+**Solución permanente:** Configurar las hojas como públicas y eliminar autenticación del código.
+
+### Error 4: Slug No Coincide
+
+**Síntoma:** Errores sobre slugs no encontrados o inconsistencias
+
+**Causa común:** Cambio en nombres de categorías sin actualizar diccionario
+
+**Solución:**
+
+- Verificar el diccionario de datos en Google Sheets
+- Asegurar que los slugs coincidan entre tablas
+- Actualizar el diccionario si es necesario
+
+### Error 5: Grupo Biológico Faltante
+
+**Síntoma:** Un departamento/municipio tiene menos grupos biológicos que otros
+
+**Causa:** Es normal. Algunos departamentos no tienen todos los grupos (ej: Meta no tiene grupos marinos)
+
+**Verificación:**
+
+```{r grupos_missing, eval=FALSE}
+# Revisar qué grupos faltan
+grupos_colombia <- get_grupos_biologicos("colombia")
+grupos_meta <- get_grupos_biologicos("meta")
+setdiff(grupos_colombia, grupos_meta)  # Grupos que Meta no tiene
+```
+
+### Error 6: Archivo JSON Vacío o Muy Pequeño
+
+**Síntoma:** JSON generado es muy pequeño o está vacío
+
+**Causas posibles:**
+
+- La región no existe en la base de datos
+- Error en el proceso de generación
+- Filtros muy restrictivos
+
+**Solución:**
+
+```{r json_empty, eval=FALSE}
+# Verificar que la región existe
+con <- DBI::dbConnect(RSQLite::SQLite(), "inst/db/sibdata.sqlite")
+DBI::dbGetQuery(con, "SELECT * FROM regiones WHERE slug = 'meta'")
+
+# Verificar datos disponibles
+DBI::dbGetQuery(con, "SELECT COUNT(*) FROM especies WHERE region = 'meta'")
+```
+
+### Error 7: Imágenes No Aparecen
+
+**Síntoma:** Galería de imágenes vacía o incompleta
+
+**Causa:** Información de imágenes no actualizada en Google Sheets
+
+**Solución:**
+
+- Verificar que el departamento tiene imágenes en el Google Sheet
+- Verificar que las URLs de las imágenes son válidas
+- Re-ejecutar `get_data.R` y el script del departamento
+
+
+## Optimizaciones y Mejores Prácticas
+
+### 1. Ejecución Selectiva
+
+No siempre es necesario regenerar todos los archivos. Ejecute solo lo necesario:
+
+```{r selective, eval=FALSE}
+# Solo actualizar un departamento
+region <- "meta"
+source("scripts/02_departamentos_pais.R")
+
+# Solo actualizar municipios de un departamento
+region_id <- 50  # Meta
+source("scripts/03_municipios.R")
+```
+
+### 2. Validaciones Automáticas
+
+Agregar validaciones para detectar problemas temprano:
+
+```{r validation, eval=FALSE}
+# Validar que existen imágenes para departamentos con galería
+validate_galeria <- function() {
+  departamentos_con_galeria <- c("colombia", "narino", "santander", "region-amazonia")
+  
+  for(depto in departamentos_con_galeria) {
+    imagenes <- get_imagenes_galeria(depto)
+    if(nrow(imagenes) == 0) {
+      warning(paste("Departamento", depto, "no tiene imágenes en galería"))
+    }
+  }
+}
+```
+
+### 3. Paralelización
+
+Para procesar múltiples departamentos/municipios más rápido:
+
+```{r parallel, eval=FALSE}
+# Usar procesamiento paralelo (requiere paquete parallel)
+library(parallel)
+
+# Detectar número de cores
+num_cores <- detectCores() - 1
+
+# Procesar departamentos en paralelo
+mclapply(
+  departamentos_list,
+  function(dep) generate_departamento_json(dep),
+  mc.cores = num_cores
+)
+```
+
+### 4. Logs y Monitoreo
+
+Mantener registro de las actualizaciones:
+
+```{r logging, eval=FALSE}
+# Crear log de actualización
+log_actualizacion <- function(region, status, mensaje = "") {
+  log_entry <- data.frame(
+    timestamp = Sys.time(),
+    region = region,
+    status = status,
+    mensaje = mensaje
+  )
+  
+  write.table(
+    log_entry,
+    "actualizacion_log.csv",
+    append = TRUE,
+    sep = ",",
+    row.names = FALSE,
+    col.names = !file.exists("actualizacion_log.csv")
+  )
+}
+
+# Usar durante generación
+tryCatch({
+  generate_departamento("meta")
+  log_actualizacion("meta", "SUCCESS")
+}, error = function(e) {
+  log_actualizacion("meta", "ERROR", e$message)
+})
+```
+
+## Mantenimiento y Actualizaciones Futuras
+
+### Agregar un Nuevo Departamento
+
+Si en el futuro se agrega un nuevo departamento:
+
+1. Asegurar que existe en la base de datos de regiones
+2. Agregar imágenes a Google Sheets (si tendrá galería)
+3. Ejecutar scripts 3 y 4
+4. Verificar que el icono se generó correctamente
+
+### Agregar una Nueva Región Especial
+
+Para regiones como "Región Caribe":
+
+1. Crear GeoJSON con los límites de la región
+2. Modificar `scripts/04_especial.R` para incluir la nueva región
+3. Crear función específica para calcular aportes
+4. Desarrollar componente React personalizado (si requiere diseño especial)
+
+### Actualizar Metodología
+
+Para actualizar el documento de metodología:
+
+1. Editar el documento en el formato original
+2. Exportar como Markdown
+3. Reemplazar el archivo en el repositorio Next.js
+4. Las imágenes deben guardarse manualmente si es necesario
+
+
+## Script Maestro (Opcional)
+
+Para ejecutar todo el proceso de una vez:
+
+```{r master_script, eval=FALSE}
+# master_update.R
+# Script maestro para actualización completa
+
+library(sibdata)
+
+cat("=== INICIO ACTUALIZACIÓN BIODIVERSIDAD EN CIFRAS ===\n\n")
+
+# Paso 1: Sincronizar datos
+cat("Paso 1/6: Sincronizando datos desde GitLab...\n")
+source("data-raw/DATASET.R")
+cat("✓ Datos sincronizados\n\n")
+
+# Paso 2: Obtener datos complementarios
+cat("Paso 2/6: Obteniendo datos complementarios...\n")
+source("data-raw/get_data.R")
+cat("✓ Datos complementarios obtenidos\n\n")
+
+# Paso 3: Generar páginas informativas
+cat("Paso 3/6: Generando páginas informativas...\n")
+source("scripts/00_info_pages.R")
+cat("✓ Páginas informativas generadas\n\n")
+
+# Paso 4: Generar datos mundiales y Colombia
+cat("Paso 4/6: Generando datos de mundo y Colombia...\n")
+source("scripts/00_world.R")
+source("scripts/01_colombia.R")
+cat("✓ Datos principales generados\n\n")
+
+# Paso 5: Generar departamentos
+cat("Paso 5/6: Generando datos de departamentos...\n")
+cat("(Esto tomará aproximadamente 2 horas)\n")
+source("scripts/02_departamentos_pais.R")
+cat("✓ Departamentos generados\n\n")
+
+# Paso 6: Generar municipios
+cat("Paso 6/6: Generando datos de municipios...\n")
+cat("(Esto tomará aproximadamente 3-4 horas)\n")
+source("scripts/03_municipios.R")
+cat("✓ Municipios generados\n\n")
+
+# Paso 7: Generar regiones especiales
+cat("Paso 7/6: Generando regiones especiales...\n")
+source("scripts/04_especial.R")
+cat("✓ Regiones especiales generadas\n\n")
+
+cat("=== ACTUALIZACIÓN COMPLETADA ===\n")
+cat("Archivos generados en: static/data/\n")
+cat("Siguiente paso: Copiar a repositorio Next.js\n")
+```
+
+## Contacto y Soporte
+
+Para dudas o problemas durante el proceso de actualización:
+
+- **Email:** jpmarindiaz@datasketch.co
+- **Issues:** GitHub (repositorio privado)
+- **Documentación adicional:** Ver archivos README en cada repositorio
+
+## Resumen de Comandos
+
+```{r resumen, eval=FALSE}
+# Instalación inicial
+remotes::install_github("datasketch/sibdata")
+library(sibdata)
+
+# Actualización de datos
+source("data-raw/DATASET.R")          # Sincronizar GitLab
+source("data-raw/get_data.R")         # Google Sheets
+
+# Generación de JSONs (en orden)
+source("scripts/00_info_pages.R")     # ~30 segundos
+source("scripts/00_world.R")          # ~1 minuto
+source("scripts/01_colombia.R")       # ~2 minutos
+source("scripts/02_departamentos_pais.R") # ~2 horas
+source("scripts/03_municipios.R")     # ~3-4 horas
+source("scripts/04_especial.R")       # ~10 minutos
+
+# Verificación
+list.files("static/data", recursive = TRUE)
+```
+
+---
+
+**Versión del documento:** 1.0  
+**Fecha:** Octubre 2025  
+**Autor:** Datasketch / Instituto Humboldt
+

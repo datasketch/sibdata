@@ -1,5 +1,4 @@
 library(sibdata)
-library(geotable)
 library(tictoc)
 
 devtools::load_all()

@@ -19,6 +19,6 @@ con <- DBI::dbConnect(RSQLite::SQLite(), sys_file_sibdata("db/sibdata.sqlite"),
 ## Generate info pages
 save_info_page("static/data", con)
 
-dbDisconnect(con)
+DBI::dbDisconnect(con)
 
 

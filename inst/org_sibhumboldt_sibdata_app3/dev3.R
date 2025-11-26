@@ -16,7 +16,7 @@ library(dbplyr)
 con <- DBI::dbConnect(RSQLite::SQLite(), sys_file_sibdata("db/sibdata.sqlite"),
                       read_only = TRUE)
 
-conmap <- geotable::gt_con()
+conmap <- gt_con()
 # Do not forget to close the connection when done
 
 

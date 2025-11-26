@@ -1,7 +1,6 @@
 #library(sibdata)
 #library(lfltmagic)
 library(tictoc)
-library(geotable)
 library(vctrs)
 devtools::load_all()
 
@@ -95,8 +94,8 @@ map(av_regions, safely(function(region){
     map_name <- paste0("col_municipalities_", region_id)
     dd_map <- left_join(dd_esp, dd_reg) |>
       select(id = cod_dane, label, n_especies, n_registros)
-    conmap <- geotable::gt_con()
-    tj <- geotable::gt_sf(map_name, con = conmap) |>
+    conmap <- gt_con()
+    tj <- gt_sf(map_name, con = conmap) |>
       select(-name)
     tj <- tj |> left_join(dd_map, by = "id")
   }

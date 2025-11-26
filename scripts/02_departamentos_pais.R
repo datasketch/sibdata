@@ -1,7 +1,6 @@
 #library(sibdata)
 #library(lfltmagic)
 library(tictoc)
-library(geotable)
 library(vctrs)
 devtools::load_all()
 
@@ -132,7 +131,7 @@ map(av_regions, safely(function(region){
   region_id <- region
   region_id <- gsub("-", "_", region_id)
 
-  # geotable::gt_sf("col_municipalities_vaupes")
+  # gt_sf("col_municipalities_vaupes")
   if(region_id == "norte_santander") region_id <- "norte_de_santander"
   if(region_id == "san_andres_y_providencia") region_id <- "archipielago_de_san_andres_providencia_y_santa_catalina"
   #if(region_id == "bogota-dc") region_nm <- "BOGOTÁ D.C."
@@ -155,8 +154,8 @@ map(av_regions, safely(function(region){
 
   tj <- NULL
   if(!region %in% reserva_resguardo){
-    conmap <- geotable::gt_con()
-    tj <- geotable::gt_sf(map_name, con = conmap) |>
+    conmap <- gt_con()
+    tj <- gt_sf(map_name, con = conmap) |>
       select(-name)
     #
     #   tj <- geodato::gd_tj("col_municipalities") |>

@@ -25,7 +25,7 @@ choropleth_map <- function(data = NULL,
   region_especial <- FALSE
 
   if(is.null(conmap)){
-    conmap <- geotable::gt_con(conmap)
+    conmap <- gt_con(conmap)
   }
 
   inp <- as.list(environment())
@@ -134,8 +134,8 @@ choropleth_map <- function(data = NULL,
   # filter(!is.na(value))
   # d0$name[d0$name == "BOGOTÁ, D. C."] <- "BOGOTÁ"
 
-  sf <- geotable::gt_sf(map_name, con = conmap) |>
-    geotable::rename_dotdot()
+  sf <- gt_sf(map_name, con = conmap) |>
+    rename_dotdot()
   # if(nrow(d0) > 1.5 * nrow(sf)){
   #   warning("Data may have repeated geographic rows, taking the first indicator found")
   #   # Remove duplicates by taking the first occurrence of each geographic name
@@ -147,7 +147,7 @@ choropleth_map <- function(data = NULL,
 
   if(nrow(d0) > 0){
     # # message("nrow d0: ", nrow(d0))
-    # dmatch <- geotable::gt_match(d0, map_name, unique = TRUE, con = conmap) |>
+    # dmatch <- gt_match(d0, map_name, unique = TRUE, con = conmap) |>
     #   select(name, value, "..gt_id")
 
     dgeo <- sf |>
@@ -161,7 +161,7 @@ choropleth_map <- function(data = NULL,
 
   # Shutdown connection if it wasn't originally provided
   if(no_conmap){
-    geotable::gt_discon(conmap)
+    gt_discon(conmap)
   }
 
 
@@ -229,10 +229,9 @@ choropleth_map <- function(data = NULL,
         )
       )
   }
-
-  lt |>
-    leaflet.extras::setMapWidgetStyle(list(background = "#ffffff")) |>
-    leaflet::addProviderTiles("")
+   lt |>
+     leaflet.extras::setMapWidgetStyle(list(background = "#ffffff")) #|>
+  #   leaflet::addProviderTiles("")
 }
 
 

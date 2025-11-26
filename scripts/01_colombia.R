@@ -80,8 +80,8 @@ dd_reg <- dd |> select(cod_dane, value = registros_region_total, label) |>
 dd_map <- left_join(dd_esp, dd_reg) |>
   select(id = cod_dane, label, n_especies, n_registros)
 #tj <- geodato::gd_tj("col_departments")
-conmap <- geotable::gt_con()
-tj <- geotable::gt_sf("col_departments", conmap) |> left_join(dd_map)
+conmap <- gt_con()
+tj <- gt_sf("col_departments", conmap) |> left_join(dd_map)
 #tj <- geodato::gd_tj("col_departments") |> left_join(dd_map)
 
 

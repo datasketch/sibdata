@@ -154,7 +154,7 @@ server <- function(input, output, session) {
   con <- get_app_connection("db/sibdata.duckdb", debug = DEBUG_MODE)
   app_options <- get_app_options(con, debug = DEBUG_MODE)
   app_options$con <- con
-  conmap <- geotable::gt_con()
+  conmap <- gt_con()
 
 
   # Create session-specific reactive values

@@ -5,12 +5,12 @@ library(shiny)
 library(shinyjs)
 library(sibdata)
 library(leaflet)
-library(geotable)
+
 
 # Get database connection
 con <- DBI::dbConnect(RSQLite::SQLite(), sys_file_sibdata("db/sibdata.sqlite"),
                       read_only = TRUE)
-conmap <- geotable::gt_con()
+conmap <- gt_con()
 
 # Get app options (same as in app2.R)
 app_options <- get_app_options(con, debug = TRUE)
@@ -23,7 +23,7 @@ app_options$con <- con
 ui <- fluidPage(
   useShinyjs(),
   titlePanel("Test exp_inputs Module with Nested Submodules"),
-  
+
   fluidRow(
     # Left column - Input controls (50%)
     column(4, style = "padding: 0 5px;",
@@ -75,7 +75,7 @@ ui <- fluidPage(
 
 # Test server
 server <- function(input, output, session) {
-  
+
   # Create reactive values object (same as in app2.R)
   r <- reactiveValues(
     sel_region = NULL,
@@ -94,13 +94,13 @@ server <- function(input, output, session) {
     indicador = NULL,
     breadcrumb = NULL
   )
-  
+
   # Initialize the inputs module
   exp_inputs_server("test_inputs", r, app_options, session, debug = TRUE)
 
   # Initialize visualization inputs module (computes tematica, indicador, breadcrumb)
   exp_viz_inputs_server("viz", r, debug = TRUE)
-  
+
   # Create a reactive expression to track all reactive values
   reactive_values_tracker <- reactive({
     list(
@@ -115,7 +115,7 @@ server <- function(input, output, session) {
       indicador = r$indicador
     )
   })
-  
+
   # Debug output
   output$debug_output <- renderPrint({
     cat("=== DEBUG OUTPUT ===\n")
@@ -130,7 +130,7 @@ server <- function(input, output, session) {
     cat("Database connection active:", DBI::dbIsValid(con), "\n")
     cat("===================\n")
   })
-  
+
   # Current grupo selection
   output$current_grupo <- renderText({
     grupo_tipo <- r$sel_grupo_tipo
@@ -142,7 +142,7 @@ server <- function(input, output, session) {
       paste("Selected:", grupo_value, "(", grupo_tipo, ")")
     }
   })
-  
+
   # Current tematica selection
   output$current_tematica <- renderText({
     tematica <- r$sel_tematica
@@ -152,7 +152,7 @@ server <- function(input, output, session) {
       paste("Selected:", tematica)
     }
   })
-  
+
   # Current subtematica selection
   output$current_subtematica <- renderText({
     subtematica <- r$sel_subtematica
@@ -162,7 +162,7 @@ server <- function(input, output, session) {
       paste("Selected:", subtematica)
     }
   })
-  
+
   # Reactive values output
   output$reactive_values <- renderPrint({
     # Force reactivity by accessing the tracker
@@ -186,7 +186,7 @@ server <- function(input, output, session) {
   output$breadcrumb_debug <- renderText({
     r$breadcrumb %||% "(no breadcrumb)"
   })
-  
+
   # URL parameters output
   output$url_params <- renderPrint({
     cat("=== URL PARAMETERS ===\n")
@@ -200,32 +200,32 @@ server <- function(input, output, session) {
     }
     cat("=====================\n")
   })
-  
+
   # Namespace debug output
   output$namespace_debug <- renderPrint({
     cat("=== NAMESPACE DEBUG ===\n")
     cat("Main session namespace test:", session$ns("test"), "\n")
     cat("Expected grupo namespace:", session$ns("test_inputs-grupo"), "\n")
     cat("Expected tematica namespace:", session$ns("test_inputs-tematica"), "\n")
-    
+
     # Check if inputs exist
     cat("\nInput existence check:\n")
     cat("sel_region exists:", !is.null(input$sel_region), "\n")
-    
+
     # Check for grupo-related inputs
     grupo_inputs <- c("grupo_biologico", "grupo_interes", "grupo_biologico_children", "grupo_interes_children")
     for (input_name in grupo_inputs) {
       full_id <- paste0("test_inputs-", input_name)
       cat(full_id, "exists:", !is.null(input[[input_name]]), "\n")
     }
-    
+
     # Check for tematica-related inputs (we'll check a few common ones)
     tematica_inputs <- c("amenazadas", "amenazadas_children", "biologico", "biologico_children")
     for (input_name in tematica_inputs) {
       full_id <- paste0("test_inputs-", input_name)
       cat(full_id, "exists:", !is.null(input[[input_name]]), "\n")
     }
-    
+
     cat("=====================\n")
   })
 
@@ -291,4 +291,4 @@ server <- function(input, output, session) {
 }
 
 # Run the app
-shinyApp(ui = ui, server = server) 
+shinyApp(ui = ui, server = server)

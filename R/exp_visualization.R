@@ -146,7 +146,7 @@
 #'
 #'         # Get map connection
 #'         if (debug) message("Getting geotable connection...")
-#'         conmap <- geotable::gt_con()
+#'         conmap <- gt_con()
 #'         if (debug) message("✓ Got geotable connection")
 #'
 #'         if (debug) {

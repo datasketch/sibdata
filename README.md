@@ -61,7 +61,7 @@ remotes::install_github("datasketch/sibdata")
 remotes::install_github("datasketch/sibdata", dependencies = TRUE)
 ```
 
-> **Nota**: Algunos paquetes del ecosistema Datasketch (`geotable`, `shinypanels`, `dsmods`, etc.) se instalan automáticamente desde GitHub.
+> **Nota**: Algunos paquetes del ecosistema Datasketch ( `shinypanels`, `dsmods`, etc.) se instalan automáticamente desde GitHub.
 
 ### Dependencias principales
 
@@ -70,7 +70,7 @@ El paquete se instala con todas sus dependencias automáticamente:
 - `DBI`, `RSQLite`, `duckdb` - Gestión de bases de datos
 - `dplyr`, `tidyr` - Manipulación de datos
 - `jsonlite` - Generación de JSON
-- `leaflet`, `geotable` - Mapas interactivos
+- `leaflet` - Mapas interactivos
 - `highcharter`, `hgmagic` - Gráficos interactivos
 - `shiny`, `DT` - Aplicación web interactiva
 
@@ -122,7 +122,7 @@ head(amenazadas_ant)
 
 ```r
 # Crear mapa coroplético
-conmap <- geotable::gt_con()
+conmap <- gt_con()
 
 mapa <- choropleth_map(
   data = amenazadas_ant,

@@ -1,5 +1,5 @@
 library(sibdata)
-library(ltgeo)
+
 
 devtools::load_all()
 

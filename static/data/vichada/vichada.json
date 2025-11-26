@@ -24,7 +24,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -33,7 +33,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -42,7 +42,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -53,7 +53,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -62,7 +62,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -71,7 +71,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -80,7 +80,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -2553,18 +2553,18 @@
           "slug_tematica": "exoticas"
         },
         {
-          "label": "Gossypium barbadense",
-          "slug_especie": "gossypium-barbadense",
-          "registros": 14,
-          "url_gbif": "https://www.gbif.org/species/3152666",
-          "slug_tematica": "exoticas"
-        },
-        {
           "label": "Lantana camara",
           "slug_especie": "lantana-camara",
           "registros": 14,
           "url_gbif": "https://www.gbif.org/species/2925303",
           "url_cbc": "https://catalogo.biodiversidad.co/file/594944a42f4fd7bc7f397513/summary",
+          "slug_tematica": "exoticas"
+        },
+        {
+          "label": "Gossypium barbadense",
+          "slug_especie": "gossypium-barbadense",
+          "registros": 14,
+          "url_gbif": "https://www.gbif.org/species/3152666",
           "slug_tematica": "exoticas"
         },
         {
@@ -4637,6 +4637,23 @@
             "genus": "Handroanthus"
           },
           {
+            "label": "Encyclia leucantha",
+            "registros": 12,
+            "slug_especie": "encyclia-leucantha",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "angiospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2827157",
+            "species": "Encyclia leucantha",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Liliopsida",
+            "order": "Asparagales",
+            "family": "Orchidaceae",
+            "genus": "Encyclia"
+          },
+          {
             "label": "Acanthocereus tetragonus",
             "registros": 12,
             "slug_especie": "acanthocereus-tetragonus",
@@ -4653,23 +4670,6 @@
             "order": "Caryophyllales",
             "family": "Cactaceae",
             "genus": "Acanthocereus"
-          },
-          {
-            "label": "Encyclia leucantha",
-            "registros": 12,
-            "slug_especie": "encyclia-leucantha",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "angiospermas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2827157",
-            "species": "Encyclia leucantha",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Liliopsida",
-            "order": "Asparagales",
-            "family": "Orchidaceae",
-            "genus": "Encyclia"
           },
           {
             "label": "Dalbergia hygrophila",
@@ -4706,23 +4706,6 @@
             "genus": "Tabebuia"
           },
           {
-            "label": "Dipteryx punctata",
-            "registros": 8,
-            "slug_especie": "dipteryx-punctata",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "angiospermas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2947145",
-            "species": "Dipteryx punctata",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Fabales",
-            "family": "Fabaceae",
-            "genus": "Dipteryx"
-          },
-          {
             "label": "Vanilla planifolia",
             "registros": 8,
             "slug_especie": "vanilla-planifolia",
@@ -4739,6 +4722,23 @@
             "order": "Asparagales",
             "family": "Orchidaceae",
             "genus": "Vanilla"
+          },
+          {
+            "label": "Dipteryx punctata",
+            "registros": 8,
+            "slug_especie": "dipteryx-punctata",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "angiospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2947145",
+            "species": "Dipteryx punctata",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Fabales",
+            "family": "Fabaceae",
+            "genus": "Dipteryx"
           }
         ],
         "migratorias": [],
@@ -4796,6 +4796,23 @@
             "genus": "Cybianthus"
           },
           {
+            "label": "Remijia amphithrix",
+            "registros": 6,
+            "slug_especie": "remijia-amphithrix",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "angiospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2909675",
+            "species": "Remijia amphithrix",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Gentianales",
+            "family": "Rubiaceae",
+            "genus": "Remijia"
+          },
+          {
             "label": "Clitoria hermannii",
             "registros": 6,
             "slug_especie": "clitoria-hermannii",
@@ -4828,23 +4845,6 @@
             "order": "Malpighiales",
             "family": "Passifloraceae",
             "genus": "Passiflora"
-          },
-          {
-            "label": "Remijia amphithrix",
-            "registros": 6,
-            "slug_especie": "remijia-amphithrix",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "angiospermas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2909675",
-            "species": "Remijia amphithrix",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Gentianales",
-            "family": "Rubiaceae",
-            "genus": "Remijia"
           },
           {
             "label": "Henriettea goudotiana",
@@ -5041,23 +5041,6 @@
             "genus": "Setaria"
           },
           {
-            "label": "Gossypium barbadense",
-            "registros": 14,
-            "slug_especie": "gossypium-barbadense",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "angiospermas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3152666",
-            "species": "Gossypium barbadense",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Malvales",
-            "family": "Malvaceae",
-            "genus": "Gossypium"
-          },
-          {
             "label": "Lantana camara",
             "registros": 14,
             "slug_especie": "lantana-camara",
@@ -5074,6 +5057,23 @@
             "order": "Lamiales",
             "family": "Verbenaceae",
             "genus": "Lantana"
+          },
+          {
+            "label": "Gossypium barbadense",
+            "registros": 14,
+            "slug_especie": "gossypium-barbadense",
+            "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
+            "slug_grupo": "angiospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/3152666",
+            "species": "Gossypium barbadense",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Malvales",
+            "family": "Malvaceae",
+            "genus": "Gossypium"
           },
           {
             "label": "Ludwigia octovalvis",
@@ -6443,23 +6443,6 @@
             "genus": "Pimelodus"
           },
           {
-            "label": "Brycon whitei",
-            "registros": 7,
-            "slug_especie": "brycon-whitei",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2353452",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/59d172405f369343442f85f4/summary",
-            "species": "Brycon whitei",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "order": "Characiformes",
-            "family": "Bryconidae",
-            "genus": "Brycon"
-          },
-          {
             "label": "Helogenes castaneus",
             "registros": 7,
             "slug_especie": "helogenes-castaneus",
@@ -6475,6 +6458,23 @@
             "order": "Siluriformes",
             "family": "Cetopsidae",
             "genus": "Helogenes"
+          },
+          {
+            "label": "Brycon whitei",
+            "registros": 7,
+            "slug_especie": "brycon-whitei",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2353452",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/59d172405f369343442f85f4/summary",
+            "species": "Brycon whitei",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Characiformes",
+            "family": "Bryconidae",
+            "genus": "Brycon"
           },
           {
             "label": "Hyphessobrycon taguae",
@@ -7013,19 +7013,19 @@
           "genus": "Rubrepeira"
         },
         {
-          "label": "Heteropoda venatoria",
+          "label": "Vachoniochactas humboldti",
           "registros": 4,
-          "slug_especie": "heteropoda-venatoria",
+          "slug_especie": "vachoniochactas-humboldti",
           "slug_grupo": "aracnidos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2161710",
-          "species": "Heteropoda venatoria",
+          "url_gbif": "https://www.gbif.org/species/7516128",
+          "species": "Vachoniochactas humboldti",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Arachnida",
-          "order": "Araneae",
-          "family": "Sparassidae",
-          "genus": "Heteropoda"
+          "order": "Scorpiones",
+          "family": "Chactidae",
+          "genus": "Vachoniochactas"
         },
         {
           "label": "Trichonephila clavipes",
@@ -7043,50 +7043,19 @@
           "genus": "Trichonephila"
         },
         {
-          "label": "Vachoniochactas humboldti",
+          "label": "Heteropoda venatoria",
           "registros": 4,
-          "slug_especie": "vachoniochactas-humboldti",
+          "slug_especie": "heteropoda-venatoria",
           "slug_grupo": "aracnidos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7516128",
-          "species": "Vachoniochactas humboldti",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Arachnida",
-          "order": "Scorpiones",
-          "family": "Chactidae",
-          "genus": "Vachoniochactas"
-        },
-        {
-          "label": "Latrodectus geometricus",
-          "registros": 3,
-          "slug_especie": "latrodectus-geometricus",
-          "slug_grupo": "aracnidos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2157944",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/5cf0496f0677d0fd6bc58e08/summary",
-          "species": "Latrodectus geometricus",
+          "url_gbif": "https://www.gbif.org/species/2161710",
+          "species": "Heteropoda venatoria",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Arachnida",
           "order": "Araneae",
-          "family": "Theridiidae",
-          "genus": "Latrodectus"
-        },
-        {
-          "label": "Tenedos ticuna",
-          "registros": 3,
-          "slug_especie": "tenedos-ticuna",
-          "slug_grupo": "aracnidos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/11494808",
-          "species": "Tenedos ticuna",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Arachnida",
-          "order": "Araneae",
-          "family": "Zodariidae",
-          "genus": "Tenedos"
+          "family": "Sparassidae",
+          "genus": "Heteropoda"
         },
         {
           "label": "Tityus bastosi",
@@ -7104,6 +7073,21 @@
           "genus": "Tityus"
         },
         {
+          "label": "Tenedos ticuna",
+          "registros": 3,
+          "slug_especie": "tenedos-ticuna",
+          "slug_grupo": "aracnidos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/11494808",
+          "species": "Tenedos ticuna",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Arachnida",
+          "order": "Araneae",
+          "family": "Zodariidae",
+          "genus": "Tenedos"
+        },
+        {
           "label": "Xenesthis immanis",
           "registros": 3,
           "slug_especie": "xenesthis-immanis",
@@ -7117,6 +7101,22 @@
           "order": "Araneae",
           "family": "Theraphosidae",
           "genus": "Xenesthis"
+        },
+        {
+          "label": "Latrodectus geometricus",
+          "registros": 3,
+          "slug_especie": "latrodectus-geometricus",
+          "slug_grupo": "aracnidos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2157944",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5cf0496f0677d0fd6bc58e08/summary",
+          "species": "Latrodectus geometricus",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Arachnida",
+          "order": "Araneae",
+          "family": "Theridiidae",
+          "genus": "Latrodectus"
         }
       ],
       "species_list_tematica": {
@@ -9833,6 +9833,21 @@
           "genus": "Coniceromyia"
         },
         {
+          "label": "Myriophora reminatis",
+          "registros": 4,
+          "slug_especie": "myriophora-reminatis",
+          "slug_grupo": "dipteros",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/9340286",
+          "species": "Myriophora reminatis",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Diptera",
+          "family": "Phoridae",
+          "genus": "Myriophora"
+        },
+        {
           "label": "Cyphomyia fascipes",
           "registros": 4,
           "slug_especie": "cyphomyia-fascipes",
@@ -9861,21 +9876,6 @@
           "order": "Diptera",
           "family": "Phoridae",
           "genus": "Gymnophora"
-        },
-        {
-          "label": "Myriophora reminatis",
-          "registros": 4,
-          "slug_especie": "myriophora-reminatis",
-          "slug_grupo": "dipteros",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/9340286",
-          "species": "Myriophora reminatis",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Diptera",
-          "family": "Phoridae",
-          "genus": "Myriophora"
         }
       ],
       "species_list_tematica": {
@@ -11408,6 +11408,21 @@
           "genus": "Lygodium"
         },
         {
+          "label": "Trichomanes pinnatum",
+          "registros": 8,
+          "slug_especie": "trichomanes-pinnatum",
+          "slug_grupo": "helechos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5275202",
+          "species": "Trichomanes pinnatum",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Polypodiopsida",
+          "order": "Hymenophyllales",
+          "family": "Hymenophyllaceae",
+          "genus": "Trichomanes"
+        },
+        {
           "label": "Adiantum argutum",
           "registros": 8,
           "slug_especie": "adiantum-argutum",
@@ -11438,19 +11453,19 @@
           "genus": "Meniscium"
         },
         {
-          "label": "Trichomanes pinnatum",
-          "registros": 8,
-          "slug_especie": "trichomanes-pinnatum",
+          "label": "Microgramma megalophylla",
+          "registros": 7,
+          "slug_especie": "microgramma-megalophylla",
           "slug_grupo": "helechos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5275202",
-          "species": "Trichomanes pinnatum",
+          "url_gbif": "https://www.gbif.org/species/4026144",
+          "species": "Microgramma megalophylla",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Polypodiopsida",
-          "order": "Hymenophyllales",
-          "family": "Hymenophyllaceae",
-          "genus": "Trichomanes"
+          "order": "Polypodiales",
+          "family": "Polypodiaceae",
+          "genus": "Microgramma"
         },
         {
           "label": "Actinostachys pennula",
@@ -11466,21 +11481,6 @@
           "order": "Schizaeales",
           "family": "Schizaeaceae",
           "genus": "Actinostachys"
-        },
-        {
-          "label": "Microgramma megalophylla",
-          "registros": 7,
-          "slug_especie": "microgramma-megalophylla",
-          "slug_grupo": "helechos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4026144",
-          "species": "Microgramma megalophylla",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Polypodiopsida",
-          "order": "Polypodiales",
-          "family": "Polypodiaceae",
-          "genus": "Microgramma"
         },
         {
           "label": "Tectaria incisa",
@@ -12358,20 +12358,19 @@
           "genus": "Trichoderma"
         },
         {
-          "label": "Clonostachys rosea",
+          "label": "Lasiodiplodia gonubiensis",
           "registros": 13,
-          "slug_especie": "clonostachys-rosea",
+          "slug_especie": "lasiodiplodia-gonubiensis",
           "slug_grupo": "hongos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7472266",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e79b2d83c45700544e4218/summary",
-          "species": "Clonostachys rosea",
+          "url_gbif": "https://www.gbif.org/species/3517908",
+          "species": "Lasiodiplodia gonubiensis",
           "kingdom": "Fungi",
           "phylum": "Ascomycota",
-          "class": "Sordariomycetes",
-          "order": "Hypocreales",
-          "family": "Bionectriaceae",
-          "genus": "Clonostachys"
+          "class": "Dothideomycetes",
+          "order": "Botryosphaeriales",
+          "family": "Botryosphaeriaceae",
+          "genus": "Lasiodiplodia"
         },
         {
           "label": "Gliocephalotrichum cylindrosporum",
@@ -12389,19 +12388,20 @@
           "genus": "Gliocephalotrichum"
         },
         {
-          "label": "Lasiodiplodia gonubiensis",
+          "label": "Clonostachys rosea",
           "registros": 13,
-          "slug_especie": "lasiodiplodia-gonubiensis",
+          "slug_especie": "clonostachys-rosea",
           "slug_grupo": "hongos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3517908",
-          "species": "Lasiodiplodia gonubiensis",
+          "url_gbif": "https://www.gbif.org/species/7472266",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e79b2d83c45700544e4218/summary",
+          "species": "Clonostachys rosea",
           "kingdom": "Fungi",
           "phylum": "Ascomycota",
-          "class": "Dothideomycetes",
-          "order": "Botryosphaeriales",
-          "family": "Botryosphaeriaceae",
-          "genus": "Lasiodiplodia"
+          "class": "Sordariomycetes",
+          "order": "Hypocreales",
+          "family": "Bionectriaceae",
+          "genus": "Clonostachys"
         },
         {
           "label": "Saitozyma podzolica",
@@ -12768,21 +12768,6 @@
           "genus": "Acromyrmex"
         },
         {
-          "label": "Acanthostichus quadratus",
-          "registros": 8,
-          "slug_especie": "acanthostichus-quadratus",
-          "slug_grupo": "hormigas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1327202",
-          "species": "Acanthostichus quadratus",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Hymenoptera",
-          "family": "Formicidae",
-          "genus": "Acanthostichus"
-        },
-        {
           "label": "Acromyrmex hystrix",
           "registros": 8,
           "slug_especie": "acromyrmex-hystrix",
@@ -12796,6 +12781,21 @@
           "order": "Hymenoptera",
           "family": "Formicidae",
           "genus": "Acromyrmex"
+        },
+        {
+          "label": "Acanthostichus quadratus",
+          "registros": 8,
+          "slug_especie": "acanthostichus-quadratus",
+          "slug_grupo": "hormigas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1327202",
+          "species": "Acanthostichus quadratus",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hymenoptera",
+          "family": "Formicidae",
+          "genus": "Acanthostichus"
         },
         {
           "label": "Odontomachus bauri",
@@ -12813,34 +12813,19 @@
           "genus": "Odontomachus"
         },
         {
-          "label": "Dolichoderus quadridenticulatus",
+          "label": "Pogonomyrmex naegelii",
           "registros": 4,
-          "slug_especie": "dolichoderus-quadridenticulatus",
+          "slug_especie": "pogonomyrmex-naegelii",
           "slug_grupo": "hormigas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5034902",
-          "species": "Dolichoderus quadridenticulatus",
+          "url_gbif": "https://www.gbif.org/species/1325409",
+          "species": "Pogonomyrmex naegelii",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Hymenoptera",
           "family": "Formicidae",
-          "genus": "Dolichoderus"
-        },
-        {
-          "label": "Ectatomma ruidum",
-          "registros": 4,
-          "slug_especie": "ectatomma-ruidum",
-          "slug_grupo": "hormigas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1314139",
-          "species": "Ectatomma ruidum",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Hymenoptera",
-          "family": "Formicidae",
-          "genus": "Ectatomma"
+          "genus": "Pogonomyrmex"
         },
         {
           "label": "Platythyrea angusta",
@@ -12858,19 +12843,34 @@
           "genus": "Platythyrea"
         },
         {
-          "label": "Pogonomyrmex naegelii",
+          "label": "Ectatomma ruidum",
           "registros": 4,
-          "slug_especie": "pogonomyrmex-naegelii",
+          "slug_especie": "ectatomma-ruidum",
           "slug_grupo": "hormigas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1325409",
-          "species": "Pogonomyrmex naegelii",
+          "url_gbif": "https://www.gbif.org/species/1314139",
+          "species": "Ectatomma ruidum",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Hymenoptera",
           "family": "Formicidae",
-          "genus": "Pogonomyrmex"
+          "genus": "Ectatomma"
+        },
+        {
+          "label": "Dolichoderus quadridenticulatus",
+          "registros": 4,
+          "slug_especie": "dolichoderus-quadridenticulatus",
+          "slug_grupo": "hormigas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5034902",
+          "species": "Dolichoderus quadridenticulatus",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hymenoptera",
+          "family": "Formicidae",
+          "genus": "Dolichoderus"
         }
       ],
       "species_list_tematica": {
@@ -15603,6 +15603,21 @@
           "genus": "Glutophrissa"
         },
         {
+          "label": "Stalachtis calliope",
+          "registros": 11,
+          "slug_especie": "stalachtis-calliope",
+          "slug_grupo": "mariposas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1922015",
+          "species": "Stalachtis calliope",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Riodinidae",
+          "genus": "Stalachtis"
+        },
+        {
           "label": "Anartia jatrophae",
           "registros": 11,
           "slug_especie": "anartia-jatrophae",
@@ -15633,21 +15648,6 @@
           "genus": "Junonia"
         },
         {
-          "label": "Stalachtis calliope",
-          "registros": 11,
-          "slug_especie": "stalachtis-calliope",
-          "slug_grupo": "mariposas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1922015",
-          "species": "Stalachtis calliope",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Riodinidae",
-          "genus": "Stalachtis"
-        },
-        {
           "label": "Dryas iulia",
           "registros": 8,
           "slug_especie": "dryas-iulia",
@@ -15661,21 +15661,6 @@
           "order": "Lepidoptera",
           "family": "Nymphalidae",
           "genus": "Dryas"
-        },
-        {
-          "label": "Heliconius numatus",
-          "registros": 8,
-          "slug_especie": "heliconius-numatus",
-          "slug_grupo": "mariposas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1900172",
-          "species": "Heliconius numatus",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Heliconius"
         },
         {
           "label": "Marpesia chiron",
@@ -15693,13 +15678,13 @@
           "genus": "Marpesia"
         },
         {
-          "label": "Heliconius sara",
-          "registros": 6,
-          "slug_especie": "heliconius-sara",
+          "label": "Heliconius numatus",
+          "registros": 8,
+          "slug_especie": "heliconius-numatus",
           "slug_grupo": "mariposas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1900787",
-          "species": "Heliconius sara",
+          "url_gbif": "https://www.gbif.org/species/1900172",
+          "species": "Heliconius numatus",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
@@ -15723,20 +15708,34 @@
           "genus": "Opsiphanes"
         },
         {
-          "label": "Anteos menippe",
-          "registros": 5,
-          "slug_especie": "anteos-menippe",
+          "label": "Heliconius sara",
+          "registros": 6,
+          "slug_especie": "heliconius-sara",
           "slug_grupo": "mariposas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1919129",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e6aaf683c45700544e3eba/summary",
-          "species": "Anteos menippe",
+          "url_gbif": "https://www.gbif.org/species/1900787",
+          "species": "Heliconius sara",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Lepidoptera",
-          "family": "Pieridae",
-          "genus": "Anteos"
+          "family": "Nymphalidae",
+          "genus": "Heliconius"
+        },
+        {
+          "label": "Parides lysander",
+          "registros": 5,
+          "slug_especie": "parides-lysander",
+          "slug_grupo": "mariposas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1937151",
+          "species": "Parides lysander",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Papilionidae",
+          "genus": "Parides"
         },
         {
           "label": "Battus polydamas",
@@ -15755,19 +15754,19 @@
           "genus": "Battus"
         },
         {
-          "label": "Catoblepia xanthus",
+          "label": "Marpesia petreus",
           "registros": 5,
-          "slug_especie": "catoblepia-xanthus",
+          "slug_especie": "marpesia-petreus",
           "slug_grupo": "mariposas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1895693",
-          "species": "Catoblepia xanthus",
+          "url_gbif": "https://www.gbif.org/species/5133621",
+          "species": "Marpesia petreus",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Lepidoptera",
           "family": "Nymphalidae",
-          "genus": "Catoblepia"
+          "genus": "Marpesia"
         },
         {
           "label": "Eunica alpais",
@@ -15783,6 +15782,82 @@
           "order": "Lepidoptera",
           "family": "Nymphalidae",
           "genus": "Eunica"
+        },
+        {
+          "label": "Catoblepia xanthus",
+          "registros": 5,
+          "slug_especie": "catoblepia-xanthus",
+          "slug_grupo": "mariposas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1895693",
+          "species": "Catoblepia xanthus",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Catoblepia"
+        },
+        {
+          "label": "Heliconius melpomene",
+          "registros": 5,
+          "slug_especie": "heliconius-melpomene",
+          "slug_grupo": "mariposas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1900303",
+          "species": "Heliconius melpomene",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Heliconius"
+        },
+        {
+          "label": "Temenis laothoe",
+          "registros": 5,
+          "slug_especie": "temenis-laothoe",
+          "slug_grupo": "mariposas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1903607",
+          "species": "Temenis laothoe",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Temenis"
+        },
+        {
+          "label": "Phoebis argante",
+          "registros": 5,
+          "slug_especie": "phoebis-argante",
+          "slug_grupo": "mariposas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1919656",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7654883c45700544e3fcc/summary",
+          "species": "Phoebis argante",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Pieridae",
+          "genus": "Phoebis"
+        },
+        {
+          "label": "Heliconius erato",
+          "registros": 5,
+          "slug_especie": "heliconius-erato",
+          "slug_grupo": "mariposas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1900872",
+          "species": "Heliconius erato",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Heliconius"
         },
         {
           "label": "Eunica malvina",
@@ -15815,51 +15890,6 @@
           "genus": "Heliconius"
         },
         {
-          "label": "Heliconius erato",
-          "registros": 5,
-          "slug_especie": "heliconius-erato",
-          "slug_grupo": "mariposas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1900872",
-          "species": "Heliconius erato",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Heliconius"
-        },
-        {
-          "label": "Heliconius melpomene",
-          "registros": 5,
-          "slug_especie": "heliconius-melpomene",
-          "slug_grupo": "mariposas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1900303",
-          "species": "Heliconius melpomene",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Heliconius"
-        },
-        {
-          "label": "Marpesia petreus",
-          "registros": 5,
-          "slug_especie": "marpesia-petreus",
-          "slug_grupo": "mariposas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5133621",
-          "species": "Marpesia petreus",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Marpesia"
-        },
-        {
           "label": "Morpho achilles",
           "registros": 5,
           "slug_especie": "morpho-achilles",
@@ -15875,35 +15905,20 @@
           "genus": "Morpho"
         },
         {
-          "label": "Parides lysander",
+          "label": "Anteos menippe",
           "registros": 5,
-          "slug_especie": "parides-lysander",
+          "slug_especie": "anteos-menippe",
           "slug_grupo": "mariposas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1937151",
-          "species": "Parides lysander",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Papilionidae",
-          "genus": "Parides"
-        },
-        {
-          "label": "Phoebis argante",
-          "registros": 5,
-          "slug_especie": "phoebis-argante",
-          "slug_grupo": "mariposas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1919656",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7654883c45700544e3fcc/summary",
-          "species": "Phoebis argante",
+          "url_gbif": "https://www.gbif.org/species/1919129",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e6aaf683c45700544e3eba/summary",
+          "species": "Anteos menippe",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Lepidoptera",
           "family": "Pieridae",
-          "genus": "Phoebis"
+          "genus": "Anteos"
         },
         {
           "label": "Prepona laertes",
@@ -15921,21 +15936,6 @@
           "genus": "Prepona"
         },
         {
-          "label": "Stalachtis euterpe",
-          "registros": 5,
-          "slug_especie": "stalachtis-euterpe",
-          "slug_grupo": "mariposas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1921993",
-          "species": "Stalachtis euterpe",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Riodinidae",
-          "genus": "Stalachtis"
-        },
-        {
           "label": "Stalachtis phlegia",
           "registros": 5,
           "slug_especie": "stalachtis-phlegia",
@@ -15951,19 +15951,19 @@
           "genus": "Stalachtis"
         },
         {
-          "label": "Temenis laothoe",
+          "label": "Stalachtis euterpe",
           "registros": 5,
-          "slug_especie": "temenis-laothoe",
+          "slug_especie": "stalachtis-euterpe",
           "slug_grupo": "mariposas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1903607",
-          "species": "Temenis laothoe",
+          "url_gbif": "https://www.gbif.org/species/1921993",
+          "species": "Stalachtis euterpe",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Temenis"
+          "family": "Riodinidae",
+          "genus": "Stalachtis"
         }
       ],
       "species_list_tematica": {
@@ -17950,20 +17950,6 @@
           "genus": "Microschemobrycon"
         },
         {
-          "label": "Apistogramma hongsloi",
-          "registros": 127,
-          "slug_especie": "apistogramma-hongsloi",
-          "slug_grupo": "peces",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2371301",
-          "species": "Apistogramma hongsloi",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Perciformes",
-          "family": "Cichlidae",
-          "genus": "Apistogramma"
-        },
-        {
           "label": "Hoplias malabaricus",
           "registros": 127,
           "slug_especie": "hoplias-malabaricus",
@@ -17977,6 +17963,20 @@
           "order": "Characiformes",
           "family": "Erythrinidae",
           "genus": "Hoplias"
+        },
+        {
+          "label": "Apistogramma hongsloi",
+          "registros": 127,
+          "slug_especie": "apistogramma-hongsloi",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2371301",
+          "species": "Apistogramma hongsloi",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Perciformes",
+          "family": "Cichlidae",
+          "genus": "Apistogramma"
         },
         {
           "label": "Biotodoma wavrini",
@@ -19012,20 +19012,6 @@
           "genus": "Microschemobrycon"
         },
         {
-          "label": "Apistogramma hongsloi",
-          "registros": 127,
-          "slug_especie": "apistogramma-hongsloi",
-          "slug_grupo": "peces-dulceacuicolas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2371301",
-          "species": "Apistogramma hongsloi",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Perciformes",
-          "family": "Cichlidae",
-          "genus": "Apistogramma"
-        },
-        {
           "label": "Hoplias malabaricus",
           "registros": 127,
           "slug_especie": "hoplias-malabaricus",
@@ -19039,6 +19025,20 @@
           "order": "Characiformes",
           "family": "Erythrinidae",
           "genus": "Hoplias"
+        },
+        {
+          "label": "Apistogramma hongsloi",
+          "registros": 127,
+          "slug_especie": "apistogramma-hongsloi",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2371301",
+          "species": "Apistogramma hongsloi",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Perciformes",
+          "family": "Cichlidae",
+          "genus": "Apistogramma"
         },
         {
           "label": "Biotodoma wavrini",
@@ -21133,6 +21133,23 @@
             "genus": "Cybianthus"
           },
           {
+            "label": "Remijia amphithrix",
+            "registros": 6,
+            "slug_especie": "remijia-amphithrix",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "plantas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2909675",
+            "species": "Remijia amphithrix",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Gentianales",
+            "family": "Rubiaceae",
+            "genus": "Remijia"
+          },
+          {
             "label": "Clitoria hermannii",
             "registros": 6,
             "slug_especie": "clitoria-hermannii",
@@ -21165,23 +21182,6 @@
             "order": "Malpighiales",
             "family": "Passifloraceae",
             "genus": "Passiflora"
-          },
-          {
-            "label": "Remijia amphithrix",
-            "registros": 6,
-            "slug_especie": "remijia-amphithrix",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "plantas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2909675",
-            "species": "Remijia amphithrix",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Gentianales",
-            "family": "Rubiaceae",
-            "genus": "Remijia"
           },
           {
             "label": "Henriettea goudotiana",
@@ -21378,23 +21378,6 @@
             "genus": "Setaria"
           },
           {
-            "label": "Gossypium barbadense",
-            "registros": 14,
-            "slug_especie": "gossypium-barbadense",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "plantas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3152666",
-            "species": "Gossypium barbadense",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Malvales",
-            "family": "Malvaceae",
-            "genus": "Gossypium"
-          },
-          {
             "label": "Lantana camara",
             "registros": 14,
             "slug_especie": "lantana-camara",
@@ -21411,6 +21394,23 @@
             "order": "Lamiales",
             "family": "Verbenaceae",
             "genus": "Lantana"
+          },
+          {
+            "label": "Gossypium barbadense",
+            "registros": 14,
+            "slug_especie": "gossypium-barbadense",
+            "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
+            "slug_grupo": "plantas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/3152666",
+            "species": "Gossypium barbadense",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Malvales",
+            "family": "Malvaceae",
+            "genus": "Gossypium"
           },
           {
             "label": "Ludwigia octovalvis",
@@ -24095,6 +24095,23 @@
             "genus": "Cybianthus"
           },
           {
+            "label": "Remijia amphithrix",
+            "registros": 6,
+            "slug_especie": "remijia-amphithrix",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "vasculares",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2909675",
+            "species": "Remijia amphithrix",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Gentianales",
+            "family": "Rubiaceae",
+            "genus": "Remijia"
+          },
+          {
             "label": "Clitoria hermannii",
             "registros": 6,
             "slug_especie": "clitoria-hermannii",
@@ -24127,23 +24144,6 @@
             "order": "Malpighiales",
             "family": "Passifloraceae",
             "genus": "Passiflora"
-          },
-          {
-            "label": "Remijia amphithrix",
-            "registros": 6,
-            "slug_especie": "remijia-amphithrix",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "vasculares",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2909675",
-            "species": "Remijia amphithrix",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Gentianales",
-            "family": "Rubiaceae",
-            "genus": "Remijia"
           },
           {
             "label": "Henriettea goudotiana",
@@ -24340,23 +24340,6 @@
             "genus": "Setaria"
           },
           {
-            "label": "Gossypium barbadense",
-            "registros": 14,
-            "slug_especie": "gossypium-barbadense",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "vasculares",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3152666",
-            "species": "Gossypium barbadense",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Malvales",
-            "family": "Malvaceae",
-            "genus": "Gossypium"
-          },
-          {
             "label": "Lantana camara",
             "registros": 14,
             "slug_especie": "lantana-camara",
@@ -24373,6 +24356,23 @@
             "order": "Lamiales",
             "family": "Verbenaceae",
             "genus": "Lantana"
+          },
+          {
+            "label": "Gossypium barbadense",
+            "registros": 14,
+            "slug_especie": "gossypium-barbadense",
+            "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
+            "slug_grupo": "vasculares",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/3152666",
+            "species": "Gossypium barbadense",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Malvales",
+            "family": "Malvaceae",
+            "genus": "Gossypium"
           },
           {
             "label": "Ludwigia octovalvis",
@@ -25757,23 +25757,6 @@
             "genus": "Pimelodus"
           },
           {
-            "label": "Brycon whitei",
-            "registros": 7,
-            "slug_especie": "brycon-whitei",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2353452",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/59d172405f369343442f85f4/summary",
-            "species": "Brycon whitei",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "order": "Characiformes",
-            "family": "Bryconidae",
-            "genus": "Brycon"
-          },
-          {
             "label": "Helogenes castaneus",
             "registros": 7,
             "slug_especie": "helogenes-castaneus",
@@ -25789,6 +25772,23 @@
             "order": "Siluriformes",
             "family": "Cetopsidae",
             "genus": "Helogenes"
+          },
+          {
+            "label": "Brycon whitei",
+            "registros": 7,
+            "slug_especie": "brycon-whitei",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2353452",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/59d172405f369343442f85f4/summary",
+            "species": "Brycon whitei",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Characiformes",
+            "family": "Bryconidae",
+            "genus": "Brycon"
           },
           {
             "label": "Hyphessobrycon taguae",
@@ -26287,21 +26287,6 @@
       "subgrupo_especies": [],
       "species_list_top": [
         {
-          "label": "Eriope crassipes",
-          "registros": 36,
-          "slug_especie": "eriope-crassipes",
-          "slug_grupo": "bromelias-labiadas-pasifloras",
-          "tipo": "interes",
-          "url_gbif": "https://www.gbif.org/species/7308679",
-          "species": "Eriope crassipes",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Lamiales",
-          "family": "Lamiaceae",
-          "genus": "Eriope"
-        },
-        {
           "label": "Pitcairnia pruinosa",
           "registros": 36,
           "slug_especie": "pitcairnia-pruinosa",
@@ -26315,6 +26300,21 @@
           "order": "Poales",
           "family": "Bromeliaceae",
           "genus": "Pitcairnia"
+        },
+        {
+          "label": "Eriope crassipes",
+          "registros": 36,
+          "slug_especie": "eriope-crassipes",
+          "slug_grupo": "bromelias-labiadas-pasifloras",
+          "tipo": "interes",
+          "url_gbif": "https://www.gbif.org/species/7308679",
+          "species": "Eriope crassipes",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Lamiales",
+          "family": "Lamiaceae",
+          "genus": "Eriope"
         },
         {
           "label": "Hyptis dilatata",
@@ -26395,6 +26395,21 @@
           "genus": "Vitex"
         },
         {
+          "label": "Passiflora securiclata",
+          "registros": 11,
+          "slug_especie": "passiflora-securiclata",
+          "slug_grupo": "bromelias-labiadas-pasifloras",
+          "tipo": "interes",
+          "url_gbif": "https://www.gbif.org/species/3586874",
+          "species": "Passiflora securiclata",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Malpighiales",
+          "family": "Passifloraceae",
+          "genus": "Passiflora"
+        },
+        {
           "label": "Passiflora auriculata",
           "registros": 11,
           "slug_especie": "passiflora-auriculata",
@@ -26410,19 +26425,19 @@
           "genus": "Passiflora"
         },
         {
-          "label": "Passiflora securiclata",
-          "registros": 11,
-          "slug_especie": "passiflora-securiclata",
+          "label": "Pitcairnia bulbosa",
+          "registros": 9,
+          "slug_especie": "pitcairnia-bulbosa",
           "slug_grupo": "bromelias-labiadas-pasifloras",
           "tipo": "interes",
-          "url_gbif": "https://www.gbif.org/species/3586874",
-          "species": "Passiflora securiclata",
+          "url_gbif": "https://www.gbif.org/species/5288440",
+          "species": "Pitcairnia bulbosa",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Passifloraceae",
-          "genus": "Passiflora"
+          "class": "Liliopsida",
+          "order": "Poales",
+          "family": "Bromeliaceae",
+          "genus": "Pitcairnia"
         },
         {
           "label": "Hyptis lantanifolia",
@@ -26453,21 +26468,6 @@
           "order": "Lamiales",
           "family": "Lamiaceae",
           "genus": "Hyptis"
-        },
-        {
-          "label": "Pitcairnia bulbosa",
-          "registros": 9,
-          "slug_especie": "pitcairnia-bulbosa",
-          "slug_grupo": "bromelias-labiadas-pasifloras",
-          "tipo": "interes",
-          "url_gbif": "https://www.gbif.org/species/5288440",
-          "species": "Pitcairnia bulbosa",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Poales",
-          "family": "Bromeliaceae",
-          "genus": "Pitcairnia"
         }
       ],
       "species_list_tematica": {
@@ -26930,14 +26930,13 @@
           "genus": "Tillandsia"
         },
         {
-          "label": "Epidendrum nocturnum",
+          "label": "Epidendrum norae",
           "registros": 9,
-          "slug_especie": "epidendrum-nocturnum",
+          "slug_especie": "epidendrum-norae",
           "slug_grupo": "epifitas",
           "tipo": "interes",
-          "url_gbif": "https://www.gbif.org/species/5320021",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e1afba83c45700544e3d2b/summary",
-          "species": "Epidendrum nocturnum",
+          "url_gbif": "https://www.gbif.org/species/5319921",
+          "species": "Epidendrum norae",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Liliopsida",
@@ -26946,13 +26945,14 @@
           "genus": "Epidendrum"
         },
         {
-          "label": "Epidendrum norae",
+          "label": "Epidendrum nocturnum",
           "registros": 9,
-          "slug_especie": "epidendrum-norae",
+          "slug_especie": "epidendrum-nocturnum",
           "slug_grupo": "epifitas",
           "tipo": "interes",
-          "url_gbif": "https://www.gbif.org/species/5319921",
-          "species": "Epidendrum norae",
+          "url_gbif": "https://www.gbif.org/species/5320021",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e1afba83c45700544e3d2b/summary",
+          "species": "Epidendrum nocturnum",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Liliopsida",
@@ -27022,22 +27022,6 @@
           "genus": "Neckeropsis"
         },
         {
-          "label": "Epidendrum calanthum",
-          "registros": 4,
-          "slug_especie": "epidendrum-calanthum",
-          "slug_grupo": "epifitas",
-          "tipo": "interes",
-          "url_gbif": "https://www.gbif.org/species/5319698",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e1051b83c45700544e3d0c/summary",
-          "species": "Epidendrum calanthum",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Asparagales",
-          "family": "Orchidaceae",
-          "genus": "Epidendrum"
-        },
-        {
           "label": "Neckeropsis disticha",
           "registros": 4,
           "slug_especie": "neckeropsis-disticha",
@@ -27066,6 +27050,22 @@
           "order": "Poales",
           "family": "Bromeliaceae",
           "genus": "Tillandsia"
+        },
+        {
+          "label": "Epidendrum calanthum",
+          "registros": 4,
+          "slug_especie": "epidendrum-calanthum",
+          "slug_grupo": "epifitas",
+          "tipo": "interes",
+          "url_gbif": "https://www.gbif.org/species/5319698",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e1051b83c45700544e3d0c/summary",
+          "species": "Epidendrum calanthum",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Asparagales",
+          "family": "Orchidaceae",
+          "genus": "Epidendrum"
         }
       ],
       "species_list_tematica": {
@@ -29412,21 +29412,6 @@
           "genus": "Encyclia"
         },
         {
-          "label": "Cyrtopodium paniculatum",
-          "registros": 9,
-          "slug_especie": "cyrtopodium-paniculatum",
-          "slug_grupo": "orquideas",
-          "tipo": "interes",
-          "url_gbif": "https://www.gbif.org/species/5319637",
-          "species": "Cyrtopodium paniculatum",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Asparagales",
-          "family": "Orchidaceae",
-          "genus": "Cyrtopodium"
-        },
-        {
           "label": "Epidendrum nocturnum",
           "registros": 9,
           "slug_especie": "epidendrum-nocturnum",
@@ -29458,19 +29443,19 @@
           "genus": "Epidendrum"
         },
         {
-          "label": "Polystachya foliosa",
-          "registros": 8,
-          "slug_especie": "polystachya-foliosa",
+          "label": "Cyrtopodium paniculatum",
+          "registros": 9,
+          "slug_especie": "cyrtopodium-paniculatum",
           "slug_grupo": "orquideas",
           "tipo": "interes",
-          "url_gbif": "https://www.gbif.org/species/2792004",
-          "species": "Polystachya foliosa",
+          "url_gbif": "https://www.gbif.org/species/5319637",
+          "species": "Cyrtopodium paniculatum",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Liliopsida",
           "order": "Asparagales",
           "family": "Orchidaceae",
-          "genus": "Polystachya"
+          "genus": "Cyrtopodium"
         },
         {
           "label": "Vanilla planifolia",
@@ -29489,19 +29474,35 @@
           "genus": "Vanilla"
         },
         {
-          "label": "Habenaria leprieurii",
-          "registros": 7,
-          "slug_especie": "habenaria-leprieurii",
+          "label": "Polystachya foliosa",
+          "registros": 8,
+          "slug_especie": "polystachya-foliosa",
           "slug_grupo": "orquideas",
           "tipo": "interes",
-          "url_gbif": "https://www.gbif.org/species/2828410",
-          "species": "Habenaria leprieurii",
+          "url_gbif": "https://www.gbif.org/species/2792004",
+          "species": "Polystachya foliosa",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Liliopsida",
           "order": "Asparagales",
           "family": "Orchidaceae",
-          "genus": "Habenaria"
+          "genus": "Polystachya"
+        },
+        {
+          "label": "Prosthechea vespa",
+          "registros": 7,
+          "slug_especie": "prosthechea-vespa",
+          "slug_grupo": "orquideas",
+          "tipo": "interes",
+          "url_gbif": "https://www.gbif.org/species/2794024",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e8348783c45700544e438f/summary",
+          "species": "Prosthechea vespa",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Asparagales",
+          "family": "Orchidaceae",
+          "genus": "Prosthechea"
         },
         {
           "label": "Laelia rosea",
@@ -29519,20 +29520,19 @@
           "genus": "Laelia"
         },
         {
-          "label": "Prosthechea vespa",
+          "label": "Habenaria leprieurii",
           "registros": 7,
-          "slug_especie": "prosthechea-vespa",
+          "slug_especie": "habenaria-leprieurii",
           "slug_grupo": "orquideas",
           "tipo": "interes",
-          "url_gbif": "https://www.gbif.org/species/2794024",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e8348783c45700544e438f/summary",
-          "species": "Prosthechea vespa",
+          "url_gbif": "https://www.gbif.org/species/2828410",
+          "species": "Habenaria leprieurii",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Liliopsida",
           "order": "Asparagales",
           "family": "Orchidaceae",
-          "genus": "Prosthechea"
+          "genus": "Habenaria"
         }
       ],
       "species_list_tematica": {
@@ -29593,21 +29593,22 @@
             "genus": "Vanilla"
           },
           {
-            "label": "Habenaria leprieurii",
+            "label": "Prosthechea vespa",
             "registros": 7,
-            "slug_especie": "habenaria-leprieurii",
+            "slug_especie": "prosthechea-vespa",
             "slug_tematica": "cites-ii",
             "tematica_label": "Apéndice CITES II",
             "slug_grupo": "orquideas",
             "tipo": "interes",
-            "url_gbif": "https://www.gbif.org/species/2828410",
-            "species": "Habenaria leprieurii",
+            "url_gbif": "https://www.gbif.org/species/2794024",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e8348783c45700544e438f/summary",
+            "species": "Prosthechea vespa",
             "kingdom": "Plantae",
             "phylum": "Tracheophyta",
             "class": "Liliopsida",
             "order": "Asparagales",
             "family": "Orchidaceae",
-            "genus": "Habenaria"
+            "genus": "Prosthechea"
           },
           {
             "label": "Laelia rosea",
@@ -29627,39 +29628,21 @@
             "genus": "Laelia"
           },
           {
-            "label": "Prosthechea vespa",
+            "label": "Habenaria leprieurii",
             "registros": 7,
-            "slug_especie": "prosthechea-vespa",
+            "slug_especie": "habenaria-leprieurii",
             "slug_tematica": "cites-ii",
             "tematica_label": "Apéndice CITES II",
             "slug_grupo": "orquideas",
             "tipo": "interes",
-            "url_gbif": "https://www.gbif.org/species/2794024",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e8348783c45700544e438f/summary",
-            "species": "Prosthechea vespa",
+            "url_gbif": "https://www.gbif.org/species/2828410",
+            "species": "Habenaria leprieurii",
             "kingdom": "Plantae",
             "phylum": "Tracheophyta",
             "class": "Liliopsida",
             "order": "Asparagales",
             "family": "Orchidaceae",
-            "genus": "Prosthechea"
-          },
-          {
-            "label": "Cleistes rosea",
-            "registros": 5,
-            "slug_especie": "cleistes-rosea",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "orquideas",
-            "tipo": "interes",
-            "url_gbif": "https://www.gbif.org/species/2785876",
-            "species": "Cleistes rosea",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Liliopsida",
-            "order": "Asparagales",
-            "family": "Orchidaceae",
-            "genus": "Cleistes"
+            "genus": "Habenaria"
           },
           {
             "label": "Duckeella adolphii",
@@ -29694,6 +29677,23 @@
             "order": "Asparagales",
             "family": "Orchidaceae",
             "genus": "Habenaria"
+          },
+          {
+            "label": "Cleistes rosea",
+            "registros": 5,
+            "slug_especie": "cleistes-rosea",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "orquideas",
+            "tipo": "interes",
+            "url_gbif": "https://www.gbif.org/species/2785876",
+            "species": "Cleistes rosea",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Liliopsida",
+            "order": "Asparagales",
+            "family": "Orchidaceae",
+            "genus": "Cleistes"
           },
           {
             "label": "Veyretia aphylla",
@@ -33386,20 +33386,20 @@
   },
   "municipios_lista": [
     {
-      "slug": "santa-rosalia",
-      "label": "Santa Rosalía"
-    },
-    {
       "slug": "la-primavera",
       "label": "La Primavera"
     },
     {
-      "slug": "cumaribo",
-      "label": "Cumaribo"
+      "slug": "santa-rosalia",
+      "label": "Santa Rosalía"
     },
     {
       "slug": "puerto-carreno",
       "label": "Puerto Carreño"
+    },
+    {
+      "slug": "cumaribo",
+      "label": "Cumaribo"
     }
   ],
   "departamentos_lista": [

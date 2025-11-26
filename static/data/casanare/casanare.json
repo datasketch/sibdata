@@ -24,7 +24,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -33,7 +33,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -42,7 +42,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -53,7 +53,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -62,7 +62,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -71,7 +71,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -80,7 +80,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -5429,23 +5429,6 @@
             "genus": "Brownea"
           },
           {
-            "label": "Aristolochia morae",
-            "registros": 14,
-            "slug_especie": "aristolochia-morae",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "angiospermas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3589842",
-            "species": "Aristolochia morae",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Piperales",
-            "family": "Aristolochiaceae",
-            "genus": "Aristolochia"
-          },
-          {
             "label": "Justicia croceochlamys",
             "registros": 14,
             "slug_especie": "justicia-croceochlamys",
@@ -5461,6 +5444,23 @@
             "order": "Lamiales",
             "family": "Acanthaceae",
             "genus": "Justicia"
+          },
+          {
+            "label": "Aristolochia morae",
+            "registros": 14,
+            "slug_especie": "aristolochia-morae",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "angiospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/3589842",
+            "species": "Aristolochia morae",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Piperales",
+            "family": "Aristolochiaceae",
+            "genus": "Aristolochia"
           },
           {
             "label": "Pachira speciosa",
@@ -11350,21 +11350,6 @@
           "genus": "Lutzomyia"
         },
         {
-          "label": "Ornidia obesa",
-          "registros": 5,
-          "slug_especie": "ornidia-obesa",
-          "slug_grupo": "dipteros",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1543378",
-          "species": "Ornidia obesa",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Diptera",
-          "family": "Syrphidae",
-          "genus": "Ornidia"
-        },
-        {
           "label": "Toxorhynchites haemorrhoidalis",
           "registros": 5,
           "slug_especie": "toxorhynchites-haemorrhoidalis",
@@ -11378,6 +11363,21 @@
           "order": "Diptera",
           "family": "Culicidae",
           "genus": "Toxorhynchites"
+        },
+        {
+          "label": "Ornidia obesa",
+          "registros": 5,
+          "slug_especie": "ornidia-obesa",
+          "slug_grupo": "dipteros",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1543378",
+          "species": "Ornidia obesa",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Diptera",
+          "family": "Syrphidae",
+          "genus": "Ornidia"
         },
         {
           "label": "Lepiselaga crassipes",
@@ -11395,21 +11395,6 @@
           "genus": "Lepiselaga"
         },
         {
-          "label": "Nerius pilifer",
-          "registros": 4,
-          "slug_especie": "nerius-pilifer",
-          "slug_grupo": "dipteros",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1675497",
-          "species": "Nerius pilifer",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Diptera",
-          "family": "Neriidae",
-          "genus": "Nerius"
-        },
-        {
           "label": "Ptecticus testaceus",
           "registros": 4,
           "slug_especie": "ptecticus-testaceus",
@@ -11423,6 +11408,21 @@
           "order": "Diptera",
           "family": "Stratiomyidae",
           "genus": "Ptecticus"
+        },
+        {
+          "label": "Nerius pilifer",
+          "registros": 4,
+          "slug_especie": "nerius-pilifer",
+          "slug_grupo": "dipteros",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1675497",
+          "species": "Nerius pilifer",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Diptera",
+          "family": "Neriidae",
+          "genus": "Nerius"
         },
         {
           "label": "Hoplitimyia subalba",
@@ -11453,21 +11453,6 @@
           "order": "Diptera",
           "family": "Tephritidae",
           "genus": "Anastrepha"
-        },
-        {
-          "label": "Chloroprocta idioidea",
-          "registros": 2,
-          "slug_especie": "chloroprocta-idioidea",
-          "slug_grupo": "dipteros",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1504677",
-          "species": "Chloroprocta idioidea",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Diptera",
-          "family": "Calliphoridae",
-          "genus": "Chloroprocta"
         },
         {
           "label": "Menidon falcatus",
@@ -11558,6 +11543,21 @@
           "order": "Diptera",
           "family": "Syrphidae",
           "genus": "Toxomerus"
+        },
+        {
+          "label": "Chloroprocta idioidea",
+          "registros": 2,
+          "slug_especie": "chloroprocta-idioidea",
+          "slug_grupo": "dipteros",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1504677",
+          "species": "Chloroprocta idioidea",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Diptera",
+          "family": "Calliphoridae",
+          "genus": "Chloroprocta"
         }
       ],
       "species_list_tematica": {
@@ -13986,13 +13986,13 @@
           "genus": "Cryptothecia"
         },
         {
-          "label": "Parmotrema eborinum",
+          "label": "Parmotrema gardneri",
           "registros": 360,
-          "slug_especie": "parmotrema-eborinum",
+          "slug_especie": "parmotrema-gardneri",
           "slug_grupo": "hongos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2606397",
-          "species": "Parmotrema eborinum",
+          "url_gbif": "https://www.gbif.org/species/2606252",
+          "species": "Parmotrema gardneri",
           "kingdom": "Fungi",
           "phylum": "Ascomycota",
           "class": "Lecanoromycetes",
@@ -14001,13 +14001,13 @@
           "genus": "Parmotrema"
         },
         {
-          "label": "Parmotrema gardneri",
+          "label": "Parmotrema eborinum",
           "registros": 360,
-          "slug_especie": "parmotrema-gardneri",
+          "slug_especie": "parmotrema-eborinum",
           "slug_grupo": "hongos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2606252",
-          "species": "Parmotrema gardneri",
+          "url_gbif": "https://www.gbif.org/species/2606397",
+          "species": "Parmotrema eborinum",
           "kingdom": "Fungi",
           "phylum": "Ascomycota",
           "class": "Lecanoromycetes",
@@ -14502,21 +14502,6 @@
           "genus": "Crematogaster"
         },
         {
-          "label": "Neoponera verenae",
-          "registros": 40,
-          "slug_especie": "neoponera-verenae",
-          "slug_grupo": "hormigas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/10731650",
-          "species": "Neoponera verenae",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Hymenoptera",
-          "family": "Formicidae",
-          "genus": "Neoponera"
-        },
-        {
           "label": "Solenopsis brevicornis",
           "registros": 40,
           "slug_especie": "solenopsis-brevicornis",
@@ -14530,6 +14515,21 @@
           "order": "Hymenoptera",
           "family": "Formicidae",
           "genus": "Solenopsis"
+        },
+        {
+          "label": "Neoponera verenae",
+          "registros": 40,
+          "slug_especie": "neoponera-verenae",
+          "slug_grupo": "hormigas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/10731650",
+          "species": "Neoponera verenae",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hymenoptera",
+          "family": "Formicidae",
+          "genus": "Neoponera"
         },
         {
           "label": "Ectatomma ruidum",
@@ -15084,21 +15084,6 @@
           "genus": "Pheidole"
         },
         {
-          "label": "Atta cephalotes",
-          "registros": 54,
-          "slug_especie": "atta-cephalotes",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5035748",
-          "species": "Atta cephalotes",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Hymenoptera",
-          "family": "Formicidae",
-          "genus": "Atta"
-        },
-        {
           "label": "Solenopsis vinsoni",
           "registros": 54,
           "slug_especie": "solenopsis-vinsoni",
@@ -15112,6 +15097,21 @@
           "order": "Hymenoptera",
           "family": "Formicidae",
           "genus": "Solenopsis"
+        },
+        {
+          "label": "Atta cephalotes",
+          "registros": 54,
+          "slug_especie": "atta-cephalotes",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5035748",
+          "species": "Atta cephalotes",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hymenoptera",
+          "family": "Formicidae",
+          "genus": "Atta"
         },
         {
           "label": "Anartia jatrophae",
@@ -15759,21 +15759,6 @@
           "genus": "Pheidole"
         },
         {
-          "label": "Atta cephalotes",
-          "registros": 54,
-          "slug_especie": "atta-cephalotes",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5035748",
-          "species": "Atta cephalotes",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Hymenoptera",
-          "family": "Formicidae",
-          "genus": "Atta"
-        },
-        {
           "label": "Solenopsis vinsoni",
           "registros": 54,
           "slug_especie": "solenopsis-vinsoni",
@@ -15787,6 +15772,21 @@
           "order": "Hymenoptera",
           "family": "Formicidae",
           "genus": "Solenopsis"
+        },
+        {
+          "label": "Atta cephalotes",
+          "registros": 54,
+          "slug_especie": "atta-cephalotes",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5035748",
+          "species": "Atta cephalotes",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hymenoptera",
+          "family": "Formicidae",
+          "genus": "Atta"
         },
         {
           "label": "Anartia jatrophae",
@@ -18574,6 +18574,21 @@
           "genus": "Megalobulimus"
         },
         {
+          "label": "Plicopurpura patula",
+          "registros": 3,
+          "slug_especie": "plicopurpura-patula",
+          "slug_grupo": "moluscos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2304449",
+          "species": "Plicopurpura patula",
+          "kingdom": "Animalia",
+          "phylum": "Mollusca",
+          "class": "Gastropoda",
+          "order": "Neogastropoda",
+          "family": "Muricidae",
+          "genus": "Plicopurpura"
+        },
+        {
           "label": "Cerithium eburneum",
           "registros": 3,
           "slug_especie": "cerithium-eburneum",
@@ -18602,21 +18617,6 @@
           "genus": "Cerithium"
         },
         {
-          "label": "Plicopurpura patula",
-          "registros": 3,
-          "slug_especie": "plicopurpura-patula",
-          "slug_grupo": "moluscos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2304449",
-          "species": "Plicopurpura patula",
-          "kingdom": "Animalia",
-          "phylum": "Mollusca",
-          "class": "Gastropoda",
-          "order": "Neogastropoda",
-          "family": "Muricidae",
-          "genus": "Plicopurpura"
-        },
-        {
           "label": "Galba cousini",
           "registros": 2,
           "slug_especie": "galba-cousini",
@@ -18631,34 +18631,19 @@
           "genus": "Galba"
         },
         {
-          "label": "Nerita versicolor",
+          "label": "Vasula deltoidea",
           "registros": 2,
-          "slug_especie": "nerita-versicolor",
+          "slug_especie": "vasula-deltoidea",
           "slug_grupo": "moluscos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5189978",
-          "species": "Nerita versicolor",
+          "url_gbif": "https://www.gbif.org/species/8404178",
+          "species": "Vasula deltoidea",
           "kingdom": "Animalia",
           "phylum": "Mollusca",
           "class": "Gastropoda",
-          "order": "Cycloneritida",
-          "family": "Neritidae",
-          "genus": "Nerita"
-        },
-        {
-          "label": "Plekocheilus succineoides",
-          "registros": 2,
-          "slug_especie": "plekocheilus-succineoides",
-          "slug_grupo": "moluscos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7756582",
-          "species": "Plekocheilus succineoides",
-          "kingdom": "Animalia",
-          "phylum": "Mollusca",
-          "class": "Gastropoda",
-          "order": "Stylommatophora",
-          "family": "Amphibulimidae",
-          "genus": "Plekocheilus"
+          "order": "Neogastropoda",
+          "family": "Muricidae",
+          "genus": "Vasula"
         },
         {
           "label": "Tonna pennata",
@@ -18676,19 +18661,34 @@
           "genus": "Tonna"
         },
         {
-          "label": "Vasula deltoidea",
+          "label": "Plekocheilus succineoides",
           "registros": 2,
-          "slug_especie": "vasula-deltoidea",
+          "slug_especie": "plekocheilus-succineoides",
           "slug_grupo": "moluscos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/8404178",
-          "species": "Vasula deltoidea",
+          "url_gbif": "https://www.gbif.org/species/7756582",
+          "species": "Plekocheilus succineoides",
           "kingdom": "Animalia",
           "phylum": "Mollusca",
           "class": "Gastropoda",
-          "order": "Neogastropoda",
-          "family": "Muricidae",
-          "genus": "Vasula"
+          "order": "Stylommatophora",
+          "family": "Amphibulimidae",
+          "genus": "Plekocheilus"
+        },
+        {
+          "label": "Nerita versicolor",
+          "registros": 2,
+          "slug_especie": "nerita-versicolor",
+          "slug_grupo": "moluscos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5189978",
+          "species": "Nerita versicolor",
+          "kingdom": "Animalia",
+          "phylum": "Mollusca",
+          "class": "Gastropoda",
+          "order": "Cycloneritida",
+          "family": "Neritidae",
+          "genus": "Nerita"
         }
       ],
       "species_list_tematica": {
@@ -23040,23 +23040,6 @@
             "genus": "Handroanthus"
           },
           {
-            "label": "Croton cupreatus",
-            "registros": 4,
-            "slug_especie": "croton-cupreatus",
-            "slug_tematica": "amenazadas-global-vu",
-            "tematica_label": "VU",
-            "slug_grupo": "plantas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3057841",
-            "species": "Croton cupreatus",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Malpighiales",
-            "family": "Euphorbiaceae",
-            "genus": "Croton"
-          },
-          {
             "label": "Pouteria macrocarpa",
             "registros": 4,
             "slug_especie": "pouteria-macrocarpa",
@@ -23072,6 +23055,23 @@
             "order": "Ericales",
             "family": "Sapotaceae",
             "genus": "Pouteria"
+          },
+          {
+            "label": "Croton cupreatus",
+            "registros": 4,
+            "slug_especie": "croton-cupreatus",
+            "slug_tematica": "amenazadas-global-vu",
+            "tematica_label": "VU",
+            "slug_grupo": "plantas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/3057841",
+            "species": "Croton cupreatus",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Malpighiales",
+            "family": "Euphorbiaceae",
+            "genus": "Croton"
           }
         ],
         "cites": [
@@ -23392,23 +23392,6 @@
             "genus": "Brownea"
           },
           {
-            "label": "Aristolochia morae",
-            "registros": 14,
-            "slug_especie": "aristolochia-morae",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "plantas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3589842",
-            "species": "Aristolochia morae",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Piperales",
-            "family": "Aristolochiaceae",
-            "genus": "Aristolochia"
-          },
-          {
             "label": "Justicia croceochlamys",
             "registros": 14,
             "slug_especie": "justicia-croceochlamys",
@@ -23424,6 +23407,23 @@
             "order": "Lamiales",
             "family": "Acanthaceae",
             "genus": "Justicia"
+          },
+          {
+            "label": "Aristolochia morae",
+            "registros": 14,
+            "slug_especie": "aristolochia-morae",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "plantas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/3589842",
+            "species": "Aristolochia morae",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Piperales",
+            "family": "Aristolochiaceae",
+            "genus": "Aristolochia"
           },
           {
             "label": "Pachira speciosa",
@@ -25821,23 +25821,6 @@
             "genus": "Handroanthus"
           },
           {
-            "label": "Croton cupreatus",
-            "registros": 4,
-            "slug_especie": "croton-cupreatus",
-            "slug_tematica": "amenazadas-global-vu",
-            "tematica_label": "VU",
-            "slug_grupo": "vasculares",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3057841",
-            "species": "Croton cupreatus",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Malpighiales",
-            "family": "Euphorbiaceae",
-            "genus": "Croton"
-          },
-          {
             "label": "Pouteria macrocarpa",
             "registros": 4,
             "slug_especie": "pouteria-macrocarpa",
@@ -25853,6 +25836,23 @@
             "order": "Ericales",
             "family": "Sapotaceae",
             "genus": "Pouteria"
+          },
+          {
+            "label": "Croton cupreatus",
+            "registros": 4,
+            "slug_especie": "croton-cupreatus",
+            "slug_tematica": "amenazadas-global-vu",
+            "tematica_label": "VU",
+            "slug_grupo": "vasculares",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/3057841",
+            "species": "Croton cupreatus",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Malpighiales",
+            "family": "Euphorbiaceae",
+            "genus": "Croton"
           }
         ],
         "cites": [
@@ -26173,23 +26173,6 @@
             "genus": "Brownea"
           },
           {
-            "label": "Aristolochia morae",
-            "registros": 14,
-            "slug_especie": "aristolochia-morae",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "vasculares",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3589842",
-            "species": "Aristolochia morae",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Piperales",
-            "family": "Aristolochiaceae",
-            "genus": "Aristolochia"
-          },
-          {
             "label": "Justicia croceochlamys",
             "registros": 14,
             "slug_especie": "justicia-croceochlamys",
@@ -26205,6 +26188,23 @@
             "order": "Lamiales",
             "family": "Acanthaceae",
             "genus": "Justicia"
+          },
+          {
+            "label": "Aristolochia morae",
+            "registros": 14,
+            "slug_especie": "aristolochia-morae",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "vasculares",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/3589842",
+            "species": "Aristolochia morae",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Piperales",
+            "family": "Aristolochiaceae",
+            "genus": "Aristolochia"
           },
           {
             "label": "Pachira speciosa",
@@ -38005,20 +38005,20 @@
   },
   "municipios_lista": [
     {
-      "slug": "aguazul",
-      "label": "Aguazul"
+      "slug": "mani",
+      "label": "Maní"
     },
     {
-      "slug": "monterrey",
-      "label": "Monterrey"
+      "slug": "orocue",
+      "label": "Orocué"
     },
     {
-      "slug": "sacama",
-      "label": "Sácama"
+      "slug": "san-luis-de-palenque",
+      "label": "San Luis de Palenque"
     },
     {
-      "slug": "villanueva-cas",
-      "label": "Villanueva"
+      "slug": "tamara",
+      "label": "Támara"
     },
     {
       "slug": "chameza",
@@ -38037,40 +38037,8 @@
       "label": "Recetor"
     },
     {
-      "slug": "la-salina",
-      "label": "La Salina"
-    },
-    {
-      "slug": "sabanalarga-cas",
-      "label": "Sabanalarga"
-    },
-    {
       "slug": "hato-corozal",
       "label": "Hato Corozal"
-    },
-    {
-      "slug": "mani",
-      "label": "Maní"
-    },
-    {
-      "slug": "orocue",
-      "label": "Orocué"
-    },
-    {
-      "slug": "tamara",
-      "label": "Támara"
-    },
-    {
-      "slug": "yopal",
-      "label": "Yopal"
-    },
-    {
-      "slug": "san-luis-de-palenque",
-      "label": "San Luis de Palenque"
-    },
-    {
-      "slug": "trinidad",
-      "label": "Trinidad"
     },
     {
       "slug": "paz-de-ariporo",
@@ -38079,6 +38047,38 @@
     {
       "slug": "tauramena",
       "label": "Tauramena"
+    },
+    {
+      "slug": "aguazul",
+      "label": "Aguazul"
+    },
+    {
+      "slug": "monterrey",
+      "label": "Monterrey"
+    },
+    {
+      "slug": "sacama",
+      "label": "Sácama"
+    },
+    {
+      "slug": "villanueva-cas",
+      "label": "Villanueva"
+    },
+    {
+      "slug": "yopal",
+      "label": "Yopal"
+    },
+    {
+      "slug": "la-salina",
+      "label": "La Salina"
+    },
+    {
+      "slug": "sabanalarga-cas",
+      "label": "Sabanalarga"
+    },
+    {
+      "slug": "trinidad",
+      "label": "Trinidad"
     }
   ],
   "departamentos_lista": [

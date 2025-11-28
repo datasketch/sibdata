@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -2273,22 +2273,6 @@
           "genus": "Coereba"
         },
         {
-          "label": "Empidonax virescens",
-          "registros": 6,
-          "slug_especie": "empidonax-virescens",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2482802",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e09afa83c45700544e3cd7/summary",
-          "species": "Empidonax virescens",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Tyrannidae",
-          "genus": "Empidonax"
-        },
-        {
           "label": "Tyrannus melancholicus",
           "registros": 6,
           "slug_especie": "tyrannus-melancholicus",
@@ -2305,6 +2289,22 @@
           "genus": "Tyrannus"
         },
         {
+          "label": "Empidonax virescens",
+          "registros": 6,
+          "slug_especie": "empidonax-virescens",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2482802",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e09afa83c45700544e3cd7/summary",
+          "species": "Empidonax virescens",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Tyrannidae",
+          "genus": "Empidonax"
+        },
+        {
           "label": "Ortalis columbiana",
           "registros": 5,
           "slug_especie": "ortalis-columbiana",
@@ -2318,38 +2318,6 @@
           "order": "Galliformes",
           "family": "Cracidae",
           "genus": "Ortalis"
-        },
-        {
-          "label": "Elaenia flavogaster",
-          "registros": 4,
-          "slug_especie": "elaenia-flavogaster",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5229606",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c68377f0106c67230e73cd/summary",
-          "species": "Elaenia flavogaster",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Tyrannidae",
-          "genus": "Elaenia"
-        },
-        {
-          "label": "Henicorhina leucophrys",
-          "registros": 4,
-          "slug_especie": "henicorhina-leucophrys",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2493957",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9ea3af0106c67230e744d/summary",
-          "species": "Henicorhina leucophrys",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Troglodytidae",
-          "genus": "Henicorhina"
         },
         {
           "label": "Leptopogon superciliaris",
@@ -2368,20 +2336,19 @@
           "genus": "Leptopogon"
         },
         {
-          "label": "Pitangus sulphuratus",
+          "label": "Setophaga pitiayumi",
           "registros": 4,
-          "slug_especie": "pitangus-sulphuratus",
+          "slug_especie": "setophaga-pitiayumi",
           "slug_grupo": "animales",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2482755",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cd0cdf207ecea54a561e5e/summary",
-          "species": "Pitangus sulphuratus",
+          "url_gbif": "https://www.gbif.org/species/7341895",
+          "species": "Setophaga pitiayumi",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Tyrannidae",
-          "genus": "Pitangus"
+          "family": "Parulidae",
+          "genus": "Setophaga"
         },
         {
           "label": "Ramphocelus dimidiatus",
@@ -2400,19 +2367,52 @@
           "genus": "Ramphocelus"
         },
         {
-          "label": "Setophaga pitiayumi",
+          "label": "Pitangus sulphuratus",
           "registros": 4,
-          "slug_especie": "setophaga-pitiayumi",
+          "slug_especie": "pitangus-sulphuratus",
           "slug_grupo": "animales",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7341895",
-          "species": "Setophaga pitiayumi",
+          "url_gbif": "https://www.gbif.org/species/2482755",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cd0cdf207ecea54a561e5e/summary",
+          "species": "Pitangus sulphuratus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Parulidae",
-          "genus": "Setophaga"
+          "family": "Tyrannidae",
+          "genus": "Pitangus"
+        },
+        {
+          "label": "Henicorhina leucophrys",
+          "registros": 4,
+          "slug_especie": "henicorhina-leucophrys",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2493957",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9ea3af0106c67230e744d/summary",
+          "species": "Henicorhina leucophrys",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Troglodytidae",
+          "genus": "Henicorhina"
+        },
+        {
+          "label": "Elaenia flavogaster",
+          "registros": 4,
+          "slug_especie": "elaenia-flavogaster",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5229606",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c68377f0106c67230e73cd/summary",
+          "species": "Elaenia flavogaster",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Tyrannidae",
+          "genus": "Elaenia"
         }
       ],
       "species_list_tematica": {
@@ -3143,20 +3143,51 @@
           "genus": "Ortalis"
         },
         {
-          "label": "Elaenia flavogaster",
+          "label": "Setophaga pitiayumi",
           "registros": 4,
-          "slug_especie": "elaenia-flavogaster",
+          "slug_especie": "setophaga-pitiayumi",
           "slug_grupo": "aves",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5229606",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c68377f0106c67230e73cd/summary",
-          "species": "Elaenia flavogaster",
+          "url_gbif": "https://www.gbif.org/species/7341895",
+          "species": "Setophaga pitiayumi",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Parulidae",
+          "genus": "Setophaga"
+        },
+        {
+          "label": "Ramphocelus dimidiatus",
+          "registros": 4,
+          "slug_especie": "ramphocelus-dimidiatus",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2488424",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56ce36de3c16479905cba793/summary",
+          "species": "Ramphocelus dimidiatus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Ramphocelus"
+        },
+        {
+          "label": "Pitangus sulphuratus",
+          "registros": 4,
+          "slug_especie": "pitangus-sulphuratus",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2482755",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cd0cdf207ecea54a561e5e/summary",
+          "species": "Pitangus sulphuratus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
           "family": "Tyrannidae",
-          "genus": "Elaenia"
+          "genus": "Pitangus"
         },
         {
           "label": "Henicorhina leucophrys",
@@ -3191,51 +3222,20 @@
           "genus": "Leptopogon"
         },
         {
-          "label": "Pitangus sulphuratus",
+          "label": "Elaenia flavogaster",
           "registros": 4,
-          "slug_especie": "pitangus-sulphuratus",
+          "slug_especie": "elaenia-flavogaster",
           "slug_grupo": "aves",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2482755",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cd0cdf207ecea54a561e5e/summary",
-          "species": "Pitangus sulphuratus",
+          "url_gbif": "https://www.gbif.org/species/5229606",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c68377f0106c67230e73cd/summary",
+          "species": "Elaenia flavogaster",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
           "family": "Tyrannidae",
-          "genus": "Pitangus"
-        },
-        {
-          "label": "Ramphocelus dimidiatus",
-          "registros": 4,
-          "slug_especie": "ramphocelus-dimidiatus",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2488424",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56ce36de3c16479905cba793/summary",
-          "species": "Ramphocelus dimidiatus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Ramphocelus"
-        },
-        {
-          "label": "Setophaga pitiayumi",
-          "registros": 4,
-          "slug_especie": "setophaga-pitiayumi",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7341895",
-          "species": "Setophaga pitiayumi",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Parulidae",
-          "genus": "Setophaga"
+          "genus": "Elaenia"
         }
       ],
       "species_list_tematica": {
@@ -4993,21 +4993,6 @@
           "genus": "Podischnus"
         },
         {
-          "label": "Anthoptus epictetus",
-          "registros": 1,
-          "slug_especie": "anthoptus-epictetus",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1950197",
-          "species": "Anthoptus epictetus",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Hesperiidae",
-          "genus": "Anthoptus"
-        },
-        {
           "label": "Catasticta flisa",
           "registros": 1,
           "slug_especie": "catasticta-flisa",
@@ -5143,19 +5128,19 @@
           "genus": "Labarrus"
         },
         {
-          "label": "Lasiocala lucens",
+          "label": "Anthoptus epictetus",
           "registros": 1,
-          "slug_especie": "lasiocala-lucens",
+          "slug_especie": "anthoptus-epictetus",
           "slug_grupo": "insectos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5989715",
-          "species": "Lasiocala lucens",
+          "url_gbif": "https://www.gbif.org/species/1950197",
+          "species": "Anthoptus epictetus",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
-          "order": "Coleoptera",
-          "family": "Scarabaeidae",
-          "genus": "Lasiocala"
+          "order": "Lepidoptera",
+          "family": "Hesperiidae",
+          "genus": "Anthoptus"
         },
         {
           "label": "Leptophobia penthica",
@@ -5277,6 +5262,21 @@
           "order": "Lepidoptera",
           "family": "Riodinidae",
           "genus": "Rhetus"
+        },
+        {
+          "label": "Lasiocala lucens",
+          "registros": 1,
+          "slug_especie": "lasiocala-lucens",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5989715",
+          "species": "Lasiocala lucens",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Coleoptera",
+          "family": "Scarabaeidae",
+          "genus": "Lasiocala"
         }
       ],
       "species_list_tematica": {
@@ -5648,21 +5648,6 @@
           "genus": "Podischnus"
         },
         {
-          "label": "Anthoptus epictetus",
-          "registros": 1,
-          "slug_especie": "anthoptus-epictetus",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1950197",
-          "species": "Anthoptus epictetus",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Hesperiidae",
-          "genus": "Anthoptus"
-        },
-        {
           "label": "Catasticta flisa",
           "registros": 1,
           "slug_especie": "catasticta-flisa",
@@ -5798,19 +5783,19 @@
           "genus": "Labarrus"
         },
         {
-          "label": "Lasiocala lucens",
+          "label": "Anthoptus epictetus",
           "registros": 1,
-          "slug_especie": "lasiocala-lucens",
+          "slug_especie": "anthoptus-epictetus",
           "slug_grupo": "invertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5989715",
-          "species": "Lasiocala lucens",
+          "url_gbif": "https://www.gbif.org/species/1950197",
+          "species": "Anthoptus epictetus",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
-          "order": "Coleoptera",
-          "family": "Scarabaeidae",
-          "genus": "Lasiocala"
+          "order": "Lepidoptera",
+          "family": "Hesperiidae",
+          "genus": "Anthoptus"
         },
         {
           "label": "Leptophobia penthica",
@@ -5932,6 +5917,21 @@
           "order": "Lepidoptera",
           "family": "Riodinidae",
           "genus": "Rhetus"
+        },
+        {
+          "label": "Lasiocala lucens",
+          "registros": 1,
+          "slug_especie": "lasiocala-lucens",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5989715",
+          "species": "Lasiocala lucens",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Coleoptera",
+          "family": "Scarabaeidae",
+          "genus": "Lasiocala"
         }
       ],
       "species_list_tematica": {
@@ -8012,22 +8012,6 @@
           "genus": "Coereba"
         },
         {
-          "label": "Empidonax virescens",
-          "registros": 6,
-          "slug_especie": "empidonax-virescens",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2482802",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e09afa83c45700544e3cd7/summary",
-          "species": "Empidonax virescens",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Tyrannidae",
-          "genus": "Empidonax"
-        },
-        {
           "label": "Tyrannus melancholicus",
           "registros": 6,
           "slug_especie": "tyrannus-melancholicus",
@@ -8042,6 +8026,22 @@
           "order": "Passeriformes",
           "family": "Tyrannidae",
           "genus": "Tyrannus"
+        },
+        {
+          "label": "Empidonax virescens",
+          "registros": 6,
+          "slug_especie": "empidonax-virescens",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2482802",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e09afa83c45700544e3cd7/summary",
+          "species": "Empidonax virescens",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Tyrannidae",
+          "genus": "Empidonax"
         },
         {
           "label": "Ortalis columbiana",
@@ -8075,52 +8075,19 @@
           "genus": "Elaenia"
         },
         {
-          "label": "Henicorhina leucophrys",
+          "label": "Setophaga pitiayumi",
           "registros": 4,
-          "slug_especie": "henicorhina-leucophrys",
+          "slug_especie": "setophaga-pitiayumi",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2493957",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9ea3af0106c67230e744d/summary",
-          "species": "Henicorhina leucophrys",
+          "url_gbif": "https://www.gbif.org/species/7341895",
+          "species": "Setophaga pitiayumi",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Troglodytidae",
-          "genus": "Henicorhina"
-        },
-        {
-          "label": "Leptopogon superciliaris",
-          "registros": 4,
-          "slug_especie": "leptopogon-superciliaris",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5229505",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e2e31083c45700544e3d89/summary",
-          "species": "Leptopogon superciliaris",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Tyrannidae",
-          "genus": "Leptopogon"
-        },
-        {
-          "label": "Pitangus sulphuratus",
-          "registros": 4,
-          "slug_especie": "pitangus-sulphuratus",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2482755",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cd0cdf207ecea54a561e5e/summary",
-          "species": "Pitangus sulphuratus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Tyrannidae",
-          "genus": "Pitangus"
+          "family": "Parulidae",
+          "genus": "Setophaga"
         },
         {
           "label": "Ramphocelus dimidiatus",
@@ -8139,19 +8106,52 @@
           "genus": "Ramphocelus"
         },
         {
-          "label": "Setophaga pitiayumi",
+          "label": "Pitangus sulphuratus",
           "registros": 4,
-          "slug_especie": "setophaga-pitiayumi",
+          "slug_especie": "pitangus-sulphuratus",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7341895",
-          "species": "Setophaga pitiayumi",
+          "url_gbif": "https://www.gbif.org/species/2482755",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cd0cdf207ecea54a561e5e/summary",
+          "species": "Pitangus sulphuratus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Parulidae",
-          "genus": "Setophaga"
+          "family": "Tyrannidae",
+          "genus": "Pitangus"
+        },
+        {
+          "label": "Leptopogon superciliaris",
+          "registros": 4,
+          "slug_especie": "leptopogon-superciliaris",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5229505",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e2e31083c45700544e3d89/summary",
+          "species": "Leptopogon superciliaris",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Tyrannidae",
+          "genus": "Leptopogon"
+        },
+        {
+          "label": "Henicorhina leucophrys",
+          "registros": 4,
+          "slug_especie": "henicorhina-leucophrys",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2493957",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9ea3af0106c67230e744d/summary",
+          "species": "Henicorhina leucophrys",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Troglodytidae",
+          "genus": "Henicorhina"
         }
       ],
       "species_list_tematica": {

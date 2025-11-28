@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -8362,20 +8362,6 @@
       ],
       "species_list_top": [
         {
-          "label": "Larimus argenteus",
-          "registros": 24,
-          "slug_especie": "larimus-argenteus",
-          "slug_grupo": "peces",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2399919",
-          "species": "Larimus argenteus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Perciformes",
-          "family": "Sciaenidae",
-          "genus": "Larimus"
-        },
-        {
           "label": "Peprilus medius",
           "registros": 24,
           "slug_especie": "peprilus-medius",
@@ -8388,6 +8374,20 @@
           "order": "Perciformes",
           "family": "Stromateidae",
           "genus": "Peprilus"
+        },
+        {
+          "label": "Larimus argenteus",
+          "registros": 24,
+          "slug_especie": "larimus-argenteus",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2399919",
+          "species": "Larimus argenteus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Perciformes",
+          "family": "Sciaenidae",
+          "genus": "Larimus"
         },
         {
           "label": "Scomberomorus sierra",
@@ -8419,18 +8419,18 @@
           "genus": "Bagre"
         },
         {
-          "label": "Opisthonema libertate",
+          "label": "Polydactylus approximans",
           "registros": 16,
-          "slug_especie": "opisthonema-libertate",
+          "slug_especie": "polydactylus-approximans",
           "slug_grupo": "peces",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5214557",
-          "species": "Opisthonema libertate",
+          "url_gbif": "https://www.gbif.org/species/2393325",
+          "species": "Polydactylus approximans",
           "kingdom": "Animalia",
           "phylum": "Chordata",
-          "order": "Clupeiformes",
-          "family": "Clupeidae",
-          "genus": "Opisthonema"
+          "order": "Perciformes",
+          "family": "Polynemidae",
+          "genus": "Polydactylus"
         },
         {
           "label": "Peprilus snyderi",
@@ -8447,18 +8447,18 @@
           "genus": "Peprilus"
         },
         {
-          "label": "Polydactylus approximans",
+          "label": "Opisthonema libertate",
           "registros": 16,
-          "slug_especie": "polydactylus-approximans",
+          "slug_especie": "opisthonema-libertate",
           "slug_grupo": "peces",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2393325",
-          "species": "Polydactylus approximans",
+          "url_gbif": "https://www.gbif.org/species/5214557",
+          "species": "Opisthonema libertate",
           "kingdom": "Animalia",
           "phylum": "Chordata",
-          "order": "Perciformes",
-          "family": "Polynemidae",
-          "genus": "Polydactylus"
+          "order": "Clupeiformes",
+          "family": "Clupeidae",
+          "genus": "Opisthonema"
         },
         {
           "label": "Notarius cookei",
@@ -8473,20 +8473,6 @@
           "order": "Siluriformes",
           "family": "Ariidae",
           "genus": "Notarius"
-        },
-        {
-          "label": "Cynoscion squamipinnis",
-          "registros": 12,
-          "slug_especie": "cynoscion-squamipinnis",
-          "slug_grupo": "peces",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2400024",
-          "species": "Cynoscion squamipinnis",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Perciformes",
-          "family": "Sciaenidae",
-          "genus": "Cynoscion"
         },
         {
           "label": "Isopisthus remifer",
@@ -8515,6 +8501,20 @@
           "order": "Perciformes",
           "family": "Sciaenidae",
           "genus": "Paralonchurus"
+        },
+        {
+          "label": "Cynoscion squamipinnis",
+          "registros": 12,
+          "slug_especie": "cynoscion-squamipinnis",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2400024",
+          "species": "Cynoscion squamipinnis",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Perciformes",
+          "family": "Sciaenidae",
+          "genus": "Cynoscion"
         }
       ],
       "species_list_tematica": {
@@ -9342,20 +9342,6 @@
       "subgrupo_especies": [],
       "species_list_top": [
         {
-          "label": "Larimus argenteus",
-          "registros": 24,
-          "slug_especie": "larimus-argenteus",
-          "slug_grupo": "peces-marinos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2399919",
-          "species": "Larimus argenteus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Perciformes",
-          "family": "Sciaenidae",
-          "genus": "Larimus"
-        },
-        {
           "label": "Peprilus medius",
           "registros": 24,
           "slug_especie": "peprilus-medius",
@@ -9368,6 +9354,20 @@
           "order": "Perciformes",
           "family": "Stromateidae",
           "genus": "Peprilus"
+        },
+        {
+          "label": "Larimus argenteus",
+          "registros": 24,
+          "slug_especie": "larimus-argenteus",
+          "slug_grupo": "peces-marinos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2399919",
+          "species": "Larimus argenteus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Perciformes",
+          "family": "Sciaenidae",
+          "genus": "Larimus"
         },
         {
           "label": "Scomberomorus sierra",
@@ -9399,18 +9399,18 @@
           "genus": "Bagre"
         },
         {
-          "label": "Opisthonema libertate",
+          "label": "Polydactylus approximans",
           "registros": 16,
-          "slug_especie": "opisthonema-libertate",
+          "slug_especie": "polydactylus-approximans",
           "slug_grupo": "peces-marinos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5214557",
-          "species": "Opisthonema libertate",
+          "url_gbif": "https://www.gbif.org/species/2393325",
+          "species": "Polydactylus approximans",
           "kingdom": "Animalia",
           "phylum": "Chordata",
-          "order": "Clupeiformes",
-          "family": "Clupeidae",
-          "genus": "Opisthonema"
+          "order": "Perciformes",
+          "family": "Polynemidae",
+          "genus": "Polydactylus"
         },
         {
           "label": "Peprilus snyderi",
@@ -9427,18 +9427,18 @@
           "genus": "Peprilus"
         },
         {
-          "label": "Polydactylus approximans",
+          "label": "Opisthonema libertate",
           "registros": 16,
-          "slug_especie": "polydactylus-approximans",
+          "slug_especie": "opisthonema-libertate",
           "slug_grupo": "peces-marinos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2393325",
-          "species": "Polydactylus approximans",
+          "url_gbif": "https://www.gbif.org/species/5214557",
+          "species": "Opisthonema libertate",
           "kingdom": "Animalia",
           "phylum": "Chordata",
-          "order": "Perciformes",
-          "family": "Polynemidae",
-          "genus": "Polydactylus"
+          "order": "Clupeiformes",
+          "family": "Clupeidae",
+          "genus": "Opisthonema"
         },
         {
           "label": "Cynoscion squamipinnis",
@@ -9455,20 +9455,6 @@
           "genus": "Cynoscion"
         },
         {
-          "label": "Isopisthus remifer",
-          "registros": 12,
-          "slug_especie": "isopisthus-remifer",
-          "slug_grupo": "peces-marinos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2399637",
-          "species": "Isopisthus remifer",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Perciformes",
-          "family": "Sciaenidae",
-          "genus": "Isopisthus"
-        },
-        {
           "label": "Paralonchurus petersii",
           "registros": 12,
           "slug_especie": "paralonchurus-petersii",
@@ -9481,6 +9467,20 @@
           "order": "Perciformes",
           "family": "Sciaenidae",
           "genus": "Paralonchurus"
+        },
+        {
+          "label": "Isopisthus remifer",
+          "registros": 12,
+          "slug_especie": "isopisthus-remifer",
+          "slug_grupo": "peces-marinos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2399637",
+          "species": "Isopisthus remifer",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Perciformes",
+          "family": "Sciaenidae",
+          "genus": "Isopisthus"
         }
       ],
       "species_list_tematica": {
@@ -9909,21 +9909,6 @@
           "genus": "Symbiezidium"
         },
         {
-          "label": "Acrolejeunea torulosa",
-          "registros": 14,
-          "slug_especie": "acrolejeunea-torulosa",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5286328",
-          "species": "Acrolejeunea torulosa",
-          "kingdom": "Plantae",
-          "phylum": "Marchantiophyta",
-          "class": "Jungermanniopsida",
-          "order": "Porellales",
-          "family": "Lejeuneaceae",
-          "genus": "Acrolejeunea"
-        },
-        {
           "label": "Taxithelium planum",
           "registros": 14,
           "slug_especie": "taxithelium-planum",
@@ -9937,6 +9922,21 @@
           "order": "Hypnales",
           "family": "Pylaisiadelphaceae",
           "genus": "Taxithelium"
+        },
+        {
+          "label": "Acrolejeunea torulosa",
+          "registros": 14,
+          "slug_especie": "acrolejeunea-torulosa",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5286328",
+          "species": "Acrolejeunea torulosa",
+          "kingdom": "Plantae",
+          "phylum": "Marchantiophyta",
+          "class": "Jungermanniopsida",
+          "order": "Porellales",
+          "family": "Lejeuneaceae",
+          "genus": "Acrolejeunea"
         },
         {
           "label": "Cheilolejeunea trifaria",

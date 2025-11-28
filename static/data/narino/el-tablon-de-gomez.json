@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -3443,24 +3443,6 @@
             "genus": "Glaucidium"
           },
           {
-            "label": "Lesbia victoriae",
-            "registros": 15,
-            "slug_especie": "lesbia-victoriae",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5228496",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56ca3180f0106c67230e7457/summary",
-            "species": "Lesbia victoriae",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Lesbia"
-          },
-          {
             "label": "Metallura tyrianthina",
             "registros": 15,
             "slug_especie": "metallura-tyrianthina",
@@ -3477,6 +3459,24 @@
             "order": "Apodiformes",
             "family": "Trochilidae",
             "genus": "Metallura"
+          },
+          {
+            "label": "Lesbia victoriae",
+            "registros": 15,
+            "slug_especie": "lesbia-victoriae",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5228496",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56ca3180f0106c67230e7457/summary",
+            "species": "Lesbia victoriae",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Lesbia"
           },
           {
             "label": "Haplophaedia aureliae",
@@ -4575,6 +4575,21 @@
           "genus": "Diglossa"
         },
         {
+          "label": "Tangara vassorii",
+          "registros": 27,
+          "slug_especie": "tangara-vassorii",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2488175",
+          "species": "Tangara vassorii",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Tangara"
+        },
+        {
           "label": "Coragyps atratus",
           "registros": 27,
           "slug_especie": "coragyps-atratus",
@@ -4589,21 +4604,6 @@
           "order": "Accipitriformes",
           "family": "Cathartidae",
           "genus": "Coragyps"
-        },
-        {
-          "label": "Tangara vassorii",
-          "registros": 27,
-          "slug_especie": "tangara-vassorii",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2488175",
-          "species": "Tangara vassorii",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Tangara"
         },
         {
           "label": "Eriocnemis vestita",
@@ -4873,24 +4873,6 @@
             "genus": "Glaucidium"
           },
           {
-            "label": "Lesbia victoriae",
-            "registros": 15,
-            "slug_especie": "lesbia-victoriae",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5228496",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56ca3180f0106c67230e7457/summary",
-            "species": "Lesbia victoriae",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Lesbia"
-          },
-          {
             "label": "Metallura tyrianthina",
             "registros": 15,
             "slug_especie": "metallura-tyrianthina",
@@ -4907,6 +4889,24 @@
             "order": "Apodiformes",
             "family": "Trochilidae",
             "genus": "Metallura"
+          },
+          {
+            "label": "Lesbia victoriae",
+            "registros": 15,
+            "slug_especie": "lesbia-victoriae",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5228496",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56ca3180f0106c67230e7457/summary",
+            "species": "Lesbia victoriae",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Lesbia"
           },
           {
             "label": "Haplophaedia aureliae",
@@ -11246,24 +11246,6 @@
             "genus": "Glaucidium"
           },
           {
-            "label": "Lesbia victoriae",
-            "registros": 15,
-            "slug_especie": "lesbia-victoriae",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5228496",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56ca3180f0106c67230e7457/summary",
-            "species": "Lesbia victoriae",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Lesbia"
-          },
-          {
             "label": "Metallura tyrianthina",
             "registros": 15,
             "slug_especie": "metallura-tyrianthina",
@@ -11280,6 +11262,24 @@
             "order": "Apodiformes",
             "family": "Trochilidae",
             "genus": "Metallura"
+          },
+          {
+            "label": "Lesbia victoriae",
+            "registros": 15,
+            "slug_especie": "lesbia-victoriae",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5228496",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56ca3180f0106c67230e7457/summary",
+            "species": "Lesbia victoriae",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Lesbia"
           },
           {
             "label": "Haplophaedia aureliae",

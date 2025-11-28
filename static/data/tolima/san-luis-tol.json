@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -1345,18 +1345,18 @@
           "slug_tematica": "endemicas"
         },
         {
+          "label": "Trichomycterus transandianus",
+          "slug_especie": "trichomycterus-transandianus",
+          "registros": 35,
+          "url_gbif": "https://www.gbif.org/species/2343168",
+          "slug_tematica": "endemicas"
+        },
+        {
           "label": "Chaetostoma milesi",
           "slug_especie": "chaetostoma-milesi",
           "registros": 35,
           "url_gbif": "https://www.gbif.org/species/5202359",
           "url_cbc": "https://catalogo.biodiversidad.co/file/5970d5da2f4fd7bc7f3a673a/summary",
-          "slug_tematica": "endemicas"
-        },
-        {
-          "label": "Trichomycterus transandianus",
-          "slug_especie": "trichomycterus-transandianus",
-          "registros": 35,
-          "url_gbif": "https://www.gbif.org/species/2343168",
           "slug_tematica": "endemicas"
         },
         {
@@ -2445,20 +2445,20 @@
           "genus": "Passiflora"
         },
         {
-          "label": "Acalypha macrostachya",
+          "label": "Solanum colombianum",
           "registros": 3,
-          "slug_especie": "acalypha-macrostachya",
+          "slug_especie": "solanum-colombianum",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3056437",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/595a7c9a2f4fd7bc7f39e11c/summary",
-          "species": "Acalypha macrostachya",
+          "url_gbif": "https://www.gbif.org/species/2929070",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7a36d83c45700544e4261/summary",
+          "species": "Solanum colombianum",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Euphorbiaceae",
-          "genus": "Acalypha"
+          "order": "Solanales",
+          "family": "Solanaceae",
+          "genus": "Solanum"
         },
         {
           "label": "Petrea pubescens",
@@ -2476,20 +2476,35 @@
           "genus": "Petrea"
         },
         {
-          "label": "Solanum colombianum",
+          "label": "Acalypha macrostachya",
           "registros": 3,
-          "slug_especie": "solanum-colombianum",
+          "slug_especie": "acalypha-macrostachya",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2929070",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7a36d83c45700544e4261/summary",
-          "species": "Solanum colombianum",
+          "url_gbif": "https://www.gbif.org/species/3056437",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/595a7c9a2f4fd7bc7f39e11c/summary",
+          "species": "Acalypha macrostachya",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Solanales",
-          "family": "Solanaceae",
-          "genus": "Solanum"
+          "order": "Malpighiales",
+          "family": "Euphorbiaceae",
+          "genus": "Acalypha"
+        },
+        {
+          "label": "Cucumis melo",
+          "registros": 2,
+          "slug_especie": "cucumis-melo",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2874570",
+          "species": "Cucumis melo",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Cucurbitales",
+          "family": "Cucurbitaceae",
+          "genus": "Cucumis"
         },
         {
           "label": "Acalypha schiedeana",
@@ -2507,6 +2522,38 @@
           "genus": "Acalypha"
         },
         {
+          "label": "Pithecellobium dulce",
+          "registros": 2,
+          "slug_especie": "pithecellobium-dulce",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2962831",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/59493f792f4fd7bc7f3972ab/summary",
+          "species": "Pithecellobium dulce",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Pithecellobium"
+        },
+        {
+          "label": "Mimosa pudica",
+          "registros": 2,
+          "slug_especie": "mimosa-pudica",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2969284",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/595462962f4fd7bc7f39a8a0/summary",
+          "species": "Mimosa pudica",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Mimosa"
+        },
+        {
           "label": "Croton leptostachyus",
           "registros": 2,
           "slug_especie": "croton-leptostachyus",
@@ -2521,21 +2568,6 @@
           "order": "Malpighiales",
           "family": "Euphorbiaceae",
           "genus": "Croton"
-        },
-        {
-          "label": "Cucumis melo",
-          "registros": 2,
-          "slug_especie": "cucumis-melo",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2874570",
-          "species": "Cucumis melo",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Cucurbitales",
-          "family": "Cucurbitaceae",
-          "genus": "Cucumis"
         },
         {
           "label": "Inga vera",
@@ -2567,38 +2599,6 @@
           "order": "Solanales",
           "family": "Convolvulaceae",
           "genus": "Ipomoea"
-        },
-        {
-          "label": "Mimosa pudica",
-          "registros": 2,
-          "slug_especie": "mimosa-pudica",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2969284",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/595462962f4fd7bc7f39a8a0/summary",
-          "species": "Mimosa pudica",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Mimosa"
-        },
-        {
-          "label": "Pithecellobium dulce",
-          "registros": 2,
-          "slug_especie": "pithecellobium-dulce",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2962831",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/59493f792f4fd7bc7f3972ab/summary",
-          "species": "Pithecellobium dulce",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Pithecellobium"
         }
       ],
       "species_list_tematica": {
@@ -3828,6 +3828,22 @@
             "genus": "Euphonia"
           },
           {
+            "label": "Trichomycterus transandianus",
+            "registros": 35,
+            "slug_especie": "trichomycterus-transandianus",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2343168",
+            "species": "Trichomycterus transandianus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Siluriformes",
+            "family": "Trichomycteridae",
+            "genus": "Trichomycterus"
+          },
+          {
             "label": "Chaetostoma milesi",
             "registros": 35,
             "slug_especie": "chaetostoma-milesi",
@@ -3843,22 +3859,6 @@
             "order": "Siluriformes",
             "family": "Loricariidae",
             "genus": "Chaetostoma"
-          },
-          {
-            "label": "Trichomycterus transandianus",
-            "registros": 35,
-            "slug_especie": "trichomycterus-transandianus",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2343168",
-            "species": "Trichomycterus transandianus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "order": "Siluriformes",
-            "family": "Trichomycteridae",
-            "genus": "Trichomycterus"
           },
           {
             "label": "Sturisomatichthys leightoni",
@@ -8815,21 +8815,6 @@
           "genus": "Aleurotrachelus"
         },
         {
-          "label": "Bemisia tuberculata",
-          "registros": 3,
-          "slug_especie": "bemisia-tuberculata",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7753565",
-          "species": "Bemisia tuberculata",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Hemiptera",
-          "family": "Aleyrodidae",
-          "genus": "Bemisia"
-        },
-        {
           "label": "Lissonites canadensis",
           "registros": 3,
           "slug_especie": "lissonites-canadensis",
@@ -8843,6 +8828,21 @@
           "order": "Ceratitida",
           "family": "Metasibiritidae",
           "genus": "Lissonites"
+        },
+        {
+          "label": "Bemisia tuberculata",
+          "registros": 3,
+          "slug_especie": "bemisia-tuberculata",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7753565",
+          "species": "Bemisia tuberculata",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hemiptera",
+          "family": "Aleyrodidae",
+          "genus": "Bemisia"
         },
         {
           "label": "Peripleurites roemeri",
@@ -8860,6 +8860,21 @@
           "genus": "Peripleurites"
         },
         {
+          "label": "Rhabdoceras suessi",
+          "registros": 2,
+          "slug_especie": "rhabdoceras-suessi",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5798144",
+          "species": "Rhabdoceras suessi",
+          "kingdom": "Animalia",
+          "phylum": "Mollusca",
+          "class": "Cephalopoda",
+          "order": "Ceratitida",
+          "family": "Rhabdoceratidae",
+          "genus": "Rhabdoceras"
+        },
+        {
           "label": "Cycloceltites cowichanensis",
           "registros": 2,
           "slug_especie": "cycloceltites-cowichanensis",
@@ -8873,36 +8888,6 @@
           "order": "Ceratitida",
           "family": "Cycloceltitidae",
           "genus": "Cycloceltites"
-        },
-        {
-          "label": "Heminautilus etheringtoni",
-          "registros": 2,
-          "slug_especie": "heminautilus-etheringtoni",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/8516588",
-          "species": "Heminautilus etheringtoni",
-          "kingdom": "Animalia",
-          "phylum": "Mollusca",
-          "class": "Cephalopoda",
-          "order": "Nautilida",
-          "family": "Cymatoceratidae",
-          "genus": "Heminautilus"
-        },
-        {
-          "label": "Megalobulimus oblongus",
-          "registros": 2,
-          "slug_especie": "megalobulimus-oblongus",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/9189798",
-          "species": "Megalobulimus oblongus",
-          "kingdom": "Animalia",
-          "phylum": "Mollusca",
-          "class": "Gastropoda",
-          "order": "Stylommatophora",
-          "family": "Strophocheilidae",
-          "genus": "Megalobulimus"
         },
         {
           "label": "Pacimonotis subcircularis",
@@ -8920,94 +8905,49 @@
           "genus": "Pacimonotis"
         },
         {
-          "label": "Rhabdoceras suessi",
+          "label": "Megalobulimus oblongus",
           "registros": 2,
-          "slug_especie": "rhabdoceras-suessi",
+          "slug_especie": "megalobulimus-oblongus",
           "slug_grupo": "invertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5798144",
-          "species": "Rhabdoceras suessi",
+          "url_gbif": "https://www.gbif.org/species/9189798",
+          "species": "Megalobulimus oblongus",
           "kingdom": "Animalia",
           "phylum": "Mollusca",
-          "class": "Cephalopoda",
-          "order": "Ceratitida",
-          "family": "Rhabdoceratidae",
-          "genus": "Rhabdoceras"
+          "class": "Gastropoda",
+          "order": "Stylommatophora",
+          "family": "Strophocheilidae",
+          "genus": "Megalobulimus"
         },
         {
-          "label": "Anartia amathea",
-          "registros": 1,
-          "slug_especie": "anartia-amathea",
+          "label": "Heminautilus etheringtoni",
+          "registros": 2,
+          "slug_especie": "heminautilus-etheringtoni",
           "slug_grupo": "invertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5128011",
-          "species": "Anartia amathea",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Anartia"
-        },
-        {
-          "label": "Brevianta undulata",
-          "registros": 1,
-          "slug_especie": "brevianta-undulata",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/9952386",
-          "species": "Brevianta undulata",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Lycaenidae",
-          "genus": "Brevianta"
-        },
-        {
-          "label": "Cymatoceras colombiana",
-          "registros": 1,
-          "slug_especie": "cymatoceras-colombiana",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/8514354",
-          "species": "Cymatoceras colombiana",
+          "url_gbif": "https://www.gbif.org/species/8516588",
+          "species": "Heminautilus etheringtoni",
           "kingdom": "Animalia",
           "phylum": "Mollusca",
           "class": "Cephalopoda",
           "order": "Nautilida",
           "family": "Cymatoceratidae",
-          "genus": "Cymatoceras"
+          "genus": "Heminautilus"
         },
         {
-          "label": "Emesis lucinda",
+          "label": "Morpho helenor",
           "registros": 1,
-          "slug_especie": "emesis-lucinda",
+          "slug_especie": "morpho-helenor",
           "slug_grupo": "invertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1935912",
-          "species": "Emesis lucinda",
+          "url_gbif": "https://www.gbif.org/species/5133265",
+          "species": "Morpho helenor",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Lepidoptera",
-          "family": "Lycaenidae",
-          "genus": "Emesis"
-        },
-        {
-          "label": "Encarsia hispida",
-          "registros": 1,
-          "slug_especie": "encarsia-hispida",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1365496",
-          "species": "Encarsia hispida",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Hymenoptera",
-          "family": "Aphelinidae",
-          "genus": "Encarsia"
+          "family": "Nymphalidae",
+          "genus": "Morpho"
         },
         {
           "label": "Galerita americana",
@@ -9040,6 +8980,21 @@
           "genus": "Heliconius"
         },
         {
+          "label": "Brevianta undulata",
+          "registros": 1,
+          "slug_especie": "brevianta-undulata",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/9952386",
+          "species": "Brevianta undulata",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Lycaenidae",
+          "genus": "Brevianta"
+        },
+        {
           "label": "Meterginus flavicinctus",
           "registros": 1,
           "slug_especie": "meterginus-flavicinctus",
@@ -9070,19 +9025,19 @@
           "genus": "Mononychellus"
         },
         {
-          "label": "Morpho helenor",
+          "label": "Encarsia hispida",
           "registros": 1,
-          "slug_especie": "morpho-helenor",
+          "slug_especie": "encarsia-hispida",
           "slug_grupo": "invertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5133265",
-          "species": "Morpho helenor",
+          "url_gbif": "https://www.gbif.org/species/1365496",
+          "species": "Encarsia hispida",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Morpho"
+          "order": "Hymenoptera",
+          "family": "Aphelinidae",
+          "genus": "Encarsia"
         },
         {
           "label": "Myophorigonia paucicostata",
@@ -9115,6 +9070,36 @@
           "genus": "Neotrichia"
         },
         {
+          "label": "Emesis lucinda",
+          "registros": 1,
+          "slug_especie": "emesis-lucinda",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1935912",
+          "species": "Emesis lucinda",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Lycaenidae",
+          "genus": "Emesis"
+        },
+        {
+          "label": "Cymatoceras colombiana",
+          "registros": 1,
+          "slug_especie": "cymatoceras-colombiana",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/8514354",
+          "species": "Cymatoceras colombiana",
+          "kingdom": "Animalia",
+          "phylum": "Mollusca",
+          "class": "Cephalopoda",
+          "order": "Nautilida",
+          "family": "Cymatoceratidae",
+          "genus": "Cymatoceras"
+        },
+        {
           "label": "Polybia ignobilis",
           "registros": 1,
           "slug_especie": "polybia-ignobilis",
@@ -9143,6 +9128,21 @@
           "order": "Araneae",
           "family": "Theraphosidae",
           "genus": "Psalmopoeus"
+        },
+        {
+          "label": "Anartia amathea",
+          "registros": 1,
+          "slug_especie": "anartia-amathea",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5128011",
+          "species": "Anartia amathea",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Anartia"
         },
         {
           "label": "Rhagovelia tenuipes",
@@ -10713,6 +10713,20 @@
           "genus": "Argopleura"
         },
         {
+          "label": "Trichomycterus transandianus",
+          "registros": 35,
+          "slug_especie": "trichomycterus-transandianus",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2343168",
+          "species": "Trichomycterus transandianus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Siluriformes",
+          "family": "Trichomycteridae",
+          "genus": "Trichomycterus"
+        },
+        {
           "label": "Chaetostoma milesi",
           "registros": 35,
           "slug_especie": "chaetostoma-milesi",
@@ -10726,20 +10740,6 @@
           "order": "Siluriformes",
           "family": "Loricariidae",
           "genus": "Chaetostoma"
-        },
-        {
-          "label": "Trichomycterus transandianus",
-          "registros": 35,
-          "slug_especie": "trichomycterus-transandianus",
-          "slug_grupo": "peces",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2343168",
-          "species": "Trichomycterus transandianus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Siluriformes",
-          "family": "Trichomycteridae",
-          "genus": "Trichomycterus"
         },
         {
           "label": "Sturisomatichthys leightoni",
@@ -10978,6 +10978,22 @@
             "genus": "Argopleura"
           },
           {
+            "label": "Trichomycterus transandianus",
+            "registros": 35,
+            "slug_especie": "trichomycterus-transandianus",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "peces",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2343168",
+            "species": "Trichomycterus transandianus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Siluriformes",
+            "family": "Trichomycteridae",
+            "genus": "Trichomycterus"
+          },
+          {
             "label": "Chaetostoma milesi",
             "registros": 35,
             "slug_especie": "chaetostoma-milesi",
@@ -10993,22 +11009,6 @@
             "order": "Siluriformes",
             "family": "Loricariidae",
             "genus": "Chaetostoma"
-          },
-          {
-            "label": "Trichomycterus transandianus",
-            "registros": 35,
-            "slug_especie": "trichomycterus-transandianus",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "peces",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2343168",
-            "species": "Trichomycterus transandianus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "order": "Siluriformes",
-            "family": "Trichomycteridae",
-            "genus": "Trichomycterus"
           },
           {
             "label": "Sturisomatichthys leightoni",
@@ -11455,6 +11455,20 @@
           "genus": "Argopleura"
         },
         {
+          "label": "Trichomycterus transandianus",
+          "registros": 35,
+          "slug_especie": "trichomycterus-transandianus",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2343168",
+          "species": "Trichomycterus transandianus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Siluriformes",
+          "family": "Trichomycteridae",
+          "genus": "Trichomycterus"
+        },
+        {
           "label": "Chaetostoma milesi",
           "registros": 35,
           "slug_especie": "chaetostoma-milesi",
@@ -11468,20 +11482,6 @@
           "order": "Siluriformes",
           "family": "Loricariidae",
           "genus": "Chaetostoma"
-        },
-        {
-          "label": "Trichomycterus transandianus",
-          "registros": 35,
-          "slug_especie": "trichomycterus-transandianus",
-          "slug_grupo": "peces-dulceacuicolas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2343168",
-          "species": "Trichomycterus transandianus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Siluriformes",
-          "family": "Trichomycteridae",
-          "genus": "Trichomycterus"
         },
         {
           "label": "Sturisomatichthys leightoni",
@@ -11670,6 +11670,22 @@
             "genus": "Argopleura"
           },
           {
+            "label": "Trichomycterus transandianus",
+            "registros": 35,
+            "slug_especie": "trichomycterus-transandianus",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "peces-dulceacuicolas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2343168",
+            "species": "Trichomycterus transandianus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Siluriformes",
+            "family": "Trichomycteridae",
+            "genus": "Trichomycterus"
+          },
+          {
             "label": "Chaetostoma milesi",
             "registros": 35,
             "slug_especie": "chaetostoma-milesi",
@@ -11685,22 +11701,6 @@
             "order": "Siluriformes",
             "family": "Loricariidae",
             "genus": "Chaetostoma"
-          },
-          {
-            "label": "Trichomycterus transandianus",
-            "registros": 35,
-            "slug_especie": "trichomycterus-transandianus",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "peces-dulceacuicolas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2343168",
-            "species": "Trichomycterus transandianus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "order": "Siluriformes",
-            "family": "Trichomycteridae",
-            "genus": "Trichomycterus"
           },
           {
             "label": "Sturisomatichthys leightoni",
@@ -12413,50 +12413,20 @@
           "genus": "Passiflora"
         },
         {
-          "label": "Acalypha macrostachya",
+          "label": "Solanum colombianum",
           "registros": 3,
-          "slug_especie": "acalypha-macrostachya",
+          "slug_especie": "solanum-colombianum",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3056437",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/595a7c9a2f4fd7bc7f39e11c/summary",
-          "species": "Acalypha macrostachya",
+          "url_gbif": "https://www.gbif.org/species/2929070",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7a36d83c45700544e4261/summary",
+          "species": "Solanum colombianum",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Euphorbiaceae",
-          "genus": "Acalypha"
-        },
-        {
-          "label": "Chaetophoropsis elegans",
-          "registros": 3,
-          "slug_especie": "chaetophoropsis-elegans",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/10725537",
-          "species": "Chaetophoropsis elegans",
-          "kingdom": "Plantae",
-          "phylum": "Chlorophyta",
-          "class": "Chlorophyceae",
-          "order": "Chaetophorales",
-          "family": "Chaetophoraceae",
-          "genus": "Chaetophoropsis"
-        },
-        {
-          "label": "Closterium calosporum",
-          "registros": 3,
-          "slug_especie": "closterium-calosporum",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2646449",
-          "species": "Closterium calosporum",
-          "kingdom": "Plantae",
-          "phylum": "Charophyta",
-          "class": "Zygnematophyceae",
-          "order": "Zygnematales",
-          "family": "Closteriaceae",
-          "genus": "Closterium"
+          "order": "Solanales",
+          "family": "Solanaceae",
+          "genus": "Solanum"
         },
         {
           "label": "Petrea pubescens",
@@ -12474,20 +12444,65 @@
           "genus": "Petrea"
         },
         {
-          "label": "Solanum colombianum",
+          "label": "Chaetophoropsis elegans",
           "registros": 3,
-          "slug_especie": "solanum-colombianum",
+          "slug_especie": "chaetophoropsis-elegans",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2929070",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7a36d83c45700544e4261/summary",
-          "species": "Solanum colombianum",
+          "url_gbif": "https://www.gbif.org/species/10725537",
+          "species": "Chaetophoropsis elegans",
+          "kingdom": "Plantae",
+          "phylum": "Chlorophyta",
+          "class": "Chlorophyceae",
+          "order": "Chaetophorales",
+          "family": "Chaetophoraceae",
+          "genus": "Chaetophoropsis"
+        },
+        {
+          "label": "Acalypha macrostachya",
+          "registros": 3,
+          "slug_especie": "acalypha-macrostachya",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3056437",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/595a7c9a2f4fd7bc7f39e11c/summary",
+          "species": "Acalypha macrostachya",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Solanales",
-          "family": "Solanaceae",
-          "genus": "Solanum"
+          "order": "Malpighiales",
+          "family": "Euphorbiaceae",
+          "genus": "Acalypha"
+        },
+        {
+          "label": "Closterium calosporum",
+          "registros": 3,
+          "slug_especie": "closterium-calosporum",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2646449",
+          "species": "Closterium calosporum",
+          "kingdom": "Plantae",
+          "phylum": "Charophyta",
+          "class": "Zygnematophyceae",
+          "order": "Zygnematales",
+          "family": "Closteriaceae",
+          "genus": "Closterium"
+        },
+        {
+          "label": "Cucumis melo",
+          "registros": 2,
+          "slug_especie": "cucumis-melo",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2874570",
+          "species": "Cucumis melo",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Cucurbitales",
+          "family": "Cucurbitaceae",
+          "genus": "Cucumis"
         },
         {
           "label": "Acalypha schiedeana",
@@ -12505,6 +12520,38 @@
           "genus": "Acalypha"
         },
         {
+          "label": "Pithecellobium dulce",
+          "registros": 2,
+          "slug_especie": "pithecellobium-dulce",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2962831",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/59493f792f4fd7bc7f3972ab/summary",
+          "species": "Pithecellobium dulce",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Pithecellobium"
+        },
+        {
+          "label": "Mimosa pudica",
+          "registros": 2,
+          "slug_especie": "mimosa-pudica",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2969284",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/595462962f4fd7bc7f39a8a0/summary",
+          "species": "Mimosa pudica",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Mimosa"
+        },
+        {
           "label": "Croton leptostachyus",
           "registros": 2,
           "slug_especie": "croton-leptostachyus",
@@ -12519,21 +12566,6 @@
           "order": "Malpighiales",
           "family": "Euphorbiaceae",
           "genus": "Croton"
-        },
-        {
-          "label": "Cucumis melo",
-          "registros": 2,
-          "slug_especie": "cucumis-melo",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2874570",
-          "species": "Cucumis melo",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Cucurbitales",
-          "family": "Cucurbitaceae",
-          "genus": "Cucumis"
         },
         {
           "label": "Inga vera",
@@ -12565,38 +12597,6 @@
           "order": "Solanales",
           "family": "Convolvulaceae",
           "genus": "Ipomoea"
-        },
-        {
-          "label": "Mimosa pudica",
-          "registros": 2,
-          "slug_especie": "mimosa-pudica",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2969284",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/595462962f4fd7bc7f39a8a0/summary",
-          "species": "Mimosa pudica",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Mimosa"
-        },
-        {
-          "label": "Pithecellobium dulce",
-          "registros": 2,
-          "slug_especie": "pithecellobium-dulce",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2962831",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/59493f792f4fd7bc7f3972ab/summary",
-          "species": "Pithecellobium dulce",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Pithecellobium"
         }
       ],
       "species_list_tematica": {
@@ -13817,20 +13817,20 @@
           "genus": "Passiflora"
         },
         {
-          "label": "Acalypha macrostachya",
+          "label": "Solanum colombianum",
           "registros": 3,
-          "slug_especie": "acalypha-macrostachya",
+          "slug_especie": "solanum-colombianum",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3056437",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/595a7c9a2f4fd7bc7f39e11c/summary",
-          "species": "Acalypha macrostachya",
+          "url_gbif": "https://www.gbif.org/species/2929070",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7a36d83c45700544e4261/summary",
+          "species": "Solanum colombianum",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Euphorbiaceae",
-          "genus": "Acalypha"
+          "order": "Solanales",
+          "family": "Solanaceae",
+          "genus": "Solanum"
         },
         {
           "label": "Petrea pubescens",
@@ -13848,20 +13848,35 @@
           "genus": "Petrea"
         },
         {
-          "label": "Solanum colombianum",
+          "label": "Acalypha macrostachya",
           "registros": 3,
-          "slug_especie": "solanum-colombianum",
+          "slug_especie": "acalypha-macrostachya",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2929070",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7a36d83c45700544e4261/summary",
-          "species": "Solanum colombianum",
+          "url_gbif": "https://www.gbif.org/species/3056437",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/595a7c9a2f4fd7bc7f39e11c/summary",
+          "species": "Acalypha macrostachya",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Solanales",
-          "family": "Solanaceae",
-          "genus": "Solanum"
+          "order": "Malpighiales",
+          "family": "Euphorbiaceae",
+          "genus": "Acalypha"
+        },
+        {
+          "label": "Cucumis melo",
+          "registros": 2,
+          "slug_especie": "cucumis-melo",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2874570",
+          "species": "Cucumis melo",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Cucurbitales",
+          "family": "Cucurbitaceae",
+          "genus": "Cucumis"
         },
         {
           "label": "Acalypha schiedeana",
@@ -13879,6 +13894,38 @@
           "genus": "Acalypha"
         },
         {
+          "label": "Pithecellobium dulce",
+          "registros": 2,
+          "slug_especie": "pithecellobium-dulce",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2962831",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/59493f792f4fd7bc7f3972ab/summary",
+          "species": "Pithecellobium dulce",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Pithecellobium"
+        },
+        {
+          "label": "Mimosa pudica",
+          "registros": 2,
+          "slug_especie": "mimosa-pudica",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2969284",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/595462962f4fd7bc7f39a8a0/summary",
+          "species": "Mimosa pudica",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Mimosa"
+        },
+        {
           "label": "Croton leptostachyus",
           "registros": 2,
           "slug_especie": "croton-leptostachyus",
@@ -13893,21 +13940,6 @@
           "order": "Malpighiales",
           "family": "Euphorbiaceae",
           "genus": "Croton"
-        },
-        {
-          "label": "Cucumis melo",
-          "registros": 2,
-          "slug_especie": "cucumis-melo",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2874570",
-          "species": "Cucumis melo",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Cucurbitales",
-          "family": "Cucurbitaceae",
-          "genus": "Cucumis"
         },
         {
           "label": "Inga vera",
@@ -13939,38 +13971,6 @@
           "order": "Solanales",
           "family": "Convolvulaceae",
           "genus": "Ipomoea"
-        },
-        {
-          "label": "Mimosa pudica",
-          "registros": 2,
-          "slug_especie": "mimosa-pudica",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2969284",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/595462962f4fd7bc7f39a8a0/summary",
-          "species": "Mimosa pudica",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Mimosa"
-        },
-        {
-          "label": "Pithecellobium dulce",
-          "registros": 2,
-          "slug_especie": "pithecellobium-dulce",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2962831",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/59493f792f4fd7bc7f3972ab/summary",
-          "species": "Pithecellobium dulce",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Pithecellobium"
         }
       ],
       "species_list_tematica": {
@@ -15265,6 +15265,22 @@
             "genus": "Euphonia"
           },
           {
+            "label": "Trichomycterus transandianus",
+            "registros": 35,
+            "slug_especie": "trichomycterus-transandianus",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2343168",
+            "species": "Trichomycterus transandianus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Siluriformes",
+            "family": "Trichomycteridae",
+            "genus": "Trichomycterus"
+          },
+          {
             "label": "Chaetostoma milesi",
             "registros": 35,
             "slug_especie": "chaetostoma-milesi",
@@ -15280,22 +15296,6 @@
             "order": "Siluriformes",
             "family": "Loricariidae",
             "genus": "Chaetostoma"
-          },
-          {
-            "label": "Trichomycterus transandianus",
-            "registros": 35,
-            "slug_especie": "trichomycterus-transandianus",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2343168",
-            "species": "Trichomycterus transandianus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "order": "Siluriformes",
-            "family": "Trichomycteridae",
-            "genus": "Trichomycterus"
           },
           {
             "label": "Sturisomatichthys leightoni",

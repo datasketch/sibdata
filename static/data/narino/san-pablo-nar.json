@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -2100,21 +2100,6 @@
           "genus": "Setophaga"
         },
         {
-          "label": "Ramphocelus flammigerus",
-          "registros": 11,
-          "slug_especie": "ramphocelus-flammigerus",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2488439",
-          "species": "Ramphocelus flammigerus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Ramphocelus"
-        },
-        {
           "label": "Saltator atripennis",
           "registros": 11,
           "slug_especie": "saltator-atripennis",
@@ -2160,6 +2145,21 @@
           "order": "Columbiformes",
           "family": "Columbidae",
           "genus": "Zenaida"
+        },
+        {
+          "label": "Ramphocelus flammigerus",
+          "registros": 11,
+          "slug_especie": "ramphocelus-flammigerus",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2488439",
+          "species": "Ramphocelus flammigerus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Ramphocelus"
         }
       ],
       "species_list_tematica": {
@@ -2945,22 +2945,6 @@
           "genus": "Icterus"
         },
         {
-          "label": "Thraupis episcopus",
-          "registros": 17,
-          "slug_especie": "thraupis-episcopus",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2488602",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf719b3c16479905cba7e1/summary",
-          "species": "Thraupis episcopus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Thraupis"
-        },
-        {
           "label": "Tyrannus melancholicus",
           "registros": 17,
           "slug_especie": "tyrannus-melancholicus",
@@ -2975,6 +2959,22 @@
           "order": "Passeriformes",
           "family": "Tyrannidae",
           "genus": "Tyrannus"
+        },
+        {
+          "label": "Thraupis episcopus",
+          "registros": 17,
+          "slug_especie": "thraupis-episcopus",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2488602",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf719b3c16479905cba7e1/summary",
+          "species": "Thraupis episcopus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Thraupis"
         },
         {
           "label": "Coragyps atratus",
@@ -3024,36 +3024,6 @@
           "genus": "Setophaga"
         },
         {
-          "label": "Ramphocelus flammigerus",
-          "registros": 11,
-          "slug_especie": "ramphocelus-flammigerus",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2488439",
-          "species": "Ramphocelus flammigerus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Ramphocelus"
-        },
-        {
-          "label": "Saltator atripennis",
-          "registros": 11,
-          "slug_especie": "saltator-atripennis",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5230952",
-          "species": "Saltator atripennis",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Saltator"
-        },
-        {
           "label": "Tangara gyrola",
           "registros": 11,
           "slug_especie": "tangara-gyrola",
@@ -3084,6 +3054,36 @@
           "order": "Columbiformes",
           "family": "Columbidae",
           "genus": "Zenaida"
+        },
+        {
+          "label": "Ramphocelus flammigerus",
+          "registros": 11,
+          "slug_especie": "ramphocelus-flammigerus",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2488439",
+          "species": "Ramphocelus flammigerus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Ramphocelus"
+        },
+        {
+          "label": "Saltator atripennis",
+          "registros": 11,
+          "slug_especie": "saltator-atripennis",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5230952",
+          "species": "Saltator atripennis",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Saltator"
         }
       ],
       "species_list_tematica": {
@@ -5908,22 +5908,6 @@
           "genus": "Icterus"
         },
         {
-          "label": "Thraupis episcopus",
-          "registros": 17,
-          "slug_especie": "thraupis-episcopus",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2488602",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf719b3c16479905cba7e1/summary",
-          "species": "Thraupis episcopus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Thraupis"
-        },
-        {
           "label": "Tyrannus melancholicus",
           "registros": 17,
           "slug_especie": "tyrannus-melancholicus",
@@ -5938,6 +5922,22 @@
           "order": "Passeriformes",
           "family": "Tyrannidae",
           "genus": "Tyrannus"
+        },
+        {
+          "label": "Thraupis episcopus",
+          "registros": 17,
+          "slug_especie": "thraupis-episcopus",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2488602",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf719b3c16479905cba7e1/summary",
+          "species": "Thraupis episcopus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Thraupis"
         },
         {
           "label": "Coragyps atratus",
@@ -5987,36 +5987,6 @@
           "genus": "Setophaga"
         },
         {
-          "label": "Ramphocelus flammigerus",
-          "registros": 11,
-          "slug_especie": "ramphocelus-flammigerus",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2488439",
-          "species": "Ramphocelus flammigerus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Ramphocelus"
-        },
-        {
-          "label": "Saltator atripennis",
-          "registros": 11,
-          "slug_especie": "saltator-atripennis",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5230952",
-          "species": "Saltator atripennis",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Saltator"
-        },
-        {
           "label": "Tangara gyrola",
           "registros": 11,
           "slug_especie": "tangara-gyrola",
@@ -6047,6 +6017,36 @@
           "order": "Columbiformes",
           "family": "Columbidae",
           "genus": "Zenaida"
+        },
+        {
+          "label": "Ramphocelus flammigerus",
+          "registros": 11,
+          "slug_especie": "ramphocelus-flammigerus",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2488439",
+          "species": "Ramphocelus flammigerus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Ramphocelus"
+        },
+        {
+          "label": "Saltator atripennis",
+          "registros": 11,
+          "slug_especie": "saltator-atripennis",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5230952",
+          "species": "Saltator atripennis",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Saltator"
         }
       ],
       "species_list_tematica": {

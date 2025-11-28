@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -1782,11 +1782,11 @@
           "slug_tematica": "migratorias"
         },
         {
-          "label": "Myiodynastes maculatus",
-          "slug_especie": "myiodynastes-maculatus",
+          "label": "Tringa solitaria",
+          "slug_especie": "tringa-solitaria",
           "registros": 11,
-          "url_gbif": "https://www.gbif.org/species/2483497",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e3abb283c45700544e3df9/summary",
+          "url_gbif": "https://www.gbif.org/species/2481710",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf8b1b3c16479905cba7eb/summary",
           "slug_tematica": "migratorias"
         }
       ]
@@ -1883,19 +1883,19 @@
           "slug_tematica": "exoticas-riesgo-invasion-total"
         },
         {
+          "label": "Meleagris gallopavo",
+          "slug_especie": "meleagris-gallopavo",
+          "registros": 2,
+          "url_gbif": "https://www.gbif.org/species/9606290",
+          "slug_tematica": "exoticas-riesgo-invasion-total"
+        },
+        {
           "label": "Apis mellifera",
           "slug_especie": "apis-mellifera",
           "registros": 2,
           "url_gbif": "https://www.gbif.org/species/1341976",
           "url_cbc": "https://catalogo.biodiversidad.co/file/58b995177bd3becd0fc7395e/summary",
           "slug_tematica": "exoticas"
-        },
-        {
-          "label": "Meleagris gallopavo",
-          "slug_especie": "meleagris-gallopavo",
-          "registros": 2,
-          "url_gbif": "https://www.gbif.org/species/9606290",
-          "slug_tematica": "exoticas-riesgo-invasion-total"
         }
       ],
       "list_especies_exoticas": [
@@ -3268,21 +3268,6 @@
           "genus": "Palicourea"
         },
         {
-          "label": "Attalea maripa",
-          "registros": 7,
-          "slug_especie": "attalea-maripa",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2732686",
-          "species": "Attalea maripa",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Arecales",
-          "family": "Arecaceae",
-          "genus": "Attalea"
-        },
-        {
           "label": "Virola elongata",
           "registros": 7,
           "slug_especie": "virola-elongata",
@@ -3299,19 +3284,19 @@
           "genus": "Virola"
         },
         {
-          "label": "Cecropia angustifolia",
-          "registros": 6,
-          "slug_especie": "cecropia-angustifolia",
+          "label": "Attalea maripa",
+          "registros": 7,
+          "slug_especie": "attalea-maripa",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4013465",
-          "species": "Cecropia angustifolia",
+          "url_gbif": "https://www.gbif.org/species/2732686",
+          "species": "Attalea maripa",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Rosales",
-          "family": "Urticaceae",
-          "genus": "Cecropia"
+          "class": "Liliopsida",
+          "order": "Arecales",
+          "family": "Arecaceae",
+          "genus": "Attalea"
         },
         {
           "label": "Chrysophyllum argenteum",
@@ -3343,6 +3328,21 @@
           "order": "Arecales",
           "family": "Arecaceae",
           "genus": "Euterpe"
+        },
+        {
+          "label": "Cecropia angustifolia",
+          "registros": 6,
+          "slug_especie": "cecropia-angustifolia",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/4013465",
+          "species": "Cecropia angustifolia",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Rosales",
+          "family": "Urticaceae",
+          "genus": "Cecropia"
         }
       ],
       "species_list_tematica": {
@@ -4113,22 +4113,6 @@
           "genus": "Thraupis"
         },
         {
-          "label": "Pitangus sulphuratus",
-          "registros": 120,
-          "slug_especie": "pitangus-sulphuratus",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2482755",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cd0cdf207ecea54a561e5e/summary",
-          "species": "Pitangus sulphuratus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Tyrannidae",
-          "genus": "Pitangus"
-        },
-        {
           "label": "Sicalis flaveola",
           "registros": 120,
           "slug_especie": "sicalis-flaveola",
@@ -4143,6 +4127,22 @@
           "order": "Passeriformes",
           "family": "Thraupidae",
           "genus": "Sicalis"
+        },
+        {
+          "label": "Pitangus sulphuratus",
+          "registros": 120,
+          "slug_especie": "pitangus-sulphuratus",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2482755",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cd0cdf207ecea54a561e5e/summary",
+          "species": "Pitangus sulphuratus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Tyrannidae",
+          "genus": "Pitangus"
         },
         {
           "label": "Cyanocorax violaceus",
@@ -5061,22 +5061,22 @@
             "genus": "Hirundo"
           },
           {
-            "label": "Myiodynastes maculatus",
+            "label": "Tringa solitaria",
             "registros": 11,
-            "slug_especie": "myiodynastes-maculatus",
+            "slug_especie": "tringa-solitaria",
             "slug_tematica": "migratorias",
             "tematica_label": "Migratorias",
             "slug_grupo": "animales",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2483497",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e3abb283c45700544e3df9/summary",
-            "species": "Myiodynastes maculatus",
+            "url_gbif": "https://www.gbif.org/species/2481710",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cf8b1b3c16479905cba7eb/summary",
+            "species": "Tringa solitaria",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Tyrannidae",
-            "genus": "Myiodynastes"
+            "order": "Charadriiformes",
+            "family": "Scolopacidae",
+            "genus": "Tringa"
           },
           {
             "label": "Piranga rubra",
@@ -5097,22 +5097,22 @@
             "genus": "Piranga"
           },
           {
-            "label": "Tringa solitaria",
+            "label": "Myiodynastes maculatus",
             "registros": 11,
-            "slug_especie": "tringa-solitaria",
+            "slug_especie": "myiodynastes-maculatus",
             "slug_tematica": "migratorias",
             "tematica_label": "Migratorias",
             "slug_grupo": "animales",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2481710",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56cf8b1b3c16479905cba7eb/summary",
-            "species": "Tringa solitaria",
+            "url_gbif": "https://www.gbif.org/species/2483497",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e3abb283c45700544e3df9/summary",
+            "species": "Myiodynastes maculatus",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Aves",
-            "order": "Charadriiformes",
-            "family": "Scolopacidae",
-            "genus": "Tringa"
+            "order": "Passeriformes",
+            "family": "Tyrannidae",
+            "genus": "Myiodynastes"
           }
         ],
         "endemicas": [
@@ -6270,22 +6270,6 @@
           "genus": "Thraupis"
         },
         {
-          "label": "Pitangus sulphuratus",
-          "registros": 120,
-          "slug_especie": "pitangus-sulphuratus",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2482755",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cd0cdf207ecea54a561e5e/summary",
-          "species": "Pitangus sulphuratus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Tyrannidae",
-          "genus": "Pitangus"
-        },
-        {
           "label": "Sicalis flaveola",
           "registros": 120,
           "slug_especie": "sicalis-flaveola",
@@ -6300,6 +6284,22 @@
           "order": "Passeriformes",
           "family": "Thraupidae",
           "genus": "Sicalis"
+        },
+        {
+          "label": "Pitangus sulphuratus",
+          "registros": 120,
+          "slug_especie": "pitangus-sulphuratus",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2482755",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cd0cdf207ecea54a561e5e/summary",
+          "species": "Pitangus sulphuratus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Tyrannidae",
+          "genus": "Pitangus"
         },
         {
           "label": "Cyanocorax violaceus",
@@ -6786,22 +6786,22 @@
             "genus": "Hirundo"
           },
           {
-            "label": "Myiodynastes maculatus",
+            "label": "Tringa solitaria",
             "registros": 11,
-            "slug_especie": "myiodynastes-maculatus",
+            "slug_especie": "tringa-solitaria",
             "slug_tematica": "migratorias",
             "tematica_label": "Migratorias",
             "slug_grupo": "aves",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2483497",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e3abb283c45700544e3df9/summary",
-            "species": "Myiodynastes maculatus",
+            "url_gbif": "https://www.gbif.org/species/2481710",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cf8b1b3c16479905cba7eb/summary",
+            "species": "Tringa solitaria",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Tyrannidae",
-            "genus": "Myiodynastes"
+            "order": "Charadriiformes",
+            "family": "Scolopacidae",
+            "genus": "Tringa"
           },
           {
             "label": "Piranga rubra",
@@ -6822,22 +6822,22 @@
             "genus": "Piranga"
           },
           {
-            "label": "Tringa solitaria",
+            "label": "Myiodynastes maculatus",
             "registros": 11,
-            "slug_especie": "tringa-solitaria",
+            "slug_especie": "myiodynastes-maculatus",
             "slug_tematica": "migratorias",
             "tematica_label": "Migratorias",
             "slug_grupo": "aves",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2481710",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56cf8b1b3c16479905cba7eb/summary",
-            "species": "Tringa solitaria",
+            "url_gbif": "https://www.gbif.org/species/2483497",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e3abb283c45700544e3df9/summary",
+            "species": "Myiodynastes maculatus",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Aves",
-            "order": "Charadriiformes",
-            "family": "Scolopacidae",
-            "genus": "Tringa"
+            "order": "Passeriformes",
+            "family": "Tyrannidae",
+            "genus": "Myiodynastes"
           }
         ],
         "endemicas": [
@@ -10458,6 +10458,21 @@
           "genus": "Strategus"
         },
         {
+          "label": "Sephina pustulata",
+          "registros": 2,
+          "slug_especie": "sephina-pustulata",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2050133",
+          "species": "Sephina pustulata",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hemiptera",
+          "family": "Coreidae",
+          "genus": "Sephina"
+        },
+        {
           "label": "Anartia amathea",
           "registros": 2,
           "slug_especie": "anartia-amathea",
@@ -10534,19 +10549,19 @@
           "genus": "Camponotus"
         },
         {
-          "label": "Ceratinia tutia",
+          "label": "Pteronymia medellina",
           "registros": 2,
-          "slug_especie": "ceratinia-tutia",
+          "slug_especie": "pteronymia-medellina",
           "slug_grupo": "insectos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1893480",
-          "species": "Ceratinia tutia",
+          "url_gbif": "https://www.gbif.org/species/10396136",
+          "species": "Pteronymia medellina",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Lepidoptera",
           "family": "Nymphalidae",
-          "genus": "Ceratinia"
+          "genus": "Pteronymia"
         },
         {
           "label": "Pseudomyrmex dendroicus",
@@ -10564,34 +10579,19 @@
           "genus": "Pseudomyrmex"
         },
         {
-          "label": "Pteronymia medellina",
+          "label": "Ceratinia tutia",
           "registros": 2,
-          "slug_especie": "pteronymia-medellina",
+          "slug_especie": "ceratinia-tutia",
           "slug_grupo": "insectos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/10396136",
-          "species": "Pteronymia medellina",
+          "url_gbif": "https://www.gbif.org/species/1893480",
+          "species": "Ceratinia tutia",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Lepidoptera",
           "family": "Nymphalidae",
-          "genus": "Pteronymia"
-        },
-        {
-          "label": "Sephina pustulata",
-          "registros": 2,
-          "slug_especie": "sephina-pustulata",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2050133",
-          "species": "Sephina pustulata",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Hemiptera",
-          "family": "Coreidae",
-          "genus": "Sephina"
+          "genus": "Ceratinia"
         }
       ],
       "species_list_tematica": {
@@ -11021,6 +11021,21 @@
           "genus": "Strategus"
         },
         {
+          "label": "Sephina pustulata",
+          "registros": 2,
+          "slug_especie": "sephina-pustulata",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2050133",
+          "species": "Sephina pustulata",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hemiptera",
+          "family": "Coreidae",
+          "genus": "Sephina"
+        },
+        {
           "label": "Anartia amathea",
           "registros": 2,
           "slug_especie": "anartia-amathea",
@@ -11097,6 +11112,36 @@
           "genus": "Camponotus"
         },
         {
+          "label": "Pteronymia medellina",
+          "registros": 2,
+          "slug_especie": "pteronymia-medellina",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/10396136",
+          "species": "Pteronymia medellina",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Pteronymia"
+        },
+        {
+          "label": "Pseudomyrmex dendroicus",
+          "registros": 2,
+          "slug_especie": "pseudomyrmex-dendroicus",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1327114",
+          "species": "Pseudomyrmex dendroicus",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hymenoptera",
+          "family": "Formicidae",
+          "genus": "Pseudomyrmex"
+        },
+        {
           "label": "Ceratinia tutia",
           "registros": 2,
           "slug_especie": "ceratinia-tutia",
@@ -11125,51 +11170,6 @@
           "order": "Mesostigmata",
           "family": "Parasitidae",
           "genus": "Parasitus"
-        },
-        {
-          "label": "Pseudomyrmex dendroicus",
-          "registros": 2,
-          "slug_especie": "pseudomyrmex-dendroicus",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1327114",
-          "species": "Pseudomyrmex dendroicus",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Hymenoptera",
-          "family": "Formicidae",
-          "genus": "Pseudomyrmex"
-        },
-        {
-          "label": "Pteronymia medellina",
-          "registros": 2,
-          "slug_especie": "pteronymia-medellina",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/10396136",
-          "species": "Pteronymia medellina",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Pteronymia"
-        },
-        {
-          "label": "Sephina pustulata",
-          "registros": 2,
-          "slug_especie": "sephina-pustulata",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2050133",
-          "species": "Sephina pustulata",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Hemiptera",
-          "family": "Coreidae",
-          "genus": "Sephina"
         }
       ],
       "species_list_tematica": {
@@ -11617,21 +11617,6 @@
           "genus": "Cerdocyon"
         },
         {
-          "label": "Dasyprocta fuliginosa",
-          "registros": 17,
-          "slug_especie": "dasyprocta-fuliginosa",
-          "slug_grupo": "mamiferos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2437581",
-          "species": "Dasyprocta fuliginosa",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Mammalia",
-          "order": "Rodentia",
-          "family": "Dasyproctidae",
-          "genus": "Dasyprocta"
-        },
-        {
           "label": "Sapajus apella",
           "registros": 17,
           "slug_especie": "sapajus-apella",
@@ -11647,6 +11632,21 @@
           "order": "Primates",
           "family": "Cebidae",
           "genus": "Sapajus"
+        },
+        {
+          "label": "Dasyprocta fuliginosa",
+          "registros": 17,
+          "slug_especie": "dasyprocta-fuliginosa",
+          "slug_grupo": "mamiferos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2437581",
+          "species": "Dasyprocta fuliginosa",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Rodentia",
+          "family": "Dasyproctidae",
+          "genus": "Dasyprocta"
         },
         {
           "label": "Leopardus pardalis",
@@ -12617,34 +12617,19 @@
           "genus": "Opsiphanes"
         },
         {
-          "label": "Anartia amathea",
+          "label": "Pteronymia medellina",
           "registros": 2,
-          "slug_especie": "anartia-amathea",
+          "slug_especie": "pteronymia-medellina",
           "slug_grupo": "mariposas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5128011",
-          "species": "Anartia amathea",
+          "url_gbif": "https://www.gbif.org/species/10396136",
+          "species": "Pteronymia medellina",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Lepidoptera",
           "family": "Nymphalidae",
-          "genus": "Anartia"
-        },
-        {
-          "label": "Battus laodamas",
-          "registros": 2,
-          "slug_especie": "battus-laodamas",
-          "slug_grupo": "mariposas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5141333",
-          "species": "Battus laodamas",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Papilionidae",
-          "genus": "Battus"
+          "genus": "Pteronymia"
         },
         {
           "label": "Caligo teucer",
@@ -12677,49 +12662,49 @@
           "genus": "Ceratinia"
         },
         {
-          "label": "Pteronymia medellina",
+          "label": "Battus laodamas",
           "registros": 2,
-          "slug_especie": "pteronymia-medellina",
+          "slug_especie": "battus-laodamas",
           "slug_grupo": "mariposas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/10396136",
-          "species": "Pteronymia medellina",
+          "url_gbif": "https://www.gbif.org/species/5141333",
+          "species": "Battus laodamas",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Pteronymia"
+          "family": "Papilionidae",
+          "genus": "Battus"
         },
         {
-          "label": "Diaethria astala",
-          "registros": 1,
-          "slug_especie": "diaethria-astala",
+          "label": "Anartia amathea",
+          "registros": 2,
+          "slug_especie": "anartia-amathea",
           "slug_grupo": "mariposas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1908995",
-          "species": "Diaethria astala",
+          "url_gbif": "https://www.gbif.org/species/5128011",
+          "species": "Anartia amathea",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Lepidoptera",
           "family": "Nymphalidae",
-          "genus": "Diaethria"
+          "genus": "Anartia"
         },
         {
-          "label": "Diaethria gabaza",
+          "label": "Heliconius numatus",
           "registros": 1,
-          "slug_especie": "diaethria-gabaza",
+          "slug_especie": "heliconius-numatus",
           "slug_grupo": "mariposas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1909016",
-          "species": "Diaethria gabaza",
+          "url_gbif": "https://www.gbif.org/species/1900172",
+          "species": "Heliconius numatus",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Lepidoptera",
           "family": "Nymphalidae",
-          "genus": "Diaethria"
+          "genus": "Heliconius"
         },
         {
           "label": "Eunica alcmena",
@@ -12744,21 +12729,6 @@
           "tipo": "biologico",
           "url_gbif": "https://www.gbif.org/species/1900872",
           "species": "Heliconius erato",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Heliconius"
-        },
-        {
-          "label": "Heliconius numatus",
-          "registros": 1,
-          "slug_especie": "heliconius-numatus",
-          "slug_grupo": "mariposas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1900172",
-          "species": "Heliconius numatus",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
@@ -12827,19 +12797,19 @@
           "genus": "Marpesia"
         },
         {
-          "label": "Marpesia chiron",
+          "label": "Diaethria gabaza",
           "registros": 1,
-          "slug_especie": "marpesia-chiron",
+          "slug_especie": "diaethria-gabaza",
           "slug_grupo": "mariposas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5133595",
-          "species": "Marpesia chiron",
+          "url_gbif": "https://www.gbif.org/species/1909016",
+          "species": "Diaethria gabaza",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Lepidoptera",
           "family": "Nymphalidae",
-          "genus": "Marpesia"
+          "genus": "Diaethria"
         },
         {
           "label": "Marpesia marcella",
@@ -12917,19 +12887,34 @@
           "genus": "Morpho"
         },
         {
-          "label": "Opsiphanes invirae",
+          "label": "Diaethria astala",
           "registros": 1,
-          "slug_especie": "opsiphanes-invirae",
+          "slug_especie": "diaethria-astala",
           "slug_grupo": "mariposas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1915456",
-          "species": "Opsiphanes invirae",
+          "url_gbif": "https://www.gbif.org/species/1908995",
+          "species": "Diaethria astala",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Lepidoptera",
           "family": "Nymphalidae",
-          "genus": "Opsiphanes"
+          "genus": "Diaethria"
+        },
+        {
+          "label": "Marpesia chiron",
+          "registros": 1,
+          "slug_especie": "marpesia-chiron",
+          "slug_grupo": "mariposas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5133595",
+          "species": "Marpesia chiron",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Marpesia"
         },
         {
           "label": "Panacea prola",
@@ -12991,6 +12976,21 @@
           "order": "Lepidoptera",
           "family": "Pieridae",
           "genus": "Phoebis"
+        },
+        {
+          "label": "Opsiphanes invirae",
+          "registros": 1,
+          "slug_especie": "opsiphanes-invirae",
+          "slug_grupo": "mariposas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1915456",
+          "species": "Opsiphanes invirae",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Opsiphanes"
         }
       ],
       "species_list_tematica": {
@@ -13926,20 +13926,6 @@
           "genus": "Astyanax"
         },
         {
-          "label": "Bryconamericus alpha",
-          "registros": 12,
-          "slug_especie": "bryconamericus-alpha",
-          "slug_grupo": "peces",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2352832",
-          "species": "Bryconamericus alpha",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Characidae",
-          "genus": "Bryconamericus"
-        },
-        {
           "label": "Pimelodella metae",
           "registros": 12,
           "slug_especie": "pimelodella-metae",
@@ -13952,6 +13938,20 @@
           "order": "Siluriformes",
           "family": "Heptapteridae",
           "genus": "Pimelodella"
+        },
+        {
+          "label": "Bryconamericus alpha",
+          "registros": 12,
+          "slug_especie": "bryconamericus-alpha",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2352832",
+          "species": "Bryconamericus alpha",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Characidae",
+          "genus": "Bryconamericus"
         },
         {
           "label": "Paragoniates alburnus",
@@ -13968,20 +13968,6 @@
           "genus": "Paragoniates"
         },
         {
-          "label": "Bryconamericus cismontanus",
-          "registros": 10,
-          "slug_especie": "bryconamericus-cismontanus",
-          "slug_grupo": "peces",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2352827",
-          "species": "Bryconamericus cismontanus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Characidae",
-          "genus": "Bryconamericus"
-        },
-        {
           "label": "Farlowella vittata",
           "registros": 10,
           "slug_especie": "farlowella-vittata",
@@ -13996,6 +13982,20 @@
           "genus": "Farlowella"
         },
         {
+          "label": "Bryconamericus cismontanus",
+          "registros": 10,
+          "slug_especie": "bryconamericus-cismontanus",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2352827",
+          "species": "Bryconamericus cismontanus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Characidae",
+          "genus": "Bryconamericus"
+        },
+        {
           "label": "Moenkhausia lepidura",
           "registros": 9,
           "slug_especie": "moenkhausia-lepidura",
@@ -14008,6 +14008,34 @@
           "order": "Characiformes",
           "family": "Characidae",
           "genus": "Moenkhausia"
+        },
+        {
+          "label": "Farlowella mariaelenae",
+          "registros": 8,
+          "slug_especie": "farlowella-mariaelenae",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2340414",
+          "species": "Farlowella mariaelenae",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Siluriformes",
+          "family": "Loricariidae",
+          "genus": "Farlowella"
+        },
+        {
+          "label": "Lamontichthys llanero",
+          "registros": 8,
+          "slug_especie": "lamontichthys-llanero",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2340126",
+          "species": "Lamontichthys llanero",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Siluriformes",
+          "family": "Loricariidae",
+          "genus": "Lamontichthys"
         },
         {
           "label": "Characidium zebra",
@@ -14025,62 +14053,6 @@
           "genus": "Characidium"
         },
         {
-          "label": "Creagrutus melasma",
-          "registros": 8,
-          "slug_especie": "creagrutus-melasma",
-          "slug_grupo": "peces",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2353746",
-          "species": "Creagrutus melasma",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Characidae",
-          "genus": "Creagrutus"
-        },
-        {
-          "label": "Farlowella mariaelenae",
-          "registros": 8,
-          "slug_especie": "farlowella-mariaelenae",
-          "slug_grupo": "peces",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2340414",
-          "species": "Farlowella mariaelenae",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Siluriformes",
-          "family": "Loricariidae",
-          "genus": "Farlowella"
-        },
-        {
-          "label": "Gephyrocharax valencia",
-          "registros": 8,
-          "slug_especie": "gephyrocharax-valencia",
-          "slug_grupo": "peces",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2353340",
-          "species": "Gephyrocharax valencia",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Characidae",
-          "genus": "Gephyrocharax"
-        },
-        {
-          "label": "Lamontichthys llanero",
-          "registros": 8,
-          "slug_especie": "lamontichthys-llanero",
-          "slug_grupo": "peces",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2340126",
-          "species": "Lamontichthys llanero",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Siluriformes",
-          "family": "Loricariidae",
-          "genus": "Lamontichthys"
-        },
-        {
           "label": "Rineloricaria eigenmanni",
           "registros": 8,
           "slug_especie": "rineloricaria-eigenmanni",
@@ -14095,6 +14067,20 @@
           "genus": "Rineloricaria"
         },
         {
+          "label": "Creagrutus melasma",
+          "registros": 8,
+          "slug_especie": "creagrutus-melasma",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2353746",
+          "species": "Creagrutus melasma",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Characidae",
+          "genus": "Creagrutus"
+        },
+        {
           "label": "Xenagoniates bondi",
           "registros": 8,
           "slug_especie": "xenagoniates-bondi",
@@ -14107,6 +14093,20 @@
           "order": "Characiformes",
           "family": "Characidae",
           "genus": "Xenagoniates"
+        },
+        {
+          "label": "Gephyrocharax valencia",
+          "registros": 8,
+          "slug_especie": "gephyrocharax-valencia",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2353340",
+          "species": "Gephyrocharax valencia",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Characidae",
+          "genus": "Gephyrocharax"
         }
       ],
       "species_list_tematica": {
@@ -14758,33 +14758,18 @@
           "genus": "Moenkhausia"
         },
         {
-          "label": "Characidium zebra",
+          "label": "Rineloricaria eigenmanni",
           "registros": 8,
-          "slug_especie": "characidium-zebra",
+          "slug_especie": "rineloricaria-eigenmanni",
           "slug_grupo": "peces-dulceacuicolas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2352379",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/5970d28f2f4fd7bc7f3a6651/summary",
-          "species": "Characidium zebra",
+          "url_gbif": "https://www.gbif.org/species/2339053",
+          "species": "Rineloricaria eigenmanni",
           "kingdom": "Animalia",
           "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Crenuchidae",
-          "genus": "Characidium"
-        },
-        {
-          "label": "Creagrutus melasma",
-          "registros": 8,
-          "slug_especie": "creagrutus-melasma",
-          "slug_grupo": "peces-dulceacuicolas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2353746",
-          "species": "Creagrutus melasma",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Characidae",
-          "genus": "Creagrutus"
+          "order": "Siluriformes",
+          "family": "Loricariidae",
+          "genus": "Rineloricaria"
         },
         {
           "label": "Farlowella mariaelenae",
@@ -14815,32 +14800,18 @@
           "genus": "Gephyrocharax"
         },
         {
-          "label": "Lamontichthys llanero",
+          "label": "Creagrutus melasma",
           "registros": 8,
-          "slug_especie": "lamontichthys-llanero",
+          "slug_especie": "creagrutus-melasma",
           "slug_grupo": "peces-dulceacuicolas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2340126",
-          "species": "Lamontichthys llanero",
+          "url_gbif": "https://www.gbif.org/species/2353746",
+          "species": "Creagrutus melasma",
           "kingdom": "Animalia",
           "phylum": "Chordata",
-          "order": "Siluriformes",
-          "family": "Loricariidae",
-          "genus": "Lamontichthys"
-        },
-        {
-          "label": "Rineloricaria eigenmanni",
-          "registros": 8,
-          "slug_especie": "rineloricaria-eigenmanni",
-          "slug_grupo": "peces-dulceacuicolas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2339053",
-          "species": "Rineloricaria eigenmanni",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Siluriformes",
-          "family": "Loricariidae",
-          "genus": "Rineloricaria"
+          "order": "Characiformes",
+          "family": "Characidae",
+          "genus": "Creagrutus"
         },
         {
           "label": "Xenagoniates bondi",
@@ -14855,6 +14826,35 @@
           "order": "Characiformes",
           "family": "Characidae",
           "genus": "Xenagoniates"
+        },
+        {
+          "label": "Lamontichthys llanero",
+          "registros": 8,
+          "slug_especie": "lamontichthys-llanero",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2340126",
+          "species": "Lamontichthys llanero",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Siluriformes",
+          "family": "Loricariidae",
+          "genus": "Lamontichthys"
+        },
+        {
+          "label": "Characidium zebra",
+          "registros": 8,
+          "slug_especie": "characidium-zebra",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2352379",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5970d28f2f4fd7bc7f3a6651/summary",
+          "species": "Characidium zebra",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Crenuchidae",
+          "genus": "Characidium"
         }
       ],
       "species_list_tematica": {
@@ -15479,21 +15479,6 @@
           "genus": "Palicourea"
         },
         {
-          "label": "Attalea maripa",
-          "registros": 7,
-          "slug_especie": "attalea-maripa",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2732686",
-          "species": "Attalea maripa",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Arecales",
-          "family": "Arecaceae",
-          "genus": "Attalea"
-        },
-        {
           "label": "Virola elongata",
           "registros": 7,
           "slug_especie": "virola-elongata",
@@ -15508,6 +15493,21 @@
           "order": "Magnoliales",
           "family": "Myristicaceae",
           "genus": "Virola"
+        },
+        {
+          "label": "Attalea maripa",
+          "registros": 7,
+          "slug_especie": "attalea-maripa",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2732686",
+          "species": "Attalea maripa",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Arecales",
+          "family": "Arecaceae",
+          "genus": "Attalea"
         },
         {
           "label": "Cecropia angustifolia",
@@ -17397,21 +17397,6 @@
           "genus": "Palicourea"
         },
         {
-          "label": "Attalea maripa",
-          "registros": 7,
-          "slug_especie": "attalea-maripa",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2732686",
-          "species": "Attalea maripa",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Arecales",
-          "family": "Arecaceae",
-          "genus": "Attalea"
-        },
-        {
           "label": "Virola elongata",
           "registros": 7,
           "slug_especie": "virola-elongata",
@@ -17426,6 +17411,21 @@
           "order": "Magnoliales",
           "family": "Myristicaceae",
           "genus": "Virola"
+        },
+        {
+          "label": "Attalea maripa",
+          "registros": 7,
+          "slug_especie": "attalea-maripa",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2732686",
+          "species": "Attalea maripa",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Arecales",
+          "family": "Arecaceae",
+          "genus": "Attalea"
         },
         {
           "label": "Cecropia angustifolia",
@@ -18257,22 +18257,6 @@
           "genus": "Thraupis"
         },
         {
-          "label": "Pitangus sulphuratus",
-          "registros": 120,
-          "slug_especie": "pitangus-sulphuratus",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2482755",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cd0cdf207ecea54a561e5e/summary",
-          "species": "Pitangus sulphuratus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Tyrannidae",
-          "genus": "Pitangus"
-        },
-        {
           "label": "Sicalis flaveola",
           "registros": 120,
           "slug_especie": "sicalis-flaveola",
@@ -18287,6 +18271,22 @@
           "order": "Passeriformes",
           "family": "Thraupidae",
           "genus": "Sicalis"
+        },
+        {
+          "label": "Pitangus sulphuratus",
+          "registros": 120,
+          "slug_especie": "pitangus-sulphuratus",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2482755",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cd0cdf207ecea54a561e5e/summary",
+          "species": "Pitangus sulphuratus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Tyrannidae",
+          "genus": "Pitangus"
         },
         {
           "label": "Cyanocorax violaceus",
@@ -19205,22 +19205,22 @@
             "genus": "Hirundo"
           },
           {
-            "label": "Myiodynastes maculatus",
+            "label": "Tringa solitaria",
             "registros": 11,
-            "slug_especie": "myiodynastes-maculatus",
+            "slug_especie": "tringa-solitaria",
             "slug_tematica": "migratorias",
             "tematica_label": "Migratorias",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2483497",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e3abb283c45700544e3df9/summary",
-            "species": "Myiodynastes maculatus",
+            "url_gbif": "https://www.gbif.org/species/2481710",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cf8b1b3c16479905cba7eb/summary",
+            "species": "Tringa solitaria",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Tyrannidae",
-            "genus": "Myiodynastes"
+            "order": "Charadriiformes",
+            "family": "Scolopacidae",
+            "genus": "Tringa"
           },
           {
             "label": "Piranga rubra",
@@ -19241,22 +19241,22 @@
             "genus": "Piranga"
           },
           {
-            "label": "Tringa solitaria",
+            "label": "Myiodynastes maculatus",
             "registros": 11,
-            "slug_especie": "tringa-solitaria",
+            "slug_especie": "myiodynastes-maculatus",
             "slug_tematica": "migratorias",
             "tematica_label": "Migratorias",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2481710",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56cf8b1b3c16479905cba7eb/summary",
-            "species": "Tringa solitaria",
+            "url_gbif": "https://www.gbif.org/species/2483497",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e3abb283c45700544e3df9/summary",
+            "species": "Myiodynastes maculatus",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Aves",
-            "order": "Charadriiformes",
-            "family": "Scolopacidae",
-            "genus": "Tringa"
+            "order": "Passeriformes",
+            "family": "Tyrannidae",
+            "genus": "Myiodynastes"
           }
         ],
         "endemicas": [

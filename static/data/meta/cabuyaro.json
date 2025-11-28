@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -1802,11 +1802,11 @@
           "slug_tematica": "migratorias"
         },
         {
-          "label": "Calidris minutilla",
-          "slug_especie": "calidris-minutilla",
+          "label": "Coccyzus americanus",
+          "slug_especie": "coccyzus-americanus",
           "registros": 5,
-          "url_gbif": "https://www.gbif.org/species/2481745",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7825e83c45700544e407b/summary",
+          "url_gbif": "https://www.gbif.org/species/2496287",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c3dbbdf0106c67230e7365/summary",
           "slug_tematica": "migratorias"
         }
       ]
@@ -4564,24 +4564,6 @@
             "genus": "Hirundo"
           },
           {
-            "label": "Calidris minutilla",
-            "registros": 5,
-            "slug_especie": "calidris-minutilla",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2481745",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7825e83c45700544e407b/summary",
-            "species": "Calidris minutilla",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Charadriiformes",
-            "family": "Scolopacidae",
-            "genus": "Calidris"
-          },
-          {
             "label": "Coccyzus americanus",
             "registros": 5,
             "slug_especie": "coccyzus-americanus",
@@ -4598,6 +4580,24 @@
             "order": "Cuculiformes",
             "family": "Cuculidae",
             "genus": "Coccyzus"
+          },
+          {
+            "label": "Calidris minutilla",
+            "registros": 5,
+            "slug_especie": "calidris-minutilla",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2481745",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7825e83c45700544e407b/summary",
+            "species": "Calidris minutilla",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Charadriiformes",
+            "family": "Scolopacidae",
+            "genus": "Calidris"
           }
         ],
         "endemicas": [
@@ -6174,24 +6174,6 @@
             "genus": "Hirundo"
           },
           {
-            "label": "Calidris minutilla",
-            "registros": 5,
-            "slug_especie": "calidris-minutilla",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2481745",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7825e83c45700544e407b/summary",
-            "species": "Calidris minutilla",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Charadriiformes",
-            "family": "Scolopacidae",
-            "genus": "Calidris"
-          },
-          {
             "label": "Coccyzus americanus",
             "registros": 5,
             "slug_especie": "coccyzus-americanus",
@@ -6208,6 +6190,24 @@
             "order": "Cuculiformes",
             "family": "Cuculidae",
             "genus": "Coccyzus"
+          },
+          {
+            "label": "Calidris minutilla",
+            "registros": 5,
+            "slug_especie": "calidris-minutilla",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2481745",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7825e83c45700544e407b/summary",
+            "species": "Calidris minutilla",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Charadriiformes",
+            "family": "Scolopacidae",
+            "genus": "Calidris"
           }
         ],
         "endemicas": [],
@@ -7823,22 +7823,6 @@
           "genus": "Coprophanaeus"
         },
         {
-          "label": "Onthophagus marginicollis",
-          "registros": 7,
-          "slug_especie": "onthophagus-marginicollis",
-          "slug_grupo": "escarabajos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1091988",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e80f3e83c45700544e4343/summary",
-          "species": "Onthophagus marginicollis",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Coleoptera",
-          "family": "Scarabaeidae",
-          "genus": "Onthophagus"
-        },
-        {
           "label": "Phanaeus haroldi",
           "registros": 7,
           "slug_especie": "phanaeus-haroldi",
@@ -7853,6 +7837,22 @@
           "order": "Coleoptera",
           "family": "Scarabaeidae",
           "genus": "Phanaeus"
+        },
+        {
+          "label": "Onthophagus marginicollis",
+          "registros": 7,
+          "slug_especie": "onthophagus-marginicollis",
+          "slug_grupo": "escarabajos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1091988",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e80f3e83c45700544e4343/summary",
+          "species": "Onthophagus marginicollis",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Coleoptera",
+          "family": "Scarabaeidae",
+          "genus": "Onthophagus"
         },
         {
           "label": "Digitonthophagus gazella",
@@ -13965,20 +13965,6 @@
           "genus": "Copella"
         },
         {
-          "label": "Aphyocharax alburnus",
-          "registros": 4,
-          "slug_especie": "aphyocharax-alburnus",
-          "slug_grupo": "peces",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2353645",
-          "species": "Aphyocharax alburnus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Characidae",
-          "genus": "Aphyocharax"
-        },
-        {
           "label": "Creagrutus melasma",
           "registros": 4,
           "slug_especie": "creagrutus-melasma",
@@ -13993,60 +13979,18 @@
           "genus": "Creagrutus"
         },
         {
-          "label": "Gephyrocharax valencia",
+          "label": "Paragoniates alburnus",
           "registros": 4,
-          "slug_especie": "gephyrocharax-valencia",
+          "slug_especie": "paragoniates-alburnus",
           "slug_grupo": "peces",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2353340",
-          "species": "Gephyrocharax valencia",
+          "url_gbif": "https://www.gbif.org/species/2354019",
+          "species": "Paragoniates alburnus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "order": "Characiformes",
           "family": "Characidae",
-          "genus": "Gephyrocharax"
-        },
-        {
-          "label": "Hemigrammus barrigonae",
-          "registros": 4,
-          "slug_especie": "hemigrammus-barrigonae",
-          "slug_grupo": "peces",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2354328",
-          "species": "Hemigrammus barrigonae",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Characidae",
-          "genus": "Hemigrammus"
-        },
-        {
-          "label": "Hoplerythrinus unitaeniatus",
-          "registros": 4,
-          "slug_especie": "hoplerythrinus-unitaeniatus",
-          "slug_grupo": "peces",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2352216",
-          "species": "Hoplerythrinus unitaeniatus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Erythrinidae",
-          "genus": "Hoplerythrinus"
-        },
-        {
-          "label": "Moenkhausia lepidura",
-          "registros": 4,
-          "slug_especie": "moenkhausia-lepidura",
-          "slug_grupo": "peces",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2352542",
-          "species": "Moenkhausia lepidura",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Characidae",
-          "genus": "Moenkhausia"
+          "genus": "Paragoniates"
         },
         {
           "label": "Moenkhausia metae",
@@ -14064,18 +14008,74 @@
           "genus": "Moenkhausia"
         },
         {
-          "label": "Paragoniates alburnus",
+          "label": "Aphyocharax alburnus",
           "registros": 4,
-          "slug_especie": "paragoniates-alburnus",
+          "slug_especie": "aphyocharax-alburnus",
           "slug_grupo": "peces",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2354019",
-          "species": "Paragoniates alburnus",
+          "url_gbif": "https://www.gbif.org/species/2353645",
+          "species": "Aphyocharax alburnus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "order": "Characiformes",
           "family": "Characidae",
-          "genus": "Paragoniates"
+          "genus": "Aphyocharax"
+        },
+        {
+          "label": "Moenkhausia lepidura",
+          "registros": 4,
+          "slug_especie": "moenkhausia-lepidura",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2352542",
+          "species": "Moenkhausia lepidura",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Characidae",
+          "genus": "Moenkhausia"
+        },
+        {
+          "label": "Hoplerythrinus unitaeniatus",
+          "registros": 4,
+          "slug_especie": "hoplerythrinus-unitaeniatus",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2352216",
+          "species": "Hoplerythrinus unitaeniatus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Erythrinidae",
+          "genus": "Hoplerythrinus"
+        },
+        {
+          "label": "Hemigrammus barrigonae",
+          "registros": 4,
+          "slug_especie": "hemigrammus-barrigonae",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2354328",
+          "species": "Hemigrammus barrigonae",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Characidae",
+          "genus": "Hemigrammus"
+        },
+        {
+          "label": "Gephyrocharax valencia",
+          "registros": 4,
+          "slug_especie": "gephyrocharax-valencia",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2353340",
+          "species": "Gephyrocharax valencia",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Characidae",
+          "genus": "Gephyrocharax"
         }
       ],
       "species_list_tematica": {
@@ -14456,48 +14456,6 @@
           "genus": "Astyanax"
         },
         {
-          "label": "Creagrutus melasma",
-          "registros": 4,
-          "slug_especie": "creagrutus-melasma",
-          "slug_grupo": "peces-dulceacuicolas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2353746",
-          "species": "Creagrutus melasma",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Characidae",
-          "genus": "Creagrutus"
-        },
-        {
-          "label": "Gephyrocharax valencia",
-          "registros": 4,
-          "slug_especie": "gephyrocharax-valencia",
-          "slug_grupo": "peces-dulceacuicolas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2353340",
-          "species": "Gephyrocharax valencia",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Characidae",
-          "genus": "Gephyrocharax"
-        },
-        {
-          "label": "Hemigrammus barrigonae",
-          "registros": 4,
-          "slug_especie": "hemigrammus-barrigonae",
-          "slug_grupo": "peces-dulceacuicolas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2354328",
-          "species": "Hemigrammus barrigonae",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Characidae",
-          "genus": "Hemigrammus"
-        },
-        {
           "label": "Hoplerythrinus unitaeniatus",
           "registros": 4,
           "slug_especie": "hoplerythrinus-unitaeniatus",
@@ -14526,6 +14484,20 @@
           "genus": "Moenkhausia"
         },
         {
+          "label": "Hemigrammus barrigonae",
+          "registros": 4,
+          "slug_especie": "hemigrammus-barrigonae",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2354328",
+          "species": "Hemigrammus barrigonae",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Characidae",
+          "genus": "Hemigrammus"
+        },
+        {
           "label": "Moenkhausia metae",
           "registros": 4,
           "slug_especie": "moenkhausia-metae",
@@ -14539,6 +14511,20 @@
           "order": "Characiformes",
           "family": "Characidae",
           "genus": "Moenkhausia"
+        },
+        {
+          "label": "Gephyrocharax valencia",
+          "registros": 4,
+          "slug_especie": "gephyrocharax-valencia",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2353340",
+          "species": "Gephyrocharax valencia",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Characidae",
+          "genus": "Gephyrocharax"
         },
         {
           "label": "Paragoniates alburnus",
@@ -14555,77 +14541,18 @@
           "genus": "Paragoniates"
         },
         {
-          "label": "Aequidens metae",
-          "registros": 3,
-          "slug_especie": "aequidens-metae",
+          "label": "Creagrutus melasma",
+          "registros": 4,
+          "slug_especie": "creagrutus-melasma",
           "slug_grupo": "peces-dulceacuicolas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5208319",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/5972389f2f4fd7bc7f3a7cdc/summary",
-          "species": "Aequidens metae",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Perciformes",
-          "family": "Cichlidae",
-          "genus": "Aequidens"
-        },
-        {
-          "label": "Bujurquina mariae",
-          "registros": 3,
-          "slug_especie": "bujurquina-mariae",
-          "slug_grupo": "peces-dulceacuicolas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2373797",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/59f168255f3693434430fcb7/summary",
-          "species": "Bujurquina mariae",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Perciformes",
-          "family": "Cichlidae",
-          "genus": "Bujurquina"
-        },
-        {
-          "label": "Corynopoma riisei",
-          "registros": 3,
-          "slug_especie": "corynopoma-riisei",
-          "slug_grupo": "peces-dulceacuicolas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2352683",
-          "species": "Corynopoma riisei",
+          "url_gbif": "https://www.gbif.org/species/2353746",
+          "species": "Creagrutus melasma",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "order": "Characiformes",
           "family": "Characidae",
-          "genus": "Corynopoma"
-        },
-        {
-          "label": "Hoplias malabaricus",
-          "registros": 3,
-          "slug_especie": "hoplias-malabaricus",
-          "slug_grupo": "peces-dulceacuicolas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2352230",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/592f0791f827bf0c0cedec0a/summary",
-          "species": "Hoplias malabaricus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Erythrinidae",
-          "genus": "Hoplias"
-        },
-        {
-          "label": "Odontostilbe pulchra",
-          "registros": 3,
-          "slug_especie": "odontostilbe-pulchra",
-          "slug_grupo": "peces-dulceacuicolas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2352519",
-          "species": "Odontostilbe pulchra",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Characidae",
-          "genus": "Odontostilbe"
+          "genus": "Creagrutus"
         },
         {
           "label": "Prochilodus mariae",
@@ -14654,6 +14581,79 @@
           "order": "Characiformes",
           "family": "Curimatidae",
           "genus": "Steindachnerina"
+        },
+        {
+          "label": "Aequidens metae",
+          "registros": 3,
+          "slug_especie": "aequidens-metae",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5208319",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5972389f2f4fd7bc7f3a7cdc/summary",
+          "species": "Aequidens metae",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Perciformes",
+          "family": "Cichlidae",
+          "genus": "Aequidens"
+        },
+        {
+          "label": "Hoplias malabaricus",
+          "registros": 3,
+          "slug_especie": "hoplias-malabaricus",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2352230",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/592f0791f827bf0c0cedec0a/summary",
+          "species": "Hoplias malabaricus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Erythrinidae",
+          "genus": "Hoplias"
+        },
+        {
+          "label": "Bujurquina mariae",
+          "registros": 3,
+          "slug_especie": "bujurquina-mariae",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2373797",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/59f168255f3693434430fcb7/summary",
+          "species": "Bujurquina mariae",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Perciformes",
+          "family": "Cichlidae",
+          "genus": "Bujurquina"
+        },
+        {
+          "label": "Odontostilbe pulchra",
+          "registros": 3,
+          "slug_especie": "odontostilbe-pulchra",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2352519",
+          "species": "Odontostilbe pulchra",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Characidae",
+          "genus": "Odontostilbe"
+        },
+        {
+          "label": "Corynopoma riisei",
+          "registros": 3,
+          "slug_especie": "corynopoma-riisei",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2352683",
+          "species": "Corynopoma riisei",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Characidae",
+          "genus": "Corynopoma"
         }
       ],
       "species_list_tematica": {
@@ -18563,24 +18563,6 @@
             "genus": "Hirundo"
           },
           {
-            "label": "Calidris minutilla",
-            "registros": 5,
-            "slug_especie": "calidris-minutilla",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2481745",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7825e83c45700544e407b/summary",
-            "species": "Calidris minutilla",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Charadriiformes",
-            "family": "Scolopacidae",
-            "genus": "Calidris"
-          },
-          {
             "label": "Coccyzus americanus",
             "registros": 5,
             "slug_especie": "coccyzus-americanus",
@@ -18597,6 +18579,24 @@
             "order": "Cuculiformes",
             "family": "Cuculidae",
             "genus": "Coccyzus"
+          },
+          {
+            "label": "Calidris minutilla",
+            "registros": 5,
+            "slug_especie": "calidris-minutilla",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2481745",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7825e83c45700544e407b/summary",
+            "species": "Calidris minutilla",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Charadriiformes",
+            "family": "Scolopacidae",
+            "genus": "Calidris"
           }
         ],
         "endemicas": [

@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -1466,19 +1466,19 @@
           "slug_tematica": "endemicas"
         },
         {
-          "label": "Astroblepus trifasciatus",
-          "slug_especie": "astroblepus-trifasciatus",
-          "registros": 11,
-          "url_gbif": "https://www.gbif.org/species/2342156",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/59651c932f4fd7bc7f3a3f9e/summary",
-          "slug_tematica": "endemicas"
-        },
-        {
           "label": "Myiarchus apicalis",
           "slug_especie": "myiarchus-apicalis",
           "registros": 11,
           "url_gbif": "https://www.gbif.org/species/2483558",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56e7a4fd83c45700544e4274/summary",
+          "slug_tematica": "endemicas"
+        },
+        {
+          "label": "Astroblepus trifasciatus",
+          "slug_especie": "astroblepus-trifasciatus",
+          "registros": 11,
+          "url_gbif": "https://www.gbif.org/species/2342156",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/59651c932f4fd7bc7f3a3f9e/summary",
           "slug_tematica": "endemicas"
         },
         {
@@ -1556,19 +1556,19 @@
           "slug_tematica": "migratorias"
         },
         {
-          "label": "Buteo platypterus",
-          "slug_especie": "buteo-platypterus",
-          "registros": 24,
-          "url_gbif": "https://www.gbif.org/species/2480538",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c1fa1ff0106c67230e731d/summary",
-          "slug_tematica": "migratorias"
-        },
-        {
           "label": "Setophaga petechia",
           "slug_especie": "setophaga-petechia",
           "registros": 24,
           "url_gbif": "https://www.gbif.org/species/7341834",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56cf1f393c16479905cba7c6/summary",
+          "slug_tematica": "migratorias"
+        },
+        {
+          "label": "Buteo platypterus",
+          "slug_especie": "buteo-platypterus",
+          "registros": 24,
+          "url_gbif": "https://www.gbif.org/species/2480538",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c1fa1ff0106c67230e731d/summary",
           "slug_tematica": "migratorias"
         },
         {
@@ -4617,24 +4617,6 @@
             "genus": "Myiodynastes"
           },
           {
-            "label": "Buteo platypterus",
-            "registros": 24,
-            "slug_especie": "buteo-platypterus",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2480538",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c1fa1ff0106c67230e731d/summary",
-            "species": "Buteo platypterus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Accipitriformes",
-            "family": "Accipitridae",
-            "genus": "Buteo"
-          },
-          {
             "label": "Setophaga petechia",
             "registros": 24,
             "slug_especie": "setophaga-petechia",
@@ -4651,6 +4633,24 @@
             "order": "Passeriformes",
             "family": "Parulidae",
             "genus": "Setophaga"
+          },
+          {
+            "label": "Buteo platypterus",
+            "registros": 24,
+            "slug_especie": "buteo-platypterus",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2480538",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c1fa1ff0106c67230e731d/summary",
+            "species": "Buteo platypterus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Accipitriformes",
+            "family": "Accipitridae",
+            "genus": "Buteo"
           },
           {
             "label": "Tyrannus savana",
@@ -5277,22 +5277,6 @@
           "genus": "Thraupis"
         },
         {
-          "label": "Coragyps atratus",
-          "registros": 210,
-          "slug_especie": "coragyps-atratus",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2481942",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4fe28f0106c67230e7394/summary",
-          "species": "Coragyps atratus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Accipitriformes",
-          "family": "Cathartidae",
-          "genus": "Coragyps"
-        },
-        {
           "label": "Tyrannus melancholicus",
           "registros": 210,
           "slug_especie": "tyrannus-melancholicus",
@@ -5307,6 +5291,22 @@
           "order": "Passeriformes",
           "family": "Tyrannidae",
           "genus": "Tyrannus"
+        },
+        {
+          "label": "Coragyps atratus",
+          "registros": 210,
+          "slug_especie": "coragyps-atratus",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2481942",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4fe28f0106c67230e7394/summary",
+          "species": "Coragyps atratus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Accipitriformes",
+          "family": "Cathartidae",
+          "genus": "Coragyps"
         },
         {
           "label": "Coereba flaveola",
@@ -5908,24 +5908,6 @@
             "genus": "Myiodynastes"
           },
           {
-            "label": "Buteo platypterus",
-            "registros": 24,
-            "slug_especie": "buteo-platypterus",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2480538",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c1fa1ff0106c67230e731d/summary",
-            "species": "Buteo platypterus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Accipitriformes",
-            "family": "Accipitridae",
-            "genus": "Buteo"
-          },
-          {
             "label": "Setophaga petechia",
             "registros": 24,
             "slug_especie": "setophaga-petechia",
@@ -5942,6 +5924,24 @@
             "order": "Passeriformes",
             "family": "Parulidae",
             "genus": "Setophaga"
+          },
+          {
+            "label": "Buteo platypterus",
+            "registros": 24,
+            "slug_especie": "buteo-platypterus",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2480538",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c1fa1ff0106c67230e731d/summary",
+            "species": "Buteo platypterus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Accipitriformes",
+            "family": "Accipitridae",
+            "genus": "Buteo"
           },
           {
             "label": "Tyrannus savana",
@@ -8142,21 +8142,6 @@
           "genus": "Geococcus"
         },
         {
-          "label": "Dione glycera",
-          "registros": 7,
-          "slug_especie": "dione-glycera",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5129257",
-          "species": "Dione glycera",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Dione"
-        },
-        {
           "label": "Perisama oppelii",
           "registros": 7,
           "slug_especie": "perisama-oppelii",
@@ -8172,6 +8157,21 @@
           "genus": "Perisama"
         },
         {
+          "label": "Dione glycera",
+          "registros": 7,
+          "slug_especie": "dione-glycera",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5129257",
+          "species": "Dione glycera",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Dione"
+        },
+        {
           "label": "Altinote alcione",
           "registros": 5,
           "slug_especie": "altinote-alcione",
@@ -8185,6 +8185,21 @@
           "order": "Lepidoptera",
           "family": "Nymphalidae",
           "genus": "Acraea"
+        },
+        {
+          "label": "Rhizoecus colombiensis",
+          "registros": 5,
+          "slug_especie": "rhizoecus-colombiensis",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2095631",
+          "species": "Rhizoecus colombiensis",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hemiptera",
+          "family": "Pseudococcidae",
+          "genus": "Rhizoecus"
         },
         {
           "label": "Corades enyo",
@@ -8217,19 +8232,19 @@
           "genus": "Diaethria"
         },
         {
-          "label": "Rhizoecus colombiensis",
-          "registros": 5,
-          "slug_especie": "rhizoecus-colombiensis",
+          "label": "Podotricha judith",
+          "registros": 3,
+          "slug_especie": "podotricha-judith",
           "slug_grupo": "insectos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2095631",
-          "species": "Rhizoecus colombiensis",
+          "url_gbif": "https://www.gbif.org/species/10474236",
+          "species": "Podotricha judith",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
-          "order": "Hemiptera",
-          "family": "Pseudococcidae",
-          "genus": "Rhizoecus"
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Podotricha"
         },
         {
           "label": "Perisama humboldtii",
@@ -8245,21 +8260,6 @@
           "order": "Lepidoptera",
           "family": "Nymphalidae",
           "genus": "Perisama"
-        },
-        {
-          "label": "Podotricha judith",
-          "registros": 3,
-          "slug_especie": "podotricha-judith",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/10474236",
-          "species": "Podotricha judith",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Podotricha"
         }
       ],
       "species_list_tematica": {
@@ -8606,21 +8606,6 @@
           "genus": "Geococcus"
         },
         {
-          "label": "Dione glycera",
-          "registros": 7,
-          "slug_especie": "dione-glycera",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5129257",
-          "species": "Dione glycera",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Dione"
-        },
-        {
           "label": "Perisama oppelii",
           "registros": 7,
           "slug_especie": "perisama-oppelii",
@@ -8636,6 +8621,21 @@
           "genus": "Perisama"
         },
         {
+          "label": "Dione glycera",
+          "registros": 7,
+          "slug_especie": "dione-glycera",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5129257",
+          "species": "Dione glycera",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Dione"
+        },
+        {
           "label": "Altinote alcione",
           "registros": 5,
           "slug_especie": "altinote-alcione",
@@ -8649,6 +8649,21 @@
           "order": "Lepidoptera",
           "family": "Nymphalidae",
           "genus": "Acraea"
+        },
+        {
+          "label": "Rhizoecus colombiensis",
+          "registros": 5,
+          "slug_especie": "rhizoecus-colombiensis",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2095631",
+          "species": "Rhizoecus colombiensis",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hemiptera",
+          "family": "Pseudococcidae",
+          "genus": "Rhizoecus"
         },
         {
           "label": "Corades enyo",
@@ -8681,19 +8696,19 @@
           "genus": "Diaethria"
         },
         {
-          "label": "Rhizoecus colombiensis",
-          "registros": 5,
-          "slug_especie": "rhizoecus-colombiensis",
+          "label": "Podotricha judith",
+          "registros": 3,
+          "slug_especie": "podotricha-judith",
           "slug_grupo": "invertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2095631",
-          "species": "Rhizoecus colombiensis",
+          "url_gbif": "https://www.gbif.org/species/10474236",
+          "species": "Podotricha judith",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
-          "order": "Hemiptera",
-          "family": "Pseudococcidae",
-          "genus": "Rhizoecus"
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Podotricha"
         },
         {
           "label": "Perisama humboldtii",
@@ -8709,21 +8724,6 @@
           "order": "Lepidoptera",
           "family": "Nymphalidae",
           "genus": "Perisama"
-        },
-        {
-          "label": "Podotricha judith",
-          "registros": 3,
-          "slug_especie": "podotricha-judith",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/10474236",
-          "species": "Podotricha judith",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Podotricha"
         }
       ],
       "species_list_tematica": {
@@ -9428,21 +9428,6 @@
       "subgrupo_especies": [],
       "species_list_top": [
         {
-          "label": "Hermeuptychia hermes",
-          "registros": 9,
-          "slug_especie": "hermeuptychia-hermes",
-          "slug_grupo": "mariposas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1900024",
-          "species": "Hermeuptychia hermes",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Hermeuptychia"
-        },
-        {
           "label": "Vanessa virginiensis",
           "registros": 9,
           "slug_especie": "vanessa-virginiensis",
@@ -9456,6 +9441,21 @@
           "order": "Lepidoptera",
           "family": "Nymphalidae",
           "genus": "Vanessa"
+        },
+        {
+          "label": "Hermeuptychia hermes",
+          "registros": 9,
+          "slug_especie": "hermeuptychia-hermes",
+          "slug_grupo": "mariposas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1900024",
+          "species": "Hermeuptychia hermes",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Hermeuptychia"
         },
         {
           "label": "Dione glycera",
@@ -9533,21 +9533,6 @@
           "genus": "Diaethria"
         },
         {
-          "label": "Perisama humboldtii",
-          "registros": 3,
-          "slug_especie": "perisama-humboldtii",
-          "slug_grupo": "mariposas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1909489",
-          "species": "Perisama humboldtii",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Perisama"
-        },
-        {
           "label": "Podotricha judith",
           "registros": 3,
           "slug_especie": "podotricha-judith",
@@ -9561,6 +9546,21 @@
           "order": "Lepidoptera",
           "family": "Nymphalidae",
           "genus": "Podotricha"
+        },
+        {
+          "label": "Perisama humboldtii",
+          "registros": 3,
+          "slug_especie": "perisama-humboldtii",
+          "slug_grupo": "mariposas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1909489",
+          "species": "Perisama humboldtii",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Perisama"
         },
         {
           "label": "Actinote anteas",
@@ -9594,6 +9594,36 @@
           "genus": "Graphita"
         },
         {
+          "label": "Panyapedaliodes drymaea",
+          "registros": 2,
+          "slug_especie": "panyapedaliodes-drymaea",
+          "slug_grupo": "mariposas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1892837",
+          "species": "Panyapedaliodes drymaea",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Panyapedaliodes"
+        },
+        {
+          "label": "Leptophobia aripa",
+          "registros": 2,
+          "slug_especie": "leptophobia-aripa",
+          "slug_grupo": "mariposas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1920426",
+          "species": "Leptophobia aripa",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Pieridae",
+          "genus": "Leptophobia"
+        },
+        {
           "label": "Greta andromica",
           "registros": 2,
           "slug_especie": "greta-andromica",
@@ -9622,36 +9652,6 @@
           "order": "Lepidoptera",
           "family": "Hesperiidae",
           "genus": "Hylephila"
-        },
-        {
-          "label": "Leptophobia aripa",
-          "registros": 2,
-          "slug_especie": "leptophobia-aripa",
-          "slug_grupo": "mariposas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1920426",
-          "species": "Leptophobia aripa",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Pieridae",
-          "genus": "Leptophobia"
-        },
-        {
-          "label": "Panyapedaliodes drymaea",
-          "registros": 2,
-          "slug_especie": "panyapedaliodes-drymaea",
-          "slug_grupo": "mariposas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1892837",
-          "species": "Panyapedaliodes drymaea",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Panyapedaliodes"
         }
       ],
       "species_list_tematica": {
@@ -14887,22 +14887,6 @@
           "genus": "Thraupis"
         },
         {
-          "label": "Coragyps atratus",
-          "registros": 210,
-          "slug_especie": "coragyps-atratus",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2481942",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4fe28f0106c67230e7394/summary",
-          "species": "Coragyps atratus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Accipitriformes",
-          "family": "Cathartidae",
-          "genus": "Coragyps"
-        },
-        {
           "label": "Tyrannus melancholicus",
           "registros": 210,
           "slug_especie": "tyrannus-melancholicus",
@@ -14917,6 +14901,22 @@
           "order": "Passeriformes",
           "family": "Tyrannidae",
           "genus": "Tyrannus"
+        },
+        {
+          "label": "Coragyps atratus",
+          "registros": 210,
+          "slug_especie": "coragyps-atratus",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2481942",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4fe28f0106c67230e7394/summary",
+          "species": "Coragyps atratus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Accipitriformes",
+          "family": "Cathartidae",
+          "genus": "Coragyps"
         },
         {
           "label": "Coereba flaveola",
@@ -15553,24 +15553,6 @@
             "genus": "Myiodynastes"
           },
           {
-            "label": "Buteo platypterus",
-            "registros": 24,
-            "slug_especie": "buteo-platypterus",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2480538",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c1fa1ff0106c67230e731d/summary",
-            "species": "Buteo platypterus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Accipitriformes",
-            "family": "Accipitridae",
-            "genus": "Buteo"
-          },
-          {
             "label": "Setophaga petechia",
             "registros": 24,
             "slug_especie": "setophaga-petechia",
@@ -15587,6 +15569,24 @@
             "order": "Passeriformes",
             "family": "Parulidae",
             "genus": "Setophaga"
+          },
+          {
+            "label": "Buteo platypterus",
+            "registros": 24,
+            "slug_especie": "buteo-platypterus",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2480538",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c1fa1ff0106c67230e731d/summary",
+            "species": "Buteo platypterus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Accipitriformes",
+            "family": "Accipitridae",
+            "genus": "Buteo"
           },
           {
             "label": "Tyrannus savana",

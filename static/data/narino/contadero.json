@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -2525,22 +2525,6 @@
           "genus": "Icterus"
         },
         {
-          "label": "Metallura tyrianthina",
-          "registros": 12,
-          "slug_especie": "metallura-tyrianthina",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2476860",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b67cf0106c67230e7406/summary",
-          "species": "Metallura tyrianthina",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Apodiformes",
-          "family": "Trochilidae",
-          "genus": "Metallura"
-        },
-        {
           "label": "Patagioenas fasciata",
           "registros": 12,
           "slug_especie": "patagioenas-fasciata",
@@ -2571,6 +2555,22 @@
           "order": "Passeriformes",
           "family": "Fringillidae",
           "genus": "Spinus"
+        },
+        {
+          "label": "Metallura tyrianthina",
+          "registros": 12,
+          "slug_especie": "metallura-tyrianthina",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2476860",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b67cf0106c67230e7406/summary",
+          "species": "Metallura tyrianthina",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Apodiformes",
+          "family": "Trochilidae",
+          "genus": "Metallura"
         }
       ],
       "species_list_tematica": {
@@ -3422,22 +3422,6 @@
           "genus": "Metallura"
         },
         {
-          "label": "Patagioenas fasciata",
-          "registros": 12,
-          "slug_especie": "patagioenas-fasciata",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2495266",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cc9488207ecea54a561e38/summary",
-          "species": "Patagioenas fasciata",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Columbiformes",
-          "family": "Columbidae",
-          "genus": "Patagioenas"
-        },
-        {
           "label": "Spinus psaltria",
           "registros": 12,
           "slug_especie": "spinus-psaltria",
@@ -3452,6 +3436,22 @@
           "order": "Passeriformes",
           "family": "Fringillidae",
           "genus": "Spinus"
+        },
+        {
+          "label": "Patagioenas fasciata",
+          "registros": 12,
+          "slug_especie": "patagioenas-fasciata",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2495266",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cc9488207ecea54a561e38/summary",
+          "species": "Patagioenas fasciata",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Columbiformes",
+          "family": "Columbidae",
+          "genus": "Patagioenas"
         }
       ],
       "species_list_tematica": {
@@ -6251,21 +6251,6 @@
           "genus": "Syntrichia"
         },
         {
-          "label": "Rhynchostegium aquaticum",
-          "registros": 6,
-          "slug_especie": "rhynchostegium-aquaticum",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7916311",
-          "species": "Rhynchostegium aquaticum",
-          "kingdom": "Plantae",
-          "phylum": "Bryophyta",
-          "class": "Bryopsida",
-          "order": "Hypnales",
-          "family": "Brachytheciaceae",
-          "genus": "Rhynchostegium"
-        },
-        {
           "label": "Rosulabryum densifolium",
           "registros": 6,
           "slug_especie": "rosulabryum-densifolium",
@@ -6279,6 +6264,21 @@
           "order": "Bryales",
           "family": "Bryaceae",
           "genus": "Rosulabryum"
+        },
+        {
+          "label": "Rhynchostegium aquaticum",
+          "registros": 6,
+          "slug_especie": "rhynchostegium-aquaticum",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7916311",
+          "species": "Rhynchostegium aquaticum",
+          "kingdom": "Plantae",
+          "phylum": "Bryophyta",
+          "class": "Bryopsida",
+          "order": "Hypnales",
+          "family": "Brachytheciaceae",
+          "genus": "Rhynchostegium"
         },
         {
           "label": "Cryptopapillaria penicillata",
@@ -6311,21 +6311,6 @@
           "genus": "Leptodontium"
         },
         {
-          "label": "Polytrichum juniperinum",
-          "registros": 4,
-          "slug_especie": "polytrichum-juniperinum",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2683092",
-          "species": "Polytrichum juniperinum",
-          "kingdom": "Plantae",
-          "phylum": "Bryophyta",
-          "class": "Polytrichopsida",
-          "order": "Polytrichales",
-          "family": "Polytrichaceae",
-          "genus": "Polytrichum"
-        },
-        {
           "label": "Pseudocrossidium replicatum",
           "registros": 4,
           "slug_especie": "pseudocrossidium-replicatum",
@@ -6341,34 +6326,19 @@
           "genus": "Pseudocrossidium"
         },
         {
-          "label": "Leskeadelphus angustatus",
-          "registros": 3,
-          "slug_especie": "leskeadelphus-angustatus",
+          "label": "Polytrichum juniperinum",
+          "registros": 4,
+          "slug_especie": "polytrichum-juniperinum",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7529490",
-          "species": "Leskeadelphus angustatus",
+          "url_gbif": "https://www.gbif.org/species/2683092",
+          "species": "Polytrichum juniperinum",
           "kingdom": "Plantae",
           "phylum": "Bryophyta",
-          "class": "Bryopsida",
-          "order": "Hypnales",
-          "family": "Leskeaceae",
-          "genus": "Leskeadelphus"
-        },
-        {
-          "label": "Papillaria laevifolia",
-          "registros": 3,
-          "slug_especie": "papillaria-laevifolia",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/8345405",
-          "species": "Papillaria laevifolia",
-          "kingdom": "Plantae",
-          "phylum": "Bryophyta",
-          "class": "Bryopsida",
-          "order": "Hypnales",
-          "family": "Meteoriaceae",
-          "genus": "Papillaria"
+          "class": "Polytrichopsida",
+          "order": "Polytrichales",
+          "family": "Polytrichaceae",
+          "genus": "Polytrichum"
         },
         {
           "label": "Plagiobryoides limbata",
@@ -6399,6 +6369,36 @@
           "order": "Hypnales",
           "family": "Brachytheciaceae",
           "genus": "Sciuro-hypnum"
+        },
+        {
+          "label": "Leskeadelphus angustatus",
+          "registros": 3,
+          "slug_especie": "leskeadelphus-angustatus",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7529490",
+          "species": "Leskeadelphus angustatus",
+          "kingdom": "Plantae",
+          "phylum": "Bryophyta",
+          "class": "Bryopsida",
+          "order": "Hypnales",
+          "family": "Leskeaceae",
+          "genus": "Leskeadelphus"
+        },
+        {
+          "label": "Papillaria laevifolia",
+          "registros": 3,
+          "slug_especie": "papillaria-laevifolia",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/8345405",
+          "species": "Papillaria laevifolia",
+          "kingdom": "Plantae",
+          "phylum": "Bryophyta",
+          "class": "Bryopsida",
+          "order": "Hypnales",
+          "family": "Meteoriaceae",
+          "genus": "Papillaria"
         }
       ],
       "species_list_tematica": {
@@ -7782,22 +7782,6 @@
           "genus": "Icterus"
         },
         {
-          "label": "Metallura tyrianthina",
-          "registros": 12,
-          "slug_especie": "metallura-tyrianthina",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2476860",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b67cf0106c67230e7406/summary",
-          "species": "Metallura tyrianthina",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Apodiformes",
-          "family": "Trochilidae",
-          "genus": "Metallura"
-        },
-        {
           "label": "Patagioenas fasciata",
           "registros": 12,
           "slug_especie": "patagioenas-fasciata",
@@ -7828,6 +7812,22 @@
           "order": "Passeriformes",
           "family": "Fringillidae",
           "genus": "Spinus"
+        },
+        {
+          "label": "Metallura tyrianthina",
+          "registros": 12,
+          "slug_especie": "metallura-tyrianthina",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2476860",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b67cf0106c67230e7406/summary",
+          "species": "Metallura tyrianthina",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Apodiformes",
+          "family": "Trochilidae",
+          "genus": "Metallura"
         }
       ],
       "species_list_tematica": {

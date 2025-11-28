@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -784,19 +784,19 @@
       "parent_registros_cites_iii": 2606,
       "list_especies_cites": [
         {
-          "label": "Adelomyia melanogenys",
-          "slug_especie": "adelomyia-melanogenys",
-          "registros": 5,
-          "url_gbif": "https://www.gbif.org/species/2476168",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56bddf40f0106c67230e72ec/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
           "label": "Rupornis magnirostris",
           "slug_especie": "rupornis-magnirostris",
           "registros": 5,
           "url_gbif": "https://www.gbif.org/species/5844398",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56ce57a13c16479905cba79b/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Adelomyia melanogenys",
+          "slug_especie": "adelomyia-melanogenys",
+          "registros": 5,
+          "url_gbif": "https://www.gbif.org/species/2476168",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56bddf40f0106c67230e72ec/summary",
           "slug_tematica": "cites-ii"
         },
         {
@@ -816,6 +816,13 @@
           "slug_tematica": "cites-ii"
         },
         {
+          "label": "Phaethornis syrmatophorus",
+          "slug_especie": "phaethornis-syrmatophorus",
+          "registros": 2,
+          "url_gbif": "https://www.gbif.org/species/2476589",
+          "slug_tematica": "cites-ii"
+        },
+        {
           "label": "Chalcostigma herrani",
           "slug_especie": "chalcostigma-herrani",
           "registros": 2,
@@ -827,6 +834,14 @@
           "slug_especie": "coeligena-torquata",
           "registros": 2,
           "url_gbif": "https://www.gbif.org/species/2477053",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Heliangelus exortis",
+          "slug_especie": "heliangelus-exortis",
+          "registros": 2,
+          "url_gbif": "https://www.gbif.org/species/2476708",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9d3f9f0106c67230e7449/summary",
           "slug_tematica": "cites-ii"
         },
         {
@@ -843,21 +858,6 @@
           "registros": 2,
           "url_gbif": "https://www.gbif.org/species/9685907",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56c769ddf0106c67230e73ec/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
-          "label": "Heliangelus exortis",
-          "slug_especie": "heliangelus-exortis",
-          "registros": 2,
-          "url_gbif": "https://www.gbif.org/species/2476708",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9d3f9f0106c67230e7449/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
-          "label": "Phaethornis syrmatophorus",
-          "slug_especie": "phaethornis-syrmatophorus",
-          "registros": 2,
-          "url_gbif": "https://www.gbif.org/species/2476589",
           "slug_tematica": "cites-ii"
         }
       ],
@@ -865,19 +865,19 @@
       "list_especies_cites_i_ii": [],
       "list_especies_cites_ii": [
         {
-          "label": "Adelomyia melanogenys",
-          "slug_especie": "adelomyia-melanogenys",
-          "registros": 5,
-          "url_gbif": "https://www.gbif.org/species/2476168",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56bddf40f0106c67230e72ec/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
           "label": "Rupornis magnirostris",
           "slug_especie": "rupornis-magnirostris",
           "registros": 5,
           "url_gbif": "https://www.gbif.org/species/5844398",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56ce57a13c16479905cba79b/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Adelomyia melanogenys",
+          "slug_especie": "adelomyia-melanogenys",
+          "registros": 5,
+          "url_gbif": "https://www.gbif.org/species/2476168",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56bddf40f0106c67230e72ec/summary",
           "slug_tematica": "cites-ii"
         },
         {
@@ -897,25 +897,11 @@
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Chalcostigma herrani",
-          "slug_especie": "chalcostigma-herrani",
+          "label": "Heliangelus exortis",
+          "slug_especie": "heliangelus-exortis",
           "registros": 2,
-          "url_gbif": "https://www.gbif.org/species/2476805",
-          "slug_tematica": "cites-ii"
-        },
-        {
-          "label": "Coeligena torquata",
-          "slug_especie": "coeligena-torquata",
-          "registros": 2,
-          "url_gbif": "https://www.gbif.org/species/2477053",
-          "slug_tematica": "cites-ii"
-        },
-        {
-          "label": "Elanoides forficatus",
-          "slug_especie": "elanoides-forficatus",
-          "registros": 2,
-          "url_gbif": "https://www.gbif.org/species/2480461",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56d8b3d03c16479905cba972/summary",
+          "url_gbif": "https://www.gbif.org/species/2476708",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9d3f9f0106c67230e7449/summary",
           "slug_tematica": "cites-ii"
         },
         {
@@ -927,11 +913,10 @@
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Heliangelus exortis",
-          "slug_especie": "heliangelus-exortis",
+          "label": "Coeligena torquata",
+          "slug_especie": "coeligena-torquata",
           "registros": 2,
-          "url_gbif": "https://www.gbif.org/species/2476708",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9d3f9f0106c67230e7449/summary",
+          "url_gbif": "https://www.gbif.org/species/2477053",
           "slug_tematica": "cites-ii"
         },
         {
@@ -939,6 +924,21 @@
           "slug_especie": "phaethornis-syrmatophorus",
           "registros": 2,
           "url_gbif": "https://www.gbif.org/species/2476589",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Chalcostigma herrani",
+          "slug_especie": "chalcostigma-herrani",
+          "registros": 2,
+          "url_gbif": "https://www.gbif.org/species/2476805",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Elanoides forficatus",
+          "slug_especie": "elanoides-forficatus",
+          "registros": 2,
+          "url_gbif": "https://www.gbif.org/species/2480461",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d8b3d03c16479905cba972/summary",
           "slug_tematica": "cites-ii"
         }
       ],
@@ -953,19 +953,19 @@
       ],
       "species_list": [
         {
-          "label": "Adelomyia melanogenys",
-          "slug_especie": "adelomyia-melanogenys",
-          "registros": 5,
-          "url_gbif": "https://www.gbif.org/species/2476168",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56bddf40f0106c67230e72ec/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
           "label": "Rupornis magnirostris",
           "slug_especie": "rupornis-magnirostris",
           "registros": 5,
           "url_gbif": "https://www.gbif.org/species/5844398",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56ce57a13c16479905cba79b/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Adelomyia melanogenys",
+          "slug_especie": "adelomyia-melanogenys",
+          "registros": 5,
+          "url_gbif": "https://www.gbif.org/species/2476168",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56bddf40f0106c67230e72ec/summary",
           "slug_tematica": "cites-ii"
         },
         {
@@ -985,6 +985,13 @@
           "slug_tematica": "cites-ii"
         },
         {
+          "label": "Phaethornis syrmatophorus",
+          "slug_especie": "phaethornis-syrmatophorus",
+          "registros": 2,
+          "url_gbif": "https://www.gbif.org/species/2476589",
+          "slug_tematica": "cites-ii"
+        },
+        {
           "label": "Chalcostigma herrani",
           "slug_especie": "chalcostigma-herrani",
           "registros": 2,
@@ -996,6 +1003,14 @@
           "slug_especie": "coeligena-torquata",
           "registros": 2,
           "url_gbif": "https://www.gbif.org/species/2477053",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Heliangelus exortis",
+          "slug_especie": "heliangelus-exortis",
+          "registros": 2,
+          "url_gbif": "https://www.gbif.org/species/2476708",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9d3f9f0106c67230e7449/summary",
           "slug_tematica": "cites-ii"
         },
         {
@@ -1012,21 +1027,6 @@
           "registros": 2,
           "url_gbif": "https://www.gbif.org/species/9685907",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56c769ddf0106c67230e73ec/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
-          "label": "Heliangelus exortis",
-          "slug_especie": "heliangelus-exortis",
-          "registros": 2,
-          "url_gbif": "https://www.gbif.org/species/2476708",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9d3f9f0106c67230e7449/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
-          "label": "Phaethornis syrmatophorus",
-          "slug_especie": "phaethornis-syrmatophorus",
-          "registros": 2,
-          "url_gbif": "https://www.gbif.org/species/2476589",
           "slug_tematica": "cites-ii"
         }
       ]
@@ -2088,36 +2088,20 @@
           "genus": "Adelomyia"
         },
         {
-          "label": "Coragyps atratus",
+          "label": "Rupornis magnirostris",
           "registros": 5,
-          "slug_especie": "coragyps-atratus",
+          "slug_especie": "rupornis-magnirostris",
           "slug_grupo": "animales",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2481942",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4fe28f0106c67230e7394/summary",
-          "species": "Coragyps atratus",
+          "url_gbif": "https://www.gbif.org/species/5844398",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56ce57a13c16479905cba79b/summary",
+          "species": "Rupornis magnirostris",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Accipitriformes",
-          "family": "Cathartidae",
-          "genus": "Coragyps"
-        },
-        {
-          "label": "Diglossa cyanea",
-          "registros": 5,
-          "slug_especie": "diglossa-cyanea",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7342077",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c53387f0106c67230e739b/summary",
-          "species": "Diglossa cyanea",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Diglossa"
+          "family": "Accipitridae",
+          "genus": "Rupornis"
         },
         {
           "label": "Grallaria ruficapilla",
@@ -2136,37 +2120,6 @@
           "genus": "Grallaria"
         },
         {
-          "label": "Rupornis magnirostris",
-          "registros": 5,
-          "slug_especie": "rupornis-magnirostris",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5844398",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56ce57a13c16479905cba79b/summary",
-          "species": "Rupornis magnirostris",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Accipitriformes",
-          "family": "Accipitridae",
-          "genus": "Rupornis"
-        },
-        {
-          "label": "Scytalopus latrans",
-          "registros": 5,
-          "slug_especie": "scytalopus-latrans",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7340755",
-          "species": "Scytalopus latrans",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Rhinocryptidae",
-          "genus": "Scytalopus"
-        },
-        {
           "label": "Turdus fuscater",
           "registros": 5,
           "slug_especie": "turdus-fuscater",
@@ -2183,35 +2136,51 @@
           "genus": "Turdus"
         },
         {
-          "label": "Chlorornis riefferii",
-          "registros": 4,
-          "slug_especie": "chlorornis-riefferii",
+          "label": "Diglossa cyanea",
+          "registros": 5,
+          "slug_especie": "diglossa-cyanea",
           "slug_grupo": "animales",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5230635",
-          "species": "Chlorornis riefferii",
+          "url_gbif": "https://www.gbif.org/species/7342077",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c53387f0106c67230e739b/summary",
+          "species": "Diglossa cyanea",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
           "family": "Thraupidae",
-          "genus": "Chlorornis"
+          "genus": "Diglossa"
         },
         {
-          "label": "Cryptocanthon humidus",
-          "registros": 4,
-          "slug_especie": "cryptocanthon-humidus",
+          "label": "Coragyps atratus",
+          "registros": 5,
+          "slug_especie": "coragyps-atratus",
           "slug_grupo": "animales",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1093994",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e767f483c45700544e3fd5/summary",
-          "species": "Cryptocanthon humidus",
+          "url_gbif": "https://www.gbif.org/species/2481942",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4fe28f0106c67230e7394/summary",
+          "species": "Coragyps atratus",
           "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Coleoptera",
-          "family": "Scarabaeidae",
-          "genus": "Cryptocanthon"
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Accipitriformes",
+          "family": "Cathartidae",
+          "genus": "Coragyps"
+        },
+        {
+          "label": "Scytalopus latrans",
+          "registros": 5,
+          "slug_especie": "scytalopus-latrans",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7340755",
+          "species": "Scytalopus latrans",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Rhinocryptidae",
+          "genus": "Scytalopus"
         },
         {
           "label": "Diglossa albilatera",
@@ -2230,19 +2199,36 @@
           "genus": "Diglossa"
         },
         {
-          "label": "Penelope montagnii",
+          "label": "Zonotrichia capensis",
           "registros": 4,
-          "slug_especie": "penelope-montagnii",
+          "slug_especie": "zonotrichia-capensis",
           "slug_grupo": "animales",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2482198",
-          "species": "Penelope montagnii",
+          "url_gbif": "https://www.gbif.org/species/5231103",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d064433c16479905cba820/summary",
+          "species": "Zonotrichia capensis",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": "Galliformes",
-          "family": "Cracidae",
-          "genus": "Penelope"
+          "order": "Passeriformes",
+          "family": "Passerellidae",
+          "genus": "Zonotrichia"
+        },
+        {
+          "label": "Cryptocanthon humidus",
+          "registros": 4,
+          "slug_especie": "cryptocanthon-humidus",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1093994",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e767f483c45700544e3fd5/summary",
+          "species": "Cryptocanthon humidus",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Coleoptera",
+          "family": "Scarabaeidae",
+          "genus": "Cryptocanthon"
         },
         {
           "label": "Synallaxis azarae",
@@ -2260,20 +2246,34 @@
           "genus": "Synallaxis"
         },
         {
-          "label": "Zonotrichia capensis",
+          "label": "Chlorornis riefferii",
           "registros": 4,
-          "slug_especie": "zonotrichia-capensis",
+          "slug_especie": "chlorornis-riefferii",
           "slug_grupo": "animales",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5231103",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56d064433c16479905cba820/summary",
-          "species": "Zonotrichia capensis",
+          "url_gbif": "https://www.gbif.org/species/5230635",
+          "species": "Chlorornis riefferii",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Passerellidae",
-          "genus": "Zonotrichia"
+          "family": "Thraupidae",
+          "genus": "Chlorornis"
+        },
+        {
+          "label": "Penelope montagnii",
+          "registros": 4,
+          "slug_especie": "penelope-montagnii",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2482198",
+          "species": "Penelope montagnii",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Galliformes",
+          "family": "Cracidae",
+          "genus": "Penelope"
         }
       ],
       "species_list_tematica": {
@@ -2335,24 +2335,6 @@
         "amenazadas-global": [],
         "cites": [
           {
-            "label": "Adelomyia melanogenys",
-            "registros": 5,
-            "slug_especie": "adelomyia-melanogenys",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476168",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56bddf40f0106c67230e72ec/summary",
-            "species": "Adelomyia melanogenys",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Adelomyia"
-          },
-          {
             "label": "Rupornis magnirostris",
             "registros": 5,
             "slug_especie": "rupornis-magnirostris",
@@ -2369,6 +2351,24 @@
             "order": "Accipitriformes",
             "family": "Accipitridae",
             "genus": "Rupornis"
+          },
+          {
+            "label": "Adelomyia melanogenys",
+            "registros": 5,
+            "slug_especie": "adelomyia-melanogenys",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2476168",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56bddf40f0106c67230e72ec/summary",
+            "species": "Adelomyia melanogenys",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Adelomyia"
           },
           {
             "label": "Eriocnemis vestita",
@@ -2407,6 +2407,23 @@
             "genus": "Lesbia"
           },
           {
+            "label": "Phaethornis syrmatophorus",
+            "registros": 2,
+            "slug_especie": "phaethornis-syrmatophorus",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2476589",
+            "species": "Phaethornis syrmatophorus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Phaethornis"
+          },
+          {
             "label": "Chalcostigma herrani",
             "registros": 2,
             "slug_especie": "chalcostigma-herrani",
@@ -2439,6 +2456,24 @@
             "order": "Apodiformes",
             "family": "Trochilidae",
             "genus": "Coeligena"
+          },
+          {
+            "label": "Heliangelus exortis",
+            "registros": 2,
+            "slug_especie": "heliangelus-exortis",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2476708",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c9d3f9f0106c67230e7449/summary",
+            "species": "Heliangelus exortis",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Heliangelus"
           },
           {
             "label": "Elanoides forficatus",
@@ -2475,41 +2510,6 @@
             "order": "Falconiformes",
             "family": "Falconidae",
             "genus": "Falco"
-          },
-          {
-            "label": "Heliangelus exortis",
-            "registros": 2,
-            "slug_especie": "heliangelus-exortis",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476708",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c9d3f9f0106c67230e7449/summary",
-            "species": "Heliangelus exortis",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Heliangelus"
-          },
-          {
-            "label": "Phaethornis syrmatophorus",
-            "registros": 2,
-            "slug_especie": "phaethornis-syrmatophorus",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476589",
-            "species": "Phaethornis syrmatophorus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Phaethornis"
           }
         ],
         "migratorias": [
@@ -2956,36 +2956,19 @@
           "genus": "Adelomyia"
         },
         {
-          "label": "Coragyps atratus",
+          "label": "Scytalopus latrans",
           "registros": 5,
-          "slug_especie": "coragyps-atratus",
+          "slug_especie": "scytalopus-latrans",
           "slug_grupo": "aves",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2481942",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4fe28f0106c67230e7394/summary",
-          "species": "Coragyps atratus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Accipitriformes",
-          "family": "Cathartidae",
-          "genus": "Coragyps"
-        },
-        {
-          "label": "Diglossa cyanea",
-          "registros": 5,
-          "slug_especie": "diglossa-cyanea",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7342077",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c53387f0106c67230e739b/summary",
-          "species": "Diglossa cyanea",
+          "url_gbif": "https://www.gbif.org/species/7340755",
+          "species": "Scytalopus latrans",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Diglossa"
+          "family": "Rhinocryptidae",
+          "genus": "Scytalopus"
         },
         {
           "label": "Grallaria ruficapilla",
@@ -3004,37 +2987,6 @@
           "genus": "Grallaria"
         },
         {
-          "label": "Rupornis magnirostris",
-          "registros": 5,
-          "slug_especie": "rupornis-magnirostris",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5844398",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56ce57a13c16479905cba79b/summary",
-          "species": "Rupornis magnirostris",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Accipitriformes",
-          "family": "Accipitridae",
-          "genus": "Rupornis"
-        },
-        {
-          "label": "Scytalopus latrans",
-          "registros": 5,
-          "slug_especie": "scytalopus-latrans",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7340755",
-          "species": "Scytalopus latrans",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Rhinocryptidae",
-          "genus": "Scytalopus"
-        },
-        {
           "label": "Turdus fuscater",
           "registros": 5,
           "slug_especie": "turdus-fuscater",
@@ -3051,19 +3003,52 @@
           "genus": "Turdus"
         },
         {
-          "label": "Chlorornis riefferii",
-          "registros": 4,
-          "slug_especie": "chlorornis-riefferii",
+          "label": "Diglossa cyanea",
+          "registros": 5,
+          "slug_especie": "diglossa-cyanea",
           "slug_grupo": "aves",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5230635",
-          "species": "Chlorornis riefferii",
+          "url_gbif": "https://www.gbif.org/species/7342077",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c53387f0106c67230e739b/summary",
+          "species": "Diglossa cyanea",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
           "family": "Thraupidae",
-          "genus": "Chlorornis"
+          "genus": "Diglossa"
+        },
+        {
+          "label": "Coragyps atratus",
+          "registros": 5,
+          "slug_especie": "coragyps-atratus",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2481942",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4fe28f0106c67230e7394/summary",
+          "species": "Coragyps atratus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Accipitriformes",
+          "family": "Cathartidae",
+          "genus": "Coragyps"
+        },
+        {
+          "label": "Rupornis magnirostris",
+          "registros": 5,
+          "slug_especie": "rupornis-magnirostris",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5844398",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56ce57a13c16479905cba79b/summary",
+          "species": "Rupornis magnirostris",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Accipitriformes",
+          "family": "Accipitridae",
+          "genus": "Rupornis"
         },
         {
           "label": "Diglossa albilatera",
@@ -3082,19 +3067,20 @@
           "genus": "Diglossa"
         },
         {
-          "label": "Penelope montagnii",
+          "label": "Zonotrichia capensis",
           "registros": 4,
-          "slug_especie": "penelope-montagnii",
+          "slug_especie": "zonotrichia-capensis",
           "slug_grupo": "aves",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2482198",
-          "species": "Penelope montagnii",
+          "url_gbif": "https://www.gbif.org/species/5231103",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d064433c16479905cba820/summary",
+          "species": "Zonotrichia capensis",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": "Galliformes",
-          "family": "Cracidae",
-          "genus": "Penelope"
+          "order": "Passeriformes",
+          "family": "Passerellidae",
+          "genus": "Zonotrichia"
         },
         {
           "label": "Synallaxis azarae",
@@ -3112,20 +3098,34 @@
           "genus": "Synallaxis"
         },
         {
-          "label": "Zonotrichia capensis",
+          "label": "Chlorornis riefferii",
           "registros": 4,
-          "slug_especie": "zonotrichia-capensis",
+          "slug_especie": "chlorornis-riefferii",
           "slug_grupo": "aves",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5231103",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56d064433c16479905cba820/summary",
-          "species": "Zonotrichia capensis",
+          "url_gbif": "https://www.gbif.org/species/5230635",
+          "species": "Chlorornis riefferii",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Passerellidae",
-          "genus": "Zonotrichia"
+          "family": "Thraupidae",
+          "genus": "Chlorornis"
+        },
+        {
+          "label": "Penelope montagnii",
+          "registros": 4,
+          "slug_especie": "penelope-montagnii",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2482198",
+          "species": "Penelope montagnii",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Galliformes",
+          "family": "Cracidae",
+          "genus": "Penelope"
         }
       ],
       "species_list_tematica": {
@@ -3187,24 +3187,6 @@
         "amenazadas-global": [],
         "cites": [
           {
-            "label": "Adelomyia melanogenys",
-            "registros": 5,
-            "slug_especie": "adelomyia-melanogenys",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476168",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56bddf40f0106c67230e72ec/summary",
-            "species": "Adelomyia melanogenys",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Adelomyia"
-          },
-          {
             "label": "Rupornis magnirostris",
             "registros": 5,
             "slug_especie": "rupornis-magnirostris",
@@ -3221,6 +3203,24 @@
             "order": "Accipitriformes",
             "family": "Accipitridae",
             "genus": "Rupornis"
+          },
+          {
+            "label": "Adelomyia melanogenys",
+            "registros": 5,
+            "slug_especie": "adelomyia-melanogenys",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2476168",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56bddf40f0106c67230e72ec/summary",
+            "species": "Adelomyia melanogenys",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Adelomyia"
           },
           {
             "label": "Eriocnemis vestita",
@@ -3259,6 +3259,23 @@
             "genus": "Lesbia"
           },
           {
+            "label": "Phaethornis syrmatophorus",
+            "registros": 2,
+            "slug_especie": "phaethornis-syrmatophorus",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2476589",
+            "species": "Phaethornis syrmatophorus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Phaethornis"
+          },
+          {
             "label": "Chalcostigma herrani",
             "registros": 2,
             "slug_especie": "chalcostigma-herrani",
@@ -3291,6 +3308,24 @@
             "order": "Apodiformes",
             "family": "Trochilidae",
             "genus": "Coeligena"
+          },
+          {
+            "label": "Heliangelus exortis",
+            "registros": 2,
+            "slug_especie": "heliangelus-exortis",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2476708",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c9d3f9f0106c67230e7449/summary",
+            "species": "Heliangelus exortis",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Heliangelus"
           },
           {
             "label": "Elanoides forficatus",
@@ -3327,41 +3362,6 @@
             "order": "Falconiformes",
             "family": "Falconidae",
             "genus": "Falco"
-          },
-          {
-            "label": "Heliangelus exortis",
-            "registros": 2,
-            "slug_especie": "heliangelus-exortis",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476708",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c9d3f9f0106c67230e7449/summary",
-            "species": "Heliangelus exortis",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Heliangelus"
-          },
-          {
-            "label": "Phaethornis syrmatophorus",
-            "registros": 2,
-            "slug_especie": "phaethornis-syrmatophorus",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476589",
-            "species": "Phaethornis syrmatophorus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Phaethornis"
           }
         ],
         "migratorias": [
@@ -5940,36 +5940,19 @@
           "genus": "Adelomyia"
         },
         {
-          "label": "Coragyps atratus",
+          "label": "Scytalopus latrans",
           "registros": 5,
-          "slug_especie": "coragyps-atratus",
+          "slug_especie": "scytalopus-latrans",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2481942",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4fe28f0106c67230e7394/summary",
-          "species": "Coragyps atratus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Accipitriformes",
-          "family": "Cathartidae",
-          "genus": "Coragyps"
-        },
-        {
-          "label": "Diglossa cyanea",
-          "registros": 5,
-          "slug_especie": "diglossa-cyanea",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7342077",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c53387f0106c67230e739b/summary",
-          "species": "Diglossa cyanea",
+          "url_gbif": "https://www.gbif.org/species/7340755",
+          "species": "Scytalopus latrans",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Diglossa"
+          "family": "Rhinocryptidae",
+          "genus": "Scytalopus"
         },
         {
           "label": "Grallaria ruficapilla",
@@ -5988,37 +5971,6 @@
           "genus": "Grallaria"
         },
         {
-          "label": "Rupornis magnirostris",
-          "registros": 5,
-          "slug_especie": "rupornis-magnirostris",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5844398",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56ce57a13c16479905cba79b/summary",
-          "species": "Rupornis magnirostris",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Accipitriformes",
-          "family": "Accipitridae",
-          "genus": "Rupornis"
-        },
-        {
-          "label": "Scytalopus latrans",
-          "registros": 5,
-          "slug_especie": "scytalopus-latrans",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7340755",
-          "species": "Scytalopus latrans",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Rhinocryptidae",
-          "genus": "Scytalopus"
-        },
-        {
           "label": "Turdus fuscater",
           "registros": 5,
           "slug_especie": "turdus-fuscater",
@@ -6035,19 +5987,52 @@
           "genus": "Turdus"
         },
         {
-          "label": "Chlorornis riefferii",
-          "registros": 4,
-          "slug_especie": "chlorornis-riefferii",
+          "label": "Diglossa cyanea",
+          "registros": 5,
+          "slug_especie": "diglossa-cyanea",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5230635",
-          "species": "Chlorornis riefferii",
+          "url_gbif": "https://www.gbif.org/species/7342077",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c53387f0106c67230e739b/summary",
+          "species": "Diglossa cyanea",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
           "family": "Thraupidae",
-          "genus": "Chlorornis"
+          "genus": "Diglossa"
+        },
+        {
+          "label": "Coragyps atratus",
+          "registros": 5,
+          "slug_especie": "coragyps-atratus",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2481942",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4fe28f0106c67230e7394/summary",
+          "species": "Coragyps atratus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Accipitriformes",
+          "family": "Cathartidae",
+          "genus": "Coragyps"
+        },
+        {
+          "label": "Rupornis magnirostris",
+          "registros": 5,
+          "slug_especie": "rupornis-magnirostris",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5844398",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56ce57a13c16479905cba79b/summary",
+          "species": "Rupornis magnirostris",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Accipitriformes",
+          "family": "Accipitridae",
+          "genus": "Rupornis"
         },
         {
           "label": "Diglossa albilatera",
@@ -6066,19 +6051,20 @@
           "genus": "Diglossa"
         },
         {
-          "label": "Penelope montagnii",
+          "label": "Zonotrichia capensis",
           "registros": 4,
-          "slug_especie": "penelope-montagnii",
+          "slug_especie": "zonotrichia-capensis",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2482198",
-          "species": "Penelope montagnii",
+          "url_gbif": "https://www.gbif.org/species/5231103",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d064433c16479905cba820/summary",
+          "species": "Zonotrichia capensis",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": "Galliformes",
-          "family": "Cracidae",
-          "genus": "Penelope"
+          "order": "Passeriformes",
+          "family": "Passerellidae",
+          "genus": "Zonotrichia"
         },
         {
           "label": "Synallaxis azarae",
@@ -6096,20 +6082,34 @@
           "genus": "Synallaxis"
         },
         {
-          "label": "Zonotrichia capensis",
+          "label": "Chlorornis riefferii",
           "registros": 4,
-          "slug_especie": "zonotrichia-capensis",
+          "slug_especie": "chlorornis-riefferii",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5231103",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56d064433c16479905cba820/summary",
-          "species": "Zonotrichia capensis",
+          "url_gbif": "https://www.gbif.org/species/5230635",
+          "species": "Chlorornis riefferii",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Passerellidae",
-          "genus": "Zonotrichia"
+          "family": "Thraupidae",
+          "genus": "Chlorornis"
+        },
+        {
+          "label": "Penelope montagnii",
+          "registros": 4,
+          "slug_especie": "penelope-montagnii",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2482198",
+          "species": "Penelope montagnii",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Galliformes",
+          "family": "Cracidae",
+          "genus": "Penelope"
         }
       ],
       "species_list_tematica": {
@@ -6171,24 +6171,6 @@
         "amenazadas-global": [],
         "cites": [
           {
-            "label": "Adelomyia melanogenys",
-            "registros": 5,
-            "slug_especie": "adelomyia-melanogenys",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476168",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56bddf40f0106c67230e72ec/summary",
-            "species": "Adelomyia melanogenys",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Adelomyia"
-          },
-          {
             "label": "Rupornis magnirostris",
             "registros": 5,
             "slug_especie": "rupornis-magnirostris",
@@ -6205,6 +6187,24 @@
             "order": "Accipitriformes",
             "family": "Accipitridae",
             "genus": "Rupornis"
+          },
+          {
+            "label": "Adelomyia melanogenys",
+            "registros": 5,
+            "slug_especie": "adelomyia-melanogenys",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2476168",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56bddf40f0106c67230e72ec/summary",
+            "species": "Adelomyia melanogenys",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Adelomyia"
           },
           {
             "label": "Eriocnemis vestita",
@@ -6243,6 +6243,23 @@
             "genus": "Lesbia"
           },
           {
+            "label": "Phaethornis syrmatophorus",
+            "registros": 2,
+            "slug_especie": "phaethornis-syrmatophorus",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2476589",
+            "species": "Phaethornis syrmatophorus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Phaethornis"
+          },
+          {
             "label": "Chalcostigma herrani",
             "registros": 2,
             "slug_especie": "chalcostigma-herrani",
@@ -6275,6 +6292,24 @@
             "order": "Apodiformes",
             "family": "Trochilidae",
             "genus": "Coeligena"
+          },
+          {
+            "label": "Heliangelus exortis",
+            "registros": 2,
+            "slug_especie": "heliangelus-exortis",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2476708",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c9d3f9f0106c67230e7449/summary",
+            "species": "Heliangelus exortis",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Heliangelus"
           },
           {
             "label": "Elanoides forficatus",
@@ -6311,41 +6346,6 @@
             "order": "Falconiformes",
             "family": "Falconidae",
             "genus": "Falco"
-          },
-          {
-            "label": "Heliangelus exortis",
-            "registros": 2,
-            "slug_especie": "heliangelus-exortis",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476708",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c9d3f9f0106c67230e7449/summary",
-            "species": "Heliangelus exortis",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Heliangelus"
-          },
-          {
-            "label": "Phaethornis syrmatophorus",
-            "registros": 2,
-            "slug_especie": "phaethornis-syrmatophorus",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476589",
-            "species": "Phaethornis syrmatophorus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Phaethornis"
           }
         ],
         "migratorias": [

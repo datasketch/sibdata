@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -1126,20 +1126,20 @@
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Pionus menstruus",
-          "slug_especie": "pionus-menstruus",
-          "registros": 16,
-          "url_gbif": "https://www.gbif.org/species/2479902",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e6089483c45700544e3e8f/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
           "label": "Pteroglossus castanotis",
           "slug_especie": "pteroglossus-castanotis",
           "registros": 16,
           "url_gbif": "https://www.gbif.org/species/2478822",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56e7835383c45700544e4088/summary",
           "slug_tematica": "cites-iii"
+        },
+        {
+          "label": "Pionus menstruus",
+          "slug_especie": "pionus-menstruus",
+          "registros": 16,
+          "url_gbif": "https://www.gbif.org/species/2479902",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e6089483c45700544e3e8f/summary",
+          "slug_tematica": "cites-ii"
         },
         {
           "label": "Dendrocygna autumnalis",
@@ -1341,20 +1341,20 @@
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Pionus menstruus",
-          "slug_especie": "pionus-menstruus",
-          "registros": 16,
-          "url_gbif": "https://www.gbif.org/species/2479902",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e6089483c45700544e3e8f/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
           "label": "Pteroglossus castanotis",
           "slug_especie": "pteroglossus-castanotis",
           "registros": 16,
           "url_gbif": "https://www.gbif.org/species/2478822",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56e7835383c45700544e4088/summary",
           "slug_tematica": "cites-iii"
+        },
+        {
+          "label": "Pionus menstruus",
+          "slug_especie": "pionus-menstruus",
+          "registros": 16,
+          "url_gbif": "https://www.gbif.org/species/2479902",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e6089483c45700544e3e8f/summary",
+          "slug_tematica": "cites-ii"
         },
         {
           "label": "Dendrocygna autumnalis",
@@ -2688,22 +2688,6 @@
           "genus": "Bubulcus"
         },
         {
-          "label": "Thraupis palmarum",
-          "registros": 34,
-          "slug_especie": "thraupis-palmarum",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/9436876",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf75913c16479905cba7e4/summary",
-          "species": "Thraupis palmarum",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Thraupis"
-        },
-        {
           "label": "Vanellus chilensis",
           "registros": 34,
           "slug_especie": "vanellus-chilensis",
@@ -2718,6 +2702,22 @@
           "order": "Charadriiformes",
           "family": "Charadriidae",
           "genus": "Vanellus"
+        },
+        {
+          "label": "Thraupis palmarum",
+          "registros": 34,
+          "slug_especie": "thraupis-palmarum",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/9436876",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf75913c16479905cba7e4/summary",
+          "species": "Thraupis palmarum",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Thraupis"
         },
         {
           "label": "Coragyps atratus",
@@ -3149,24 +3149,6 @@
             "genus": "Buteogallus"
           },
           {
-            "label": "Pionus menstruus",
-            "registros": 16,
-            "slug_especie": "pionus-menstruus",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2479902",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e6089483c45700544e3e8f/summary",
-            "species": "Pionus menstruus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Psittaciformes",
-            "family": "Psittacidae",
-            "genus": "Pionus"
-          },
-          {
             "label": "Pteroglossus castanotis",
             "registros": 16,
             "slug_especie": "pteroglossus-castanotis",
@@ -3183,6 +3165,24 @@
             "order": "Piciformes",
             "family": "Ramphastidae",
             "genus": "Pteroglossus"
+          },
+          {
+            "label": "Pionus menstruus",
+            "registros": 16,
+            "slug_especie": "pionus-menstruus",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2479902",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e6089483c45700544e3e8f/summary",
+            "species": "Pionus menstruus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Psittaciformes",
+            "family": "Psittacidae",
+            "genus": "Pionus"
           },
           {
             "label": "Dendrocygna autumnalis",
@@ -4204,22 +4204,6 @@
           "genus": "Patagioenas"
         },
         {
-          "label": "Bubulcus ibis",
-          "registros": 34,
-          "slug_especie": "bubulcus-ibis",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2480830",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c20d14f0106c67230e7320/summary",
-          "species": "Bubulcus ibis",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Pelecaniformes",
-          "family": "Ardeidae",
-          "genus": "Bubulcus"
-        },
-        {
           "label": "Thraupis palmarum",
           "registros": 34,
           "slug_especie": "thraupis-palmarum",
@@ -4250,6 +4234,22 @@
           "order": "Charadriiformes",
           "family": "Charadriidae",
           "genus": "Vanellus"
+        },
+        {
+          "label": "Bubulcus ibis",
+          "registros": 34,
+          "slug_especie": "bubulcus-ibis",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2480830",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c20d14f0106c67230e7320/summary",
+          "species": "Bubulcus ibis",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Pelecaniformes",
+          "family": "Ardeidae",
+          "genus": "Bubulcus"
         },
         {
           "label": "Coragyps atratus",
@@ -4431,24 +4431,6 @@
             "genus": "Buteogallus"
           },
           {
-            "label": "Pionus menstruus",
-            "registros": 16,
-            "slug_especie": "pionus-menstruus",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2479902",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e6089483c45700544e3e8f/summary",
-            "species": "Pionus menstruus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Psittaciformes",
-            "family": "Psittacidae",
-            "genus": "Pionus"
-          },
-          {
             "label": "Pteroglossus castanotis",
             "registros": 16,
             "slug_especie": "pteroglossus-castanotis",
@@ -4465,6 +4447,24 @@
             "order": "Piciformes",
             "family": "Ramphastidae",
             "genus": "Pteroglossus"
+          },
+          {
+            "label": "Pionus menstruus",
+            "registros": 16,
+            "slug_especie": "pionus-menstruus",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2479902",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e6089483c45700544e3e8f/summary",
+            "species": "Pionus menstruus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Psittaciformes",
+            "family": "Psittacidae",
+            "genus": "Pionus"
           },
           {
             "label": "Dendrocygna autumnalis",
@@ -8863,6 +8863,92 @@
       ],
       "species_list_top": [
         {
+          "label": "Hoplias malabaricus",
+          "registros": 2,
+          "slug_especie": "hoplias-malabaricus",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2352230",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/592f0791f827bf0c0cedec0a/summary",
+          "species": "Hoplias malabaricus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Erythrinidae",
+          "genus": "Hoplias"
+        },
+        {
+          "label": "Pterygoplichthys gibbiceps",
+          "registros": 2,
+          "slug_especie": "pterygoplichthys-gibbiceps",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2339957",
+          "species": "Pterygoplichthys gibbiceps",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Siluriformes",
+          "family": "Loricariidae",
+          "genus": "Pterygoplichthys"
+        },
+        {
+          "label": "Pimelodus blochii",
+          "registros": 2,
+          "slug_especie": "pimelodus-blochii",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2338881",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/594465fb2f4fd7bc7f395f9b/summary",
+          "species": "Pimelodus blochii",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Siluriformes",
+          "family": "Pimelodidae",
+          "genus": "Pimelodus"
+        },
+        {
+          "label": "Ochmacanthus alternus",
+          "registros": 2,
+          "slug_especie": "ochmacanthus-alternus",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2342889",
+          "species": "Ochmacanthus alternus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Siluriformes",
+          "family": "Trichomycteridae",
+          "genus": "Ochmacanthus"
+        },
+        {
+          "label": "Moenkhausia hemigrammoides",
+          "registros": 2,
+          "slug_especie": "moenkhausia-hemigrammoides",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2352584",
+          "species": "Moenkhausia hemigrammoides",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Characidae",
+          "genus": "Moenkhausia"
+        },
+        {
+          "label": "Loricariichthys brunneus",
+          "registros": 2,
+          "slug_especie": "loricariichthys-brunneus",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2339193",
+          "species": "Loricariichthys brunneus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Siluriformes",
+          "family": "Loricariidae",
+          "genus": "Loricariichthys"
+        },
+        {
           "label": "Callichthys fabricioi",
           "registros": 2,
           "slug_especie": "callichthys-fabricioi",
@@ -8876,21 +8962,6 @@
           "order": "Siluriformes",
           "family": "Callichthyidae",
           "genus": "Callichthys"
-        },
-        {
-          "label": "Corydoras loxozonus",
-          "registros": 2,
-          "slug_especie": "corydoras-loxozonus",
-          "slug_grupo": "peces",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2342801",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/59d1ab485f369343442f8b20/summary",
-          "species": "Corydoras loxozonus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Siluriformes",
-          "family": "Callichthyidae",
-          "genus": "Corydoras"
         },
         {
           "label": "Ctenobrycon oliverai",
@@ -8921,90 +8992,19 @@
           "genus": "Geophagus"
         },
         {
-          "label": "Hoplias malabaricus",
+          "label": "Corydoras loxozonus",
           "registros": 2,
-          "slug_especie": "hoplias-malabaricus",
+          "slug_especie": "corydoras-loxozonus",
           "slug_grupo": "peces",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2352230",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/592f0791f827bf0c0cedec0a/summary",
-          "species": "Hoplias malabaricus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Erythrinidae",
-          "genus": "Hoplias"
-        },
-        {
-          "label": "Loricariichthys brunneus",
-          "registros": 2,
-          "slug_especie": "loricariichthys-brunneus",
-          "slug_grupo": "peces",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2339193",
-          "species": "Loricariichthys brunneus",
+          "url_gbif": "https://www.gbif.org/species/2342801",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/59d1ab485f369343442f8b20/summary",
+          "species": "Corydoras loxozonus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "order": "Siluriformes",
-          "family": "Loricariidae",
-          "genus": "Loricariichthys"
-        },
-        {
-          "label": "Moenkhausia hemigrammoides",
-          "registros": 2,
-          "slug_especie": "moenkhausia-hemigrammoides",
-          "slug_grupo": "peces",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2352584",
-          "species": "Moenkhausia hemigrammoides",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Characidae",
-          "genus": "Moenkhausia"
-        },
-        {
-          "label": "Ochmacanthus alternus",
-          "registros": 2,
-          "slug_especie": "ochmacanthus-alternus",
-          "slug_grupo": "peces",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2342889",
-          "species": "Ochmacanthus alternus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Siluriformes",
-          "family": "Trichomycteridae",
-          "genus": "Ochmacanthus"
-        },
-        {
-          "label": "Pimelodus blochii",
-          "registros": 2,
-          "slug_especie": "pimelodus-blochii",
-          "slug_grupo": "peces",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2338881",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/594465fb2f4fd7bc7f395f9b/summary",
-          "species": "Pimelodus blochii",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Siluriformes",
-          "family": "Pimelodidae",
-          "genus": "Pimelodus"
-        },
-        {
-          "label": "Pterygoplichthys gibbiceps",
-          "registros": 2,
-          "slug_especie": "pterygoplichthys-gibbiceps",
-          "slug_grupo": "peces",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2339957",
-          "species": "Pterygoplichthys gibbiceps",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Siluriformes",
-          "family": "Loricariidae",
-          "genus": "Pterygoplichthys"
+          "family": "Callichthyidae",
+          "genus": "Corydoras"
         }
       ],
       "species_list_tematica": {
@@ -9455,35 +9455,6 @@
       "subgrupo_especies": [],
       "species_list_top": [
         {
-          "label": "Callichthys fabricioi",
-          "registros": 2,
-          "slug_especie": "callichthys-fabricioi",
-          "slug_grupo": "peces-dulceacuicolas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5202879",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/59da9fec5f369343442feca7/summary",
-          "species": "Callichthys fabricioi",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Siluriformes",
-          "family": "Callichthyidae",
-          "genus": "Callichthys"
-        },
-        {
-          "label": "Ctenobrycon oliverai",
-          "registros": 2,
-          "slug_especie": "ctenobrycon-oliverai",
-          "slug_grupo": "peces-dulceacuicolas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5962432",
-          "species": "Ctenobrycon oliverai",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Characidae",
-          "genus": "Ctenobrycon"
-        },
-        {
           "label": "Geophagus abalios",
           "registros": 2,
           "slug_especie": "geophagus-abalios",
@@ -9498,61 +9469,18 @@
           "genus": "Geophagus"
         },
         {
-          "label": "Hoplias malabaricus",
+          "label": "Pterygoplichthys gibbiceps",
           "registros": 2,
-          "slug_especie": "hoplias-malabaricus",
+          "slug_especie": "pterygoplichthys-gibbiceps",
           "slug_grupo": "peces-dulceacuicolas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2352230",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/592f0791f827bf0c0cedec0a/summary",
-          "species": "Hoplias malabaricus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Erythrinidae",
-          "genus": "Hoplias"
-        },
-        {
-          "label": "Loricariichthys brunneus",
-          "registros": 2,
-          "slug_especie": "loricariichthys-brunneus",
-          "slug_grupo": "peces-dulceacuicolas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2339193",
-          "species": "Loricariichthys brunneus",
+          "url_gbif": "https://www.gbif.org/species/2339957",
+          "species": "Pterygoplichthys gibbiceps",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "order": "Siluriformes",
           "family": "Loricariidae",
-          "genus": "Loricariichthys"
-        },
-        {
-          "label": "Moenkhausia hemigrammoides",
-          "registros": 2,
-          "slug_especie": "moenkhausia-hemigrammoides",
-          "slug_grupo": "peces-dulceacuicolas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2352584",
-          "species": "Moenkhausia hemigrammoides",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Characidae",
-          "genus": "Moenkhausia"
-        },
-        {
-          "label": "Ochmacanthus alternus",
-          "registros": 2,
-          "slug_especie": "ochmacanthus-alternus",
-          "slug_grupo": "peces-dulceacuicolas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2342889",
-          "species": "Ochmacanthus alternus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Siluriformes",
-          "family": "Trichomycteridae",
-          "genus": "Ochmacanthus"
+          "genus": "Pterygoplichthys"
         },
         {
           "label": "Pimelodus blochii",
@@ -9570,18 +9498,90 @@
           "genus": "Pimelodus"
         },
         {
-          "label": "Pterygoplichthys gibbiceps",
+          "label": "Ochmacanthus alternus",
           "registros": 2,
-          "slug_especie": "pterygoplichthys-gibbiceps",
+          "slug_especie": "ochmacanthus-alternus",
           "slug_grupo": "peces-dulceacuicolas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2339957",
-          "species": "Pterygoplichthys gibbiceps",
+          "url_gbif": "https://www.gbif.org/species/2342889",
+          "species": "Ochmacanthus alternus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Siluriformes",
+          "family": "Trichomycteridae",
+          "genus": "Ochmacanthus"
+        },
+        {
+          "label": "Moenkhausia hemigrammoides",
+          "registros": 2,
+          "slug_especie": "moenkhausia-hemigrammoides",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2352584",
+          "species": "Moenkhausia hemigrammoides",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Characidae",
+          "genus": "Moenkhausia"
+        },
+        {
+          "label": "Loricariichthys brunneus",
+          "registros": 2,
+          "slug_especie": "loricariichthys-brunneus",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2339193",
+          "species": "Loricariichthys brunneus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "order": "Siluriformes",
           "family": "Loricariidae",
-          "genus": "Pterygoplichthys"
+          "genus": "Loricariichthys"
+        },
+        {
+          "label": "Callichthys fabricioi",
+          "registros": 2,
+          "slug_especie": "callichthys-fabricioi",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5202879",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/59da9fec5f369343442feca7/summary",
+          "species": "Callichthys fabricioi",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Siluriformes",
+          "family": "Callichthyidae",
+          "genus": "Callichthys"
+        },
+        {
+          "label": "Hoplias malabaricus",
+          "registros": 2,
+          "slug_especie": "hoplias-malabaricus",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2352230",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/592f0791f827bf0c0cedec0a/summary",
+          "species": "Hoplias malabaricus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Erythrinidae",
+          "genus": "Hoplias"
+        },
+        {
+          "label": "Ctenobrycon oliverai",
+          "registros": 2,
+          "slug_especie": "ctenobrycon-oliverai",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5962432",
+          "species": "Ctenobrycon oliverai",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Characidae",
+          "genus": "Ctenobrycon"
         },
         {
           "label": "Aequidens metae",
@@ -9599,91 +9599,18 @@
           "genus": "Aequidens"
         },
         {
-          "label": "Aequidens tetramerus",
+          "label": "Triportheus venezuelensis",
           "registros": 1,
-          "slug_especie": "aequidens-tetramerus",
+          "slug_especie": "triportheus-venezuelensis",
           "slug_grupo": "peces-dulceacuicolas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5208316",
-          "species": "Aequidens tetramerus",
+          "url_gbif": "https://www.gbif.org/species/2353281",
+          "species": "Triportheus venezuelensis",
           "kingdom": "Animalia",
           "phylum": "Chordata",
-          "order": "Perciformes",
-          "family": "Cichlidae",
-          "genus": "Aequidens"
-        },
-        {
-          "label": "Anablepsoides tessellatus",
-          "registros": 1,
-          "slug_especie": "anablepsoides-tessellatus",
-          "slug_grupo": "peces-dulceacuicolas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7193325",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/59d2d92a5f369343442f98cc/summary",
-          "species": "Anablepsoides tessellatus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Cyprinodontiformes",
-          "family": "Rivulidae",
-          "genus": "Anablepsoides"
-        },
-        {
-          "label": "Anchoviella guianensis",
-          "registros": 1,
-          "slug_especie": "anchoviella-guianensis",
-          "slug_grupo": "peces-dulceacuicolas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2414272",
-          "species": "Anchoviella guianensis",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Clupeiformes",
-          "family": "Engraulidae",
-          "genus": "Anchoviella"
-        },
-        {
-          "label": "Aphanotorulus ammophilus",
-          "registros": 1,
-          "slug_especie": "aphanotorulus-ammophilus",
-          "slug_grupo": "peces-dulceacuicolas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2339470",
-          "species": "Aphanotorulus ammophilus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Siluriformes",
-          "family": "Loricariidae",
-          "genus": "Aphanotorulus"
-        },
-        {
-          "label": "Apistogramma macmasteri",
-          "registros": 1,
-          "slug_especie": "apistogramma-macmasteri",
-          "slug_grupo": "peces-dulceacuicolas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2371262",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/59d2d5415f369343442f982b/summary",
-          "species": "Apistogramma macmasteri",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Perciformes",
-          "family": "Cichlidae",
-          "genus": "Apistogramma"
-        },
-        {
-          "label": "Astronotus ocellatus",
-          "registros": 1,
-          "slug_especie": "astronotus-ocellatus",
-          "slug_grupo": "peces-dulceacuicolas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2370243",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/59382a292f4fd7bc7f3849af/summary",
-          "species": "Astronotus ocellatus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Perciformes",
-          "family": "Cichlidae",
-          "genus": "Astronotus"
+          "order": "Characiformes",
+          "family": "Triportheidae",
+          "genus": "Triportheus"
         },
         {
           "label": "Astyanax integer",
@@ -9870,6 +9797,21 @@
           "genus": "Limatulichthys"
         },
         {
+          "label": "Anablepsoides tessellatus",
+          "registros": 1,
+          "slug_especie": "anablepsoides-tessellatus",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7193325",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/59d2d92a5f369343442f98cc/summary",
+          "species": "Anablepsoides tessellatus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Cyprinodontiformes",
+          "family": "Rivulidae",
+          "genus": "Anablepsoides"
+        },
+        {
           "label": "Metynnis argenteus",
           "registros": 1,
           "slug_especie": "metynnis-argenteus",
@@ -9896,6 +9838,35 @@
           "order": "Characiformes",
           "family": "Serrasalmidae",
           "genus": "Metynnis"
+        },
+        {
+          "label": "Apistogramma macmasteri",
+          "registros": 1,
+          "slug_especie": "apistogramma-macmasteri",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2371262",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/59d2d5415f369343442f982b/summary",
+          "species": "Apistogramma macmasteri",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Perciformes",
+          "family": "Cichlidae",
+          "genus": "Apistogramma"
+        },
+        {
+          "label": "Aphanotorulus ammophilus",
+          "registros": 1,
+          "slug_especie": "aphanotorulus-ammophilus",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2339470",
+          "species": "Aphanotorulus ammophilus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Siluriformes",
+          "family": "Loricariidae",
+          "genus": "Aphanotorulus"
         },
         {
           "label": "Odontostilbe pulchra",
@@ -9952,6 +9923,20 @@
           "order": "Siluriformes",
           "family": "Pimelodidae",
           "genus": "Pimelodina"
+        },
+        {
+          "label": "Anchoviella guianensis",
+          "registros": 1,
+          "slug_especie": "anchoviella-guianensis",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2414272",
+          "species": "Anchoviella guianensis",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Clupeiformes",
+          "family": "Engraulidae",
+          "genus": "Anchoviella"
         },
         {
           "label": "Plagioscion squamosissimus",
@@ -10053,6 +10038,20 @@
           "genus": "Pseudoplatystoma"
         },
         {
+          "label": "Aequidens tetramerus",
+          "registros": 1,
+          "slug_especie": "aequidens-tetramerus",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5208316",
+          "species": "Aequidens tetramerus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Perciformes",
+          "family": "Cichlidae",
+          "genus": "Aequidens"
+        },
+        {
           "label": "Pygocentrus cariba",
           "registros": 1,
           "slug_especie": "pygocentrus-cariba",
@@ -10138,18 +10137,19 @@
           "genus": "Tetragonopterus"
         },
         {
-          "label": "Triportheus venezuelensis",
+          "label": "Astronotus ocellatus",
           "registros": 1,
-          "slug_especie": "triportheus-venezuelensis",
+          "slug_especie": "astronotus-ocellatus",
           "slug_grupo": "peces-dulceacuicolas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2353281",
-          "species": "Triportheus venezuelensis",
+          "url_gbif": "https://www.gbif.org/species/2370243",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/59382a292f4fd7bc7f3849af/summary",
+          "species": "Astronotus ocellatus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Triportheidae",
-          "genus": "Triportheus"
+          "order": "Perciformes",
+          "family": "Cichlidae",
+          "genus": "Astronotus"
         }
       ],
       "species_list_tematica": {
@@ -12370,22 +12370,6 @@
           "genus": "Bubulcus"
         },
         {
-          "label": "Thraupis palmarum",
-          "registros": 34,
-          "slug_especie": "thraupis-palmarum",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/9436876",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf75913c16479905cba7e4/summary",
-          "species": "Thraupis palmarum",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Thraupis"
-        },
-        {
           "label": "Vanellus chilensis",
           "registros": 34,
           "slug_especie": "vanellus-chilensis",
@@ -12400,6 +12384,22 @@
           "order": "Charadriiformes",
           "family": "Charadriidae",
           "genus": "Vanellus"
+        },
+        {
+          "label": "Thraupis palmarum",
+          "registros": 34,
+          "slug_especie": "thraupis-palmarum",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/9436876",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf75913c16479905cba7e4/summary",
+          "species": "Thraupis palmarum",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Thraupis"
         },
         {
           "label": "Coragyps atratus",
@@ -12831,24 +12831,6 @@
             "genus": "Buteogallus"
           },
           {
-            "label": "Pionus menstruus",
-            "registros": 16,
-            "slug_especie": "pionus-menstruus",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2479902",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e6089483c45700544e3e8f/summary",
-            "species": "Pionus menstruus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Psittaciformes",
-            "family": "Psittacidae",
-            "genus": "Pionus"
-          },
-          {
             "label": "Pteroglossus castanotis",
             "registros": 16,
             "slug_especie": "pteroglossus-castanotis",
@@ -12865,6 +12847,24 @@
             "order": "Piciformes",
             "family": "Ramphastidae",
             "genus": "Pteroglossus"
+          },
+          {
+            "label": "Pionus menstruus",
+            "registros": 16,
+            "slug_especie": "pionus-menstruus",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2479902",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e6089483c45700544e3e8f/summary",
+            "species": "Pionus menstruus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Psittaciformes",
+            "family": "Psittacidae",
+            "genus": "Pionus"
           },
           {
             "label": "Dendrocygna autumnalis",

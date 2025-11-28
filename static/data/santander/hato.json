@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -1318,17 +1318,17 @@
           "slug_tematica": "endemicas"
         },
         {
-          "label": "Galianthe bogotensis",
-          "slug_especie": "galianthe-bogotensis",
-          "registros": 5,
-          "url_gbif": "https://www.gbif.org/species/2902194",
-          "slug_tematica": "endemicas"
-        },
-        {
           "label": "Lessingianthus yariguiensis",
           "slug_especie": "lessingianthus-yariguiensis",
           "registros": 5,
           "url_gbif": "https://www.gbif.org/species/9147046",
+          "slug_tematica": "endemicas"
+        },
+        {
+          "label": "Galianthe bogotensis",
+          "slug_especie": "galianthe-bogotensis",
+          "registros": 5,
+          "url_gbif": "https://www.gbif.org/species/2902194",
           "slug_tematica": "endemicas"
         },
         {
@@ -1340,10 +1340,10 @@
           "slug_tematica": "endemicas"
         },
         {
-          "label": "Graffenrieda maklenkensis",
-          "slug_especie": "graffenrieda-maklenkensis",
+          "label": "Piper barbosanum",
+          "slug_especie": "piper-barbosanum",
           "registros": 3,
-          "url_gbif": "https://www.gbif.org/species/7921191",
+          "url_gbif": "https://www.gbif.org/species/4189747",
           "slug_tematica": "endemicas"
         },
         {
@@ -1355,10 +1355,10 @@
           "slug_tematica": "endemicas"
         },
         {
-          "label": "Piper barbosanum",
-          "slug_especie": "piper-barbosanum",
+          "label": "Graffenrieda maklenkensis",
+          "slug_especie": "graffenrieda-maklenkensis",
           "registros": 3,
-          "url_gbif": "https://www.gbif.org/species/4189747",
+          "url_gbif": "https://www.gbif.org/species/7921191",
           "slug_tematica": "endemicas"
         }
       ]
@@ -1421,19 +1421,19 @@
           "slug_tematica": "migratorias"
         },
         {
-          "label": "Piranga rubra",
-          "slug_especie": "piranga-rubra",
-          "registros": 6,
-          "url_gbif": "https://www.gbif.org/species/2488485",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cd0550207ecea54a561e5c/summary",
-          "slug_tematica": "migratorias"
-        },
-        {
           "label": "Setophaga castanea",
           "slug_especie": "setophaga-castanea",
           "registros": 6,
           "url_gbif": "https://www.gbif.org/species/6093202",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56ce7b4d3c16479905cba7a9/summary",
+          "slug_tematica": "migratorias"
+        },
+        {
+          "label": "Piranga rubra",
+          "slug_especie": "piranga-rubra",
+          "registros": 6,
+          "url_gbif": "https://www.gbif.org/species/2488485",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cd0550207ecea54a561e5c/summary",
           "slug_tematica": "migratorias"
         },
         {
@@ -2003,19 +2003,20 @@
           "genus": "Viburnum"
         },
         {
-          "label": "Chromolaena tacotana",
+          "label": "Miconia theizans",
           "registros": 10,
-          "slug_especie": "chromolaena-tacotana",
+          "slug_especie": "miconia-theizans",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3087761",
-          "species": "Chromolaena tacotana",
+          "url_gbif": "https://www.gbif.org/species/6749953",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5914cfb0f827bf0c0ced262f/summary",
+          "species": "Miconia theizans",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Asterales",
-          "family": "Asteraceae",
-          "genus": "Chromolaena"
+          "order": "Myrtales",
+          "family": "Melastomataceae",
+          "genus": "Miconia"
         },
         {
           "label": "Miconia domociliata",
@@ -2033,20 +2034,19 @@
           "genus": "Miconia"
         },
         {
-          "label": "Miconia theizans",
+          "label": "Chromolaena tacotana",
           "registros": 10,
-          "slug_especie": "miconia-theizans",
+          "slug_especie": "chromolaena-tacotana",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/6749953",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/5914cfb0f827bf0c0ced262f/summary",
-          "species": "Miconia theizans",
+          "url_gbif": "https://www.gbif.org/species/3087761",
+          "species": "Chromolaena tacotana",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Myrtales",
-          "family": "Melastomataceae",
-          "genus": "Miconia"
+          "order": "Asterales",
+          "family": "Asteraceae",
+          "genus": "Chromolaena"
         },
         {
           "label": "Miconia dodecandra",
@@ -3014,21 +3014,6 @@
           "genus": "Cyanocorax"
         },
         {
-          "label": "Ixothraupis guttata",
-          "registros": 42,
-          "slug_especie": "ixothraupis-guttata",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/9628189",
-          "species": "Ixothraupis guttata",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Ixothraupis"
-        },
-        {
           "label": "Piaya cayana",
           "registros": 42,
           "slug_especie": "piaya-cayana",
@@ -3043,6 +3028,21 @@
           "order": "Cuculiformes",
           "family": "Cuculidae",
           "genus": "Piaya"
+        },
+        {
+          "label": "Ixothraupis guttata",
+          "registros": 42,
+          "slug_especie": "ixothraupis-guttata",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/9628189",
+          "species": "Ixothraupis guttata",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Ixothraupis"
         },
         {
           "label": "Colibri delphinae",
@@ -3091,20 +3091,19 @@
           "genus": "Coereba"
         },
         {
-          "label": "Icterus chrysater",
+          "label": "Stilpnia vitriolina",
           "registros": 37,
-          "slug_especie": "icterus-chrysater",
+          "slug_especie": "stilpnia-vitriolina",
           "slug_grupo": "animales",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5229924",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9f6e2f0106c67230e744f/summary",
-          "species": "Icterus chrysater",
+          "url_gbif": "https://www.gbif.org/species/11081628",
+          "species": "Stilpnia vitriolina",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Icteridae",
-          "genus": "Icterus"
+          "family": "Thraupidae",
+          "genus": "Stilpnia"
         },
         {
           "label": "Saucerottia cyanifrons",
@@ -3120,6 +3119,21 @@
           "order": "Apodiformes",
           "family": "Trochilidae",
           "genus": "Saucerottia"
+        },
+        {
+          "label": "Turdus flavipes",
+          "registros": 37,
+          "slug_especie": "turdus-flavipes",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7342122",
+          "species": "Turdus flavipes",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Turdidae",
+          "genus": "Turdus"
         },
         {
           "label": "Sporophila nigricollis",
@@ -3138,34 +3152,20 @@
           "genus": "Sporophila"
         },
         {
-          "label": "Stilpnia vitriolina",
+          "label": "Icterus chrysater",
           "registros": 37,
-          "slug_especie": "stilpnia-vitriolina",
+          "slug_especie": "icterus-chrysater",
           "slug_grupo": "animales",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/11081628",
-          "species": "Stilpnia vitriolina",
+          "url_gbif": "https://www.gbif.org/species/5229924",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9f6e2f0106c67230e744f/summary",
+          "species": "Icterus chrysater",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Stilpnia"
-        },
-        {
-          "label": "Turdus flavipes",
-          "registros": 37,
-          "slug_especie": "turdus-flavipes",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7342122",
-          "species": "Turdus flavipes",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Turdidae",
-          "genus": "Turdus"
+          "family": "Icteridae",
+          "genus": "Icterus"
         }
       ],
       "species_list_tematica": {
@@ -3567,24 +3567,6 @@
             "genus": "Empidonax"
           },
           {
-            "label": "Piranga rubra",
-            "registros": 6,
-            "slug_especie": "piranga-rubra",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2488485",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56cd0550207ecea54a561e5c/summary",
-            "species": "Piranga rubra",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Cardinalidae",
-            "genus": "Piranga"
-          },
-          {
             "label": "Setophaga castanea",
             "registros": 6,
             "slug_especie": "setophaga-castanea",
@@ -3601,6 +3583,24 @@
             "order": "Passeriformes",
             "family": "Parulidae",
             "genus": "Setophaga"
+          },
+          {
+            "label": "Piranga rubra",
+            "registros": 6,
+            "slug_especie": "piranga-rubra",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2488485",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cd0550207ecea54a561e5c/summary",
+            "species": "Piranga rubra",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Cardinalidae",
+            "genus": "Piranga"
           },
           {
             "label": "Cardellina canadensis",
@@ -4841,20 +4841,19 @@
           "genus": "Zimmerius"
         },
         {
-          "label": "Coereba flaveola",
+          "label": "Saucerottia cyanifrons",
           "registros": 37,
-          "slug_especie": "coereba-flaveola",
+          "slug_especie": "saucerottia-cyanifrons",
           "slug_grupo": "aves",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2493744",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56df75bd83c45700544e3c7b/summary",
-          "species": "Coereba flaveola",
+          "url_gbif": "https://www.gbif.org/species/9088790",
+          "species": "Saucerottia cyanifrons",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Coereba"
+          "order": "Apodiformes",
+          "family": "Trochilidae",
+          "genus": "Saucerottia"
         },
         {
           "label": "Icterus chrysater",
@@ -4873,19 +4872,20 @@
           "genus": "Icterus"
         },
         {
-          "label": "Saucerottia cyanifrons",
+          "label": "Coereba flaveola",
           "registros": 37,
-          "slug_especie": "saucerottia-cyanifrons",
+          "slug_especie": "coereba-flaveola",
           "slug_grupo": "aves",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/9088790",
-          "species": "Saucerottia cyanifrons",
+          "url_gbif": "https://www.gbif.org/species/2493744",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56df75bd83c45700544e3c7b/summary",
+          "species": "Coereba flaveola",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": "Apodiformes",
-          "family": "Trochilidae",
-          "genus": "Saucerottia"
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Coereba"
         },
         {
           "label": "Sporophila nigricollis",
@@ -4904,21 +4904,6 @@
           "genus": "Sporophila"
         },
         {
-          "label": "Stilpnia vitriolina",
-          "registros": 37,
-          "slug_especie": "stilpnia-vitriolina",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/11081628",
-          "species": "Stilpnia vitriolina",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Stilpnia"
-        },
-        {
           "label": "Turdus flavipes",
           "registros": 37,
           "slug_especie": "turdus-flavipes",
@@ -4932,6 +4917,21 @@
           "order": "Passeriformes",
           "family": "Turdidae",
           "genus": "Turdus"
+        },
+        {
+          "label": "Stilpnia vitriolina",
+          "registros": 37,
+          "slug_especie": "stilpnia-vitriolina",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/11081628",
+          "species": "Stilpnia vitriolina",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Stilpnia"
         }
       ],
       "species_list_tematica": {
@@ -5333,24 +5333,6 @@
             "genus": "Empidonax"
           },
           {
-            "label": "Piranga rubra",
-            "registros": 6,
-            "slug_especie": "piranga-rubra",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2488485",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56cd0550207ecea54a561e5c/summary",
-            "species": "Piranga rubra",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Cardinalidae",
-            "genus": "Piranga"
-          },
-          {
             "label": "Setophaga castanea",
             "registros": 6,
             "slug_especie": "setophaga-castanea",
@@ -5367,6 +5349,24 @@
             "order": "Passeriformes",
             "family": "Parulidae",
             "genus": "Setophaga"
+          },
+          {
+            "label": "Piranga rubra",
+            "registros": 6,
+            "slug_especie": "piranga-rubra",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2488485",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cd0550207ecea54a561e5c/summary",
+            "species": "Piranga rubra",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Cardinalidae",
+            "genus": "Piranga"
           },
           {
             "label": "Cardellina canadensis",
@@ -6673,21 +6673,6 @@
           "genus": "Riccardia"
         },
         {
-          "label": "Frullania caulisequa",
-          "registros": 39,
-          "slug_especie": "frullania-caulisequa",
-          "slug_grupo": "hepaticas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7908365",
-          "species": "Frullania caulisequa",
-          "kingdom": "Plantae",
-          "phylum": "Marchantiophyta",
-          "class": "Jungermanniopsida",
-          "order": "Porellales",
-          "family": "Frullaniaceae",
-          "genus": "Frullania"
-        },
-        {
           "label": "Lejeunea serpillifolioides",
           "registros": 39,
           "slug_especie": "lejeunea-serpillifolioides",
@@ -6701,6 +6686,21 @@
           "order": "Porellales",
           "family": "Lejeuneaceae",
           "genus": "Lejeunea"
+        },
+        {
+          "label": "Frullania caulisequa",
+          "registros": 39,
+          "slug_especie": "frullania-caulisequa",
+          "slug_grupo": "hepaticas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7908365",
+          "species": "Frullania caulisequa",
+          "kingdom": "Plantae",
+          "phylum": "Marchantiophyta",
+          "class": "Jungermanniopsida",
+          "order": "Porellales",
+          "family": "Frullaniaceae",
+          "genus": "Frullania"
         },
         {
           "label": "Monoclea gottschei",
@@ -8908,6 +8908,21 @@
           "genus": "Brittonodoxa"
         },
         {
+          "label": "Macromitrium pseudofimbriatum",
+          "registros": 18,
+          "slug_especie": "macromitrium-pseudofimbriatum",
+          "slug_grupo": "musgos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2672322",
+          "species": "Macromitrium pseudofimbriatum",
+          "kingdom": "Plantae",
+          "phylum": "Bryophyta",
+          "class": "Bryopsida",
+          "order": "Orthotrichales",
+          "family": "Orthotrichaceae",
+          "genus": "Macromitrium"
+        },
+        {
           "label": "Ctenidium malacodes",
           "registros": 18,
           "slug_especie": "ctenidium-malacodes",
@@ -8951,21 +8966,6 @@
           "order": "Hookeriales",
           "family": "Pilotrichaceae",
           "genus": "Lepidopilum"
-        },
-        {
-          "label": "Macromitrium pseudofimbriatum",
-          "registros": 18,
-          "slug_especie": "macromitrium-pseudofimbriatum",
-          "slug_grupo": "musgos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2672322",
-          "species": "Macromitrium pseudofimbriatum",
-          "kingdom": "Plantae",
-          "phylum": "Bryophyta",
-          "class": "Bryopsida",
-          "order": "Orthotrichales",
-          "family": "Orthotrichaceae",
-          "genus": "Macromitrium"
         },
         {
           "label": "Aptychopsis estrellae",
@@ -9361,21 +9361,6 @@
           "genus": "Riccardia"
         },
         {
-          "label": "Frullania caulisequa",
-          "registros": 39,
-          "slug_especie": "frullania-caulisequa",
-          "slug_grupo": "no-vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7908365",
-          "species": "Frullania caulisequa",
-          "kingdom": "Plantae",
-          "phylum": "Marchantiophyta",
-          "class": "Jungermanniopsida",
-          "order": "Porellales",
-          "family": "Frullaniaceae",
-          "genus": "Frullania"
-        },
-        {
           "label": "Lejeunea serpillifolioides",
           "registros": 39,
           "slug_especie": "lejeunea-serpillifolioides",
@@ -9389,6 +9374,21 @@
           "order": "Porellales",
           "family": "Lejeuneaceae",
           "genus": "Lejeunea"
+        },
+        {
+          "label": "Frullania caulisequa",
+          "registros": 39,
+          "slug_especie": "frullania-caulisequa",
+          "slug_grupo": "no-vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7908365",
+          "species": "Frullania caulisequa",
+          "kingdom": "Plantae",
+          "phylum": "Marchantiophyta",
+          "class": "Jungermanniopsida",
+          "order": "Porellales",
+          "family": "Frullaniaceae",
+          "genus": "Frullania"
         },
         {
           "label": "Monoclea gottschei",
@@ -10516,21 +10516,6 @@
           "genus": "Riccardia"
         },
         {
-          "label": "Frullania caulisequa",
-          "registros": 39,
-          "slug_especie": "frullania-caulisequa",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7908365",
-          "species": "Frullania caulisequa",
-          "kingdom": "Plantae",
-          "phylum": "Marchantiophyta",
-          "class": "Jungermanniopsida",
-          "order": "Porellales",
-          "family": "Frullaniaceae",
-          "genus": "Frullania"
-        },
-        {
           "label": "Lejeunea serpillifolioides",
           "registros": 39,
           "slug_especie": "lejeunea-serpillifolioides",
@@ -10544,6 +10529,21 @@
           "order": "Porellales",
           "family": "Lejeuneaceae",
           "genus": "Lejeunea"
+        },
+        {
+          "label": "Frullania caulisequa",
+          "registros": 39,
+          "slug_especie": "frullania-caulisequa",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7908365",
+          "species": "Frullania caulisequa",
+          "kingdom": "Plantae",
+          "phylum": "Marchantiophyta",
+          "class": "Jungermanniopsida",
+          "order": "Porellales",
+          "family": "Frullaniaceae",
+          "genus": "Frullania"
         },
         {
           "label": "Monoclea gottschei",
@@ -11874,6 +11874,21 @@
           "genus": "Clethra"
         },
         {
+          "label": "Vismia baccifera",
+          "registros": 14,
+          "slug_especie": "vismia-baccifera",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7330329",
+          "species": "Vismia baccifera",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Malpighiales",
+          "family": "Hypericaceae",
+          "genus": "Vismia"
+        },
+        {
           "label": "Andesanthus lepidotus",
           "registros": 14,
           "slug_especie": "andesanthus-lepidotus",
@@ -11888,21 +11903,6 @@
           "order": "Myrtales",
           "family": "Melastomataceae",
           "genus": "Andesanthus"
-        },
-        {
-          "label": "Vismia baccifera",
-          "registros": 14,
-          "slug_especie": "vismia-baccifera",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7330329",
-          "species": "Vismia baccifera",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Hypericaceae",
-          "genus": "Vismia"
         },
         {
           "label": "Myrsine coriacea",
@@ -11950,21 +11950,6 @@
           "genus": "Viburnum"
         },
         {
-          "label": "Chromolaena tacotana",
-          "registros": 10,
-          "slug_especie": "chromolaena-tacotana",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3087761",
-          "species": "Chromolaena tacotana",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Asterales",
-          "family": "Asteraceae",
-          "genus": "Chromolaena"
-        },
-        {
           "label": "Miconia domociliata",
           "registros": 10,
           "slug_especie": "miconia-domociliata",
@@ -11996,20 +11981,19 @@
           "genus": "Miconia"
         },
         {
-          "label": "Miconia dodecandra",
-          "registros": 8,
-          "slug_especie": "miconia-dodecandra",
+          "label": "Chromolaena tacotana",
+          "registros": 10,
+          "slug_especie": "chromolaena-tacotana",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3867434",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/595fe4742f4fd7bc7f3a3626/summary",
-          "species": "Miconia dodecandra",
+          "url_gbif": "https://www.gbif.org/species/3087761",
+          "species": "Chromolaena tacotana",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Myrtales",
-          "family": "Melastomataceae",
-          "genus": "Miconia"
+          "order": "Asterales",
+          "family": "Asteraceae",
+          "genus": "Chromolaena"
         },
         {
           "label": "Palicourea erythrocephala",
@@ -12025,6 +12009,22 @@
           "order": "Gentianales",
           "family": "Rubiaceae",
           "genus": "Palicourea"
+        },
+        {
+          "label": "Miconia dodecandra",
+          "registros": 8,
+          "slug_especie": "miconia-dodecandra",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3867434",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/595fe4742f4fd7bc7f3a3626/summary",
+          "species": "Miconia dodecandra",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Myrtales",
+          "family": "Melastomataceae",
+          "genus": "Miconia"
         }
       ],
       "species_list_tematica": {
@@ -13024,21 +13024,6 @@
           "genus": "Cyanocorax"
         },
         {
-          "label": "Ixothraupis guttata",
-          "registros": 42,
-          "slug_especie": "ixothraupis-guttata",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/9628189",
-          "species": "Ixothraupis guttata",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Ixothraupis"
-        },
-        {
           "label": "Piaya cayana",
           "registros": 42,
           "slug_especie": "piaya-cayana",
@@ -13053,6 +13038,21 @@
           "order": "Cuculiformes",
           "family": "Cuculidae",
           "genus": "Piaya"
+        },
+        {
+          "label": "Ixothraupis guttata",
+          "registros": 42,
+          "slug_especie": "ixothraupis-guttata",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/9628189",
+          "species": "Ixothraupis guttata",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Ixothraupis"
         },
         {
           "label": "Colibri delphinae",
@@ -13085,20 +13085,34 @@
           "genus": "Zimmerius"
         },
         {
-          "label": "Coereba flaveola",
+          "label": "Turdus flavipes",
           "registros": 37,
-          "slug_especie": "coereba-flaveola",
+          "slug_especie": "turdus-flavipes",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2493744",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56df75bd83c45700544e3c7b/summary",
-          "species": "Coereba flaveola",
+          "url_gbif": "https://www.gbif.org/species/7342122",
+          "species": "Turdus flavipes",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Coereba"
+          "family": "Turdidae",
+          "genus": "Turdus"
+        },
+        {
+          "label": "Saucerottia cyanifrons",
+          "registros": 37,
+          "slug_especie": "saucerottia-cyanifrons",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/9088790",
+          "species": "Saucerottia cyanifrons",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Apodiformes",
+          "family": "Trochilidae",
+          "genus": "Saucerottia"
         },
         {
           "label": "Icterus chrysater",
@@ -13117,19 +13131,20 @@
           "genus": "Icterus"
         },
         {
-          "label": "Saucerottia cyanifrons",
+          "label": "Coereba flaveola",
           "registros": 37,
-          "slug_especie": "saucerottia-cyanifrons",
+          "slug_especie": "coereba-flaveola",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/9088790",
-          "species": "Saucerottia cyanifrons",
+          "url_gbif": "https://www.gbif.org/species/2493744",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56df75bd83c45700544e3c7b/summary",
+          "species": "Coereba flaveola",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": "Apodiformes",
-          "family": "Trochilidae",
-          "genus": "Saucerottia"
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Coereba"
         },
         {
           "label": "Sporophila nigricollis",
@@ -13161,21 +13176,6 @@
           "order": "Passeriformes",
           "family": "Thraupidae",
           "genus": "Stilpnia"
-        },
-        {
-          "label": "Turdus flavipes",
-          "registros": 37,
-          "slug_especie": "turdus-flavipes",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7342122",
-          "species": "Turdus flavipes",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Turdidae",
-          "genus": "Turdus"
         }
       ],
       "species_list_tematica": {
@@ -13577,24 +13577,6 @@
             "genus": "Empidonax"
           },
           {
-            "label": "Piranga rubra",
-            "registros": 6,
-            "slug_especie": "piranga-rubra",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2488485",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56cd0550207ecea54a561e5c/summary",
-            "species": "Piranga rubra",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Cardinalidae",
-            "genus": "Piranga"
-          },
-          {
             "label": "Setophaga castanea",
             "registros": 6,
             "slug_especie": "setophaga-castanea",
@@ -13611,6 +13593,24 @@
             "order": "Passeriformes",
             "family": "Parulidae",
             "genus": "Setophaga"
+          },
+          {
+            "label": "Piranga rubra",
+            "registros": 6,
+            "slug_especie": "piranga-rubra",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2488485",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cd0550207ecea54a561e5c/summary",
+            "species": "Piranga rubra",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Cardinalidae",
+            "genus": "Piranga"
           },
           {
             "label": "Cardellina canadensis",
@@ -14575,21 +14575,6 @@
           "genus": "Plagiochila"
         },
         {
-          "label": "Plagiochila montagnei",
-          "registros": 6,
-          "slug_especie": "plagiochila-montagnei",
-          "slug_grupo": "epifitas",
-          "tipo": "interes",
-          "url_gbif": "https://www.gbif.org/species/8030776",
-          "species": "Plagiochila montagnei",
-          "kingdom": "Plantae",
-          "phylum": "Marchantiophyta",
-          "class": "Jungermanniopsida",
-          "order": "Jungermanniales",
-          "family": "Plagiochilaceae",
-          "genus": "Plagiochila"
-        },
-        {
           "label": "Thuidium tomentosum",
           "registros": 6,
           "slug_especie": "thuidium-tomentosum",
@@ -14603,6 +14588,21 @@
           "order": "Hypnales",
           "family": "Thuidiaceae",
           "genus": "Thuidium"
+        },
+        {
+          "label": "Plagiochila montagnei",
+          "registros": 6,
+          "slug_especie": "plagiochila-montagnei",
+          "slug_grupo": "epifitas",
+          "tipo": "interes",
+          "url_gbif": "https://www.gbif.org/species/8030776",
+          "species": "Plagiochila montagnei",
+          "kingdom": "Plantae",
+          "phylum": "Marchantiophyta",
+          "class": "Jungermanniopsida",
+          "order": "Jungermanniales",
+          "family": "Plagiochilaceae",
+          "genus": "Plagiochila"
         }
       ],
       "species_list_tematica": {

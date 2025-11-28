@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -1334,6 +1334,14 @@
           "slug_tematica": "endemicas"
         },
         {
+          "label": "Trichomycterus banneaui",
+          "slug_especie": "trichomycterus-banneaui",
+          "registros": 4,
+          "url_gbif": "https://www.gbif.org/species/2343032",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/59dcddbb5f369343443000c0/summary",
+          "slug_tematica": "endemicas"
+        },
+        {
           "label": "Myiarchus apicalis",
           "slug_especie": "myiarchus-apicalis",
           "registros": 4,
@@ -1342,11 +1350,11 @@
           "slug_tematica": "endemicas"
         },
         {
-          "label": "Trichomycterus banneaui",
-          "slug_especie": "trichomycterus-banneaui",
-          "registros": 4,
-          "url_gbif": "https://www.gbif.org/species/2343032",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/59dcddbb5f369343443000c0/summary",
+          "label": "Pitcairnia stenophylla",
+          "slug_especie": "pitcairnia-stenophylla",
+          "registros": 3,
+          "url_gbif": "https://www.gbif.org/species/5288573",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/566f646bf289f5a40c0cd283/summary",
           "slug_tematica": "endemicas"
         },
         {
@@ -1365,14 +1373,6 @@
           "slug_tematica": "endemicas"
         },
         {
-          "label": "Cynodonichthys magdalenae",
-          "slug_especie": "cynodonichthys-magdalenae",
-          "registros": 3,
-          "url_gbif": "https://www.gbif.org/species/7193379",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/596fa9de2f4fd7bc7f3a5d8a/summary",
-          "slug_tematica": "endemicas"
-        },
-        {
           "label": "Lasiancistrus caucanus",
           "slug_especie": "lasiancistrus-caucanus",
           "registros": 3,
@@ -1380,11 +1380,11 @@
           "slug_tematica": "endemicas"
         },
         {
-          "label": "Pitcairnia stenophylla",
-          "slug_especie": "pitcairnia-stenophylla",
+          "label": "Cynodonichthys magdalenae",
+          "slug_especie": "cynodonichthys-magdalenae",
           "registros": 3,
-          "url_gbif": "https://www.gbif.org/species/5288573",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/566f646bf289f5a40c0cd283/summary",
+          "url_gbif": "https://www.gbif.org/species/7193379",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/596fa9de2f4fd7bc7f3a5d8a/summary",
           "slug_tematica": "endemicas"
         },
         {
@@ -2494,6 +2494,21 @@
           "genus": "Pitcairnia"
         },
         {
+          "label": "Petrea pubescens",
+          "registros": 5,
+          "slug_especie": "petrea-pubescens",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7297303",
+          "species": "Petrea pubescens",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Lamiales",
+          "family": "Verbenaceae",
+          "genus": "Petrea"
+        },
+        {
           "label": "Bactris major",
           "registros": 5,
           "slug_especie": "bactris-major",
@@ -2510,21 +2525,6 @@
           "genus": "Bactris"
         },
         {
-          "label": "Petrea pubescens",
-          "registros": 5,
-          "slug_especie": "petrea-pubescens",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7297303",
-          "species": "Petrea pubescens",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Lamiales",
-          "family": "Verbenaceae",
-          "genus": "Petrea"
-        },
-        {
           "label": "Ipomoea triloba",
           "registros": 4,
           "slug_especie": "ipomoea-triloba",
@@ -2538,36 +2538,6 @@
           "order": "Solanales",
           "family": "Convolvulaceae",
           "genus": "Ipomoea"
-        },
-        {
-          "label": "Alstonia scholaris",
-          "registros": 3,
-          "slug_especie": "alstonia-scholaris",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5414410",
-          "species": "Alstonia scholaris",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Gentianales",
-          "family": "Apocynaceae",
-          "genus": "Alstonia"
-        },
-        {
-          "label": "Cecropia goudotiana",
-          "registros": 3,
-          "slug_especie": "cecropia-goudotiana",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4013446",
-          "species": "Cecropia goudotiana",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Rosales",
-          "family": "Urticaceae",
-          "genus": "Cecropia"
         },
         {
           "label": "Crescentia cujete",
@@ -2586,6 +2556,37 @@
           "genus": "Crescentia"
         },
         {
+          "label": "Tillandsia elongata",
+          "registros": 3,
+          "slug_especie": "tillandsia-elongata",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2695706",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e83fe583c45700544e43dc/summary",
+          "species": "Tillandsia elongata",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Poales",
+          "family": "Bromeliaceae",
+          "genus": "Tillandsia"
+        },
+        {
+          "label": "Alstonia scholaris",
+          "registros": 3,
+          "slug_especie": "alstonia-scholaris",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5414410",
+          "species": "Alstonia scholaris",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Gentianales",
+          "family": "Apocynaceae",
+          "genus": "Alstonia"
+        },
+        {
           "label": "Pitcairnia stenophylla",
           "registros": 3,
           "slug_especie": "pitcairnia-stenophylla",
@@ -2602,20 +2603,19 @@
           "genus": "Pitcairnia"
         },
         {
-          "label": "Tillandsia elongata",
+          "label": "Cecropia goudotiana",
           "registros": 3,
-          "slug_especie": "tillandsia-elongata",
+          "slug_especie": "cecropia-goudotiana",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2695706",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e83fe583c45700544e43dc/summary",
-          "species": "Tillandsia elongata",
+          "url_gbif": "https://www.gbif.org/species/4013446",
+          "species": "Cecropia goudotiana",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Poales",
-          "family": "Bromeliaceae",
-          "genus": "Tillandsia"
+          "class": "Magnoliopsida",
+          "order": "Rosales",
+          "family": "Urticaceae",
+          "genus": "Cecropia"
         }
       ],
       "species_list_tematica": {
@@ -3997,6 +3997,23 @@
             "genus": "Ortalis"
           },
           {
+            "label": "Trichomycterus banneaui",
+            "registros": 4,
+            "slug_especie": "trichomycterus-banneaui",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2343032",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/59dcddbb5f369343443000c0/summary",
+            "species": "Trichomycterus banneaui",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Siluriformes",
+            "family": "Trichomycteridae",
+            "genus": "Trichomycterus"
+          },
+          {
             "label": "Myiarchus apicalis",
             "registros": 4,
             "slug_especie": "myiarchus-apicalis",
@@ -4013,23 +4030,6 @@
             "order": "Passeriformes",
             "family": "Tyrannidae",
             "genus": "Myiarchus"
-          },
-          {
-            "label": "Trichomycterus banneaui",
-            "registros": 4,
-            "slug_especie": "trichomycterus-banneaui",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2343032",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/59dcddbb5f369343443000c0/summary",
-            "species": "Trichomycterus banneaui",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "order": "Siluriformes",
-            "family": "Trichomycteridae",
-            "genus": "Trichomycterus"
           },
           {
             "label": "Cetopsorhamdia molinae",
@@ -4049,6 +4049,22 @@
             "genus": "Cetopsorhamdia"
           },
           {
+            "label": "Lasiancistrus caucanus",
+            "registros": 3,
+            "slug_especie": "lasiancistrus-caucanus",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2339202",
+            "species": "Lasiancistrus caucanus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Siluriformes",
+            "family": "Loricariidae",
+            "genus": "Lasiancistrus"
+          },
+          {
             "label": "Cynodonichthys magdalenae",
             "registros": 3,
             "slug_especie": "cynodonichthys-magdalenae",
@@ -4066,22 +4082,6 @@
             "genus": "Cynodonichthys"
           },
           {
-            "label": "Lasiancistrus caucanus",
-            "registros": 3,
-            "slug_especie": "lasiancistrus-caucanus",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2339202",
-            "species": "Lasiancistrus caucanus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "order": "Siluriformes",
-            "family": "Loricariidae",
-            "genus": "Lasiancistrus"
-          },
-          {
             "label": "Andinoacara latifrons",
             "registros": 2,
             "slug_especie": "andinoacara-latifrons",
@@ -4097,23 +4097,6 @@
             "order": "Perciformes",
             "family": "Cichlidae",
             "genus": "Andinoacara"
-          },
-          {
-            "label": "Argopleura magdalenensis",
-            "registros": 2,
-            "slug_especie": "argopleura-magdalenensis",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2353166",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/5917949af827bf0c0ced62e1/summary",
-            "species": "Argopleura magdalenensis",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "order": "Characiformes",
-            "family": "Characidae",
-            "genus": "Argopleura"
           },
           {
             "label": "Cetopsorhamdia nasus",
@@ -4165,6 +4148,23 @@
             "order": "Characiformes",
             "family": "Characidae",
             "genus": "Creagrutus"
+          },
+          {
+            "label": "Argopleura magdalenensis",
+            "registros": 2,
+            "slug_especie": "argopleura-magdalenensis",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2353166",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/5917949af827bf0c0ced62e1/summary",
+            "species": "Argopleura magdalenensis",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Characiformes",
+            "family": "Characidae",
+            "genus": "Argopleura"
           },
           {
             "label": "Hyphessobrycon natagaima",
@@ -5222,24 +5222,6 @@
             "genus": "Pandion"
           },
           {
-            "label": "Forpus conspicillatus",
-            "registros": 169,
-            "slug_especie": "forpus-conspicillatus",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2479071",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c76fc3f0106c67230e73ed/summary",
-            "species": "Forpus conspicillatus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Psittaciformes",
-            "family": "Psittacidae",
-            "genus": "Forpus"
-          },
-          {
             "label": "Ictinia mississippiensis",
             "registros": 169,
             "slug_especie": "ictinia-mississippiensis",
@@ -5256,6 +5238,24 @@
             "order": "Accipitriformes",
             "family": "Accipitridae",
             "genus": "Ictinia"
+          },
+          {
+            "label": "Forpus conspicillatus",
+            "registros": 169,
+            "slug_especie": "forpus-conspicillatus",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2479071",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c76fc3f0106c67230e73ed/summary",
+            "species": "Forpus conspicillatus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Psittaciformes",
+            "family": "Psittacidae",
+            "genus": "Forpus"
           },
           {
             "label": "Buteo brachyurus",
@@ -7288,21 +7288,6 @@
       ],
       "species_list_top": [
         {
-          "label": "Hypothyris lycaste",
-          "registros": 4,
-          "slug_especie": "hypothyris-lycaste",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5133712",
-          "species": "Hypothyris lycaste",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Hypothyris"
-        },
-        {
           "label": "Pseudoscada timna",
           "registros": 4,
           "slug_especie": "pseudoscada-timna",
@@ -7316,6 +7301,21 @@
           "order": "Lepidoptera",
           "family": "Nymphalidae",
           "genus": "Pseudoscada"
+        },
+        {
+          "label": "Hypothyris lycaste",
+          "registros": 4,
+          "slug_especie": "hypothyris-lycaste",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5133712",
+          "species": "Hypothyris lycaste",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Hypothyris"
         },
         {
           "label": "Pyrisitia nise",
@@ -7333,21 +7333,6 @@
           "genus": "Pyrisitia"
         },
         {
-          "label": "Hamadryas feronia",
-          "registros": 2,
-          "slug_especie": "hamadryas-feronia",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5129496",
-          "species": "Hamadryas feronia",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Hamadryas"
-        },
-        {
           "label": "Heliconius cydno",
           "registros": 2,
           "slug_especie": "heliconius-cydno",
@@ -7355,21 +7340,6 @@
           "tipo": "biologico",
           "url_gbif": "https://www.gbif.org/species/1900485",
           "species": "Heliconius cydno",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Heliconius"
-        },
-        {
-          "label": "Heliconius erato",
-          "registros": 2,
-          "slug_especie": "heliconius-erato",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1900872",
-          "species": "Heliconius erato",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
@@ -7393,6 +7363,36 @@
           "genus": "Pyrisitia"
         },
         {
+          "label": "Heliconius erato",
+          "registros": 2,
+          "slug_especie": "heliconius-erato",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1900872",
+          "species": "Heliconius erato",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Heliconius"
+        },
+        {
+          "label": "Hamadryas feronia",
+          "registros": 2,
+          "slug_especie": "hamadryas-feronia",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5129496",
+          "species": "Hamadryas feronia",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Hamadryas"
+        },
+        {
           "label": "Aegopsis curvicornis",
           "registros": 1,
           "slug_especie": "aegopsis-curvicornis",
@@ -7406,81 +7406,6 @@
           "order": "Coleoptera",
           "family": "Scarabaeidae",
           "genus": "Aegopsis"
-        },
-        {
-          "label": "Ancognatha scarabaeoides",
-          "registros": 1,
-          "slug_especie": "ancognatha-scarabaeoides",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1073404",
-          "species": "Ancognatha scarabaeoides",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Coleoptera",
-          "family": "Scarabaeidae",
-          "genus": "Ancognatha"
-        },
-        {
-          "label": "Anthanassa drusilla",
-          "registros": 1,
-          "slug_especie": "anthanassa-drusilla",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1902692",
-          "species": "Anthanassa drusilla",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Anthanassa"
-        },
-        {
-          "label": "Caligo oileus",
-          "registros": 1,
-          "slug_especie": "caligo-oileus",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1918085",
-          "species": "Caligo oileus",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Caligo"
-        },
-        {
-          "label": "Dismorphia crisia",
-          "registros": 1,
-          "slug_especie": "dismorphia-crisia",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1919245",
-          "species": "Dismorphia crisia",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Pieridae",
-          "genus": "Dismorphia"
-        },
-        {
-          "label": "Dynamine sara",
-          "registros": 1,
-          "slug_especie": "dynamine-sara",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1909134",
-          "species": "Dynamine sara",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Dynamine"
         },
         {
           "label": "Ectima thecla",
@@ -7546,6 +7471,21 @@
           "genus": "Eurema"
         },
         {
+          "label": "Anthanassa drusilla",
+          "registros": 1,
+          "slug_especie": "anthanassa-drusilla",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1902692",
+          "species": "Anthanassa drusilla",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Anthanassa"
+        },
+        {
           "label": "Hermeuptychia harmonia",
           "registros": 1,
           "slug_especie": "hermeuptychia-harmonia",
@@ -7574,6 +7514,21 @@
           "order": "Coleoptera",
           "family": "Scarabaeidae",
           "genus": "Heterogomphus"
+        },
+        {
+          "label": "Dynamine sara",
+          "registros": 1,
+          "slug_especie": "dynamine-sara",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1909134",
+          "species": "Dynamine sara",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Dynamine"
         },
         {
           "label": "Leucothyreus femoratus",
@@ -7649,6 +7604,51 @@
           "order": "Coleoptera",
           "family": "Scarabaeidae",
           "genus": "Paulosawaya"
+        },
+        {
+          "label": "Dismorphia crisia",
+          "registros": 1,
+          "slug_especie": "dismorphia-crisia",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1919245",
+          "species": "Dismorphia crisia",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Pieridae",
+          "genus": "Dismorphia"
+        },
+        {
+          "label": "Caligo oileus",
+          "registros": 1,
+          "slug_especie": "caligo-oileus",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1918085",
+          "species": "Caligo oileus",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Caligo"
+        },
+        {
+          "label": "Ancognatha scarabaeoides",
+          "registros": 1,
+          "slug_especie": "ancognatha-scarabaeoides",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1073404",
+          "species": "Ancognatha scarabaeoides",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Coleoptera",
+          "family": "Scarabaeidae",
+          "genus": "Ancognatha"
         },
         {
           "label": "Rhodnius colombiensis",
@@ -8035,21 +8035,6 @@
       ],
       "species_list_top": [
         {
-          "label": "Hypothyris lycaste",
-          "registros": 4,
-          "slug_especie": "hypothyris-lycaste",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5133712",
-          "species": "Hypothyris lycaste",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Hypothyris"
-        },
-        {
           "label": "Pseudoscada timna",
           "registros": 4,
           "slug_especie": "pseudoscada-timna",
@@ -8063,6 +8048,21 @@
           "order": "Lepidoptera",
           "family": "Nymphalidae",
           "genus": "Pseudoscada"
+        },
+        {
+          "label": "Hypothyris lycaste",
+          "registros": 4,
+          "slug_especie": "hypothyris-lycaste",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5133712",
+          "species": "Hypothyris lycaste",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Hypothyris"
         },
         {
           "label": "Pyrisitia nise",
@@ -8080,21 +8080,6 @@
           "genus": "Pyrisitia"
         },
         {
-          "label": "Hamadryas feronia",
-          "registros": 2,
-          "slug_especie": "hamadryas-feronia",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5129496",
-          "species": "Hamadryas feronia",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Hamadryas"
-        },
-        {
           "label": "Heliconius cydno",
           "registros": 2,
           "slug_especie": "heliconius-cydno",
@@ -8102,21 +8087,6 @@
           "tipo": "biologico",
           "url_gbif": "https://www.gbif.org/species/1900485",
           "species": "Heliconius cydno",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Heliconius"
-        },
-        {
-          "label": "Heliconius erato",
-          "registros": 2,
-          "slug_especie": "heliconius-erato",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1900872",
-          "species": "Heliconius erato",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
@@ -8140,6 +8110,36 @@
           "genus": "Pyrisitia"
         },
         {
+          "label": "Heliconius erato",
+          "registros": 2,
+          "slug_especie": "heliconius-erato",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1900872",
+          "species": "Heliconius erato",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Heliconius"
+        },
+        {
+          "label": "Hamadryas feronia",
+          "registros": 2,
+          "slug_especie": "hamadryas-feronia",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5129496",
+          "species": "Hamadryas feronia",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Hamadryas"
+        },
+        {
           "label": "Aegopsis curvicornis",
           "registros": 1,
           "slug_especie": "aegopsis-curvicornis",
@@ -8153,81 +8153,6 @@
           "order": "Coleoptera",
           "family": "Scarabaeidae",
           "genus": "Aegopsis"
-        },
-        {
-          "label": "Ancognatha scarabaeoides",
-          "registros": 1,
-          "slug_especie": "ancognatha-scarabaeoides",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1073404",
-          "species": "Ancognatha scarabaeoides",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Coleoptera",
-          "family": "Scarabaeidae",
-          "genus": "Ancognatha"
-        },
-        {
-          "label": "Anthanassa drusilla",
-          "registros": 1,
-          "slug_especie": "anthanassa-drusilla",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1902692",
-          "species": "Anthanassa drusilla",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Anthanassa"
-        },
-        {
-          "label": "Caligo oileus",
-          "registros": 1,
-          "slug_especie": "caligo-oileus",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1918085",
-          "species": "Caligo oileus",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Caligo"
-        },
-        {
-          "label": "Dismorphia crisia",
-          "registros": 1,
-          "slug_especie": "dismorphia-crisia",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1919245",
-          "species": "Dismorphia crisia",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Pieridae",
-          "genus": "Dismorphia"
-        },
-        {
-          "label": "Dynamine sara",
-          "registros": 1,
-          "slug_especie": "dynamine-sara",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1909134",
-          "species": "Dynamine sara",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Dynamine"
         },
         {
           "label": "Ectima thecla",
@@ -8293,6 +8218,21 @@
           "genus": "Eurema"
         },
         {
+          "label": "Anthanassa drusilla",
+          "registros": 1,
+          "slug_especie": "anthanassa-drusilla",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1902692",
+          "species": "Anthanassa drusilla",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Anthanassa"
+        },
+        {
           "label": "Hermeuptychia harmonia",
           "registros": 1,
           "slug_especie": "hermeuptychia-harmonia",
@@ -8321,6 +8261,21 @@
           "order": "Coleoptera",
           "family": "Scarabaeidae",
           "genus": "Heterogomphus"
+        },
+        {
+          "label": "Dynamine sara",
+          "registros": 1,
+          "slug_especie": "dynamine-sara",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1909134",
+          "species": "Dynamine sara",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Dynamine"
         },
         {
           "label": "Leucothyreus femoratus",
@@ -8396,6 +8351,51 @@
           "order": "Coleoptera",
           "family": "Scarabaeidae",
           "genus": "Paulosawaya"
+        },
+        {
+          "label": "Dismorphia crisia",
+          "registros": 1,
+          "slug_especie": "dismorphia-crisia",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1919245",
+          "species": "Dismorphia crisia",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Pieridae",
+          "genus": "Dismorphia"
+        },
+        {
+          "label": "Caligo oileus",
+          "registros": 1,
+          "slug_especie": "caligo-oileus",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1918085",
+          "species": "Caligo oileus",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Caligo"
+        },
+        {
+          "label": "Ancognatha scarabaeoides",
+          "registros": 1,
+          "slug_especie": "ancognatha-scarabaeoides",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1073404",
+          "species": "Ancognatha scarabaeoides",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Coleoptera",
+          "family": "Scarabaeidae",
+          "genus": "Ancognatha"
         },
         {
           "label": "Rhodnius colombiensis",
@@ -10158,21 +10158,6 @@
           "genus": "Astyanax"
         },
         {
-          "label": "Poecilia caucana",
-          "registros": 4,
-          "slug_especie": "poecilia-caucana",
-          "slug_grupo": "peces",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5203742",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/596f45f12f4fd7bc7f3a536c/summary",
-          "species": "Poecilia caucana",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Cyprinodontiformes",
-          "family": "Poeciliidae",
-          "genus": "Poecilia"
-        },
-        {
           "label": "Trichomycterus banneaui",
           "registros": 4,
           "slug_especie": "trichomycterus-banneaui",
@@ -10186,6 +10171,21 @@
           "order": "Siluriformes",
           "family": "Trichomycteridae",
           "genus": "Trichomycterus"
+        },
+        {
+          "label": "Poecilia caucana",
+          "registros": 4,
+          "slug_especie": "poecilia-caucana",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5203742",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/596f45f12f4fd7bc7f3a536c/summary",
+          "species": "Poecilia caucana",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Cyprinodontiformes",
+          "family": "Poeciliidae",
+          "genus": "Poecilia"
         },
         {
           "label": "Cetopsorhamdia molinae",
@@ -10203,19 +10203,18 @@
           "genus": "Cetopsorhamdia"
         },
         {
-          "label": "Cynodonichthys magdalenae",
+          "label": "Pimelodella odynea",
           "registros": 3,
-          "slug_especie": "cynodonichthys-magdalenae",
+          "slug_especie": "pimelodella-odynea",
           "slug_grupo": "peces",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7193379",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/596fa9de2f4fd7bc7f3a5d8a/summary",
-          "species": "Cynodonichthys magdalenae",
+          "url_gbif": "https://www.gbif.org/species/2343482",
+          "species": "Pimelodella odynea",
           "kingdom": "Animalia",
           "phylum": "Chordata",
-          "order": "Cyprinodontiformes",
-          "family": "Rivulidae",
-          "genus": "Cynodonichthys"
+          "order": "Siluriformes",
+          "family": "Heptapteridae",
+          "genus": "Pimelodella"
         },
         {
           "label": "Lasiancistrus caucanus",
@@ -10232,18 +10231,19 @@
           "genus": "Lasiancistrus"
         },
         {
-          "label": "Pimelodella odynea",
+          "label": "Cynodonichthys magdalenae",
           "registros": 3,
-          "slug_especie": "pimelodella-odynea",
+          "slug_especie": "cynodonichthys-magdalenae",
           "slug_grupo": "peces",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2343482",
-          "species": "Pimelodella odynea",
+          "url_gbif": "https://www.gbif.org/species/7193379",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/596fa9de2f4fd7bc7f3a5d8a/summary",
+          "species": "Cynodonichthys magdalenae",
           "kingdom": "Animalia",
           "phylum": "Chordata",
-          "order": "Siluriformes",
-          "family": "Heptapteridae",
-          "genus": "Pimelodella"
+          "order": "Cyprinodontiformes",
+          "family": "Rivulidae",
+          "genus": "Cynodonichthys"
         },
         {
           "label": "Andinoacara latifrons",
@@ -10259,36 +10259,6 @@
           "order": "Perciformes",
           "family": "Cichlidae",
           "genus": "Andinoacara"
-        },
-        {
-          "label": "Argopleura magdalenensis",
-          "registros": 2,
-          "slug_especie": "argopleura-magdalenensis",
-          "slug_grupo": "peces",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2353166",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/5917949af827bf0c0ced62e1/summary",
-          "species": "Argopleura magdalenensis",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Characidae",
-          "genus": "Argopleura"
-        },
-        {
-          "label": "Astyanax magdalenae",
-          "registros": 2,
-          "slug_especie": "astyanax-magdalenae",
-          "slug_grupo": "peces",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5204256",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/596bed462f4fd7bc7f3a48a2/summary",
-          "species": "Astyanax magdalenae",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Characidae",
-          "genus": "Astyanax"
         },
         {
           "label": "Cetopsorhamdia nasus",
@@ -10408,6 +10378,36 @@
           "order": "Characiformes",
           "family": "Characidae",
           "genus": "Hyphessobrycon"
+        },
+        {
+          "label": "Astyanax magdalenae",
+          "registros": 2,
+          "slug_especie": "astyanax-magdalenae",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5204256",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/596bed462f4fd7bc7f3a48a2/summary",
+          "species": "Astyanax magdalenae",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Characidae",
+          "genus": "Astyanax"
+        },
+        {
+          "label": "Argopleura magdalenensis",
+          "registros": 2,
+          "slug_especie": "argopleura-magdalenensis",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2353166",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5917949af827bf0c0ced62e1/summary",
+          "species": "Argopleura magdalenensis",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Characidae",
+          "genus": "Argopleura"
         }
       ],
       "species_list_tematica": {
@@ -10903,21 +10903,6 @@
       "subgrupo_especies": [],
       "species_list_top": [
         {
-          "label": "Poecilia caucana",
-          "registros": 4,
-          "slug_especie": "poecilia-caucana",
-          "slug_grupo": "peces-dulceacuicolas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5203742",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/596f45f12f4fd7bc7f3a536c/summary",
-          "species": "Poecilia caucana",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Cyprinodontiformes",
-          "family": "Poeciliidae",
-          "genus": "Poecilia"
-        },
-        {
           "label": "Trichomycterus banneaui",
           "registros": 4,
           "slug_especie": "trichomycterus-banneaui",
@@ -10933,19 +10918,19 @@
           "genus": "Trichomycterus"
         },
         {
-          "label": "Cetopsorhamdia molinae",
-          "registros": 3,
-          "slug_especie": "cetopsorhamdia-molinae",
+          "label": "Poecilia caucana",
+          "registros": 4,
+          "slug_especie": "poecilia-caucana",
           "slug_grupo": "peces-dulceacuicolas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2343661",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/59de9e955f369343443017a1/summary",
-          "species": "Cetopsorhamdia molinae",
+          "url_gbif": "https://www.gbif.org/species/5203742",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/596f45f12f4fd7bc7f3a536c/summary",
+          "species": "Poecilia caucana",
           "kingdom": "Animalia",
           "phylum": "Chordata",
-          "order": "Siluriformes",
-          "family": "Heptapteridae",
-          "genus": "Cetopsorhamdia"
+          "order": "Cyprinodontiformes",
+          "family": "Poeciliidae",
+          "genus": "Poecilia"
         },
         {
           "label": "Cynodonichthys magdalenae",
@@ -10963,6 +10948,20 @@
           "genus": "Cynodonichthys"
         },
         {
+          "label": "Pimelodella odynea",
+          "registros": 3,
+          "slug_especie": "pimelodella-odynea",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2343482",
+          "species": "Pimelodella odynea",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Siluriformes",
+          "family": "Heptapteridae",
+          "genus": "Pimelodella"
+        },
+        {
           "label": "Lasiancistrus caucanus",
           "registros": 3,
           "slug_especie": "lasiancistrus-caucanus",
@@ -10977,18 +10976,19 @@
           "genus": "Lasiancistrus"
         },
         {
-          "label": "Pimelodella odynea",
+          "label": "Cetopsorhamdia molinae",
           "registros": 3,
-          "slug_especie": "pimelodella-odynea",
+          "slug_especie": "cetopsorhamdia-molinae",
           "slug_grupo": "peces-dulceacuicolas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2343482",
-          "species": "Pimelodella odynea",
+          "url_gbif": "https://www.gbif.org/species/2343661",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/59de9e955f369343443017a1/summary",
+          "species": "Cetopsorhamdia molinae",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "order": "Siluriformes",
           "family": "Heptapteridae",
-          "genus": "Pimelodella"
+          "genus": "Cetopsorhamdia"
         },
         {
           "label": "Andinoacara latifrons",
@@ -11004,21 +11004,6 @@
           "order": "Perciformes",
           "family": "Cichlidae",
           "genus": "Andinoacara"
-        },
-        {
-          "label": "Argopleura magdalenensis",
-          "registros": 2,
-          "slug_especie": "argopleura-magdalenensis",
-          "slug_grupo": "peces-dulceacuicolas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2353166",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/5917949af827bf0c0ced62e1/summary",
-          "species": "Argopleura magdalenensis",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Characidae",
-          "genus": "Argopleura"
         },
         {
           "label": "Cetopsorhamdia nasus",
@@ -11138,6 +11123,21 @@
           "order": "Characiformes",
           "family": "Characidae",
           "genus": "Hyphessobrycon"
+        },
+        {
+          "label": "Argopleura magdalenensis",
+          "registros": 2,
+          "slug_especie": "argopleura-magdalenensis",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2353166",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5917949af827bf0c0ced62e1/summary",
+          "species": "Argopleura magdalenensis",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Characidae",
+          "genus": "Argopleura"
         }
       ],
       "species_list_tematica": {
@@ -11656,6 +11656,21 @@
           "genus": "Pitcairnia"
         },
         {
+          "label": "Petrea pubescens",
+          "registros": 5,
+          "slug_especie": "petrea-pubescens",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7297303",
+          "species": "Petrea pubescens",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Lamiales",
+          "family": "Verbenaceae",
+          "genus": "Petrea"
+        },
+        {
           "label": "Bactris major",
           "registros": 5,
           "slug_especie": "bactris-major",
@@ -11672,21 +11687,6 @@
           "genus": "Bactris"
         },
         {
-          "label": "Petrea pubescens",
-          "registros": 5,
-          "slug_especie": "petrea-pubescens",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7297303",
-          "species": "Petrea pubescens",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Lamiales",
-          "family": "Verbenaceae",
-          "genus": "Petrea"
-        },
-        {
           "label": "Ipomoea triloba",
           "registros": 4,
           "slug_especie": "ipomoea-triloba",
@@ -11700,36 +11700,6 @@
           "order": "Solanales",
           "family": "Convolvulaceae",
           "genus": "Ipomoea"
-        },
-        {
-          "label": "Alstonia scholaris",
-          "registros": 3,
-          "slug_especie": "alstonia-scholaris",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5414410",
-          "species": "Alstonia scholaris",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Gentianales",
-          "family": "Apocynaceae",
-          "genus": "Alstonia"
-        },
-        {
-          "label": "Cecropia goudotiana",
-          "registros": 3,
-          "slug_especie": "cecropia-goudotiana",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4013446",
-          "species": "Cecropia goudotiana",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Rosales",
-          "family": "Urticaceae",
-          "genus": "Cecropia"
         },
         {
           "label": "Crescentia cujete",
@@ -11748,6 +11718,37 @@
           "genus": "Crescentia"
         },
         {
+          "label": "Tillandsia elongata",
+          "registros": 3,
+          "slug_especie": "tillandsia-elongata",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2695706",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e83fe583c45700544e43dc/summary",
+          "species": "Tillandsia elongata",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Poales",
+          "family": "Bromeliaceae",
+          "genus": "Tillandsia"
+        },
+        {
+          "label": "Alstonia scholaris",
+          "registros": 3,
+          "slug_especie": "alstonia-scholaris",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5414410",
+          "species": "Alstonia scholaris",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Gentianales",
+          "family": "Apocynaceae",
+          "genus": "Alstonia"
+        },
+        {
           "label": "Pitcairnia stenophylla",
           "registros": 3,
           "slug_especie": "pitcairnia-stenophylla",
@@ -11764,20 +11765,19 @@
           "genus": "Pitcairnia"
         },
         {
-          "label": "Tillandsia elongata",
+          "label": "Cecropia goudotiana",
           "registros": 3,
-          "slug_especie": "tillandsia-elongata",
+          "slug_especie": "cecropia-goudotiana",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2695706",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e83fe583c45700544e43dc/summary",
-          "species": "Tillandsia elongata",
+          "url_gbif": "https://www.gbif.org/species/4013446",
+          "species": "Cecropia goudotiana",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Poales",
-          "family": "Bromeliaceae",
-          "genus": "Tillandsia"
+          "class": "Magnoliopsida",
+          "order": "Rosales",
+          "family": "Urticaceae",
+          "genus": "Cecropia"
         }
       ],
       "species_list_tematica": {
@@ -12881,6 +12881,21 @@
           "genus": "Pitcairnia"
         },
         {
+          "label": "Petrea pubescens",
+          "registros": 5,
+          "slug_especie": "petrea-pubescens",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7297303",
+          "species": "Petrea pubescens",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Lamiales",
+          "family": "Verbenaceae",
+          "genus": "Petrea"
+        },
+        {
           "label": "Bactris major",
           "registros": 5,
           "slug_especie": "bactris-major",
@@ -12897,21 +12912,6 @@
           "genus": "Bactris"
         },
         {
-          "label": "Petrea pubescens",
-          "registros": 5,
-          "slug_especie": "petrea-pubescens",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7297303",
-          "species": "Petrea pubescens",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Lamiales",
-          "family": "Verbenaceae",
-          "genus": "Petrea"
-        },
-        {
           "label": "Ipomoea triloba",
           "registros": 4,
           "slug_especie": "ipomoea-triloba",
@@ -12925,36 +12925,6 @@
           "order": "Solanales",
           "family": "Convolvulaceae",
           "genus": "Ipomoea"
-        },
-        {
-          "label": "Alstonia scholaris",
-          "registros": 3,
-          "slug_especie": "alstonia-scholaris",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5414410",
-          "species": "Alstonia scholaris",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Gentianales",
-          "family": "Apocynaceae",
-          "genus": "Alstonia"
-        },
-        {
-          "label": "Cecropia goudotiana",
-          "registros": 3,
-          "slug_especie": "cecropia-goudotiana",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4013446",
-          "species": "Cecropia goudotiana",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Rosales",
-          "family": "Urticaceae",
-          "genus": "Cecropia"
         },
         {
           "label": "Crescentia cujete",
@@ -12973,6 +12943,37 @@
           "genus": "Crescentia"
         },
         {
+          "label": "Tillandsia elongata",
+          "registros": 3,
+          "slug_especie": "tillandsia-elongata",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2695706",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e83fe583c45700544e43dc/summary",
+          "species": "Tillandsia elongata",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Poales",
+          "family": "Bromeliaceae",
+          "genus": "Tillandsia"
+        },
+        {
+          "label": "Alstonia scholaris",
+          "registros": 3,
+          "slug_especie": "alstonia-scholaris",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5414410",
+          "species": "Alstonia scholaris",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Gentianales",
+          "family": "Apocynaceae",
+          "genus": "Alstonia"
+        },
+        {
           "label": "Pitcairnia stenophylla",
           "registros": 3,
           "slug_especie": "pitcairnia-stenophylla",
@@ -12989,20 +12990,19 @@
           "genus": "Pitcairnia"
         },
         {
-          "label": "Tillandsia elongata",
+          "label": "Cecropia goudotiana",
           "registros": 3,
-          "slug_especie": "tillandsia-elongata",
+          "slug_especie": "cecropia-goudotiana",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2695706",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e83fe583c45700544e43dc/summary",
-          "species": "Tillandsia elongata",
+          "url_gbif": "https://www.gbif.org/species/4013446",
+          "species": "Cecropia goudotiana",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Poales",
-          "family": "Bromeliaceae",
-          "genus": "Tillandsia"
+          "class": "Magnoliopsida",
+          "order": "Rosales",
+          "family": "Urticaceae",
+          "genus": "Cecropia"
         }
       ],
       "species_list_tematica": {
@@ -14399,6 +14399,23 @@
             "genus": "Ortalis"
           },
           {
+            "label": "Trichomycterus banneaui",
+            "registros": 4,
+            "slug_especie": "trichomycterus-banneaui",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2343032",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/59dcddbb5f369343443000c0/summary",
+            "species": "Trichomycterus banneaui",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Siluriformes",
+            "family": "Trichomycteridae",
+            "genus": "Trichomycterus"
+          },
+          {
             "label": "Myiarchus apicalis",
             "registros": 4,
             "slug_especie": "myiarchus-apicalis",
@@ -14415,23 +14432,6 @@
             "order": "Passeriformes",
             "family": "Tyrannidae",
             "genus": "Myiarchus"
-          },
-          {
-            "label": "Trichomycterus banneaui",
-            "registros": 4,
-            "slug_especie": "trichomycterus-banneaui",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2343032",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/59dcddbb5f369343443000c0/summary",
-            "species": "Trichomycterus banneaui",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "order": "Siluriformes",
-            "family": "Trichomycteridae",
-            "genus": "Trichomycterus"
           },
           {
             "label": "Cetopsorhamdia molinae",
@@ -14451,6 +14451,22 @@
             "genus": "Cetopsorhamdia"
           },
           {
+            "label": "Lasiancistrus caucanus",
+            "registros": 3,
+            "slug_especie": "lasiancistrus-caucanus",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2339202",
+            "species": "Lasiancistrus caucanus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Siluriformes",
+            "family": "Loricariidae",
+            "genus": "Lasiancistrus"
+          },
+          {
             "label": "Cynodonichthys magdalenae",
             "registros": 3,
             "slug_especie": "cynodonichthys-magdalenae",
@@ -14468,22 +14484,6 @@
             "genus": "Cynodonichthys"
           },
           {
-            "label": "Lasiancistrus caucanus",
-            "registros": 3,
-            "slug_especie": "lasiancistrus-caucanus",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2339202",
-            "species": "Lasiancistrus caucanus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "order": "Siluriformes",
-            "family": "Loricariidae",
-            "genus": "Lasiancistrus"
-          },
-          {
             "label": "Andinoacara latifrons",
             "registros": 2,
             "slug_especie": "andinoacara-latifrons",
@@ -14499,23 +14499,6 @@
             "order": "Perciformes",
             "family": "Cichlidae",
             "genus": "Andinoacara"
-          },
-          {
-            "label": "Argopleura magdalenensis",
-            "registros": 2,
-            "slug_especie": "argopleura-magdalenensis",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2353166",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/5917949af827bf0c0ced62e1/summary",
-            "species": "Argopleura magdalenensis",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "order": "Characiformes",
-            "family": "Characidae",
-            "genus": "Argopleura"
           },
           {
             "label": "Cetopsorhamdia nasus",
@@ -14567,6 +14550,23 @@
             "order": "Characiformes",
             "family": "Characidae",
             "genus": "Creagrutus"
+          },
+          {
+            "label": "Argopleura magdalenensis",
+            "registros": 2,
+            "slug_especie": "argopleura-magdalenensis",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2353166",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/5917949af827bf0c0ced62e1/summary",
+            "species": "Argopleura magdalenensis",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Characiformes",
+            "family": "Characidae",
+            "genus": "Argopleura"
           },
           {
             "label": "Hyphessobrycon natagaima",

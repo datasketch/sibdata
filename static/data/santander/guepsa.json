@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -1829,22 +1829,6 @@
           "genus": "Tyrannus"
         },
         {
-          "label": "Quiscalus lugubris",
-          "registros": 6,
-          "slug_especie": "quiscalus-lugubris",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2484159",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56ce29c23c16479905cba791/summary",
-          "species": "Quiscalus lugubris",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Icteridae",
-          "genus": "Quiscalus"
-        },
-        {
           "label": "Thraupis palmarum",
           "registros": 6,
           "slug_especie": "thraupis-palmarum",
@@ -1859,6 +1843,22 @@
           "order": "Passeriformes",
           "family": "Thraupidae",
           "genus": "Thraupis"
+        },
+        {
+          "label": "Quiscalus lugubris",
+          "registros": 6,
+          "slug_especie": "quiscalus-lugubris",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2484159",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56ce29c23c16479905cba791/summary",
+          "species": "Quiscalus lugubris",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Icteridae",
+          "genus": "Quiscalus"
         },
         {
           "label": "Cathartes aura",
@@ -1893,6 +1893,38 @@
           "genus": "Turdus"
         },
         {
+          "label": "Machetornis rixosa",
+          "registros": 3,
+          "slug_especie": "machetornis-rixosa",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2482934",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7c4dcf0106c67230e7419/summary",
+          "species": "Machetornis rixosa",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Tyrannidae",
+          "genus": "Machetornis"
+        },
+        {
+          "label": "Vanellus chilensis",
+          "registros": 3,
+          "slug_especie": "vanellus-chilensis",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5229146",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cfc6d83c16479905cba803/summary",
+          "species": "Vanellus chilensis",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Charadriiformes",
+          "family": "Charadriidae",
+          "genus": "Vanellus"
+        },
+        {
           "label": "Crotophaga ani",
           "registros": 3,
           "slug_especie": "crotophaga-ani",
@@ -1907,6 +1939,21 @@
           "order": "Cuculiformes",
           "family": "Cuculidae",
           "genus": "Crotophaga"
+        },
+        {
+          "label": "Ortalis columbiana",
+          "registros": 3,
+          "slug_especie": "ortalis-columbiana",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5229460",
+          "species": "Ortalis columbiana",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Galliformes",
+          "family": "Cracidae",
+          "genus": "Ortalis"
         },
         {
           "label": "Icterus chrysater",
@@ -1925,22 +1972,6 @@
           "genus": "Icterus"
         },
         {
-          "label": "Machetornis rixosa",
-          "registros": 3,
-          "slug_especie": "machetornis-rixosa",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2482934",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7c4dcf0106c67230e7419/summary",
-          "species": "Machetornis rixosa",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Tyrannidae",
-          "genus": "Machetornis"
-        },
-        {
           "label": "Mimus gilvus",
           "registros": 3,
           "slug_especie": "mimus-gilvus",
@@ -1955,37 +1986,6 @@
           "order": "Passeriformes",
           "family": "Mimidae",
           "genus": "Mimus"
-        },
-        {
-          "label": "Ortalis columbiana",
-          "registros": 3,
-          "slug_especie": "ortalis-columbiana",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5229460",
-          "species": "Ortalis columbiana",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Galliformes",
-          "family": "Cracidae",
-          "genus": "Ortalis"
-        },
-        {
-          "label": "Vanellus chilensis",
-          "registros": 3,
-          "slug_especie": "vanellus-chilensis",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5229146",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cfc6d83c16479905cba803/summary",
-          "species": "Vanellus chilensis",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Charadriiformes",
-          "family": "Charadriidae",
-          "genus": "Vanellus"
         }
       ],
       "species_list_tematica": {
@@ -2740,22 +2740,6 @@
           "genus": "Tyrannus"
         },
         {
-          "label": "Quiscalus lugubris",
-          "registros": 6,
-          "slug_especie": "quiscalus-lugubris",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2484159",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56ce29c23c16479905cba791/summary",
-          "species": "Quiscalus lugubris",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Icteridae",
-          "genus": "Quiscalus"
-        },
-        {
           "label": "Thraupis palmarum",
           "registros": 6,
           "slug_especie": "thraupis-palmarum",
@@ -2770,6 +2754,22 @@
           "order": "Passeriformes",
           "family": "Thraupidae",
           "genus": "Thraupis"
+        },
+        {
+          "label": "Quiscalus lugubris",
+          "registros": 6,
+          "slug_especie": "quiscalus-lugubris",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2484159",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56ce29c23c16479905cba791/summary",
+          "species": "Quiscalus lugubris",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Icteridae",
+          "genus": "Quiscalus"
         },
         {
           "label": "Cathartes aura",
@@ -2804,6 +2804,38 @@
           "genus": "Turdus"
         },
         {
+          "label": "Mimus gilvus",
+          "registros": 3,
+          "slug_especie": "mimus-gilvus",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5231676",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b8eaf0106c67230e7409/summary",
+          "species": "Mimus gilvus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Mimidae",
+          "genus": "Mimus"
+        },
+        {
+          "label": "Vanellus chilensis",
+          "registros": 3,
+          "slug_especie": "vanellus-chilensis",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5229146",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cfc6d83c16479905cba803/summary",
+          "species": "Vanellus chilensis",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Charadriiformes",
+          "family": "Charadriidae",
+          "genus": "Vanellus"
+        },
+        {
           "label": "Crotophaga ani",
           "registros": 3,
           "slug_especie": "crotophaga-ani",
@@ -2820,20 +2852,19 @@
           "genus": "Crotophaga"
         },
         {
-          "label": "Icterus chrysater",
+          "label": "Ortalis columbiana",
           "registros": 3,
-          "slug_especie": "icterus-chrysater",
+          "slug_especie": "ortalis-columbiana",
           "slug_grupo": "aves",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5229924",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9f6e2f0106c67230e744f/summary",
-          "species": "Icterus chrysater",
+          "url_gbif": "https://www.gbif.org/species/5229460",
+          "species": "Ortalis columbiana",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Icteridae",
-          "genus": "Icterus"
+          "order": "Galliformes",
+          "family": "Cracidae",
+          "genus": "Ortalis"
         },
         {
           "label": "Machetornis rixosa",
@@ -2852,51 +2883,20 @@
           "genus": "Machetornis"
         },
         {
-          "label": "Mimus gilvus",
+          "label": "Icterus chrysater",
           "registros": 3,
-          "slug_especie": "mimus-gilvus",
+          "slug_especie": "icterus-chrysater",
           "slug_grupo": "aves",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5231676",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b8eaf0106c67230e7409/summary",
-          "species": "Mimus gilvus",
+          "url_gbif": "https://www.gbif.org/species/5229924",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9f6e2f0106c67230e744f/summary",
+          "species": "Icterus chrysater",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Mimidae",
-          "genus": "Mimus"
-        },
-        {
-          "label": "Ortalis columbiana",
-          "registros": 3,
-          "slug_especie": "ortalis-columbiana",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5229460",
-          "species": "Ortalis columbiana",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Galliformes",
-          "family": "Cracidae",
-          "genus": "Ortalis"
-        },
-        {
-          "label": "Vanellus chilensis",
-          "registros": 3,
-          "slug_especie": "vanellus-chilensis",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5229146",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cfc6d83c16479905cba803/summary",
-          "species": "Vanellus chilensis",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Charadriiformes",
-          "family": "Charadriidae",
-          "genus": "Vanellus"
+          "family": "Icteridae",
+          "genus": "Icterus"
         }
       ],
       "species_list_tematica": {
@@ -6012,22 +6012,6 @@
           "genus": "Tyrannus"
         },
         {
-          "label": "Quiscalus lugubris",
-          "registros": 6,
-          "slug_especie": "quiscalus-lugubris",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2484159",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56ce29c23c16479905cba791/summary",
-          "species": "Quiscalus lugubris",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Icteridae",
-          "genus": "Quiscalus"
-        },
-        {
           "label": "Thraupis palmarum",
           "registros": 6,
           "slug_especie": "thraupis-palmarum",
@@ -6042,6 +6026,22 @@
           "order": "Passeriformes",
           "family": "Thraupidae",
           "genus": "Thraupis"
+        },
+        {
+          "label": "Quiscalus lugubris",
+          "registros": 6,
+          "slug_especie": "quiscalus-lugubris",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2484159",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56ce29c23c16479905cba791/summary",
+          "species": "Quiscalus lugubris",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Icteridae",
+          "genus": "Quiscalus"
         },
         {
           "label": "Cathartes aura",
@@ -6076,6 +6076,38 @@
           "genus": "Turdus"
         },
         {
+          "label": "Mimus gilvus",
+          "registros": 3,
+          "slug_especie": "mimus-gilvus",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5231676",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b8eaf0106c67230e7409/summary",
+          "species": "Mimus gilvus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Mimidae",
+          "genus": "Mimus"
+        },
+        {
+          "label": "Vanellus chilensis",
+          "registros": 3,
+          "slug_especie": "vanellus-chilensis",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5229146",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cfc6d83c16479905cba803/summary",
+          "species": "Vanellus chilensis",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Charadriiformes",
+          "family": "Charadriidae",
+          "genus": "Vanellus"
+        },
+        {
           "label": "Crotophaga ani",
           "registros": 3,
           "slug_especie": "crotophaga-ani",
@@ -6092,20 +6124,19 @@
           "genus": "Crotophaga"
         },
         {
-          "label": "Icterus chrysater",
+          "label": "Ortalis columbiana",
           "registros": 3,
-          "slug_especie": "icterus-chrysater",
+          "slug_especie": "ortalis-columbiana",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5229924",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9f6e2f0106c67230e744f/summary",
-          "species": "Icterus chrysater",
+          "url_gbif": "https://www.gbif.org/species/5229460",
+          "species": "Ortalis columbiana",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Icteridae",
-          "genus": "Icterus"
+          "order": "Galliformes",
+          "family": "Cracidae",
+          "genus": "Ortalis"
         },
         {
           "label": "Machetornis rixosa",
@@ -6124,51 +6155,20 @@
           "genus": "Machetornis"
         },
         {
-          "label": "Mimus gilvus",
+          "label": "Icterus chrysater",
           "registros": 3,
-          "slug_especie": "mimus-gilvus",
+          "slug_especie": "icterus-chrysater",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5231676",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b8eaf0106c67230e7409/summary",
-          "species": "Mimus gilvus",
+          "url_gbif": "https://www.gbif.org/species/5229924",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9f6e2f0106c67230e744f/summary",
+          "species": "Icterus chrysater",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Mimidae",
-          "genus": "Mimus"
-        },
-        {
-          "label": "Ortalis columbiana",
-          "registros": 3,
-          "slug_especie": "ortalis-columbiana",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5229460",
-          "species": "Ortalis columbiana",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Galliformes",
-          "family": "Cracidae",
-          "genus": "Ortalis"
-        },
-        {
-          "label": "Vanellus chilensis",
-          "registros": 3,
-          "slug_especie": "vanellus-chilensis",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5229146",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cfc6d83c16479905cba803/summary",
-          "species": "Vanellus chilensis",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Charadriiformes",
-          "family": "Charadriidae",
-          "genus": "Vanellus"
+          "family": "Icteridae",
+          "genus": "Icterus"
         }
       ],
       "species_list_tematica": {

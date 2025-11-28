@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -1879,20 +1879,6 @@
           "genus": "Hemigrammus"
         },
         {
-          "label": "Hyphessobrycon copelandi",
-          "registros": 7,
-          "slug_especie": "hyphessobrycon-copelandi",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2354545",
-          "species": "Hyphessobrycon copelandi",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Characidae",
-          "genus": "Hyphessobrycon"
-        },
-        {
           "label": "Sotalia fluviatilis",
           "registros": 7,
           "slug_especie": "sotalia-fluviatilis",
@@ -1908,6 +1894,20 @@
           "order": "Cetacea",
           "family": "Delphinidae",
           "genus": "Sotalia"
+        },
+        {
+          "label": "Hyphessobrycon copelandi",
+          "registros": 7,
+          "slug_especie": "hyphessobrycon-copelandi",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2354545",
+          "species": "Hyphessobrycon copelandi",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Characidae",
+          "genus": "Hyphessobrycon"
         },
         {
           "label": "Hemiodus unimaculatus",
@@ -1938,18 +1938,18 @@
           "genus": "Moenkhausia"
         },
         {
-          "label": "Carnegiella schereri",
+          "label": "Pyrrhulina brevis",
           "registros": 5,
-          "slug_especie": "carnegiella-schereri",
+          "slug_especie": "pyrrhulina-brevis",
           "slug_grupo": "animales",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5204620",
-          "species": "Carnegiella schereri",
+          "url_gbif": "https://www.gbif.org/species/2355681",
+          "species": "Pyrrhulina brevis",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "order": "Characiformes",
-          "family": "Gasteropelecidae",
-          "genus": "Carnegiella"
+          "family": "Lebiasinidae",
+          "genus": "Pyrrhulina"
         },
         {
           "label": "Curimatopsis macrolepis",
@@ -1980,18 +1980,18 @@
           "genus": "Nannostomus"
         },
         {
-          "label": "Pyrrhulina brevis",
+          "label": "Carnegiella schereri",
           "registros": 5,
-          "slug_especie": "pyrrhulina-brevis",
+          "slug_especie": "carnegiella-schereri",
           "slug_grupo": "animales",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2355681",
-          "species": "Pyrrhulina brevis",
+          "url_gbif": "https://www.gbif.org/species/5204620",
+          "species": "Carnegiella schereri",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "order": "Characiformes",
-          "family": "Lebiasinidae",
-          "genus": "Pyrrhulina"
+          "family": "Gasteropelecidae",
+          "genus": "Carnegiella"
         }
       ],
       "species_list_tematica": {
@@ -5865,20 +5865,6 @@
       ],
       "species_list_top": [
         {
-          "label": "Cyphocharax spiluropsis",
-          "registros": 8,
-          "slug_especie": "cyphocharax-spiluropsis",
-          "slug_grupo": "peces",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2355078",
-          "species": "Cyphocharax spiluropsis",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Curimatidae",
-          "genus": "Cyphocharax"
-        },
-        {
           "label": "Hemigrammus ocellifer",
           "registros": 8,
           "slug_especie": "hemigrammus-ocellifer",
@@ -5891,6 +5877,20 @@
           "order": "Characiformes",
           "family": "Characidae",
           "genus": "Hemigrammus"
+        },
+        {
+          "label": "Cyphocharax spiluropsis",
+          "registros": 8,
+          "slug_especie": "cyphocharax-spiluropsis",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2355078",
+          "species": "Cyphocharax spiluropsis",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Curimatidae",
+          "genus": "Cyphocharax"
         },
         {
           "label": "Hyphessobrycon copelandi",
@@ -5935,6 +5935,20 @@
           "genus": "Moenkhausia"
         },
         {
+          "label": "Nannostomus eques",
+          "registros": 5,
+          "slug_especie": "nannostomus-eques",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2355643",
+          "species": "Nannostomus eques",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Lebiasinidae",
+          "genus": "Nannostomus"
+        },
+        {
           "label": "Carnegiella schereri",
           "registros": 5,
           "slug_especie": "carnegiella-schereri",
@@ -5963,20 +5977,6 @@
           "genus": "Curimatopsis"
         },
         {
-          "label": "Nannostomus eques",
-          "registros": 5,
-          "slug_especie": "nannostomus-eques",
-          "slug_grupo": "peces",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2355643",
-          "species": "Nannostomus eques",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Lebiasinidae",
-          "genus": "Nannostomus"
-        },
-        {
           "label": "Pyrrhulina brevis",
           "registros": 5,
           "slug_especie": "pyrrhulina-brevis",
@@ -5989,6 +5989,34 @@
           "order": "Characiformes",
           "family": "Lebiasinidae",
           "genus": "Pyrrhulina"
+        },
+        {
+          "label": "Rhytiodus argenteofuscus",
+          "registros": 4,
+          "slug_especie": "rhytiodus-argenteofuscus",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5204578",
+          "species": "Rhytiodus argenteofuscus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Anostomidae",
+          "genus": "Rhytiodus"
+        },
+        {
+          "label": "Tetragonopterus argenteus",
+          "registros": 4,
+          "slug_especie": "tetragonopterus-argenteus",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5204502",
+          "species": "Tetragonopterus argenteus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Characidae",
+          "genus": "Tetragonopterus"
         },
         {
           "label": "Aphyocharax alburnus",
@@ -6019,20 +6047,6 @@
           "genus": "Apistogramma"
         },
         {
-          "label": "Rhytiodus argenteofuscus",
-          "registros": 4,
-          "slug_especie": "rhytiodus-argenteofuscus",
-          "slug_grupo": "peces",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5204578",
-          "species": "Rhytiodus argenteofuscus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Anostomidae",
-          "genus": "Rhytiodus"
-        },
-        {
           "label": "Steindachnerina dobula",
           "registros": 4,
           "slug_especie": "steindachnerina-dobula",
@@ -6045,20 +6059,6 @@
           "order": "Characiformes",
           "family": "Curimatidae",
           "genus": "Steindachnerina"
-        },
-        {
-          "label": "Tetragonopterus argenteus",
-          "registros": 4,
-          "slug_especie": "tetragonopterus-argenteus",
-          "slug_grupo": "peces",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5204502",
-          "species": "Tetragonopterus argenteus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Characidae",
-          "genus": "Tetragonopterus"
         }
       ],
       "species_list_tematica": {
@@ -6401,20 +6401,6 @@
           "genus": "Hemigrammus"
         },
         {
-          "label": "Hemiodus unimaculatus",
-          "registros": 6,
-          "slug_especie": "hemiodus-unimaculatus",
-          "slug_grupo": "peces-dulceacuicolas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2354880",
-          "species": "Hemiodus unimaculatus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Hemiodontidae",
-          "genus": "Hemiodus"
-        },
-        {
           "label": "Moenkhausia megalops",
           "registros": 6,
           "slug_especie": "moenkhausia-megalops",
@@ -6429,18 +6415,18 @@
           "genus": "Moenkhausia"
         },
         {
-          "label": "Carnegiella schereri",
-          "registros": 5,
-          "slug_especie": "carnegiella-schereri",
+          "label": "Hemiodus unimaculatus",
+          "registros": 6,
+          "slug_especie": "hemiodus-unimaculatus",
           "slug_grupo": "peces-dulceacuicolas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5204620",
-          "species": "Carnegiella schereri",
+          "url_gbif": "https://www.gbif.org/species/2354880",
+          "species": "Hemiodus unimaculatus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "order": "Characiformes",
-          "family": "Gasteropelecidae",
-          "genus": "Carnegiella"
+          "family": "Hemiodontidae",
+          "genus": "Hemiodus"
         },
         {
           "label": "Curimatopsis macrolepis",
@@ -6457,18 +6443,18 @@
           "genus": "Curimatopsis"
         },
         {
-          "label": "Nannostomus eques",
+          "label": "Carnegiella schereri",
           "registros": 5,
-          "slug_especie": "nannostomus-eques",
+          "slug_especie": "carnegiella-schereri",
           "slug_grupo": "peces-dulceacuicolas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2355643",
-          "species": "Nannostomus eques",
+          "url_gbif": "https://www.gbif.org/species/5204620",
+          "species": "Carnegiella schereri",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "order": "Characiformes",
-          "family": "Lebiasinidae",
-          "genus": "Nannostomus"
+          "family": "Gasteropelecidae",
+          "genus": "Carnegiella"
         },
         {
           "label": "Pyrrhulina brevis",
@@ -6483,6 +6469,48 @@
           "order": "Characiformes",
           "family": "Lebiasinidae",
           "genus": "Pyrrhulina"
+        },
+        {
+          "label": "Nannostomus eques",
+          "registros": 5,
+          "slug_especie": "nannostomus-eques",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2355643",
+          "species": "Nannostomus eques",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Lebiasinidae",
+          "genus": "Nannostomus"
+        },
+        {
+          "label": "Tetragonopterus argenteus",
+          "registros": 4,
+          "slug_especie": "tetragonopterus-argenteus",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5204502",
+          "species": "Tetragonopterus argenteus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Characidae",
+          "genus": "Tetragonopterus"
+        },
+        {
+          "label": "Steindachnerina dobula",
+          "registros": 4,
+          "slug_especie": "steindachnerina-dobula",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2355224",
+          "species": "Steindachnerina dobula",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Curimatidae",
+          "genus": "Steindachnerina"
         },
         {
           "label": "Apistogramma hoignei",
@@ -6511,34 +6539,6 @@
           "order": "Characiformes",
           "family": "Anostomidae",
           "genus": "Rhytiodus"
-        },
-        {
-          "label": "Steindachnerina dobula",
-          "registros": 4,
-          "slug_especie": "steindachnerina-dobula",
-          "slug_grupo": "peces-dulceacuicolas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2355224",
-          "species": "Steindachnerina dobula",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Curimatidae",
-          "genus": "Steindachnerina"
-        },
-        {
-          "label": "Tetragonopterus argenteus",
-          "registros": 4,
-          "slug_especie": "tetragonopterus-argenteus",
-          "slug_grupo": "peces-dulceacuicolas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5204502",
-          "species": "Tetragonopterus argenteus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Characidae",
-          "genus": "Tetragonopterus"
         }
       ],
       "species_list_tematica": {
@@ -8249,20 +8249,6 @@
           "genus": "Inia"
         },
         {
-          "label": "Cyphocharax spiluropsis",
-          "registros": 8,
-          "slug_especie": "cyphocharax-spiluropsis",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2355078",
-          "species": "Cyphocharax spiluropsis",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Curimatidae",
-          "genus": "Cyphocharax"
-        },
-        {
           "label": "Hemigrammus ocellifer",
           "registros": 8,
           "slug_especie": "hemigrammus-ocellifer",
@@ -8277,18 +8263,18 @@
           "genus": "Hemigrammus"
         },
         {
-          "label": "Hyphessobrycon copelandi",
-          "registros": 7,
-          "slug_especie": "hyphessobrycon-copelandi",
+          "label": "Cyphocharax spiluropsis",
+          "registros": 8,
+          "slug_especie": "cyphocharax-spiluropsis",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2354545",
-          "species": "Hyphessobrycon copelandi",
+          "url_gbif": "https://www.gbif.org/species/2355078",
+          "species": "Cyphocharax spiluropsis",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "order": "Characiformes",
-          "family": "Characidae",
-          "genus": "Hyphessobrycon"
+          "family": "Curimatidae",
+          "genus": "Cyphocharax"
         },
         {
           "label": "Sotalia fluviatilis",
@@ -8306,6 +8292,20 @@
           "order": "Cetacea",
           "family": "Delphinidae",
           "genus": "Sotalia"
+        },
+        {
+          "label": "Hyphessobrycon copelandi",
+          "registros": 7,
+          "slug_especie": "hyphessobrycon-copelandi",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2354545",
+          "species": "Hyphessobrycon copelandi",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Characidae",
+          "genus": "Hyphessobrycon"
         },
         {
           "label": "Hemiodus unimaculatus",
@@ -8336,18 +8336,18 @@
           "genus": "Moenkhausia"
         },
         {
-          "label": "Carnegiella schereri",
+          "label": "Pyrrhulina brevis",
           "registros": 5,
-          "slug_especie": "carnegiella-schereri",
+          "slug_especie": "pyrrhulina-brevis",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5204620",
-          "species": "Carnegiella schereri",
+          "url_gbif": "https://www.gbif.org/species/2355681",
+          "species": "Pyrrhulina brevis",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "order": "Characiformes",
-          "family": "Gasteropelecidae",
-          "genus": "Carnegiella"
+          "family": "Lebiasinidae",
+          "genus": "Pyrrhulina"
         },
         {
           "label": "Curimatopsis macrolepis",
@@ -8378,18 +8378,18 @@
           "genus": "Nannostomus"
         },
         {
-          "label": "Pyrrhulina brevis",
+          "label": "Carnegiella schereri",
           "registros": 5,
-          "slug_especie": "pyrrhulina-brevis",
+          "slug_especie": "carnegiella-schereri",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2355681",
-          "species": "Pyrrhulina brevis",
+          "url_gbif": "https://www.gbif.org/species/5204620",
+          "species": "Carnegiella schereri",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "order": "Characiformes",
-          "family": "Lebiasinidae",
-          "genus": "Pyrrhulina"
+          "family": "Gasteropelecidae",
+          "genus": "Carnegiella"
         }
       ],
       "species_list_tematica": {

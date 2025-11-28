@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -4446,20 +4446,20 @@
           "genus": "Vanellus"
         },
         {
-          "label": "Ara severus",
+          "label": "Tyrannus melancholicus",
           "registros": 75,
-          "slug_especie": "ara-severus",
+          "slug_especie": "tyrannus-melancholicus",
           "slug_grupo": "aves",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5959228",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e780f083c45700544e4065/summary",
-          "species": "Ara severus",
+          "url_gbif": "https://www.gbif.org/species/5229662",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cfa86b3c16479905cba7f5/summary",
+          "species": "Tyrannus melancholicus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": "Psittaciformes",
-          "family": "Psittacidae",
-          "genus": "Ara"
+          "order": "Passeriformes",
+          "family": "Tyrannidae",
+          "genus": "Tyrannus"
         },
         {
           "label": "Cyanocorax violaceus",
@@ -4477,20 +4477,20 @@
           "genus": "Cyanocorax"
         },
         {
-          "label": "Tyrannus melancholicus",
+          "label": "Ara severus",
           "registros": 75,
-          "slug_especie": "tyrannus-melancholicus",
+          "slug_especie": "ara-severus",
           "slug_grupo": "aves",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5229662",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cfa86b3c16479905cba7f5/summary",
-          "species": "Tyrannus melancholicus",
+          "url_gbif": "https://www.gbif.org/species/5959228",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e780f083c45700544e4065/summary",
+          "species": "Ara severus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Tyrannidae",
-          "genus": "Tyrannus"
+          "order": "Psittaciformes",
+          "family": "Psittacidae",
+          "genus": "Ara"
         },
         {
           "label": "Rupornis magnirostris",
@@ -6531,21 +6531,6 @@
       "subgrupo_especies": [],
       "species_list_top": [
         {
-          "label": "Cyathea lasiosora",
-          "registros": 8,
-          "slug_especie": "cyathea-lasiosora",
-          "slug_grupo": "helechos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3598409",
-          "species": "Cyathea lasiosora",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Polypodiopsida",
-          "order": "Cyatheales",
-          "family": "Cyatheaceae",
-          "genus": "Cyathea"
-        },
-        {
           "label": "Trichomanes elegans",
           "registros": 8,
           "slug_especie": "trichomanes-elegans",
@@ -6559,6 +6544,21 @@
           "order": "Hymenophyllales",
           "family": "Hymenophyllaceae",
           "genus": "Trichomanes"
+        },
+        {
+          "label": "Cyathea lasiosora",
+          "registros": 8,
+          "slug_especie": "cyathea-lasiosora",
+          "slug_grupo": "helechos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3598409",
+          "species": "Cyathea lasiosora",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Polypodiopsida",
+          "order": "Cyatheales",
+          "family": "Cyatheaceae",
+          "genus": "Cyathea"
         },
         {
           "label": "Adiantum tomentosum",
@@ -6607,21 +6607,6 @@
           "genus": "Cyathea"
         },
         {
-          "label": "Cyclodium meniscioides",
-          "registros": 5,
-          "slug_especie": "cyclodium-meniscioides",
-          "slug_grupo": "helechos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7319168",
-          "species": "Cyclodium meniscioides",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Polypodiopsida",
-          "order": "Polypodiales",
-          "family": "Dryopteridaceae",
-          "genus": "Cyclodium"
-        },
-        {
           "label": "Schizaea elegans",
           "registros": 5,
           "slug_especie": "schizaea-elegans",
@@ -6637,19 +6622,19 @@
           "genus": "Schizaea"
         },
         {
-          "label": "Blechnum confluens",
-          "registros": 4,
-          "slug_especie": "blechnum-confluens",
+          "label": "Cyclodium meniscioides",
+          "registros": 5,
+          "slug_especie": "cyclodium-meniscioides",
           "slug_grupo": "helechos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4078604",
-          "species": "Blechnum confluens",
+          "url_gbif": "https://www.gbif.org/species/7319168",
+          "species": "Cyclodium meniscioides",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Polypodiopsida",
           "order": "Polypodiales",
-          "family": "Blechnaceae",
-          "genus": "Blechnum"
+          "family": "Dryopteridaceae",
+          "genus": "Cyclodium"
         },
         {
           "label": "Hypoderris brauniana",
@@ -6665,6 +6650,21 @@
           "order": "Polypodiales",
           "family": "Tectariaceae",
           "genus": "Hypoderris"
+        },
+        {
+          "label": "Blechnum confluens",
+          "registros": 4,
+          "slug_especie": "blechnum-confluens",
+          "slug_grupo": "helechos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/4078604",
+          "species": "Blechnum confluens",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Polypodiopsida",
+          "order": "Polypodiales",
+          "family": "Blechnaceae",
+          "genus": "Blechnum"
         },
         {
           "label": "Alsophila cuspidata",
@@ -6697,6 +6697,36 @@
           "genus": "Asplenium"
         },
         {
+          "label": "Polybotrya fractiserialis",
+          "registros": 3,
+          "slug_especie": "polybotrya-fractiserialis",
+          "slug_grupo": "helechos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/4042372",
+          "species": "Polybotrya fractiserialis",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Polypodiopsida",
+          "order": "Polypodiales",
+          "family": "Dryopteridaceae",
+          "genus": "Polybotrya"
+        },
+        {
+          "label": "Metaxya rostrata",
+          "registros": 3,
+          "slug_especie": "metaxya-rostrata",
+          "slug_grupo": "helechos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5565003",
+          "species": "Metaxya rostrata",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Polypodiopsida",
+          "order": "Cyatheales",
+          "family": "Metaxyaceae",
+          "genus": "Metaxya"
+        },
+        {
           "label": "Danaea nodosa",
           "registros": 3,
           "slug_especie": "danaea-nodosa",
@@ -6725,36 +6755,6 @@
           "order": "Polypodiales",
           "family": "Thelypteridaceae",
           "genus": "Meniscium"
-        },
-        {
-          "label": "Metaxya rostrata",
-          "registros": 3,
-          "slug_especie": "metaxya-rostrata",
-          "slug_grupo": "helechos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5565003",
-          "species": "Metaxya rostrata",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Polypodiopsida",
-          "order": "Cyatheales",
-          "family": "Metaxyaceae",
-          "genus": "Metaxya"
-        },
-        {
-          "label": "Polybotrya fractiserialis",
-          "registros": 3,
-          "slug_especie": "polybotrya-fractiserialis",
-          "slug_grupo": "helechos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4042372",
-          "species": "Polybotrya fractiserialis",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Polypodiopsida",
-          "order": "Polypodiales",
-          "family": "Dryopteridaceae",
-          "genus": "Polybotrya"
         }
       ],
       "species_list_tematica": {
@@ -7859,22 +7859,6 @@
           "genus": "Metamasius"
         },
         {
-          "label": "Erythrodiplax unimaculata",
-          "registros": 3,
-          "slug_especie": "erythrodiplax-unimaculata",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1429020",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e1bd3883c45700544e3d34/summary",
-          "species": "Erythrodiplax unimaculata",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Odonata",
-          "family": "Libellulidae",
-          "genus": "Erythrodiplax"
-        },
-        {
           "label": "Metamasius cinnamominus",
           "registros": 3,
           "slug_especie": "metamasius-cinnamominus",
@@ -7905,19 +7889,50 @@
           "genus": "Nasutitermes"
         },
         {
-          "label": "Erythrodiplax attenuata",
-          "registros": 2,
-          "slug_especie": "erythrodiplax-attenuata",
+          "label": "Erythrodiplax unimaculata",
+          "registros": 3,
+          "slug_especie": "erythrodiplax-unimaculata",
           "slug_grupo": "insectos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1429024",
-          "species": "Erythrodiplax attenuata",
+          "url_gbif": "https://www.gbif.org/species/1429020",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e1bd3883c45700544e3d34/summary",
+          "species": "Erythrodiplax unimaculata",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Odonata",
           "family": "Libellulidae",
           "genus": "Erythrodiplax"
+        },
+        {
+          "label": "Nasutitermes ephratae",
+          "registros": 2,
+          "slug_especie": "nasutitermes-ephratae",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5152437",
+          "species": "Nasutitermes ephratae",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Blattodea",
+          "family": "Termitidae",
+          "genus": "Nasutitermes"
+        },
+        {
+          "label": "Heterotermes tenuis",
+          "registros": 2,
+          "slug_especie": "heterotermes-tenuis",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2007377",
+          "species": "Heterotermes tenuis",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Blattodea",
+          "family": "Rhinotermitidae",
+          "genus": "Heterotermes"
         },
         {
           "label": "Erythrodiplax umbrata",
@@ -7936,34 +7951,19 @@
           "genus": "Erythrodiplax"
         },
         {
-          "label": "Heterotermes tenuis",
+          "label": "Erythrodiplax attenuata",
           "registros": 2,
-          "slug_especie": "heterotermes-tenuis",
+          "slug_especie": "erythrodiplax-attenuata",
           "slug_grupo": "insectos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2007377",
-          "species": "Heterotermes tenuis",
+          "url_gbif": "https://www.gbif.org/species/1429024",
+          "species": "Erythrodiplax attenuata",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
-          "order": "Blattodea",
-          "family": "Rhinotermitidae",
-          "genus": "Heterotermes"
-        },
-        {
-          "label": "Nasutitermes ephratae",
-          "registros": 2,
-          "slug_especie": "nasutitermes-ephratae",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5152437",
-          "species": "Nasutitermes ephratae",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Blattodea",
-          "family": "Termitidae",
-          "genus": "Nasutitermes"
+          "order": "Odonata",
+          "family": "Libellulidae",
+          "genus": "Erythrodiplax"
         },
         {
           "label": "Phoenicagrion flammeum",
@@ -10737,33 +10737,18 @@
           "genus": "Steindachnerina"
         },
         {
-          "label": "Hoplias malabaricus",
+          "label": "Phenacogaster pectinatus",
           "registros": 3,
-          "slug_especie": "hoplias-malabaricus",
+          "slug_especie": "phenacogaster-pectinatus",
           "slug_grupo": "peces",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2352230",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/592f0791f827bf0c0cedec0a/summary",
-          "species": "Hoplias malabaricus",
+          "url_gbif": "https://www.gbif.org/species/2353192",
+          "species": "Phenacogaster pectinatus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "order": "Characiformes",
-          "family": "Erythrinidae",
-          "genus": "Hoplias"
-        },
-        {
-          "label": "Imparfinis pseudonemacheir",
-          "registros": 3,
-          "slug_especie": "imparfinis-pseudonemacheir",
-          "slug_grupo": "peces",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2343552",
-          "species": "Imparfinis pseudonemacheir",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Siluriformes",
-          "family": "Heptapteridae",
-          "genus": "Imparfinis"
+          "family": "Characidae",
+          "genus": "Phenacogaster"
         },
         {
           "label": "Limatulichthys griseus",
@@ -10780,18 +10765,33 @@
           "genus": "Limatulichthys"
         },
         {
-          "label": "Phenacogaster pectinatus",
+          "label": "Imparfinis pseudonemacheir",
           "registros": 3,
-          "slug_especie": "phenacogaster-pectinatus",
+          "slug_especie": "imparfinis-pseudonemacheir",
           "slug_grupo": "peces",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2353192",
-          "species": "Phenacogaster pectinatus",
+          "url_gbif": "https://www.gbif.org/species/2343552",
+          "species": "Imparfinis pseudonemacheir",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Siluriformes",
+          "family": "Heptapteridae",
+          "genus": "Imparfinis"
+        },
+        {
+          "label": "Hoplias malabaricus",
+          "registros": 3,
+          "slug_especie": "hoplias-malabaricus",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2352230",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/592f0791f827bf0c0cedec0a/summary",
+          "species": "Hoplias malabaricus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "order": "Characiformes",
-          "family": "Characidae",
-          "genus": "Phenacogaster"
+          "family": "Erythrinidae",
+          "genus": "Hoplias"
         },
         {
           "label": "Acestrocephalus boehlkei",
@@ -10806,6 +10806,76 @@
           "order": "Characiformes",
           "family": "Characidae",
           "genus": "Acestrocephalus"
+        },
+        {
+          "label": "Eigenmannia virescens",
+          "registros": 2,
+          "slug_especie": "eigenmannia-virescens",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2402039",
+          "species": "Eigenmannia virescens",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Gymnotiformes",
+          "family": "Sternopygidae",
+          "genus": "Eigenmannia"
+        },
+        {
+          "label": "Sternopygus macrurus",
+          "registros": 2,
+          "slug_especie": "sternopygus-macrurus",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2402060",
+          "species": "Sternopygus macrurus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Gymnotiformes",
+          "family": "Sternopygidae",
+          "genus": "Sternopygus"
+        },
+        {
+          "label": "Pimelodella cristata",
+          "registros": 2,
+          "slug_especie": "pimelodella-cristata",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2343396",
+          "species": "Pimelodella cristata",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Siluriformes",
+          "family": "Heptapteridae",
+          "genus": "Pimelodella"
+        },
+        {
+          "label": "Moenkhausia oligolepis",
+          "registros": 2,
+          "slug_especie": "moenkhausia-oligolepis",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2352558",
+          "species": "Moenkhausia oligolepis",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Characidae",
+          "genus": "Moenkhausia"
+        },
+        {
+          "label": "Lasiancistrus schomburgkii",
+          "registros": 2,
+          "slug_especie": "lasiancistrus-schomburgkii",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2339215",
+          "species": "Lasiancistrus schomburgkii",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Siluriformes",
+          "family": "Loricariidae",
+          "genus": "Lasiancistrus"
         },
         {
           "label": "Aphyocharax alburnus",
@@ -10864,20 +10934,6 @@
           "genus": "Cyphocharax"
         },
         {
-          "label": "Eigenmannia virescens",
-          "registros": 2,
-          "slug_especie": "eigenmannia-virescens",
-          "slug_grupo": "peces",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2402039",
-          "species": "Eigenmannia virescens",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Gymnotiformes",
-          "family": "Sternopygidae",
-          "genus": "Eigenmannia"
-        },
-        {
           "label": "Geophagus abalios",
           "registros": 2,
           "slug_especie": "geophagus-abalios",
@@ -10890,62 +10946,6 @@
           "order": "Perciformes",
           "family": "Cichlidae",
           "genus": "Geophagus"
-        },
-        {
-          "label": "Lasiancistrus schomburgkii",
-          "registros": 2,
-          "slug_especie": "lasiancistrus-schomburgkii",
-          "slug_grupo": "peces",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2339215",
-          "species": "Lasiancistrus schomburgkii",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Siluriformes",
-          "family": "Loricariidae",
-          "genus": "Lasiancistrus"
-        },
-        {
-          "label": "Moenkhausia oligolepis",
-          "registros": 2,
-          "slug_especie": "moenkhausia-oligolepis",
-          "slug_grupo": "peces",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2352558",
-          "species": "Moenkhausia oligolepis",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Characidae",
-          "genus": "Moenkhausia"
-        },
-        {
-          "label": "Pimelodella cristata",
-          "registros": 2,
-          "slug_especie": "pimelodella-cristata",
-          "slug_grupo": "peces",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2343396",
-          "species": "Pimelodella cristata",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Siluriformes",
-          "family": "Heptapteridae",
-          "genus": "Pimelodella"
-        },
-        {
-          "label": "Sternopygus macrurus",
-          "registros": 2,
-          "slug_especie": "sternopygus-macrurus",
-          "slug_grupo": "peces",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2402060",
-          "species": "Sternopygus macrurus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Gymnotiformes",
-          "family": "Sternopygidae",
-          "genus": "Sternopygus"
         }
       ],
       "species_list_tematica": {
@@ -11305,33 +11305,18 @@
           "genus": "Steindachnerina"
         },
         {
-          "label": "Hoplias malabaricus",
+          "label": "Phenacogaster pectinatus",
           "registros": 3,
-          "slug_especie": "hoplias-malabaricus",
+          "slug_especie": "phenacogaster-pectinatus",
           "slug_grupo": "peces-dulceacuicolas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2352230",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/592f0791f827bf0c0cedec0a/summary",
-          "species": "Hoplias malabaricus",
+          "url_gbif": "https://www.gbif.org/species/2353192",
+          "species": "Phenacogaster pectinatus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "order": "Characiformes",
-          "family": "Erythrinidae",
-          "genus": "Hoplias"
-        },
-        {
-          "label": "Imparfinis pseudonemacheir",
-          "registros": 3,
-          "slug_especie": "imparfinis-pseudonemacheir",
-          "slug_grupo": "peces-dulceacuicolas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2343552",
-          "species": "Imparfinis pseudonemacheir",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Siluriformes",
-          "family": "Heptapteridae",
-          "genus": "Imparfinis"
+          "family": "Characidae",
+          "genus": "Phenacogaster"
         },
         {
           "label": "Limatulichthys griseus",
@@ -11348,18 +11333,33 @@
           "genus": "Limatulichthys"
         },
         {
-          "label": "Phenacogaster pectinatus",
+          "label": "Imparfinis pseudonemacheir",
           "registros": 3,
-          "slug_especie": "phenacogaster-pectinatus",
+          "slug_especie": "imparfinis-pseudonemacheir",
           "slug_grupo": "peces-dulceacuicolas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2353192",
-          "species": "Phenacogaster pectinatus",
+          "url_gbif": "https://www.gbif.org/species/2343552",
+          "species": "Imparfinis pseudonemacheir",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Siluriformes",
+          "family": "Heptapteridae",
+          "genus": "Imparfinis"
+        },
+        {
+          "label": "Hoplias malabaricus",
+          "registros": 3,
+          "slug_especie": "hoplias-malabaricus",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2352230",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/592f0791f827bf0c0cedec0a/summary",
+          "species": "Hoplias malabaricus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "order": "Characiformes",
-          "family": "Characidae",
-          "genus": "Phenacogaster"
+          "family": "Erythrinidae",
+          "genus": "Hoplias"
         },
         {
           "label": "Acestrocephalus boehlkei",
@@ -11374,6 +11374,48 @@
           "order": "Characiformes",
           "family": "Characidae",
           "genus": "Acestrocephalus"
+        },
+        {
+          "label": "Cyphocharax spiluropsis",
+          "registros": 2,
+          "slug_especie": "cyphocharax-spiluropsis",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2355078",
+          "species": "Cyphocharax spiluropsis",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Curimatidae",
+          "genus": "Cyphocharax"
+        },
+        {
+          "label": "Sternopygus macrurus",
+          "registros": 2,
+          "slug_especie": "sternopygus-macrurus",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2402060",
+          "species": "Sternopygus macrurus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Gymnotiformes",
+          "family": "Sternopygidae",
+          "genus": "Sternopygus"
+        },
+        {
+          "label": "Pimelodella cristata",
+          "registros": 2,
+          "slug_especie": "pimelodella-cristata",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2343396",
+          "species": "Pimelodella cristata",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Siluriformes",
+          "family": "Heptapteridae",
+          "genus": "Pimelodella"
         },
         {
           "label": "Charax michaeli",
@@ -11404,34 +11446,6 @@
           "genus": "Charax"
         },
         {
-          "label": "Cyphocharax spiluropsis",
-          "registros": 2,
-          "slug_especie": "cyphocharax-spiluropsis",
-          "slug_grupo": "peces-dulceacuicolas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2355078",
-          "species": "Cyphocharax spiluropsis",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Curimatidae",
-          "genus": "Cyphocharax"
-        },
-        {
-          "label": "Geophagus abalios",
-          "registros": 2,
-          "slug_especie": "geophagus-abalios",
-          "slug_grupo": "peces-dulceacuicolas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5208435",
-          "species": "Geophagus abalios",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Perciformes",
-          "family": "Cichlidae",
-          "genus": "Geophagus"
-        },
-        {
           "label": "Lasiancistrus schomburgkii",
           "registros": 2,
           "slug_especie": "lasiancistrus-schomburgkii",
@@ -11446,32 +11460,18 @@
           "genus": "Lasiancistrus"
         },
         {
-          "label": "Pimelodella cristata",
+          "label": "Geophagus abalios",
           "registros": 2,
-          "slug_especie": "pimelodella-cristata",
+          "slug_especie": "geophagus-abalios",
           "slug_grupo": "peces-dulceacuicolas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2343396",
-          "species": "Pimelodella cristata",
+          "url_gbif": "https://www.gbif.org/species/5208435",
+          "species": "Geophagus abalios",
           "kingdom": "Animalia",
           "phylum": "Chordata",
-          "order": "Siluriformes",
-          "family": "Heptapteridae",
-          "genus": "Pimelodella"
-        },
-        {
-          "label": "Sternopygus macrurus",
-          "registros": 2,
-          "slug_especie": "sternopygus-macrurus",
-          "slug_grupo": "peces-dulceacuicolas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2402060",
-          "species": "Sternopygus macrurus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Gymnotiformes",
-          "family": "Sternopygidae",
-          "genus": "Sternopygus"
+          "order": "Perciformes",
+          "family": "Cichlidae",
+          "genus": "Geophagus"
         }
       ],
       "species_list_tematica": {
@@ -12198,21 +12198,6 @@
           "genus": "Tapirira"
         },
         {
-          "label": "Aeschynomene americana",
-          "registros": 11,
-          "slug_especie": "aeschynomene-americana",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2949235",
-          "species": "Aeschynomene americana",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Aeschynomene"
-        },
-        {
           "label": "Anaxagorea brevipes",
           "registros": 11,
           "slug_especie": "anaxagorea-brevipes",
@@ -12243,19 +12228,19 @@
           "genus": "Geonoma"
         },
         {
-          "label": "Miconia filiformis",
-          "registros": 10,
-          "slug_especie": "miconia-filiformis",
+          "label": "Aeschynomene americana",
+          "registros": 11,
+          "slug_especie": "aeschynomene-americana",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/10764607",
-          "species": "Miconia filiformis",
+          "url_gbif": "https://www.gbif.org/species/2949235",
+          "species": "Aeschynomene americana",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Myrtales",
-          "family": "Melastomataceae",
-          "genus": "Miconia"
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Aeschynomene"
         },
         {
           "label": "Palicourea triphylla",
@@ -12271,6 +12256,21 @@
           "order": "Gentianales",
           "family": "Rubiaceae",
           "genus": "Palicourea"
+        },
+        {
+          "label": "Miconia filiformis",
+          "registros": 10,
+          "slug_especie": "miconia-filiformis",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/10764607",
+          "species": "Miconia filiformis",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Myrtales",
+          "family": "Melastomataceae",
+          "genus": "Miconia"
         }
       ],
       "species_list_tematica": {
@@ -13833,21 +13833,6 @@
           "genus": "Tapirira"
         },
         {
-          "label": "Aeschynomene americana",
-          "registros": 11,
-          "slug_especie": "aeschynomene-americana",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2949235",
-          "species": "Aeschynomene americana",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Aeschynomene"
-        },
-        {
           "label": "Anaxagorea brevipes",
           "registros": 11,
           "slug_especie": "anaxagorea-brevipes",
@@ -13878,19 +13863,19 @@
           "genus": "Geonoma"
         },
         {
-          "label": "Miconia filiformis",
-          "registros": 10,
-          "slug_especie": "miconia-filiformis",
+          "label": "Aeschynomene americana",
+          "registros": 11,
+          "slug_especie": "aeschynomene-americana",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/10764607",
-          "species": "Miconia filiformis",
+          "url_gbif": "https://www.gbif.org/species/2949235",
+          "species": "Aeschynomene americana",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Myrtales",
-          "family": "Melastomataceae",
-          "genus": "Miconia"
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Aeschynomene"
         },
         {
           "label": "Palicourea triphylla",
@@ -13906,6 +13891,21 @@
           "order": "Gentianales",
           "family": "Rubiaceae",
           "genus": "Palicourea"
+        },
+        {
+          "label": "Miconia filiformis",
+          "registros": 10,
+          "slug_especie": "miconia-filiformis",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/10764607",
+          "species": "Miconia filiformis",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Myrtales",
+          "family": "Melastomataceae",
+          "genus": "Miconia"
         }
       ],
       "species_list_tematica": {
@@ -14682,22 +14682,6 @@
           "genus": "Vanellus"
         },
         {
-          "label": "Ara severus",
-          "registros": 75,
-          "slug_especie": "ara-severus",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5959228",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e780f083c45700544e4065/summary",
-          "species": "Ara severus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Psittaciformes",
-          "family": "Psittacidae",
-          "genus": "Ara"
-        },
-        {
           "label": "Cyanocorax violaceus",
           "registros": 75,
           "slug_especie": "cyanocorax-violaceus",
@@ -14727,6 +14711,22 @@
           "order": "Passeriformes",
           "family": "Tyrannidae",
           "genus": "Tyrannus"
+        },
+        {
+          "label": "Ara severus",
+          "registros": 75,
+          "slug_especie": "ara-severus",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5959228",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e780f083c45700544e4065/summary",
+          "species": "Ara severus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Psittaciformes",
+          "family": "Psittacidae",
+          "genus": "Ara"
         },
         {
           "label": "Rupornis magnirostris",

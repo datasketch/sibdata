@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -2346,6 +2346,22 @@
       ],
       "species_list_top": [
         {
+          "label": "Tyrannus melancholicus",
+          "registros": 30,
+          "slug_especie": "tyrannus-melancholicus",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5229662",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cfa86b3c16479905cba7f5/summary",
+          "species": "Tyrannus melancholicus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Tyrannidae",
+          "genus": "Tyrannus"
+        },
+        {
           "label": "Ramphocelus dimidiatus",
           "registros": 30,
           "slug_especie": "ramphocelus-dimidiatus",
@@ -2376,22 +2392,6 @@
           "order": "Passeriformes",
           "family": "Thraupidae",
           "genus": "Sicalis"
-        },
-        {
-          "label": "Tyrannus melancholicus",
-          "registros": 30,
-          "slug_especie": "tyrannus-melancholicus",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5229662",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cfa86b3c16479905cba7f5/summary",
-          "species": "Tyrannus melancholicus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Tyrannidae",
-          "genus": "Tyrannus"
         },
         {
           "label": "Thraupis episcopus",
@@ -2458,20 +2458,19 @@
           "genus": "Sporophila"
         },
         {
-          "label": "Coereba flaveola",
+          "label": "Stilpnia cyanicollis",
           "registros": 22,
-          "slug_especie": "coereba-flaveola",
+          "slug_especie": "stilpnia-cyanicollis",
           "slug_grupo": "animales",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2493744",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56df75bd83c45700544e3c7b/summary",
-          "species": "Coereba flaveola",
+          "url_gbif": "https://www.gbif.org/species/10992187",
+          "species": "Stilpnia cyanicollis",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
           "family": "Thraupidae",
-          "genus": "Coereba"
+          "genus": "Stilpnia"
         },
         {
           "label": "Saltator striatipectus",
@@ -2489,19 +2488,20 @@
           "genus": "Saltator"
         },
         {
-          "label": "Stilpnia cyanicollis",
+          "label": "Coereba flaveola",
           "registros": 22,
-          "slug_especie": "stilpnia-cyanicollis",
+          "slug_especie": "coereba-flaveola",
           "slug_grupo": "animales",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/10992187",
-          "species": "Stilpnia cyanicollis",
+          "url_gbif": "https://www.gbif.org/species/2493744",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56df75bd83c45700544e3c7b/summary",
+          "species": "Coereba flaveola",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
           "family": "Thraupidae",
-          "genus": "Stilpnia"
+          "genus": "Coereba"
         }
       ],
       "species_list_tematica": {
@@ -3674,22 +3674,6 @@
       "subgrupo_especies": [],
       "species_list_top": [
         {
-          "label": "Ramphocelus dimidiatus",
-          "registros": 30,
-          "slug_especie": "ramphocelus-dimidiatus",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2488424",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56ce36de3c16479905cba793/summary",
-          "species": "Ramphocelus dimidiatus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Ramphocelus"
-        },
-        {
           "label": "Sicalis flaveola",
           "registros": 30,
           "slug_especie": "sicalis-flaveola",
@@ -3720,6 +3704,22 @@
           "order": "Passeriformes",
           "family": "Tyrannidae",
           "genus": "Tyrannus"
+        },
+        {
+          "label": "Ramphocelus dimidiatus",
+          "registros": 30,
+          "slug_especie": "ramphocelus-dimidiatus",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2488424",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56ce36de3c16479905cba793/summary",
+          "species": "Ramphocelus dimidiatus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Ramphocelus"
         },
         {
           "label": "Thraupis episcopus",
@@ -3786,6 +3786,21 @@
           "genus": "Sporophila"
         },
         {
+          "label": "Stilpnia cyanicollis",
+          "registros": 22,
+          "slug_especie": "stilpnia-cyanicollis",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/10992187",
+          "species": "Stilpnia cyanicollis",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Stilpnia"
+        },
+        {
           "label": "Coereba flaveola",
           "registros": 22,
           "slug_especie": "coereba-flaveola",
@@ -3815,21 +3830,6 @@
           "order": "Passeriformes",
           "family": "Thraupidae",
           "genus": "Saltator"
-        },
-        {
-          "label": "Stilpnia cyanicollis",
-          "registros": 22,
-          "slug_especie": "stilpnia-cyanicollis",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/10992187",
-          "species": "Stilpnia cyanicollis",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Stilpnia"
         }
       ],
       "species_list_tematica": {
@@ -7943,20 +7943,20 @@
       ],
       "species_list_top": [
         {
-          "label": "Ramphocelus dimidiatus",
+          "label": "Tyrannus melancholicus",
           "registros": 30,
-          "slug_especie": "ramphocelus-dimidiatus",
+          "slug_especie": "tyrannus-melancholicus",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2488424",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56ce36de3c16479905cba793/summary",
-          "species": "Ramphocelus dimidiatus",
+          "url_gbif": "https://www.gbif.org/species/5229662",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cfa86b3c16479905cba7f5/summary",
+          "species": "Tyrannus melancholicus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Ramphocelus"
+          "family": "Tyrannidae",
+          "genus": "Tyrannus"
         },
         {
           "label": "Sicalis flaveola",
@@ -7975,20 +7975,20 @@
           "genus": "Sicalis"
         },
         {
-          "label": "Tyrannus melancholicus",
+          "label": "Ramphocelus dimidiatus",
           "registros": 30,
-          "slug_especie": "tyrannus-melancholicus",
+          "slug_especie": "ramphocelus-dimidiatus",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5229662",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cfa86b3c16479905cba7f5/summary",
-          "species": "Tyrannus melancholicus",
+          "url_gbif": "https://www.gbif.org/species/2488424",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56ce36de3c16479905cba793/summary",
+          "species": "Ramphocelus dimidiatus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Tyrannidae",
-          "genus": "Tyrannus"
+          "family": "Thraupidae",
+          "genus": "Ramphocelus"
         },
         {
           "label": "Thraupis episcopus",
@@ -8055,6 +8055,21 @@
           "genus": "Sporophila"
         },
         {
+          "label": "Saltator striatipectus",
+          "registros": 22,
+          "slug_especie": "saltator-striatipectus",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5230928",
+          "species": "Saltator striatipectus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Saltator"
+        },
+        {
           "label": "Coereba flaveola",
           "registros": 22,
           "slug_especie": "coereba-flaveola",
@@ -8069,21 +8084,6 @@
           "order": "Passeriformes",
           "family": "Thraupidae",
           "genus": "Coereba"
-        },
-        {
-          "label": "Saltator striatipectus",
-          "registros": 22,
-          "slug_especie": "saltator-striatipectus",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5230928",
-          "species": "Saltator striatipectus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Saltator"
         },
         {
           "label": "Stilpnia cyanicollis",

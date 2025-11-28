@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -654,19 +654,19 @@
               "slug_tematica": "amenazadas-nacional-vu"
             },
             {
+              "label": "Hapalopsittaca amazonina",
+              "slug_especie": "hapalopsittaca-amazonina",
+              "registros": 22,
+              "url_gbif": "https://www.gbif.org/species/2479473",
+              "slug_tematica": "amenazadas-nacional-vu"
+            },
+            {
               "label": "Ceroxylon quindiuense",
               "slug_especie": "ceroxylon-quindiuense",
               "registros": 22,
               "url_gbif": "https://www.gbif.org/species/2731831",
               "url_cbc": "https://catalogo.biodiversidad.co/file/5661e5d36752b5394179b666/summary",
               "slug_tematica": "amenazadas-nacional-en"
-            },
-            {
-              "label": "Hapalopsittaca amazonina",
-              "slug_especie": "hapalopsittaca-amazonina",
-              "registros": 22,
-              "url_gbif": "https://www.gbif.org/species/2479473",
-              "slug_tematica": "amenazadas-nacional-vu"
             },
             {
               "label": "Creurgops verticalis",
@@ -759,20 +759,20 @@
               "slug_tematica": "amenazadas-global-vu"
             },
             {
-              "label": "Bolborhynchus ferrugineifrons",
-              "slug_especie": "bolborhynchus-ferrugineifrons",
-              "registros": 5,
-              "url_gbif": "https://www.gbif.org/species/5229120",
-              "url_cbc": "https://catalogo.biodiversidad.co/file/5ce702008fe61bf73db10bdb/summary",
-              "slug_tematica": "amenazadas-global-vu"
-            },
-            {
               "label": "Pristimantis simoteriscus",
               "slug_especie": "pristimantis-simoteriscus",
               "registros": 5,
               "url_gbif": "https://www.gbif.org/species/2425769",
               "url_cbc": "https://catalogo.biodiversidad.co/file/5f8db4564568a5b84027c87a/summary",
               "slug_tematica": "amenazadas-global-en"
+            },
+            {
+              "label": "Bolborhynchus ferrugineifrons",
+              "slug_especie": "bolborhynchus-ferrugineifrons",
+              "registros": 5,
+              "url_gbif": "https://www.gbif.org/species/5229120",
+              "url_cbc": "https://catalogo.biodiversidad.co/file/5ce702008fe61bf73db10bdb/summary",
+              "slug_tematica": "amenazadas-global-vu"
             },
             {
               "label": "Tephrophilus wetmorei",
@@ -845,19 +845,19 @@
           "slug_tematica": "amenazadas-nacional-vu"
         },
         {
+          "label": "Hapalopsittaca amazonina",
+          "slug_especie": "hapalopsittaca-amazonina",
+          "registros": 22,
+          "url_gbif": "https://www.gbif.org/species/2479473",
+          "slug_tematica": "amenazadas-nacional-vu"
+        },
+        {
           "label": "Ceroxylon quindiuense",
           "slug_especie": "ceroxylon-quindiuense",
           "registros": 22,
           "url_gbif": "https://www.gbif.org/species/2731831",
           "url_cbc": "https://catalogo.biodiversidad.co/file/5661e5d36752b5394179b666/summary",
           "slug_tematica": "amenazadas-nacional-en"
-        },
-        {
-          "label": "Hapalopsittaca amazonina",
-          "slug_especie": "hapalopsittaca-amazonina",
-          "registros": 22,
-          "url_gbif": "https://www.gbif.org/species/2479473",
-          "slug_tematica": "amenazadas-nacional-vu"
         },
         {
           "label": "Creurgops verticalis",
@@ -1113,20 +1113,20 @@
           "slug_tematica": "amenazadas-global-vu"
         },
         {
-          "label": "Bolborhynchus ferrugineifrons",
-          "slug_especie": "bolborhynchus-ferrugineifrons",
-          "registros": 5,
-          "url_gbif": "https://www.gbif.org/species/5229120",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/5ce702008fe61bf73db10bdb/summary",
-          "slug_tematica": "amenazadas-global-vu"
-        },
-        {
           "label": "Pristimantis simoteriscus",
           "slug_especie": "pristimantis-simoteriscus",
           "registros": 5,
           "url_gbif": "https://www.gbif.org/species/2425769",
           "url_cbc": "https://catalogo.biodiversidad.co/file/5f8db4564568a5b84027c87a/summary",
           "slug_tematica": "amenazadas-global-en"
+        },
+        {
+          "label": "Bolborhynchus ferrugineifrons",
+          "slug_especie": "bolborhynchus-ferrugineifrons",
+          "registros": 5,
+          "url_gbif": "https://www.gbif.org/species/5229120",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5ce702008fe61bf73db10bdb/summary",
+          "slug_tematica": "amenazadas-global-vu"
         },
         {
           "label": "Tephrophilus wetmorei",
@@ -1368,17 +1368,17 @@
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Coeligena torquata",
-          "slug_especie": "coeligena-torquata",
-          "registros": 99,
-          "url_gbif": "https://www.gbif.org/species/2477053",
-          "slug_tematica": "cites-ii"
-        },
-        {
           "label": "Pionus chalcopterus",
           "slug_especie": "pionus-chalcopterus",
           "registros": 99,
           "url_gbif": "https://www.gbif.org/species/2479901",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Coeligena torquata",
+          "slug_especie": "coeligena-torquata",
+          "registros": 99,
+          "url_gbif": "https://www.gbif.org/species/2477053",
           "slug_tematica": "cites-ii"
         }
       ],
@@ -1599,17 +1599,17 @@
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Coeligena torquata",
-          "slug_especie": "coeligena-torquata",
-          "registros": 99,
-          "url_gbif": "https://www.gbif.org/species/2477053",
-          "slug_tematica": "cites-ii"
-        },
-        {
           "label": "Pionus chalcopterus",
           "slug_especie": "pionus-chalcopterus",
           "registros": 99,
           "url_gbif": "https://www.gbif.org/species/2479901",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Coeligena torquata",
+          "slug_especie": "coeligena-torquata",
+          "registros": 99,
+          "url_gbif": "https://www.gbif.org/species/2477053",
           "slug_tematica": "cites-ii"
         }
       ]
@@ -1783,11 +1783,11 @@
           "slug_tematica": "migratorias"
         },
         {
-          "label": "Empidonax virescens",
-          "slug_especie": "empidonax-virescens",
+          "label": "Leiothlypis peregrina",
+          "slug_especie": "leiothlypis-peregrina",
           "registros": 7,
-          "url_gbif": "https://www.gbif.org/species/2482802",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e09afa83c45700544e3cd7/summary",
+          "url_gbif": "https://www.gbif.org/species/7415507",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56ca1d87f0106c67230e7456/summary",
           "slug_tematica": "migratorias"
         }
       ]
@@ -3067,21 +3067,6 @@
           "genus": "Espeletia"
         },
         {
-          "label": "Ageratina tinifolia",
-          "registros": 22,
-          "slug_especie": "ageratina-tinifolia",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5400672",
-          "species": "Ageratina tinifolia",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Asterales",
-          "family": "Asteraceae",
-          "genus": "Ageratina"
-        },
-        {
           "label": "Ceroxylon quindiuense",
           "registros": 22,
           "slug_especie": "ceroxylon-quindiuense",
@@ -3096,6 +3081,21 @@
           "order": "Arecales",
           "family": "Arecaceae",
           "genus": "Ceroxylon"
+        },
+        {
+          "label": "Ageratina tinifolia",
+          "registros": 22,
+          "slug_especie": "ageratina-tinifolia",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5400672",
+          "species": "Ageratina tinifolia",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Asterales",
+          "family": "Asteraceae",
+          "genus": "Ageratina"
         },
         {
           "label": "Chusquea tessellata",
@@ -3159,20 +3159,20 @@
           "genus": "Hedyosmum"
         },
         {
-          "label": "Drimys granadensis",
+          "label": "Oreopanax incisus",
           "registros": 7,
-          "slug_especie": "drimys-granadensis",
+          "slug_especie": "oreopanax-incisus",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7827774",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56d047233c16479905cba815/summary",
-          "species": "Drimys granadensis",
+          "url_gbif": "https://www.gbif.org/species/3036583",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e4107b83c45700544e3e1a/summary",
+          "species": "Oreopanax incisus",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Canellales",
-          "family": "Winteraceae",
-          "genus": "Drimys"
+          "order": "Apiales",
+          "family": "Araliaceae",
+          "genus": "Oreopanax"
         },
         {
           "label": "Miconia caudata",
@@ -3191,20 +3191,20 @@
           "genus": "Miconia"
         },
         {
-          "label": "Oreopanax incisus",
+          "label": "Drimys granadensis",
           "registros": 7,
-          "slug_especie": "oreopanax-incisus",
+          "slug_especie": "drimys-granadensis",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3036583",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e4107b83c45700544e3e1a/summary",
-          "species": "Oreopanax incisus",
+          "url_gbif": "https://www.gbif.org/species/7827774",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d047233c16479905cba815/summary",
+          "species": "Drimys granadensis",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Apiales",
-          "family": "Araliaceae",
-          "genus": "Oreopanax"
+          "order": "Canellales",
+          "family": "Winteraceae",
+          "genus": "Drimys"
         },
         {
           "label": "Solanum asperolanatum",
@@ -3804,39 +3804,38 @@
             "genus": "Passiflora"
           },
           {
-            "label": "Berberis verticillata",
+            "label": "Pentacalia uribei",
             "registros": 2,
-            "slug_especie": "berberis-verticillata",
+            "slug_especie": "pentacalia-uribei",
             "slug_tematica": "endemicas",
             "tematica_label": "Endémicas",
             "slug_grupo": "angiospermas",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3982287",
-            "species": "Berberis verticillata",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Ranunculales",
-            "family": "Berberidaceae",
-            "genus": "Berberis"
-          },
-          {
-            "label": "Centropogon grandis",
-            "registros": 2,
-            "slug_especie": "centropogon-grandis",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "angiospermas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5412574",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/595bc8452f4fd7bc7f39fbfc/summary",
-            "species": "Centropogon grandis",
+            "url_gbif": "https://www.gbif.org/species/3111439",
+            "species": "Pentacalia uribei",
             "kingdom": "Plantae",
             "phylum": "Tracheophyta",
             "class": "Magnoliopsida",
             "order": "Asterales",
-            "family": "Campanulaceae",
-            "genus": "Centropogon"
+            "family": "Asteraceae",
+            "genus": "Pentacalia"
+          },
+          {
+            "label": "Piper discriminatum",
+            "registros": 2,
+            "slug_especie": "piper-discriminatum",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "angiospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/4186517",
+            "species": "Piper discriminatum",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Piperales",
+            "family": "Piperaceae",
+            "genus": "Piper"
           },
           {
             "label": "Critoniopsis ursicola",
@@ -3854,6 +3853,74 @@
             "order": "Asterales",
             "family": "Asteraceae",
             "genus": "Critoniopsis"
+          },
+          {
+            "label": "Berberis verticillata",
+            "registros": 2,
+            "slug_especie": "berberis-verticillata",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "angiospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/3982287",
+            "species": "Berberis verticillata",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Ranunculales",
+            "family": "Berberidaceae",
+            "genus": "Berberis"
+          },
+          {
+            "label": "Swartzia macrophylla",
+            "registros": 2,
+            "slug_especie": "swartzia-macrophylla",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "angiospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5351961",
+            "species": "Swartzia macrophylla",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Fabales",
+            "family": "Fabaceae",
+            "genus": "Swartzia"
+          },
+          {
+            "label": "Saurauia stapfiana",
+            "registros": 2,
+            "slug_especie": "saurauia-stapfiana",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "angiospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/7270694",
+            "species": "Saurauia stapfiana",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Ericales",
+            "family": "Actinidiaceae",
+            "genus": "Saurauia"
+          },
+          {
+            "label": "Salvia cuatrecasasiana",
+            "registros": 2,
+            "slug_especie": "salvia-cuatrecasasiana",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "angiospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/10724647",
+            "species": "Salvia cuatrecasasiana",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Lamiales",
+            "family": "Lamiaceae",
+            "genus": "Salvia"
           },
           {
             "label": "Miconia plethorica",
@@ -3890,40 +3957,6 @@
             "genus": "Miconia"
           },
           {
-            "label": "Pentacalia uribei",
-            "registros": 2,
-            "slug_especie": "pentacalia-uribei",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "angiospermas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3111439",
-            "species": "Pentacalia uribei",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Asterales",
-            "family": "Asteraceae",
-            "genus": "Pentacalia"
-          },
-          {
-            "label": "Piper discriminatum",
-            "registros": 2,
-            "slug_especie": "piper-discriminatum",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "angiospermas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/4186517",
-            "species": "Piper discriminatum",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Piperales",
-            "family": "Piperaceae",
-            "genus": "Piper"
-          },
-          {
             "label": "Piper salentoi",
             "registros": 2,
             "slug_especie": "piper-salentoi",
@@ -3941,55 +3974,22 @@
             "genus": "Piper"
           },
           {
-            "label": "Salvia cuatrecasasiana",
+            "label": "Centropogon grandis",
             "registros": 2,
-            "slug_especie": "salvia-cuatrecasasiana",
+            "slug_especie": "centropogon-grandis",
             "slug_tematica": "endemicas",
             "tematica_label": "Endémicas",
             "slug_grupo": "angiospermas",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/10724647",
-            "species": "Salvia cuatrecasasiana",
+            "url_gbif": "https://www.gbif.org/species/5412574",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/595bc8452f4fd7bc7f39fbfc/summary",
+            "species": "Centropogon grandis",
             "kingdom": "Plantae",
             "phylum": "Tracheophyta",
             "class": "Magnoliopsida",
-            "order": "Lamiales",
-            "family": "Lamiaceae",
-            "genus": "Salvia"
-          },
-          {
-            "label": "Saurauia stapfiana",
-            "registros": 2,
-            "slug_especie": "saurauia-stapfiana",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "angiospermas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/7270694",
-            "species": "Saurauia stapfiana",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Ericales",
-            "family": "Actinidiaceae",
-            "genus": "Saurauia"
-          },
-          {
-            "label": "Swartzia macrophylla",
-            "registros": 2,
-            "slug_especie": "swartzia-macrophylla",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "angiospermas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5351961",
-            "species": "Swartzia macrophylla",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Fabales",
-            "family": "Fabaceae",
-            "genus": "Swartzia"
+            "order": "Asterales",
+            "family": "Campanulaceae",
+            "genus": "Centropogon"
           }
         ],
         "exoticas-total": [
@@ -4726,22 +4726,6 @@
           "genus": "Cyanocorax"
         },
         {
-          "label": "Coragyps atratus",
-          "registros": 208,
-          "slug_especie": "coragyps-atratus",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2481942",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4fe28f0106c67230e7394/summary",
-          "species": "Coragyps atratus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Accipitriformes",
-          "family": "Cathartidae",
-          "genus": "Coragyps"
-        },
-        {
           "label": "Grallaria quitensis",
           "registros": 208,
           "slug_especie": "grallaria-quitensis",
@@ -4756,6 +4740,22 @@
           "order": "Passeriformes",
           "family": "Grallariidae",
           "genus": "Grallaria"
+        },
+        {
+          "label": "Coragyps atratus",
+          "registros": 208,
+          "slug_especie": "coragyps-atratus",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2481942",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4fe28f0106c67230e7394/summary",
+          "species": "Coragyps atratus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Accipitriformes",
+          "family": "Cathartidae",
+          "genus": "Coragyps"
         }
       ],
       "species_list_tematica": {
@@ -4918,6 +4918,24 @@
             "genus": "Atlapetes"
           },
           {
+            "label": "Pristimantis simoteriscus",
+            "registros": 5,
+            "slug_especie": "pristimantis-simoteriscus",
+            "slug_tematica": "amenazadas-nacional-en",
+            "tematica_label": "EN",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2425769",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/5f8db4564568a5b84027c87a/summary",
+            "species": "Pristimantis simoteriscus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Amphibia",
+            "order": "Anura",
+            "family": "Craugastoridae",
+            "genus": "Pristimantis"
+          },
+          {
             "label": "Anthocephala berlepschi",
             "registros": 5,
             "slug_especie": "anthocephala-berlepschi",
@@ -4951,24 +4969,6 @@
             "order": "Psittaciformes",
             "family": "Psittacidae",
             "genus": "Bolborhynchus"
-          },
-          {
-            "label": "Pristimantis simoteriscus",
-            "registros": 5,
-            "slug_especie": "pristimantis-simoteriscus",
-            "slug_tematica": "amenazadas-nacional-en",
-            "tematica_label": "EN",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2425769",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/5f8db4564568a5b84027c87a/summary",
-            "species": "Pristimantis simoteriscus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Amphibia",
-            "order": "Anura",
-            "family": "Craugastoridae",
-            "genus": "Pristimantis"
           },
           {
             "label": "Tephrophilus wetmorei",
@@ -5309,23 +5309,6 @@
             "genus": "Falco"
           },
           {
-            "label": "Coeligena torquata",
-            "registros": 99,
-            "slug_especie": "coeligena-torquata",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2477053",
-            "species": "Coeligena torquata",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Coeligena"
-          },
-          {
             "label": "Pionus chalcopterus",
             "registros": 99,
             "slug_especie": "pionus-chalcopterus",
@@ -5341,6 +5324,23 @@
             "order": "Psittaciformes",
             "family": "Psittacidae",
             "genus": "Pionus"
+          },
+          {
+            "label": "Coeligena torquata",
+            "registros": 99,
+            "slug_especie": "coeligena-torquata",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2477053",
+            "species": "Coeligena torquata",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Coeligena"
           }
         ],
         "migratorias": [
@@ -5507,24 +5507,6 @@
             "genus": "Contopus"
           },
           {
-            "label": "Empidonax virescens",
-            "registros": 7,
-            "slug_especie": "empidonax-virescens",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2482802",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e09afa83c45700544e3cd7/summary",
-            "species": "Empidonax virescens",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Tyrannidae",
-            "genus": "Empidonax"
-          },
-          {
             "label": "Leiothlypis peregrina",
             "registros": 7,
             "slug_especie": "leiothlypis-peregrina",
@@ -5541,6 +5523,24 @@
             "order": "Passeriformes",
             "family": "Parulidae",
             "genus": "Leiothlypis"
+          },
+          {
+            "label": "Empidonax virescens",
+            "registros": 7,
+            "slug_especie": "empidonax-virescens",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2482802",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e09afa83c45700544e3cd7/summary",
+            "species": "Empidonax virescens",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Tyrannidae",
+            "genus": "Empidonax"
           }
         ],
         "endemicas": [
@@ -7241,24 +7241,6 @@
             "genus": "Contopus"
           },
           {
-            "label": "Empidonax virescens",
-            "registros": 7,
-            "slug_especie": "empidonax-virescens",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2482802",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e09afa83c45700544e3cd7/summary",
-            "species": "Empidonax virescens",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Tyrannidae",
-            "genus": "Empidonax"
-          },
-          {
             "label": "Leiothlypis peregrina",
             "registros": 7,
             "slug_especie": "leiothlypis-peregrina",
@@ -7275,6 +7257,24 @@
             "order": "Passeriformes",
             "family": "Parulidae",
             "genus": "Leiothlypis"
+          },
+          {
+            "label": "Empidonax virescens",
+            "registros": 7,
+            "slug_especie": "empidonax-virescens",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2482802",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e09afa83c45700544e3cd7/summary",
+            "species": "Empidonax virescens",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Tyrannidae",
+            "genus": "Empidonax"
           }
         ],
         "endemicas": [
@@ -11115,21 +11115,6 @@
           "genus": "Heliconius"
         },
         {
-          "label": "Lasiophila zapatoza",
-          "registros": 16,
-          "slug_especie": "lasiophila-zapatoza",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1909247",
-          "species": "Lasiophila zapatoza",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Lasiophila"
-        },
-        {
           "label": "Papilio polyxenes",
           "registros": 16,
           "slug_especie": "papilio-polyxenes",
@@ -11143,6 +11128,21 @@
           "order": "Lepidoptera",
           "family": "Papilionidae",
           "genus": "Papilio"
+        },
+        {
+          "label": "Lasiophila zapatoza",
+          "registros": 16,
+          "slug_especie": "lasiophila-zapatoza",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1909247",
+          "species": "Lasiophila zapatoza",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Lasiophila"
         },
         {
           "label": "Vanessa virginiensis",
@@ -11160,21 +11160,6 @@
           "genus": "Vanessa"
         },
         {
-          "label": "Corades medeba",
-          "registros": 10,
-          "slug_especie": "corades-medeba",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1908339",
-          "species": "Corades medeba",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Corades"
-        },
-        {
           "label": "Eretris porphyria",
           "registros": 10,
           "slug_especie": "eretris-porphyria",
@@ -11188,6 +11173,21 @@
           "order": "Lepidoptera",
           "family": "Nymphalidae",
           "genus": "Eretris"
+        },
+        {
+          "label": "Corades medeba",
+          "registros": 10,
+          "slug_especie": "corades-medeba",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1908339",
+          "species": "Corades medeba",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Corades"
         },
         {
           "label": "Oleria radina",
@@ -11205,19 +11205,19 @@
           "genus": "Oleria"
         },
         {
-          "label": "Greta andromica",
+          "label": "Patricia dercyllidas",
           "registros": 8,
-          "slug_especie": "greta-andromica",
+          "slug_especie": "patricia-dercyllidas",
           "slug_grupo": "insectos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1895176",
-          "species": "Greta andromica",
+          "url_gbif": "https://www.gbif.org/species/5132855",
+          "species": "Patricia dercyllidas",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Lepidoptera",
           "family": "Nymphalidae",
-          "genus": "Greta"
+          "genus": "Patricia"
         },
         {
           "label": "Leptotes cassius",
@@ -11235,19 +11235,19 @@
           "genus": "Leptotes"
         },
         {
-          "label": "Patricia dercyllidas",
+          "label": "Greta andromica",
           "registros": 8,
-          "slug_especie": "patricia-dercyllidas",
+          "slug_especie": "greta-andromica",
           "slug_grupo": "insectos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5132855",
-          "species": "Patricia dercyllidas",
+          "url_gbif": "https://www.gbif.org/species/1895176",
+          "species": "Greta andromica",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Lepidoptera",
           "family": "Nymphalidae",
-          "genus": "Patricia"
+          "genus": "Greta"
         }
       ],
       "species_list_tematica": {
@@ -11612,21 +11612,6 @@
           "genus": "Heliconius"
         },
         {
-          "label": "Lasiophila zapatoza",
-          "registros": 16,
-          "slug_especie": "lasiophila-zapatoza",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1909247",
-          "species": "Lasiophila zapatoza",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Lasiophila"
-        },
-        {
           "label": "Papilio polyxenes",
           "registros": 16,
           "slug_especie": "papilio-polyxenes",
@@ -11642,6 +11627,21 @@
           "genus": "Papilio"
         },
         {
+          "label": "Lasiophila zapatoza",
+          "registros": 16,
+          "slug_especie": "lasiophila-zapatoza",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1909247",
+          "species": "Lasiophila zapatoza",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Lasiophila"
+        },
+        {
           "label": "Vanessa virginiensis",
           "registros": 13,
           "slug_especie": "vanessa-virginiensis",
@@ -11655,21 +11655,6 @@
           "order": "Lepidoptera",
           "family": "Nymphalidae",
           "genus": "Vanessa"
-        },
-        {
-          "label": "Corades medeba",
-          "registros": 10,
-          "slug_especie": "corades-medeba",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1908339",
-          "species": "Corades medeba",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Corades"
         },
         {
           "label": "Eretris porphyria",
@@ -11702,19 +11687,19 @@
           "genus": "Oleria"
         },
         {
-          "label": "Greta andromica",
-          "registros": 8,
-          "slug_especie": "greta-andromica",
+          "label": "Corades medeba",
+          "registros": 10,
+          "slug_especie": "corades-medeba",
           "slug_grupo": "invertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1895176",
-          "species": "Greta andromica",
+          "url_gbif": "https://www.gbif.org/species/1908339",
+          "species": "Corades medeba",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Lepidoptera",
           "family": "Nymphalidae",
-          "genus": "Greta"
+          "genus": "Corades"
         },
         {
           "label": "Leptotes cassius",
@@ -11745,6 +11730,21 @@
           "order": "Lepidoptera",
           "family": "Nymphalidae",
           "genus": "Patricia"
+        },
+        {
+          "label": "Greta andromica",
+          "registros": 8,
+          "slug_especie": "greta-andromica",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1895176",
+          "species": "Greta andromica",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Greta"
         }
       ],
       "species_list_tematica": {
@@ -12119,6 +12119,21 @@
           "genus": "Rhipidomys"
         },
         {
+          "label": "Microsciurus mimulus",
+          "registros": 9,
+          "slug_especie": "microsciurus-mimulus",
+          "slug_grupo": "mamiferos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2437360",
+          "species": "Microsciurus mimulus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Rodentia",
+          "family": "Sciuridae",
+          "genus": "Microsciurus"
+        },
+        {
           "label": "Didelphis pernigra",
           "registros": 9,
           "slug_especie": "didelphis-pernigra",
@@ -12135,21 +12150,6 @@
           "genus": "Didelphis"
         },
         {
-          "label": "Microsciurus mimulus",
-          "registros": 9,
-          "slug_especie": "microsciurus-mimulus",
-          "slug_grupo": "mamiferos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2437360",
-          "species": "Microsciurus mimulus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Mammalia",
-          "order": "Rodentia",
-          "family": "Sciuridae",
-          "genus": "Microsciurus"
-        },
-        {
           "label": "Akodon affinis",
           "registros": 8,
           "slug_especie": "akodon-affinis",
@@ -12163,6 +12163,21 @@
           "order": "Rodentia",
           "family": "Cricetidae",
           "genus": "Akodon"
+        },
+        {
+          "label": "Microryzomys minutus",
+          "registros": 7,
+          "slug_especie": "microryzomys-minutus",
+          "slug_grupo": "mamiferos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2437778",
+          "species": "Microryzomys minutus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Rodentia",
+          "family": "Cricetidae",
+          "genus": "Microryzomys"
         },
         {
           "label": "Cryptotis squamipes",
@@ -12196,21 +12211,6 @@
           "genus": "Dasyprocta"
         },
         {
-          "label": "Microryzomys minutus",
-          "registros": 7,
-          "slug_especie": "microryzomys-minutus",
-          "slug_grupo": "mamiferos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2437778",
-          "species": "Microryzomys minutus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Mammalia",
-          "order": "Rodentia",
-          "family": "Cricetidae",
-          "genus": "Microryzomys"
-        },
-        {
           "label": "Cerdocyon thous",
           "registros": 6,
           "slug_especie": "cerdocyon-thous",
@@ -12227,6 +12227,21 @@
           "genus": "Cerdocyon"
         },
         {
+          "label": "Melanomys caliginosus",
+          "registros": 6,
+          "slug_especie": "melanomys-caliginosus",
+          "slug_grupo": "mamiferos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5219852",
+          "species": "Melanomys caliginosus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Rodentia",
+          "family": "Cricetidae",
+          "genus": "Melanomys"
+        },
+        {
           "label": "Eira barbara",
           "registros": 6,
           "slug_especie": "eira-barbara",
@@ -12241,21 +12256,6 @@
           "order": "Carnivora",
           "family": "Mustelidae",
           "genus": "Eira"
-        },
-        {
-          "label": "Melanomys caliginosus",
-          "registros": 6,
-          "slug_especie": "melanomys-caliginosus",
-          "slug_grupo": "mamiferos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5219852",
-          "species": "Melanomys caliginosus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Mammalia",
-          "order": "Rodentia",
-          "family": "Cricetidae",
-          "genus": "Melanomys"
         }
       ],
       "species_list_tematica": {
@@ -12906,21 +12906,6 @@
           "genus": "Heliconius"
         },
         {
-          "label": "Lasiophila zapatoza",
-          "registros": 16,
-          "slug_especie": "lasiophila-zapatoza",
-          "slug_grupo": "mariposas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1909247",
-          "species": "Lasiophila zapatoza",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Lasiophila"
-        },
-        {
           "label": "Papilio polyxenes",
           "registros": 16,
           "slug_especie": "papilio-polyxenes",
@@ -12936,6 +12921,21 @@
           "genus": "Papilio"
         },
         {
+          "label": "Lasiophila zapatoza",
+          "registros": 16,
+          "slug_especie": "lasiophila-zapatoza",
+          "slug_grupo": "mariposas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1909247",
+          "species": "Lasiophila zapatoza",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Lasiophila"
+        },
+        {
           "label": "Vanessa virginiensis",
           "registros": 13,
           "slug_especie": "vanessa-virginiensis",
@@ -12949,6 +12949,21 @@
           "order": "Lepidoptera",
           "family": "Nymphalidae",
           "genus": "Vanessa"
+        },
+        {
+          "label": "Oleria radina",
+          "registros": 10,
+          "slug_especie": "oleria-radina",
+          "slug_grupo": "mariposas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1902397",
+          "species": "Oleria radina",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Oleria"
         },
         {
           "label": "Corades medeba",
@@ -12981,36 +12996,6 @@
           "genus": "Eretris"
         },
         {
-          "label": "Oleria radina",
-          "registros": 10,
-          "slug_especie": "oleria-radina",
-          "slug_grupo": "mariposas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1902397",
-          "species": "Oleria radina",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Oleria"
-        },
-        {
-          "label": "Greta andromica",
-          "registros": 8,
-          "slug_especie": "greta-andromica",
-          "slug_grupo": "mariposas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1895176",
-          "species": "Greta andromica",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Greta"
-        },
-        {
           "label": "Leptotes cassius",
           "registros": 8,
           "slug_especie": "leptotes-cassius",
@@ -13039,6 +13024,21 @@
           "order": "Lepidoptera",
           "family": "Nymphalidae",
           "genus": "Patricia"
+        },
+        {
+          "label": "Greta andromica",
+          "registros": 8,
+          "slug_especie": "greta-andromica",
+          "slug_grupo": "mariposas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1895176",
+          "species": "Greta andromica",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Greta"
         }
       ],
       "species_list_tematica": {
@@ -15725,21 +15725,6 @@
           "genus": "Espeletia"
         },
         {
-          "label": "Ageratina tinifolia",
-          "registros": 22,
-          "slug_especie": "ageratina-tinifolia",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5400672",
-          "species": "Ageratina tinifolia",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Asterales",
-          "family": "Asteraceae",
-          "genus": "Ageratina"
-        },
-        {
           "label": "Ceroxylon quindiuense",
           "registros": 22,
           "slug_especie": "ceroxylon-quindiuense",
@@ -15754,6 +15739,21 @@
           "order": "Arecales",
           "family": "Arecaceae",
           "genus": "Ceroxylon"
+        },
+        {
+          "label": "Ageratina tinifolia",
+          "registros": 22,
+          "slug_especie": "ageratina-tinifolia",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5400672",
+          "species": "Ageratina tinifolia",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Asterales",
+          "family": "Asteraceae",
+          "genus": "Ageratina"
         },
         {
           "label": "Chusquea tessellata",
@@ -15817,22 +15817,6 @@
           "genus": "Hedyosmum"
         },
         {
-          "label": "Drimys granadensis",
-          "registros": 7,
-          "slug_especie": "drimys-granadensis",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7827774",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56d047233c16479905cba815/summary",
-          "species": "Drimys granadensis",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Canellales",
-          "family": "Winteraceae",
-          "genus": "Drimys"
-        },
-        {
           "label": "Miconia caudata",
           "registros": 7,
           "slug_especie": "miconia-caudata",
@@ -15863,6 +15847,22 @@
           "order": "Apiales",
           "family": "Araliaceae",
           "genus": "Oreopanax"
+        },
+        {
+          "label": "Drimys granadensis",
+          "registros": 7,
+          "slug_especie": "drimys-granadensis",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7827774",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d047233c16479905cba815/summary",
+          "species": "Drimys granadensis",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Canellales",
+          "family": "Winteraceae",
+          "genus": "Drimys"
         },
         {
           "label": "Solanum asperolanatum",
@@ -16496,39 +16496,38 @@
             "genus": "Passiflora"
           },
           {
-            "label": "Berberis verticillata",
+            "label": "Pentacalia uribei",
             "registros": 2,
-            "slug_especie": "berberis-verticillata",
+            "slug_especie": "pentacalia-uribei",
             "slug_tematica": "endemicas",
             "tematica_label": "Endémicas",
             "slug_grupo": "plantas",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3982287",
-            "species": "Berberis verticillata",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Ranunculales",
-            "family": "Berberidaceae",
-            "genus": "Berberis"
-          },
-          {
-            "label": "Centropogon grandis",
-            "registros": 2,
-            "slug_especie": "centropogon-grandis",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "plantas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5412574",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/595bc8452f4fd7bc7f39fbfc/summary",
-            "species": "Centropogon grandis",
+            "url_gbif": "https://www.gbif.org/species/3111439",
+            "species": "Pentacalia uribei",
             "kingdom": "Plantae",
             "phylum": "Tracheophyta",
             "class": "Magnoliopsida",
             "order": "Asterales",
-            "family": "Campanulaceae",
-            "genus": "Centropogon"
+            "family": "Asteraceae",
+            "genus": "Pentacalia"
+          },
+          {
+            "label": "Piper discriminatum",
+            "registros": 2,
+            "slug_especie": "piper-discriminatum",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "plantas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/4186517",
+            "species": "Piper discriminatum",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Piperales",
+            "family": "Piperaceae",
+            "genus": "Piper"
           },
           {
             "label": "Critoniopsis ursicola",
@@ -16546,6 +16545,74 @@
             "order": "Asterales",
             "family": "Asteraceae",
             "genus": "Critoniopsis"
+          },
+          {
+            "label": "Berberis verticillata",
+            "registros": 2,
+            "slug_especie": "berberis-verticillata",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "plantas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/3982287",
+            "species": "Berberis verticillata",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Ranunculales",
+            "family": "Berberidaceae",
+            "genus": "Berberis"
+          },
+          {
+            "label": "Swartzia macrophylla",
+            "registros": 2,
+            "slug_especie": "swartzia-macrophylla",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "plantas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5351961",
+            "species": "Swartzia macrophylla",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Fabales",
+            "family": "Fabaceae",
+            "genus": "Swartzia"
+          },
+          {
+            "label": "Saurauia stapfiana",
+            "registros": 2,
+            "slug_especie": "saurauia-stapfiana",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "plantas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/7270694",
+            "species": "Saurauia stapfiana",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Ericales",
+            "family": "Actinidiaceae",
+            "genus": "Saurauia"
+          },
+          {
+            "label": "Salvia cuatrecasasiana",
+            "registros": 2,
+            "slug_especie": "salvia-cuatrecasasiana",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "plantas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/10724647",
+            "species": "Salvia cuatrecasasiana",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Lamiales",
+            "family": "Lamiaceae",
+            "genus": "Salvia"
           },
           {
             "label": "Miconia plethorica",
@@ -16582,40 +16649,6 @@
             "genus": "Miconia"
           },
           {
-            "label": "Pentacalia uribei",
-            "registros": 2,
-            "slug_especie": "pentacalia-uribei",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "plantas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3111439",
-            "species": "Pentacalia uribei",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Asterales",
-            "family": "Asteraceae",
-            "genus": "Pentacalia"
-          },
-          {
-            "label": "Piper discriminatum",
-            "registros": 2,
-            "slug_especie": "piper-discriminatum",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "plantas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/4186517",
-            "species": "Piper discriminatum",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Piperales",
-            "family": "Piperaceae",
-            "genus": "Piper"
-          },
-          {
             "label": "Piper salentoi",
             "registros": 2,
             "slug_especie": "piper-salentoi",
@@ -16633,55 +16666,22 @@
             "genus": "Piper"
           },
           {
-            "label": "Salvia cuatrecasasiana",
+            "label": "Centropogon grandis",
             "registros": 2,
-            "slug_especie": "salvia-cuatrecasasiana",
+            "slug_especie": "centropogon-grandis",
             "slug_tematica": "endemicas",
             "tematica_label": "Endémicas",
             "slug_grupo": "plantas",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/10724647",
-            "species": "Salvia cuatrecasasiana",
+            "url_gbif": "https://www.gbif.org/species/5412574",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/595bc8452f4fd7bc7f39fbfc/summary",
+            "species": "Centropogon grandis",
             "kingdom": "Plantae",
             "phylum": "Tracheophyta",
             "class": "Magnoliopsida",
-            "order": "Lamiales",
-            "family": "Lamiaceae",
-            "genus": "Salvia"
-          },
-          {
-            "label": "Saurauia stapfiana",
-            "registros": 2,
-            "slug_especie": "saurauia-stapfiana",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "plantas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/7270694",
-            "species": "Saurauia stapfiana",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Ericales",
-            "family": "Actinidiaceae",
-            "genus": "Saurauia"
-          },
-          {
-            "label": "Swartzia macrophylla",
-            "registros": 2,
-            "slug_especie": "swartzia-macrophylla",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "plantas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5351961",
-            "species": "Swartzia macrophylla",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Fabales",
-            "family": "Fabaceae",
-            "genus": "Swartzia"
+            "order": "Asterales",
+            "family": "Campanulaceae",
+            "genus": "Centropogon"
           }
         ],
         "exoticas-total": [
@@ -18004,21 +18004,6 @@
           "genus": "Espeletia"
         },
         {
-          "label": "Ageratina tinifolia",
-          "registros": 22,
-          "slug_especie": "ageratina-tinifolia",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5400672",
-          "species": "Ageratina tinifolia",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Asterales",
-          "family": "Asteraceae",
-          "genus": "Ageratina"
-        },
-        {
           "label": "Ceroxylon quindiuense",
           "registros": 22,
           "slug_especie": "ceroxylon-quindiuense",
@@ -18033,6 +18018,21 @@
           "order": "Arecales",
           "family": "Arecaceae",
           "genus": "Ceroxylon"
+        },
+        {
+          "label": "Ageratina tinifolia",
+          "registros": 22,
+          "slug_especie": "ageratina-tinifolia",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5400672",
+          "species": "Ageratina tinifolia",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Asterales",
+          "family": "Asteraceae",
+          "genus": "Ageratina"
         },
         {
           "label": "Chusquea tessellata",
@@ -18096,20 +18096,20 @@
           "genus": "Hedyosmum"
         },
         {
-          "label": "Drimys granadensis",
+          "label": "Oreopanax incisus",
           "registros": 7,
-          "slug_especie": "drimys-granadensis",
+          "slug_especie": "oreopanax-incisus",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7827774",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56d047233c16479905cba815/summary",
-          "species": "Drimys granadensis",
+          "url_gbif": "https://www.gbif.org/species/3036583",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e4107b83c45700544e3e1a/summary",
+          "species": "Oreopanax incisus",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Canellales",
-          "family": "Winteraceae",
-          "genus": "Drimys"
+          "order": "Apiales",
+          "family": "Araliaceae",
+          "genus": "Oreopanax"
         },
         {
           "label": "Miconia caudata",
@@ -18128,20 +18128,20 @@
           "genus": "Miconia"
         },
         {
-          "label": "Oreopanax incisus",
+          "label": "Drimys granadensis",
           "registros": 7,
-          "slug_especie": "oreopanax-incisus",
+          "slug_especie": "drimys-granadensis",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3036583",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e4107b83c45700544e3e1a/summary",
-          "species": "Oreopanax incisus",
+          "url_gbif": "https://www.gbif.org/species/7827774",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d047233c16479905cba815/summary",
+          "species": "Drimys granadensis",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Apiales",
-          "family": "Araliaceae",
-          "genus": "Oreopanax"
+          "order": "Canellales",
+          "family": "Winteraceae",
+          "genus": "Drimys"
         },
         {
           "label": "Solanum asperolanatum",
@@ -18775,39 +18775,38 @@
             "genus": "Passiflora"
           },
           {
-            "label": "Berberis verticillata",
+            "label": "Pentacalia uribei",
             "registros": 2,
-            "slug_especie": "berberis-verticillata",
+            "slug_especie": "pentacalia-uribei",
             "slug_tematica": "endemicas",
             "tematica_label": "Endémicas",
             "slug_grupo": "vasculares",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3982287",
-            "species": "Berberis verticillata",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Ranunculales",
-            "family": "Berberidaceae",
-            "genus": "Berberis"
-          },
-          {
-            "label": "Centropogon grandis",
-            "registros": 2,
-            "slug_especie": "centropogon-grandis",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "vasculares",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5412574",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/595bc8452f4fd7bc7f39fbfc/summary",
-            "species": "Centropogon grandis",
+            "url_gbif": "https://www.gbif.org/species/3111439",
+            "species": "Pentacalia uribei",
             "kingdom": "Plantae",
             "phylum": "Tracheophyta",
             "class": "Magnoliopsida",
             "order": "Asterales",
-            "family": "Campanulaceae",
-            "genus": "Centropogon"
+            "family": "Asteraceae",
+            "genus": "Pentacalia"
+          },
+          {
+            "label": "Piper discriminatum",
+            "registros": 2,
+            "slug_especie": "piper-discriminatum",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "vasculares",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/4186517",
+            "species": "Piper discriminatum",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Piperales",
+            "family": "Piperaceae",
+            "genus": "Piper"
           },
           {
             "label": "Critoniopsis ursicola",
@@ -18825,6 +18824,74 @@
             "order": "Asterales",
             "family": "Asteraceae",
             "genus": "Critoniopsis"
+          },
+          {
+            "label": "Berberis verticillata",
+            "registros": 2,
+            "slug_especie": "berberis-verticillata",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "vasculares",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/3982287",
+            "species": "Berberis verticillata",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Ranunculales",
+            "family": "Berberidaceae",
+            "genus": "Berberis"
+          },
+          {
+            "label": "Swartzia macrophylla",
+            "registros": 2,
+            "slug_especie": "swartzia-macrophylla",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "vasculares",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5351961",
+            "species": "Swartzia macrophylla",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Fabales",
+            "family": "Fabaceae",
+            "genus": "Swartzia"
+          },
+          {
+            "label": "Saurauia stapfiana",
+            "registros": 2,
+            "slug_especie": "saurauia-stapfiana",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "vasculares",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/7270694",
+            "species": "Saurauia stapfiana",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Ericales",
+            "family": "Actinidiaceae",
+            "genus": "Saurauia"
+          },
+          {
+            "label": "Salvia cuatrecasasiana",
+            "registros": 2,
+            "slug_especie": "salvia-cuatrecasasiana",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "vasculares",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/10724647",
+            "species": "Salvia cuatrecasasiana",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Lamiales",
+            "family": "Lamiaceae",
+            "genus": "Salvia"
           },
           {
             "label": "Miconia plethorica",
@@ -18861,40 +18928,6 @@
             "genus": "Miconia"
           },
           {
-            "label": "Pentacalia uribei",
-            "registros": 2,
-            "slug_especie": "pentacalia-uribei",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "vasculares",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3111439",
-            "species": "Pentacalia uribei",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Asterales",
-            "family": "Asteraceae",
-            "genus": "Pentacalia"
-          },
-          {
-            "label": "Piper discriminatum",
-            "registros": 2,
-            "slug_especie": "piper-discriminatum",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "vasculares",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/4186517",
-            "species": "Piper discriminatum",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Piperales",
-            "family": "Piperaceae",
-            "genus": "Piper"
-          },
-          {
             "label": "Piper salentoi",
             "registros": 2,
             "slug_especie": "piper-salentoi",
@@ -18912,55 +18945,22 @@
             "genus": "Piper"
           },
           {
-            "label": "Salvia cuatrecasasiana",
+            "label": "Centropogon grandis",
             "registros": 2,
-            "slug_especie": "salvia-cuatrecasasiana",
+            "slug_especie": "centropogon-grandis",
             "slug_tematica": "endemicas",
             "tematica_label": "Endémicas",
             "slug_grupo": "vasculares",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/10724647",
-            "species": "Salvia cuatrecasasiana",
+            "url_gbif": "https://www.gbif.org/species/5412574",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/595bc8452f4fd7bc7f39fbfc/summary",
+            "species": "Centropogon grandis",
             "kingdom": "Plantae",
             "phylum": "Tracheophyta",
             "class": "Magnoliopsida",
-            "order": "Lamiales",
-            "family": "Lamiaceae",
-            "genus": "Salvia"
-          },
-          {
-            "label": "Saurauia stapfiana",
-            "registros": 2,
-            "slug_especie": "saurauia-stapfiana",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "vasculares",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/7270694",
-            "species": "Saurauia stapfiana",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Ericales",
-            "family": "Actinidiaceae",
-            "genus": "Saurauia"
-          },
-          {
-            "label": "Swartzia macrophylla",
-            "registros": 2,
-            "slug_especie": "swartzia-macrophylla",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "vasculares",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5351961",
-            "species": "Swartzia macrophylla",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Fabales",
-            "family": "Fabaceae",
-            "genus": "Swartzia"
+            "order": "Asterales",
+            "family": "Campanulaceae",
+            "genus": "Centropogon"
           }
         ],
         "exoticas-total": [
@@ -19712,22 +19712,6 @@
           "genus": "Cyanocorax"
         },
         {
-          "label": "Coragyps atratus",
-          "registros": 208,
-          "slug_especie": "coragyps-atratus",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2481942",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4fe28f0106c67230e7394/summary",
-          "species": "Coragyps atratus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Accipitriformes",
-          "family": "Cathartidae",
-          "genus": "Coragyps"
-        },
-        {
           "label": "Grallaria quitensis",
           "registros": 208,
           "slug_especie": "grallaria-quitensis",
@@ -19742,6 +19726,22 @@
           "order": "Passeriformes",
           "family": "Grallariidae",
           "genus": "Grallaria"
+        },
+        {
+          "label": "Coragyps atratus",
+          "registros": 208,
+          "slug_especie": "coragyps-atratus",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2481942",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4fe28f0106c67230e7394/summary",
+          "species": "Coragyps atratus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Accipitriformes",
+          "family": "Cathartidae",
+          "genus": "Coragyps"
         }
       ],
       "species_list_tematica": {
@@ -19904,6 +19904,24 @@
             "genus": "Atlapetes"
           },
           {
+            "label": "Pristimantis simoteriscus",
+            "registros": 5,
+            "slug_especie": "pristimantis-simoteriscus",
+            "slug_tematica": "amenazadas-nacional-en",
+            "tematica_label": "EN",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2425769",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/5f8db4564568a5b84027c87a/summary",
+            "species": "Pristimantis simoteriscus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Amphibia",
+            "order": "Anura",
+            "family": "Craugastoridae",
+            "genus": "Pristimantis"
+          },
+          {
             "label": "Anthocephala berlepschi",
             "registros": 5,
             "slug_especie": "anthocephala-berlepschi",
@@ -19937,24 +19955,6 @@
             "order": "Psittaciformes",
             "family": "Psittacidae",
             "genus": "Bolborhynchus"
-          },
-          {
-            "label": "Pristimantis simoteriscus",
-            "registros": 5,
-            "slug_especie": "pristimantis-simoteriscus",
-            "slug_tematica": "amenazadas-nacional-en",
-            "tematica_label": "EN",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2425769",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/5f8db4564568a5b84027c87a/summary",
-            "species": "Pristimantis simoteriscus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Amphibia",
-            "order": "Anura",
-            "family": "Craugastoridae",
-            "genus": "Pristimantis"
           },
           {
             "label": "Tephrophilus wetmorei",
@@ -20493,24 +20493,6 @@
             "genus": "Contopus"
           },
           {
-            "label": "Empidonax virescens",
-            "registros": 7,
-            "slug_especie": "empidonax-virescens",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2482802",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e09afa83c45700544e3cd7/summary",
-            "species": "Empidonax virescens",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Tyrannidae",
-            "genus": "Empidonax"
-          },
-          {
             "label": "Leiothlypis peregrina",
             "registros": 7,
             "slug_especie": "leiothlypis-peregrina",
@@ -20527,6 +20509,24 @@
             "order": "Passeriformes",
             "family": "Parulidae",
             "genus": "Leiothlypis"
+          },
+          {
+            "label": "Empidonax virescens",
+            "registros": 7,
+            "slug_especie": "empidonax-virescens",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2482802",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e09afa83c45700544e3cd7/summary",
+            "species": "Empidonax virescens",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Tyrannidae",
+            "genus": "Empidonax"
           }
         ],
         "endemicas": [

@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -1802,21 +1802,6 @@
           "genus": "Manihot"
         },
         {
-          "label": "Centrosema pubescens",
-          "registros": 4,
-          "slug_especie": "centrosema-pubescens",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2964904",
-          "species": "Centrosema pubescens",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Centrosema"
-        },
-        {
           "label": "Stylosanthes guianensis",
           "registros": 4,
           "slug_especie": "stylosanthes-guianensis",
@@ -1830,6 +1815,21 @@
           "order": "Fabales",
           "family": "Fabaceae",
           "genus": "Stylosanthes"
+        },
+        {
+          "label": "Centrosema pubescens",
+          "registros": 4,
+          "slug_especie": "centrosema-pubescens",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2964904",
+          "species": "Centrosema pubescens",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Centrosema"
         },
         {
           "label": "Ricinus communis",
@@ -1848,22 +1848,6 @@
           "genus": "Ricinus"
         },
         {
-          "label": "Arundo donax",
-          "registros": 2,
-          "slug_especie": "arundo-donax",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2703041",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cda90f207ecea54a561e81/summary",
-          "species": "Arundo donax",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Poales",
-          "family": "Poaceae",
-          "genus": "Arundo"
-        },
-        {
           "label": "Gossypium hirsutum",
           "registros": 2,
           "slug_especie": "gossypium-hirsutum",
@@ -1877,21 +1861,6 @@
           "order": "Malvales",
           "family": "Malvaceae",
           "genus": "Gossypium"
-        },
-        {
-          "label": "Indigofera lespedezioides",
-          "registros": 2,
-          "slug_especie": "indigofera-lespedezioides",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2972300",
-          "species": "Indigofera lespedezioides",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Indigofera"
         },
         {
           "label": "Renealmia cernua",
@@ -1910,6 +1879,37 @@
           "genus": "Renealmia"
         },
         {
+          "label": "Arundo donax",
+          "registros": 2,
+          "slug_especie": "arundo-donax",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2703041",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cda90f207ecea54a561e81/summary",
+          "species": "Arundo donax",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Poales",
+          "family": "Poaceae",
+          "genus": "Arundo"
+        },
+        {
+          "label": "Indigofera lespedezioides",
+          "registros": 2,
+          "slug_especie": "indigofera-lespedezioides",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2972300",
+          "species": "Indigofera lespedezioides",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Indigofera"
+        },
+        {
           "label": "Aeschynomene falcata",
           "registros": 1,
           "slug_especie": "aeschynomene-falcata",
@@ -1925,98 +1925,19 @@
           "genus": "Aeschynomene"
         },
         {
-          "label": "Ageratum conyzoides",
+          "label": "Weinmannia multijuga",
           "registros": 1,
-          "slug_especie": "ageratum-conyzoides",
+          "slug_especie": "weinmannia-multijuga",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5401673",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/593b61602f4fd7bc7f387851/summary",
-          "species": "Ageratum conyzoides",
+          "url_gbif": "https://www.gbif.org/species/3613514",
+          "species": "Weinmannia multijuga",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Asterales",
-          "family": "Asteraceae",
-          "genus": "Ageratum"
-        },
-        {
-          "label": "Aiouea montana",
-          "registros": 1,
-          "slug_especie": "aiouea-montana",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/9671278",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e738f583c45700544e3f55/summary",
-          "species": "Aiouea montana",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Laurales",
-          "family": "Lauraceae",
-          "genus": "Aiouea"
-        },
-        {
-          "label": "Aniba robusta",
-          "registros": 1,
-          "slug_especie": "aniba-robusta",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4180459",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e5857083c45700544e3e73/summary",
-          "species": "Aniba robusta",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Laurales",
-          "family": "Lauraceae",
-          "genus": "Aniba"
-        },
-        {
-          "label": "Cenostigma pluviosum",
-          "registros": 1,
-          "slug_especie": "cenostigma-pluviosum",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/9416767",
-          "species": "Cenostigma pluviosum",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Cenostigma"
-        },
-        {
-          "label": "Centrosema virginianum",
-          "registros": 1,
-          "slug_especie": "centrosema-virginianum",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2964906",
-          "species": "Centrosema virginianum",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Centrosema"
-        },
-        {
-          "label": "Citrus aurantium",
-          "registros": 1,
-          "slug_especie": "citrus-aurantium",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3190167",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/5940014a2f4fd7bc7f38bca4/summary",
-          "species": "Citrus aurantium",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Sapindales",
-          "family": "Rutaceae",
-          "genus": "Citrus"
+          "order": "Oxalidales",
+          "family": "Cunoniaceae",
+          "genus": "Weinmannia"
         },
         {
           "label": "Citrus limon",
@@ -2330,6 +2251,22 @@
           "genus": "Hedyosmum"
         },
         {
+          "label": "Aiouea montana",
+          "registros": 1,
+          "slug_especie": "aiouea-montana",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/9671278",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e738f583c45700544e3f55/summary",
+          "species": "Aiouea montana",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Laurales",
+          "family": "Lauraceae",
+          "genus": "Aiouea"
+        },
+        {
           "label": "Inga edulis",
           "registros": 1,
           "slug_especie": "inga-edulis",
@@ -2375,6 +2312,21 @@
           "order": "Fabales",
           "family": "Fabaceae",
           "genus": "Leucaena"
+        },
+        {
+          "label": "Centrosema virginianum",
+          "registros": 1,
+          "slug_especie": "centrosema-virginianum",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2964906",
+          "species": "Centrosema virginianum",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Centrosema"
         },
         {
           "label": "Meriania nobilis",
@@ -2608,6 +2560,21 @@
           "genus": "Psidium"
         },
         {
+          "label": "Cenostigma pluviosum",
+          "registros": 1,
+          "slug_especie": "cenostigma-pluviosum",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/9416767",
+          "species": "Cenostigma pluviosum",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Cenostigma"
+        },
+        {
           "label": "Rhaphiolepis bibas",
           "registros": 1,
           "slug_especie": "rhaphiolepis-bibas",
@@ -2636,6 +2603,22 @@
           "order": "Fabales",
           "family": "Fabaceae",
           "genus": "Rhynchosia"
+        },
+        {
+          "label": "Aniba robusta",
+          "registros": 1,
+          "slug_especie": "aniba-robusta",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/4180459",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e5857083c45700544e3e73/summary",
+          "species": "Aniba robusta",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Laurales",
+          "family": "Lauraceae",
+          "genus": "Aniba"
         },
         {
           "label": "Samanea saman",
@@ -2699,6 +2682,22 @@
           "order": "Lamiales",
           "family": "Verbenaceae",
           "genus": "Stachytarpheta"
+        },
+        {
+          "label": "Ageratum conyzoides",
+          "registros": 1,
+          "slug_especie": "ageratum-conyzoides",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5401673",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/593b61602f4fd7bc7f387851/summary",
+          "species": "Ageratum conyzoides",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Asterales",
+          "family": "Asteraceae",
+          "genus": "Ageratum"
         },
         {
           "label": "Tephrosia sinapou",
@@ -2778,19 +2777,20 @@
           "genus": "Viburnum"
         },
         {
-          "label": "Weinmannia multijuga",
+          "label": "Citrus aurantium",
           "registros": 1,
-          "slug_especie": "weinmannia-multijuga",
+          "slug_especie": "citrus-aurantium",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3613514",
-          "species": "Weinmannia multijuga",
+          "url_gbif": "https://www.gbif.org/species/3190167",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5940014a2f4fd7bc7f38bca4/summary",
+          "species": "Citrus aurantium",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Oxalidales",
-          "family": "Cunoniaceae",
-          "genus": "Weinmannia"
+          "order": "Sapindales",
+          "family": "Rutaceae",
+          "genus": "Citrus"
         }
       ],
       "species_list_tematica": {
@@ -3444,22 +3444,6 @@
           "genus": "Tyrannus"
         },
         {
-          "label": "Pionus menstruus",
-          "registros": 40,
-          "slug_especie": "pionus-menstruus",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2479902",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e6089483c45700544e3e8f/summary",
-          "species": "Pionus menstruus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Psittaciformes",
-          "family": "Psittacidae",
-          "genus": "Pionus"
-        },
-        {
           "label": "Vanellus chilensis",
           "registros": 40,
           "slug_especie": "vanellus-chilensis",
@@ -3474,6 +3458,22 @@
           "order": "Charadriiformes",
           "family": "Charadriidae",
           "genus": "Vanellus"
+        },
+        {
+          "label": "Pionus menstruus",
+          "registros": 40,
+          "slug_especie": "pionus-menstruus",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2479902",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e6089483c45700544e3e8f/summary",
+          "species": "Pionus menstruus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Psittaciformes",
+          "family": "Psittacidae",
+          "genus": "Pionus"
         },
         {
           "label": "Myiozetetes cayanensis",
@@ -10236,21 +10236,6 @@
           "genus": "Manihot"
         },
         {
-          "label": "Centrosema pubescens",
-          "registros": 4,
-          "slug_especie": "centrosema-pubescens",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2964904",
-          "species": "Centrosema pubescens",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Centrosema"
-        },
-        {
           "label": "Stylosanthes guianensis",
           "registros": 4,
           "slug_especie": "stylosanthes-guianensis",
@@ -10264,6 +10249,21 @@
           "order": "Fabales",
           "family": "Fabaceae",
           "genus": "Stylosanthes"
+        },
+        {
+          "label": "Centrosema pubescens",
+          "registros": 4,
+          "slug_especie": "centrosema-pubescens",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2964904",
+          "species": "Centrosema pubescens",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Centrosema"
         },
         {
           "label": "Ricinus communis",
@@ -10282,22 +10282,6 @@
           "genus": "Ricinus"
         },
         {
-          "label": "Arundo donax",
-          "registros": 2,
-          "slug_especie": "arundo-donax",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2703041",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cda90f207ecea54a561e81/summary",
-          "species": "Arundo donax",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Poales",
-          "family": "Poaceae",
-          "genus": "Arundo"
-        },
-        {
           "label": "Gossypium hirsutum",
           "registros": 2,
           "slug_especie": "gossypium-hirsutum",
@@ -10311,37 +10295,6 @@
           "order": "Malvales",
           "family": "Malvaceae",
           "genus": "Gossypium"
-        },
-        {
-          "label": "Indigofera lespedezioides",
-          "registros": 2,
-          "slug_especie": "indigofera-lespedezioides",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2972300",
-          "species": "Indigofera lespedezioides",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Indigofera"
-        },
-        {
-          "label": "Renealmia cernua",
-          "registros": 2,
-          "slug_especie": "renealmia-cernua",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5302530",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e8351d83c45700544e4397/summary",
-          "species": "Renealmia cernua",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Zingiberales",
-          "family": "Zingiberaceae",
-          "genus": "Renealmia"
         },
         {
           "label": "Selaginella diffusa",
@@ -10360,6 +10313,53 @@
           "genus": "Selaginella"
         },
         {
+          "label": "Arundo donax",
+          "registros": 2,
+          "slug_especie": "arundo-donax",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2703041",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cda90f207ecea54a561e81/summary",
+          "species": "Arundo donax",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Poales",
+          "family": "Poaceae",
+          "genus": "Arundo"
+        },
+        {
+          "label": "Renealmia cernua",
+          "registros": 2,
+          "slug_especie": "renealmia-cernua",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5302530",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e8351d83c45700544e4397/summary",
+          "species": "Renealmia cernua",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Zingiberales",
+          "family": "Zingiberaceae",
+          "genus": "Renealmia"
+        },
+        {
+          "label": "Indigofera lespedezioides",
+          "registros": 2,
+          "slug_especie": "indigofera-lespedezioides",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2972300",
+          "species": "Indigofera lespedezioides",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Indigofera"
+        },
+        {
           "label": "Aeschynomene falcata",
           "registros": 1,
           "slug_especie": "aeschynomene-falcata",
@@ -10375,114 +10375,19 @@
           "genus": "Aeschynomene"
         },
         {
-          "label": "Ageratum conyzoides",
+          "label": "Weinmannia multijuga",
           "registros": 1,
-          "slug_especie": "ageratum-conyzoides",
+          "slug_especie": "weinmannia-multijuga",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5401673",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/593b61602f4fd7bc7f387851/summary",
-          "species": "Ageratum conyzoides",
+          "url_gbif": "https://www.gbif.org/species/3613514",
+          "species": "Weinmannia multijuga",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Asterales",
-          "family": "Asteraceae",
-          "genus": "Ageratum"
-        },
-        {
-          "label": "Aiouea montana",
-          "registros": 1,
-          "slug_especie": "aiouea-montana",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/9671278",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e738f583c45700544e3f55/summary",
-          "species": "Aiouea montana",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Laurales",
-          "family": "Lauraceae",
-          "genus": "Aiouea"
-        },
-        {
-          "label": "Aniba robusta",
-          "registros": 1,
-          "slug_especie": "aniba-robusta",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4180459",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e5857083c45700544e3e73/summary",
-          "species": "Aniba robusta",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Laurales",
-          "family": "Lauraceae",
-          "genus": "Aniba"
-        },
-        {
-          "label": "Cenostigma pluviosum",
-          "registros": 1,
-          "slug_especie": "cenostigma-pluviosum",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/9416767",
-          "species": "Cenostigma pluviosum",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Cenostigma"
-        },
-        {
-          "label": "Centrosema virginianum",
-          "registros": 1,
-          "slug_especie": "centrosema-virginianum",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2964906",
-          "species": "Centrosema virginianum",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Centrosema"
-        },
-        {
-          "label": "Citrus aurantium",
-          "registros": 1,
-          "slug_especie": "citrus-aurantium",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3190167",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/5940014a2f4fd7bc7f38bca4/summary",
-          "species": "Citrus aurantium",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Sapindales",
-          "family": "Rutaceae",
-          "genus": "Citrus"
-        },
-        {
-          "label": "Citrus limon",
-          "registros": 1,
-          "slug_especie": "citrus-limon",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7647136",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/59401a6c2f4fd7bc7f38bfa9/summary",
-          "species": "Citrus limon",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Sapindales",
-          "family": "Rutaceae",
-          "genus": "Citrus"
+          "order": "Oxalidales",
+          "family": "Cunoniaceae",
+          "genus": "Weinmannia"
         },
         {
           "label": "Citrus reticulata",
@@ -10780,6 +10685,22 @@
           "genus": "Hedyosmum"
         },
         {
+          "label": "Aiouea montana",
+          "registros": 1,
+          "slug_especie": "aiouea-montana",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/9671278",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e738f583c45700544e3f55/summary",
+          "species": "Aiouea montana",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Laurales",
+          "family": "Lauraceae",
+          "genus": "Aiouea"
+        },
+        {
           "label": "Inga edulis",
           "registros": 1,
           "slug_especie": "inga-edulis",
@@ -10825,6 +10746,22 @@
           "order": "Fabales",
           "family": "Fabaceae",
           "genus": "Leucaena"
+        },
+        {
+          "label": "Citrus aurantium",
+          "registros": 1,
+          "slug_especie": "citrus-aurantium",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3190167",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5940014a2f4fd7bc7f38bca4/summary",
+          "species": "Citrus aurantium",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Sapindales",
+          "family": "Rutaceae",
+          "genus": "Citrus"
         },
         {
           "label": "Meriania nobilis",
@@ -11058,6 +10995,21 @@
           "genus": "Psidium"
         },
         {
+          "label": "Centrosema virginianum",
+          "registros": 1,
+          "slug_especie": "centrosema-virginianum",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2964906",
+          "species": "Centrosema virginianum",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Centrosema"
+        },
+        {
           "label": "Rhaphiolepis bibas",
           "registros": 1,
           "slug_especie": "rhaphiolepis-bibas",
@@ -11088,6 +11040,21 @@
           "genus": "Rhynchosia"
         },
         {
+          "label": "Cenostigma pluviosum",
+          "registros": 1,
+          "slug_especie": "cenostigma-pluviosum",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/9416767",
+          "species": "Cenostigma pluviosum",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Cenostigma"
+        },
+        {
           "label": "Samanea saman",
           "registros": 1,
           "slug_especie": "samanea-saman",
@@ -11102,6 +11069,22 @@
           "order": "Fabales",
           "family": "Fabaceae",
           "genus": "Samanea"
+        },
+        {
+          "label": "Aniba robusta",
+          "registros": 1,
+          "slug_especie": "aniba-robusta",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/4180459",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e5857083c45700544e3e73/summary",
+          "species": "Aniba robusta",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Laurales",
+          "family": "Lauraceae",
+          "genus": "Aniba"
         },
         {
           "label": "Sida acuta",
@@ -11149,6 +11132,22 @@
           "order": "Lamiales",
           "family": "Verbenaceae",
           "genus": "Stachytarpheta"
+        },
+        {
+          "label": "Ageratum conyzoides",
+          "registros": 1,
+          "slug_especie": "ageratum-conyzoides",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5401673",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/593b61602f4fd7bc7f387851/summary",
+          "species": "Ageratum conyzoides",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Asterales",
+          "family": "Asteraceae",
+          "genus": "Ageratum"
         },
         {
           "label": "Tephrosia sinapou",
@@ -11228,19 +11227,20 @@
           "genus": "Viburnum"
         },
         {
-          "label": "Weinmannia multijuga",
+          "label": "Citrus limon",
           "registros": 1,
-          "slug_especie": "weinmannia-multijuga",
+          "slug_especie": "citrus-limon",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3613514",
-          "species": "Weinmannia multijuga",
+          "url_gbif": "https://www.gbif.org/species/7647136",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/59401a6c2f4fd7bc7f38bfa9/summary",
+          "species": "Citrus limon",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Oxalidales",
-          "family": "Cunoniaceae",
-          "genus": "Weinmannia"
+          "order": "Sapindales",
+          "family": "Rutaceae",
+          "genus": "Citrus"
         }
       ],
       "species_list_tematica": {
@@ -12419,21 +12419,6 @@
           "genus": "Manihot"
         },
         {
-          "label": "Centrosema pubescens",
-          "registros": 4,
-          "slug_especie": "centrosema-pubescens",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2964904",
-          "species": "Centrosema pubescens",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Centrosema"
-        },
-        {
           "label": "Stylosanthes guianensis",
           "registros": 4,
           "slug_especie": "stylosanthes-guianensis",
@@ -12447,6 +12432,21 @@
           "order": "Fabales",
           "family": "Fabaceae",
           "genus": "Stylosanthes"
+        },
+        {
+          "label": "Centrosema pubescens",
+          "registros": 4,
+          "slug_especie": "centrosema-pubescens",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2964904",
+          "species": "Centrosema pubescens",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Centrosema"
         },
         {
           "label": "Ricinus communis",
@@ -12465,22 +12465,6 @@
           "genus": "Ricinus"
         },
         {
-          "label": "Arundo donax",
-          "registros": 2,
-          "slug_especie": "arundo-donax",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2703041",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cda90f207ecea54a561e81/summary",
-          "species": "Arundo donax",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Poales",
-          "family": "Poaceae",
-          "genus": "Arundo"
-        },
-        {
           "label": "Gossypium hirsutum",
           "registros": 2,
           "slug_especie": "gossypium-hirsutum",
@@ -12494,37 +12478,6 @@
           "order": "Malvales",
           "family": "Malvaceae",
           "genus": "Gossypium"
-        },
-        {
-          "label": "Indigofera lespedezioides",
-          "registros": 2,
-          "slug_especie": "indigofera-lespedezioides",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2972300",
-          "species": "Indigofera lespedezioides",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Indigofera"
-        },
-        {
-          "label": "Renealmia cernua",
-          "registros": 2,
-          "slug_especie": "renealmia-cernua",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5302530",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e8351d83c45700544e4397/summary",
-          "species": "Renealmia cernua",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Zingiberales",
-          "family": "Zingiberaceae",
-          "genus": "Renealmia"
         },
         {
           "label": "Selaginella diffusa",
@@ -12543,6 +12496,53 @@
           "genus": "Selaginella"
         },
         {
+          "label": "Arundo donax",
+          "registros": 2,
+          "slug_especie": "arundo-donax",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2703041",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cda90f207ecea54a561e81/summary",
+          "species": "Arundo donax",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Poales",
+          "family": "Poaceae",
+          "genus": "Arundo"
+        },
+        {
+          "label": "Renealmia cernua",
+          "registros": 2,
+          "slug_especie": "renealmia-cernua",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5302530",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e8351d83c45700544e4397/summary",
+          "species": "Renealmia cernua",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Zingiberales",
+          "family": "Zingiberaceae",
+          "genus": "Renealmia"
+        },
+        {
+          "label": "Indigofera lespedezioides",
+          "registros": 2,
+          "slug_especie": "indigofera-lespedezioides",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2972300",
+          "species": "Indigofera lespedezioides",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Indigofera"
+        },
+        {
           "label": "Aeschynomene falcata",
           "registros": 1,
           "slug_especie": "aeschynomene-falcata",
@@ -12558,114 +12558,19 @@
           "genus": "Aeschynomene"
         },
         {
-          "label": "Ageratum conyzoides",
+          "label": "Weinmannia multijuga",
           "registros": 1,
-          "slug_especie": "ageratum-conyzoides",
+          "slug_especie": "weinmannia-multijuga",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5401673",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/593b61602f4fd7bc7f387851/summary",
-          "species": "Ageratum conyzoides",
+          "url_gbif": "https://www.gbif.org/species/3613514",
+          "species": "Weinmannia multijuga",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Asterales",
-          "family": "Asteraceae",
-          "genus": "Ageratum"
-        },
-        {
-          "label": "Aiouea montana",
-          "registros": 1,
-          "slug_especie": "aiouea-montana",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/9671278",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e738f583c45700544e3f55/summary",
-          "species": "Aiouea montana",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Laurales",
-          "family": "Lauraceae",
-          "genus": "Aiouea"
-        },
-        {
-          "label": "Aniba robusta",
-          "registros": 1,
-          "slug_especie": "aniba-robusta",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4180459",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e5857083c45700544e3e73/summary",
-          "species": "Aniba robusta",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Laurales",
-          "family": "Lauraceae",
-          "genus": "Aniba"
-        },
-        {
-          "label": "Cenostigma pluviosum",
-          "registros": 1,
-          "slug_especie": "cenostigma-pluviosum",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/9416767",
-          "species": "Cenostigma pluviosum",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Cenostigma"
-        },
-        {
-          "label": "Centrosema virginianum",
-          "registros": 1,
-          "slug_especie": "centrosema-virginianum",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2964906",
-          "species": "Centrosema virginianum",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Centrosema"
-        },
-        {
-          "label": "Citrus aurantium",
-          "registros": 1,
-          "slug_especie": "citrus-aurantium",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3190167",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/5940014a2f4fd7bc7f38bca4/summary",
-          "species": "Citrus aurantium",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Sapindales",
-          "family": "Rutaceae",
-          "genus": "Citrus"
-        },
-        {
-          "label": "Citrus limon",
-          "registros": 1,
-          "slug_especie": "citrus-limon",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7647136",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/59401a6c2f4fd7bc7f38bfa9/summary",
-          "species": "Citrus limon",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Sapindales",
-          "family": "Rutaceae",
-          "genus": "Citrus"
+          "order": "Oxalidales",
+          "family": "Cunoniaceae",
+          "genus": "Weinmannia"
         },
         {
           "label": "Citrus reticulata",
@@ -12963,6 +12868,22 @@
           "genus": "Hedyosmum"
         },
         {
+          "label": "Aiouea montana",
+          "registros": 1,
+          "slug_especie": "aiouea-montana",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/9671278",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e738f583c45700544e3f55/summary",
+          "species": "Aiouea montana",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Laurales",
+          "family": "Lauraceae",
+          "genus": "Aiouea"
+        },
+        {
           "label": "Inga edulis",
           "registros": 1,
           "slug_especie": "inga-edulis",
@@ -13008,6 +12929,22 @@
           "order": "Fabales",
           "family": "Fabaceae",
           "genus": "Leucaena"
+        },
+        {
+          "label": "Citrus aurantium",
+          "registros": 1,
+          "slug_especie": "citrus-aurantium",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3190167",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5940014a2f4fd7bc7f38bca4/summary",
+          "species": "Citrus aurantium",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Sapindales",
+          "family": "Rutaceae",
+          "genus": "Citrus"
         },
         {
           "label": "Meriania nobilis",
@@ -13241,6 +13178,21 @@
           "genus": "Psidium"
         },
         {
+          "label": "Centrosema virginianum",
+          "registros": 1,
+          "slug_especie": "centrosema-virginianum",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2964906",
+          "species": "Centrosema virginianum",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Centrosema"
+        },
+        {
           "label": "Rhaphiolepis bibas",
           "registros": 1,
           "slug_especie": "rhaphiolepis-bibas",
@@ -13271,6 +13223,21 @@
           "genus": "Rhynchosia"
         },
         {
+          "label": "Cenostigma pluviosum",
+          "registros": 1,
+          "slug_especie": "cenostigma-pluviosum",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/9416767",
+          "species": "Cenostigma pluviosum",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Cenostigma"
+        },
+        {
           "label": "Samanea saman",
           "registros": 1,
           "slug_especie": "samanea-saman",
@@ -13285,6 +13252,22 @@
           "order": "Fabales",
           "family": "Fabaceae",
           "genus": "Samanea"
+        },
+        {
+          "label": "Aniba robusta",
+          "registros": 1,
+          "slug_especie": "aniba-robusta",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/4180459",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e5857083c45700544e3e73/summary",
+          "species": "Aniba robusta",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Laurales",
+          "family": "Lauraceae",
+          "genus": "Aniba"
         },
         {
           "label": "Sida acuta",
@@ -13332,6 +13315,22 @@
           "order": "Lamiales",
           "family": "Verbenaceae",
           "genus": "Stachytarpheta"
+        },
+        {
+          "label": "Ageratum conyzoides",
+          "registros": 1,
+          "slug_especie": "ageratum-conyzoides",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5401673",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/593b61602f4fd7bc7f387851/summary",
+          "species": "Ageratum conyzoides",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Asterales",
+          "family": "Asteraceae",
+          "genus": "Ageratum"
         },
         {
           "label": "Tephrosia sinapou",
@@ -13411,19 +13410,20 @@
           "genus": "Viburnum"
         },
         {
-          "label": "Weinmannia multijuga",
+          "label": "Citrus limon",
           "registros": 1,
-          "slug_especie": "weinmannia-multijuga",
+          "slug_especie": "citrus-limon",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3613514",
-          "species": "Weinmannia multijuga",
+          "url_gbif": "https://www.gbif.org/species/7647136",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/59401a6c2f4fd7bc7f38bfa9/summary",
+          "species": "Citrus limon",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Oxalidales",
-          "family": "Cunoniaceae",
-          "genus": "Weinmannia"
+          "order": "Sapindales",
+          "family": "Rutaceae",
+          "genus": "Citrus"
         }
       ],
       "species_list_tematica": {
@@ -14087,22 +14087,6 @@
           "genus": "Tyrannus"
         },
         {
-          "label": "Pionus menstruus",
-          "registros": 40,
-          "slug_especie": "pionus-menstruus",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2479902",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e6089483c45700544e3e8f/summary",
-          "species": "Pionus menstruus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Psittaciformes",
-          "family": "Psittacidae",
-          "genus": "Pionus"
-        },
-        {
           "label": "Vanellus chilensis",
           "registros": 40,
           "slug_especie": "vanellus-chilensis",
@@ -14117,6 +14101,22 @@
           "order": "Charadriiformes",
           "family": "Charadriidae",
           "genus": "Vanellus"
+        },
+        {
+          "label": "Pionus menstruus",
+          "registros": 40,
+          "slug_especie": "pionus-menstruus",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2479902",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e6089483c45700544e3e8f/summary",
+          "species": "Pionus menstruus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Psittaciformes",
+          "family": "Psittacidae",
+          "genus": "Pionus"
         },
         {
           "label": "Myiozetetes cayanensis",

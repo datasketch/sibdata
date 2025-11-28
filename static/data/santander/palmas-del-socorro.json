@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -1077,19 +1077,19 @@
           "slug_tematica": "migratorias"
         },
         {
-          "label": "Piranga rubra",
-          "slug_especie": "piranga-rubra",
-          "registros": 10,
-          "url_gbif": "https://www.gbif.org/species/2488485",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cd0550207ecea54a561e5c/summary",
-          "slug_tematica": "migratorias"
-        },
-        {
           "label": "Setophaga petechia",
           "slug_especie": "setophaga-petechia",
           "registros": 10,
           "url_gbif": "https://www.gbif.org/species/7341834",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56cf1f393c16479905cba7c6/summary",
+          "slug_tematica": "migratorias"
+        },
+        {
+          "label": "Piranga rubra",
+          "slug_especie": "piranga-rubra",
+          "registros": 10,
+          "url_gbif": "https://www.gbif.org/species/2488485",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cd0550207ecea54a561e5c/summary",
           "slug_tematica": "migratorias"
         },
         {
@@ -1117,14 +1117,6 @@
           "slug_tematica": "migratorias"
         },
         {
-          "label": "Myiodynastes maculatus",
-          "slug_especie": "myiodynastes-maculatus",
-          "registros": 3,
-          "url_gbif": "https://www.gbif.org/species/2483497",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e3abb283c45700544e3df9/summary",
-          "slug_tematica": "migratorias"
-        },
-        {
           "label": "Setophaga fusca",
           "slug_especie": "setophaga-fusca",
           "registros": 3,
@@ -1133,11 +1125,19 @@
           "slug_tematica": "migratorias"
         },
         {
-          "label": "Icterus galbula",
-          "slug_especie": "icterus-galbula",
+          "label": "Myiodynastes maculatus",
+          "slug_especie": "myiodynastes-maculatus",
+          "registros": 3,
+          "url_gbif": "https://www.gbif.org/species/2483497",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e3abb283c45700544e3df9/summary",
+          "slug_tematica": "migratorias"
+        },
+        {
+          "label": "Setophaga cerulea",
+          "slug_especie": "setophaga-cerulea",
           "registros": 2,
-          "url_gbif": "https://www.gbif.org/species/2484340",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e79b5983c45700544e421d/summary",
+          "url_gbif": "https://www.gbif.org/species/6093350",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf0ecd3c16479905cba7c0/summary",
           "slug_tematica": "migratorias"
         }
       ]
@@ -2204,22 +2204,6 @@
       ],
       "species_list_top": [
         {
-          "label": "Thraupis episcopus",
-          "registros": 31,
-          "slug_especie": "thraupis-episcopus",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2488602",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf719b3c16479905cba7e1/summary",
-          "species": "Thraupis episcopus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Thraupis"
-        },
-        {
           "label": "Tyrannus melancholicus",
           "registros": 31,
           "slug_especie": "tyrannus-melancholicus",
@@ -2234,6 +2218,22 @@
           "order": "Passeriformes",
           "family": "Tyrannidae",
           "genus": "Tyrannus"
+        },
+        {
+          "label": "Thraupis episcopus",
+          "registros": 31,
+          "slug_especie": "thraupis-episcopus",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2488602",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf719b3c16479905cba7e1/summary",
+          "species": "Thraupis episcopus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Thraupis"
         },
         {
           "label": "Ramphocelus dimidiatus",
@@ -2284,22 +2284,6 @@
           "genus": "Pyrocephalus"
         },
         {
-          "label": "Thraupis palmarum",
-          "registros": 22,
-          "slug_especie": "thraupis-palmarum",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/9436876",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf75913c16479905cba7e4/summary",
-          "species": "Thraupis palmarum",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Thraupis"
-        },
-        {
           "label": "Turdus ignobilis",
           "registros": 22,
           "slug_especie": "turdus-ignobilis",
@@ -2314,6 +2298,22 @@
           "order": "Passeriformes",
           "family": "Turdidae",
           "genus": "Turdus"
+        },
+        {
+          "label": "Thraupis palmarum",
+          "registros": 22,
+          "slug_especie": "thraupis-palmarum",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/9436876",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf75913c16479905cba7e4/summary",
+          "species": "Thraupis palmarum",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Thraupis"
         },
         {
           "label": "Pitangus sulphuratus",
@@ -2348,6 +2348,21 @@
           "genus": "Sicalis"
         },
         {
+          "label": "Stilpnia vitriolina",
+          "registros": 19,
+          "slug_especie": "stilpnia-vitriolina",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/11081628",
+          "species": "Stilpnia vitriolina",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Stilpnia"
+        },
+        {
           "label": "Coragyps atratus",
           "registros": 19,
           "slug_especie": "coragyps-atratus",
@@ -2362,21 +2377,6 @@
           "order": "Accipitriformes",
           "family": "Cathartidae",
           "genus": "Coragyps"
-        },
-        {
-          "label": "Stilpnia vitriolina",
-          "registros": 19,
-          "slug_especie": "stilpnia-vitriolina",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/11081628",
-          "species": "Stilpnia vitriolina",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Stilpnia"
         }
       ],
       "species_list_tematica": {
@@ -2675,24 +2675,6 @@
             "genus": "Cathartes"
           },
           {
-            "label": "Piranga rubra",
-            "registros": 10,
-            "slug_especie": "piranga-rubra",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2488485",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56cd0550207ecea54a561e5c/summary",
-            "species": "Piranga rubra",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Cardinalidae",
-            "genus": "Piranga"
-          },
-          {
             "label": "Setophaga petechia",
             "registros": 10,
             "slug_especie": "setophaga-petechia",
@@ -2709,6 +2691,24 @@
             "order": "Passeriformes",
             "family": "Parulidae",
             "genus": "Setophaga"
+          },
+          {
+            "label": "Piranga rubra",
+            "registros": 10,
+            "slug_especie": "piranga-rubra",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2488485",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cd0550207ecea54a561e5c/summary",
+            "species": "Piranga rubra",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Cardinalidae",
+            "genus": "Piranga"
           },
           {
             "label": "Myiodynastes luteiventris",
@@ -2765,6 +2765,24 @@
             "genus": "Catharus"
           },
           {
+            "label": "Setophaga fusca",
+            "registros": 3,
+            "slug_especie": "setophaga-fusca",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/6093199",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cf166a3c16479905cba7c4/summary",
+            "species": "Setophaga fusca",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Parulidae",
+            "genus": "Setophaga"
+          },
+          {
             "label": "Myiodynastes maculatus",
             "registros": 3,
             "slug_especie": "myiodynastes-maculatus",
@@ -2783,16 +2801,16 @@
             "genus": "Myiodynastes"
           },
           {
-            "label": "Setophaga fusca",
-            "registros": 3,
-            "slug_especie": "setophaga-fusca",
+            "label": "Setophaga cerulea",
+            "registros": 2,
+            "slug_especie": "setophaga-cerulea",
             "slug_tematica": "migratorias",
             "tematica_label": "Migratorias",
             "slug_grupo": "animales",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/6093199",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56cf166a3c16479905cba7c4/summary",
-            "species": "Setophaga fusca",
+            "url_gbif": "https://www.gbif.org/species/6093350",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cf0ecd3c16479905cba7c0/summary",
+            "species": "Setophaga cerulea",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Aves",
@@ -2817,24 +2835,6 @@
             "order": "Passeriformes",
             "family": "Icteridae",
             "genus": "Icterus"
-          },
-          {
-            "label": "Setophaga cerulea",
-            "registros": 2,
-            "slug_especie": "setophaga-cerulea",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/6093350",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56cf0ecd3c16479905cba7c0/summary",
-            "species": "Setophaga cerulea",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Parulidae",
-            "genus": "Setophaga"
           }
         ],
         "endemicas": [
@@ -3544,22 +3544,6 @@
       "subgrupo_especies": [],
       "species_list_top": [
         {
-          "label": "Thraupis episcopus",
-          "registros": 31,
-          "slug_especie": "thraupis-episcopus",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2488602",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf719b3c16479905cba7e1/summary",
-          "species": "Thraupis episcopus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Thraupis"
-        },
-        {
           "label": "Tyrannus melancholicus",
           "registros": 31,
           "slug_especie": "tyrannus-melancholicus",
@@ -3574,6 +3558,22 @@
           "order": "Passeriformes",
           "family": "Tyrannidae",
           "genus": "Tyrannus"
+        },
+        {
+          "label": "Thraupis episcopus",
+          "registros": 31,
+          "slug_especie": "thraupis-episcopus",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2488602",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf719b3c16479905cba7e1/summary",
+          "species": "Thraupis episcopus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Thraupis"
         },
         {
           "label": "Ramphocelus dimidiatus",
@@ -3624,22 +3624,6 @@
           "genus": "Pyrocephalus"
         },
         {
-          "label": "Thraupis palmarum",
-          "registros": 22,
-          "slug_especie": "thraupis-palmarum",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/9436876",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf75913c16479905cba7e4/summary",
-          "species": "Thraupis palmarum",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Thraupis"
-        },
-        {
           "label": "Turdus ignobilis",
           "registros": 22,
           "slug_especie": "turdus-ignobilis",
@@ -3654,6 +3638,22 @@
           "order": "Passeriformes",
           "family": "Turdidae",
           "genus": "Turdus"
+        },
+        {
+          "label": "Thraupis palmarum",
+          "registros": 22,
+          "slug_especie": "thraupis-palmarum",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/9436876",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf75913c16479905cba7e4/summary",
+          "species": "Thraupis palmarum",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Thraupis"
         },
         {
           "label": "Pitangus sulphuratus",
@@ -3688,6 +3688,21 @@
           "genus": "Sicalis"
         },
         {
+          "label": "Stilpnia vitriolina",
+          "registros": 19,
+          "slug_especie": "stilpnia-vitriolina",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/11081628",
+          "species": "Stilpnia vitriolina",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Stilpnia"
+        },
+        {
           "label": "Coragyps atratus",
           "registros": 19,
           "slug_especie": "coragyps-atratus",
@@ -3702,21 +3717,6 @@
           "order": "Accipitriformes",
           "family": "Cathartidae",
           "genus": "Coragyps"
-        },
-        {
-          "label": "Stilpnia vitriolina",
-          "registros": 19,
-          "slug_especie": "stilpnia-vitriolina",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/11081628",
-          "species": "Stilpnia vitriolina",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Stilpnia"
         }
       ],
       "species_list_tematica": {
@@ -4015,24 +4015,6 @@
             "genus": "Cathartes"
           },
           {
-            "label": "Piranga rubra",
-            "registros": 10,
-            "slug_especie": "piranga-rubra",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2488485",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56cd0550207ecea54a561e5c/summary",
-            "species": "Piranga rubra",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Cardinalidae",
-            "genus": "Piranga"
-          },
-          {
             "label": "Setophaga petechia",
             "registros": 10,
             "slug_especie": "setophaga-petechia",
@@ -4049,6 +4031,24 @@
             "order": "Passeriformes",
             "family": "Parulidae",
             "genus": "Setophaga"
+          },
+          {
+            "label": "Piranga rubra",
+            "registros": 10,
+            "slug_especie": "piranga-rubra",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2488485",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cd0550207ecea54a561e5c/summary",
+            "species": "Piranga rubra",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Cardinalidae",
+            "genus": "Piranga"
           },
           {
             "label": "Myiodynastes luteiventris",
@@ -4105,6 +4105,24 @@
             "genus": "Catharus"
           },
           {
+            "label": "Setophaga fusca",
+            "registros": 3,
+            "slug_especie": "setophaga-fusca",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/6093199",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cf166a3c16479905cba7c4/summary",
+            "species": "Setophaga fusca",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Parulidae",
+            "genus": "Setophaga"
+          },
+          {
             "label": "Myiodynastes maculatus",
             "registros": 3,
             "slug_especie": "myiodynastes-maculatus",
@@ -4123,16 +4141,16 @@
             "genus": "Myiodynastes"
           },
           {
-            "label": "Setophaga fusca",
-            "registros": 3,
-            "slug_especie": "setophaga-fusca",
+            "label": "Setophaga cerulea",
+            "registros": 2,
+            "slug_especie": "setophaga-cerulea",
             "slug_tematica": "migratorias",
             "tematica_label": "Migratorias",
             "slug_grupo": "aves",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/6093199",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56cf166a3c16479905cba7c4/summary",
-            "species": "Setophaga fusca",
+            "url_gbif": "https://www.gbif.org/species/6093350",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cf0ecd3c16479905cba7c0/summary",
+            "species": "Setophaga cerulea",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Aves",
@@ -4157,24 +4175,6 @@
             "order": "Passeriformes",
             "family": "Icteridae",
             "genus": "Icterus"
-          },
-          {
-            "label": "Setophaga cerulea",
-            "registros": 2,
-            "slug_especie": "setophaga-cerulea",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/6093350",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56cf0ecd3c16479905cba7c0/summary",
-            "species": "Setophaga cerulea",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Parulidae",
-            "genus": "Setophaga"
           }
         ],
         "endemicas": [
@@ -8183,22 +8183,6 @@
       ],
       "species_list_top": [
         {
-          "label": "Thraupis episcopus",
-          "registros": 31,
-          "slug_especie": "thraupis-episcopus",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2488602",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf719b3c16479905cba7e1/summary",
-          "species": "Thraupis episcopus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Thraupis"
-        },
-        {
           "label": "Tyrannus melancholicus",
           "registros": 31,
           "slug_especie": "tyrannus-melancholicus",
@@ -8213,6 +8197,22 @@
           "order": "Passeriformes",
           "family": "Tyrannidae",
           "genus": "Tyrannus"
+        },
+        {
+          "label": "Thraupis episcopus",
+          "registros": 31,
+          "slug_especie": "thraupis-episcopus",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2488602",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf719b3c16479905cba7e1/summary",
+          "species": "Thraupis episcopus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Thraupis"
         },
         {
           "label": "Ramphocelus dimidiatus",
@@ -8263,22 +8263,6 @@
           "genus": "Pyrocephalus"
         },
         {
-          "label": "Thraupis palmarum",
-          "registros": 22,
-          "slug_especie": "thraupis-palmarum",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/9436876",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf75913c16479905cba7e4/summary",
-          "species": "Thraupis palmarum",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Thraupis"
-        },
-        {
           "label": "Turdus ignobilis",
           "registros": 22,
           "slug_especie": "turdus-ignobilis",
@@ -8293,6 +8277,22 @@
           "order": "Passeriformes",
           "family": "Turdidae",
           "genus": "Turdus"
+        },
+        {
+          "label": "Thraupis palmarum",
+          "registros": 22,
+          "slug_especie": "thraupis-palmarum",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/9436876",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf75913c16479905cba7e4/summary",
+          "species": "Thraupis palmarum",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Thraupis"
         },
         {
           "label": "Pitangus sulphuratus",
@@ -8654,24 +8654,6 @@
             "genus": "Cathartes"
           },
           {
-            "label": "Piranga rubra",
-            "registros": 10,
-            "slug_especie": "piranga-rubra",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2488485",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56cd0550207ecea54a561e5c/summary",
-            "species": "Piranga rubra",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Cardinalidae",
-            "genus": "Piranga"
-          },
-          {
             "label": "Setophaga petechia",
             "registros": 10,
             "slug_especie": "setophaga-petechia",
@@ -8688,6 +8670,24 @@
             "order": "Passeriformes",
             "family": "Parulidae",
             "genus": "Setophaga"
+          },
+          {
+            "label": "Piranga rubra",
+            "registros": 10,
+            "slug_especie": "piranga-rubra",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2488485",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cd0550207ecea54a561e5c/summary",
+            "species": "Piranga rubra",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Cardinalidae",
+            "genus": "Piranga"
           },
           {
             "label": "Myiodynastes luteiventris",
@@ -8744,6 +8744,24 @@
             "genus": "Catharus"
           },
           {
+            "label": "Setophaga fusca",
+            "registros": 3,
+            "slug_especie": "setophaga-fusca",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/6093199",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cf166a3c16479905cba7c4/summary",
+            "species": "Setophaga fusca",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Parulidae",
+            "genus": "Setophaga"
+          },
+          {
             "label": "Myiodynastes maculatus",
             "registros": 3,
             "slug_especie": "myiodynastes-maculatus",
@@ -8762,16 +8780,16 @@
             "genus": "Myiodynastes"
           },
           {
-            "label": "Setophaga fusca",
-            "registros": 3,
-            "slug_especie": "setophaga-fusca",
+            "label": "Setophaga cerulea",
+            "registros": 2,
+            "slug_especie": "setophaga-cerulea",
             "slug_tematica": "migratorias",
             "tematica_label": "Migratorias",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/6093199",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56cf166a3c16479905cba7c4/summary",
-            "species": "Setophaga fusca",
+            "url_gbif": "https://www.gbif.org/species/6093350",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cf0ecd3c16479905cba7c0/summary",
+            "species": "Setophaga cerulea",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Aves",
@@ -8796,24 +8814,6 @@
             "order": "Passeriformes",
             "family": "Icteridae",
             "genus": "Icterus"
-          },
-          {
-            "label": "Setophaga cerulea",
-            "registros": 2,
-            "slug_especie": "setophaga-cerulea",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/6093350",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56cf0ecd3c16479905cba7c0/summary",
-            "species": "Setophaga cerulea",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Parulidae",
-            "genus": "Setophaga"
           }
         ],
         "endemicas": [

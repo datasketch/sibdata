@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -1227,19 +1227,19 @@
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Epidendrum pittieri",
-          "slug_especie": "epidendrum-pittieri",
-          "registros": 3,
-          "url_gbif": "https://www.gbif.org/species/5319736",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e1bd2b83c45700544e3d33/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
           "label": "Lesbia nuna",
           "slug_especie": "lesbia-nuna",
           "registros": 3,
           "url_gbif": "https://www.gbif.org/species/5228490",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56ca35c6f0106c67230e7459/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Epidendrum pittieri",
+          "slug_especie": "epidendrum-pittieri",
+          "registros": 3,
+          "url_gbif": "https://www.gbif.org/species/5319736",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e1bd2b83c45700544e3d33/summary",
           "slug_tematica": "cites-ii"
         }
       ],
@@ -1399,19 +1399,19 @@
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Epidendrum pittieri",
-          "slug_especie": "epidendrum-pittieri",
-          "registros": 3,
-          "url_gbif": "https://www.gbif.org/species/5319736",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e1bd2b83c45700544e3d33/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
           "label": "Lesbia nuna",
           "slug_especie": "lesbia-nuna",
           "registros": 3,
           "url_gbif": "https://www.gbif.org/species/5228490",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56ca35c6f0106c67230e7459/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Epidendrum pittieri",
+          "slug_especie": "epidendrum-pittieri",
+          "registros": 3,
+          "url_gbif": "https://www.gbif.org/species/5319736",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e1bd2b83c45700544e3d33/summary",
           "slug_tematica": "cites-ii"
         }
       ]
@@ -2539,6 +2539,21 @@
           "genus": "Clethra"
         },
         {
+          "label": "Monticalia corymbosa",
+          "registros": 46,
+          "slug_especie": "monticalia-corymbosa",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/4219134",
+          "species": "Monticalia corymbosa",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Asterales",
+          "family": "Asteraceae",
+          "genus": "Monticalia"
+        },
+        {
           "label": "Eryngium humboldtii",
           "registros": 46,
           "slug_especie": "eryngium-humboldtii",
@@ -2553,21 +2568,6 @@
           "order": "Apiales",
           "family": "Apiaceae",
           "genus": "Eryngium"
-        },
-        {
-          "label": "Monticalia corymbosa",
-          "registros": 46,
-          "slug_especie": "monticalia-corymbosa",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4219134",
-          "species": "Monticalia corymbosa",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Asterales",
-          "family": "Asteraceae",
-          "genus": "Monticalia"
         },
         {
           "label": "Hypericum strictum",
@@ -3128,23 +3128,6 @@
             "genus": "Espeletia"
           },
           {
-            "label": "Espeletia curialensis",
-            "registros": 5,
-            "slug_especie": "espeletia-curialensis",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "angiospermas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3105073",
-            "species": "Espeletia curialensis",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Asterales",
-            "family": "Asteraceae",
-            "genus": "Espeletia"
-          },
-          {
             "label": "Senecio niveoaureus",
             "registros": 5,
             "slug_especie": "senecio-niveoaureus",
@@ -3160,6 +3143,23 @@
             "order": "Asterales",
             "family": "Asteraceae",
             "genus": "Senecio"
+          },
+          {
+            "label": "Espeletia curialensis",
+            "registros": 5,
+            "slug_especie": "espeletia-curialensis",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "angiospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/3105073",
+            "species": "Espeletia curialensis",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Asterales",
+            "family": "Asteraceae",
+            "genus": "Espeletia"
           },
           {
             "label": "Espeletia episcopalis",
@@ -3755,22 +3755,6 @@
           "genus": "Icterus"
         },
         {
-          "label": "Diglossa humeralis",
-          "registros": 25,
-          "slug_especie": "diglossa-humeralis",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5230680",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c53c72f0106c67230e739c/summary",
-          "species": "Diglossa humeralis",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Diglossa"
-        },
-        {
           "label": "Zenaida auriculata",
           "registros": 25,
           "slug_especie": "zenaida-auriculata",
@@ -3785,6 +3769,22 @@
           "order": "Columbiformes",
           "family": "Columbidae",
           "genus": "Zenaida"
+        },
+        {
+          "label": "Diglossa humeralis",
+          "registros": 25,
+          "slug_especie": "diglossa-humeralis",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5230680",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c53c72f0106c67230e739c/summary",
+          "species": "Diglossa humeralis",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Diglossa"
         }
       ],
       "species_list_tematica": {
@@ -4044,23 +4044,6 @@
             "genus": "Amazilia"
           },
           {
-            "label": "Boissonneaua flavescens",
-            "registros": 2,
-            "slug_especie": "boissonneaua-flavescens",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476787",
-            "species": "Boissonneaua flavescens",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Boissonneaua"
-          },
-          {
             "label": "Glaucidium jardinii",
             "registros": 2,
             "slug_especie": "glaucidium-jardinii",
@@ -4095,6 +4078,23 @@
             "order": "Apodiformes",
             "family": "Trochilidae",
             "genus": "Lesbia"
+          },
+          {
+            "label": "Boissonneaua flavescens",
+            "registros": 2,
+            "slug_especie": "boissonneaua-flavescens",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2476787",
+            "species": "Boissonneaua flavescens",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Boissonneaua"
           },
           {
             "label": "Tremarctos ornatus",
@@ -5223,21 +5223,6 @@
           "genus": "Crotophaga"
         },
         {
-          "label": "Setophaga pitiayumi",
-          "registros": 22,
-          "slug_especie": "setophaga-pitiayumi",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7341895",
-          "species": "Setophaga pitiayumi",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Parulidae",
-          "genus": "Setophaga"
-        },
-        {
           "label": "Synallaxis subpudica",
           "registros": 22,
           "slug_especie": "synallaxis-subpudica",
@@ -5252,6 +5237,21 @@
           "order": "Passeriformes",
           "family": "Furnariidae",
           "genus": "Synallaxis"
+        },
+        {
+          "label": "Setophaga pitiayumi",
+          "registros": 22,
+          "slug_especie": "setophaga-pitiayumi",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7341895",
+          "species": "Setophaga pitiayumi",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Parulidae",
+          "genus": "Setophaga"
         }
       ],
       "species_list_tematica": {
@@ -7419,21 +7419,6 @@
           "genus": "Syzygiella"
         },
         {
-          "label": "Frullania atrata",
-          "registros": 5,
-          "slug_especie": "frullania-atrata",
-          "slug_grupo": "hepaticas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7565196",
-          "species": "Frullania atrata",
-          "kingdom": "Plantae",
-          "phylum": "Marchantiophyta",
-          "class": "Jungermanniopsida",
-          "order": "Porellales",
-          "family": "Frullaniaceae",
-          "genus": "Frullania"
-        },
-        {
           "label": "Solenostoma sphaerocarpum",
           "registros": 5,
           "slug_especie": "solenostoma-sphaerocarpum",
@@ -7449,13 +7434,13 @@
           "genus": "Solenostoma"
         },
         {
-          "label": "Frullania tetraptera",
-          "registros": 4,
-          "slug_especie": "frullania-tetraptera",
+          "label": "Frullania atrata",
+          "registros": 5,
+          "slug_especie": "frullania-atrata",
           "slug_grupo": "hepaticas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7570138",
-          "species": "Frullania tetraptera",
+          "url_gbif": "https://www.gbif.org/species/7565196",
+          "species": "Frullania atrata",
           "kingdom": "Plantae",
           "phylum": "Marchantiophyta",
           "class": "Jungermanniopsida",
@@ -7477,6 +7462,21 @@
           "order": "Jungermanniales",
           "family": "Balantiopsidaceae",
           "genus": "Isotachis"
+        },
+        {
+          "label": "Frullania tetraptera",
+          "registros": 4,
+          "slug_especie": "frullania-tetraptera",
+          "slug_grupo": "hepaticas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7570138",
+          "species": "Frullania tetraptera",
+          "kingdom": "Plantae",
+          "phylum": "Marchantiophyta",
+          "class": "Jungermanniopsida",
+          "order": "Porellales",
+          "family": "Frullaniaceae",
+          "genus": "Frullania"
         },
         {
           "label": "Plagiochila longispina",
@@ -7524,21 +7524,6 @@
           "genus": "Fuscocephaloziopsis"
         },
         {
-          "label": "Monoclea gottschei",
-          "registros": 3,
-          "slug_especie": "monoclea-gottschei",
-          "slug_grupo": "hepaticas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2688635",
-          "species": "Monoclea gottschei",
-          "kingdom": "Plantae",
-          "phylum": "Marchantiophyta",
-          "class": "Marchantiopsida",
-          "order": "Marchantiales",
-          "family": "Monocleaceae",
-          "genus": "Monoclea"
-        },
-        {
           "label": "Noteroclada confluens",
           "registros": 3,
           "slug_especie": "noteroclada-confluens",
@@ -7552,6 +7537,21 @@
           "order": "Pelliales",
           "family": "Noterocladaceae",
           "genus": "Noteroclada"
+        },
+        {
+          "label": "Monoclea gottschei",
+          "registros": 3,
+          "slug_especie": "monoclea-gottschei",
+          "slug_grupo": "hepaticas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2688635",
+          "species": "Monoclea gottschei",
+          "kingdom": "Plantae",
+          "phylum": "Marchantiophyta",
+          "class": "Marchantiopsida",
+          "order": "Marchantiales",
+          "family": "Monocleaceae",
+          "genus": "Monoclea"
         }
       ],
       "species_list_tematica": {
@@ -10380,21 +10380,6 @@
           "genus": "Thuidium"
         },
         {
-          "label": "Acidodontium megalocarpum",
-          "registros": 8,
-          "slug_especie": "acidodontium-megalocarpum",
-          "slug_grupo": "musgos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2677015",
-          "species": "Acidodontium megalocarpum",
-          "kingdom": "Plantae",
-          "phylum": "Bryophyta",
-          "class": "Bryopsida",
-          "order": "Bryales",
-          "family": "Bryaceae",
-          "genus": "Acidodontium"
-        },
-        {
           "label": "Campylopus albidovirens",
           "registros": 8,
           "slug_especie": "campylopus-albidovirens",
@@ -10408,6 +10393,21 @@
           "order": "Dicranales",
           "family": "Leucobryaceae",
           "genus": "Campylopus"
+        },
+        {
+          "label": "Acidodontium megalocarpum",
+          "registros": 8,
+          "slug_especie": "acidodontium-megalocarpum",
+          "slug_grupo": "musgos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2677015",
+          "species": "Acidodontium megalocarpum",
+          "kingdom": "Plantae",
+          "phylum": "Bryophyta",
+          "class": "Bryopsida",
+          "order": "Bryales",
+          "family": "Bryaceae",
+          "genus": "Acidodontium"
         },
         {
           "label": "Leptodontium longicaule",
@@ -11303,19 +11303,19 @@
           "genus": "Clethra"
         },
         {
-          "label": "Campylopus cavifolius",
+          "label": "Monticalia corymbosa",
           "registros": 46,
-          "slug_especie": "campylopus-cavifolius",
+          "slug_especie": "monticalia-corymbosa",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5281947",
-          "species": "Campylopus cavifolius",
+          "url_gbif": "https://www.gbif.org/species/4219134",
+          "species": "Monticalia corymbosa",
           "kingdom": "Plantae",
-          "phylum": "Bryophyta",
-          "class": "Bryopsida",
-          "order": "Dicranales",
-          "family": "Leucobryaceae",
-          "genus": "Campylopus"
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Asterales",
+          "family": "Asteraceae",
+          "genus": "Monticalia"
         },
         {
           "label": "Eryngium humboldtii",
@@ -11334,19 +11334,34 @@
           "genus": "Eryngium"
         },
         {
-          "label": "Monticalia corymbosa",
+          "label": "Campylopus cavifolius",
           "registros": 46,
-          "slug_especie": "monticalia-corymbosa",
+          "slug_especie": "campylopus-cavifolius",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4219134",
-          "species": "Monticalia corymbosa",
+          "url_gbif": "https://www.gbif.org/species/5281947",
+          "species": "Campylopus cavifolius",
+          "kingdom": "Plantae",
+          "phylum": "Bryophyta",
+          "class": "Bryopsida",
+          "order": "Dicranales",
+          "family": "Leucobryaceae",
+          "genus": "Campylopus"
+        },
+        {
+          "label": "Morella parvifolia",
+          "registros": 28,
+          "slug_especie": "morella-parvifolia",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3745064",
+          "species": "Morella parvifolia",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Asterales",
-          "family": "Asteraceae",
-          "genus": "Monticalia"
+          "order": "Fagales",
+          "family": "Myricaceae",
+          "genus": "Morella"
         },
         {
           "label": "Hypericum strictum",
@@ -11363,21 +11378,6 @@
           "order": "Malpighiales",
           "family": "Hypericaceae",
           "genus": "Hypericum"
-        },
-        {
-          "label": "Morella parvifolia",
-          "registros": 28,
-          "slug_especie": "morella-parvifolia",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3745064",
-          "species": "Morella parvifolia",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Fagales",
-          "family": "Myricaceae",
-          "genus": "Morella"
         },
         {
           "label": "Campylopus pittieri",
@@ -13331,23 +13331,6 @@
             "genus": "Espeletia"
           },
           {
-            "label": "Espeletia curialensis",
-            "registros": 5,
-            "slug_especie": "espeletia-curialensis",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "vasculares",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3105073",
-            "species": "Espeletia curialensis",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Asterales",
-            "family": "Asteraceae",
-            "genus": "Espeletia"
-          },
-          {
             "label": "Senecio niveoaureus",
             "registros": 5,
             "slug_especie": "senecio-niveoaureus",
@@ -13363,6 +13346,23 @@
             "order": "Asterales",
             "family": "Asteraceae",
             "genus": "Senecio"
+          },
+          {
+            "label": "Espeletia curialensis",
+            "registros": 5,
+            "slug_especie": "espeletia-curialensis",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "vasculares",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/3105073",
+            "species": "Espeletia curialensis",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Asterales",
+            "family": "Asteraceae",
+            "genus": "Espeletia"
           },
           {
             "label": "Espeletia episcopalis",
@@ -14257,23 +14257,6 @@
             "genus": "Amazilia"
           },
           {
-            "label": "Boissonneaua flavescens",
-            "registros": 2,
-            "slug_especie": "boissonneaua-flavescens",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476787",
-            "species": "Boissonneaua flavescens",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Boissonneaua"
-          },
-          {
             "label": "Glaucidium jardinii",
             "registros": 2,
             "slug_especie": "glaucidium-jardinii",
@@ -14308,6 +14291,23 @@
             "order": "Apodiformes",
             "family": "Trochilidae",
             "genus": "Lesbia"
+          },
+          {
+            "label": "Boissonneaua flavescens",
+            "registros": 2,
+            "slug_especie": "boissonneaua-flavescens",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2476787",
+            "species": "Boissonneaua flavescens",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Boissonneaua"
           },
           {
             "label": "Tremarctos ornatus",

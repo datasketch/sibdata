@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -2381,6 +2381,22 @@
           "genus": "Coragyps"
         },
         {
+          "label": "Tyrannus melancholicus",
+          "registros": 13,
+          "slug_especie": "tyrannus-melancholicus",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5229662",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cfa86b3c16479905cba7f5/summary",
+          "species": "Tyrannus melancholicus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Tyrannidae",
+          "genus": "Tyrannus"
+        },
+        {
           "label": "Melanerpes rubricapillus",
           "registros": 13,
           "slug_especie": "melanerpes-rubricapillus",
@@ -2411,38 +2427,6 @@
           "order": "Passeriformes",
           "family": "Thraupidae",
           "genus": "Thraupis"
-        },
-        {
-          "label": "Tyrannus melancholicus",
-          "registros": 13,
-          "slug_especie": "tyrannus-melancholicus",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5229662",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cfa86b3c16479905cba7f5/summary",
-          "species": "Tyrannus melancholicus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Tyrannidae",
-          "genus": "Tyrannus"
-        },
-        {
-          "label": "Columbina talpacoti",
-          "registros": 10,
-          "slug_especie": "columbina-talpacoti",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2495858",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4be5ef0106c67230e7389/summary",
-          "species": "Columbina talpacoti",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Columbiformes",
-          "family": "Columbidae",
-          "genus": "Columbina"
         },
         {
           "label": "Mimus gilvus",
@@ -2477,35 +2461,36 @@
           "genus": "Sicalis"
         },
         {
-          "label": "Coereba flaveola",
-          "registros": 9,
-          "slug_especie": "coereba-flaveola",
+          "label": "Columbina talpacoti",
+          "registros": 10,
+          "slug_especie": "columbina-talpacoti",
           "slug_grupo": "animales",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2493744",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56df75bd83c45700544e3c7b/summary",
-          "species": "Coereba flaveola",
+          "url_gbif": "https://www.gbif.org/species/2495858",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4be5ef0106c67230e7389/summary",
+          "species": "Columbina talpacoti",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Columbiformes",
+          "family": "Columbidae",
+          "genus": "Columbina"
+        },
+        {
+          "label": "Ramphocelus dimidiatus",
+          "registros": 9,
+          "slug_especie": "ramphocelus-dimidiatus",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2488424",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56ce36de3c16479905cba793/summary",
+          "species": "Ramphocelus dimidiatus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
           "family": "Thraupidae",
-          "genus": "Coereba"
-        },
-        {
-          "label": "Creagrutus guanes",
-          "registros": 9,
-          "slug_especie": "creagrutus-guanes",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2353730",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/59d682bf5f369343442fcfa2/summary",
-          "species": "Creagrutus guanes",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Characidae",
-          "genus": "Creagrutus"
+          "genus": "Ramphocelus"
         },
         {
           "label": "Ortalis columbiana",
@@ -2523,20 +2508,35 @@
           "genus": "Ortalis"
         },
         {
-          "label": "Ramphocelus dimidiatus",
+          "label": "Creagrutus guanes",
           "registros": 9,
-          "slug_especie": "ramphocelus-dimidiatus",
+          "slug_especie": "creagrutus-guanes",
           "slug_grupo": "animales",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2488424",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56ce36de3c16479905cba793/summary",
-          "species": "Ramphocelus dimidiatus",
+          "url_gbif": "https://www.gbif.org/species/2353730",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/59d682bf5f369343442fcfa2/summary",
+          "species": "Creagrutus guanes",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Characidae",
+          "genus": "Creagrutus"
+        },
+        {
+          "label": "Coereba flaveola",
+          "registros": 9,
+          "slug_especie": "coereba-flaveola",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2493744",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56df75bd83c45700544e3c7b/summary",
+          "species": "Coereba flaveola",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
           "family": "Thraupidae",
-          "genus": "Ramphocelus"
+          "genus": "Coereba"
         }
       ],
       "species_list_tematica": {
@@ -3771,6 +3771,22 @@
           "genus": "Coragyps"
         },
         {
+          "label": "Tyrannus melancholicus",
+          "registros": 13,
+          "slug_especie": "tyrannus-melancholicus",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5229662",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cfa86b3c16479905cba7f5/summary",
+          "species": "Tyrannus melancholicus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Tyrannidae",
+          "genus": "Tyrannus"
+        },
+        {
           "label": "Melanerpes rubricapillus",
           "registros": 13,
           "slug_especie": "melanerpes-rubricapillus",
@@ -3801,38 +3817,6 @@
           "order": "Passeriformes",
           "family": "Thraupidae",
           "genus": "Thraupis"
-        },
-        {
-          "label": "Tyrannus melancholicus",
-          "registros": 13,
-          "slug_especie": "tyrannus-melancholicus",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5229662",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cfa86b3c16479905cba7f5/summary",
-          "species": "Tyrannus melancholicus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Tyrannidae",
-          "genus": "Tyrannus"
-        },
-        {
-          "label": "Columbina talpacoti",
-          "registros": 10,
-          "slug_especie": "columbina-talpacoti",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2495858",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4be5ef0106c67230e7389/summary",
-          "species": "Columbina talpacoti",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Columbiformes",
-          "family": "Columbidae",
-          "genus": "Columbina"
         },
         {
           "label": "Mimus gilvus",
@@ -3867,20 +3851,36 @@
           "genus": "Sicalis"
         },
         {
-          "label": "Coereba flaveola",
-          "registros": 9,
-          "slug_especie": "coereba-flaveola",
+          "label": "Columbina talpacoti",
+          "registros": 10,
+          "slug_especie": "columbina-talpacoti",
           "slug_grupo": "aves",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2493744",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56df75bd83c45700544e3c7b/summary",
-          "species": "Coereba flaveola",
+          "url_gbif": "https://www.gbif.org/species/2495858",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4be5ef0106c67230e7389/summary",
+          "species": "Columbina talpacoti",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Columbiformes",
+          "family": "Columbidae",
+          "genus": "Columbina"
+        },
+        {
+          "label": "Ramphocelus dimidiatus",
+          "registros": 9,
+          "slug_especie": "ramphocelus-dimidiatus",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2488424",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56ce36de3c16479905cba793/summary",
+          "species": "Ramphocelus dimidiatus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
           "family": "Thraupidae",
-          "genus": "Coereba"
+          "genus": "Ramphocelus"
         },
         {
           "label": "Ortalis columbiana",
@@ -3898,20 +3898,20 @@
           "genus": "Ortalis"
         },
         {
-          "label": "Ramphocelus dimidiatus",
+          "label": "Coereba flaveola",
           "registros": 9,
-          "slug_especie": "ramphocelus-dimidiatus",
+          "slug_especie": "coereba-flaveola",
           "slug_grupo": "aves",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2488424",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56ce36de3c16479905cba793/summary",
-          "species": "Ramphocelus dimidiatus",
+          "url_gbif": "https://www.gbif.org/species/2493744",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56df75bd83c45700544e3c7b/summary",
+          "species": "Coereba flaveola",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
           "family": "Thraupidae",
-          "genus": "Ramphocelus"
+          "genus": "Coereba"
         }
       ],
       "species_list_tematica": {
@@ -9628,20 +9628,20 @@
       ],
       "species_list_top": [
         {
-          "label": "Coragyps atratus",
+          "label": "Tyrannus melancholicus",
           "registros": 13,
-          "slug_especie": "coragyps-atratus",
+          "slug_especie": "tyrannus-melancholicus",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2481942",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4fe28f0106c67230e7394/summary",
-          "species": "Coragyps atratus",
+          "url_gbif": "https://www.gbif.org/species/5229662",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cfa86b3c16479905cba7f5/summary",
+          "species": "Tyrannus melancholicus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": "Accipitriformes",
-          "family": "Cathartidae",
-          "genus": "Coragyps"
+          "order": "Passeriformes",
+          "family": "Tyrannidae",
+          "genus": "Tyrannus"
         },
         {
           "label": "Melanerpes rubricapillus",
@@ -9676,36 +9676,20 @@
           "genus": "Thraupis"
         },
         {
-          "label": "Tyrannus melancholicus",
+          "label": "Coragyps atratus",
           "registros": 13,
-          "slug_especie": "tyrannus-melancholicus",
+          "slug_especie": "coragyps-atratus",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5229662",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cfa86b3c16479905cba7f5/summary",
-          "species": "Tyrannus melancholicus",
+          "url_gbif": "https://www.gbif.org/species/2481942",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4fe28f0106c67230e7394/summary",
+          "species": "Coragyps atratus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Tyrannidae",
-          "genus": "Tyrannus"
-        },
-        {
-          "label": "Columbina talpacoti",
-          "registros": 10,
-          "slug_especie": "columbina-talpacoti",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2495858",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4be5ef0106c67230e7389/summary",
-          "species": "Columbina talpacoti",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Columbiformes",
-          "family": "Columbidae",
-          "genus": "Columbina"
+          "order": "Accipitriformes",
+          "family": "Cathartidae",
+          "genus": "Coragyps"
         },
         {
           "label": "Mimus gilvus",
@@ -9740,20 +9724,20 @@
           "genus": "Sicalis"
         },
         {
-          "label": "Coereba flaveola",
-          "registros": 9,
-          "slug_especie": "coereba-flaveola",
+          "label": "Columbina talpacoti",
+          "registros": 10,
+          "slug_especie": "columbina-talpacoti",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2493744",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56df75bd83c45700544e3c7b/summary",
-          "species": "Coereba flaveola",
+          "url_gbif": "https://www.gbif.org/species/2495858",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4be5ef0106c67230e7389/summary",
+          "species": "Columbina talpacoti",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Coereba"
+          "order": "Columbiformes",
+          "family": "Columbidae",
+          "genus": "Columbina"
         },
         {
           "label": "Creagrutus guanes",
@@ -9800,6 +9784,22 @@
           "order": "Passeriformes",
           "family": "Thraupidae",
           "genus": "Ramphocelus"
+        },
+        {
+          "label": "Coereba flaveola",
+          "registros": 9,
+          "slug_especie": "coereba-flaveola",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2493744",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56df75bd83c45700544e3c7b/summary",
+          "species": "Coereba flaveola",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Coereba"
         }
       ],
       "species_list_tematica": {

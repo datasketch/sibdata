@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -687,11 +687,11 @@
               "slug_tematica": "amenazadas-nacional-cr"
             },
             {
-              "label": "Leopardus tigrinus",
-              "slug_especie": "leopardus-tigrinus",
+              "label": "Themistoclesia mucronata",
+              "slug_especie": "themistoclesia-mucronata",
               "registros": 2,
-              "url_gbif": "https://www.gbif.org/species/2434930",
-              "url_cbc": "https://catalogo.biodiversidad.co/file/56c66e1ef0106c67230e73c3/summary",
+              "url_gbif": "https://www.gbif.org/species/4168737",
+              "url_cbc": "https://catalogo.biodiversidad.co/file/5b59df98f0d3bfe03057321c/summary",
               "slug_tematica": "amenazadas-nacional-vu"
             }
           ]
@@ -884,11 +884,11 @@
           "slug_tematica": "amenazadas-nacional-cr"
         },
         {
-          "label": "Leopardus tigrinus",
-          "slug_especie": "leopardus-tigrinus",
+          "label": "Themistoclesia mucronata",
+          "slug_especie": "themistoclesia-mucronata",
           "registros": 2,
-          "url_gbif": "https://www.gbif.org/species/2434930",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c66e1ef0106c67230e73c3/summary",
+          "url_gbif": "https://www.gbif.org/species/4168737",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5b59df98f0d3bfe03057321c/summary",
           "slug_tematica": "amenazadas-nacional-vu"
         }
       ],
@@ -1607,18 +1607,18 @@
           "slug_tematica": "endemicas"
         },
         {
+          "label": "Passiflora fimbriatistipula",
+          "slug_especie": "passiflora-fimbriatistipula",
+          "registros": 8,
+          "url_gbif": "https://www.gbif.org/species/3587647",
+          "slug_tematica": "endemicas"
+        },
+        {
           "label": "Myiarchus apicalis",
           "slug_especie": "myiarchus-apicalis",
           "registros": 8,
           "url_gbif": "https://www.gbif.org/species/2483558",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56e7a4fd83c45700544e4274/summary",
-          "slug_tematica": "endemicas"
-        },
-        {
-          "label": "Passiflora fimbriatistipula",
-          "slug_especie": "passiflora-fimbriatistipula",
-          "registros": 8,
-          "url_gbif": "https://www.gbif.org/species/3587647",
           "slug_tematica": "endemicas"
         },
         {
@@ -1644,17 +1644,17 @@
           "slug_tematica": "endemicas"
         },
         {
-          "label": "Gunnera morae",
-          "slug_especie": "gunnera-morae",
-          "registros": 4,
-          "url_gbif": "https://www.gbif.org/species/3723660",
-          "slug_tematica": "endemicas"
-        },
-        {
           "label": "Platystele lehmannii",
           "slug_especie": "platystele-lehmannii",
           "registros": 4,
           "url_gbif": "https://www.gbif.org/species/2790699",
+          "slug_tematica": "endemicas"
+        },
+        {
+          "label": "Gunnera morae",
+          "slug_especie": "gunnera-morae",
+          "registros": 4,
+          "url_gbif": "https://www.gbif.org/species/3723660",
           "slug_tematica": "endemicas"
         }
       ]
@@ -3306,36 +3306,6 @@
           "genus": "Quercus"
         },
         {
-          "label": "Bomarea hirsuta",
-          "registros": 5,
-          "slug_especie": "bomarea-hirsuta",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2754160",
-          "species": "Bomarea hirsuta",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Liliales",
-          "family": "Alstroemeriaceae",
-          "genus": "Bomarea"
-        },
-        {
-          "label": "Calceolaria colombiana",
-          "registros": 5,
-          "slug_especie": "calceolaria-colombiana",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7831047",
-          "species": "Calceolaria colombiana",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Lamiales",
-          "family": "Calceolariaceae",
-          "genus": "Calceolaria"
-        },
-        {
           "label": "Palicourea amethystina",
           "registros": 5,
           "slug_especie": "palicourea-amethystina",
@@ -3366,6 +3336,21 @@
           "genus": "Persea"
         },
         {
+          "label": "Calceolaria colombiana",
+          "registros": 5,
+          "slug_especie": "calceolaria-colombiana",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7831047",
+          "species": "Calceolaria colombiana",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Lamiales",
+          "family": "Calceolariaceae",
+          "genus": "Calceolaria"
+        },
+        {
           "label": "Vriesea drewii",
           "registros": 5,
           "slug_especie": "vriesea-drewii",
@@ -3379,6 +3364,21 @@
           "order": "Poales",
           "family": "Bromeliaceae",
           "genus": "Vriesea"
+        },
+        {
+          "label": "Bomarea hirsuta",
+          "registros": 5,
+          "slug_especie": "bomarea-hirsuta",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2754160",
+          "species": "Bomarea hirsuta",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Liliales",
+          "family": "Alstroemeriaceae",
+          "genus": "Bomarea"
         }
       ],
       "species_list_tematica": {
@@ -3843,6 +3843,24 @@
             "genus": "Fuchsia"
           },
           {
+            "label": "Themistoclesia mucronata",
+            "registros": 2,
+            "slug_especie": "themistoclesia-mucronata",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "angiospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/4168737",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/5b59df98f0d3bfe03057321c/summary",
+            "species": "Themistoclesia mucronata",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Ericales",
+            "family": "Ericaceae",
+            "genus": "Themistoclesia"
+          },
+          {
             "label": "Anthurium stipitatum",
             "registros": 2,
             "slug_especie": "anthurium-stipitatum",
@@ -3858,6 +3876,24 @@
             "order": "Alismatales",
             "family": "Araceae",
             "genus": "Anthurium"
+          },
+          {
+            "label": "Solanum flahaultii",
+            "registros": 2,
+            "slug_especie": "solanum-flahaultii",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "angiospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2931152",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7a41283c45700544e4265/summary",
+            "species": "Solanum flahaultii",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Solanales",
+            "family": "Solanaceae",
+            "genus": "Solanum"
           },
           {
             "label": "Epidendrum popayanense",
@@ -3912,23 +3948,6 @@
             "genus": "Freziera"
           },
           {
-            "label": "Passiflora popayanensis",
-            "registros": 2,
-            "slug_especie": "passiflora-popayanensis",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "angiospermas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3586524",
-            "species": "Passiflora popayanensis",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Malpighiales",
-            "family": "Passifloraceae",
-            "genus": "Passiflora"
-          },
-          {
             "label": "Siphocampylus niveus",
             "registros": 2,
             "slug_especie": "siphocampylus-niveus",
@@ -3946,40 +3965,21 @@
             "genus": "Siphocampylus"
           },
           {
-            "label": "Solanum flahaultii",
+            "label": "Passiflora popayanensis",
             "registros": 2,
-            "slug_especie": "solanum-flahaultii",
+            "slug_especie": "passiflora-popayanensis",
             "slug_tematica": "endemicas",
             "tematica_label": "Endémicas",
             "slug_grupo": "angiospermas",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2931152",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7a41283c45700544e4265/summary",
-            "species": "Solanum flahaultii",
+            "url_gbif": "https://www.gbif.org/species/3586524",
+            "species": "Passiflora popayanensis",
             "kingdom": "Plantae",
             "phylum": "Tracheophyta",
             "class": "Magnoliopsida",
-            "order": "Solanales",
-            "family": "Solanaceae",
-            "genus": "Solanum"
-          },
-          {
-            "label": "Themistoclesia mucronata",
-            "registros": 2,
-            "slug_especie": "themistoclesia-mucronata",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "angiospermas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/4168737",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/5b59df98f0d3bfe03057321c/summary",
-            "species": "Themistoclesia mucronata",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Ericales",
-            "family": "Ericaceae",
-            "genus": "Themistoclesia"
+            "order": "Malpighiales",
+            "family": "Passifloraceae",
+            "genus": "Passiflora"
           }
         ],
         "exoticas-total": [
@@ -9349,6 +9349,21 @@
           "genus": "Polystichum"
         },
         {
+          "label": "Elaphoglossum andicola",
+          "registros": 3,
+          "slug_especie": "elaphoglossum-andicola",
+          "slug_grupo": "helechos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/4011306",
+          "species": "Elaphoglossum andicola",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Polypodiopsida",
+          "order": "Polypodiales",
+          "family": "Dryopteridaceae",
+          "genus": "Elaphoglossum"
+        },
+        {
           "label": "Asplenium aethiopicum",
           "registros": 3,
           "slug_especie": "asplenium-aethiopicum",
@@ -9365,44 +9380,43 @@
           "genus": "Asplenium"
         },
         {
-          "label": "Dryopteris wallichiana",
+          "label": "Pteris muricata",
           "registros": 3,
-          "slug_especie": "dryopteris-wallichiana",
+          "slug_especie": "pteris-muricata",
           "slug_grupo": "helechos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5275137",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e04c4483c45700544e3cb8/summary",
-          "species": "Dryopteris wallichiana",
+          "url_gbif": "https://www.gbif.org/species/7310025",
+          "species": "Pteris muricata",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Polypodiopsida",
           "order": "Polypodiales",
-          "family": "Dryopteridaceae",
-          "genus": "Dryopteris"
+          "family": "Pteridaceae",
+          "genus": "Pteris"
         },
         {
-          "label": "Elaphoglossum andicola",
+          "label": "Pleopeltis murora",
           "registros": 3,
-          "slug_especie": "elaphoglossum-andicola",
+          "slug_especie": "pleopeltis-murora",
           "slug_grupo": "helechos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4011306",
-          "species": "Elaphoglossum andicola",
+          "url_gbif": "https://www.gbif.org/species/8130083",
+          "species": "Pleopeltis murora",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Polypodiopsida",
           "order": "Polypodiales",
-          "family": "Dryopteridaceae",
-          "genus": "Elaphoglossum"
+          "family": "Polypodiaceae",
+          "genus": "Pleopeltis"
         },
         {
-          "label": "Elaphoglossum cuspidatum",
+          "label": "Elaphoglossum laxisquama",
           "registros": 3,
-          "slug_especie": "elaphoglossum-cuspidatum",
+          "slug_especie": "elaphoglossum-laxisquama",
           "slug_grupo": "helechos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4011838",
-          "species": "Elaphoglossum cuspidatum",
+          "url_gbif": "https://www.gbif.org/species/4011864",
+          "species": "Elaphoglossum laxisquama",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Polypodiopsida",
@@ -9426,13 +9440,13 @@
           "genus": "Elaphoglossum"
         },
         {
-          "label": "Elaphoglossum laxisquama",
+          "label": "Elaphoglossum cuspidatum",
           "registros": 3,
-          "slug_especie": "elaphoglossum-laxisquama",
+          "slug_especie": "elaphoglossum-cuspidatum",
           "slug_grupo": "helechos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4011864",
-          "species": "Elaphoglossum laxisquama",
+          "url_gbif": "https://www.gbif.org/species/4011838",
+          "species": "Elaphoglossum cuspidatum",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Polypodiopsida",
@@ -9441,34 +9455,20 @@
           "genus": "Elaphoglossum"
         },
         {
-          "label": "Pleopeltis murora",
+          "label": "Dryopteris wallichiana",
           "registros": 3,
-          "slug_especie": "pleopeltis-murora",
+          "slug_especie": "dryopteris-wallichiana",
           "slug_grupo": "helechos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/8130083",
-          "species": "Pleopeltis murora",
+          "url_gbif": "https://www.gbif.org/species/5275137",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e04c4483c45700544e3cb8/summary",
+          "species": "Dryopteris wallichiana",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Polypodiopsida",
           "order": "Polypodiales",
-          "family": "Polypodiaceae",
-          "genus": "Pleopeltis"
-        },
-        {
-          "label": "Pteris muricata",
-          "registros": 3,
-          "slug_especie": "pteris-muricata",
-          "slug_grupo": "helechos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7310025",
-          "species": "Pteris muricata",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Polypodiopsida",
-          "order": "Polypodiales",
-          "family": "Pteridaceae",
-          "genus": "Pteris"
+          "family": "Dryopteridaceae",
+          "genus": "Dryopteris"
         }
       ],
       "species_list_tematica": {
@@ -11006,6 +11006,21 @@
           "genus": "Micandra"
         },
         {
+          "label": "Stehlikiana crassa",
+          "registros": 2,
+          "slug_especie": "stehlikiana-crassa",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2036624",
+          "species": "Stehlikiana crassa",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hemiptera",
+          "family": "Cicadellidae",
+          "genus": "Stehlikiana"
+        },
+        {
           "label": "Cheilomenes sexmaculata",
           "registros": 2,
           "slug_especie": "cheilomenes-sexmaculata",
@@ -11036,21 +11051,6 @@
           "genus": "Ocaria"
         },
         {
-          "label": "Stehlikiana crassa",
-          "registros": 2,
-          "slug_especie": "stehlikiana-crassa",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2036624",
-          "species": "Stehlikiana crassa",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Hemiptera",
-          "family": "Cicadellidae",
-          "genus": "Stehlikiana"
-        },
-        {
           "label": "Altopedaliodes reissi",
           "registros": 1,
           "slug_especie": "altopedaliodes-reissi",
@@ -11064,82 +11064,6 @@
           "order": "Lepidoptera",
           "family": "Nymphalidae",
           "genus": "Altopedaliodes"
-        },
-        {
-          "label": "Apis mellifera",
-          "registros": 1,
-          "slug_especie": "apis-mellifera",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1341976",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/58b995177bd3becd0fc7395e/summary",
-          "species": "Apis mellifera",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Hymenoptera",
-          "family": "Apidae",
-          "genus": "Apis"
-        },
-        {
-          "label": "Diabrotica balteata",
-          "registros": 1,
-          "slug_especie": "diabrotica-balteata",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1048505",
-          "species": "Diabrotica balteata",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Coleoptera",
-          "family": "Chrysomelidae",
-          "genus": "Diabrotica"
-        },
-        {
-          "label": "Golofa porteri",
-          "registros": 1,
-          "slug_especie": "golofa-porteri",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1074875",
-          "species": "Golofa porteri",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Coleoptera",
-          "family": "Scarabaeidae",
-          "genus": "Golofa"
-        },
-        {
-          "label": "Heterogomphus schoenherri",
-          "registros": 1,
-          "slug_especie": "heterogomphus-schoenherri",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4995583",
-          "species": "Heterogomphus schoenherri",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Coleoptera",
-          "family": "Scarabaeidae",
-          "genus": "Heterogomphus"
-        },
-        {
-          "label": "Isonychus podicalis",
-          "registros": 1,
-          "slug_especie": "isonychus-podicalis",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1059948",
-          "species": "Isonychus podicalis",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Coleoptera",
-          "family": "Scarabaeidae",
-          "genus": "Isonychus"
         },
         {
           "label": "Lamprospilus nicetus",
@@ -11187,6 +11111,21 @@
           "genus": "Leptohyphes"
         },
         {
+          "label": "Diabrotica balteata",
+          "registros": 1,
+          "slug_especie": "diabrotica-balteata",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1048505",
+          "species": "Diabrotica balteata",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Coleoptera",
+          "family": "Chrysomelidae",
+          "genus": "Diabrotica"
+        },
+        {
           "label": "Marachina maraches",
           "registros": 1,
           "slug_especie": "marachina-maraches",
@@ -11202,6 +11141,21 @@
           "genus": "Marachina"
         },
         {
+          "label": "Isonychus podicalis",
+          "registros": 1,
+          "slug_especie": "isonychus-podicalis",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1059948",
+          "species": "Isonychus podicalis",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Coleoptera",
+          "family": "Scarabaeidae",
+          "genus": "Isonychus"
+        },
+        {
           "label": "Miriclytus quadrifasciatus",
           "registros": 1,
           "slug_especie": "miriclytus-quadrifasciatus",
@@ -11215,6 +11169,21 @@
           "order": "Coleoptera",
           "family": "Cerambycidae",
           "genus": "Miriclytus"
+        },
+        {
+          "label": "Heterogomphus schoenherri",
+          "registros": 1,
+          "slug_especie": "heterogomphus-schoenherri",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/4995583",
+          "species": "Heterogomphus schoenherri",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Coleoptera",
+          "family": "Scarabaeidae",
+          "genus": "Heterogomphus"
         },
         {
           "label": "Paracosmia ambesa",
@@ -11275,6 +11244,37 @@
           "order": "Hymenoptera",
           "family": "Formicidae",
           "genus": "Rasopone"
+        },
+        {
+          "label": "Golofa porteri",
+          "registros": 1,
+          "slug_especie": "golofa-porteri",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1074875",
+          "species": "Golofa porteri",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Coleoptera",
+          "family": "Scarabaeidae",
+          "genus": "Golofa"
+        },
+        {
+          "label": "Apis mellifera",
+          "registros": 1,
+          "slug_especie": "apis-mellifera",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1341976",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/58b995177bd3becd0fc7395e/summary",
+          "species": "Apis mellifera",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hymenoptera",
+          "family": "Apidae",
+          "genus": "Apis"
         },
         {
           "label": "Triatoma nigromaculata",
@@ -11724,6 +11724,21 @@
           "genus": "Micandra"
         },
         {
+          "label": "Stehlikiana crassa",
+          "registros": 2,
+          "slug_especie": "stehlikiana-crassa",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2036624",
+          "species": "Stehlikiana crassa",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hemiptera",
+          "family": "Cicadellidae",
+          "genus": "Stehlikiana"
+        },
+        {
           "label": "Cheilomenes sexmaculata",
           "registros": 2,
           "slug_especie": "cheilomenes-sexmaculata",
@@ -11754,21 +11769,6 @@
           "genus": "Ocaria"
         },
         {
-          "label": "Stehlikiana crassa",
-          "registros": 2,
-          "slug_especie": "stehlikiana-crassa",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2036624",
-          "species": "Stehlikiana crassa",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Hemiptera",
-          "family": "Cicadellidae",
-          "genus": "Stehlikiana"
-        },
-        {
           "label": "Altopedaliodes reissi",
           "registros": 1,
           "slug_especie": "altopedaliodes-reissi",
@@ -11782,82 +11782,6 @@
           "order": "Lepidoptera",
           "family": "Nymphalidae",
           "genus": "Altopedaliodes"
-        },
-        {
-          "label": "Apis mellifera",
-          "registros": 1,
-          "slug_especie": "apis-mellifera",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1341976",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/58b995177bd3becd0fc7395e/summary",
-          "species": "Apis mellifera",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Hymenoptera",
-          "family": "Apidae",
-          "genus": "Apis"
-        },
-        {
-          "label": "Diabrotica balteata",
-          "registros": 1,
-          "slug_especie": "diabrotica-balteata",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1048505",
-          "species": "Diabrotica balteata",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Coleoptera",
-          "family": "Chrysomelidae",
-          "genus": "Diabrotica"
-        },
-        {
-          "label": "Golofa porteri",
-          "registros": 1,
-          "slug_especie": "golofa-porteri",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1074875",
-          "species": "Golofa porteri",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Coleoptera",
-          "family": "Scarabaeidae",
-          "genus": "Golofa"
-        },
-        {
-          "label": "Heterogomphus schoenherri",
-          "registros": 1,
-          "slug_especie": "heterogomphus-schoenherri",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4995583",
-          "species": "Heterogomphus schoenherri",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Coleoptera",
-          "family": "Scarabaeidae",
-          "genus": "Heterogomphus"
-        },
-        {
-          "label": "Hypolobocera beieri",
-          "registros": 1,
-          "slug_especie": "hypolobocera-beieri",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5791254",
-          "species": "Hypolobocera beieri",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Malacostraca",
-          "order": "Decapoda",
-          "family": "Pseudothelphusidae",
-          "genus": "Hypolobocera"
         },
         {
           "label": "Isonychus podicalis",
@@ -11920,6 +11844,21 @@
           "genus": "Leptohyphes"
         },
         {
+          "label": "Diabrotica balteata",
+          "registros": 1,
+          "slug_especie": "diabrotica-balteata",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1048505",
+          "species": "Diabrotica balteata",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Coleoptera",
+          "family": "Chrysomelidae",
+          "genus": "Diabrotica"
+        },
+        {
           "label": "Marachina maraches",
           "registros": 1,
           "slug_especie": "marachina-maraches",
@@ -11935,6 +11874,21 @@
           "genus": "Marachina"
         },
         {
+          "label": "Hypolobocera beieri",
+          "registros": 1,
+          "slug_especie": "hypolobocera-beieri",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5791254",
+          "species": "Hypolobocera beieri",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Malacostraca",
+          "order": "Decapoda",
+          "family": "Pseudothelphusidae",
+          "genus": "Hypolobocera"
+        },
+        {
           "label": "Miriclytus quadrifasciatus",
           "registros": 1,
           "slug_especie": "miriclytus-quadrifasciatus",
@@ -11948,6 +11902,21 @@
           "order": "Coleoptera",
           "family": "Cerambycidae",
           "genus": "Miriclytus"
+        },
+        {
+          "label": "Heterogomphus schoenherri",
+          "registros": 1,
+          "slug_especie": "heterogomphus-schoenherri",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/4995583",
+          "species": "Heterogomphus schoenherri",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Coleoptera",
+          "family": "Scarabaeidae",
+          "genus": "Heterogomphus"
         },
         {
           "label": "Paracosmia ambesa",
@@ -12008,6 +11977,37 @@
           "order": "Hymenoptera",
           "family": "Formicidae",
           "genus": "Rasopone"
+        },
+        {
+          "label": "Golofa porteri",
+          "registros": 1,
+          "slug_especie": "golofa-porteri",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1074875",
+          "species": "Golofa porteri",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Coleoptera",
+          "family": "Scarabaeidae",
+          "genus": "Golofa"
+        },
+        {
+          "label": "Apis mellifera",
+          "registros": 1,
+          "slug_especie": "apis-mellifera",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1341976",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/58b995177bd3becd0fc7395e/summary",
+          "species": "Apis mellifera",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hymenoptera",
+          "family": "Apidae",
+          "genus": "Apis"
         },
         {
           "label": "Triatoma nigromaculata",
@@ -13649,19 +13649,19 @@
           "genus": "Leptodontium"
         },
         {
-          "label": "Didymodon acutus",
+          "label": "Polytrichadelphus ciliatus",
           "registros": 9,
-          "slug_especie": "didymodon-acutus",
+          "slug_especie": "polytrichadelphus-ciliatus",
           "slug_grupo": "musgos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5711152",
-          "species": "Didymodon acutus",
+          "url_gbif": "https://www.gbif.org/species/2682920",
+          "species": "Polytrichadelphus ciliatus",
           "kingdom": "Plantae",
           "phylum": "Bryophyta",
-          "class": "Bryopsida",
-          "order": "Pottiales",
-          "family": "Pottiaceae",
-          "genus": "Didymodon"
+          "class": "Polytrichopsida",
+          "order": "Polytrichales",
+          "family": "Polytrichaceae",
+          "genus": "Polytrichadelphus"
         },
         {
           "label": "Entosthodon jamesonii",
@@ -13679,19 +13679,19 @@
           "genus": "Entosthodon"
         },
         {
-          "label": "Polytrichadelphus ciliatus",
+          "label": "Didymodon acutus",
           "registros": 9,
-          "slug_especie": "polytrichadelphus-ciliatus",
+          "slug_especie": "didymodon-acutus",
           "slug_grupo": "musgos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2682920",
-          "species": "Polytrichadelphus ciliatus",
+          "url_gbif": "https://www.gbif.org/species/5711152",
+          "species": "Didymodon acutus",
           "kingdom": "Plantae",
           "phylum": "Bryophyta",
-          "class": "Polytrichopsida",
-          "order": "Polytrichales",
-          "family": "Polytrichaceae",
-          "genus": "Polytrichadelphus"
+          "class": "Bryopsida",
+          "order": "Pottiales",
+          "family": "Pottiaceae",
+          "genus": "Didymodon"
         }
       ],
       "species_list_tematica": {
@@ -14130,6 +14130,21 @@
           "genus": "Leptodontium"
         },
         {
+          "label": "Polytrichadelphus ciliatus",
+          "registros": 9,
+          "slug_especie": "polytrichadelphus-ciliatus",
+          "slug_grupo": "no-vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2682920",
+          "species": "Polytrichadelphus ciliatus",
+          "kingdom": "Plantae",
+          "phylum": "Bryophyta",
+          "class": "Polytrichopsida",
+          "order": "Polytrichales",
+          "family": "Polytrichaceae",
+          "genus": "Polytrichadelphus"
+        },
+        {
           "label": "Didymodon acutus",
           "registros": 9,
           "slug_especie": "didymodon-acutus",
@@ -14158,21 +14173,6 @@
           "order": "Funariales",
           "family": "Funariaceae",
           "genus": "Entosthodon"
-        },
-        {
-          "label": "Polytrichadelphus ciliatus",
-          "registros": 9,
-          "slug_especie": "polytrichadelphus-ciliatus",
-          "slug_grupo": "no-vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2682920",
-          "species": "Polytrichadelphus ciliatus",
-          "kingdom": "Plantae",
-          "phylum": "Bryophyta",
-          "class": "Polytrichopsida",
-          "order": "Polytrichales",
-          "family": "Polytrichaceae",
-          "genus": "Polytrichadelphus"
         }
       ],
       "species_list_tematica": {
@@ -15376,21 +15376,6 @@
           "genus": "Leptodontium"
         },
         {
-          "label": "Didymodon acutus",
-          "registros": 9,
-          "slug_especie": "didymodon-acutus",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5711152",
-          "species": "Didymodon acutus",
-          "kingdom": "Plantae",
-          "phylum": "Bryophyta",
-          "class": "Bryopsida",
-          "order": "Pottiales",
-          "family": "Pottiaceae",
-          "genus": "Didymodon"
-        },
-        {
           "label": "Entosthodon jamesonii",
           "registros": 9,
           "slug_especie": "entosthodon-jamesonii",
@@ -15404,6 +15389,21 @@
           "order": "Funariales",
           "family": "Funariaceae",
           "genus": "Entosthodon"
+        },
+        {
+          "label": "Didymodon acutus",
+          "registros": 9,
+          "slug_especie": "didymodon-acutus",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5711152",
+          "species": "Didymodon acutus",
+          "kingdom": "Plantae",
+          "phylum": "Bryophyta",
+          "class": "Bryopsida",
+          "order": "Pottiales",
+          "family": "Pottiaceae",
+          "genus": "Didymodon"
         },
         {
           "label": "Polytrichadelphus ciliatus",
@@ -15936,6 +15936,41 @@
             "genus": "Fuchsia"
           },
           {
+            "label": "Passiflora popayanensis",
+            "registros": 2,
+            "slug_especie": "passiflora-popayanensis",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "plantas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/3586524",
+            "species": "Passiflora popayanensis",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Malpighiales",
+            "family": "Passifloraceae",
+            "genus": "Passiflora"
+          },
+          {
+            "label": "Themistoclesia mucronata",
+            "registros": 2,
+            "slug_especie": "themistoclesia-mucronata",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "plantas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/4168737",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/5b59df98f0d3bfe03057321c/summary",
+            "species": "Themistoclesia mucronata",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Ericales",
+            "family": "Ericaceae",
+            "genus": "Themistoclesia"
+          },
+          {
             "label": "Anthurium stipitatum",
             "registros": 2,
             "slug_especie": "anthurium-stipitatum",
@@ -15951,6 +15986,24 @@
             "order": "Alismatales",
             "family": "Araceae",
             "genus": "Anthurium"
+          },
+          {
+            "label": "Solanum flahaultii",
+            "registros": 2,
+            "slug_especie": "solanum-flahaultii",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "plantas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2931152",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7a41283c45700544e4265/summary",
+            "species": "Solanum flahaultii",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Solanales",
+            "family": "Solanaceae",
+            "genus": "Solanum"
           },
           {
             "label": "Epidendrum popayanense",
@@ -16005,40 +16058,6 @@
             "genus": "Freziera"
           },
           {
-            "label": "Leptoscyphus cleefii",
-            "registros": 2,
-            "slug_especie": "leptoscyphus-cleefii",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "plantas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/7707121",
-            "species": "Leptoscyphus cleefii",
-            "kingdom": "Plantae",
-            "phylum": "Marchantiophyta",
-            "class": "Jungermanniopsida",
-            "order": "Jungermanniales",
-            "family": "Lophocoleaceae",
-            "genus": "Leptoscyphus"
-          },
-          {
-            "label": "Passiflora popayanensis",
-            "registros": 2,
-            "slug_especie": "passiflora-popayanensis",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "plantas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3586524",
-            "species": "Passiflora popayanensis",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Malpighiales",
-            "family": "Passifloraceae",
-            "genus": "Passiflora"
-          },
-          {
             "label": "Siphocampylus niveus",
             "registros": 2,
             "slug_especie": "siphocampylus-niveus",
@@ -16056,40 +16075,21 @@
             "genus": "Siphocampylus"
           },
           {
-            "label": "Solanum flahaultii",
+            "label": "Leptoscyphus cleefii",
             "registros": 2,
-            "slug_especie": "solanum-flahaultii",
+            "slug_especie": "leptoscyphus-cleefii",
             "slug_tematica": "endemicas",
             "tematica_label": "Endémicas",
             "slug_grupo": "plantas",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2931152",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7a41283c45700544e4265/summary",
-            "species": "Solanum flahaultii",
+            "url_gbif": "https://www.gbif.org/species/7707121",
+            "species": "Leptoscyphus cleefii",
             "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Solanales",
-            "family": "Solanaceae",
-            "genus": "Solanum"
-          },
-          {
-            "label": "Themistoclesia mucronata",
-            "registros": 2,
-            "slug_especie": "themistoclesia-mucronata",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "plantas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/4168737",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/5b59df98f0d3bfe03057321c/summary",
-            "species": "Themistoclesia mucronata",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Ericales",
-            "family": "Ericaceae",
-            "genus": "Themistoclesia"
+            "phylum": "Marchantiophyta",
+            "class": "Jungermanniopsida",
+            "order": "Jungermanniales",
+            "family": "Lophocoleaceae",
+            "genus": "Leptoscyphus"
           }
         ],
         "exoticas-total": [
@@ -16855,6 +16855,21 @@
           "genus": "Delostoma"
         },
         {
+          "label": "Passiflora fimbriatistipula",
+          "registros": 8,
+          "slug_especie": "passiflora-fimbriatistipula",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3587647",
+          "species": "Passiflora fimbriatistipula",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Malpighiales",
+          "family": "Passifloraceae",
+          "genus": "Passiflora"
+        },
+        {
           "label": "Asplenium monanthes",
           "registros": 8,
           "slug_especie": "asplenium-monanthes",
@@ -16869,21 +16884,6 @@
           "order": "Polypodiales",
           "family": "Aspleniaceae",
           "genus": "Asplenium"
-        },
-        {
-          "label": "Passiflora fimbriatistipula",
-          "registros": 8,
-          "slug_especie": "passiflora-fimbriatistipula",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3587647",
-          "species": "Passiflora fimbriatistipula",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Passifloraceae",
-          "genus": "Passiflora"
         },
         {
           "label": "Passiflora mixta",
@@ -16902,21 +16902,6 @@
           "genus": "Passiflora"
         },
         {
-          "label": "Polystichum orbiculatum",
-          "registros": 6,
-          "slug_especie": "polystichum-orbiculatum",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7319657",
-          "species": "Polystichum orbiculatum",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Polypodiopsida",
-          "order": "Polypodiales",
-          "family": "Dryopteridaceae",
-          "genus": "Polystichum"
-        },
-        {
           "label": "Quercus humboldtii",
           "registros": 6,
           "slug_especie": "quercus-humboldtii",
@@ -16933,49 +16918,19 @@
           "genus": "Quercus"
         },
         {
-          "label": "Bomarea hirsuta",
-          "registros": 5,
-          "slug_especie": "bomarea-hirsuta",
+          "label": "Polystichum orbiculatum",
+          "registros": 6,
+          "slug_especie": "polystichum-orbiculatum",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2754160",
-          "species": "Bomarea hirsuta",
+          "url_gbif": "https://www.gbif.org/species/7319657",
+          "species": "Polystichum orbiculatum",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Liliales",
-          "family": "Alstroemeriaceae",
-          "genus": "Bomarea"
-        },
-        {
-          "label": "Calceolaria colombiana",
-          "registros": 5,
-          "slug_especie": "calceolaria-colombiana",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7831047",
-          "species": "Calceolaria colombiana",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Lamiales",
-          "family": "Calceolariaceae",
-          "genus": "Calceolaria"
-        },
-        {
-          "label": "Palicourea amethystina",
-          "registros": 5,
-          "slug_especie": "palicourea-amethystina",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2898723",
-          "species": "Palicourea amethystina",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Gentianales",
-          "family": "Rubiaceae",
-          "genus": "Palicourea"
+          "class": "Polypodiopsida",
+          "order": "Polypodiales",
+          "family": "Dryopteridaceae",
+          "genus": "Polystichum"
         },
         {
           "label": "Persea mutisii",
@@ -17006,6 +16961,51 @@
           "order": "Poales",
           "family": "Bromeliaceae",
           "genus": "Vriesea"
+        },
+        {
+          "label": "Calceolaria colombiana",
+          "registros": 5,
+          "slug_especie": "calceolaria-colombiana",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7831047",
+          "species": "Calceolaria colombiana",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Lamiales",
+          "family": "Calceolariaceae",
+          "genus": "Calceolaria"
+        },
+        {
+          "label": "Bomarea hirsuta",
+          "registros": 5,
+          "slug_especie": "bomarea-hirsuta",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2754160",
+          "species": "Bomarea hirsuta",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Liliales",
+          "family": "Alstroemeriaceae",
+          "genus": "Bomarea"
+        },
+        {
+          "label": "Palicourea amethystina",
+          "registros": 5,
+          "slug_especie": "palicourea-amethystina",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2898723",
+          "species": "Palicourea amethystina",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Gentianales",
+          "family": "Rubiaceae",
+          "genus": "Palicourea"
         }
       ],
       "species_list_tematica": {
@@ -17488,6 +17488,24 @@
             "genus": "Fuchsia"
           },
           {
+            "label": "Themistoclesia mucronata",
+            "registros": 2,
+            "slug_especie": "themistoclesia-mucronata",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "vasculares",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/4168737",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/5b59df98f0d3bfe03057321c/summary",
+            "species": "Themistoclesia mucronata",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Ericales",
+            "family": "Ericaceae",
+            "genus": "Themistoclesia"
+          },
+          {
             "label": "Anthurium stipitatum",
             "registros": 2,
             "slug_especie": "anthurium-stipitatum",
@@ -17503,6 +17521,24 @@
             "order": "Alismatales",
             "family": "Araceae",
             "genus": "Anthurium"
+          },
+          {
+            "label": "Solanum flahaultii",
+            "registros": 2,
+            "slug_especie": "solanum-flahaultii",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "vasculares",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2931152",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7a41283c45700544e4265/summary",
+            "species": "Solanum flahaultii",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Solanales",
+            "family": "Solanaceae",
+            "genus": "Solanum"
           },
           {
             "label": "Epidendrum popayanense",
@@ -17557,23 +17593,6 @@
             "genus": "Freziera"
           },
           {
-            "label": "Passiflora popayanensis",
-            "registros": 2,
-            "slug_especie": "passiflora-popayanensis",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "vasculares",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3586524",
-            "species": "Passiflora popayanensis",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Malpighiales",
-            "family": "Passifloraceae",
-            "genus": "Passiflora"
-          },
-          {
             "label": "Siphocampylus niveus",
             "registros": 2,
             "slug_especie": "siphocampylus-niveus",
@@ -17591,40 +17610,21 @@
             "genus": "Siphocampylus"
           },
           {
-            "label": "Solanum flahaultii",
+            "label": "Passiflora popayanensis",
             "registros": 2,
-            "slug_especie": "solanum-flahaultii",
+            "slug_especie": "passiflora-popayanensis",
             "slug_tematica": "endemicas",
             "tematica_label": "Endémicas",
             "slug_grupo": "vasculares",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2931152",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7a41283c45700544e4265/summary",
-            "species": "Solanum flahaultii",
+            "url_gbif": "https://www.gbif.org/species/3586524",
+            "species": "Passiflora popayanensis",
             "kingdom": "Plantae",
             "phylum": "Tracheophyta",
             "class": "Magnoliopsida",
-            "order": "Solanales",
-            "family": "Solanaceae",
-            "genus": "Solanum"
-          },
-          {
-            "label": "Themistoclesia mucronata",
-            "registros": 2,
-            "slug_especie": "themistoclesia-mucronata",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "vasculares",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/4168737",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/5b59df98f0d3bfe03057321c/summary",
-            "species": "Themistoclesia mucronata",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Ericales",
-            "family": "Ericaceae",
-            "genus": "Themistoclesia"
+            "order": "Malpighiales",
+            "family": "Passifloraceae",
+            "genus": "Passiflora"
           }
         ],
         "exoticas-total": [

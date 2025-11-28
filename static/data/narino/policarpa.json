@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -1006,17 +1006,18 @@
           "slug_tematica": "cites-ii"
         },
         {
+          "label": "Thalurania colombica",
+          "slug_especie": "thalurania-colombica",
+          "registros": 9,
+          "url_gbif": "https://www.gbif.org/species/2476528",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7b07383c45700544e42fa/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
           "label": "Discosura conversii",
           "slug_especie": "discosura-conversii",
           "registros": 9,
           "url_gbif": "https://www.gbif.org/species/2476911",
-          "slug_tematica": "cites-ii"
-        },
-        {
-          "label": "Phaethornis guy",
-          "slug_especie": "phaethornis-guy",
-          "registros": 9,
-          "url_gbif": "https://www.gbif.org/species/2476607",
           "slug_tematica": "cites-ii"
         }
       ],
@@ -1077,6 +1078,14 @@
           "slug_tematica": "cites-ii"
         },
         {
+          "label": "Thalurania colombica",
+          "slug_especie": "thalurania-colombica",
+          "registros": 9,
+          "url_gbif": "https://www.gbif.org/species/2476528",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7b07383c45700544e42fa/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
           "label": "Discosura conversii",
           "slug_especie": "discosura-conversii",
           "registros": 9,
@@ -1088,14 +1097,6 @@
           "slug_especie": "phaethornis-guy",
           "registros": 9,
           "url_gbif": "https://www.gbif.org/species/2476607",
-          "slug_tematica": "cites-ii"
-        },
-        {
-          "label": "Thalurania colombica",
-          "slug_especie": "thalurania-colombica",
-          "registros": 9,
-          "url_gbif": "https://www.gbif.org/species/2476528",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7b07383c45700544e42fa/summary",
           "slug_tematica": "cites-ii"
         }
       ],
@@ -1177,17 +1178,18 @@
           "slug_tematica": "cites-ii"
         },
         {
+          "label": "Thalurania colombica",
+          "slug_especie": "thalurania-colombica",
+          "registros": 9,
+          "url_gbif": "https://www.gbif.org/species/2476528",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7b07383c45700544e42fa/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
           "label": "Discosura conversii",
           "slug_especie": "discosura-conversii",
           "registros": 9,
           "url_gbif": "https://www.gbif.org/species/2476911",
-          "slug_tematica": "cites-ii"
-        },
-        {
-          "label": "Phaethornis guy",
-          "slug_especie": "phaethornis-guy",
-          "registros": 9,
-          "url_gbif": "https://www.gbif.org/species/2476607",
           "slug_tematica": "cites-ii"
         }
       ]
@@ -2118,22 +2120,6 @@
           "genus": "Guazuma"
         },
         {
-          "label": "Guadua angustifolia",
-          "registros": 14,
-          "slug_especie": "guadua-angustifolia",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4155017",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e785fd83c45700544e40b7/summary",
-          "species": "Guadua angustifolia",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Poales",
-          "family": "Poaceae",
-          "genus": "Guadua"
-        },
-        {
           "label": "Leucaena leucocephala",
           "registros": 14,
           "slug_especie": "leucaena-leucocephala",
@@ -2148,6 +2134,22 @@
           "order": "Fabales",
           "family": "Fabaceae",
           "genus": "Leucaena"
+        },
+        {
+          "label": "Guadua angustifolia",
+          "registros": 14,
+          "slug_especie": "guadua-angustifolia",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/4155017",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e785fd83c45700544e40b7/summary",
+          "species": "Guadua angustifolia",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Poales",
+          "family": "Poaceae",
+          "genus": "Guadua"
         },
         {
           "label": "Ficus insipida",
@@ -2166,6 +2168,21 @@
           "genus": "Ficus"
         },
         {
+          "label": "Tabernaemontana heterophylla",
+          "registros": 4,
+          "slug_especie": "tabernaemontana-heterophylla",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3617122",
+          "species": "Tabernaemontana heterophylla",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Gentianales",
+          "family": "Apocynaceae",
+          "genus": "Tabernaemontana"
+        },
+        {
           "label": "Piper aduncum",
           "registros": 4,
           "slug_especie": "piper-aduncum",
@@ -2182,19 +2199,20 @@
           "genus": "Piper"
         },
         {
-          "label": "Tabernaemontana heterophylla",
-          "registros": 4,
-          "slug_especie": "tabernaemontana-heterophylla",
+          "label": "Vernonanthura patens",
+          "registros": 3,
+          "slug_especie": "vernonanthura-patens",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3617122",
-          "species": "Tabernaemontana heterophylla",
+          "url_gbif": "https://www.gbif.org/species/3124739",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/594c8b2d2f4fd7bc7f3992c1/summary",
+          "species": "Vernonanthura patens",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Gentianales",
-          "family": "Apocynaceae",
-          "genus": "Tabernaemontana"
+          "order": "Asterales",
+          "family": "Asteraceae",
+          "genus": "Vernonanthura"
         },
         {
           "label": "Acalypha plicata",
@@ -2228,21 +2246,6 @@
           "genus": "Annona"
         },
         {
-          "label": "Chiococca alba",
-          "registros": 3,
-          "slug_especie": "chiococca-alba",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2907406",
-          "species": "Chiococca alba",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Gentianales",
-          "family": "Rubiaceae",
-          "genus": "Chiococca"
-        },
-        {
           "label": "Miconia brevitheca",
           "registros": 3,
           "slug_especie": "miconia-brevitheca",
@@ -2258,20 +2261,19 @@
           "genus": "Miconia"
         },
         {
-          "label": "Vernonanthura patens",
+          "label": "Chiococca alba",
           "registros": 3,
-          "slug_especie": "vernonanthura-patens",
+          "slug_especie": "chiococca-alba",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3124739",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/594c8b2d2f4fd7bc7f3992c1/summary",
-          "species": "Vernonanthura patens",
+          "url_gbif": "https://www.gbif.org/species/2907406",
+          "species": "Chiococca alba",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Asterales",
-          "family": "Asteraceae",
-          "genus": "Vernonanthura"
+          "order": "Gentianales",
+          "family": "Rubiaceae",
+          "genus": "Chiococca"
         }
       ],
       "species_list_tematica": {
@@ -2731,22 +2733,6 @@
           "genus": "Todirostrum"
         },
         {
-          "label": "Coereba flaveola",
-          "registros": 27,
-          "slug_especie": "coereba-flaveola",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2493744",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56df75bd83c45700544e3c7b/summary",
-          "species": "Coereba flaveola",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Coereba"
-        },
-        {
           "label": "Tangara gyrola",
           "registros": 27,
           "slug_especie": "tangara-gyrola",
@@ -2761,6 +2747,22 @@
           "order": "Passeriformes",
           "family": "Thraupidae",
           "genus": "Tangara"
+        },
+        {
+          "label": "Coereba flaveola",
+          "registros": 27,
+          "slug_especie": "coereba-flaveola",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2493744",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56df75bd83c45700544e3c7b/summary",
+          "species": "Coereba flaveola",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Coereba"
         },
         {
           "label": "Rupornis magnirostris",
@@ -2810,21 +2812,6 @@
           "genus": "Tyrannus"
         },
         {
-          "label": "Myioborus miniatus",
-          "registros": 23,
-          "slug_especie": "myioborus-miniatus",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2489837",
-          "species": "Myioborus miniatus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Parulidae",
-          "genus": "Myioborus"
-        },
-        {
           "label": "Oophaga histrionica",
           "registros": 23,
           "slug_especie": "oophaga-histrionica",
@@ -2839,6 +2826,21 @@
           "order": "Anura",
           "family": "Dendrobatidae",
           "genus": "Oophaga"
+        },
+        {
+          "label": "Myioborus miniatus",
+          "registros": 23,
+          "slug_especie": "myioborus-miniatus",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2489837",
+          "species": "Myioborus miniatus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Parulidae",
+          "genus": "Myioborus"
         },
         {
           "label": "Thamnophilus multistriatus",
@@ -3156,6 +3158,24 @@
             "genus": "Phaethornis"
           },
           {
+            "label": "Thalurania colombica",
+            "registros": 9,
+            "slug_especie": "thalurania-colombica",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2476528",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7b07383c45700544e42fa/summary",
+            "species": "Thalurania colombica",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Thalurania"
+          },
+          {
             "label": "Discosura conversii",
             "registros": 9,
             "slug_especie": "discosura-conversii",
@@ -3188,24 +3208,6 @@
             "order": "Apodiformes",
             "family": "Trochilidae",
             "genus": "Phaethornis"
-          },
-          {
-            "label": "Thalurania colombica",
-            "registros": 9,
-            "slug_especie": "thalurania-colombica",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476528",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7b07383c45700544e42fa/summary",
-            "species": "Thalurania colombica",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Thalurania"
           }
         ],
         "migratorias": [
@@ -4175,19 +4177,20 @@
           "genus": "Tyrannus"
         },
         {
-          "label": "Myioborus miniatus",
+          "label": "Turdus ignobilis",
           "registros": 23,
-          "slug_especie": "myioborus-miniatus",
+          "slug_especie": "turdus-ignobilis",
           "slug_grupo": "aves",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2489837",
-          "species": "Myioborus miniatus",
+          "url_gbif": "https://www.gbif.org/species/2490722",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf9ee73c16479905cba7f4/summary",
+          "species": "Turdus ignobilis",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Parulidae",
-          "genus": "Myioborus"
+          "family": "Turdidae",
+          "genus": "Turdus"
         },
         {
           "label": "Thamnophilus multistriatus",
@@ -4205,20 +4208,19 @@
           "genus": "Thamnophilus"
         },
         {
-          "label": "Turdus ignobilis",
+          "label": "Myioborus miniatus",
           "registros": 23,
-          "slug_especie": "turdus-ignobilis",
+          "slug_especie": "myioborus-miniatus",
           "slug_grupo": "aves",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2490722",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf9ee73c16479905cba7f4/summary",
-          "species": "Turdus ignobilis",
+          "url_gbif": "https://www.gbif.org/species/2489837",
+          "species": "Myioborus miniatus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Turdidae",
-          "genus": "Turdus"
+          "family": "Parulidae",
+          "genus": "Myioborus"
         }
       ],
       "species_list_tematica": {
@@ -4419,6 +4421,24 @@
             "genus": "Phaethornis"
           },
           {
+            "label": "Thalurania colombica",
+            "registros": 9,
+            "slug_especie": "thalurania-colombica",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2476528",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7b07383c45700544e42fa/summary",
+            "species": "Thalurania colombica",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Thalurania"
+          },
+          {
             "label": "Discosura conversii",
             "registros": 9,
             "slug_especie": "discosura-conversii",
@@ -4451,24 +4471,6 @@
             "order": "Apodiformes",
             "family": "Trochilidae",
             "genus": "Phaethornis"
-          },
-          {
-            "label": "Thalurania colombica",
-            "registros": 9,
-            "slug_especie": "thalurania-colombica",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476528",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7b07383c45700544e42fa/summary",
-            "species": "Thalurania colombica",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Thalurania"
           }
         ],
         "migratorias": [
@@ -7586,19 +7588,19 @@
           "genus": "Ficus"
         },
         {
-          "label": "Monoclea gottschei",
+          "label": "Tabernaemontana heterophylla",
           "registros": 4,
-          "slug_especie": "monoclea-gottschei",
+          "slug_especie": "tabernaemontana-heterophylla",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2688635",
-          "species": "Monoclea gottschei",
+          "url_gbif": "https://www.gbif.org/species/3617122",
+          "species": "Tabernaemontana heterophylla",
           "kingdom": "Plantae",
-          "phylum": "Marchantiophyta",
-          "class": "Marchantiopsida",
-          "order": "Marchantiales",
-          "family": "Monocleaceae",
-          "genus": "Monoclea"
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Gentianales",
+          "family": "Apocynaceae",
+          "genus": "Tabernaemontana"
         },
         {
           "label": "Piper aduncum",
@@ -7617,19 +7619,35 @@
           "genus": "Piper"
         },
         {
-          "label": "Tabernaemontana heterophylla",
+          "label": "Monoclea gottschei",
           "registros": 4,
-          "slug_especie": "tabernaemontana-heterophylla",
+          "slug_especie": "monoclea-gottschei",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3617122",
-          "species": "Tabernaemontana heterophylla",
+          "url_gbif": "https://www.gbif.org/species/2688635",
+          "species": "Monoclea gottschei",
+          "kingdom": "Plantae",
+          "phylum": "Marchantiophyta",
+          "class": "Marchantiopsida",
+          "order": "Marchantiales",
+          "family": "Monocleaceae",
+          "genus": "Monoclea"
+        },
+        {
+          "label": "Vernonanthura patens",
+          "registros": 3,
+          "slug_especie": "vernonanthura-patens",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3124739",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/594c8b2d2f4fd7bc7f3992c1/summary",
+          "species": "Vernonanthura patens",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Gentianales",
-          "family": "Apocynaceae",
-          "genus": "Tabernaemontana"
+          "order": "Asterales",
+          "family": "Asteraceae",
+          "genus": "Vernonanthura"
         },
         {
           "label": "Acalypha plicata",
@@ -7663,21 +7681,6 @@
           "genus": "Annona"
         },
         {
-          "label": "Chiococca alba",
-          "registros": 3,
-          "slug_especie": "chiococca-alba",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2907406",
-          "species": "Chiococca alba",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Gentianales",
-          "family": "Rubiaceae",
-          "genus": "Chiococca"
-        },
-        {
           "label": "Miconia brevitheca",
           "registros": 3,
           "slug_especie": "miconia-brevitheca",
@@ -7693,20 +7696,19 @@
           "genus": "Miconia"
         },
         {
-          "label": "Vernonanthura patens",
+          "label": "Chiococca alba",
           "registros": 3,
-          "slug_especie": "vernonanthura-patens",
+          "slug_especie": "chiococca-alba",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3124739",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/594c8b2d2f4fd7bc7f3992c1/summary",
-          "species": "Vernonanthura patens",
+          "url_gbif": "https://www.gbif.org/species/2907406",
+          "species": "Chiococca alba",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Asterales",
-          "family": "Asteraceae",
-          "genus": "Vernonanthura"
+          "order": "Gentianales",
+          "family": "Rubiaceae",
+          "genus": "Chiococca"
         }
       ],
       "species_list_tematica": {
@@ -8536,6 +8538,21 @@
           "genus": "Ficus"
         },
         {
+          "label": "Tabernaemontana heterophylla",
+          "registros": 4,
+          "slug_especie": "tabernaemontana-heterophylla",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3617122",
+          "species": "Tabernaemontana heterophylla",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Gentianales",
+          "family": "Apocynaceae",
+          "genus": "Tabernaemontana"
+        },
+        {
           "label": "Piper aduncum",
           "registros": 4,
           "slug_especie": "piper-aduncum",
@@ -8552,19 +8569,20 @@
           "genus": "Piper"
         },
         {
-          "label": "Tabernaemontana heterophylla",
-          "registros": 4,
-          "slug_especie": "tabernaemontana-heterophylla",
+          "label": "Vernonanthura patens",
+          "registros": 3,
+          "slug_especie": "vernonanthura-patens",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3617122",
-          "species": "Tabernaemontana heterophylla",
+          "url_gbif": "https://www.gbif.org/species/3124739",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/594c8b2d2f4fd7bc7f3992c1/summary",
+          "species": "Vernonanthura patens",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Gentianales",
-          "family": "Apocynaceae",
-          "genus": "Tabernaemontana"
+          "order": "Asterales",
+          "family": "Asteraceae",
+          "genus": "Vernonanthura"
         },
         {
           "label": "Acalypha plicata",
@@ -8598,21 +8616,6 @@
           "genus": "Annona"
         },
         {
-          "label": "Chiococca alba",
-          "registros": 3,
-          "slug_especie": "chiococca-alba",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2907406",
-          "species": "Chiococca alba",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Gentianales",
-          "family": "Rubiaceae",
-          "genus": "Chiococca"
-        },
-        {
           "label": "Miconia brevitheca",
           "registros": 3,
           "slug_especie": "miconia-brevitheca",
@@ -8628,20 +8631,19 @@
           "genus": "Miconia"
         },
         {
-          "label": "Vernonanthura patens",
+          "label": "Chiococca alba",
           "registros": 3,
-          "slug_especie": "vernonanthura-patens",
+          "slug_especie": "chiococca-alba",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3124739",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/594c8b2d2f4fd7bc7f3992c1/summary",
-          "species": "Vernonanthura patens",
+          "url_gbif": "https://www.gbif.org/species/2907406",
+          "species": "Chiococca alba",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Asterales",
-          "family": "Asteraceae",
-          "genus": "Vernonanthura"
+          "order": "Gentianales",
+          "family": "Rubiaceae",
+          "genus": "Chiococca"
         }
       ],
       "species_list_tematica": {
@@ -9190,21 +9192,6 @@
           "genus": "Tyrannus"
         },
         {
-          "label": "Myioborus miniatus",
-          "registros": 23,
-          "slug_especie": "myioborus-miniatus",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2489837",
-          "species": "Myioborus miniatus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Parulidae",
-          "genus": "Myioborus"
-        },
-        {
           "label": "Oophaga histrionica",
           "registros": 23,
           "slug_especie": "oophaga-histrionica",
@@ -9219,6 +9206,21 @@
           "order": "Anura",
           "family": "Dendrobatidae",
           "genus": "Oophaga"
+        },
+        {
+          "label": "Myioborus miniatus",
+          "registros": 23,
+          "slug_especie": "myioborus-miniatus",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2489837",
+          "species": "Myioborus miniatus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Parulidae",
+          "genus": "Myioborus"
         },
         {
           "label": "Thamnophilus multistriatus",
@@ -9536,6 +9538,24 @@
             "genus": "Phaethornis"
           },
           {
+            "label": "Thalurania colombica",
+            "registros": 9,
+            "slug_especie": "thalurania-colombica",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2476528",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7b07383c45700544e42fa/summary",
+            "species": "Thalurania colombica",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Thalurania"
+          },
+          {
             "label": "Discosura conversii",
             "registros": 9,
             "slug_especie": "discosura-conversii",
@@ -9568,24 +9588,6 @@
             "order": "Apodiformes",
             "family": "Trochilidae",
             "genus": "Phaethornis"
-          },
-          {
-            "label": "Thalurania colombica",
-            "registros": 9,
-            "slug_especie": "thalurania-colombica",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476528",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7b07383c45700544e42fa/summary",
-            "species": "Thalurania colombica",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Thalurania"
           }
         ],
         "migratorias": [

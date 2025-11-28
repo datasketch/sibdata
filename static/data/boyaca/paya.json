@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -1728,11 +1728,11 @@
           "slug_tematica": "migratorias"
         },
         {
-          "label": "Setophaga fusca",
-          "slug_especie": "setophaga-fusca",
+          "label": "Setophaga ruticilla",
+          "slug_especie": "setophaga-ruticilla",
           "registros": 2,
-          "url_gbif": "https://www.gbif.org/species/6093199",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf166a3c16479905cba7c4/summary",
+          "url_gbif": "https://www.gbif.org/species/2489985",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cfd11d3c16479905cba808/summary",
           "slug_tematica": "migratorias"
         }
       ]
@@ -2356,6 +2356,22 @@
           "genus": "Leptodactylus"
         },
         {
+          "label": "Rhinella marina",
+          "registros": 7,
+          "slug_especie": "rhinella-marina",
+          "slug_grupo": "anfibios",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5216933",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d4cdfe3c16479905cba8cc/summary",
+          "species": "Rhinella marina",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Amphibia",
+          "order": "Anura",
+          "family": "Bufonidae",
+          "genus": "Rhinella"
+        },
+        {
           "label": "Hyalinobatrachium esmeralda",
           "registros": 7,
           "slug_especie": "hyalinobatrachium-esmeralda",
@@ -2385,22 +2401,6 @@
           "order": "Anura",
           "family": "Dendrobatidae",
           "genus": "Hyloxalus"
-        },
-        {
-          "label": "Rhinella marina",
-          "registros": 7,
-          "slug_especie": "rhinella-marina",
-          "slug_grupo": "anfibios",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5216933",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56d4cdfe3c16479905cba8cc/summary",
-          "species": "Rhinella marina",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Amphibia",
-          "order": "Anura",
-          "family": "Bufonidae",
-          "genus": "Rhinella"
         }
       ],
       "species_list_tematica": {
@@ -3063,6 +3063,21 @@
           "genus": "Urera"
         },
         {
+          "label": "Pseudolmedia laevigata",
+          "registros": 19,
+          "slug_especie": "pseudolmedia-laevigata",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3764182",
+          "species": "Pseudolmedia laevigata",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Rosales",
+          "family": "Moraceae",
+          "genus": "Pseudolmedia"
+        },
+        {
           "label": "Heliocarpus americanus",
           "registros": 19,
           "slug_especie": "heliocarpus-americanus",
@@ -3077,21 +3092,6 @@
           "order": "Malvales",
           "family": "Malvaceae",
           "genus": "Heliocarpus"
-        },
-        {
-          "label": "Pseudolmedia laevigata",
-          "registros": 19,
-          "slug_especie": "pseudolmedia-laevigata",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3764182",
-          "species": "Pseudolmedia laevigata",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Rosales",
-          "family": "Moraceae",
-          "genus": "Pseudolmedia"
         }
       ],
       "species_list_tematica": {
@@ -4705,24 +4705,6 @@
             "genus": "Egretta"
           },
           {
-            "label": "Setophaga fusca",
-            "registros": 2,
-            "slug_especie": "setophaga-fusca",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/6093199",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56cf166a3c16479905cba7c4/summary",
-            "species": "Setophaga fusca",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Parulidae",
-            "genus": "Setophaga"
-          },
-          {
             "label": "Setophaga ruticilla",
             "registros": 2,
             "slug_especie": "setophaga-ruticilla",
@@ -4733,6 +4715,24 @@
             "url_gbif": "https://www.gbif.org/species/2489985",
             "url_cbc": "https://catalogo.biodiversidad.co/file/56cfd11d3c16479905cba808/summary",
             "species": "Setophaga ruticilla",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Parulidae",
+            "genus": "Setophaga"
+          },
+          {
+            "label": "Setophaga fusca",
+            "registros": 2,
+            "slug_especie": "setophaga-fusca",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/6093199",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cf166a3c16479905cba7c4/summary",
+            "species": "Setophaga fusca",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Aves",
@@ -5983,6 +5983,23 @@
             "genus": "Herpetotheres"
           },
           {
+            "label": "Haplophaedia aureliae",
+            "registros": 9,
+            "slug_especie": "haplophaedia-aureliae",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2476336",
+            "species": "Haplophaedia aureliae",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Haplophaedia"
+          },
+          {
             "label": "Chalybura buffonii",
             "registros": 9,
             "slug_especie": "chalybura-buffonii",
@@ -5999,23 +6016,6 @@
             "order": "Apodiformes",
             "family": "Trochilidae",
             "genus": "Chalybura"
-          },
-          {
-            "label": "Haplophaedia aureliae",
-            "registros": 9,
-            "slug_especie": "haplophaedia-aureliae",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476336",
-            "species": "Haplophaedia aureliae",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Haplophaedia"
           },
           {
             "label": "Elanus leucurus",
@@ -6217,24 +6217,6 @@
             "genus": "Egretta"
           },
           {
-            "label": "Setophaga fusca",
-            "registros": 2,
-            "slug_especie": "setophaga-fusca",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/6093199",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56cf166a3c16479905cba7c4/summary",
-            "species": "Setophaga fusca",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Parulidae",
-            "genus": "Setophaga"
-          },
-          {
             "label": "Setophaga ruticilla",
             "registros": 2,
             "slug_especie": "setophaga-ruticilla",
@@ -6245,6 +6227,24 @@
             "url_gbif": "https://www.gbif.org/species/2489985",
             "url_cbc": "https://catalogo.biodiversidad.co/file/56cfd11d3c16479905cba808/summary",
             "species": "Setophaga ruticilla",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Parulidae",
+            "genus": "Setophaga"
+          },
+          {
+            "label": "Setophaga fusca",
+            "registros": 2,
+            "slug_especie": "setophaga-fusca",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/6093199",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cf166a3c16479905cba7c4/summary",
+            "species": "Setophaga fusca",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Aves",
@@ -11068,19 +11068,19 @@
           "genus": "Artibeus"
         },
         {
-          "label": "Artibeus planirostris",
+          "label": "Uroderma convexum",
           "registros": 23,
-          "slug_especie": "artibeus-planirostris",
+          "slug_especie": "uroderma-convexum",
           "slug_grupo": "mamiferos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2433271",
-          "species": "Artibeus planirostris",
+          "url_gbif": "https://www.gbif.org/species/7394938",
+          "species": "Uroderma convexum",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
           "order": "Chiroptera",
           "family": "Phyllostomidae",
-          "genus": "Artibeus"
+          "genus": "Uroderma"
         },
         {
           "label": "Uroderma bilobatum",
@@ -11099,19 +11099,19 @@
           "genus": "Uroderma"
         },
         {
-          "label": "Uroderma convexum",
+          "label": "Artibeus planirostris",
           "registros": 23,
-          "slug_especie": "uroderma-convexum",
+          "slug_especie": "artibeus-planirostris",
           "slug_grupo": "mamiferos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7394938",
-          "species": "Uroderma convexum",
+          "url_gbif": "https://www.gbif.org/species/2433271",
+          "species": "Artibeus planirostris",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
           "order": "Chiroptera",
           "family": "Phyllostomidae",
-          "genus": "Uroderma"
+          "genus": "Artibeus"
         },
         {
           "label": "Alouatta seniculus",
@@ -11710,6 +11710,36 @@
           "genus": "Hermeuptychia"
         },
         {
+          "label": "Myscelia cyaniris",
+          "registros": 7,
+          "slug_especie": "myscelia-cyaniris",
+          "slug_grupo": "mariposas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1901261",
+          "species": "Myscelia cyaniris",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Myscelia"
+        },
+        {
+          "label": "Ithomia agnosia",
+          "registros": 7,
+          "slug_especie": "ithomia-agnosia",
+          "slug_grupo": "mariposas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1908168",
+          "species": "Ithomia agnosia",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Ithomia"
+        },
+        {
           "label": "Anartia amathea",
           "registros": 7,
           "slug_especie": "anartia-amathea",
@@ -11740,36 +11770,6 @@
           "genus": "Heliconius"
         },
         {
-          "label": "Ithomia agnosia",
-          "registros": 7,
-          "slug_especie": "ithomia-agnosia",
-          "slug_grupo": "mariposas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1908168",
-          "species": "Ithomia agnosia",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Ithomia"
-        },
-        {
-          "label": "Myscelia cyaniris",
-          "registros": 7,
-          "slug_especie": "myscelia-cyaniris",
-          "slug_grupo": "mariposas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1901261",
-          "species": "Myscelia cyaniris",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Myscelia"
-        },
-        {
           "label": "Euptychoides saturnus",
           "registros": 6,
           "slug_especie": "euptychoides-saturnus",
@@ -11785,21 +11785,6 @@
           "genus": "Euptychoides"
         },
         {
-          "label": "Hypothyris euclea",
-          "registros": 6,
-          "slug_especie": "hypothyris-euclea",
-          "slug_grupo": "mariposas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5133736",
-          "species": "Hypothyris euclea",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Hypothyris"
-        },
-        {
           "label": "Oleria makrena",
           "registros": 6,
           "slug_especie": "oleria-makrena",
@@ -11813,6 +11798,21 @@
           "order": "Lepidoptera",
           "family": "Nymphalidae",
           "genus": "Oleria"
+        },
+        {
+          "label": "Hypothyris euclea",
+          "registros": 6,
+          "slug_especie": "hypothyris-euclea",
+          "slug_grupo": "mariposas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5133736",
+          "species": "Hypothyris euclea",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Hypothyris"
         },
         {
           "label": "Caligo telamonius",
@@ -13457,20 +13457,6 @@
           "genus": "Ancistrus"
         },
         {
-          "label": "Hyphessobrycon otrynus",
-          "registros": 7,
-          "slug_especie": "hyphessobrycon-otrynus",
-          "slug_grupo": "peces",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2354564",
-          "species": "Hyphessobrycon otrynus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Characidae",
-          "genus": "Hyphessobrycon"
-        },
-        {
           "label": "Steindachnerina argentea",
           "registros": 7,
           "slug_especie": "steindachnerina-argentea",
@@ -13483,6 +13469,20 @@
           "order": "Characiformes",
           "family": "Curimatidae",
           "genus": "Steindachnerina"
+        },
+        {
+          "label": "Hyphessobrycon otrynus",
+          "registros": 7,
+          "slug_especie": "hyphessobrycon-otrynus",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2354564",
+          "species": "Hyphessobrycon otrynus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Characidae",
+          "genus": "Hyphessobrycon"
         }
       ],
       "species_list_tematica": {
@@ -13968,20 +13968,6 @@
           "genus": "Astyanax"
         },
         {
-          "label": "Characidium steindachneri",
-          "registros": 9,
-          "slug_especie": "characidium-steindachneri",
-          "slug_grupo": "peces-dulceacuicolas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2352354",
-          "species": "Characidium steindachneri",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Crenuchidae",
-          "genus": "Characidium"
-        },
-        {
           "label": "Corynopoma riisei",
           "registros": 9,
           "slug_especie": "corynopoma-riisei",
@@ -13996,18 +13982,18 @@
           "genus": "Corynopoma"
         },
         {
-          "label": "Astyanax bimaculatus",
-          "registros": 8,
-          "slug_especie": "astyanax-bimaculatus",
+          "label": "Characidium steindachneri",
+          "registros": 9,
+          "slug_especie": "characidium-steindachneri",
           "slug_grupo": "peces-dulceacuicolas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5204296",
-          "species": "Astyanax bimaculatus",
+          "url_gbif": "https://www.gbif.org/species/2352354",
+          "species": "Characidium steindachneri",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "order": "Characiformes",
-          "family": "Characidae",
-          "genus": "Astyanax"
+          "family": "Crenuchidae",
+          "genus": "Characidium"
         },
         {
           "label": "Chaetostoma dorsale",
@@ -14038,18 +14024,18 @@
           "genus": "Hemibrycon"
         },
         {
-          "label": "Ancistrus triradiatus",
-          "registros": 7,
-          "slug_especie": "ancistrus-triradiatus",
+          "label": "Astyanax bimaculatus",
+          "registros": 8,
+          "slug_especie": "astyanax-bimaculatus",
           "slug_grupo": "peces-dulceacuicolas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5961428",
-          "species": "Ancistrus triradiatus",
+          "url_gbif": "https://www.gbif.org/species/5204296",
+          "species": "Astyanax bimaculatus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
-          "order": "Siluriformes",
-          "family": "Loricariidae",
-          "genus": "Ancistrus"
+          "order": "Characiformes",
+          "family": "Characidae",
+          "genus": "Astyanax"
         },
         {
           "label": "Hyphessobrycon otrynus",
@@ -14078,6 +14064,20 @@
           "order": "Characiformes",
           "family": "Curimatidae",
           "genus": "Steindachnerina"
+        },
+        {
+          "label": "Ancistrus triradiatus",
+          "registros": 7,
+          "slug_especie": "ancistrus-triradiatus",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5961428",
+          "species": "Ancistrus triradiatus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Siluriformes",
+          "family": "Loricariidae",
+          "genus": "Ancistrus"
         }
       ],
       "species_list_tematica": {
@@ -15816,6 +15816,20 @@
           "genus": "Gonatodes"
         },
         {
+          "label": "Pseudogonatodes guianensis",
+          "registros": 6,
+          "slug_especie": "pseudogonatodes-guianensis",
+          "slug_grupo": "reptiles",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2446758",
+          "species": "Pseudogonatodes guianensis",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Squamata",
+          "family": "Sphaerodactylidae",
+          "genus": "Pseudogonatodes"
+        },
+        {
           "label": "Boa constrictor",
           "registros": 6,
           "slug_especie": "boa-constrictor",
@@ -15831,18 +15845,18 @@
           "genus": "Boa"
         },
         {
-          "label": "Pseudogonatodes guianensis",
-          "registros": 6,
-          "slug_especie": "pseudogonatodes-guianensis",
+          "label": "Oxyrhopus petolarius",
+          "registros": 5,
+          "slug_especie": "oxyrhopus-petolarius",
           "slug_grupo": "reptiles",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2446758",
-          "species": "Pseudogonatodes guianensis",
+          "url_gbif": "https://www.gbif.org/species/2454989",
+          "species": "Oxyrhopus petolarius",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Squamata",
-          "family": "Sphaerodactylidae",
-          "genus": "Pseudogonatodes"
+          "family": "Colubridae",
+          "genus": "Oxyrhopus"
         },
         {
           "label": "Anolis scypheus",
@@ -15860,20 +15874,6 @@
           "genus": "Anolis"
         },
         {
-          "label": "Oxyrhopus petolarius",
-          "registros": 5,
-          "slug_especie": "oxyrhopus-petolarius",
-          "slug_grupo": "reptiles",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2454989",
-          "species": "Oxyrhopus petolarius",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Squamata",
-          "family": "Colubridae",
-          "genus": "Oxyrhopus"
-        },
-        {
           "label": "Ameiva praesignis",
           "registros": 4,
           "slug_especie": "ameiva-praesignis",
@@ -15888,19 +15888,18 @@
           "genus": "Ameiva"
         },
         {
-          "label": "Anolis auratus",
+          "label": "Spilotes pullatus",
           "registros": 3,
-          "slug_especie": "anolis-auratus",
+          "slug_especie": "spilotes-pullatus",
           "slug_grupo": "reptiles",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/9129157",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cfc1ec3c16479905cba800/summary",
-          "species": "Anolis auratus",
+          "url_gbif": "https://www.gbif.org/species/9195230",
+          "species": "Spilotes pullatus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Squamata",
-          "family": "Dactyloidae",
-          "genus": "Anolis"
+          "family": "Colubridae",
+          "genus": "Spilotes"
         },
         {
           "label": "Mastigodryas boddaerti",
@@ -15917,18 +15916,19 @@
           "genus": "Mastigodryas"
         },
         {
-          "label": "Spilotes pullatus",
+          "label": "Anolis auratus",
           "registros": 3,
-          "slug_especie": "spilotes-pullatus",
+          "slug_especie": "anolis-auratus",
           "slug_grupo": "reptiles",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/9195230",
-          "species": "Spilotes pullatus",
+          "url_gbif": "https://www.gbif.org/species/9129157",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cfc1ec3c16479905cba800/summary",
+          "species": "Anolis auratus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Squamata",
-          "family": "Colubridae",
-          "genus": "Spilotes"
+          "family": "Dactyloidae",
+          "genus": "Anolis"
         }
       ],
       "species_list_tematica": {
@@ -18209,24 +18209,6 @@
             "genus": "Egretta"
           },
           {
-            "label": "Setophaga fusca",
-            "registros": 2,
-            "slug_especie": "setophaga-fusca",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/6093199",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56cf166a3c16479905cba7c4/summary",
-            "species": "Setophaga fusca",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Parulidae",
-            "genus": "Setophaga"
-          },
-          {
             "label": "Setophaga ruticilla",
             "registros": 2,
             "slug_especie": "setophaga-ruticilla",
@@ -18237,6 +18219,24 @@
             "url_gbif": "https://www.gbif.org/species/2489985",
             "url_cbc": "https://catalogo.biodiversidad.co/file/56cfd11d3c16479905cba808/summary",
             "species": "Setophaga ruticilla",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Parulidae",
+            "genus": "Setophaga"
+          },
+          {
+            "label": "Setophaga fusca",
+            "registros": 2,
+            "slug_especie": "setophaga-fusca",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/6093199",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cf166a3c16479905cba7c4/summary",
+            "species": "Setophaga fusca",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Aves",

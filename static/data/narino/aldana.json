@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -1655,21 +1655,6 @@
           "genus": "Physalis"
         },
         {
-          "label": "Baccharis latifolia",
-          "registros": 2,
-          "slug_especie": "baccharis-latifolia",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3129805",
-          "species": "Baccharis latifolia",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Asterales",
-          "family": "Asteraceae",
-          "genus": "Baccharis"
-        },
-        {
           "label": "Passiflora edulis",
           "registros": 2,
           "slug_especie": "passiflora-edulis",
@@ -1702,6 +1687,21 @@
           "genus": "Solanum"
         },
         {
+          "label": "Baccharis latifolia",
+          "registros": 2,
+          "slug_especie": "baccharis-latifolia",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3129805",
+          "species": "Baccharis latifolia",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Asterales",
+          "family": "Asteraceae",
+          "genus": "Baccharis"
+        },
+        {
           "label": "Acacia melanoxylon",
           "registros": 1,
           "slug_especie": "acacia-melanoxylon",
@@ -1718,65 +1718,20 @@
           "genus": "Acacia"
         },
         {
-          "label": "Aechmea gamosepala",
+          "label": "Zea mays",
           "registros": 1,
-          "slug_especie": "aechmea-gamosepala",
+          "slug_especie": "zea-mays",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2698108",
-          "species": "Aechmea gamosepala",
+          "url_gbif": "https://www.gbif.org/species/5290052",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7af7083c45700544e42f5/summary",
+          "species": "Zea mays",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Liliopsida",
           "order": "Poales",
-          "family": "Bromeliaceae",
-          "genus": "Aechmea"
-        },
-        {
-          "label": "Aloysia citrodora",
-          "registros": 1,
-          "slug_especie": "aloysia-citrodora",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/8049140",
-          "species": "Aloysia citrodora",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Lamiales",
-          "family": "Verbenaceae",
-          "genus": "Aloysia"
-        },
-        {
-          "label": "Barnadesia spinosa",
-          "registros": 1,
-          "slug_especie": "barnadesia-spinosa",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4934077",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c807adf0106c67230e742a/summary",
-          "species": "Barnadesia spinosa",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Asterales",
-          "family": "Asteraceae",
-          "genus": "Barnadesia"
-        },
-        {
-          "label": "Bocconia frutescens",
-          "registros": 1,
-          "slug_especie": "bocconia-frutescens",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2888374",
-          "species": "Bocconia frutescens",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Ranunculales",
-          "family": "Papaveraceae",
-          "genus": "Bocconia"
+          "family": "Poaceae",
+          "genus": "Zea"
         },
         {
           "label": "Brugmansia arborea",
@@ -1948,6 +1903,21 @@
           "genus": "Melissa"
         },
         {
+          "label": "Aloysia citrodora",
+          "registros": 1,
+          "slug_especie": "aloysia-citrodora",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/8049140",
+          "species": "Aloysia citrodora",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Lamiales",
+          "family": "Verbenaceae",
+          "genus": "Aloysia"
+        },
+        {
           "label": "Passiflora mixta",
           "registros": 1,
           "slug_especie": "passiflora-mixta",
@@ -1978,6 +1948,22 @@
           "order": "Laurales",
           "family": "Lauraceae",
           "genus": "Persea"
+        },
+        {
+          "label": "Barnadesia spinosa",
+          "registros": 1,
+          "slug_especie": "barnadesia-spinosa",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/4934077",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c807adf0106c67230e742a/summary",
+          "species": "Barnadesia spinosa",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Asterales",
+          "family": "Asteraceae",
+          "genus": "Barnadesia"
         },
         {
           "label": "Piper lacunosum",
@@ -2071,6 +2057,21 @@
           "genus": "Siphocampylus"
         },
         {
+          "label": "Aechmea gamosepala",
+          "registros": 1,
+          "slug_especie": "aechmea-gamosepala",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2698108",
+          "species": "Aechmea gamosepala",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Poales",
+          "family": "Bromeliaceae",
+          "genus": "Aechmea"
+        },
+        {
           "label": "Solanum betaceum",
           "registros": 1,
           "slug_especie": "solanum-betaceum",
@@ -2162,20 +2163,19 @@
           "genus": "Vicia"
         },
         {
-          "label": "Zea mays",
+          "label": "Bocconia frutescens",
           "registros": 1,
-          "slug_especie": "zea-mays",
+          "slug_especie": "bocconia-frutescens",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5290052",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7af7083c45700544e42f5/summary",
-          "species": "Zea mays",
+          "url_gbif": "https://www.gbif.org/species/2888374",
+          "species": "Bocconia frutescens",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Poales",
-          "family": "Poaceae",
-          "genus": "Zea"
+          "class": "Magnoliopsida",
+          "order": "Ranunculales",
+          "family": "Papaveraceae",
+          "genus": "Bocconia"
         }
       ],
       "species_list_tematica": {
@@ -4398,21 +4398,6 @@
           "genus": "Physalis"
         },
         {
-          "label": "Baccharis latifolia",
-          "registros": 2,
-          "slug_especie": "baccharis-latifolia",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3129805",
-          "species": "Baccharis latifolia",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Asterales",
-          "family": "Asteraceae",
-          "genus": "Baccharis"
-        },
-        {
           "label": "Passiflora edulis",
           "registros": 2,
           "slug_especie": "passiflora-edulis",
@@ -4445,6 +4430,21 @@
           "genus": "Solanum"
         },
         {
+          "label": "Baccharis latifolia",
+          "registros": 2,
+          "slug_especie": "baccharis-latifolia",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3129805",
+          "species": "Baccharis latifolia",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Asterales",
+          "family": "Asteraceae",
+          "genus": "Baccharis"
+        },
+        {
           "label": "Acacia melanoxylon",
           "registros": 1,
           "slug_especie": "acacia-melanoxylon",
@@ -4461,65 +4461,20 @@
           "genus": "Acacia"
         },
         {
-          "label": "Aechmea gamosepala",
+          "label": "Zea mays",
           "registros": 1,
-          "slug_especie": "aechmea-gamosepala",
+          "slug_especie": "zea-mays",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2698108",
-          "species": "Aechmea gamosepala",
+          "url_gbif": "https://www.gbif.org/species/5290052",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7af7083c45700544e42f5/summary",
+          "species": "Zea mays",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Liliopsida",
           "order": "Poales",
-          "family": "Bromeliaceae",
-          "genus": "Aechmea"
-        },
-        {
-          "label": "Aloysia citrodora",
-          "registros": 1,
-          "slug_especie": "aloysia-citrodora",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/8049140",
-          "species": "Aloysia citrodora",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Lamiales",
-          "family": "Verbenaceae",
-          "genus": "Aloysia"
-        },
-        {
-          "label": "Barnadesia spinosa",
-          "registros": 1,
-          "slug_especie": "barnadesia-spinosa",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4934077",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c807adf0106c67230e742a/summary",
-          "species": "Barnadesia spinosa",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Asterales",
-          "family": "Asteraceae",
-          "genus": "Barnadesia"
-        },
-        {
-          "label": "Bocconia frutescens",
-          "registros": 1,
-          "slug_especie": "bocconia-frutescens",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2888374",
-          "species": "Bocconia frutescens",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Ranunculales",
-          "family": "Papaveraceae",
-          "genus": "Bocconia"
+          "family": "Poaceae",
+          "genus": "Zea"
         },
         {
           "label": "Brugmansia arborea",
@@ -4691,6 +4646,21 @@
           "genus": "Melissa"
         },
         {
+          "label": "Aloysia citrodora",
+          "registros": 1,
+          "slug_especie": "aloysia-citrodora",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/8049140",
+          "species": "Aloysia citrodora",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Lamiales",
+          "family": "Verbenaceae",
+          "genus": "Aloysia"
+        },
+        {
           "label": "Passiflora mixta",
           "registros": 1,
           "slug_especie": "passiflora-mixta",
@@ -4721,6 +4691,22 @@
           "order": "Laurales",
           "family": "Lauraceae",
           "genus": "Persea"
+        },
+        {
+          "label": "Barnadesia spinosa",
+          "registros": 1,
+          "slug_especie": "barnadesia-spinosa",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/4934077",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c807adf0106c67230e742a/summary",
+          "species": "Barnadesia spinosa",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Asterales",
+          "family": "Asteraceae",
+          "genus": "Barnadesia"
         },
         {
           "label": "Piper lacunosum",
@@ -4814,6 +4800,21 @@
           "genus": "Siphocampylus"
         },
         {
+          "label": "Aechmea gamosepala",
+          "registros": 1,
+          "slug_especie": "aechmea-gamosepala",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2698108",
+          "species": "Aechmea gamosepala",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Poales",
+          "family": "Bromeliaceae",
+          "genus": "Aechmea"
+        },
+        {
           "label": "Solanum betaceum",
           "registros": 1,
           "slug_especie": "solanum-betaceum",
@@ -4905,20 +4906,19 @@
           "genus": "Vicia"
         },
         {
-          "label": "Zea mays",
+          "label": "Bocconia frutescens",
           "registros": 1,
-          "slug_especie": "zea-mays",
+          "slug_especie": "bocconia-frutescens",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5290052",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7af7083c45700544e42f5/summary",
-          "species": "Zea mays",
+          "url_gbif": "https://www.gbif.org/species/2888374",
+          "species": "Bocconia frutescens",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Poales",
-          "family": "Poaceae",
-          "genus": "Zea"
+          "class": "Magnoliopsida",
+          "order": "Ranunculales",
+          "family": "Papaveraceae",
+          "genus": "Bocconia"
         }
       ],
       "species_list_tematica": {
@@ -5436,21 +5436,6 @@
           "genus": "Physalis"
         },
         {
-          "label": "Baccharis latifolia",
-          "registros": 2,
-          "slug_especie": "baccharis-latifolia",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3129805",
-          "species": "Baccharis latifolia",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Asterales",
-          "family": "Asteraceae",
-          "genus": "Baccharis"
-        },
-        {
           "label": "Passiflora edulis",
           "registros": 2,
           "slug_especie": "passiflora-edulis",
@@ -5483,6 +5468,21 @@
           "genus": "Solanum"
         },
         {
+          "label": "Baccharis latifolia",
+          "registros": 2,
+          "slug_especie": "baccharis-latifolia",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3129805",
+          "species": "Baccharis latifolia",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Asterales",
+          "family": "Asteraceae",
+          "genus": "Baccharis"
+        },
+        {
           "label": "Acacia melanoxylon",
           "registros": 1,
           "slug_especie": "acacia-melanoxylon",
@@ -5499,65 +5499,20 @@
           "genus": "Acacia"
         },
         {
-          "label": "Aechmea gamosepala",
+          "label": "Zea mays",
           "registros": 1,
-          "slug_especie": "aechmea-gamosepala",
+          "slug_especie": "zea-mays",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2698108",
-          "species": "Aechmea gamosepala",
+          "url_gbif": "https://www.gbif.org/species/5290052",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7af7083c45700544e42f5/summary",
+          "species": "Zea mays",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Liliopsida",
           "order": "Poales",
-          "family": "Bromeliaceae",
-          "genus": "Aechmea"
-        },
-        {
-          "label": "Aloysia citrodora",
-          "registros": 1,
-          "slug_especie": "aloysia-citrodora",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/8049140",
-          "species": "Aloysia citrodora",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Lamiales",
-          "family": "Verbenaceae",
-          "genus": "Aloysia"
-        },
-        {
-          "label": "Barnadesia spinosa",
-          "registros": 1,
-          "slug_especie": "barnadesia-spinosa",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4934077",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c807adf0106c67230e742a/summary",
-          "species": "Barnadesia spinosa",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Asterales",
-          "family": "Asteraceae",
-          "genus": "Barnadesia"
-        },
-        {
-          "label": "Bocconia frutescens",
-          "registros": 1,
-          "slug_especie": "bocconia-frutescens",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2888374",
-          "species": "Bocconia frutescens",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Ranunculales",
-          "family": "Papaveraceae",
-          "genus": "Bocconia"
+          "family": "Poaceae",
+          "genus": "Zea"
         },
         {
           "label": "Brugmansia arborea",
@@ -5729,6 +5684,21 @@
           "genus": "Melissa"
         },
         {
+          "label": "Aloysia citrodora",
+          "registros": 1,
+          "slug_especie": "aloysia-citrodora",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/8049140",
+          "species": "Aloysia citrodora",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Lamiales",
+          "family": "Verbenaceae",
+          "genus": "Aloysia"
+        },
+        {
           "label": "Passiflora mixta",
           "registros": 1,
           "slug_especie": "passiflora-mixta",
@@ -5759,6 +5729,22 @@
           "order": "Laurales",
           "family": "Lauraceae",
           "genus": "Persea"
+        },
+        {
+          "label": "Barnadesia spinosa",
+          "registros": 1,
+          "slug_especie": "barnadesia-spinosa",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/4934077",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c807adf0106c67230e742a/summary",
+          "species": "Barnadesia spinosa",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Asterales",
+          "family": "Asteraceae",
+          "genus": "Barnadesia"
         },
         {
           "label": "Piper lacunosum",
@@ -5852,6 +5838,21 @@
           "genus": "Siphocampylus"
         },
         {
+          "label": "Aechmea gamosepala",
+          "registros": 1,
+          "slug_especie": "aechmea-gamosepala",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2698108",
+          "species": "Aechmea gamosepala",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Poales",
+          "family": "Bromeliaceae",
+          "genus": "Aechmea"
+        },
+        {
           "label": "Solanum betaceum",
           "registros": 1,
           "slug_especie": "solanum-betaceum",
@@ -5943,20 +5944,19 @@
           "genus": "Vicia"
         },
         {
-          "label": "Zea mays",
+          "label": "Bocconia frutescens",
           "registros": 1,
-          "slug_especie": "zea-mays",
+          "slug_especie": "bocconia-frutescens",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5290052",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7af7083c45700544e42f5/summary",
-          "species": "Zea mays",
+          "url_gbif": "https://www.gbif.org/species/2888374",
+          "species": "Bocconia frutescens",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Poales",
-          "family": "Poaceae",
-          "genus": "Zea"
+          "class": "Magnoliopsida",
+          "order": "Ranunculales",
+          "family": "Papaveraceae",
+          "genus": "Bocconia"
         }
       ],
       "species_list_tematica": {

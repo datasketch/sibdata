@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -640,19 +640,19 @@
               "slug_tematica": "amenazadas-nacional-vu"
             },
             {
-              "label": "Plecturocebus discolor",
-              "slug_especie": "plecturocebus-discolor",
-              "registros": 9,
-              "url_gbif": "https://www.gbif.org/species/9234391",
-              "url_cbc": "https://catalogo.biodiversidad.co/file/5e3b3c5b7312d26d51df5978/summary",
-              "slug_tematica": "amenazadas-nacional-vu"
-            },
-            {
               "label": "Tapirus terrestris",
               "slug_especie": "tapirus-terrestris",
               "registros": 9,
               "url_gbif": "https://www.gbif.org/species/2440898",
               "url_cbc": "https://catalogo.biodiversidad.co/file/56cc8bd2207ecea54a561e35/summary",
+              "slug_tematica": "amenazadas-nacional-vu"
+            },
+            {
+              "label": "Plecturocebus discolor",
+              "slug_especie": "plecturocebus-discolor",
+              "registros": 9,
+              "url_gbif": "https://www.gbif.org/species/9234391",
+              "url_cbc": "https://catalogo.biodiversidad.co/file/5e3b3c5b7312d26d51df5978/summary",
               "slug_tematica": "amenazadas-nacional-vu"
             },
             {
@@ -838,19 +838,19 @@
           "slug_tematica": "amenazadas-nacional-vu"
         },
         {
-          "label": "Plecturocebus discolor",
-          "slug_especie": "plecturocebus-discolor",
-          "registros": 9,
-          "url_gbif": "https://www.gbif.org/species/9234391",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/5e3b3c5b7312d26d51df5978/summary",
-          "slug_tematica": "amenazadas-nacional-vu"
-        },
-        {
           "label": "Tapirus terrestris",
           "slug_especie": "tapirus-terrestris",
           "registros": 9,
           "url_gbif": "https://www.gbif.org/species/2440898",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56cc8bd2207ecea54a561e35/summary",
+          "slug_tematica": "amenazadas-nacional-vu"
+        },
+        {
+          "label": "Plecturocebus discolor",
+          "slug_especie": "plecturocebus-discolor",
+          "registros": 9,
+          "url_gbif": "https://www.gbif.org/species/9234391",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5e3b3c5b7312d26d51df5978/summary",
           "slug_tematica": "amenazadas-nacional-vu"
         },
         {
@@ -2031,13 +2031,6 @@
           "slug_tematica": "exoticas"
         },
         {
-          "label": "Arachis hypogaea",
-          "slug_especie": "arachis-hypogaea",
-          "registros": 2,
-          "url_gbif": "https://www.gbif.org/species/5353770",
-          "slug_tematica": "exoticas"
-        },
-        {
           "label": "Cordyline fruticosa",
           "slug_especie": "cordyline-fruticosa",
           "registros": 2,
@@ -2045,10 +2038,18 @@
           "slug_tematica": "exoticas"
         },
         {
-          "label": "Linepithema humile",
-          "slug_especie": "linepithema-humile",
+          "label": "Arachis hypogaea",
+          "slug_especie": "arachis-hypogaea",
           "registros": 2,
-          "url_gbif": "https://www.gbif.org/species/1316908",
+          "url_gbif": "https://www.gbif.org/species/5353770",
+          "slug_tematica": "exoticas"
+        },
+        {
+          "label": "Syzygium jambos",
+          "slug_especie": "syzygium-jambos",
+          "registros": 2,
+          "url_gbif": "https://www.gbif.org/species/3183534",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5949473e2f4fd7bc7f39766e/summary",
           "slug_tematica": "exoticas"
         },
         {
@@ -2904,22 +2905,6 @@
           "genus": "Osteocephalus"
         },
         {
-          "label": "Rhinella marina",
-          "registros": 27,
-          "slug_especie": "rhinella-marina",
-          "slug_grupo": "anfibios",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5216933",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56d4cdfe3c16479905cba8cc/summary",
-          "species": "Rhinella marina",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Amphibia",
-          "order": "Anura",
-          "family": "Bufonidae",
-          "genus": "Rhinella"
-        },
-        {
           "label": "Scinax ruber",
           "registros": 27,
           "slug_especie": "scinax-ruber",
@@ -2934,6 +2919,22 @@
           "order": "Anura",
           "family": "Hylidae",
           "genus": "Scinax"
+        },
+        {
+          "label": "Rhinella marina",
+          "registros": 27,
+          "slug_especie": "rhinella-marina",
+          "slug_grupo": "anfibios",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5216933",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d4cdfe3c16479905cba8cc/summary",
+          "species": "Rhinella marina",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Amphibia",
+          "order": "Anura",
+          "family": "Bufonidae",
+          "genus": "Rhinella"
         },
         {
           "label": "Adenomera andreae",
@@ -4112,23 +4113,6 @@
             "genus": "Banisteriopsis"
           },
           {
-            "label": "Artocarpus altilis",
-            "registros": 3,
-            "slug_especie": "artocarpus-altilis",
-            "slug_tematica": "exoticas-riesgo-invasion-total",
-            "tematica_label": "Exóticas con riesgo de invasión",
-            "slug_grupo": "angiospermas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2984573",
-            "species": "Artocarpus altilis",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Rosales",
-            "family": "Moraceae",
-            "genus": "Artocarpus"
-          },
-          {
             "label": "Xanthosoma sagittifolium",
             "registros": 3,
             "slug_especie": "xanthosoma-sagittifolium",
@@ -4147,21 +4131,21 @@
             "genus": "Xanthosoma"
           },
           {
-            "label": "Arachis hypogaea",
-            "registros": 2,
-            "slug_especie": "arachis-hypogaea",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
+            "label": "Artocarpus altilis",
+            "registros": 3,
+            "slug_especie": "artocarpus-altilis",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
             "slug_grupo": "angiospermas",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5353770",
-            "species": "Arachis hypogaea",
+            "url_gbif": "https://www.gbif.org/species/2984573",
+            "species": "Artocarpus altilis",
             "kingdom": "Plantae",
             "phylum": "Tracheophyta",
             "class": "Magnoliopsida",
-            "order": "Fabales",
-            "family": "Fabaceae",
-            "genus": "Arachis"
+            "order": "Rosales",
+            "family": "Moraceae",
+            "genus": "Artocarpus"
           },
           {
             "label": "Cordyline fruticosa",
@@ -4181,22 +4165,21 @@
             "genus": "Cordyline"
           },
           {
-            "label": "Musa velutina",
+            "label": "Arachis hypogaea",
             "registros": 2,
-            "slug_especie": "musa-velutina",
+            "slug_especie": "arachis-hypogaea",
             "slug_tematica": "exoticas",
             "tematica_label": "Exóticas",
             "slug_grupo": "angiospermas",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2762971",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7930d83c45700544e4188/summary",
-            "species": "Musa velutina",
+            "url_gbif": "https://www.gbif.org/species/5353770",
+            "species": "Arachis hypogaea",
             "kingdom": "Plantae",
             "phylum": "Tracheophyta",
-            "class": "Liliopsida",
-            "order": "Zingiberales",
-            "family": "Musaceae",
-            "genus": "Musa"
+            "class": "Magnoliopsida",
+            "order": "Fabales",
+            "family": "Fabaceae",
+            "genus": "Arachis"
           },
           {
             "label": "Syzygium jambos",
@@ -4215,6 +4198,24 @@
             "order": "Myrtales",
             "family": "Myrtaceae",
             "genus": "Syzygium"
+          },
+          {
+            "label": "Musa velutina",
+            "registros": 2,
+            "slug_especie": "musa-velutina",
+            "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
+            "slug_grupo": "angiospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2762971",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7930d83c45700544e4188/summary",
+            "species": "Musa velutina",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Liliopsida",
+            "order": "Zingiberales",
+            "family": "Musaceae",
+            "genus": "Musa"
           }
         ]
       }
@@ -5939,6 +5940,21 @@
       "subgrupo_especies": [],
       "species_list_top": [
         {
+          "label": "Micrathena clypeata",
+          "registros": 2,
+          "slug_especie": "micrathena-clypeata",
+          "slug_grupo": "aracnidos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2159638",
+          "species": "Micrathena clypeata",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Arachnida",
+          "order": "Araneae",
+          "family": "Araneidae",
+          "genus": "Micrathena"
+        },
+        {
           "label": "Anelosimus eximius",
           "registros": 2,
           "slug_especie": "anelosimus-eximius",
@@ -5967,6 +5983,51 @@
           "order": "Araneae",
           "family": "Araneidae",
           "genus": "Argiope"
+        },
+        {
+          "label": "Trichonephila clavipes",
+          "registros": 2,
+          "slug_especie": "trichonephila-clavipes",
+          "slug_grupo": "aracnidos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/10886629",
+          "species": "Trichonephila clavipes",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Arachnida",
+          "order": "Araneae",
+          "family": "Araneidae",
+          "genus": "Trichonephila"
+        },
+        {
+          "label": "Parawixia kochi",
+          "registros": 2,
+          "slug_especie": "parawixia-kochi",
+          "slug_grupo": "aracnidos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2159139",
+          "species": "Parawixia kochi",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Arachnida",
+          "order": "Araneae",
+          "family": "Araneidae",
+          "genus": "Parawixia"
+        },
+        {
+          "label": "Naatlo sylvicola",
+          "registros": 2,
+          "slug_especie": "naatlo-sylvicola",
+          "slug_grupo": "aracnidos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2163586",
+          "species": "Naatlo sylvicola",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Arachnida",
+          "order": "Araneae",
+          "family": "Theridiosomatidae",
+          "genus": "Naatlo"
         },
         {
           "label": "Freya decorata",
@@ -5999,28 +6060,13 @@
           "genus": "Heteropoda"
         },
         {
-          "label": "Micrathena clypeata",
+          "label": "Micrathena schreibersi",
           "registros": 2,
-          "slug_especie": "micrathena-clypeata",
+          "slug_especie": "micrathena-schreibersi",
           "slug_grupo": "aracnidos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2159638",
-          "species": "Micrathena clypeata",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Arachnida",
-          "order": "Araneae",
-          "family": "Araneidae",
-          "genus": "Micrathena"
-        },
-        {
-          "label": "Micrathena cornuta",
-          "registros": 2,
-          "slug_especie": "micrathena-cornuta",
-          "slug_grupo": "aracnidos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7727123",
-          "species": "Micrathena cornuta",
+          "url_gbif": "https://www.gbif.org/species/2159575",
+          "species": "Micrathena schreibersi",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Arachnida",
@@ -6044,64 +6090,19 @@
           "genus": "Micrathena"
         },
         {
-          "label": "Micrathena schreibersi",
+          "label": "Micrathena cornuta",
           "registros": 2,
-          "slug_especie": "micrathena-schreibersi",
+          "slug_especie": "micrathena-cornuta",
           "slug_grupo": "aracnidos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2159575",
-          "species": "Micrathena schreibersi",
+          "url_gbif": "https://www.gbif.org/species/7727123",
+          "species": "Micrathena cornuta",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Arachnida",
           "order": "Araneae",
           "family": "Araneidae",
           "genus": "Micrathena"
-        },
-        {
-          "label": "Naatlo sylvicola",
-          "registros": 2,
-          "slug_especie": "naatlo-sylvicola",
-          "slug_grupo": "aracnidos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2163586",
-          "species": "Naatlo sylvicola",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Arachnida",
-          "order": "Araneae",
-          "family": "Theridiosomatidae",
-          "genus": "Naatlo"
-        },
-        {
-          "label": "Parawixia kochi",
-          "registros": 2,
-          "slug_especie": "parawixia-kochi",
-          "slug_grupo": "aracnidos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2159139",
-          "species": "Parawixia kochi",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Arachnida",
-          "order": "Araneae",
-          "family": "Araneidae",
-          "genus": "Parawixia"
-        },
-        {
-          "label": "Trichonephila clavipes",
-          "registros": 2,
-          "slug_especie": "trichonephila-clavipes",
-          "slug_grupo": "aracnidos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/10886629",
-          "species": "Trichonephila clavipes",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Arachnida",
-          "order": "Araneae",
-          "family": "Araneidae",
-          "genus": "Trichonephila"
         }
       ],
       "species_list_tematica": {
@@ -10614,21 +10615,6 @@
           "genus": "Pyrenula"
         },
         {
-          "label": "Arthonia redingeri",
-          "registros": 222,
-          "slug_especie": "arthonia-redingeri",
-          "slug_grupo": "hongos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2592685",
-          "species": "Arthonia redingeri",
-          "kingdom": "Fungi",
-          "phylum": "Ascomycota",
-          "class": "Arthoniomycetes",
-          "order": "Arthoniales",
-          "family": "Arthoniaceae",
-          "genus": "Arthonia"
-        },
-        {
           "label": "Trypethelium variolosum",
           "registros": 222,
           "slug_especie": "trypethelium-variolosum",
@@ -10642,6 +10628,21 @@
           "order": "Trypetheliales",
           "family": "Trypetheliaceae",
           "genus": "Trypethelium"
+        },
+        {
+          "label": "Arthonia redingeri",
+          "registros": 222,
+          "slug_especie": "arthonia-redingeri",
+          "slug_grupo": "hongos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2592685",
+          "species": "Arthonia redingeri",
+          "kingdom": "Fungi",
+          "phylum": "Ascomycota",
+          "class": "Arthoniomycetes",
+          "order": "Arthoniales",
+          "family": "Arthoniaceae",
+          "genus": "Arthonia"
         },
         {
           "label": "Allographa chrysocarpa",
@@ -10998,21 +10999,6 @@
       "subgrupo_especies": [],
       "species_list_top": [
         {
-          "label": "Hypoponera parva",
-          "registros": 6,
-          "slug_especie": "hypoponera-parva",
-          "slug_grupo": "hormigas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1326728",
-          "species": "Hypoponera parva",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Hymenoptera",
-          "family": "Formicidae",
-          "genus": "Hypoponera"
-        },
-        {
           "label": "Nylanderia steinheili",
           "registros": 6,
           "slug_especie": "nylanderia-steinheili",
@@ -11026,6 +11012,21 @@
           "order": "Hymenoptera",
           "family": "Formicidae",
           "genus": "Nylanderia"
+        },
+        {
+          "label": "Hypoponera parva",
+          "registros": 6,
+          "slug_especie": "hypoponera-parva",
+          "slug_grupo": "hormigas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1326728",
+          "species": "Hypoponera parva",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hymenoptera",
+          "family": "Formicidae",
+          "genus": "Hypoponera"
         },
         {
           "label": "Acropyga goeldii",
@@ -11088,49 +11089,19 @@
           "genus": "Odontomachus"
         },
         {
-          "label": "Crematogaster limata",
+          "label": "Paratrachymyrmex bugnioni",
           "registros": 3,
-          "slug_especie": "crematogaster-limata",
+          "slug_especie": "paratrachymyrmex-bugnioni",
           "slug_grupo": "hormigas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1325158",
-          "species": "Crematogaster limata",
+          "url_gbif": "https://www.gbif.org/species/10694904",
+          "species": "Paratrachymyrmex bugnioni",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Hymenoptera",
           "family": "Formicidae",
-          "genus": "Crematogaster"
-        },
-        {
-          "label": "Cryptopone guianensis",
-          "registros": 3,
-          "slug_especie": "cryptopone-guianensis",
-          "slug_grupo": "hormigas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/10862055",
-          "species": "Cryptopone guianensis",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Hymenoptera",
-          "family": "Formicidae",
-          "genus": "Cryptopone"
-        },
-        {
-          "label": "Cyphomyrmex rimosus",
-          "registros": 3,
-          "slug_especie": "cyphomyrmex-rimosus",
-          "slug_grupo": "hormigas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1315820",
-          "species": "Cyphomyrmex rimosus",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Hymenoptera",
-          "family": "Formicidae",
-          "genus": "Cyphomyrmex"
+          "genus": "Paratrachymyrmex"
         },
         {
           "label": "Pachycondyla harpax",
@@ -11148,21 +11119,6 @@
           "genus": "Pachycondyla"
         },
         {
-          "label": "Paratrachymyrmex bugnioni",
-          "registros": 3,
-          "slug_especie": "paratrachymyrmex-bugnioni",
-          "slug_grupo": "hormigas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/10694904",
-          "species": "Paratrachymyrmex bugnioni",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Hymenoptera",
-          "family": "Formicidae",
-          "genus": "Paratrachymyrmex"
-        },
-        {
           "label": "Wadeura holmgrenita",
           "registros": 3,
           "slug_especie": "wadeura-holmgrenita",
@@ -11176,6 +11132,51 @@
           "order": "Hymenoptera",
           "family": "Formicidae",
           "genus": "Wadeura"
+        },
+        {
+          "label": "Cryptopone guianensis",
+          "registros": 3,
+          "slug_especie": "cryptopone-guianensis",
+          "slug_grupo": "hormigas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/10862055",
+          "species": "Cryptopone guianensis",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hymenoptera",
+          "family": "Formicidae",
+          "genus": "Cryptopone"
+        },
+        {
+          "label": "Crematogaster limata",
+          "registros": 3,
+          "slug_especie": "crematogaster-limata",
+          "slug_grupo": "hormigas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1325158",
+          "species": "Crematogaster limata",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hymenoptera",
+          "family": "Formicidae",
+          "genus": "Crematogaster"
+        },
+        {
+          "label": "Cyphomyrmex rimosus",
+          "registros": 3,
+          "slug_especie": "cyphomyrmex-rimosus",
+          "slug_grupo": "hormigas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1315820",
+          "species": "Cyphomyrmex rimosus",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hymenoptera",
+          "family": "Formicidae",
+          "genus": "Cyphomyrmex"
         }
       ],
       "species_list_tematica": {
@@ -11606,34 +11607,19 @@
           "genus": "Crematogaster"
         },
         {
-          "label": "Anartia amathea",
+          "label": "Odontomachus meinerti",
           "registros": 4,
-          "slug_especie": "anartia-amathea",
+          "slug_especie": "odontomachus-meinerti",
           "slug_grupo": "insectos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5128011",
-          "species": "Anartia amathea",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Anartia"
-        },
-        {
-          "label": "Crematogaster sotobosque",
-          "registros": 4,
-          "slug_especie": "crematogaster-sotobosque",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/8302097",
-          "species": "Crematogaster sotobosque",
+          "url_gbif": "https://www.gbif.org/species/5035327",
+          "species": "Odontomachus meinerti",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Hymenoptera",
           "family": "Formicidae",
-          "genus": "Crematogaster"
+          "genus": "Odontomachus"
         },
         {
           "label": "Cylindrotermes parvignathus",
@@ -11651,19 +11637,34 @@
           "genus": "Cylindrotermes"
         },
         {
-          "label": "Odontomachus meinerti",
+          "label": "Crematogaster sotobosque",
           "registros": 4,
-          "slug_especie": "odontomachus-meinerti",
+          "slug_especie": "crematogaster-sotobosque",
           "slug_grupo": "insectos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5035327",
-          "species": "Odontomachus meinerti",
+          "url_gbif": "https://www.gbif.org/species/8302097",
+          "species": "Crematogaster sotobosque",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Hymenoptera",
           "family": "Formicidae",
-          "genus": "Odontomachus"
+          "genus": "Crematogaster"
+        },
+        {
+          "label": "Anartia amathea",
+          "registros": 4,
+          "slug_especie": "anartia-amathea",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5128011",
+          "species": "Anartia amathea",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Anartia"
         }
       ],
       "species_list_tematica": {
@@ -12133,49 +12134,19 @@
           "genus": "Testudinella"
         },
         {
-          "label": "Anartia amathea",
+          "label": "Odontomachus meinerti",
           "registros": 4,
-          "slug_especie": "anartia-amathea",
+          "slug_especie": "odontomachus-meinerti",
           "slug_grupo": "invertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5128011",
-          "species": "Anartia amathea",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Anartia"
-        },
-        {
-          "label": "Crematogaster sotobosque",
-          "registros": 4,
-          "slug_especie": "crematogaster-sotobosque",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/8302097",
-          "species": "Crematogaster sotobosque",
+          "url_gbif": "https://www.gbif.org/species/5035327",
+          "species": "Odontomachus meinerti",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Hymenoptera",
           "family": "Formicidae",
-          "genus": "Crematogaster"
-        },
-        {
-          "label": "Cylindrotermes parvignathus",
-          "registros": 4,
-          "slug_especie": "cylindrotermes-parvignathus",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/9013595",
-          "species": "Cylindrotermes parvignathus",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Blattodea",
-          "family": "Termitidae",
-          "genus": "Cylindrotermes"
+          "genus": "Odontomachus"
         },
         {
           "label": "Lecane lunaris",
@@ -12193,19 +12164,49 @@
           "genus": "Lecane"
         },
         {
-          "label": "Odontomachus meinerti",
+          "label": "Cylindrotermes parvignathus",
           "registros": 4,
-          "slug_especie": "odontomachus-meinerti",
+          "slug_especie": "cylindrotermes-parvignathus",
           "slug_grupo": "invertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5035327",
-          "species": "Odontomachus meinerti",
+          "url_gbif": "https://www.gbif.org/species/9013595",
+          "species": "Cylindrotermes parvignathus",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Blattodea",
+          "family": "Termitidae",
+          "genus": "Cylindrotermes"
+        },
+        {
+          "label": "Crematogaster sotobosque",
+          "registros": 4,
+          "slug_especie": "crematogaster-sotobosque",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/8302097",
+          "species": "Crematogaster sotobosque",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Hymenoptera",
           "family": "Formicidae",
-          "genus": "Odontomachus"
+          "genus": "Crematogaster"
+        },
+        {
+          "label": "Anartia amathea",
+          "registros": 4,
+          "slug_especie": "anartia-amathea",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5128011",
+          "species": "Anartia amathea",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Anartia"
         }
       ],
       "species_list_tematica": {
@@ -12652,22 +12653,6 @@
           "genus": "Saimiri"
         },
         {
-          "label": "Carollia castanea",
-          "registros": 41,
-          "slug_especie": "carollia-castanea",
-          "slug_grupo": "mamiferos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2433178",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c3f68ef0106c67230e736f/summary",
-          "species": "Carollia castanea",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Mammalia",
-          "order": "Chiroptera",
-          "family": "Phyllostomidae",
-          "genus": "Carollia"
-        },
-        {
           "label": "Eira barbara",
           "registros": 41,
           "slug_especie": "eira-barbara",
@@ -12682,6 +12667,22 @@
           "order": "Carnivora",
           "family": "Mustelidae",
           "genus": "Eira"
+        },
+        {
+          "label": "Carollia castanea",
+          "registros": 41,
+          "slug_especie": "carollia-castanea",
+          "slug_grupo": "mamiferos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2433178",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c3f68ef0106c67230e736f/summary",
+          "species": "Carollia castanea",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Chiroptera",
+          "family": "Phyllostomidae",
+          "genus": "Carollia"
         },
         {
           "label": "Artibeus jamaicensis",
@@ -13202,6 +13203,24 @@
             "genus": "Alouatta"
           },
           {
+            "label": "Tapirus terrestris",
+            "registros": 9,
+            "slug_especie": "tapirus-terrestris",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "mamiferos",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2440898",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cc8bd2207ecea54a561e35/summary",
+            "species": "Tapirus terrestris",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Perissodactyla",
+            "family": "Tapiridae",
+            "genus": "Tapirus"
+          },
+          {
             "label": "Cebus albifrons",
             "registros": 9,
             "slug_especie": "cebus-albifrons",
@@ -13218,25 +13237,6 @@
             "order": "Primates",
             "family": "Cebidae",
             "genus": "Cebus"
-          },
-          {
-            "label": "Leopardus pardalis",
-            "registros": 9,
-            "slug_especie": "leopardus-pardalis",
-            "slug_tematica": "cites-i",
-            "tematica_label": "Apéndice CITES I",
-            "slug_grupo": "mamiferos",
-            "tipo": "biologico",
-            "vernacular_name_es": "chucha común",
-            "url_gbif": "https://www.gbif.org/species/2434982",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c66192f0106c67230e73be/summary",
-            "species": "Leopardus pardalis",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Mammalia",
-            "order": "Carnivora",
-            "family": "Felidae",
-            "genus": "Leopardus"
           },
           {
             "label": "Plecturocebus discolor",
@@ -13258,24 +13258,6 @@
             "genus": "Plecturocebus"
           },
           {
-            "label": "Tapirus terrestris",
-            "registros": 9,
-            "slug_especie": "tapirus-terrestris",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "mamiferos",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2440898",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56cc8bd2207ecea54a561e35/summary",
-            "species": "Tapirus terrestris",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Mammalia",
-            "order": "Perissodactyla",
-            "family": "Tapiridae",
-            "genus": "Tapirus"
-          },
-          {
             "label": "Tayassu pecari",
             "registros": 9,
             "slug_especie": "tayassu-pecari",
@@ -13292,6 +13274,43 @@
             "order": "Artiodactyla",
             "family": "Tayassuidae",
             "genus": "Tayassu"
+          },
+          {
+            "label": "Leopardus pardalis",
+            "registros": 9,
+            "slug_especie": "leopardus-pardalis",
+            "slug_tematica": "cites-i",
+            "tematica_label": "Apéndice CITES I",
+            "slug_grupo": "mamiferos",
+            "tipo": "biologico",
+            "vernacular_name_es": "chucha común",
+            "url_gbif": "https://www.gbif.org/species/2434982",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c66192f0106c67230e73be/summary",
+            "species": "Leopardus pardalis",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Carnivora",
+            "family": "Felidae",
+            "genus": "Leopardus"
+          },
+          {
+            "label": "Panthera onca",
+            "registros": 8,
+            "slug_especie": "panthera-onca",
+            "slug_tematica": "cites-i",
+            "tematica_label": "Apéndice CITES I",
+            "slug_grupo": "mamiferos",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5219426",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cb628b207ecea54a561dec/summary",
+            "species": "Panthera onca",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Carnivora",
+            "family": "Felidae",
+            "genus": "Panthera"
           },
           {
             "label": "Aotus vociferans",
@@ -13311,24 +13330,6 @@
             "order": "Primates",
             "family": "Aotidae",
             "genus": "Aotus"
-          },
-          {
-            "label": "Panthera onca",
-            "registros": 8,
-            "slug_especie": "panthera-onca",
-            "slug_tematica": "cites-i",
-            "tematica_label": "Apéndice CITES I",
-            "slug_grupo": "mamiferos",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5219426",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56cb628b207ecea54a561dec/summary",
-            "species": "Panthera onca",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Mammalia",
-            "order": "Carnivora",
-            "family": "Felidae",
-            "genus": "Panthera"
           }
         ],
         "migratorias": [],
@@ -15542,20 +15543,6 @@
           "genus": "Hyphessobrycon"
         },
         {
-          "label": "Gymnocorymbus thayeri",
-          "registros": 18,
-          "slug_especie": "gymnocorymbus-thayeri",
-          "slug_grupo": "peces",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2353918",
-          "species": "Gymnocorymbus thayeri",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Characidae",
-          "genus": "Gymnocorymbus"
-        },
-        {
           "label": "Hoplias malabaricus",
           "registros": 18,
           "slug_especie": "hoplias-malabaricus",
@@ -15569,6 +15556,20 @@
           "order": "Characiformes",
           "family": "Erythrinidae",
           "genus": "Hoplias"
+        },
+        {
+          "label": "Gymnocorymbus thayeri",
+          "registros": 18,
+          "slug_especie": "gymnocorymbus-thayeri",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2353918",
+          "species": "Gymnocorymbus thayeri",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Characidae",
+          "genus": "Gymnocorymbus"
         }
       ],
       "species_list_tematica": {
@@ -15971,20 +15972,6 @@
           "genus": "Characidium"
         },
         {
-          "label": "Gymnocorymbus thayeri",
-          "registros": 18,
-          "slug_especie": "gymnocorymbus-thayeri",
-          "slug_grupo": "peces-dulceacuicolas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2353918",
-          "species": "Gymnocorymbus thayeri",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Characidae",
-          "genus": "Gymnocorymbus"
-        },
-        {
           "label": "Hoplias malabaricus",
           "registros": 18,
           "slug_especie": "hoplias-malabaricus",
@@ -15998,6 +15985,20 @@
           "order": "Characiformes",
           "family": "Erythrinidae",
           "genus": "Hoplias"
+        },
+        {
+          "label": "Gymnocorymbus thayeri",
+          "registros": 18,
+          "slug_especie": "gymnocorymbus-thayeri",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2353918",
+          "species": "Gymnocorymbus thayeri",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Characidae",
+          "genus": "Gymnocorymbus"
         },
         {
           "label": "Moenkhausia comma",
@@ -17165,23 +17166,6 @@
             "genus": "Banisteriopsis"
           },
           {
-            "label": "Artocarpus altilis",
-            "registros": 3,
-            "slug_especie": "artocarpus-altilis",
-            "slug_tematica": "exoticas-riesgo-invasion-total",
-            "tematica_label": "Exóticas con riesgo de invasión",
-            "slug_grupo": "plantas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2984573",
-            "species": "Artocarpus altilis",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Rosales",
-            "family": "Moraceae",
-            "genus": "Artocarpus"
-          },
-          {
             "label": "Xanthosoma sagittifolium",
             "registros": 3,
             "slug_especie": "xanthosoma-sagittifolium",
@@ -17200,21 +17184,21 @@
             "genus": "Xanthosoma"
           },
           {
-            "label": "Arachis hypogaea",
-            "registros": 2,
-            "slug_especie": "arachis-hypogaea",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
+            "label": "Artocarpus altilis",
+            "registros": 3,
+            "slug_especie": "artocarpus-altilis",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
             "slug_grupo": "plantas",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5353770",
-            "species": "Arachis hypogaea",
+            "url_gbif": "https://www.gbif.org/species/2984573",
+            "species": "Artocarpus altilis",
             "kingdom": "Plantae",
             "phylum": "Tracheophyta",
             "class": "Magnoliopsida",
-            "order": "Fabales",
-            "family": "Fabaceae",
-            "genus": "Arachis"
+            "order": "Rosales",
+            "family": "Moraceae",
+            "genus": "Artocarpus"
           },
           {
             "label": "Cordyline fruticosa",
@@ -17234,22 +17218,21 @@
             "genus": "Cordyline"
           },
           {
-            "label": "Musa velutina",
+            "label": "Arachis hypogaea",
             "registros": 2,
-            "slug_especie": "musa-velutina",
+            "slug_especie": "arachis-hypogaea",
             "slug_tematica": "exoticas",
             "tematica_label": "Exóticas",
             "slug_grupo": "plantas",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2762971",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7930d83c45700544e4188/summary",
-            "species": "Musa velutina",
+            "url_gbif": "https://www.gbif.org/species/5353770",
+            "species": "Arachis hypogaea",
             "kingdom": "Plantae",
             "phylum": "Tracheophyta",
-            "class": "Liliopsida",
-            "order": "Zingiberales",
-            "family": "Musaceae",
-            "genus": "Musa"
+            "class": "Magnoliopsida",
+            "order": "Fabales",
+            "family": "Fabaceae",
+            "genus": "Arachis"
           },
           {
             "label": "Syzygium jambos",
@@ -17268,6 +17251,24 @@
             "order": "Myrtales",
             "family": "Myrtaceae",
             "genus": "Syzygium"
+          },
+          {
+            "label": "Musa velutina",
+            "registros": 2,
+            "slug_especie": "musa-velutina",
+            "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
+            "slug_grupo": "plantas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2762971",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7930d83c45700544e4188/summary",
+            "species": "Musa velutina",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Liliopsida",
+            "order": "Zingiberales",
+            "family": "Musaceae",
+            "genus": "Musa"
           }
         ]
       }
@@ -18134,19 +18135,18 @@
           "genus": "Cercosaura"
         },
         {
-          "label": "Ameiva ameiva",
+          "label": "Loxopholis parietalis",
           "registros": 13,
-          "slug_especie": "ameiva-ameiva",
+          "slug_especie": "loxopholis-parietalis",
           "slug_grupo": "reptiles",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2472164",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56ce8ed73c16479905cba7ae/summary",
-          "species": "Ameiva ameiva",
+          "url_gbif": "https://www.gbif.org/species/10725692",
+          "species": "Loxopholis parietalis",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Squamata",
-          "family": "Teiidae",
-          "genus": "Ameiva"
+          "family": "Gymnophthalmidae",
+          "genus": "Loxopholis"
         },
         {
           "label": "Helicops angulatus",
@@ -18164,18 +18164,19 @@
           "genus": "Helicops"
         },
         {
-          "label": "Loxopholis parietalis",
+          "label": "Ameiva ameiva",
           "registros": 13,
-          "slug_especie": "loxopholis-parietalis",
+          "slug_especie": "ameiva-ameiva",
           "slug_grupo": "reptiles",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/10725692",
-          "species": "Loxopholis parietalis",
+          "url_gbif": "https://www.gbif.org/species/2472164",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56ce8ed73c16479905cba7ae/summary",
+          "species": "Ameiva ameiva",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Squamata",
-          "family": "Gymnophthalmidae",
-          "genus": "Loxopholis"
+          "family": "Teiidae",
+          "genus": "Ameiva"
         },
         {
           "label": "Anolis trachyderma",
@@ -19537,23 +19538,6 @@
             "genus": "Banisteriopsis"
           },
           {
-            "label": "Artocarpus altilis",
-            "registros": 3,
-            "slug_especie": "artocarpus-altilis",
-            "slug_tematica": "exoticas-riesgo-invasion-total",
-            "tematica_label": "Exóticas con riesgo de invasión",
-            "slug_grupo": "vasculares",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2984573",
-            "species": "Artocarpus altilis",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Rosales",
-            "family": "Moraceae",
-            "genus": "Artocarpus"
-          },
-          {
             "label": "Xanthosoma sagittifolium",
             "registros": 3,
             "slug_especie": "xanthosoma-sagittifolium",
@@ -19572,21 +19556,21 @@
             "genus": "Xanthosoma"
           },
           {
-            "label": "Arachis hypogaea",
-            "registros": 2,
-            "slug_especie": "arachis-hypogaea",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
+            "label": "Artocarpus altilis",
+            "registros": 3,
+            "slug_especie": "artocarpus-altilis",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
             "slug_grupo": "vasculares",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5353770",
-            "species": "Arachis hypogaea",
+            "url_gbif": "https://www.gbif.org/species/2984573",
+            "species": "Artocarpus altilis",
             "kingdom": "Plantae",
             "phylum": "Tracheophyta",
             "class": "Magnoliopsida",
-            "order": "Fabales",
-            "family": "Fabaceae",
-            "genus": "Arachis"
+            "order": "Rosales",
+            "family": "Moraceae",
+            "genus": "Artocarpus"
           },
           {
             "label": "Cordyline fruticosa",
@@ -19606,22 +19590,21 @@
             "genus": "Cordyline"
           },
           {
-            "label": "Musa velutina",
+            "label": "Arachis hypogaea",
             "registros": 2,
-            "slug_especie": "musa-velutina",
+            "slug_especie": "arachis-hypogaea",
             "slug_tematica": "exoticas",
             "tematica_label": "Exóticas",
             "slug_grupo": "vasculares",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2762971",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7930d83c45700544e4188/summary",
-            "species": "Musa velutina",
+            "url_gbif": "https://www.gbif.org/species/5353770",
+            "species": "Arachis hypogaea",
             "kingdom": "Plantae",
             "phylum": "Tracheophyta",
-            "class": "Liliopsida",
-            "order": "Zingiberales",
-            "family": "Musaceae",
-            "genus": "Musa"
+            "class": "Magnoliopsida",
+            "order": "Fabales",
+            "family": "Fabaceae",
+            "genus": "Arachis"
           },
           {
             "label": "Syzygium jambos",
@@ -19640,6 +19623,24 @@
             "order": "Myrtales",
             "family": "Myrtaceae",
             "genus": "Syzygium"
+          },
+          {
+            "label": "Musa velutina",
+            "registros": 2,
+            "slug_especie": "musa-velutina",
+            "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
+            "slug_grupo": "vasculares",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2762971",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7930d83c45700544e4188/summary",
+            "species": "Musa velutina",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Liliopsida",
+            "order": "Zingiberales",
+            "family": "Musaceae",
+            "genus": "Musa"
           }
         ]
       }
@@ -23657,21 +23658,6 @@
           "genus": "Pyrenula"
         },
         {
-          "label": "Arthonia redingeri",
-          "registros": 222,
-          "slug_especie": "arthonia-redingeri",
-          "slug_grupo": "liquenes",
-          "tipo": "interes",
-          "url_gbif": "https://www.gbif.org/species/2592685",
-          "species": "Arthonia redingeri",
-          "kingdom": "Fungi",
-          "phylum": "Ascomycota",
-          "class": "Arthoniomycetes",
-          "order": "Arthoniales",
-          "family": "Arthoniaceae",
-          "genus": "Arthonia"
-        },
-        {
           "label": "Trypethelium variolosum",
           "registros": 222,
           "slug_especie": "trypethelium-variolosum",
@@ -23685,6 +23671,21 @@
           "order": "Trypetheliales",
           "family": "Trypetheliaceae",
           "genus": "Trypethelium"
+        },
+        {
+          "label": "Arthonia redingeri",
+          "registros": 222,
+          "slug_especie": "arthonia-redingeri",
+          "slug_grupo": "liquenes",
+          "tipo": "interes",
+          "url_gbif": "https://www.gbif.org/species/2592685",
+          "species": "Arthonia redingeri",
+          "kingdom": "Fungi",
+          "phylum": "Ascomycota",
+          "class": "Arthoniomycetes",
+          "order": "Arthoniales",
+          "family": "Arthoniaceae",
+          "genus": "Arthonia"
         },
         {
           "label": "Allographa chrysocarpa",

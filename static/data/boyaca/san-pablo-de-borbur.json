@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -909,11 +909,10 @@
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Phaethornis anthophilus",
-          "slug_especie": "phaethornis-anthophilus",
+          "label": "Phaethornis guy",
+          "slug_especie": "phaethornis-guy",
           "registros": 27,
-          "url_gbif": "https://www.gbif.org/species/2476595",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e5fc9c83c45700544e3e8d/summary",
+          "url_gbif": "https://www.gbif.org/species/2476607",
           "slug_tematica": "cites-ii"
         }
       ],
@@ -992,11 +991,10 @@
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Phaethornis anthophilus",
-          "slug_especie": "phaethornis-anthophilus",
+          "label": "Phaethornis guy",
+          "slug_especie": "phaethornis-guy",
           "registros": 27,
-          "url_gbif": "https://www.gbif.org/species/2476595",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e5fc9c83c45700544e3e8d/summary",
+          "url_gbif": "https://www.gbif.org/species/2476607",
           "slug_tematica": "cites-ii"
         }
       ],
@@ -1083,11 +1081,10 @@
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Phaethornis anthophilus",
-          "slug_especie": "phaethornis-anthophilus",
+          "label": "Phaethornis guy",
+          "slug_especie": "phaethornis-guy",
           "registros": 27,
-          "url_gbif": "https://www.gbif.org/species/2476595",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e5fc9c83c45700544e3e8d/summary",
+          "url_gbif": "https://www.gbif.org/species/2476607",
           "slug_tematica": "cites-ii"
         }
       ]
@@ -1221,19 +1218,19 @@
           "slug_tematica": "migratorias"
         },
         {
-          "label": "Catharus ustulatus",
-          "slug_especie": "catharus-ustulatus",
-          "registros": 28,
-          "url_gbif": "https://www.gbif.org/species/2490821",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c363eef0106c67230e734a/summary",
-          "slug_tematica": "migratorias"
-        },
-        {
           "label": "Vireo olivaceus",
           "slug_especie": "vireo-olivaceus",
           "registros": 28,
           "url_gbif": "https://www.gbif.org/species/2487430",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56cfcb953c16479905cba805/summary",
+          "slug_tematica": "migratorias"
+        },
+        {
+          "label": "Catharus ustulatus",
+          "slug_especie": "catharus-ustulatus",
+          "registros": 28,
+          "url_gbif": "https://www.gbif.org/species/2490821",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c363eef0106c67230e734a/summary",
           "slug_tematica": "migratorias"
         },
         {
@@ -2942,6 +2939,23 @@
             "genus": "Ramphastos"
           },
           {
+            "label": "Phaethornis guy",
+            "registros": 27,
+            "slug_especie": "phaethornis-guy",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2476607",
+            "species": "Phaethornis guy",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Phaethornis"
+          },
+          {
             "label": "Phaethornis anthophilus",
             "registros": 27,
             "slug_especie": "phaethornis-anthophilus",
@@ -2952,23 +2966,6 @@
             "url_gbif": "https://www.gbif.org/species/2476595",
             "url_cbc": "https://catalogo.biodiversidad.co/file/56e5fc9c83c45700544e3e8d/summary",
             "species": "Phaethornis anthophilus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Phaethornis"
-          },
-          {
-            "label": "Phaethornis guy",
-            "registros": 27,
-            "slug_especie": "phaethornis-guy",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476607",
-            "species": "Phaethornis guy",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Aves",
@@ -3051,24 +3048,6 @@
             "genus": "Setophaga"
           },
           {
-            "label": "Catharus ustulatus",
-            "registros": 28,
-            "slug_especie": "catharus-ustulatus",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2490821",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c363eef0106c67230e734a/summary",
-            "species": "Catharus ustulatus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Turdidae",
-            "genus": "Catharus"
-          },
-          {
             "label": "Vireo olivaceus",
             "registros": 28,
             "slug_especie": "vireo-olivaceus",
@@ -3085,6 +3064,24 @@
             "order": "Passeriformes",
             "family": "Vireonidae",
             "genus": "Vireo"
+          },
+          {
+            "label": "Catharus ustulatus",
+            "registros": 28,
+            "slug_especie": "catharus-ustulatus",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2490821",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c363eef0106c67230e734a/summary",
+            "species": "Catharus ustulatus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Turdidae",
+            "genus": "Catharus"
           },
           {
             "label": "Progne tapera",
@@ -4355,6 +4352,23 @@
             "genus": "Ramphastos"
           },
           {
+            "label": "Phaethornis guy",
+            "registros": 27,
+            "slug_especie": "phaethornis-guy",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2476607",
+            "species": "Phaethornis guy",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Phaethornis"
+          },
+          {
             "label": "Phaethornis anthophilus",
             "registros": 27,
             "slug_especie": "phaethornis-anthophilus",
@@ -4365,23 +4379,6 @@
             "url_gbif": "https://www.gbif.org/species/2476595",
             "url_cbc": "https://catalogo.biodiversidad.co/file/56e5fc9c83c45700544e3e8d/summary",
             "species": "Phaethornis anthophilus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Phaethornis"
-          },
-          {
-            "label": "Phaethornis guy",
-            "registros": 27,
-            "slug_especie": "phaethornis-guy",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476607",
-            "species": "Phaethornis guy",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Aves",
@@ -4464,24 +4461,6 @@
             "genus": "Setophaga"
           },
           {
-            "label": "Catharus ustulatus",
-            "registros": 28,
-            "slug_especie": "catharus-ustulatus",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2490821",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c363eef0106c67230e734a/summary",
-            "species": "Catharus ustulatus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Turdidae",
-            "genus": "Catharus"
-          },
-          {
             "label": "Vireo olivaceus",
             "registros": 28,
             "slug_especie": "vireo-olivaceus",
@@ -4498,6 +4477,24 @@
             "order": "Passeriformes",
             "family": "Vireonidae",
             "genus": "Vireo"
+          },
+          {
+            "label": "Catharus ustulatus",
+            "registros": 28,
+            "slug_especie": "catharus-ustulatus",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2490821",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c363eef0106c67230e734a/summary",
+            "species": "Catharus ustulatus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Turdidae",
+            "genus": "Catharus"
           },
           {
             "label": "Progne tapera",
@@ -6491,21 +6488,6 @@
           "genus": "Culicoides"
         },
         {
-          "label": "Culicoides paraensis",
-          "registros": 3,
-          "slug_especie": "culicoides-paraensis",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1631418",
-          "species": "Culicoides paraensis",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Diptera",
-          "family": "Ceratopogonidae",
-          "genus": "Culicoides"
-        },
-        {
           "label": "Eretris calisto",
           "registros": 3,
           "slug_especie": "eretris-calisto",
@@ -6519,6 +6501,21 @@
           "order": "Lepidoptera",
           "family": "Nymphalidae",
           "genus": "Eretris"
+        },
+        {
+          "label": "Culicoides paraensis",
+          "registros": 3,
+          "slug_especie": "culicoides-paraensis",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1631418",
+          "species": "Culicoides paraensis",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Diptera",
+          "family": "Ceratopogonidae",
+          "genus": "Culicoides"
         },
         {
           "label": "Aubergina hesychia",
@@ -6581,64 +6578,19 @@
           "genus": "Abracris"
         },
         {
-          "label": "Atta cephalotes",
+          "label": "Triatoma venosa",
           "registros": 1,
-          "slug_especie": "atta-cephalotes",
+          "slug_especie": "triatoma-venosa",
           "slug_grupo": "insectos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5035748",
-          "species": "Atta cephalotes",
+          "url_gbif": "https://www.gbif.org/species/8742858",
+          "species": "Triatoma venosa",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
-          "order": "Hymenoptera",
-          "family": "Formicidae",
-          "genus": "Atta"
-        },
-        {
-          "label": "Biblis hyperia",
-          "registros": 1,
-          "slug_especie": "biblis-hyperia",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5131957",
-          "species": "Biblis hyperia",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Sesiidae",
-          "genus": "Sesia"
-        },
-        {
-          "label": "Callipogon lemoinei",
-          "registros": 1,
-          "slug_especie": "callipogon-lemoinei",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1155326",
-          "species": "Callipogon lemoinei",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Coleoptera",
-          "family": "Cerambycidae",
-          "genus": "Callipogon"
-        },
-        {
-          "label": "Choeradodis rhombicollis",
-          "registros": 1,
-          "slug_especie": "choeradodis-rhombicollis",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1405204",
-          "species": "Choeradodis rhombicollis",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Mantodea",
-          "family": "Mantidae",
-          "genus": "Choeradodis"
+          "order": "Hemiptera",
+          "family": "Reduviidae",
+          "genus": "Triatoma"
         },
         {
           "label": "Copiphora vigorosa",
@@ -6684,6 +6636,36 @@
           "order": "Diptera",
           "family": "Ceratopogonidae",
           "genus": "Culicoides"
+        },
+        {
+          "label": "Biblis hyperia",
+          "registros": 1,
+          "slug_especie": "biblis-hyperia",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5131957",
+          "species": "Biblis hyperia",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Sesiidae",
+          "genus": "Sesia"
+        },
+        {
+          "label": "Callipogon lemoinei",
+          "registros": 1,
+          "slug_especie": "callipogon-lemoinei",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1155326",
+          "species": "Callipogon lemoinei",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Coleoptera",
+          "family": "Cerambycidae",
+          "genus": "Callipogon"
         },
         {
           "label": "Culicoides tetrathyris",
@@ -6790,6 +6772,21 @@
           "order": "Hemiptera",
           "family": "Reduviidae",
           "genus": "Eratyrus"
+        },
+        {
+          "label": "Atta cephalotes",
+          "registros": 1,
+          "slug_especie": "atta-cephalotes",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5035748",
+          "species": "Atta cephalotes",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hymenoptera",
+          "family": "Formicidae",
+          "genus": "Atta"
         },
         {
           "label": "Euchroma giganteum",
@@ -6974,19 +6971,19 @@
           "genus": "Steirastoma"
         },
         {
-          "label": "Triatoma venosa",
+          "label": "Choeradodis rhombicollis",
           "registros": 1,
-          "slug_especie": "triatoma-venosa",
+          "slug_especie": "choeradodis-rhombicollis",
           "slug_grupo": "insectos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/8742858",
-          "species": "Triatoma venosa",
+          "url_gbif": "https://www.gbif.org/species/1405204",
+          "species": "Choeradodis rhombicollis",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
-          "order": "Hemiptera",
-          "family": "Reduviidae",
-          "genus": "Triatoma"
+          "order": "Mantodea",
+          "family": "Mantidae",
+          "genus": "Choeradodis"
         }
       ],
       "species_list_tematica": {
@@ -7308,19 +7305,19 @@
           "genus": "Culicoides"
         },
         {
-          "label": "Culicoides debilipalpis",
+          "label": "Eretris calisto",
           "registros": 3,
-          "slug_especie": "culicoides-debilipalpis",
+          "slug_especie": "eretris-calisto",
           "slug_grupo": "invertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1631802",
-          "species": "Culicoides debilipalpis",
+          "url_gbif": "https://www.gbif.org/species/1902265",
+          "species": "Eretris calisto",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
-          "order": "Diptera",
-          "family": "Ceratopogonidae",
-          "genus": "Culicoides"
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Eretris"
         },
         {
           "label": "Culicoides paraensis",
@@ -7338,19 +7335,34 @@
           "genus": "Culicoides"
         },
         {
-          "label": "Eretris calisto",
+          "label": "Culicoides debilipalpis",
           "registros": 3,
-          "slug_especie": "eretris-calisto",
+          "slug_especie": "culicoides-debilipalpis",
           "slug_grupo": "invertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1902265",
-          "species": "Eretris calisto",
+          "url_gbif": "https://www.gbif.org/species/1631802",
+          "species": "Culicoides debilipalpis",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Eretris"
+          "order": "Diptera",
+          "family": "Ceratopogonidae",
+          "genus": "Culicoides"
+        },
+        {
+          "label": "Culicoides leoni",
+          "registros": 2,
+          "slug_especie": "culicoides-leoni",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1631772",
+          "species": "Culicoides leoni",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Diptera",
+          "family": "Ceratopogonidae",
+          "genus": "Culicoides"
         },
         {
           "label": "Aubergina hesychia",
@@ -7383,21 +7395,6 @@
           "genus": "Culicoides"
         },
         {
-          "label": "Culicoides leoni",
-          "registros": 2,
-          "slug_especie": "culicoides-leoni",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1631772",
-          "species": "Culicoides leoni",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Diptera",
-          "family": "Ceratopogonidae",
-          "genus": "Culicoides"
-        },
-        {
           "label": "Abracris flavolineata",
           "registros": 1,
           "slug_especie": "abracris-flavolineata",
@@ -7413,64 +7410,19 @@
           "genus": "Abracris"
         },
         {
-          "label": "Argiope argentata",
+          "label": "Triatoma venosa",
           "registros": 1,
-          "slug_especie": "argiope-argentata",
+          "slug_especie": "triatoma-venosa",
           "slug_grupo": "invertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5170999",
-          "species": "Argiope argentata",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Arachnida",
-          "order": "Araneae",
-          "family": "Araneidae",
-          "genus": "Argiope"
-        },
-        {
-          "label": "Atta cephalotes",
-          "registros": 1,
-          "slug_especie": "atta-cephalotes",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5035748",
-          "species": "Atta cephalotes",
+          "url_gbif": "https://www.gbif.org/species/8742858",
+          "species": "Triatoma venosa",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
-          "order": "Hymenoptera",
-          "family": "Formicidae",
-          "genus": "Atta"
-        },
-        {
-          "label": "Biblis hyperia",
-          "registros": 1,
-          "slug_especie": "biblis-hyperia",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5131957",
-          "species": "Biblis hyperia",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Sesiidae",
-          "genus": "Sesia"
-        },
-        {
-          "label": "Callipogon lemoinei",
-          "registros": 1,
-          "slug_especie": "callipogon-lemoinei",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1155326",
-          "species": "Callipogon lemoinei",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Coleoptera",
-          "family": "Cerambycidae",
-          "genus": "Callipogon"
+          "order": "Hemiptera",
+          "family": "Reduviidae",
+          "genus": "Triatoma"
         },
         {
           "label": "Choeradodis rhombicollis",
@@ -7531,6 +7483,36 @@
           "order": "Diptera",
           "family": "Ceratopogonidae",
           "genus": "Culicoides"
+        },
+        {
+          "label": "Atta cephalotes",
+          "registros": 1,
+          "slug_especie": "atta-cephalotes",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5035748",
+          "species": "Atta cephalotes",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hymenoptera",
+          "family": "Formicidae",
+          "genus": "Atta"
+        },
+        {
+          "label": "Biblis hyperia",
+          "registros": 1,
+          "slug_especie": "biblis-hyperia",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5131957",
+          "species": "Biblis hyperia",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Sesiidae",
+          "genus": "Sesia"
         },
         {
           "label": "Culicoides tetrathyris",
@@ -7637,6 +7619,21 @@
           "order": "Hemiptera",
           "family": "Reduviidae",
           "genus": "Eratyrus"
+        },
+        {
+          "label": "Argiope argentata",
+          "registros": 1,
+          "slug_especie": "argiope-argentata",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5170999",
+          "species": "Argiope argentata",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Arachnida",
+          "order": "Araneae",
+          "family": "Araneidae",
+          "genus": "Argiope"
         },
         {
           "label": "Euchroma giganteum",
@@ -7853,19 +7850,19 @@
           "genus": "Steirastoma"
         },
         {
-          "label": "Triatoma venosa",
+          "label": "Callipogon lemoinei",
           "registros": 1,
-          "slug_especie": "triatoma-venosa",
+          "slug_especie": "callipogon-lemoinei",
           "slug_grupo": "invertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/8742858",
-          "species": "Triatoma venosa",
+          "url_gbif": "https://www.gbif.org/species/1155326",
+          "species": "Callipogon lemoinei",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
-          "order": "Hemiptera",
-          "family": "Reduviidae",
-          "genus": "Triatoma"
+          "order": "Coleoptera",
+          "family": "Cerambycidae",
+          "genus": "Callipogon"
         }
       ],
       "species_list_tematica": {
@@ -10599,6 +10596,23 @@
             "genus": "Ramphastos"
           },
           {
+            "label": "Phaethornis guy",
+            "registros": 27,
+            "slug_especie": "phaethornis-guy",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2476607",
+            "species": "Phaethornis guy",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Phaethornis"
+          },
+          {
             "label": "Phaethornis anthophilus",
             "registros": 27,
             "slug_especie": "phaethornis-anthophilus",
@@ -10609,23 +10623,6 @@
             "url_gbif": "https://www.gbif.org/species/2476595",
             "url_cbc": "https://catalogo.biodiversidad.co/file/56e5fc9c83c45700544e3e8d/summary",
             "species": "Phaethornis anthophilus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Phaethornis"
-          },
-          {
-            "label": "Phaethornis guy",
-            "registros": 27,
-            "slug_especie": "phaethornis-guy",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476607",
-            "species": "Phaethornis guy",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Aves",
@@ -10708,24 +10705,6 @@
             "genus": "Setophaga"
           },
           {
-            "label": "Catharus ustulatus",
-            "registros": 28,
-            "slug_especie": "catharus-ustulatus",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2490821",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c363eef0106c67230e734a/summary",
-            "species": "Catharus ustulatus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Turdidae",
-            "genus": "Catharus"
-          },
-          {
             "label": "Vireo olivaceus",
             "registros": 28,
             "slug_especie": "vireo-olivaceus",
@@ -10742,6 +10721,24 @@
             "order": "Passeriformes",
             "family": "Vireonidae",
             "genus": "Vireo"
+          },
+          {
+            "label": "Catharus ustulatus",
+            "registros": 28,
+            "slug_especie": "catharus-ustulatus",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2490821",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c363eef0106c67230e734a/summary",
+            "species": "Catharus ustulatus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Turdidae",
+            "genus": "Catharus"
           },
           {
             "label": "Progne tapera",

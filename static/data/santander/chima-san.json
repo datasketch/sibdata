@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -1089,35 +1089,11 @@
           "slug_tematica": "migratorias"
         },
         {
-          "label": "Catharus ustulatus",
-          "slug_especie": "catharus-ustulatus",
-          "registros": 3,
-          "url_gbif": "https://www.gbif.org/species/2490821",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c363eef0106c67230e734a/summary",
-          "slug_tematica": "migratorias"
-        },
-        {
-          "label": "Empidonax virescens",
-          "slug_especie": "empidonax-virescens",
-          "registros": 3,
-          "url_gbif": "https://www.gbif.org/species/2482802",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e09afa83c45700544e3cd7/summary",
-          "slug_tematica": "migratorias"
-        },
-        {
           "label": "Mniotilta varia",
           "slug_especie": "mniotilta-varia",
           "registros": 3,
           "url_gbif": "https://www.gbif.org/species/2489613",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b92af0106c67230e740a/summary",
-          "slug_tematica": "migratorias"
-        },
-        {
-          "label": "Setophaga fusca",
-          "slug_especie": "setophaga-fusca",
-          "registros": 3,
-          "url_gbif": "https://www.gbif.org/species/6093199",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf166a3c16479905cba7c4/summary",
           "slug_tematica": "migratorias"
         },
         {
@@ -1129,6 +1105,30 @@
           "slug_tematica": "migratorias"
         },
         {
+          "label": "Catharus ustulatus",
+          "slug_especie": "catharus-ustulatus",
+          "registros": 3,
+          "url_gbif": "https://www.gbif.org/species/2490821",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c363eef0106c67230e734a/summary",
+          "slug_tematica": "migratorias"
+        },
+        {
+          "label": "Setophaga fusca",
+          "slug_especie": "setophaga-fusca",
+          "registros": 3,
+          "url_gbif": "https://www.gbif.org/species/6093199",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf166a3c16479905cba7c4/summary",
+          "slug_tematica": "migratorias"
+        },
+        {
+          "label": "Empidonax virescens",
+          "slug_especie": "empidonax-virescens",
+          "registros": 3,
+          "url_gbif": "https://www.gbif.org/species/2482802",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e09afa83c45700544e3cd7/summary",
+          "slug_tematica": "migratorias"
+        },
+        {
           "label": "Cardellina canadensis",
           "slug_especie": "cardellina-canadensis",
           "registros": 2,
@@ -1137,11 +1137,11 @@
           "slug_tematica": "migratorias"
         },
         {
-          "label": "Geothlypis philadelphia",
-          "slug_especie": "geothlypis-philadelphia",
+          "label": "Ictinia mississippiensis",
+          "slug_especie": "ictinia-mississippiensis",
           "registros": 2,
-          "url_gbif": "https://www.gbif.org/species/5789148",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c78943f0106c67230e73f3/summary",
+          "url_gbif": "https://www.gbif.org/species/2480719",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d999e33c16479905cba9a1/summary",
           "slug_tematica": "migratorias"
         }
       ]
@@ -2076,6 +2076,22 @@
           "genus": "Tyrannus"
         },
         {
+          "label": "Thraupis episcopus",
+          "registros": 14,
+          "slug_especie": "thraupis-episcopus",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2488602",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf719b3c16479905cba7e1/summary",
+          "species": "Thraupis episcopus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Thraupis"
+        },
+        {
           "label": "Anisognathus lacrymosus",
           "registros": 14,
           "slug_especie": "anisognathus-lacrymosus",
@@ -2106,20 +2122,20 @@
           "genus": "Grallaricula"
         },
         {
-          "label": "Thraupis episcopus",
-          "registros": 14,
-          "slug_especie": "thraupis-episcopus",
+          "label": "Rupornis magnirostris",
+          "registros": 13,
+          "slug_especie": "rupornis-magnirostris",
           "slug_grupo": "animales",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2488602",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf719b3c16479905cba7e1/summary",
-          "species": "Thraupis episcopus",
+          "url_gbif": "https://www.gbif.org/species/5844398",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56ce57a13c16479905cba79b/summary",
+          "species": "Rupornis magnirostris",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Thraupis"
+          "order": "Accipitriformes",
+          "family": "Accipitridae",
+          "genus": "Rupornis"
         },
         {
           "label": "Coereba flaveola",
@@ -2168,22 +2184,6 @@
           "order": "Passeriformes",
           "family": "Tyrannidae",
           "genus": "Myiozetetes"
-        },
-        {
-          "label": "Rupornis magnirostris",
-          "registros": 13,
-          "slug_especie": "rupornis-magnirostris",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5844398",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56ce57a13c16479905cba79b/summary",
-          "species": "Rupornis magnirostris",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Accipitriformes",
-          "family": "Accipitridae",
-          "genus": "Rupornis"
         },
         {
           "label": "Sicalis flaveola",
@@ -2477,42 +2477,6 @@
             "genus": "Myiodynastes"
           },
           {
-            "label": "Catharus ustulatus",
-            "registros": 3,
-            "slug_especie": "catharus-ustulatus",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2490821",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c363eef0106c67230e734a/summary",
-            "species": "Catharus ustulatus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Turdidae",
-            "genus": "Catharus"
-          },
-          {
-            "label": "Empidonax virescens",
-            "registros": 3,
-            "slug_especie": "empidonax-virescens",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2482802",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e09afa83c45700544e3cd7/summary",
-            "species": "Empidonax virescens",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Tyrannidae",
-            "genus": "Empidonax"
-          },
-          {
             "label": "Mniotilta varia",
             "registros": 3,
             "slug_especie": "mniotilta-varia",
@@ -2529,24 +2493,6 @@
             "order": "Passeriformes",
             "family": "Parulidae",
             "genus": "Mniotilta"
-          },
-          {
-            "label": "Setophaga fusca",
-            "registros": 3,
-            "slug_especie": "setophaga-fusca",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/6093199",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56cf166a3c16479905cba7c4/summary",
-            "species": "Setophaga fusca",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Parulidae",
-            "genus": "Setophaga"
           },
           {
             "label": "Tyrannus savana",
@@ -2567,6 +2513,60 @@
             "genus": "Tyrannus"
           },
           {
+            "label": "Catharus ustulatus",
+            "registros": 3,
+            "slug_especie": "catharus-ustulatus",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2490821",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c363eef0106c67230e734a/summary",
+            "species": "Catharus ustulatus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Turdidae",
+            "genus": "Catharus"
+          },
+          {
+            "label": "Setophaga fusca",
+            "registros": 3,
+            "slug_especie": "setophaga-fusca",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/6093199",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cf166a3c16479905cba7c4/summary",
+            "species": "Setophaga fusca",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Parulidae",
+            "genus": "Setophaga"
+          },
+          {
+            "label": "Empidonax virescens",
+            "registros": 3,
+            "slug_especie": "empidonax-virescens",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2482802",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e09afa83c45700544e3cd7/summary",
+            "species": "Empidonax virescens",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Tyrannidae",
+            "genus": "Empidonax"
+          },
+          {
             "label": "Cardellina canadensis",
             "registros": 2,
             "slug_especie": "cardellina-canadensis",
@@ -2583,24 +2583,6 @@
             "order": "Passeriformes",
             "family": "Parulidae",
             "genus": "Cardellina"
-          },
-          {
-            "label": "Geothlypis philadelphia",
-            "registros": 2,
-            "slug_especie": "geothlypis-philadelphia",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5789148",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c78943f0106c67230e73f3/summary",
-            "species": "Geothlypis philadelphia",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Parulidae",
-            "genus": "Geothlypis"
           },
           {
             "label": "Ictinia mississippiensis",
@@ -2673,6 +2655,24 @@
             "order": "Passeriformes",
             "family": "Parulidae",
             "genus": "Setophaga"
+          },
+          {
+            "label": "Geothlypis philadelphia",
+            "registros": 2,
+            "slug_especie": "geothlypis-philadelphia",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5789148",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c78943f0106c67230e73f3/summary",
+            "species": "Geothlypis philadelphia",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Parulidae",
+            "genus": "Geothlypis"
           },
           {
             "label": "Setophaga ruticilla",
@@ -3142,21 +3142,6 @@
           "genus": "Anisognathus"
         },
         {
-          "label": "Grallaricula nana",
-          "registros": 14,
-          "slug_especie": "grallaricula-nana",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2490510",
-          "species": "Grallaricula nana",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Grallariidae",
-          "genus": "Grallaricula"
-        },
-        {
           "label": "Thraupis episcopus",
           "registros": 14,
           "slug_especie": "thraupis-episcopus",
@@ -3173,36 +3158,19 @@
           "genus": "Thraupis"
         },
         {
-          "label": "Coereba flaveola",
-          "registros": 13,
-          "slug_especie": "coereba-flaveola",
+          "label": "Grallaricula nana",
+          "registros": 14,
+          "slug_especie": "grallaricula-nana",
           "slug_grupo": "aves",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2493744",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56df75bd83c45700544e3c7b/summary",
-          "species": "Coereba flaveola",
+          "url_gbif": "https://www.gbif.org/species/2490510",
+          "species": "Grallaricula nana",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Coereba"
-        },
-        {
-          "label": "Elaenia flavogaster",
-          "registros": 13,
-          "slug_especie": "elaenia-flavogaster",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5229606",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c68377f0106c67230e73cd/summary",
-          "species": "Elaenia flavogaster",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Tyrannidae",
-          "genus": "Elaenia"
+          "family": "Grallariidae",
+          "genus": "Grallaricula"
         },
         {
           "label": "Myiozetetes cayanensis",
@@ -3251,6 +3219,38 @@
           "order": "Passeriformes",
           "family": "Thraupidae",
           "genus": "Sicalis"
+        },
+        {
+          "label": "Coereba flaveola",
+          "registros": 13,
+          "slug_especie": "coereba-flaveola",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2493744",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56df75bd83c45700544e3c7b/summary",
+          "species": "Coereba flaveola",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Coereba"
+        },
+        {
+          "label": "Elaenia flavogaster",
+          "registros": 13,
+          "slug_especie": "elaenia-flavogaster",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5229606",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c68377f0106c67230e73cd/summary",
+          "species": "Elaenia flavogaster",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Tyrannidae",
+          "genus": "Elaenia"
         }
       ],
       "species_list_tematica": {
@@ -3528,42 +3528,6 @@
             "genus": "Myiodynastes"
           },
           {
-            "label": "Catharus ustulatus",
-            "registros": 3,
-            "slug_especie": "catharus-ustulatus",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2490821",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c363eef0106c67230e734a/summary",
-            "species": "Catharus ustulatus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Turdidae",
-            "genus": "Catharus"
-          },
-          {
-            "label": "Empidonax virescens",
-            "registros": 3,
-            "slug_especie": "empidonax-virescens",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2482802",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e09afa83c45700544e3cd7/summary",
-            "species": "Empidonax virescens",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Tyrannidae",
-            "genus": "Empidonax"
-          },
-          {
             "label": "Mniotilta varia",
             "registros": 3,
             "slug_especie": "mniotilta-varia",
@@ -3580,24 +3544,6 @@
             "order": "Passeriformes",
             "family": "Parulidae",
             "genus": "Mniotilta"
-          },
-          {
-            "label": "Setophaga fusca",
-            "registros": 3,
-            "slug_especie": "setophaga-fusca",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/6093199",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56cf166a3c16479905cba7c4/summary",
-            "species": "Setophaga fusca",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Parulidae",
-            "genus": "Setophaga"
           },
           {
             "label": "Tyrannus savana",
@@ -3618,6 +3564,60 @@
             "genus": "Tyrannus"
           },
           {
+            "label": "Catharus ustulatus",
+            "registros": 3,
+            "slug_especie": "catharus-ustulatus",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2490821",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c363eef0106c67230e734a/summary",
+            "species": "Catharus ustulatus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Turdidae",
+            "genus": "Catharus"
+          },
+          {
+            "label": "Setophaga fusca",
+            "registros": 3,
+            "slug_especie": "setophaga-fusca",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/6093199",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cf166a3c16479905cba7c4/summary",
+            "species": "Setophaga fusca",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Parulidae",
+            "genus": "Setophaga"
+          },
+          {
+            "label": "Empidonax virescens",
+            "registros": 3,
+            "slug_especie": "empidonax-virescens",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2482802",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e09afa83c45700544e3cd7/summary",
+            "species": "Empidonax virescens",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Tyrannidae",
+            "genus": "Empidonax"
+          },
+          {
             "label": "Cardellina canadensis",
             "registros": 2,
             "slug_especie": "cardellina-canadensis",
@@ -3634,24 +3634,6 @@
             "order": "Passeriformes",
             "family": "Parulidae",
             "genus": "Cardellina"
-          },
-          {
-            "label": "Geothlypis philadelphia",
-            "registros": 2,
-            "slug_especie": "geothlypis-philadelphia",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5789148",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c78943f0106c67230e73f3/summary",
-            "species": "Geothlypis philadelphia",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Parulidae",
-            "genus": "Geothlypis"
           },
           {
             "label": "Ictinia mississippiensis",
@@ -3724,6 +3706,24 @@
             "order": "Passeriformes",
             "family": "Parulidae",
             "genus": "Setophaga"
+          },
+          {
+            "label": "Geothlypis philadelphia",
+            "registros": 2,
+            "slug_especie": "geothlypis-philadelphia",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5789148",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c78943f0106c67230e73f3/summary",
+            "species": "Geothlypis philadelphia",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Parulidae",
+            "genus": "Geothlypis"
           },
           {
             "label": "Setophaga ruticilla",
@@ -8462,22 +8462,6 @@
           "genus": "Coereba"
         },
         {
-          "label": "Elaenia flavogaster",
-          "registros": 13,
-          "slug_especie": "elaenia-flavogaster",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5229606",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c68377f0106c67230e73cd/summary",
-          "species": "Elaenia flavogaster",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Tyrannidae",
-          "genus": "Elaenia"
-        },
-        {
           "label": "Myiozetetes cayanensis",
           "registros": 13,
           "slug_especie": "myiozetetes-cayanensis",
@@ -8508,6 +8492,22 @@
           "order": "Accipitriformes",
           "family": "Accipitridae",
           "genus": "Rupornis"
+        },
+        {
+          "label": "Elaenia flavogaster",
+          "registros": 13,
+          "slug_especie": "elaenia-flavogaster",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5229606",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c68377f0106c67230e73cd/summary",
+          "species": "Elaenia flavogaster",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Tyrannidae",
+          "genus": "Elaenia"
         },
         {
           "label": "Sicalis flaveola",
@@ -8801,42 +8801,6 @@
             "genus": "Myiodynastes"
           },
           {
-            "label": "Catharus ustulatus",
-            "registros": 3,
-            "slug_especie": "catharus-ustulatus",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2490821",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c363eef0106c67230e734a/summary",
-            "species": "Catharus ustulatus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Turdidae",
-            "genus": "Catharus"
-          },
-          {
-            "label": "Empidonax virescens",
-            "registros": 3,
-            "slug_especie": "empidonax-virescens",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2482802",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e09afa83c45700544e3cd7/summary",
-            "species": "Empidonax virescens",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Tyrannidae",
-            "genus": "Empidonax"
-          },
-          {
             "label": "Mniotilta varia",
             "registros": 3,
             "slug_especie": "mniotilta-varia",
@@ -8853,24 +8817,6 @@
             "order": "Passeriformes",
             "family": "Parulidae",
             "genus": "Mniotilta"
-          },
-          {
-            "label": "Setophaga fusca",
-            "registros": 3,
-            "slug_especie": "setophaga-fusca",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/6093199",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56cf166a3c16479905cba7c4/summary",
-            "species": "Setophaga fusca",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Parulidae",
-            "genus": "Setophaga"
           },
           {
             "label": "Tyrannus savana",
@@ -8891,6 +8837,60 @@
             "genus": "Tyrannus"
           },
           {
+            "label": "Catharus ustulatus",
+            "registros": 3,
+            "slug_especie": "catharus-ustulatus",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2490821",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c363eef0106c67230e734a/summary",
+            "species": "Catharus ustulatus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Turdidae",
+            "genus": "Catharus"
+          },
+          {
+            "label": "Setophaga fusca",
+            "registros": 3,
+            "slug_especie": "setophaga-fusca",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/6093199",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cf166a3c16479905cba7c4/summary",
+            "species": "Setophaga fusca",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Parulidae",
+            "genus": "Setophaga"
+          },
+          {
+            "label": "Empidonax virescens",
+            "registros": 3,
+            "slug_especie": "empidonax-virescens",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2482802",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e09afa83c45700544e3cd7/summary",
+            "species": "Empidonax virescens",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Tyrannidae",
+            "genus": "Empidonax"
+          },
+          {
             "label": "Cardellina canadensis",
             "registros": 2,
             "slug_especie": "cardellina-canadensis",
@@ -8907,24 +8907,6 @@
             "order": "Passeriformes",
             "family": "Parulidae",
             "genus": "Cardellina"
-          },
-          {
-            "label": "Geothlypis philadelphia",
-            "registros": 2,
-            "slug_especie": "geothlypis-philadelphia",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5789148",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c78943f0106c67230e73f3/summary",
-            "species": "Geothlypis philadelphia",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Parulidae",
-            "genus": "Geothlypis"
           },
           {
             "label": "Ictinia mississippiensis",
@@ -8997,6 +8979,24 @@
             "order": "Passeriformes",
             "family": "Parulidae",
             "genus": "Setophaga"
+          },
+          {
+            "label": "Geothlypis philadelphia",
+            "registros": 2,
+            "slug_especie": "geothlypis-philadelphia",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5789148",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c78943f0106c67230e73f3/summary",
+            "species": "Geothlypis philadelphia",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Parulidae",
+            "genus": "Geothlypis"
           },
           {
             "label": "Setophaga ruticilla",

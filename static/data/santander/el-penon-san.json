@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -2617,6 +2617,22 @@
       "subgrupo_especies": [],
       "species_list_top": [
         {
+          "label": "Clusia multiflora",
+          "registros": 10,
+          "slug_especie": "clusia-multiflora",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7330264",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e774c083c45700544e400d/summary",
+          "species": "Clusia multiflora",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Malpighiales",
+          "family": "Clusiaceae",
+          "genus": "Clusia"
+        },
+        {
           "label": "Aiphanes lindeniana",
           "registros": 10,
           "slug_especie": "aiphanes-lindeniana",
@@ -2631,21 +2647,6 @@
           "order": "Arecales",
           "family": "Arecaceae",
           "genus": "Aiphanes"
-        },
-        {
-          "label": "Blakea lindeniana",
-          "registros": 10,
-          "slug_especie": "blakea-lindeniana",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5600274",
-          "species": "Blakea lindeniana",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Myrtales",
-          "family": "Melastomataceae",
-          "genus": "Blakea"
         },
         {
           "label": "Chalybea mutisiana",
@@ -2664,20 +2665,34 @@
           "genus": "Chalybea"
         },
         {
-          "label": "Clusia multiflora",
+          "label": "Blakea lindeniana",
           "registros": 10,
-          "slug_especie": "clusia-multiflora",
+          "slug_especie": "blakea-lindeniana",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7330264",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e774c083c45700544e400d/summary",
-          "species": "Clusia multiflora",
+          "url_gbif": "https://www.gbif.org/species/5600274",
+          "species": "Blakea lindeniana",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Clusiaceae",
-          "genus": "Clusia"
+          "order": "Myrtales",
+          "family": "Melastomataceae",
+          "genus": "Blakea"
+        },
+        {
+          "label": "Saracha nigribaccata",
+          "registros": 9,
+          "slug_especie": "saracha-nigribaccata",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/10330766",
+          "species": "Saracha nigribaccata",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Solanales",
+          "family": "Solanaceae",
+          "genus": "Saracha"
         },
         {
           "label": "Alloispermum caracasanum",
@@ -2708,21 +2723,6 @@
           "order": "Chloranthales",
           "family": "Chloranthaceae",
           "genus": "Hedyosmum"
-        },
-        {
-          "label": "Saracha nigribaccata",
-          "registros": 9,
-          "slug_especie": "saracha-nigribaccata",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/10330766",
-          "species": "Saracha nigribaccata",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Solanales",
-          "family": "Solanaceae",
-          "genus": "Saracha"
         },
         {
           "label": "Axinaea scutigera",
@@ -4387,6 +4387,23 @@
             "genus": "Rupornis"
           },
           {
+            "label": "Pyrrhura calliptera",
+            "registros": 14,
+            "slug_especie": "pyrrhura-calliptera",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2479816",
+            "species": "Pyrrhura calliptera",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Psittaciformes",
+            "family": "Psittacidae",
+            "genus": "Pyrrhura"
+          },
+          {
             "label": "Eira barbara",
             "registros": 14,
             "slug_especie": "eira-barbara",
@@ -4403,23 +4420,6 @@
             "order": "Carnivora",
             "family": "Mustelidae",
             "genus": "Eira"
-          },
-          {
-            "label": "Pyrrhura calliptera",
-            "registros": 14,
-            "slug_especie": "pyrrhura-calliptera",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2479816",
-            "species": "Pyrrhura calliptera",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Psittaciformes",
-            "family": "Psittacidae",
-            "genus": "Pyrrhura"
           }
         ],
         "migratorias": [
@@ -5713,22 +5713,6 @@
           "genus": "Heliangelus"
         },
         {
-          "label": "Diglossa albilatera",
-          "registros": 28,
-          "slug_especie": "diglossa-albilatera",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5230649",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c52c15f0106c67230e739a/summary",
-          "species": "Diglossa albilatera",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Diglossa"
-        },
-        {
           "label": "Icterus chrysater",
           "registros": 28,
           "slug_especie": "icterus-chrysater",
@@ -5743,6 +5727,22 @@
           "order": "Passeriformes",
           "family": "Icteridae",
           "genus": "Icterus"
+        },
+        {
+          "label": "Diglossa albilatera",
+          "registros": 28,
+          "slug_especie": "diglossa-albilatera",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5230649",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c52c15f0106c67230e739a/summary",
+          "species": "Diglossa albilatera",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Diglossa"
         },
         {
           "label": "Myioborus ornatus",
@@ -8975,6 +8975,21 @@
           "genus": "Leotia"
         },
         {
+          "label": "Russula silvicola",
+          "registros": 6,
+          "slug_especie": "russula-silvicola",
+          "slug_grupo": "hongos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3360448",
+          "species": "Russula silvicola",
+          "kingdom": "Fungi",
+          "phylum": "Basidiomycota",
+          "class": "Agaricomycetes",
+          "order": "Russulales",
+          "family": "Russulaceae",
+          "genus": "Russula"
+        },
+        {
           "label": "Amanita sororcula",
           "registros": 6,
           "slug_especie": "amanita-sororcula",
@@ -9003,21 +9018,6 @@
           "order": "Russulales",
           "family": "Russulaceae",
           "genus": "Lactarius"
-        },
-        {
-          "label": "Russula silvicola",
-          "registros": 6,
-          "slug_especie": "russula-silvicola",
-          "slug_grupo": "hongos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3360448",
-          "species": "Russula silvicola",
-          "kingdom": "Fungi",
-          "phylum": "Basidiomycota",
-          "class": "Agaricomycetes",
-          "order": "Russulales",
-          "family": "Russulaceae",
-          "genus": "Russula"
         },
         {
           "label": "Cortinarius aureopigmentatus",
@@ -9050,6 +9050,21 @@
           "genus": "Gloiocephala"
         },
         {
+          "label": "Lactarius atroviridis",
+          "registros": 4,
+          "slug_especie": "lactarius-atroviridis",
+          "slug_grupo": "hongos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5248800",
+          "species": "Lactarius atroviridis",
+          "kingdom": "Fungi",
+          "phylum": "Basidiomycota",
+          "class": "Agaricomycetes",
+          "order": "Russulales",
+          "family": "Russulaceae",
+          "genus": "Lactarius"
+        },
+        {
           "label": "Amanita flavoconia",
           "registros": 4,
           "slug_especie": "amanita-flavoconia",
@@ -9065,34 +9080,19 @@
           "genus": "Amanita"
         },
         {
-          "label": "Cyclomyces setiporus",
+          "label": "Russula perlactea",
           "registros": 4,
-          "slug_especie": "cyclomyces-setiporus",
+          "slug_especie": "russula-perlactea",
           "slug_grupo": "hongos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2520955",
-          "species": "Cyclomyces setiporus",
-          "kingdom": "Fungi",
-          "phylum": "Basidiomycota",
-          "class": "Agaricomycetes",
-          "order": "Hymenochaetales",
-          "family": "Hymenochaetaceae",
-          "genus": "Cyclomyces"
-        },
-        {
-          "label": "Lactarius atroviridis",
-          "registros": 4,
-          "slug_especie": "lactarius-atroviridis",
-          "slug_grupo": "hongos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5248800",
-          "species": "Lactarius atroviridis",
+          "url_gbif": "https://www.gbif.org/species/3360622",
+          "species": "Russula perlactea",
           "kingdom": "Fungi",
           "phylum": "Basidiomycota",
           "class": "Agaricomycetes",
           "order": "Russulales",
           "family": "Russulaceae",
-          "genus": "Lactarius"
+          "genus": "Russula"
         },
         {
           "label": "Lactarius obscuratus",
@@ -9110,19 +9110,19 @@
           "genus": "Lactarius"
         },
         {
-          "label": "Russula perlactea",
+          "label": "Cyclomyces setiporus",
           "registros": 4,
-          "slug_especie": "russula-perlactea",
+          "slug_especie": "cyclomyces-setiporus",
           "slug_grupo": "hongos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3360622",
-          "species": "Russula perlactea",
+          "url_gbif": "https://www.gbif.org/species/2520955",
+          "species": "Cyclomyces setiporus",
           "kingdom": "Fungi",
           "phylum": "Basidiomycota",
           "class": "Agaricomycetes",
-          "order": "Russulales",
-          "family": "Russulaceae",
-          "genus": "Russula"
+          "order": "Hymenochaetales",
+          "family": "Hymenochaetaceae",
+          "genus": "Cyclomyces"
         }
       ],
       "species_list_tematica": {
@@ -10382,21 +10382,6 @@
           "genus": "Toxomerus"
         },
         {
-          "label": "Canthon arcabuquensis",
-          "registros": 11,
-          "slug_especie": "canthon-arcabuquensis",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/10869910",
-          "species": "Canthon arcabuquensis",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Coleoptera",
-          "family": "Scarabaeidae",
-          "genus": "Canthon"
-        },
-        {
           "label": "Dichotomius ribeiroi",
           "registros": 11,
           "slug_especie": "dichotomius-ribeiroi",
@@ -10410,6 +10395,21 @@
           "order": "Coleoptera",
           "family": "Scarabaeidae",
           "genus": "Dichotomius"
+        },
+        {
+          "label": "Canthon arcabuquensis",
+          "registros": 11,
+          "slug_especie": "canthon-arcabuquensis",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/10869910",
+          "species": "Canthon arcabuquensis",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Coleoptera",
+          "family": "Scarabaeidae",
+          "genus": "Canthon"
         }
       ],
       "species_list_tematica": {
@@ -13397,37 +13397,6 @@
       ],
       "species_list_top": [
         {
-          "label": "Aiphanes lindeniana",
-          "registros": 10,
-          "slug_especie": "aiphanes-lindeniana",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2738716",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56707d0df289f5a40c0cd2e1/summary",
-          "species": "Aiphanes lindeniana",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Arecales",
-          "family": "Arecaceae",
-          "genus": "Aiphanes"
-        },
-        {
-          "label": "Blakea lindeniana",
-          "registros": 10,
-          "slug_especie": "blakea-lindeniana",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5600274",
-          "species": "Blakea lindeniana",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Myrtales",
-          "family": "Melastomataceae",
-          "genus": "Blakea"
-        },
-        {
           "label": "Chalybea mutisiana",
           "registros": 10,
           "slug_especie": "chalybea-mutisiana",
@@ -13460,34 +13429,35 @@
           "genus": "Clusia"
         },
         {
-          "label": "Alloispermum caracasanum",
-          "registros": 9,
-          "slug_especie": "alloispermum-caracasanum",
+          "label": "Aiphanes lindeniana",
+          "registros": 10,
+          "slug_especie": "aiphanes-lindeniana",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3101285",
-          "species": "Alloispermum caracasanum",
+          "url_gbif": "https://www.gbif.org/species/2738716",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56707d0df289f5a40c0cd2e1/summary",
+          "species": "Aiphanes lindeniana",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Asterales",
-          "family": "Asteraceae",
-          "genus": "Alloispermum"
+          "class": "Liliopsida",
+          "order": "Arecales",
+          "family": "Arecaceae",
+          "genus": "Aiphanes"
         },
         {
-          "label": "Hedyosmum bonplandianum",
-          "registros": 9,
-          "slug_especie": "hedyosmum-bonplandianum",
+          "label": "Blakea lindeniana",
+          "registros": 10,
+          "slug_especie": "blakea-lindeniana",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3750489",
-          "species": "Hedyosmum bonplandianum",
+          "url_gbif": "https://www.gbif.org/species/5600274",
+          "species": "Blakea lindeniana",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Chloranthales",
-          "family": "Chloranthaceae",
-          "genus": "Hedyosmum"
+          "order": "Myrtales",
+          "family": "Melastomataceae",
+          "genus": "Blakea"
         },
         {
           "label": "Saracha nigribaccata",
@@ -13505,19 +13475,34 @@
           "genus": "Saracha"
         },
         {
-          "label": "Axinaea scutigera",
-          "registros": 8,
-          "slug_especie": "axinaea-scutigera",
+          "label": "Hedyosmum bonplandianum",
+          "registros": 9,
+          "slug_especie": "hedyosmum-bonplandianum",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5601055",
-          "species": "Axinaea scutigera",
+          "url_gbif": "https://www.gbif.org/species/3750489",
+          "species": "Hedyosmum bonplandianum",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Myrtales",
-          "family": "Melastomataceae",
-          "genus": "Axinaea"
+          "order": "Chloranthales",
+          "family": "Chloranthaceae",
+          "genus": "Hedyosmum"
+        },
+        {
+          "label": "Alloispermum caracasanum",
+          "registros": 9,
+          "slug_especie": "alloispermum-caracasanum",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3101285",
+          "species": "Alloispermum caracasanum",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Asterales",
+          "family": "Asteraceae",
+          "genus": "Alloispermum"
         },
         {
           "label": "Magnolia georgii",
@@ -13550,6 +13535,21 @@
           "order": "Myrtales",
           "family": "Melastomataceae",
           "genus": "Miconia"
+        },
+        {
+          "label": "Axinaea scutigera",
+          "registros": 8,
+          "slug_especie": "axinaea-scutigera",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5601055",
+          "species": "Axinaea scutigera",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Myrtales",
+          "family": "Melastomataceae",
+          "genus": "Axinaea"
         }
       ],
       "species_list_tematica": {
@@ -14852,37 +14852,6 @@
       "subgrupo_especies": [],
       "species_list_top": [
         {
-          "label": "Aiphanes lindeniana",
-          "registros": 10,
-          "slug_especie": "aiphanes-lindeniana",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2738716",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56707d0df289f5a40c0cd2e1/summary",
-          "species": "Aiphanes lindeniana",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Arecales",
-          "family": "Arecaceae",
-          "genus": "Aiphanes"
-        },
-        {
-          "label": "Blakea lindeniana",
-          "registros": 10,
-          "slug_especie": "blakea-lindeniana",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5600274",
-          "species": "Blakea lindeniana",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Myrtales",
-          "family": "Melastomataceae",
-          "genus": "Blakea"
-        },
-        {
           "label": "Chalybea mutisiana",
           "registros": 10,
           "slug_especie": "chalybea-mutisiana",
@@ -14915,34 +14884,35 @@
           "genus": "Clusia"
         },
         {
-          "label": "Alloispermum caracasanum",
-          "registros": 9,
-          "slug_especie": "alloispermum-caracasanum",
+          "label": "Aiphanes lindeniana",
+          "registros": 10,
+          "slug_especie": "aiphanes-lindeniana",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3101285",
-          "species": "Alloispermum caracasanum",
+          "url_gbif": "https://www.gbif.org/species/2738716",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56707d0df289f5a40c0cd2e1/summary",
+          "species": "Aiphanes lindeniana",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Asterales",
-          "family": "Asteraceae",
-          "genus": "Alloispermum"
+          "class": "Liliopsida",
+          "order": "Arecales",
+          "family": "Arecaceae",
+          "genus": "Aiphanes"
         },
         {
-          "label": "Hedyosmum bonplandianum",
-          "registros": 9,
-          "slug_especie": "hedyosmum-bonplandianum",
+          "label": "Blakea lindeniana",
+          "registros": 10,
+          "slug_especie": "blakea-lindeniana",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3750489",
-          "species": "Hedyosmum bonplandianum",
+          "url_gbif": "https://www.gbif.org/species/5600274",
+          "species": "Blakea lindeniana",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Chloranthales",
-          "family": "Chloranthaceae",
-          "genus": "Hedyosmum"
+          "order": "Myrtales",
+          "family": "Melastomataceae",
+          "genus": "Blakea"
         },
         {
           "label": "Saracha nigribaccata",
@@ -14960,19 +14930,34 @@
           "genus": "Saracha"
         },
         {
-          "label": "Axinaea scutigera",
-          "registros": 8,
-          "slug_especie": "axinaea-scutigera",
+          "label": "Hedyosmum bonplandianum",
+          "registros": 9,
+          "slug_especie": "hedyosmum-bonplandianum",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5601055",
-          "species": "Axinaea scutigera",
+          "url_gbif": "https://www.gbif.org/species/3750489",
+          "species": "Hedyosmum bonplandianum",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Myrtales",
-          "family": "Melastomataceae",
-          "genus": "Axinaea"
+          "order": "Chloranthales",
+          "family": "Chloranthaceae",
+          "genus": "Hedyosmum"
+        },
+        {
+          "label": "Alloispermum caracasanum",
+          "registros": 9,
+          "slug_especie": "alloispermum-caracasanum",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3101285",
+          "species": "Alloispermum caracasanum",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Asterales",
+          "family": "Asteraceae",
+          "genus": "Alloispermum"
         },
         {
           "label": "Magnolia georgii",
@@ -15005,6 +14990,21 @@
           "order": "Myrtales",
           "family": "Melastomataceae",
           "genus": "Miconia"
+        },
+        {
+          "label": "Axinaea scutigera",
+          "registros": 8,
+          "slug_especie": "axinaea-scutigera",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5601055",
+          "species": "Axinaea scutigera",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Myrtales",
+          "family": "Melastomataceae",
+          "genus": "Axinaea"
         }
       ],
       "species_list_tematica": {
@@ -16619,6 +16619,23 @@
             "genus": "Rupornis"
           },
           {
+            "label": "Pyrrhura calliptera",
+            "registros": 14,
+            "slug_especie": "pyrrhura-calliptera",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2479816",
+            "species": "Pyrrhura calliptera",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Psittaciformes",
+            "family": "Psittacidae",
+            "genus": "Pyrrhura"
+          },
+          {
             "label": "Eira barbara",
             "registros": 14,
             "slug_especie": "eira-barbara",
@@ -16635,23 +16652,6 @@
             "order": "Carnivora",
             "family": "Mustelidae",
             "genus": "Eira"
-          },
-          {
-            "label": "Pyrrhura calliptera",
-            "registros": 14,
-            "slug_especie": "pyrrhura-calliptera",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2479816",
-            "species": "Pyrrhura calliptera",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Psittaciformes",
-            "family": "Psittacidae",
-            "genus": "Pyrrhura"
           }
         ],
         "migratorias": [

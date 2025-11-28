@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -670,6 +670,14 @@
               "slug_tematica": "amenazadas-nacional-cr"
             },
             {
+              "label": "Icterus icterus",
+              "slug_especie": "icterus-icterus",
+              "registros": 3,
+              "url_gbif": "https://www.gbif.org/species/5229915",
+              "url_cbc": "https://catalogo.biodiversidad.co/file/56c9fee4f0106c67230e7451/summary",
+              "slug_tematica": "amenazadas-nacional-vu"
+            },
+            {
               "label": "Cariniana pyriformis",
               "slug_especie": "cariniana-pyriformis",
               "registros": 3,
@@ -683,14 +691,6 @@
               "registros": 3,
               "url_gbif": "https://www.gbif.org/species/2488350",
               "url_cbc": "https://catalogo.biodiversidad.co/file/56e783ad83c45700544e408d/summary",
-              "slug_tematica": "amenazadas-nacional-vu"
-            },
-            {
-              "label": "Icterus icterus",
-              "slug_especie": "icterus-icterus",
-              "registros": 3,
-              "url_gbif": "https://www.gbif.org/species/5229915",
-              "url_cbc": "https://catalogo.biodiversidad.co/file/56c9fee4f0106c67230e7451/summary",
               "slug_tematica": "amenazadas-nacional-vu"
             }
           ]
@@ -866,6 +866,14 @@
           "slug_tematica": "amenazadas-nacional-cr"
         },
         {
+          "label": "Icterus icterus",
+          "slug_especie": "icterus-icterus",
+          "registros": 3,
+          "url_gbif": "https://www.gbif.org/species/5229915",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9fee4f0106c67230e7451/summary",
+          "slug_tematica": "amenazadas-nacional-vu"
+        },
+        {
           "label": "Cariniana pyriformis",
           "slug_especie": "cariniana-pyriformis",
           "registros": 3,
@@ -879,14 +887,6 @@
           "registros": 3,
           "url_gbif": "https://www.gbif.org/species/2488350",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56e783ad83c45700544e408d/summary",
-          "slug_tematica": "amenazadas-nacional-vu"
-        },
-        {
-          "label": "Icterus icterus",
-          "slug_especie": "icterus-icterus",
-          "registros": 3,
-          "url_gbif": "https://www.gbif.org/species/5229915",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9fee4f0106c67230e7451/summary",
           "slug_tematica": "amenazadas-nacional-vu"
         }
       ],
@@ -1697,19 +1697,19 @@
           "slug_tematica": "endemicas"
         },
         {
-          "label": "Dendrobates truncatus",
-          "slug_especie": "dendrobates-truncatus",
-          "registros": 17,
-          "url_gbif": "https://www.gbif.org/species/5218029",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56d4ab9a3c16479905cba8a0/summary",
-          "slug_tematica": "endemicas"
-        },
-        {
           "label": "Lebiasina floridablancaensis",
           "slug_especie": "lebiasina-floridablancaensis",
           "registros": 17,
           "url_gbif": "https://www.gbif.org/species/2355623",
           "url_cbc": "https://catalogo.biodiversidad.co/file/59284f66f827bf0c0cedd1c7/summary",
+          "slug_tematica": "endemicas"
+        },
+        {
+          "label": "Dendrobates truncatus",
+          "slug_especie": "dendrobates-truncatus",
+          "registros": 17,
+          "url_gbif": "https://www.gbif.org/species/5218029",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d4ab9a3c16479905cba8a0/summary",
           "slug_tematica": "endemicas"
         },
         {
@@ -1872,14 +1872,6 @@
           "slug_tematica": "exoticas"
         },
         {
-          "label": "Lissachatina fulica",
-          "slug_especie": "lissachatina-fulica",
-          "registros": 7,
-          "url_gbif": "https://www.gbif.org/species/8790531",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/59723b5c2f4fd7bc7f3a7e51/summary",
-          "slug_tematica": "invasoras"
-        },
-        {
           "label": "Psidium guajava",
           "slug_especie": "psidium-guajava",
           "registros": 7,
@@ -1888,11 +1880,12 @@
           "slug_tematica": "exoticas"
         },
         {
-          "label": "Hippobroma longiflora",
-          "slug_especie": "hippobroma-longiflora",
-          "registros": 5,
-          "url_gbif": "https://www.gbif.org/species/3168943",
-          "slug_tematica": "exoticas-riesgo-invasion-total"
+          "label": "Lissachatina fulica",
+          "slug_especie": "lissachatina-fulica",
+          "registros": 7,
+          "url_gbif": "https://www.gbif.org/species/8790531",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/59723b5c2f4fd7bc7f3a7e51/summary",
+          "slug_tematica": "invasoras"
         },
         {
           "label": "Thunbergia alata",
@@ -1903,11 +1896,19 @@
           "slug_tematica": "exoticas-riesgo-invasion-total"
         },
         {
-          "label": "Momordica charantia",
-          "slug_especie": "momordica-charantia",
-          "registros": 4,
-          "url_gbif": "https://www.gbif.org/species/2874581",
+          "label": "Hippobroma longiflora",
+          "slug_especie": "hippobroma-longiflora",
+          "registros": 5,
+          "url_gbif": "https://www.gbif.org/species/3168943",
           "slug_tematica": "exoticas-riesgo-invasion-total"
+        },
+        {
+          "label": "Syzygium jambos",
+          "slug_especie": "syzygium-jambos",
+          "registros": 4,
+          "url_gbif": "https://www.gbif.org/species/3183534",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5949473e2f4fd7bc7f39766e/summary",
+          "slug_tematica": "exoticas"
         },
         {
           "label": "Murraya paniculata",
@@ -1942,18 +1943,18 @@
           "slug_tematica": "exoticas"
         },
         {
-          "label": "Murraya paniculata",
-          "slug_especie": "murraya-paniculata",
-          "registros": 4,
-          "url_gbif": "https://www.gbif.org/species/5421335",
-          "slug_tematica": "exoticas"
-        },
-        {
           "label": "Syzygium jambos",
           "slug_especie": "syzygium-jambos",
           "registros": 4,
           "url_gbif": "https://www.gbif.org/species/3183534",
           "url_cbc": "https://catalogo.biodiversidad.co/file/5949473e2f4fd7bc7f39766e/summary",
+          "slug_tematica": "exoticas"
+        },
+        {
+          "label": "Murraya paniculata",
+          "slug_especie": "murraya-paniculata",
+          "registros": 4,
+          "url_gbif": "https://www.gbif.org/species/5421335",
           "slug_tematica": "exoticas"
         },
         {
@@ -1964,25 +1965,18 @@
           "slug_tematica": "exoticas"
         },
         {
+          "label": "Tecoma stans",
+          "slug_especie": "tecoma-stans",
+          "registros": 3,
+          "url_gbif": "https://www.gbif.org/species/3172492",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7aa5783c45700544e42c2/summary",
+          "slug_tematica": "exoticas"
+        },
+        {
           "label": "Antigonon leptopus",
           "slug_especie": "antigonon-leptopus",
           "registros": 3,
           "url_gbif": "https://www.gbif.org/species/2889355",
-          "slug_tematica": "exoticas"
-        },
-        {
-          "label": "Heliotropium indicum",
-          "slug_especie": "heliotropium-indicum",
-          "registros": 3,
-          "url_gbif": "https://www.gbif.org/species/2925788",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e59f8e83c45700544e3e77/summary",
-          "slug_tematica": "exoticas"
-        },
-        {
-          "label": "Impatiens walleriana",
-          "slug_especie": "impatiens-walleriana",
-          "registros": 3,
-          "url_gbif": "https://www.gbif.org/species/2891772",
           "slug_tematica": "exoticas"
         },
         {
@@ -1991,6 +1985,13 @@
           "registros": 3,
           "url_gbif": "https://www.gbif.org/species/2925303",
           "url_cbc": "https://catalogo.biodiversidad.co/file/594944a42f4fd7bc7f397513/summary",
+          "slug_tematica": "exoticas"
+        },
+        {
+          "label": "Impatiens walleriana",
+          "slug_especie": "impatiens-walleriana",
+          "registros": 3,
+          "url_gbif": "https://www.gbif.org/species/2891772",
           "slug_tematica": "exoticas"
         }
       ],
@@ -2759,22 +2760,6 @@
           "genus": "Leptodactylus"
         },
         {
-          "label": "Boana pugnax",
-          "registros": 11,
-          "slug_especie": "boana-pugnax",
-          "slug_grupo": "anfibios",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/10820559",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf0ab23c16479905cba7bf/summary",
-          "species": "Boana pugnax",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Amphibia",
-          "order": "Anura",
-          "family": "Hylidae",
-          "genus": "Boana"
-        },
-        {
           "label": "Scinax ruber",
           "registros": 11,
           "slug_especie": "scinax-ruber",
@@ -2789,6 +2774,22 @@
           "order": "Anura",
           "family": "Hylidae",
           "genus": "Scinax"
+        },
+        {
+          "label": "Boana pugnax",
+          "registros": 11,
+          "slug_especie": "boana-pugnax",
+          "slug_grupo": "anfibios",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/10820559",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf0ab23c16479905cba7bf/summary",
+          "species": "Boana pugnax",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Amphibia",
+          "order": "Anura",
+          "family": "Hylidae",
+          "genus": "Boana"
         },
         {
           "label": "Boana boans",
@@ -2822,6 +2823,22 @@
           "genus": "Lithobates"
         },
         {
+          "label": "Smilisca phaeota",
+          "registros": 6,
+          "slug_especie": "smilisca-phaeota",
+          "slug_grupo": "anfibios",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2428683",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d4ebeb3c16479905cba8da/summary",
+          "species": "Smilisca phaeota",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Amphibia",
+          "order": "Anura",
+          "family": "Hylidae",
+          "genus": "Smilisca"
+        },
+        {
           "label": "Boana xerophylla",
           "registros": 6,
           "slug_especie": "boana-xerophylla",
@@ -2850,22 +2867,6 @@
           "order": "Anura",
           "family": "Leptodactylidae",
           "genus": "Leptodactylus"
-        },
-        {
-          "label": "Smilisca phaeota",
-          "registros": 6,
-          "slug_especie": "smilisca-phaeota",
-          "slug_grupo": "anfibios",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2428683",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56d4ebeb3c16479905cba8da/summary",
-          "species": "Smilisca phaeota",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Amphibia",
-          "order": "Anura",
-          "family": "Hylidae",
-          "genus": "Smilisca"
         }
       ],
       "species_list_tematica": {
@@ -4312,23 +4313,6 @@
             "genus": "Heliconia"
           },
           {
-            "label": "Brownea santanderensis",
-            "registros": 6,
-            "slug_especie": "brownea-santanderensis",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "angiospermas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2970478",
-            "species": "Brownea santanderensis",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Fabales",
-            "family": "Fabaceae",
-            "genus": "Brownea"
-          },
-          {
             "label": "Epidendrum ibaguense",
             "registros": 6,
             "slug_especie": "epidendrum-ibaguense",
@@ -4344,6 +4328,23 @@
             "order": "Asparagales",
             "family": "Orchidaceae",
             "genus": "Epidendrum"
+          },
+          {
+            "label": "Brownea santanderensis",
+            "registros": 6,
+            "slug_especie": "brownea-santanderensis",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "angiospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2970478",
+            "species": "Brownea santanderensis",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Fabales",
+            "family": "Fabaceae",
+            "genus": "Brownea"
           },
           {
             "label": "Croton holtonii",
@@ -4363,6 +4364,23 @@
             "genus": "Croton"
           },
           {
+            "label": "Swartzia santanderensis",
+            "registros": 4,
+            "slug_especie": "swartzia-santanderensis",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "angiospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5351939",
+            "species": "Swartzia santanderensis",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Fabales",
+            "family": "Fabaceae",
+            "genus": "Swartzia"
+          },
+          {
             "label": "Heliconia mutisiana",
             "registros": 4,
             "slug_especie": "heliconia-mutisiana",
@@ -4379,23 +4397,6 @@
             "order": "Zingiberales",
             "family": "Heliconiaceae",
             "genus": "Heliconia"
-          },
-          {
-            "label": "Swartzia santanderensis",
-            "registros": 4,
-            "slug_especie": "swartzia-santanderensis",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "angiospermas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5351939",
-            "species": "Swartzia santanderensis",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Fabales",
-            "family": "Fabaceae",
-            "genus": "Swartzia"
           },
           {
             "label": "Zygia picramnioides",
@@ -4506,23 +4507,6 @@
             "genus": "Psidium"
           },
           {
-            "label": "Hippobroma longiflora",
-            "registros": 5,
-            "slug_especie": "hippobroma-longiflora",
-            "slug_tematica": "exoticas-riesgo-invasion-total",
-            "tematica_label": "Exóticas con riesgo de invasión",
-            "slug_grupo": "angiospermas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3168943",
-            "species": "Hippobroma longiflora",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Asterales",
-            "family": "Campanulaceae",
-            "genus": "Hippobroma"
-          },
-          {
             "label": "Thunbergia alata",
             "registros": 5,
             "slug_especie": "thunbergia-alata",
@@ -4541,38 +4525,21 @@
             "genus": "Thunbergia"
           },
           {
-            "label": "Momordica charantia",
-            "registros": 4,
-            "slug_especie": "momordica-charantia",
+            "label": "Hippobroma longiflora",
+            "registros": 5,
+            "slug_especie": "hippobroma-longiflora",
             "slug_tematica": "exoticas-riesgo-invasion-total",
             "tematica_label": "Exóticas con riesgo de invasión",
             "slug_grupo": "angiospermas",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2874581",
-            "species": "Momordica charantia",
+            "url_gbif": "https://www.gbif.org/species/3168943",
+            "species": "Hippobroma longiflora",
             "kingdom": "Plantae",
             "phylum": "Tracheophyta",
             "class": "Magnoliopsida",
-            "order": "Cucurbitales",
-            "family": "Cucurbitaceae",
-            "genus": "Momordica"
-          },
-          {
-            "label": "Murraya paniculata",
-            "registros": 4,
-            "slug_especie": "murraya-paniculata",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "angiospermas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5421335",
-            "species": "Murraya paniculata",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Sapindales",
-            "family": "Rutaceae",
-            "genus": "Murraya"
+            "order": "Asterales",
+            "family": "Campanulaceae",
+            "genus": "Hippobroma"
           },
           {
             "label": "Syzygium jambos",
@@ -4593,6 +4560,40 @@
             "genus": "Syzygium"
           },
           {
+            "label": "Murraya paniculata",
+            "registros": 4,
+            "slug_especie": "murraya-paniculata",
+            "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
+            "slug_grupo": "angiospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5421335",
+            "species": "Murraya paniculata",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Sapindales",
+            "family": "Rutaceae",
+            "genus": "Murraya"
+          },
+          {
+            "label": "Momordica charantia",
+            "registros": 4,
+            "slug_especie": "momordica-charantia",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "angiospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2874581",
+            "species": "Momordica charantia",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Cucurbitales",
+            "family": "Cucurbitaceae",
+            "genus": "Momordica"
+          },
+          {
             "label": "Allamanda blanchetii",
             "registros": 3,
             "slug_especie": "allamanda-blanchetii",
@@ -4610,6 +4611,24 @@
             "genus": "Allamanda"
           },
           {
+            "label": "Tecoma stans",
+            "registros": 3,
+            "slug_especie": "tecoma-stans",
+            "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
+            "slug_grupo": "angiospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/3172492",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7aa5783c45700544e42c2/summary",
+            "species": "Tecoma stans",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Lamiales",
+            "family": "Bignoniaceae",
+            "genus": "Tecoma"
+          },
+          {
             "label": "Antigonon leptopus",
             "registros": 3,
             "slug_especie": "antigonon-leptopus",
@@ -4625,41 +4644,6 @@
             "order": "Caryophyllales",
             "family": "Polygonaceae",
             "genus": "Antigonon"
-          },
-          {
-            "label": "Heliotropium indicum",
-            "registros": 3,
-            "slug_especie": "heliotropium-indicum",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "angiospermas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2925788",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e59f8e83c45700544e3e77/summary",
-            "species": "Heliotropium indicum",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Boraginales",
-            "family": "Heliotropiaceae",
-            "genus": "Heliotropium"
-          },
-          {
-            "label": "Impatiens walleriana",
-            "registros": 3,
-            "slug_especie": "impatiens-walleriana",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "angiospermas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2891772",
-            "species": "Impatiens walleriana",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Ericales",
-            "family": "Balsaminaceae",
-            "genus": "Impatiens"
           },
           {
             "label": "Lantana camara",
@@ -4680,22 +4664,39 @@
             "genus": "Lantana"
           },
           {
-            "label": "Tecoma stans",
+            "label": "Impatiens walleriana",
             "registros": 3,
-            "slug_especie": "tecoma-stans",
+            "slug_especie": "impatiens-walleriana",
             "slug_tematica": "exoticas",
             "tematica_label": "Exóticas",
             "slug_grupo": "angiospermas",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3172492",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7aa5783c45700544e42c2/summary",
-            "species": "Tecoma stans",
+            "url_gbif": "https://www.gbif.org/species/2891772",
+            "species": "Impatiens walleriana",
             "kingdom": "Plantae",
             "phylum": "Tracheophyta",
             "class": "Magnoliopsida",
-            "order": "Lamiales",
-            "family": "Bignoniaceae",
-            "genus": "Tecoma"
+            "order": "Ericales",
+            "family": "Balsaminaceae",
+            "genus": "Impatiens"
+          },
+          {
+            "label": "Heliotropium indicum",
+            "registros": 3,
+            "slug_especie": "heliotropium-indicum",
+            "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
+            "slug_grupo": "angiospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2925788",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e59f8e83c45700544e3e77/summary",
+            "species": "Heliotropium indicum",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Boraginales",
+            "family": "Heliotropiaceae",
+            "genus": "Heliotropium"
           }
         ]
       }
@@ -6108,6 +6109,23 @@
             "genus": "Saucerottia"
           },
           {
+            "label": "Lebiasina floridablancaensis",
+            "registros": 17,
+            "slug_especie": "lebiasina-floridablancaensis",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2355623",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/59284f66f827bf0c0cedd1c7/summary",
+            "species": "Lebiasina floridablancaensis",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Characiformes",
+            "family": "Lebiasinidae",
+            "genus": "Lebiasina"
+          },
+          {
             "label": "Dendrobates truncatus",
             "registros": 17,
             "slug_especie": "dendrobates-truncatus",
@@ -6124,23 +6142,6 @@
             "order": "Anura",
             "family": "Dendrobatidae",
             "genus": "Dendrobates"
-          },
-          {
-            "label": "Lebiasina floridablancaensis",
-            "registros": 17,
-            "slug_especie": "lebiasina-floridablancaensis",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2355623",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/59284f66f827bf0c0cedd1c7/summary",
-            "species": "Lebiasina floridablancaensis",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "order": "Characiformes",
-            "family": "Lebiasinidae",
-            "genus": "Lebiasina"
           },
           {
             "label": "Craugastor metriosistus",
@@ -8520,49 +8521,19 @@
           "genus": "Culex"
         },
         {
-          "label": "Coquillettidia fasciolata",
+          "label": "Psorophora cingulata",
           "registros": 3,
-          "slug_especie": "coquillettidia-fasciolata",
+          "slug_especie": "psorophora-cingulata",
           "slug_grupo": "dipteros",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1648894",
-          "species": "Coquillettidia fasciolata",
+          "url_gbif": "https://www.gbif.org/species/1654742",
+          "species": "Psorophora cingulata",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Diptera",
           "family": "Culicidae",
-          "genus": "Coquillettidia"
-        },
-        {
-          "label": "Culex corniger",
-          "registros": 3,
-          "slug_especie": "culex-corniger",
-          "slug_grupo": "dipteros",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1653637",
-          "species": "Culex corniger",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Diptera",
-          "family": "Culicidae",
-          "genus": "Culex"
-        },
-        {
-          "label": "Culex nigripalpus",
-          "registros": 3,
-          "slug_especie": "culex-nigripalpus",
-          "slug_grupo": "dipteros",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1653046",
-          "species": "Culex nigripalpus",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Diptera",
-          "family": "Culicidae",
-          "genus": "Culex"
+          "genus": "Psorophora"
         },
         {
           "label": "Psorophora albipes",
@@ -8580,19 +8551,49 @@
           "genus": "Psorophora"
         },
         {
-          "label": "Psorophora cingulata",
+          "label": "Culex nigripalpus",
           "registros": 3,
-          "slug_especie": "psorophora-cingulata",
+          "slug_especie": "culex-nigripalpus",
           "slug_grupo": "dipteros",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1654742",
-          "species": "Psorophora cingulata",
+          "url_gbif": "https://www.gbif.org/species/1653046",
+          "species": "Culex nigripalpus",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Diptera",
           "family": "Culicidae",
-          "genus": "Psorophora"
+          "genus": "Culex"
+        },
+        {
+          "label": "Culex corniger",
+          "registros": 3,
+          "slug_especie": "culex-corniger",
+          "slug_grupo": "dipteros",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1653637",
+          "species": "Culex corniger",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Diptera",
+          "family": "Culicidae",
+          "genus": "Culex"
+        },
+        {
+          "label": "Coquillettidia fasciolata",
+          "registros": 3,
+          "slug_especie": "coquillettidia-fasciolata",
+          "slug_grupo": "dipteros",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1648894",
+          "species": "Coquillettidia fasciolata",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Diptera",
+          "family": "Culicidae",
+          "genus": "Coquillettidia"
         },
         {
           "label": "Aedes angustivittatus",
@@ -8602,36 +8603,6 @@
           "tipo": "biologico",
           "url_gbif": "https://www.gbif.org/species/1651587",
           "species": "Aedes angustivittatus",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Diptera",
-          "family": "Culicidae",
-          "genus": "Aedes"
-        },
-        {
-          "label": "Aedes hortator",
-          "registros": 2,
-          "slug_especie": "aedes-hortator",
-          "slug_grupo": "dipteros",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1652202",
-          "species": "Aedes hortator",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Diptera",
-          "family": "Culicidae",
-          "genus": "Aedes"
-        },
-        {
-          "label": "Aedes scapularis",
-          "registros": 2,
-          "slug_especie": "aedes-scapularis",
-          "slug_grupo": "dipteros",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1652257",
-          "species": "Aedes scapularis",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
@@ -8700,6 +8671,21 @@
           "genus": "Culex"
         },
         {
+          "label": "Aedes scapularis",
+          "registros": 2,
+          "slug_especie": "aedes-scapularis",
+          "slug_grupo": "dipteros",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1652257",
+          "species": "Aedes scapularis",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Diptera",
+          "family": "Culicidae",
+          "genus": "Aedes"
+        },
+        {
           "label": "Prodiplosis longifila",
           "registros": 2,
           "slug_especie": "prodiplosis-longifila",
@@ -8713,6 +8699,21 @@
           "order": "Diptera",
           "family": "Cecidomyiidae",
           "genus": "Prodiplosis"
+        },
+        {
+          "label": "Aedes hortator",
+          "registros": 2,
+          "slug_especie": "aedes-hortator",
+          "slug_grupo": "dipteros",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1652202",
+          "species": "Aedes hortator",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Diptera",
+          "family": "Culicidae",
+          "genus": "Aedes"
         },
         {
           "label": "Psorophora ferox",
@@ -9845,21 +9846,6 @@
           "genus": "Cyathea"
         },
         {
-          "label": "Meniscium serratum",
-          "registros": 9,
-          "slug_especie": "meniscium-serratum",
-          "slug_grupo": "helechos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2651423",
-          "species": "Meniscium serratum",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Polypodiopsida",
-          "order": "Polypodiales",
-          "family": "Thelypteridaceae",
-          "genus": "Meniscium"
-        },
-        {
           "label": "Pteris grandifolia",
           "registros": 9,
           "slug_especie": "pteris-grandifolia",
@@ -9873,6 +9859,21 @@
           "order": "Polypodiales",
           "family": "Pteridaceae",
           "genus": "Pteris"
+        },
+        {
+          "label": "Meniscium serratum",
+          "registros": 9,
+          "slug_especie": "meniscium-serratum",
+          "slug_grupo": "helechos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2651423",
+          "species": "Meniscium serratum",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Polypodiopsida",
+          "order": "Polypodiales",
+          "family": "Thelypteridaceae",
+          "genus": "Meniscium"
         },
         {
           "label": "Cyclopeltis semicordata",
@@ -9936,21 +9937,6 @@
           "genus": "Pelazoneuron"
         },
         {
-          "label": "Dennstaedtia cicutaria",
-          "registros": 6,
-          "slug_especie": "dennstaedtia-cicutaria",
-          "slug_grupo": "helechos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2650784",
-          "species": "Dennstaedtia cicutaria",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Polypodiopsida",
-          "order": "Polypodiales",
-          "family": "Dennstaedtiaceae",
-          "genus": "Dennstaedtia"
-        },
-        {
           "label": "Pteris deflexa",
           "registros": 6,
           "slug_especie": "pteris-deflexa",
@@ -9966,6 +9952,21 @@
           "genus": "Pteris"
         },
         {
+          "label": "Dennstaedtia cicutaria",
+          "registros": 6,
+          "slug_especie": "dennstaedtia-cicutaria",
+          "slug_grupo": "helechos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2650784",
+          "species": "Dennstaedtia cicutaria",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Polypodiopsida",
+          "order": "Polypodiales",
+          "family": "Dennstaedtiaceae",
+          "genus": "Dennstaedtia"
+        },
+        {
           "label": "Adiantum tetraphyllum",
           "registros": 5,
           "slug_especie": "adiantum-tetraphyllum",
@@ -9979,22 +9980,6 @@
           "order": "Polypodiales",
           "family": "Pteridaceae",
           "genus": "Adiantum"
-        },
-        {
-          "label": "Phlebodium decumanum",
-          "registros": 5,
-          "slug_especie": "phlebodium-decumanum",
-          "slug_grupo": "helechos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2650477",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e82f6e83c45700544e4361/summary",
-          "species": "Phlebodium decumanum",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Polypodiopsida",
-          "order": "Polypodiales",
-          "family": "Polypodiaceae",
-          "genus": "Phlebodium"
         },
         {
           "label": "Pteridium caudatum",
@@ -10026,6 +10011,22 @@
           "order": "Polypodiales",
           "family": "Tectariaceae",
           "genus": "Tectaria"
+        },
+        {
+          "label": "Phlebodium decumanum",
+          "registros": 5,
+          "slug_especie": "phlebodium-decumanum",
+          "slug_grupo": "helechos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2650477",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e82f6e83c45700544e4361/summary",
+          "species": "Phlebodium decumanum",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Polypodiopsida",
+          "order": "Polypodiales",
+          "family": "Polypodiaceae",
+          "genus": "Phlebodium"
         }
       ],
       "species_list_tematica": {
@@ -11636,6 +11637,66 @@
           "genus": "Pelidnota"
         },
         {
+          "label": "Psorophora cingulata",
+          "registros": 3,
+          "slug_especie": "psorophora-cingulata",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1654742",
+          "species": "Psorophora cingulata",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Diptera",
+          "family": "Culicidae",
+          "genus": "Psorophora"
+        },
+        {
+          "label": "Psorophora albipes",
+          "registros": 3,
+          "slug_especie": "psorophora-albipes",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1654762",
+          "species": "Psorophora albipes",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Diptera",
+          "family": "Culicidae",
+          "genus": "Psorophora"
+        },
+        {
+          "label": "Dryas iulia",
+          "registros": 3,
+          "slug_especie": "dryas-iulia",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5128034",
+          "species": "Dryas iulia",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Dryas"
+        },
+        {
+          "label": "Culex nigripalpus",
+          "registros": 3,
+          "slug_especie": "culex-nigripalpus",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1653046",
+          "species": "Culex nigripalpus",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Diptera",
+          "family": "Culicidae",
+          "genus": "Culex"
+        },
+        {
           "label": "Coquillettidia fasciolata",
           "registros": 3,
           "slug_especie": "coquillettidia-fasciolata",
@@ -11664,66 +11725,6 @@
           "order": "Diptera",
           "family": "Culicidae",
           "genus": "Culex"
-        },
-        {
-          "label": "Culex nigripalpus",
-          "registros": 3,
-          "slug_especie": "culex-nigripalpus",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1653046",
-          "species": "Culex nigripalpus",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Diptera",
-          "family": "Culicidae",
-          "genus": "Culex"
-        },
-        {
-          "label": "Dryas iulia",
-          "registros": 3,
-          "slug_especie": "dryas-iulia",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5128034",
-          "species": "Dryas iulia",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Dryas"
-        },
-        {
-          "label": "Psorophora albipes",
-          "registros": 3,
-          "slug_especie": "psorophora-albipes",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1654762",
-          "species": "Psorophora albipes",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Diptera",
-          "family": "Culicidae",
-          "genus": "Psorophora"
-        },
-        {
-          "label": "Psorophora cingulata",
-          "registros": 3,
-          "slug_especie": "psorophora-cingulata",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1654742",
-          "species": "Psorophora cingulata",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Diptera",
-          "family": "Culicidae",
-          "genus": "Psorophora"
         }
       ],
       "species_list_tematica": {
@@ -12081,21 +12082,6 @@
           "genus": "Culex"
         },
         {
-          "label": "Culex coronator",
-          "registros": 7,
-          "slug_especie": "culex-coronator",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1653144",
-          "species": "Culex coronator",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Diptera",
-          "family": "Culicidae",
-          "genus": "Culex"
-        },
-        {
           "label": "Lissachatina fulica",
           "registros": 7,
           "slug_especie": "lissachatina-fulica",
@@ -12110,6 +12096,21 @@
           "order": "Stylommatophora",
           "family": "Achatinidae",
           "genus": "Lissachatina"
+        },
+        {
+          "label": "Culex coronator",
+          "registros": 7,
+          "slug_especie": "culex-coronator",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1653144",
+          "species": "Culex coronator",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Diptera",
+          "family": "Culicidae",
+          "genus": "Culex"
         },
         {
           "label": "Anopheles argyritarsis",
@@ -12187,6 +12188,66 @@
           "genus": "Pelidnota"
         },
         {
+          "label": "Psorophora cingulata",
+          "registros": 3,
+          "slug_especie": "psorophora-cingulata",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1654742",
+          "species": "Psorophora cingulata",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Diptera",
+          "family": "Culicidae",
+          "genus": "Psorophora"
+        },
+        {
+          "label": "Psorophora albipes",
+          "registros": 3,
+          "slug_especie": "psorophora-albipes",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1654762",
+          "species": "Psorophora albipes",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Diptera",
+          "family": "Culicidae",
+          "genus": "Psorophora"
+        },
+        {
+          "label": "Dryas iulia",
+          "registros": 3,
+          "slug_especie": "dryas-iulia",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5128034",
+          "species": "Dryas iulia",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Dryas"
+        },
+        {
+          "label": "Culex nigripalpus",
+          "registros": 3,
+          "slug_especie": "culex-nigripalpus",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1653046",
+          "species": "Culex nigripalpus",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Diptera",
+          "family": "Culicidae",
+          "genus": "Culex"
+        },
+        {
           "label": "Coquillettidia fasciolata",
           "registros": 3,
           "slug_especie": "coquillettidia-fasciolata",
@@ -12215,66 +12276,6 @@
           "order": "Diptera",
           "family": "Culicidae",
           "genus": "Culex"
-        },
-        {
-          "label": "Culex nigripalpus",
-          "registros": 3,
-          "slug_especie": "culex-nigripalpus",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1653046",
-          "species": "Culex nigripalpus",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Diptera",
-          "family": "Culicidae",
-          "genus": "Culex"
-        },
-        {
-          "label": "Dryas iulia",
-          "registros": 3,
-          "slug_especie": "dryas-iulia",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5128034",
-          "species": "Dryas iulia",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Dryas"
-        },
-        {
-          "label": "Psorophora albipes",
-          "registros": 3,
-          "slug_especie": "psorophora-albipes",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1654762",
-          "species": "Psorophora albipes",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Diptera",
-          "family": "Culicidae",
-          "genus": "Psorophora"
-        },
-        {
-          "label": "Psorophora cingulata",
-          "registros": 3,
-          "slug_especie": "psorophora-cingulata",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1654742",
-          "species": "Psorophora cingulata",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Diptera",
-          "family": "Culicidae",
-          "genus": "Psorophora"
         }
       ],
       "species_list_tematica": {
@@ -12717,6 +12718,38 @@
           "genus": "Eira"
         },
         {
+          "label": "Tamandua mexicana",
+          "registros": 3,
+          "slug_especie": "tamandua-mexicana",
+          "slug_grupo": "mamiferos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2436335",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cbf639207ecea54a561e20/summary",
+          "species": "Tamandua mexicana",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Pilosa",
+          "family": "Myrmecophagidae",
+          "genus": "Tamandua"
+        },
+        {
+          "label": "Platyrrhinus helleri",
+          "registros": 3,
+          "slug_especie": "platyrrhinus-helleri",
+          "slug_grupo": "mamiferos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5218762",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56ca86c4f0106c67230e7462/summary",
+          "species": "Platyrrhinus helleri",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Chiroptera",
+          "family": "Phyllostomidae",
+          "genus": "Platyrrhinus"
+        },
+        {
           "label": "Carollia brevicaudum",
           "registros": 3,
           "slug_especie": "carollia-brevicaudum",
@@ -12764,38 +12797,6 @@
           "order": "Chiroptera",
           "family": "Molossidae",
           "genus": "Molossus"
-        },
-        {
-          "label": "Platyrrhinus helleri",
-          "registros": 3,
-          "slug_especie": "platyrrhinus-helleri",
-          "slug_grupo": "mamiferos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5218762",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56ca86c4f0106c67230e7462/summary",
-          "species": "Platyrrhinus helleri",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Mammalia",
-          "order": "Chiroptera",
-          "family": "Phyllostomidae",
-          "genus": "Platyrrhinus"
-        },
-        {
-          "label": "Tamandua mexicana",
-          "registros": 3,
-          "slug_especie": "tamandua-mexicana",
-          "slug_grupo": "mamiferos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2436335",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cbf639207ecea54a561e20/summary",
-          "species": "Tamandua mexicana",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Mammalia",
-          "order": "Pilosa",
-          "family": "Myrmecophagidae",
-          "genus": "Tamandua"
         }
       ],
       "species_list_tematica": {
@@ -16764,23 +16765,6 @@
             "genus": "Heliconia"
           },
           {
-            "label": "Brownea santanderensis",
-            "registros": 6,
-            "slug_especie": "brownea-santanderensis",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "plantas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2970478",
-            "species": "Brownea santanderensis",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Fabales",
-            "family": "Fabaceae",
-            "genus": "Brownea"
-          },
-          {
             "label": "Epidendrum ibaguense",
             "registros": 6,
             "slug_especie": "epidendrum-ibaguense",
@@ -16796,6 +16780,23 @@
             "order": "Asparagales",
             "family": "Orchidaceae",
             "genus": "Epidendrum"
+          },
+          {
+            "label": "Brownea santanderensis",
+            "registros": 6,
+            "slug_especie": "brownea-santanderensis",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "plantas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2970478",
+            "species": "Brownea santanderensis",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Fabales",
+            "family": "Fabaceae",
+            "genus": "Brownea"
           },
           {
             "label": "Croton holtonii",
@@ -16815,6 +16816,23 @@
             "genus": "Croton"
           },
           {
+            "label": "Swartzia santanderensis",
+            "registros": 4,
+            "slug_especie": "swartzia-santanderensis",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "plantas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5351939",
+            "species": "Swartzia santanderensis",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Fabales",
+            "family": "Fabaceae",
+            "genus": "Swartzia"
+          },
+          {
             "label": "Heliconia mutisiana",
             "registros": 4,
             "slug_especie": "heliconia-mutisiana",
@@ -16831,23 +16849,6 @@
             "order": "Zingiberales",
             "family": "Heliconiaceae",
             "genus": "Heliconia"
-          },
-          {
-            "label": "Swartzia santanderensis",
-            "registros": 4,
-            "slug_especie": "swartzia-santanderensis",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "plantas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5351939",
-            "species": "Swartzia santanderensis",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Fabales",
-            "family": "Fabaceae",
-            "genus": "Swartzia"
           },
           {
             "label": "Zygia picramnioides",
@@ -16958,23 +16959,6 @@
             "genus": "Psidium"
           },
           {
-            "label": "Hippobroma longiflora",
-            "registros": 5,
-            "slug_especie": "hippobroma-longiflora",
-            "slug_tematica": "exoticas-riesgo-invasion-total",
-            "tematica_label": "Exóticas con riesgo de invasión",
-            "slug_grupo": "plantas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3168943",
-            "species": "Hippobroma longiflora",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Asterales",
-            "family": "Campanulaceae",
-            "genus": "Hippobroma"
-          },
-          {
             "label": "Thunbergia alata",
             "registros": 5,
             "slug_especie": "thunbergia-alata",
@@ -16993,38 +16977,21 @@
             "genus": "Thunbergia"
           },
           {
-            "label": "Momordica charantia",
-            "registros": 4,
-            "slug_especie": "momordica-charantia",
+            "label": "Hippobroma longiflora",
+            "registros": 5,
+            "slug_especie": "hippobroma-longiflora",
             "slug_tematica": "exoticas-riesgo-invasion-total",
             "tematica_label": "Exóticas con riesgo de invasión",
             "slug_grupo": "plantas",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2874581",
-            "species": "Momordica charantia",
+            "url_gbif": "https://www.gbif.org/species/3168943",
+            "species": "Hippobroma longiflora",
             "kingdom": "Plantae",
             "phylum": "Tracheophyta",
             "class": "Magnoliopsida",
-            "order": "Cucurbitales",
-            "family": "Cucurbitaceae",
-            "genus": "Momordica"
-          },
-          {
-            "label": "Murraya paniculata",
-            "registros": 4,
-            "slug_especie": "murraya-paniculata",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "plantas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5421335",
-            "species": "Murraya paniculata",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Sapindales",
-            "family": "Rutaceae",
-            "genus": "Murraya"
+            "order": "Asterales",
+            "family": "Campanulaceae",
+            "genus": "Hippobroma"
           },
           {
             "label": "Syzygium jambos",
@@ -17045,6 +17012,40 @@
             "genus": "Syzygium"
           },
           {
+            "label": "Murraya paniculata",
+            "registros": 4,
+            "slug_especie": "murraya-paniculata",
+            "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
+            "slug_grupo": "plantas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5421335",
+            "species": "Murraya paniculata",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Sapindales",
+            "family": "Rutaceae",
+            "genus": "Murraya"
+          },
+          {
+            "label": "Momordica charantia",
+            "registros": 4,
+            "slug_especie": "momordica-charantia",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "plantas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2874581",
+            "species": "Momordica charantia",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Cucurbitales",
+            "family": "Cucurbitaceae",
+            "genus": "Momordica"
+          },
+          {
             "label": "Allamanda blanchetii",
             "registros": 3,
             "slug_especie": "allamanda-blanchetii",
@@ -17062,6 +17063,24 @@
             "genus": "Allamanda"
           },
           {
+            "label": "Tecoma stans",
+            "registros": 3,
+            "slug_especie": "tecoma-stans",
+            "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
+            "slug_grupo": "plantas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/3172492",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7aa5783c45700544e42c2/summary",
+            "species": "Tecoma stans",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Lamiales",
+            "family": "Bignoniaceae",
+            "genus": "Tecoma"
+          },
+          {
             "label": "Antigonon leptopus",
             "registros": 3,
             "slug_especie": "antigonon-leptopus",
@@ -17077,41 +17096,6 @@
             "order": "Caryophyllales",
             "family": "Polygonaceae",
             "genus": "Antigonon"
-          },
-          {
-            "label": "Heliotropium indicum",
-            "registros": 3,
-            "slug_especie": "heliotropium-indicum",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "plantas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2925788",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e59f8e83c45700544e3e77/summary",
-            "species": "Heliotropium indicum",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Boraginales",
-            "family": "Heliotropiaceae",
-            "genus": "Heliotropium"
-          },
-          {
-            "label": "Impatiens walleriana",
-            "registros": 3,
-            "slug_especie": "impatiens-walleriana",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "plantas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2891772",
-            "species": "Impatiens walleriana",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Ericales",
-            "family": "Balsaminaceae",
-            "genus": "Impatiens"
           },
           {
             "label": "Lantana camara",
@@ -17132,22 +17116,39 @@
             "genus": "Lantana"
           },
           {
-            "label": "Tecoma stans",
+            "label": "Impatiens walleriana",
             "registros": 3,
-            "slug_especie": "tecoma-stans",
+            "slug_especie": "impatiens-walleriana",
             "slug_tematica": "exoticas",
             "tematica_label": "Exóticas",
             "slug_grupo": "plantas",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3172492",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7aa5783c45700544e42c2/summary",
-            "species": "Tecoma stans",
+            "url_gbif": "https://www.gbif.org/species/2891772",
+            "species": "Impatiens walleriana",
             "kingdom": "Plantae",
             "phylum": "Tracheophyta",
             "class": "Magnoliopsida",
-            "order": "Lamiales",
-            "family": "Bignoniaceae",
-            "genus": "Tecoma"
+            "order": "Ericales",
+            "family": "Balsaminaceae",
+            "genus": "Impatiens"
+          },
+          {
+            "label": "Heliotropium indicum",
+            "registros": 3,
+            "slug_especie": "heliotropium-indicum",
+            "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
+            "slug_grupo": "plantas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2925788",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e59f8e83c45700544e3e77/summary",
+            "species": "Heliotropium indicum",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Boraginales",
+            "family": "Heliotropiaceae",
+            "genus": "Heliotropium"
           }
         ]
       }
@@ -17490,6 +17491,21 @@
           "genus": "Thecadactylus"
         },
         {
+          "label": "Ninia atrata",
+          "registros": 5,
+          "slug_especie": "ninia-atrata",
+          "slug_grupo": "reptiles",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5223591",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e87d9383c45700544e4416/summary",
+          "species": "Ninia atrata",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Squamata",
+          "family": "Colubridae",
+          "genus": "Ninia"
+        },
+        {
           "label": "Basiliscus galeritus",
           "registros": 5,
           "slug_especie": "basiliscus-galeritus",
@@ -17503,21 +17519,6 @@
           "class": "Squamata",
           "family": "Corytophanidae",
           "genus": "Basiliscus"
-        },
-        {
-          "label": "Bothrops asper",
-          "registros": 5,
-          "slug_especie": "bothrops-asper",
-          "slug_grupo": "reptiles",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5220796",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e108cb83c45700544e3d0f/summary",
-          "species": "Bothrops asper",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Squamata",
-          "family": "Viperidae",
-          "genus": "Bothrops"
         },
         {
           "label": "Micrurus dumerilii",
@@ -17534,19 +17535,19 @@
           "genus": "Micrurus"
         },
         {
-          "label": "Ninia atrata",
+          "label": "Bothrops asper",
           "registros": 5,
-          "slug_especie": "ninia-atrata",
+          "slug_especie": "bothrops-asper",
           "slug_grupo": "reptiles",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5223591",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e87d9383c45700544e4416/summary",
-          "species": "Ninia atrata",
+          "url_gbif": "https://www.gbif.org/species/5220796",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e108cb83c45700544e3d0f/summary",
+          "species": "Bothrops asper",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Squamata",
-          "family": "Colubridae",
-          "genus": "Ninia"
+          "family": "Viperidae",
+          "genus": "Bothrops"
         },
         {
           "label": "Anolis frenatus",
@@ -18794,23 +18795,6 @@
             "genus": "Heliconia"
           },
           {
-            "label": "Brownea santanderensis",
-            "registros": 6,
-            "slug_especie": "brownea-santanderensis",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "vasculares",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2970478",
-            "species": "Brownea santanderensis",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Fabales",
-            "family": "Fabaceae",
-            "genus": "Brownea"
-          },
-          {
             "label": "Epidendrum ibaguense",
             "registros": 6,
             "slug_especie": "epidendrum-ibaguense",
@@ -18826,6 +18810,23 @@
             "order": "Asparagales",
             "family": "Orchidaceae",
             "genus": "Epidendrum"
+          },
+          {
+            "label": "Brownea santanderensis",
+            "registros": 6,
+            "slug_especie": "brownea-santanderensis",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "vasculares",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2970478",
+            "species": "Brownea santanderensis",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Fabales",
+            "family": "Fabaceae",
+            "genus": "Brownea"
           },
           {
             "label": "Croton holtonii",
@@ -18845,6 +18846,23 @@
             "genus": "Croton"
           },
           {
+            "label": "Swartzia santanderensis",
+            "registros": 4,
+            "slug_especie": "swartzia-santanderensis",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "vasculares",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5351939",
+            "species": "Swartzia santanderensis",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Fabales",
+            "family": "Fabaceae",
+            "genus": "Swartzia"
+          },
+          {
             "label": "Heliconia mutisiana",
             "registros": 4,
             "slug_especie": "heliconia-mutisiana",
@@ -18861,23 +18879,6 @@
             "order": "Zingiberales",
             "family": "Heliconiaceae",
             "genus": "Heliconia"
-          },
-          {
-            "label": "Swartzia santanderensis",
-            "registros": 4,
-            "slug_especie": "swartzia-santanderensis",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "vasculares",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5351939",
-            "species": "Swartzia santanderensis",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Fabales",
-            "family": "Fabaceae",
-            "genus": "Swartzia"
           },
           {
             "label": "Zygia picramnioides",
@@ -18988,23 +18989,6 @@
             "genus": "Psidium"
           },
           {
-            "label": "Hippobroma longiflora",
-            "registros": 5,
-            "slug_especie": "hippobroma-longiflora",
-            "slug_tematica": "exoticas-riesgo-invasion-total",
-            "tematica_label": "Exóticas con riesgo de invasión",
-            "slug_grupo": "vasculares",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3168943",
-            "species": "Hippobroma longiflora",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Asterales",
-            "family": "Campanulaceae",
-            "genus": "Hippobroma"
-          },
-          {
             "label": "Thunbergia alata",
             "registros": 5,
             "slug_especie": "thunbergia-alata",
@@ -19023,38 +19007,21 @@
             "genus": "Thunbergia"
           },
           {
-            "label": "Momordica charantia",
-            "registros": 4,
-            "slug_especie": "momordica-charantia",
+            "label": "Hippobroma longiflora",
+            "registros": 5,
+            "slug_especie": "hippobroma-longiflora",
             "slug_tematica": "exoticas-riesgo-invasion-total",
             "tematica_label": "Exóticas con riesgo de invasión",
             "slug_grupo": "vasculares",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2874581",
-            "species": "Momordica charantia",
+            "url_gbif": "https://www.gbif.org/species/3168943",
+            "species": "Hippobroma longiflora",
             "kingdom": "Plantae",
             "phylum": "Tracheophyta",
             "class": "Magnoliopsida",
-            "order": "Cucurbitales",
-            "family": "Cucurbitaceae",
-            "genus": "Momordica"
-          },
-          {
-            "label": "Murraya paniculata",
-            "registros": 4,
-            "slug_especie": "murraya-paniculata",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "vasculares",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5421335",
-            "species": "Murraya paniculata",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Sapindales",
-            "family": "Rutaceae",
-            "genus": "Murraya"
+            "order": "Asterales",
+            "family": "Campanulaceae",
+            "genus": "Hippobroma"
           },
           {
             "label": "Syzygium jambos",
@@ -19075,6 +19042,40 @@
             "genus": "Syzygium"
           },
           {
+            "label": "Murraya paniculata",
+            "registros": 4,
+            "slug_especie": "murraya-paniculata",
+            "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
+            "slug_grupo": "vasculares",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5421335",
+            "species": "Murraya paniculata",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Sapindales",
+            "family": "Rutaceae",
+            "genus": "Murraya"
+          },
+          {
+            "label": "Momordica charantia",
+            "registros": 4,
+            "slug_especie": "momordica-charantia",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "vasculares",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2874581",
+            "species": "Momordica charantia",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Cucurbitales",
+            "family": "Cucurbitaceae",
+            "genus": "Momordica"
+          },
+          {
             "label": "Allamanda blanchetii",
             "registros": 3,
             "slug_especie": "allamanda-blanchetii",
@@ -19092,6 +19093,24 @@
             "genus": "Allamanda"
           },
           {
+            "label": "Tecoma stans",
+            "registros": 3,
+            "slug_especie": "tecoma-stans",
+            "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
+            "slug_grupo": "vasculares",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/3172492",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7aa5783c45700544e42c2/summary",
+            "species": "Tecoma stans",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Lamiales",
+            "family": "Bignoniaceae",
+            "genus": "Tecoma"
+          },
+          {
             "label": "Antigonon leptopus",
             "registros": 3,
             "slug_especie": "antigonon-leptopus",
@@ -19107,41 +19126,6 @@
             "order": "Caryophyllales",
             "family": "Polygonaceae",
             "genus": "Antigonon"
-          },
-          {
-            "label": "Heliotropium indicum",
-            "registros": 3,
-            "slug_especie": "heliotropium-indicum",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "vasculares",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2925788",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e59f8e83c45700544e3e77/summary",
-            "species": "Heliotropium indicum",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Boraginales",
-            "family": "Heliotropiaceae",
-            "genus": "Heliotropium"
-          },
-          {
-            "label": "Impatiens walleriana",
-            "registros": 3,
-            "slug_especie": "impatiens-walleriana",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "vasculares",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2891772",
-            "species": "Impatiens walleriana",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Ericales",
-            "family": "Balsaminaceae",
-            "genus": "Impatiens"
           },
           {
             "label": "Lantana camara",
@@ -19162,22 +19146,39 @@
             "genus": "Lantana"
           },
           {
-            "label": "Tecoma stans",
+            "label": "Impatiens walleriana",
             "registros": 3,
-            "slug_especie": "tecoma-stans",
+            "slug_especie": "impatiens-walleriana",
             "slug_tematica": "exoticas",
             "tematica_label": "Exóticas",
             "slug_grupo": "vasculares",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3172492",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7aa5783c45700544e42c2/summary",
-            "species": "Tecoma stans",
+            "url_gbif": "https://www.gbif.org/species/2891772",
+            "species": "Impatiens walleriana",
             "kingdom": "Plantae",
             "phylum": "Tracheophyta",
             "class": "Magnoliopsida",
-            "order": "Lamiales",
-            "family": "Bignoniaceae",
-            "genus": "Tecoma"
+            "order": "Ericales",
+            "family": "Balsaminaceae",
+            "genus": "Impatiens"
+          },
+          {
+            "label": "Heliotropium indicum",
+            "registros": 3,
+            "slug_especie": "heliotropium-indicum",
+            "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
+            "slug_grupo": "vasculares",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2925788",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e59f8e83c45700544e3e77/summary",
+            "species": "Heliotropium indicum",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Boraginales",
+            "family": "Heliotropiaceae",
+            "genus": "Heliotropium"
           }
         ]
       }
@@ -20605,6 +20606,23 @@
             "genus": "Saucerottia"
           },
           {
+            "label": "Lebiasina floridablancaensis",
+            "registros": 17,
+            "slug_especie": "lebiasina-floridablancaensis",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2355623",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/59284f66f827bf0c0cedd1c7/summary",
+            "species": "Lebiasina floridablancaensis",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Characiformes",
+            "family": "Lebiasinidae",
+            "genus": "Lebiasina"
+          },
+          {
             "label": "Dendrobates truncatus",
             "registros": 17,
             "slug_especie": "dendrobates-truncatus",
@@ -20621,23 +20639,6 @@
             "order": "Anura",
             "family": "Dendrobatidae",
             "genus": "Dendrobates"
-          },
-          {
-            "label": "Lebiasina floridablancaensis",
-            "registros": 17,
-            "slug_especie": "lebiasina-floridablancaensis",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2355623",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/59284f66f827bf0c0cedd1c7/summary",
-            "species": "Lebiasina floridablancaensis",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "order": "Characiformes",
-            "family": "Lebiasinidae",
-            "genus": "Lebiasina"
           },
           {
             "label": "Craugastor metriosistus",
@@ -21112,6 +21113,96 @@
           "genus": "Passiflora"
         },
         {
+          "label": "Passiflora auriculata",
+          "registros": 2,
+          "slug_especie": "passiflora-auriculata",
+          "slug_grupo": "bromelias-labiadas-pasifloras",
+          "tipo": "interes",
+          "url_gbif": "https://www.gbif.org/species/3587589",
+          "species": "Passiflora auriculata",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Malpighiales",
+          "family": "Passifloraceae",
+          "genus": "Passiflora"
+        },
+        {
+          "label": "Tillandsia clavigera",
+          "registros": 2,
+          "slug_especie": "tillandsia-clavigera",
+          "slug_grupo": "bromelias-labiadas-pasifloras",
+          "tipo": "interes",
+          "url_gbif": "https://www.gbif.org/species/2695405",
+          "species": "Tillandsia clavigera",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Poales",
+          "family": "Bromeliaceae",
+          "genus": "Tillandsia"
+        },
+        {
+          "label": "Passiflora spinosa",
+          "registros": 2,
+          "slug_especie": "passiflora-spinosa",
+          "slug_grupo": "bromelias-labiadas-pasifloras",
+          "tipo": "interes",
+          "url_gbif": "https://www.gbif.org/species/3588360",
+          "species": "Passiflora spinosa",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Malpighiales",
+          "family": "Passifloraceae",
+          "genus": "Passiflora"
+        },
+        {
+          "label": "Passiflora foetida",
+          "registros": 2,
+          "slug_especie": "passiflora-foetida",
+          "slug_grupo": "bromelias-labiadas-pasifloras",
+          "tipo": "interes",
+          "url_gbif": "https://www.gbif.org/species/2874211",
+          "species": "Passiflora foetida",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Malpighiales",
+          "family": "Passifloraceae",
+          "genus": "Passiflora"
+        },
+        {
+          "label": "Passiflora cuneata",
+          "registros": 2,
+          "slug_especie": "passiflora-cuneata",
+          "slug_grupo": "bromelias-labiadas-pasifloras",
+          "tipo": "interes",
+          "url_gbif": "https://www.gbif.org/species/3586845",
+          "species": "Passiflora cuneata",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Malpighiales",
+          "family": "Passifloraceae",
+          "genus": "Passiflora"
+        },
+        {
+          "label": "Passiflora coriacea",
+          "registros": 2,
+          "slug_especie": "passiflora-coriacea",
+          "slug_grupo": "bromelias-labiadas-pasifloras",
+          "tipo": "interes",
+          "url_gbif": "https://www.gbif.org/species/3587350",
+          "species": "Passiflora coriacea",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Malpighiales",
+          "family": "Passifloraceae",
+          "genus": "Passiflora"
+        },
+        {
           "label": "Leonotis nepetifolia",
           "registros": 2,
           "slug_especie": "leonotis-nepetifolia",
@@ -21140,96 +21231,6 @@
           "order": "Lamiales",
           "family": "Lamiaceae",
           "genus": "Leonurus"
-        },
-        {
-          "label": "Passiflora auriculata",
-          "registros": 2,
-          "slug_especie": "passiflora-auriculata",
-          "slug_grupo": "bromelias-labiadas-pasifloras",
-          "tipo": "interes",
-          "url_gbif": "https://www.gbif.org/species/3587589",
-          "species": "Passiflora auriculata",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Passifloraceae",
-          "genus": "Passiflora"
-        },
-        {
-          "label": "Passiflora coriacea",
-          "registros": 2,
-          "slug_especie": "passiflora-coriacea",
-          "slug_grupo": "bromelias-labiadas-pasifloras",
-          "tipo": "interes",
-          "url_gbif": "https://www.gbif.org/species/3587350",
-          "species": "Passiflora coriacea",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Passifloraceae",
-          "genus": "Passiflora"
-        },
-        {
-          "label": "Passiflora cuneata",
-          "registros": 2,
-          "slug_especie": "passiflora-cuneata",
-          "slug_grupo": "bromelias-labiadas-pasifloras",
-          "tipo": "interes",
-          "url_gbif": "https://www.gbif.org/species/3586845",
-          "species": "Passiflora cuneata",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Passifloraceae",
-          "genus": "Passiflora"
-        },
-        {
-          "label": "Passiflora foetida",
-          "registros": 2,
-          "slug_especie": "passiflora-foetida",
-          "slug_grupo": "bromelias-labiadas-pasifloras",
-          "tipo": "interes",
-          "url_gbif": "https://www.gbif.org/species/2874211",
-          "species": "Passiflora foetida",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Passifloraceae",
-          "genus": "Passiflora"
-        },
-        {
-          "label": "Passiflora spinosa",
-          "registros": 2,
-          "slug_especie": "passiflora-spinosa",
-          "slug_grupo": "bromelias-labiadas-pasifloras",
-          "tipo": "interes",
-          "url_gbif": "https://www.gbif.org/species/3588360",
-          "species": "Passiflora spinosa",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Passifloraceae",
-          "genus": "Passiflora"
-        },
-        {
-          "label": "Tillandsia clavigera",
-          "registros": 2,
-          "slug_especie": "tillandsia-clavigera",
-          "slug_grupo": "bromelias-labiadas-pasifloras",
-          "tipo": "interes",
-          "url_gbif": "https://www.gbif.org/species/2695405",
-          "species": "Tillandsia clavigera",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Poales",
-          "family": "Bromeliaceae",
-          "genus": "Tillandsia"
         }
       ],
       "species_list_tematica": {

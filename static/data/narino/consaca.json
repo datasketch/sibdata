@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -1467,6 +1467,14 @@
           "slug_tematica": "exoticas-riesgo-invasion-total"
         },
         {
+          "label": "Tecoma stans",
+          "slug_especie": "tecoma-stans",
+          "registros": 4,
+          "url_gbif": "https://www.gbif.org/species/3172492",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7aa5783c45700544e42c2/summary",
+          "slug_tematica": "exoticas"
+        },
+        {
           "label": "Columba livia",
           "slug_especie": "columba-livia",
           "registros": 4,
@@ -1475,12 +1483,26 @@
           "slug_tematica": "exoticas-riesgo-invasion-total"
         },
         {
-          "label": "Tecoma stans",
-          "slug_especie": "tecoma-stans",
-          "registros": 4,
-          "url_gbif": "https://www.gbif.org/species/3172492",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7aa5783c45700544e42c2/summary",
+          "label": "Cynoglossum amabile",
+          "slug_especie": "cynoglossum-amabile",
+          "registros": 2,
+          "url_gbif": "https://www.gbif.org/species/2925816",
           "slug_tematica": "exoticas"
+        },
+        {
+          "label": "Salvia hispanica",
+          "slug_especie": "salvia-hispanica",
+          "registros": 2,
+          "url_gbif": "https://www.gbif.org/species/2926992",
+          "slug_tematica": "exoticas"
+        },
+        {
+          "label": "Holcus lanatus",
+          "slug_especie": "holcus-lanatus",
+          "registros": 2,
+          "url_gbif": "https://www.gbif.org/species/2706164",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d9b36e3c16479905cba9b5/summary",
+          "slug_tematica": "exoticas-riesgo-invasion-total"
         },
         {
           "label": "Celosia argentea",
@@ -1498,27 +1520,6 @@
           "slug_tematica": "exoticas-riesgo-invasion-total"
         },
         {
-          "label": "Conyza sumatrensis",
-          "slug_especie": "conyza-sumatrensis",
-          "registros": 2,
-          "url_gbif": "https://www.gbif.org/species/5398027",
-          "slug_tematica": "exoticas"
-        },
-        {
-          "label": "Cynoglossum amabile",
-          "slug_especie": "cynoglossum-amabile",
-          "registros": 2,
-          "url_gbif": "https://www.gbif.org/species/2925816",
-          "slug_tematica": "exoticas"
-        },
-        {
-          "label": "Drymaria cordata",
-          "slug_especie": "drymaria-cordata",
-          "registros": 2,
-          "url_gbif": "https://www.gbif.org/species/5384509",
-          "slug_tematica": "exoticas"
-        },
-        {
           "label": "Galinsoga parviflora",
           "slug_especie": "galinsoga-parviflora",
           "registros": 2,
@@ -1526,12 +1527,11 @@
           "slug_tematica": "exoticas"
         },
         {
-          "label": "Holcus lanatus",
-          "slug_especie": "holcus-lanatus",
+          "label": "Conyza sumatrensis",
+          "slug_especie": "conyza-sumatrensis",
           "registros": 2,
-          "url_gbif": "https://www.gbif.org/species/2706164",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56d9b36e3c16479905cba9b5/summary",
-          "slug_tematica": "exoticas-riesgo-invasion-total"
+          "url_gbif": "https://www.gbif.org/species/5398027",
+          "slug_tematica": "exoticas"
         }
       ],
       "list_especies_exoticas": [
@@ -2669,6 +2669,21 @@
           "genus": "Magnolia"
         },
         {
+          "label": "Nectandra lineata",
+          "registros": 8,
+          "slug_especie": "nectandra-lineata",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5685105",
+          "species": "Nectandra lineata",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Laurales",
+          "family": "Lauraceae",
+          "genus": "Nectandra"
+        },
+        {
           "label": "Ceroxylon ventricosum",
           "registros": 8,
           "slug_especie": "ceroxylon-ventricosum",
@@ -2683,21 +2698,6 @@
           "order": "Arecales",
           "family": "Arecaceae",
           "genus": "Ceroxylon"
-        },
-        {
-          "label": "Nectandra lineata",
-          "registros": 8,
-          "slug_especie": "nectandra-lineata",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5685105",
-          "species": "Nectandra lineata",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Laurales",
-          "family": "Lauraceae",
-          "genus": "Nectandra"
         },
         {
           "label": "Iresine diffusa",
@@ -2715,21 +2715,6 @@
           "genus": "Iresine"
         },
         {
-          "label": "Oreopanax floribundus",
-          "registros": 7,
-          "slug_especie": "oreopanax-floribundus",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3036585",
-          "species": "Oreopanax floribundus",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Apiales",
-          "family": "Araliaceae",
-          "genus": "Oreopanax"
-        },
-        {
           "label": "Piper subflavum",
           "registros": 7,
           "slug_especie": "piper-subflavum",
@@ -2743,6 +2728,21 @@
           "order": "Piperales",
           "family": "Piperaceae",
           "genus": "Piper"
+        },
+        {
+          "label": "Oreopanax floribundus",
+          "registros": 7,
+          "slug_especie": "oreopanax-floribundus",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3036585",
+          "species": "Oreopanax floribundus",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Apiales",
+          "family": "Araliaceae",
+          "genus": "Oreopanax"
         }
       ],
       "species_list_tematica": {
@@ -3037,6 +3037,57 @@
             "genus": "Tecoma"
           },
           {
+            "label": "Rhaphiolepis bibas",
+            "registros": 2,
+            "slug_especie": "rhaphiolepis-bibas",
+            "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
+            "slug_grupo": "angiospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/10786206",
+            "species": "Rhaphiolepis bibas",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Rosales",
+            "family": "Rosaceae",
+            "genus": "Rhaphiolepis"
+          },
+          {
+            "label": "Cynoglossum amabile",
+            "registros": 2,
+            "slug_especie": "cynoglossum-amabile",
+            "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
+            "slug_grupo": "angiospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2925816",
+            "species": "Cynoglossum amabile",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Boraginales",
+            "family": "Boraginaceae",
+            "genus": "Cynoglossum"
+          },
+          {
+            "label": "Salvia hispanica",
+            "registros": 2,
+            "slug_especie": "salvia-hispanica",
+            "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
+            "slug_grupo": "angiospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2926992",
+            "species": "Salvia hispanica",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Lamiales",
+            "family": "Lamiaceae",
+            "genus": "Salvia"
+          },
+          {
             "label": "Celosia argentea",
             "registros": 2,
             "slug_especie": "celosia-argentea",
@@ -3072,6 +3123,24 @@
             "genus": "Cenchrus"
           },
           {
+            "label": "Holcus lanatus",
+            "registros": 2,
+            "slug_especie": "holcus-lanatus",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "angiospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2706164",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56d9b36e3c16479905cba9b5/summary",
+            "species": "Holcus lanatus",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Liliopsida",
+            "order": "Poales",
+            "family": "Poaceae",
+            "genus": "Holcus"
+          },
+          {
             "label": "Conyza sumatrensis",
             "registros": 2,
             "slug_especie": "conyza-sumatrensis",
@@ -3087,40 +3156,6 @@
             "order": "Asterales",
             "family": "Asteraceae",
             "genus": "Conyza"
-          },
-          {
-            "label": "Cynoglossum amabile",
-            "registros": 2,
-            "slug_especie": "cynoglossum-amabile",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "angiospermas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2925816",
-            "species": "Cynoglossum amabile",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Boraginales",
-            "family": "Boraginaceae",
-            "genus": "Cynoglossum"
-          },
-          {
-            "label": "Drymaria cordata",
-            "registros": 2,
-            "slug_especie": "drymaria-cordata",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "angiospermas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5384509",
-            "species": "Drymaria cordata",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Caryophyllales",
-            "family": "Caryophyllaceae",
-            "genus": "Drymaria"
           },
           {
             "label": "Galinsoga parviflora",
@@ -3140,56 +3175,21 @@
             "genus": "Galinsoga"
           },
           {
-            "label": "Holcus lanatus",
+            "label": "Drymaria cordata",
             "registros": 2,
-            "slug_especie": "holcus-lanatus",
-            "slug_tematica": "exoticas-riesgo-invasion-total",
-            "tematica_label": "Exóticas con riesgo de invasión",
-            "slug_grupo": "angiospermas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2706164",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56d9b36e3c16479905cba9b5/summary",
-            "species": "Holcus lanatus",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Liliopsida",
-            "order": "Poales",
-            "family": "Poaceae",
-            "genus": "Holcus"
-          },
-          {
-            "label": "Salvia hispanica",
-            "registros": 2,
-            "slug_especie": "salvia-hispanica",
+            "slug_especie": "drymaria-cordata",
             "slug_tematica": "exoticas",
             "tematica_label": "Exóticas",
             "slug_grupo": "angiospermas",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2926992",
-            "species": "Salvia hispanica",
+            "url_gbif": "https://www.gbif.org/species/5384509",
+            "species": "Drymaria cordata",
             "kingdom": "Plantae",
             "phylum": "Tracheophyta",
             "class": "Magnoliopsida",
-            "order": "Lamiales",
-            "family": "Lamiaceae",
-            "genus": "Salvia"
-          },
-          {
-            "label": "Rhaphiolepis bibas",
-            "registros": 2,
-            "slug_especie": "rhaphiolepis-bibas",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "angiospermas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/10786206",
-            "species": "Rhaphiolepis bibas",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Rosales",
-            "family": "Rosaceae",
-            "genus": "Rhaphiolepis"
+            "order": "Caryophyllales",
+            "family": "Caryophyllaceae",
+            "genus": "Drymaria"
           }
         ]
       }
@@ -3970,21 +3970,22 @@
             "genus": "Aglaeactis"
           },
           {
-            "label": "Eriocnemis mosquera",
+            "label": "Metallura tyrianthina",
             "registros": 13,
-            "slug_especie": "eriocnemis-mosquera",
+            "slug_especie": "metallura-tyrianthina",
             "slug_tematica": "cites-ii",
             "tematica_label": "Apéndice CITES II",
             "slug_grupo": "animales",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5228534",
-            "species": "Eriocnemis mosquera",
+            "url_gbif": "https://www.gbif.org/species/2476860",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b67cf0106c67230e7406/summary",
+            "species": "Metallura tyrianthina",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Aves",
             "order": "Apodiformes",
             "family": "Trochilidae",
-            "genus": "Eriocnemis"
+            "genus": "Metallura"
           },
           {
             "label": "Geranoaetus melanoleucus",
@@ -4005,22 +4006,21 @@
             "genus": "Geranoaetus"
           },
           {
-            "label": "Metallura tyrianthina",
+            "label": "Eriocnemis mosquera",
             "registros": 13,
-            "slug_especie": "metallura-tyrianthina",
+            "slug_especie": "eriocnemis-mosquera",
             "slug_tematica": "cites-ii",
             "tematica_label": "Apéndice CITES II",
             "slug_grupo": "animales",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476860",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b67cf0106c67230e7406/summary",
-            "species": "Metallura tyrianthina",
+            "url_gbif": "https://www.gbif.org/species/5228534",
+            "species": "Eriocnemis mosquera",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Aves",
             "order": "Apodiformes",
             "family": "Trochilidae",
-            "genus": "Metallura"
+            "genus": "Eriocnemis"
           }
         ],
         "migratorias": [
@@ -5338,21 +5338,22 @@
             "genus": "Aglaeactis"
           },
           {
-            "label": "Eriocnemis mosquera",
+            "label": "Metallura tyrianthina",
             "registros": 13,
-            "slug_especie": "eriocnemis-mosquera",
+            "slug_especie": "metallura-tyrianthina",
             "slug_tematica": "cites-ii",
             "tematica_label": "Apéndice CITES II",
             "slug_grupo": "aves",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5228534",
-            "species": "Eriocnemis mosquera",
+            "url_gbif": "https://www.gbif.org/species/2476860",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b67cf0106c67230e7406/summary",
+            "species": "Metallura tyrianthina",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Aves",
             "order": "Apodiformes",
             "family": "Trochilidae",
-            "genus": "Eriocnemis"
+            "genus": "Metallura"
           },
           {
             "label": "Geranoaetus melanoleucus",
@@ -5373,22 +5374,21 @@
             "genus": "Geranoaetus"
           },
           {
-            "label": "Metallura tyrianthina",
+            "label": "Eriocnemis mosquera",
             "registros": 13,
-            "slug_especie": "metallura-tyrianthina",
+            "slug_especie": "eriocnemis-mosquera",
             "slug_tematica": "cites-ii",
             "tematica_label": "Apéndice CITES II",
             "slug_grupo": "aves",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476860",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b67cf0106c67230e7406/summary",
-            "species": "Metallura tyrianthina",
+            "url_gbif": "https://www.gbif.org/species/5228534",
+            "species": "Eriocnemis mosquera",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Aves",
             "order": "Apodiformes",
             "family": "Trochilidae",
-            "genus": "Metallura"
+            "genus": "Eriocnemis"
           }
         ],
         "migratorias": [
@@ -11295,21 +11295,6 @@
           "genus": "Nectandra"
         },
         {
-          "label": "Iresine diffusa",
-          "registros": 7,
-          "slug_especie": "iresine-diffusa",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3085038",
-          "species": "Iresine diffusa",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Caryophyllales",
-          "family": "Amaranthaceae",
-          "genus": "Iresine"
-        },
-        {
           "label": "Oreopanax floribundus",
           "registros": 7,
           "slug_especie": "oreopanax-floribundus",
@@ -11338,6 +11323,21 @@
           "order": "Piperales",
           "family": "Piperaceae",
           "genus": "Piper"
+        },
+        {
+          "label": "Iresine diffusa",
+          "registros": 7,
+          "slug_especie": "iresine-diffusa",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3085038",
+          "species": "Iresine diffusa",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Caryophyllales",
+          "family": "Amaranthaceae",
+          "genus": "Iresine"
         }
       ],
       "species_list_tematica": {
@@ -11632,6 +11632,57 @@
             "genus": "Tecoma"
           },
           {
+            "label": "Rhaphiolepis bibas",
+            "registros": 2,
+            "slug_especie": "rhaphiolepis-bibas",
+            "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
+            "slug_grupo": "plantas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/10786206",
+            "species": "Rhaphiolepis bibas",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Rosales",
+            "family": "Rosaceae",
+            "genus": "Rhaphiolepis"
+          },
+          {
+            "label": "Cynoglossum amabile",
+            "registros": 2,
+            "slug_especie": "cynoglossum-amabile",
+            "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
+            "slug_grupo": "plantas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2925816",
+            "species": "Cynoglossum amabile",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Boraginales",
+            "family": "Boraginaceae",
+            "genus": "Cynoglossum"
+          },
+          {
+            "label": "Salvia hispanica",
+            "registros": 2,
+            "slug_especie": "salvia-hispanica",
+            "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
+            "slug_grupo": "plantas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2926992",
+            "species": "Salvia hispanica",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Lamiales",
+            "family": "Lamiaceae",
+            "genus": "Salvia"
+          },
+          {
             "label": "Celosia argentea",
             "registros": 2,
             "slug_especie": "celosia-argentea",
@@ -11667,6 +11718,24 @@
             "genus": "Cenchrus"
           },
           {
+            "label": "Holcus lanatus",
+            "registros": 2,
+            "slug_especie": "holcus-lanatus",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "plantas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2706164",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56d9b36e3c16479905cba9b5/summary",
+            "species": "Holcus lanatus",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Liliopsida",
+            "order": "Poales",
+            "family": "Poaceae",
+            "genus": "Holcus"
+          },
+          {
             "label": "Conyza sumatrensis",
             "registros": 2,
             "slug_especie": "conyza-sumatrensis",
@@ -11682,40 +11751,6 @@
             "order": "Asterales",
             "family": "Asteraceae",
             "genus": "Conyza"
-          },
-          {
-            "label": "Cynoglossum amabile",
-            "registros": 2,
-            "slug_especie": "cynoglossum-amabile",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "plantas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2925816",
-            "species": "Cynoglossum amabile",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Boraginales",
-            "family": "Boraginaceae",
-            "genus": "Cynoglossum"
-          },
-          {
-            "label": "Drymaria cordata",
-            "registros": 2,
-            "slug_especie": "drymaria-cordata",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "plantas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5384509",
-            "species": "Drymaria cordata",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Caryophyllales",
-            "family": "Caryophyllaceae",
-            "genus": "Drymaria"
           },
           {
             "label": "Galinsoga parviflora",
@@ -11735,56 +11770,21 @@
             "genus": "Galinsoga"
           },
           {
-            "label": "Holcus lanatus",
+            "label": "Drymaria cordata",
             "registros": 2,
-            "slug_especie": "holcus-lanatus",
-            "slug_tematica": "exoticas-riesgo-invasion-total",
-            "tematica_label": "Exóticas con riesgo de invasión",
-            "slug_grupo": "plantas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2706164",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56d9b36e3c16479905cba9b5/summary",
-            "species": "Holcus lanatus",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Liliopsida",
-            "order": "Poales",
-            "family": "Poaceae",
-            "genus": "Holcus"
-          },
-          {
-            "label": "Salvia hispanica",
-            "registros": 2,
-            "slug_especie": "salvia-hispanica",
+            "slug_especie": "drymaria-cordata",
             "slug_tematica": "exoticas",
             "tematica_label": "Exóticas",
             "slug_grupo": "plantas",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2926992",
-            "species": "Salvia hispanica",
+            "url_gbif": "https://www.gbif.org/species/5384509",
+            "species": "Drymaria cordata",
             "kingdom": "Plantae",
             "phylum": "Tracheophyta",
             "class": "Magnoliopsida",
-            "order": "Lamiales",
-            "family": "Lamiaceae",
-            "genus": "Salvia"
-          },
-          {
-            "label": "Rhaphiolepis bibas",
-            "registros": 2,
-            "slug_especie": "rhaphiolepis-bibas",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "plantas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/10786206",
-            "species": "Rhaphiolepis bibas",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Rosales",
-            "family": "Rosaceae",
-            "genus": "Rhaphiolepis"
+            "order": "Caryophyllales",
+            "family": "Caryophyllaceae",
+            "genus": "Drymaria"
           }
         ]
       }
@@ -12206,6 +12206,21 @@
           "genus": "Nectandra"
         },
         {
+          "label": "Piper subflavum",
+          "registros": 7,
+          "slug_especie": "piper-subflavum",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7305303",
+          "species": "Piper subflavum",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Piperales",
+          "family": "Piperaceae",
+          "genus": "Piper"
+        },
+        {
           "label": "Iresine diffusa",
           "registros": 7,
           "slug_especie": "iresine-diffusa",
@@ -12234,21 +12249,6 @@
           "order": "Apiales",
           "family": "Araliaceae",
           "genus": "Oreopanax"
-        },
-        {
-          "label": "Piper subflavum",
-          "registros": 7,
-          "slug_especie": "piper-subflavum",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7305303",
-          "species": "Piper subflavum",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Piperales",
-          "family": "Piperaceae",
-          "genus": "Piper"
         }
       ],
       "species_list_tematica": {
@@ -12543,6 +12543,57 @@
             "genus": "Tecoma"
           },
           {
+            "label": "Rhaphiolepis bibas",
+            "registros": 2,
+            "slug_especie": "rhaphiolepis-bibas",
+            "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
+            "slug_grupo": "vasculares",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/10786206",
+            "species": "Rhaphiolepis bibas",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Rosales",
+            "family": "Rosaceae",
+            "genus": "Rhaphiolepis"
+          },
+          {
+            "label": "Cynoglossum amabile",
+            "registros": 2,
+            "slug_especie": "cynoglossum-amabile",
+            "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
+            "slug_grupo": "vasculares",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2925816",
+            "species": "Cynoglossum amabile",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Boraginales",
+            "family": "Boraginaceae",
+            "genus": "Cynoglossum"
+          },
+          {
+            "label": "Salvia hispanica",
+            "registros": 2,
+            "slug_especie": "salvia-hispanica",
+            "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
+            "slug_grupo": "vasculares",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2926992",
+            "species": "Salvia hispanica",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Lamiales",
+            "family": "Lamiaceae",
+            "genus": "Salvia"
+          },
+          {
             "label": "Celosia argentea",
             "registros": 2,
             "slug_especie": "celosia-argentea",
@@ -12578,6 +12629,24 @@
             "genus": "Cenchrus"
           },
           {
+            "label": "Holcus lanatus",
+            "registros": 2,
+            "slug_especie": "holcus-lanatus",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "vasculares",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2706164",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56d9b36e3c16479905cba9b5/summary",
+            "species": "Holcus lanatus",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Liliopsida",
+            "order": "Poales",
+            "family": "Poaceae",
+            "genus": "Holcus"
+          },
+          {
             "label": "Conyza sumatrensis",
             "registros": 2,
             "slug_especie": "conyza-sumatrensis",
@@ -12593,40 +12662,6 @@
             "order": "Asterales",
             "family": "Asteraceae",
             "genus": "Conyza"
-          },
-          {
-            "label": "Cynoglossum amabile",
-            "registros": 2,
-            "slug_especie": "cynoglossum-amabile",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "vasculares",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2925816",
-            "species": "Cynoglossum amabile",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Boraginales",
-            "family": "Boraginaceae",
-            "genus": "Cynoglossum"
-          },
-          {
-            "label": "Drymaria cordata",
-            "registros": 2,
-            "slug_especie": "drymaria-cordata",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "vasculares",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5384509",
-            "species": "Drymaria cordata",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Caryophyllales",
-            "family": "Caryophyllaceae",
-            "genus": "Drymaria"
           },
           {
             "label": "Galinsoga parviflora",
@@ -12646,56 +12681,21 @@
             "genus": "Galinsoga"
           },
           {
-            "label": "Holcus lanatus",
+            "label": "Drymaria cordata",
             "registros": 2,
-            "slug_especie": "holcus-lanatus",
-            "slug_tematica": "exoticas-riesgo-invasion-total",
-            "tematica_label": "Exóticas con riesgo de invasión",
-            "slug_grupo": "vasculares",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2706164",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56d9b36e3c16479905cba9b5/summary",
-            "species": "Holcus lanatus",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Liliopsida",
-            "order": "Poales",
-            "family": "Poaceae",
-            "genus": "Holcus"
-          },
-          {
-            "label": "Salvia hispanica",
-            "registros": 2,
-            "slug_especie": "salvia-hispanica",
+            "slug_especie": "drymaria-cordata",
             "slug_tematica": "exoticas",
             "tematica_label": "Exóticas",
             "slug_grupo": "vasculares",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2926992",
-            "species": "Salvia hispanica",
+            "url_gbif": "https://www.gbif.org/species/5384509",
+            "species": "Drymaria cordata",
             "kingdom": "Plantae",
             "phylum": "Tracheophyta",
             "class": "Magnoliopsida",
-            "order": "Lamiales",
-            "family": "Lamiaceae",
-            "genus": "Salvia"
-          },
-          {
-            "label": "Rhaphiolepis bibas",
-            "registros": 2,
-            "slug_especie": "rhaphiolepis-bibas",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
-            "slug_grupo": "vasculares",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/10786206",
-            "species": "Rhaphiolepis bibas",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Rosales",
-            "family": "Rosaceae",
-            "genus": "Rhaphiolepis"
+            "order": "Caryophyllales",
+            "family": "Caryophyllaceae",
+            "genus": "Drymaria"
           }
         ]
       }
@@ -13468,21 +13468,22 @@
             "genus": "Aglaeactis"
           },
           {
-            "label": "Eriocnemis mosquera",
+            "label": "Metallura tyrianthina",
             "registros": 13,
-            "slug_especie": "eriocnemis-mosquera",
+            "slug_especie": "metallura-tyrianthina",
             "slug_tematica": "cites-ii",
             "tematica_label": "Apéndice CITES II",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5228534",
-            "species": "Eriocnemis mosquera",
+            "url_gbif": "https://www.gbif.org/species/2476860",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b67cf0106c67230e7406/summary",
+            "species": "Metallura tyrianthina",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Aves",
             "order": "Apodiformes",
             "family": "Trochilidae",
-            "genus": "Eriocnemis"
+            "genus": "Metallura"
           },
           {
             "label": "Geranoaetus melanoleucus",
@@ -13503,22 +13504,21 @@
             "genus": "Geranoaetus"
           },
           {
-            "label": "Metallura tyrianthina",
+            "label": "Eriocnemis mosquera",
             "registros": 13,
-            "slug_especie": "metallura-tyrianthina",
+            "slug_especie": "eriocnemis-mosquera",
             "slug_tematica": "cites-ii",
             "tematica_label": "Apéndice CITES II",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476860",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b67cf0106c67230e7406/summary",
-            "species": "Metallura tyrianthina",
+            "url_gbif": "https://www.gbif.org/species/5228534",
+            "species": "Eriocnemis mosquera",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Aves",
             "order": "Apodiformes",
             "family": "Trochilidae",
-            "genus": "Metallura"
+            "genus": "Eriocnemis"
           }
         ],
         "migratorias": [

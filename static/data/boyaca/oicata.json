@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -2312,22 +2312,6 @@
           "genus": "Zonotrichia"
         },
         {
-          "label": "Icterus chrysater",
-          "registros": 8,
-          "slug_especie": "icterus-chrysater",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5229924",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9f6e2f0106c67230e744f/summary",
-          "species": "Icterus chrysater",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Icteridae",
-          "genus": "Icterus"
-        },
-        {
           "label": "Spinus psaltria",
           "registros": 8,
           "slug_especie": "spinus-psaltria",
@@ -2344,20 +2328,20 @@
           "genus": "Spinus"
         },
         {
-          "label": "Tyrannus melancholicus",
-          "registros": 7,
-          "slug_especie": "tyrannus-melancholicus",
+          "label": "Icterus chrysater",
+          "registros": 8,
+          "slug_especie": "icterus-chrysater",
           "slug_grupo": "animales",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5229662",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cfa86b3c16479905cba7f5/summary",
-          "species": "Tyrannus melancholicus",
+          "url_gbif": "https://www.gbif.org/species/5229924",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9f6e2f0106c67230e744f/summary",
+          "species": "Icterus chrysater",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Tyrannidae",
-          "genus": "Tyrannus"
+          "family": "Icteridae",
+          "genus": "Icterus"
         },
         {
           "label": "Zenaida auriculata",
@@ -2376,6 +2360,22 @@
           "genus": "Zenaida"
         },
         {
+          "label": "Tyrannus melancholicus",
+          "registros": 7,
+          "slug_especie": "tyrannus-melancholicus",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5229662",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cfa86b3c16479905cba7f5/summary",
+          "species": "Tyrannus melancholicus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Tyrannidae",
+          "genus": "Tyrannus"
+        },
+        {
           "label": "Sturnella magna",
           "registros": 6,
           "slug_especie": "sturnella-magna",
@@ -2390,22 +2390,6 @@
           "order": "Passeriformes",
           "family": "Icteridae",
           "genus": "Sturnella"
-        },
-        {
-          "label": "Mimus gilvus",
-          "registros": 5,
-          "slug_especie": "mimus-gilvus",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5231676",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b8eaf0106c67230e7409/summary",
-          "species": "Mimus gilvus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Mimidae",
-          "genus": "Mimus"
         },
         {
           "label": "Turdus fuscater",
@@ -2424,20 +2408,20 @@
           "genus": "Turdus"
         },
         {
-          "label": "Crotophaga ani",
-          "registros": 4,
-          "slug_especie": "crotophaga-ani",
+          "label": "Mimus gilvus",
+          "registros": 5,
+          "slug_especie": "mimus-gilvus",
           "slug_grupo": "animales",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2496209",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c509b0f0106c67230e7396/summary",
-          "species": "Crotophaga ani",
+          "url_gbif": "https://www.gbif.org/species/5231676",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b8eaf0106c67230e7409/summary",
+          "species": "Mimus gilvus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": "Cuculiformes",
-          "family": "Cuculidae",
-          "genus": "Crotophaga"
+          "order": "Passeriformes",
+          "family": "Mimidae",
+          "genus": "Mimus"
         },
         {
           "label": "Lesbia victoriae",
@@ -2456,20 +2440,20 @@
           "genus": "Lesbia"
         },
         {
-          "label": "Pheucticus aureoventris",
+          "label": "Crotophaga ani",
           "registros": 4,
-          "slug_especie": "pheucticus-aureoventris",
+          "slug_especie": "crotophaga-ani",
           "slug_grupo": "animales",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2490499",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cccc56207ecea54a561e45/summary",
-          "species": "Pheucticus aureoventris",
+          "url_gbif": "https://www.gbif.org/species/2496209",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c509b0f0106c67230e7396/summary",
+          "species": "Crotophaga ani",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Cardinalidae",
-          "genus": "Pheucticus"
+          "order": "Cuculiformes",
+          "family": "Cuculidae",
+          "genus": "Crotophaga"
         },
         {
           "label": "Porphyrio martinica",
@@ -2486,6 +2470,22 @@
           "order": "Gruiformes",
           "family": "Rallidae",
           "genus": "Porphyrio"
+        },
+        {
+          "label": "Pheucticus aureoventris",
+          "registros": 4,
+          "slug_especie": "pheucticus-aureoventris",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2490499",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cccc56207ecea54a561e45/summary",
+          "species": "Pheucticus aureoventris",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Cardinalidae",
+          "genus": "Pheucticus"
         }
       ],
       "species_list_tematica": {
@@ -3477,22 +3477,6 @@
           "genus": "Zonotrichia"
         },
         {
-          "label": "Icterus chrysater",
-          "registros": 8,
-          "slug_especie": "icterus-chrysater",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5229924",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9f6e2f0106c67230e744f/summary",
-          "species": "Icterus chrysater",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Icteridae",
-          "genus": "Icterus"
-        },
-        {
           "label": "Spinus psaltria",
           "registros": 8,
           "slug_especie": "spinus-psaltria",
@@ -3509,20 +3493,20 @@
           "genus": "Spinus"
         },
         {
-          "label": "Tyrannus melancholicus",
-          "registros": 7,
-          "slug_especie": "tyrannus-melancholicus",
+          "label": "Icterus chrysater",
+          "registros": 8,
+          "slug_especie": "icterus-chrysater",
           "slug_grupo": "aves",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5229662",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cfa86b3c16479905cba7f5/summary",
-          "species": "Tyrannus melancholicus",
+          "url_gbif": "https://www.gbif.org/species/5229924",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9f6e2f0106c67230e744f/summary",
+          "species": "Icterus chrysater",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Tyrannidae",
-          "genus": "Tyrannus"
+          "family": "Icteridae",
+          "genus": "Icterus"
         },
         {
           "label": "Zenaida auriculata",
@@ -3541,6 +3525,22 @@
           "genus": "Zenaida"
         },
         {
+          "label": "Tyrannus melancholicus",
+          "registros": 7,
+          "slug_especie": "tyrannus-melancholicus",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5229662",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cfa86b3c16479905cba7f5/summary",
+          "species": "Tyrannus melancholicus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Tyrannidae",
+          "genus": "Tyrannus"
+        },
+        {
           "label": "Sturnella magna",
           "registros": 6,
           "slug_especie": "sturnella-magna",
@@ -3555,22 +3555,6 @@
           "order": "Passeriformes",
           "family": "Icteridae",
           "genus": "Sturnella"
-        },
-        {
-          "label": "Mimus gilvus",
-          "registros": 5,
-          "slug_especie": "mimus-gilvus",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5231676",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b8eaf0106c67230e7409/summary",
-          "species": "Mimus gilvus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Mimidae",
-          "genus": "Mimus"
         },
         {
           "label": "Turdus fuscater",
@@ -3589,6 +3573,22 @@
           "genus": "Turdus"
         },
         {
+          "label": "Mimus gilvus",
+          "registros": 5,
+          "slug_especie": "mimus-gilvus",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5231676",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b8eaf0106c67230e7409/summary",
+          "species": "Mimus gilvus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Mimidae",
+          "genus": "Mimus"
+        },
+        {
           "label": "Crotophaga ani",
           "registros": 4,
           "slug_especie": "crotophaga-ani",
@@ -3605,20 +3605,20 @@
           "genus": "Crotophaga"
         },
         {
-          "label": "Lesbia victoriae",
+          "label": "Porphyrio martinica",
           "registros": 4,
-          "slug_especie": "lesbia-victoriae",
+          "slug_especie": "porphyrio-martinica",
           "slug_grupo": "aves",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5228496",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56ca3180f0106c67230e7457/summary",
-          "species": "Lesbia victoriae",
+          "url_gbif": "https://www.gbif.org/species/5228136",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cd2959207ecea54a561e6b/summary",
+          "species": "Porphyrio martinica",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": "Apodiformes",
-          "family": "Trochilidae",
-          "genus": "Lesbia"
+          "order": "Gruiformes",
+          "family": "Rallidae",
+          "genus": "Porphyrio"
         },
         {
           "label": "Pheucticus aureoventris",
@@ -3637,20 +3637,20 @@
           "genus": "Pheucticus"
         },
         {
-          "label": "Porphyrio martinica",
+          "label": "Lesbia victoriae",
           "registros": 4,
-          "slug_especie": "porphyrio-martinica",
+          "slug_especie": "lesbia-victoriae",
           "slug_grupo": "aves",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5228136",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cd2959207ecea54a561e6b/summary",
-          "species": "Porphyrio martinica",
+          "url_gbif": "https://www.gbif.org/species/5228496",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56ca3180f0106c67230e7457/summary",
+          "species": "Lesbia victoriae",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": "Gruiformes",
-          "family": "Rallidae",
-          "genus": "Porphyrio"
+          "order": "Apodiformes",
+          "family": "Trochilidae",
+          "genus": "Lesbia"
         }
       ],
       "species_list_tematica": {
@@ -8515,22 +8515,6 @@
           "genus": "Zonotrichia"
         },
         {
-          "label": "Icterus chrysater",
-          "registros": 8,
-          "slug_especie": "icterus-chrysater",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5229924",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9f6e2f0106c67230e744f/summary",
-          "species": "Icterus chrysater",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Icteridae",
-          "genus": "Icterus"
-        },
-        {
           "label": "Spinus psaltria",
           "registros": 8,
           "slug_especie": "spinus-psaltria",
@@ -8547,20 +8531,20 @@
           "genus": "Spinus"
         },
         {
-          "label": "Tyrannus melancholicus",
-          "registros": 7,
-          "slug_especie": "tyrannus-melancholicus",
+          "label": "Icterus chrysater",
+          "registros": 8,
+          "slug_especie": "icterus-chrysater",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5229662",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cfa86b3c16479905cba7f5/summary",
-          "species": "Tyrannus melancholicus",
+          "url_gbif": "https://www.gbif.org/species/5229924",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9f6e2f0106c67230e744f/summary",
+          "species": "Icterus chrysater",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Tyrannidae",
-          "genus": "Tyrannus"
+          "family": "Icteridae",
+          "genus": "Icterus"
         },
         {
           "label": "Zenaida auriculata",
@@ -8579,6 +8563,22 @@
           "genus": "Zenaida"
         },
         {
+          "label": "Tyrannus melancholicus",
+          "registros": 7,
+          "slug_especie": "tyrannus-melancholicus",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5229662",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cfa86b3c16479905cba7f5/summary",
+          "species": "Tyrannus melancholicus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Tyrannidae",
+          "genus": "Tyrannus"
+        },
+        {
           "label": "Sturnella magna",
           "registros": 6,
           "slug_especie": "sturnella-magna",
@@ -8593,22 +8593,6 @@
           "order": "Passeriformes",
           "family": "Icteridae",
           "genus": "Sturnella"
-        },
-        {
-          "label": "Mimus gilvus",
-          "registros": 5,
-          "slug_especie": "mimus-gilvus",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5231676",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b8eaf0106c67230e7409/summary",
-          "species": "Mimus gilvus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Mimidae",
-          "genus": "Mimus"
         },
         {
           "label": "Turdus fuscater",
@@ -8627,20 +8611,20 @@
           "genus": "Turdus"
         },
         {
-          "label": "Crotophaga ani",
-          "registros": 4,
-          "slug_especie": "crotophaga-ani",
+          "label": "Mimus gilvus",
+          "registros": 5,
+          "slug_especie": "mimus-gilvus",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2496209",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c509b0f0106c67230e7396/summary",
-          "species": "Crotophaga ani",
+          "url_gbif": "https://www.gbif.org/species/5231676",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b8eaf0106c67230e7409/summary",
+          "species": "Mimus gilvus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": "Cuculiformes",
-          "family": "Cuculidae",
-          "genus": "Crotophaga"
+          "order": "Passeriformes",
+          "family": "Mimidae",
+          "genus": "Mimus"
         },
         {
           "label": "Lesbia victoriae",
@@ -8659,20 +8643,20 @@
           "genus": "Lesbia"
         },
         {
-          "label": "Pheucticus aureoventris",
+          "label": "Crotophaga ani",
           "registros": 4,
-          "slug_especie": "pheucticus-aureoventris",
+          "slug_especie": "crotophaga-ani",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2490499",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cccc56207ecea54a561e45/summary",
-          "species": "Pheucticus aureoventris",
+          "url_gbif": "https://www.gbif.org/species/2496209",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c509b0f0106c67230e7396/summary",
+          "species": "Crotophaga ani",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Cardinalidae",
-          "genus": "Pheucticus"
+          "order": "Cuculiformes",
+          "family": "Cuculidae",
+          "genus": "Crotophaga"
         },
         {
           "label": "Porphyrio martinica",
@@ -8689,6 +8673,22 @@
           "order": "Gruiformes",
           "family": "Rallidae",
           "genus": "Porphyrio"
+        },
+        {
+          "label": "Pheucticus aureoventris",
+          "registros": 4,
+          "slug_especie": "pheucticus-aureoventris",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2490499",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cccc56207ecea54a561e45/summary",
+          "species": "Pheucticus aureoventris",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Cardinalidae",
+          "genus": "Pheucticus"
         }
       ],
       "species_list_tematica": {

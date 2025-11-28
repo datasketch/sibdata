@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -1427,19 +1427,19 @@
           "slug_tematica": "endemicas"
         },
         {
-          "label": "Argopleura magdalenensis",
-          "slug_especie": "argopleura-magdalenensis",
-          "registros": 8,
-          "url_gbif": "https://www.gbif.org/species/2353166",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/5917949af827bf0c0ced62e1/summary",
-          "slug_tematica": "endemicas"
-        },
-        {
           "label": "Sturisomatichthys leightoni",
           "slug_especie": "sturisomatichthys-leightoni",
           "registros": 8,
           "url_gbif": "https://www.gbif.org/species/2339319",
           "url_cbc": "https://catalogo.biodiversidad.co/file/59e15c835f36934344303837/summary",
+          "slug_tematica": "endemicas"
+        },
+        {
+          "label": "Argopleura magdalenensis",
+          "slug_especie": "argopleura-magdalenensis",
+          "registros": 8,
+          "url_gbif": "https://www.gbif.org/species/2353166",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5917949af827bf0c0ced62e1/summary",
           "slug_tematica": "endemicas"
         },
         {
@@ -1450,11 +1450,11 @@
           "slug_tematica": "endemicas"
         },
         {
-          "label": "Microgenys minuta",
-          "slug_especie": "microgenys-minuta",
+          "label": "Trichomycterus banneaui",
+          "slug_especie": "trichomycterus-banneaui",
           "registros": 6,
-          "url_gbif": "https://www.gbif.org/species/2353982",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/5928adacf827bf0c0cedd780/summary",
+          "url_gbif": "https://www.gbif.org/species/2343032",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/59dcddbb5f369343443000c0/summary",
           "slug_tematica": "endemicas"
         },
         {
@@ -1466,11 +1466,11 @@
           "slug_tematica": "endemicas"
         },
         {
-          "label": "Trichomycterus banneaui",
-          "slug_especie": "trichomycterus-banneaui",
+          "label": "Microgenys minuta",
+          "slug_especie": "microgenys-minuta",
           "registros": 6,
-          "url_gbif": "https://www.gbif.org/species/2343032",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/59dcddbb5f369343443000c0/summary",
+          "url_gbif": "https://www.gbif.org/species/2353982",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5928adacf827bf0c0cedd780/summary",
           "slug_tematica": "endemicas"
         }
       ]
@@ -1664,12 +1664,11 @@
           "slug_tematica": "exoticas"
         },
         {
-          "label": "Boa constrictor",
-          "slug_especie": "boa-constrictor",
+          "label": "Leersia hexandra",
+          "slug_especie": "leersia-hexandra",
           "registros": 2,
-          "url_gbif": "https://www.gbif.org/species/2464899",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cae177f0106c67230e7473/summary",
-          "slug_tematica": "trasplantadas"
+          "url_gbif": "https://www.gbif.org/species/2702901",
+          "slug_tematica": "exoticas"
         }
       ],
       "list_especies_exoticas": [
@@ -2983,21 +2982,6 @@
       "subgrupo_especies": [],
       "species_list_top": [
         {
-          "label": "Guazuma ulmifolia",
-          "registros": 6,
-          "slug_especie": "guazuma-ulmifolia",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3152195",
-          "species": "Guazuma ulmifolia",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Malvales",
-          "family": "Malvaceae",
-          "genus": "Guazuma"
-        },
-        {
           "label": "Manihot esculenta",
           "registros": 6,
           "slug_especie": "manihot-esculenta",
@@ -3014,19 +2998,19 @@
           "genus": "Manihot"
         },
         {
-          "label": "Casearia corymbosa",
-          "registros": 5,
-          "slug_especie": "casearia-corymbosa",
+          "label": "Guazuma ulmifolia",
+          "registros": 6,
+          "slug_especie": "guazuma-ulmifolia",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5603969",
-          "species": "Casearia corymbosa",
+          "url_gbif": "https://www.gbif.org/species/3152195",
+          "species": "Guazuma ulmifolia",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Salicaceae",
-          "genus": "Casearia"
+          "order": "Malvales",
+          "family": "Malvaceae",
+          "genus": "Guazuma"
         },
         {
           "label": "Randia aculeata",
@@ -3044,6 +3028,52 @@
           "genus": "Randia"
         },
         {
+          "label": "Casearia corymbosa",
+          "registros": 5,
+          "slug_especie": "casearia-corymbosa",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5603969",
+          "species": "Casearia corymbosa",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Malpighiales",
+          "family": "Salicaceae",
+          "genus": "Casearia"
+        },
+        {
+          "label": "Pithecellobium dulce",
+          "registros": 4,
+          "slug_especie": "pithecellobium-dulce",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2962831",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/59493f792f4fd7bc7f3972ab/summary",
+          "species": "Pithecellobium dulce",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Pithecellobium"
+        },
+        {
+          "label": "Petiveria alliacea",
+          "registros": 4,
+          "slug_especie": "petiveria-alliacea",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3084012",
+          "species": "Petiveria alliacea",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Caryophyllales",
+          "family": "Phytolaccaceae",
+          "genus": "Petiveria"
+        },
+        {
           "label": "Amaranthus viridis",
           "registros": 4,
           "slug_especie": "amaranthus-viridis",
@@ -3057,6 +3087,21 @@
           "order": "Caryophyllales",
           "family": "Amaranthaceae",
           "genus": "Amaranthus"
+        },
+        {
+          "label": "Machaerium capote",
+          "registros": 4,
+          "slug_especie": "machaerium-capote",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5354954",
+          "species": "Machaerium capote",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Machaerium"
         },
         {
           "label": "Astronium graveolens",
@@ -3075,22 +3120,6 @@
           "genus": "Astronium"
         },
         {
-          "label": "Cordia alliodora",
-          "registros": 4,
-          "slug_especie": "cordia-alliodora",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7649215",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/593ffd102f4fd7bc7f38ba2f/summary",
-          "species": "Cordia alliodora",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Boraginales",
-          "family": "Cordiaceae",
-          "genus": "Cordia"
-        },
-        {
           "label": "Croton leptostachyus",
           "registros": 4,
           "slug_especie": "croton-leptostachyus",
@@ -3107,50 +3136,20 @@
           "genus": "Croton"
         },
         {
-          "label": "Machaerium capote",
+          "label": "Cordia alliodora",
           "registros": 4,
-          "slug_especie": "machaerium-capote",
+          "slug_especie": "cordia-alliodora",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5354954",
-          "species": "Machaerium capote",
+          "url_gbif": "https://www.gbif.org/species/7649215",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/593ffd102f4fd7bc7f38ba2f/summary",
+          "species": "Cordia alliodora",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Machaerium"
-        },
-        {
-          "label": "Petiveria alliacea",
-          "registros": 4,
-          "slug_especie": "petiveria-alliacea",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3084012",
-          "species": "Petiveria alliacea",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Caryophyllales",
-          "family": "Phytolaccaceae",
-          "genus": "Petiveria"
-        },
-        {
-          "label": "Pithecellobium dulce",
-          "registros": 4,
-          "slug_especie": "pithecellobium-dulce",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2962831",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/59493f792f4fd7bc7f3972ab/summary",
-          "species": "Pithecellobium dulce",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Pithecellobium"
+          "order": "Boraginales",
+          "family": "Cordiaceae",
+          "genus": "Cordia"
         }
       ],
       "species_list_tematica": {
@@ -3856,22 +3855,6 @@
       ],
       "species_list_top": [
         {
-          "label": "Cathartes aura",
-          "registros": 295,
-          "slug_especie": "cathartes-aura",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2481930",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c28bd8f0106c67230e7333/summary",
-          "species": "Cathartes aura",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Accipitriformes",
-          "family": "Cathartidae",
-          "genus": "Cathartes"
-        },
-        {
           "label": "Phimosus infuscatus",
           "registros": 295,
           "slug_especie": "phimosus-infuscatus",
@@ -3886,6 +3869,22 @@
           "order": "Pelecaniformes",
           "family": "Threskiornithidae",
           "genus": "Phimosus"
+        },
+        {
+          "label": "Cathartes aura",
+          "registros": 295,
+          "slug_especie": "cathartes-aura",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2481930",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c28bd8f0106c67230e7333/summary",
+          "species": "Cathartes aura",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Accipitriformes",
+          "family": "Cathartidae",
+          "genus": "Cathartes"
         },
         {
           "label": "Tyrannus melancholicus",
@@ -3936,22 +3935,6 @@
           "genus": "Vanellus"
         },
         {
-          "label": "Coragyps atratus",
-          "registros": 266,
-          "slug_especie": "coragyps-atratus",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2481942",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4fe28f0106c67230e7394/summary",
-          "species": "Coragyps atratus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Accipitriformes",
-          "family": "Cathartidae",
-          "genus": "Coragyps"
-        },
-        {
           "label": "Sicalis flaveola",
           "registros": 266,
           "slug_especie": "sicalis-flaveola",
@@ -3966,6 +3949,22 @@
           "order": "Passeriformes",
           "family": "Thraupidae",
           "genus": "Sicalis"
+        },
+        {
+          "label": "Coragyps atratus",
+          "registros": 266,
+          "slug_especie": "coragyps-atratus",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2481942",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4fe28f0106c67230e7394/summary",
+          "species": "Coragyps atratus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Accipitriformes",
+          "family": "Cathartidae",
+          "genus": "Coragyps"
         },
         {
           "label": "Cyclarhis gujanensis",
@@ -4666,23 +4665,6 @@
             "genus": "Andinoacara"
           },
           {
-            "label": "Argopleura magdalenensis",
-            "registros": 8,
-            "slug_especie": "argopleura-magdalenensis",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2353166",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/5917949af827bf0c0ced62e1/summary",
-            "species": "Argopleura magdalenensis",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "order": "Characiformes",
-            "family": "Characidae",
-            "genus": "Argopleura"
-          },
-          {
             "label": "Sturisomatichthys leightoni",
             "registros": 8,
             "slug_especie": "sturisomatichthys-leightoni",
@@ -4700,37 +4682,21 @@
             "genus": "Sturisomatichthys"
           },
           {
-            "label": "Lasiancistrus caucanus",
-            "registros": 6,
-            "slug_especie": "lasiancistrus-caucanus",
+            "label": "Argopleura magdalenensis",
+            "registros": 8,
+            "slug_especie": "argopleura-magdalenensis",
             "slug_tematica": "endemicas",
             "tematica_label": "Endémicas",
             "slug_grupo": "animales",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2339202",
-            "species": "Lasiancistrus caucanus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "order": "Siluriformes",
-            "family": "Loricariidae",
-            "genus": "Lasiancistrus"
-          },
-          {
-            "label": "Microgenys minuta",
-            "registros": 6,
-            "slug_especie": "microgenys-minuta",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2353982",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/5928adacf827bf0c0cedd780/summary",
-            "species": "Microgenys minuta",
+            "url_gbif": "https://www.gbif.org/species/2353166",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/5917949af827bf0c0ced62e1/summary",
+            "species": "Argopleura magdalenensis",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "order": "Characiformes",
             "family": "Characidae",
-            "genus": "Microgenys"
+            "genus": "Argopleura"
           },
           {
             "label": "Parodon magdalenensis",
@@ -4765,6 +4731,39 @@
             "order": "Siluriformes",
             "family": "Trichomycteridae",
             "genus": "Trichomycterus"
+          },
+          {
+            "label": "Lasiancistrus caucanus",
+            "registros": 6,
+            "slug_especie": "lasiancistrus-caucanus",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2339202",
+            "species": "Lasiancistrus caucanus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Siluriformes",
+            "family": "Loricariidae",
+            "genus": "Lasiancistrus"
+          },
+          {
+            "label": "Microgenys minuta",
+            "registros": 6,
+            "slug_especie": "microgenys-minuta",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2353982",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/5928adacf827bf0c0cedd780/summary",
+            "species": "Microgenys minuta",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Characiformes",
+            "family": "Characidae",
+            "genus": "Microgenys"
           }
         ],
         "exoticas-total": [
@@ -8935,21 +8934,6 @@
           "genus": "Hamadryas"
         },
         {
-          "label": "Chlosyne lacinia",
-          "registros": 15,
-          "slug_especie": "chlosyne-lacinia",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1914465",
-          "species": "Chlosyne lacinia",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Chlosyne"
-        },
-        {
           "label": "Melete leucadia",
           "registros": 15,
           "slug_especie": "melete-leucadia",
@@ -8978,6 +8962,21 @@
           "order": "Lepidoptera",
           "family": "Hesperiidae",
           "genus": "Mysoria"
+        },
+        {
+          "label": "Chlosyne lacinia",
+          "registros": 15,
+          "slug_especie": "chlosyne-lacinia",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1914465",
+          "species": "Chlosyne lacinia",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Chlosyne"
         }
       ],
       "species_list_tematica": {
@@ -9444,21 +9443,6 @@
           "genus": "Hamadryas"
         },
         {
-          "label": "Chlosyne lacinia",
-          "registros": 15,
-          "slug_especie": "chlosyne-lacinia",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1914465",
-          "species": "Chlosyne lacinia",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Chlosyne"
-        },
-        {
           "label": "Melete leucadia",
           "registros": 15,
           "slug_especie": "melete-leucadia",
@@ -9487,6 +9471,21 @@
           "order": "Lepidoptera",
           "family": "Hesperiidae",
           "genus": "Mysoria"
+        },
+        {
+          "label": "Chlosyne lacinia",
+          "registros": 15,
+          "slug_especie": "chlosyne-lacinia",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1914465",
+          "species": "Chlosyne lacinia",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Chlosyne"
         }
       ],
       "species_list_tematica": {
@@ -9890,22 +9889,6 @@
           "genus": "Desmodus"
         },
         {
-          "label": "Carollia brevicaudum",
-          "registros": 18,
-          "slug_especie": "carollia-brevicaudum",
-          "slug_grupo": "mamiferos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2433177",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c3f1d8f0106c67230e7368/summary",
-          "species": "Carollia brevicaudum",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Mammalia",
-          "order": "Chiroptera",
-          "family": "Phyllostomidae",
-          "genus": "Carollia"
-        },
-        {
           "label": "Glossophaga soricina",
           "registros": 18,
           "slug_especie": "glossophaga-soricina",
@@ -9920,6 +9903,22 @@
           "order": "Chiroptera",
           "family": "Phyllostomidae",
           "genus": "Glossophaga"
+        },
+        {
+          "label": "Carollia brevicaudum",
+          "registros": 18,
+          "slug_especie": "carollia-brevicaudum",
+          "slug_grupo": "mamiferos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2433177",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c3f1d8f0106c67230e7368/summary",
+          "species": "Carollia brevicaudum",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Chiroptera",
+          "family": "Phyllostomidae",
+          "genus": "Carollia"
         },
         {
           "label": "Saccopteryx leptura",
@@ -10489,21 +10488,6 @@
           "genus": "Hamadryas"
         },
         {
-          "label": "Heliopetes petrus",
-          "registros": 14,
-          "slug_especie": "heliopetes-petrus",
-          "slug_grupo": "mariposas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1951105",
-          "species": "Heliopetes petrus",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Hesperiidae",
-          "genus": "Heliopetes"
-        },
-        {
           "label": "Phoebis agarithe",
           "registros": 14,
           "slug_especie": "phoebis-agarithe",
@@ -10518,6 +10502,21 @@
           "order": "Lepidoptera",
           "family": "Pieridae",
           "genus": "Phoebis"
+        },
+        {
+          "label": "Heliopetes petrus",
+          "registros": 14,
+          "slug_especie": "heliopetes-petrus",
+          "slug_grupo": "mariposas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1951105",
+          "species": "Heliopetes petrus",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Hesperiidae",
+          "genus": "Heliopetes"
         }
       ],
       "species_list_tematica": {
@@ -11151,6 +11150,21 @@
           "genus": "Caquetaia"
         },
         {
+          "label": "Oreochromis niloticus",
+          "registros": 8,
+          "slug_especie": "oreochromis-niloticus",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/4285694",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/593f5b232f4fd7bc7f38b39d/summary",
+          "species": "Oreochromis niloticus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Perciformes",
+          "family": "Cichlidae",
+          "genus": "Oreochromis"
+        },
+        {
           "label": "Andinoacara latifrons",
           "registros": 8,
           "slug_especie": "andinoacara-latifrons",
@@ -11181,21 +11195,6 @@
           "genus": "Argopleura"
         },
         {
-          "label": "Creagrutus affinis",
-          "registros": 8,
-          "slug_especie": "creagrutus-affinis",
-          "slug_grupo": "peces",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2353697",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/5970ceca2f4fd7bc7f3a6523/summary",
-          "species": "Creagrutus affinis",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Characidae",
-          "genus": "Creagrutus"
-        },
-        {
           "label": "Geophagus steindachneri",
           "registros": 8,
           "slug_especie": "geophagus-steindachneri",
@@ -11210,19 +11209,19 @@
           "genus": "Geophagus"
         },
         {
-          "label": "Oreochromis niloticus",
+          "label": "Sturisomatichthys leightoni",
           "registros": 8,
-          "slug_especie": "oreochromis-niloticus",
+          "slug_especie": "sturisomatichthys-leightoni",
           "slug_grupo": "peces",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4285694",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/593f5b232f4fd7bc7f38b39d/summary",
-          "species": "Oreochromis niloticus",
+          "url_gbif": "https://www.gbif.org/species/2339319",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/59e15c835f36934344303837/summary",
+          "species": "Sturisomatichthys leightoni",
           "kingdom": "Animalia",
           "phylum": "Chordata",
-          "order": "Perciformes",
-          "family": "Cichlidae",
-          "genus": "Oreochromis"
+          "order": "Siluriformes",
+          "family": "Loricariidae",
+          "genus": "Sturisomatichthys"
         },
         {
           "label": "Pimelodella odynea",
@@ -11239,19 +11238,19 @@
           "genus": "Pimelodella"
         },
         {
-          "label": "Sturisomatichthys leightoni",
+          "label": "Creagrutus affinis",
           "registros": 8,
-          "slug_especie": "sturisomatichthys-leightoni",
+          "slug_especie": "creagrutus-affinis",
           "slug_grupo": "peces",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2339319",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/59e15c835f36934344303837/summary",
-          "species": "Sturisomatichthys leightoni",
+          "url_gbif": "https://www.gbif.org/species/2353697",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5970ceca2f4fd7bc7f3a6523/summary",
+          "species": "Creagrutus affinis",
           "kingdom": "Animalia",
           "phylum": "Chordata",
-          "order": "Siluriformes",
-          "family": "Loricariidae",
-          "genus": "Sturisomatichthys"
+          "order": "Characiformes",
+          "family": "Characidae",
+          "genus": "Creagrutus"
         }
       ],
       "species_list_tematica": {
@@ -11898,21 +11897,6 @@
           "genus": "Caquetaia"
         },
         {
-          "label": "Andinoacara latifrons",
-          "registros": 8,
-          "slug_especie": "andinoacara-latifrons",
-          "slug_grupo": "peces-dulceacuicolas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7856519",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/59579e0e2f4fd7bc7f39c254/summary",
-          "species": "Andinoacara latifrons",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Perciformes",
-          "family": "Cichlidae",
-          "genus": "Andinoacara"
-        },
-        {
           "label": "Argopleura magdalenensis",
           "registros": 8,
           "slug_especie": "argopleura-magdalenensis",
@@ -11926,49 +11910,6 @@
           "order": "Characiformes",
           "family": "Characidae",
           "genus": "Argopleura"
-        },
-        {
-          "label": "Creagrutus affinis",
-          "registros": 8,
-          "slug_especie": "creagrutus-affinis",
-          "slug_grupo": "peces-dulceacuicolas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2353697",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/5970ceca2f4fd7bc7f3a6523/summary",
-          "species": "Creagrutus affinis",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Characidae",
-          "genus": "Creagrutus"
-        },
-        {
-          "label": "Geophagus steindachneri",
-          "registros": 8,
-          "slug_especie": "geophagus-steindachneri",
-          "slug_grupo": "peces-dulceacuicolas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5208440",
-          "species": "Geophagus steindachneri",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Perciformes",
-          "family": "Cichlidae",
-          "genus": "Geophagus"
-        },
-        {
-          "label": "Pimelodella odynea",
-          "registros": 8,
-          "slug_especie": "pimelodella-odynea",
-          "slug_grupo": "peces-dulceacuicolas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2343482",
-          "species": "Pimelodella odynea",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Siluriformes",
-          "family": "Heptapteridae",
-          "genus": "Pimelodella"
         },
         {
           "label": "Sturisomatichthys leightoni",
@@ -11986,33 +11927,77 @@
           "genus": "Sturisomatichthys"
         },
         {
-          "label": "Lasiancistrus caucanus",
-          "registros": 6,
-          "slug_especie": "lasiancistrus-caucanus",
+          "label": "Creagrutus affinis",
+          "registros": 8,
+          "slug_especie": "creagrutus-affinis",
           "slug_grupo": "peces-dulceacuicolas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2339202",
-          "species": "Lasiancistrus caucanus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Siluriformes",
-          "family": "Loricariidae",
-          "genus": "Lasiancistrus"
-        },
-        {
-          "label": "Microgenys minuta",
-          "registros": 6,
-          "slug_especie": "microgenys-minuta",
-          "slug_grupo": "peces-dulceacuicolas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2353982",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/5928adacf827bf0c0cedd780/summary",
-          "species": "Microgenys minuta",
+          "url_gbif": "https://www.gbif.org/species/2353697",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5970ceca2f4fd7bc7f3a6523/summary",
+          "species": "Creagrutus affinis",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "order": "Characiformes",
           "family": "Characidae",
-          "genus": "Microgenys"
+          "genus": "Creagrutus"
+        },
+        {
+          "label": "Andinoacara latifrons",
+          "registros": 8,
+          "slug_especie": "andinoacara-latifrons",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7856519",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/59579e0e2f4fd7bc7f39c254/summary",
+          "species": "Andinoacara latifrons",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Perciformes",
+          "family": "Cichlidae",
+          "genus": "Andinoacara"
+        },
+        {
+          "label": "Pimelodella odynea",
+          "registros": 8,
+          "slug_especie": "pimelodella-odynea",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2343482",
+          "species": "Pimelodella odynea",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Siluriformes",
+          "family": "Heptapteridae",
+          "genus": "Pimelodella"
+        },
+        {
+          "label": "Geophagus steindachneri",
+          "registros": 8,
+          "slug_especie": "geophagus-steindachneri",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5208440",
+          "species": "Geophagus steindachneri",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Perciformes",
+          "family": "Cichlidae",
+          "genus": "Geophagus"
+        },
+        {
+          "label": "Trichomycterus banneaui",
+          "registros": 6,
+          "slug_especie": "trichomycterus-banneaui",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2343032",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/59dcddbb5f369343443000c0/summary",
+          "species": "Trichomycterus banneaui",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Siluriformes",
+          "family": "Trichomycteridae",
+          "genus": "Trichomycterus"
         },
         {
           "label": "Parodon magdalenensis",
@@ -12030,19 +12015,33 @@
           "genus": "Parodon"
         },
         {
-          "label": "Trichomycterus banneaui",
+          "label": "Microgenys minuta",
           "registros": 6,
-          "slug_especie": "trichomycterus-banneaui",
+          "slug_especie": "microgenys-minuta",
           "slug_grupo": "peces-dulceacuicolas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2343032",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/59dcddbb5f369343443000c0/summary",
-          "species": "Trichomycterus banneaui",
+          "url_gbif": "https://www.gbif.org/species/2353982",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5928adacf827bf0c0cedd780/summary",
+          "species": "Microgenys minuta",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Characidae",
+          "genus": "Microgenys"
+        },
+        {
+          "label": "Lasiancistrus caucanus",
+          "registros": 6,
+          "slug_especie": "lasiancistrus-caucanus",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2339202",
+          "species": "Lasiancistrus caucanus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "order": "Siluriformes",
-          "family": "Trichomycteridae",
-          "genus": "Trichomycterus"
+          "family": "Loricariidae",
+          "genus": "Lasiancistrus"
         }
       ],
       "species_list_tematica": {
@@ -12935,21 +12934,6 @@
       ],
       "species_list_top": [
         {
-          "label": "Guazuma ulmifolia",
-          "registros": 6,
-          "slug_especie": "guazuma-ulmifolia",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3152195",
-          "species": "Guazuma ulmifolia",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Malvales",
-          "family": "Malvaceae",
-          "genus": "Guazuma"
-        },
-        {
           "label": "Manihot esculenta",
           "registros": 6,
           "slug_especie": "manihot-esculenta",
@@ -12966,19 +12950,19 @@
           "genus": "Manihot"
         },
         {
-          "label": "Casearia corymbosa",
-          "registros": 5,
-          "slug_especie": "casearia-corymbosa",
+          "label": "Guazuma ulmifolia",
+          "registros": 6,
+          "slug_especie": "guazuma-ulmifolia",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5603969",
-          "species": "Casearia corymbosa",
+          "url_gbif": "https://www.gbif.org/species/3152195",
+          "species": "Guazuma ulmifolia",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Salicaceae",
-          "genus": "Casearia"
+          "order": "Malvales",
+          "family": "Malvaceae",
+          "genus": "Guazuma"
         },
         {
           "label": "Randia aculeata",
@@ -12996,6 +12980,52 @@
           "genus": "Randia"
         },
         {
+          "label": "Casearia corymbosa",
+          "registros": 5,
+          "slug_especie": "casearia-corymbosa",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5603969",
+          "species": "Casearia corymbosa",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Malpighiales",
+          "family": "Salicaceae",
+          "genus": "Casearia"
+        },
+        {
+          "label": "Pithecellobium dulce",
+          "registros": 4,
+          "slug_especie": "pithecellobium-dulce",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2962831",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/59493f792f4fd7bc7f3972ab/summary",
+          "species": "Pithecellobium dulce",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Pithecellobium"
+        },
+        {
+          "label": "Petiveria alliacea",
+          "registros": 4,
+          "slug_especie": "petiveria-alliacea",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3084012",
+          "species": "Petiveria alliacea",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Caryophyllales",
+          "family": "Phytolaccaceae",
+          "genus": "Petiveria"
+        },
+        {
           "label": "Amaranthus viridis",
           "registros": 4,
           "slug_especie": "amaranthus-viridis",
@@ -13009,6 +13039,21 @@
           "order": "Caryophyllales",
           "family": "Amaranthaceae",
           "genus": "Amaranthus"
+        },
+        {
+          "label": "Machaerium capote",
+          "registros": 4,
+          "slug_especie": "machaerium-capote",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5354954",
+          "species": "Machaerium capote",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Machaerium"
         },
         {
           "label": "Astronium graveolens",
@@ -13027,22 +13072,6 @@
           "genus": "Astronium"
         },
         {
-          "label": "Cordia alliodora",
-          "registros": 4,
-          "slug_especie": "cordia-alliodora",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7649215",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/593ffd102f4fd7bc7f38ba2f/summary",
-          "species": "Cordia alliodora",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Boraginales",
-          "family": "Cordiaceae",
-          "genus": "Cordia"
-        },
-        {
           "label": "Croton leptostachyus",
           "registros": 4,
           "slug_especie": "croton-leptostachyus",
@@ -13059,50 +13088,20 @@
           "genus": "Croton"
         },
         {
-          "label": "Machaerium capote",
+          "label": "Cordia alliodora",
           "registros": 4,
-          "slug_especie": "machaerium-capote",
+          "slug_especie": "cordia-alliodora",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5354954",
-          "species": "Machaerium capote",
+          "url_gbif": "https://www.gbif.org/species/7649215",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/593ffd102f4fd7bc7f38ba2f/summary",
+          "species": "Cordia alliodora",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Machaerium"
-        },
-        {
-          "label": "Petiveria alliacea",
-          "registros": 4,
-          "slug_especie": "petiveria-alliacea",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3084012",
-          "species": "Petiveria alliacea",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Caryophyllales",
-          "family": "Phytolaccaceae",
-          "genus": "Petiveria"
-        },
-        {
-          "label": "Pithecellobium dulce",
-          "registros": 4,
-          "slug_especie": "pithecellobium-dulce",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2962831",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/59493f792f4fd7bc7f3972ab/summary",
-          "species": "Pithecellobium dulce",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Pithecellobium"
+          "order": "Boraginales",
+          "family": "Cordiaceae",
+          "genus": "Cordia"
         }
       ],
       "species_list_tematica": {
@@ -14427,21 +14426,6 @@
       "subgrupo_especies": [],
       "species_list_top": [
         {
-          "label": "Guazuma ulmifolia",
-          "registros": 6,
-          "slug_especie": "guazuma-ulmifolia",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3152195",
-          "species": "Guazuma ulmifolia",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Malvales",
-          "family": "Malvaceae",
-          "genus": "Guazuma"
-        },
-        {
           "label": "Manihot esculenta",
           "registros": 6,
           "slug_especie": "manihot-esculenta",
@@ -14458,19 +14442,19 @@
           "genus": "Manihot"
         },
         {
-          "label": "Casearia corymbosa",
-          "registros": 5,
-          "slug_especie": "casearia-corymbosa",
+          "label": "Guazuma ulmifolia",
+          "registros": 6,
+          "slug_especie": "guazuma-ulmifolia",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5603969",
-          "species": "Casearia corymbosa",
+          "url_gbif": "https://www.gbif.org/species/3152195",
+          "species": "Guazuma ulmifolia",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Salicaceae",
-          "genus": "Casearia"
+          "order": "Malvales",
+          "family": "Malvaceae",
+          "genus": "Guazuma"
         },
         {
           "label": "Randia aculeata",
@@ -14488,6 +14472,52 @@
           "genus": "Randia"
         },
         {
+          "label": "Casearia corymbosa",
+          "registros": 5,
+          "slug_especie": "casearia-corymbosa",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5603969",
+          "species": "Casearia corymbosa",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Malpighiales",
+          "family": "Salicaceae",
+          "genus": "Casearia"
+        },
+        {
+          "label": "Pithecellobium dulce",
+          "registros": 4,
+          "slug_especie": "pithecellobium-dulce",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2962831",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/59493f792f4fd7bc7f3972ab/summary",
+          "species": "Pithecellobium dulce",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Pithecellobium"
+        },
+        {
+          "label": "Petiveria alliacea",
+          "registros": 4,
+          "slug_especie": "petiveria-alliacea",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3084012",
+          "species": "Petiveria alliacea",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Caryophyllales",
+          "family": "Phytolaccaceae",
+          "genus": "Petiveria"
+        },
+        {
           "label": "Amaranthus viridis",
           "registros": 4,
           "slug_especie": "amaranthus-viridis",
@@ -14501,6 +14531,21 @@
           "order": "Caryophyllales",
           "family": "Amaranthaceae",
           "genus": "Amaranthus"
+        },
+        {
+          "label": "Machaerium capote",
+          "registros": 4,
+          "slug_especie": "machaerium-capote",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5354954",
+          "species": "Machaerium capote",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Machaerium"
         },
         {
           "label": "Astronium graveolens",
@@ -14519,22 +14564,6 @@
           "genus": "Astronium"
         },
         {
-          "label": "Cordia alliodora",
-          "registros": 4,
-          "slug_especie": "cordia-alliodora",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7649215",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/593ffd102f4fd7bc7f38ba2f/summary",
-          "species": "Cordia alliodora",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Boraginales",
-          "family": "Cordiaceae",
-          "genus": "Cordia"
-        },
-        {
           "label": "Croton leptostachyus",
           "registros": 4,
           "slug_especie": "croton-leptostachyus",
@@ -14551,50 +14580,20 @@
           "genus": "Croton"
         },
         {
-          "label": "Machaerium capote",
+          "label": "Cordia alliodora",
           "registros": 4,
-          "slug_especie": "machaerium-capote",
+          "slug_especie": "cordia-alliodora",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5354954",
-          "species": "Machaerium capote",
+          "url_gbif": "https://www.gbif.org/species/7649215",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/593ffd102f4fd7bc7f38ba2f/summary",
+          "species": "Cordia alliodora",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Machaerium"
-        },
-        {
-          "label": "Petiveria alliacea",
-          "registros": 4,
-          "slug_especie": "petiveria-alliacea",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3084012",
-          "species": "Petiveria alliacea",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Caryophyllales",
-          "family": "Phytolaccaceae",
-          "genus": "Petiveria"
-        },
-        {
-          "label": "Pithecellobium dulce",
-          "registros": 4,
-          "slug_especie": "pithecellobium-dulce",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2962831",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/59493f792f4fd7bc7f3972ab/summary",
-          "species": "Pithecellobium dulce",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Pithecellobium"
+          "order": "Boraginales",
+          "family": "Cordiaceae",
+          "genus": "Cordia"
         }
       ],
       "species_list_tematica": {
@@ -15315,22 +15314,6 @@
       ],
       "species_list_top": [
         {
-          "label": "Cathartes aura",
-          "registros": 295,
-          "slug_especie": "cathartes-aura",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2481930",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c28bd8f0106c67230e7333/summary",
-          "species": "Cathartes aura",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Accipitriformes",
-          "family": "Cathartidae",
-          "genus": "Cathartes"
-        },
-        {
           "label": "Phimosus infuscatus",
           "registros": 295,
           "slug_especie": "phimosus-infuscatus",
@@ -15345,6 +15328,22 @@
           "order": "Pelecaniformes",
           "family": "Threskiornithidae",
           "genus": "Phimosus"
+        },
+        {
+          "label": "Cathartes aura",
+          "registros": 295,
+          "slug_especie": "cathartes-aura",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2481930",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c28bd8f0106c67230e7333/summary",
+          "species": "Cathartes aura",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Accipitriformes",
+          "family": "Cathartidae",
+          "genus": "Cathartes"
         },
         {
           "label": "Tyrannus melancholicus",
@@ -15395,22 +15394,6 @@
           "genus": "Vanellus"
         },
         {
-          "label": "Coragyps atratus",
-          "registros": 266,
-          "slug_especie": "coragyps-atratus",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2481942",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4fe28f0106c67230e7394/summary",
-          "species": "Coragyps atratus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Accipitriformes",
-          "family": "Cathartidae",
-          "genus": "Coragyps"
-        },
-        {
           "label": "Sicalis flaveola",
           "registros": 266,
           "slug_especie": "sicalis-flaveola",
@@ -15425,6 +15408,22 @@
           "order": "Passeriformes",
           "family": "Thraupidae",
           "genus": "Sicalis"
+        },
+        {
+          "label": "Coragyps atratus",
+          "registros": 266,
+          "slug_especie": "coragyps-atratus",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2481942",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4fe28f0106c67230e7394/summary",
+          "species": "Coragyps atratus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Accipitriformes",
+          "family": "Cathartidae",
+          "genus": "Coragyps"
         },
         {
           "label": "Cyclarhis gujanensis",
@@ -16125,23 +16124,6 @@
             "genus": "Andinoacara"
           },
           {
-            "label": "Argopleura magdalenensis",
-            "registros": 8,
-            "slug_especie": "argopleura-magdalenensis",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2353166",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/5917949af827bf0c0ced62e1/summary",
-            "species": "Argopleura magdalenensis",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "order": "Characiformes",
-            "family": "Characidae",
-            "genus": "Argopleura"
-          },
-          {
             "label": "Sturisomatichthys leightoni",
             "registros": 8,
             "slug_especie": "sturisomatichthys-leightoni",
@@ -16159,37 +16141,21 @@
             "genus": "Sturisomatichthys"
           },
           {
-            "label": "Lasiancistrus caucanus",
-            "registros": 6,
-            "slug_especie": "lasiancistrus-caucanus",
+            "label": "Argopleura magdalenensis",
+            "registros": 8,
+            "slug_especie": "argopleura-magdalenensis",
             "slug_tematica": "endemicas",
             "tematica_label": "Endémicas",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2339202",
-            "species": "Lasiancistrus caucanus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "order": "Siluriformes",
-            "family": "Loricariidae",
-            "genus": "Lasiancistrus"
-          },
-          {
-            "label": "Microgenys minuta",
-            "registros": 6,
-            "slug_especie": "microgenys-minuta",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2353982",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/5928adacf827bf0c0cedd780/summary",
-            "species": "Microgenys minuta",
+            "url_gbif": "https://www.gbif.org/species/2353166",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/5917949af827bf0c0ced62e1/summary",
+            "species": "Argopleura magdalenensis",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "order": "Characiformes",
             "family": "Characidae",
-            "genus": "Microgenys"
+            "genus": "Argopleura"
           },
           {
             "label": "Parodon magdalenensis",
@@ -16224,6 +16190,39 @@
             "order": "Siluriformes",
             "family": "Trichomycteridae",
             "genus": "Trichomycterus"
+          },
+          {
+            "label": "Lasiancistrus caucanus",
+            "registros": 6,
+            "slug_especie": "lasiancistrus-caucanus",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2339202",
+            "species": "Lasiancistrus caucanus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Siluriformes",
+            "family": "Loricariidae",
+            "genus": "Lasiancistrus"
+          },
+          {
+            "label": "Microgenys minuta",
+            "registros": 6,
+            "slug_especie": "microgenys-minuta",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2353982",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/5928adacf827bf0c0cedd780/summary",
+            "species": "Microgenys minuta",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "order": "Characiformes",
+            "family": "Characidae",
+            "genus": "Microgenys"
           }
         ],
         "exoticas-total": [

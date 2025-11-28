@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -1078,19 +1078,19 @@
       "parent_registros_cites_iii": 25039,
       "list_especies_cites": [
         {
-          "label": "Amazilia tzacatl",
-          "slug_especie": "amazilia-tzacatl",
-          "registros": 8,
-          "url_gbif": "https://www.gbif.org/species/2476441",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e782a283c45700544e407e/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
           "label": "Rupornis magnirostris",
           "slug_especie": "rupornis-magnirostris",
           "registros": 8,
           "url_gbif": "https://www.gbif.org/species/5844398",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56ce57a13c16479905cba79b/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Amazilia tzacatl",
+          "slug_especie": "amazilia-tzacatl",
+          "registros": 8,
+          "url_gbif": "https://www.gbif.org/species/2476441",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e782a283c45700544e407e/summary",
           "slug_tematica": "cites-ii"
         },
         {
@@ -1118,10 +1118,11 @@
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Amazona mercenaria",
-          "slug_especie": "amazona-mercenaria",
+          "label": "Coeligena prunellei",
+          "slug_especie": "coeligena-prunellei",
           "registros": 3,
-          "url_gbif": "https://www.gbif.org/species/2479636",
+          "url_gbif": "https://www.gbif.org/species/2477039",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5c6b2ae2d76e3b71032c8c0e/summary",
           "slug_tematica": "cites-ii"
         },
         {
@@ -1133,27 +1134,26 @@
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Chalybura buffonii",
-          "slug_especie": "chalybura-buffonii",
+          "label": "Ocreatus underwoodii",
+          "slug_especie": "ocreatus-underwoodii",
           "registros": 3,
-          "url_gbif": "https://www.gbif.org/species/2476774",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56df654383c45700544e3c70/summary",
+          "url_gbif": "https://www.gbif.org/species/2476351",
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Coeligena prunellei",
-          "slug_especie": "coeligena-prunellei",
+          "label": "Forpus conspicillatus",
+          "slug_especie": "forpus-conspicillatus",
           "registros": 3,
-          "url_gbif": "https://www.gbif.org/species/2477039",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/5c6b2ae2d76e3b71032c8c0e/summary",
+          "url_gbif": "https://www.gbif.org/species/2479071",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c76fc3f0106c67230e73ed/summary",
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Colibri coruscans",
-          "slug_especie": "colibri-coruscans",
+          "label": "Falco sparverius",
+          "slug_especie": "falco-sparverius",
           "registros": 3,
-          "url_gbif": "https://www.gbif.org/species/5228474",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4a8dcf0106c67230e7385/summary",
+          "url_gbif": "https://www.gbif.org/species/9685907",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c769ddf0106c67230e73ec/summary",
           "slug_tematica": "cites-ii"
         }
       ],
@@ -1170,19 +1170,19 @@
       ],
       "list_especies_cites_ii": [
         {
-          "label": "Amazilia tzacatl",
-          "slug_especie": "amazilia-tzacatl",
-          "registros": 8,
-          "url_gbif": "https://www.gbif.org/species/2476441",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e782a283c45700544e407e/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
           "label": "Rupornis magnirostris",
           "slug_especie": "rupornis-magnirostris",
           "registros": 8,
           "url_gbif": "https://www.gbif.org/species/5844398",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56ce57a13c16479905cba79b/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Amazilia tzacatl",
+          "slug_especie": "amazilia-tzacatl",
+          "registros": 8,
+          "url_gbif": "https://www.gbif.org/species/2476441",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e782a283c45700544e407e/summary",
           "slug_tematica": "cites-ii"
         },
         {
@@ -1210,10 +1210,11 @@
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Amazona mercenaria",
-          "slug_especie": "amazona-mercenaria",
+          "label": "Colibri coruscans",
+          "slug_especie": "colibri-coruscans",
           "registros": 3,
-          "url_gbif": "https://www.gbif.org/species/2479636",
+          "url_gbif": "https://www.gbif.org/species/5228474",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4a8dcf0106c67230e7385/summary",
           "slug_tematica": "cites-ii"
         },
         {
@@ -1225,46 +1226,45 @@
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Chalybura buffonii",
-          "slug_especie": "chalybura-buffonii",
+          "label": "Ocreatus underwoodii",
+          "slug_especie": "ocreatus-underwoodii",
           "registros": 3,
-          "url_gbif": "https://www.gbif.org/species/2476774",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56df654383c45700544e3c70/summary",
+          "url_gbif": "https://www.gbif.org/species/2476351",
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Coeligena prunellei",
-          "slug_especie": "coeligena-prunellei",
+          "label": "Forpus conspicillatus",
+          "slug_especie": "forpus-conspicillatus",
           "registros": 3,
-          "url_gbif": "https://www.gbif.org/species/2477039",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/5c6b2ae2d76e3b71032c8c0e/summary",
+          "url_gbif": "https://www.gbif.org/species/2479071",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c76fc3f0106c67230e73ed/summary",
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Colibri coruscans",
-          "slug_especie": "colibri-coruscans",
+          "label": "Falco sparverius",
+          "slug_especie": "falco-sparverius",
           "registros": 3,
-          "url_gbif": "https://www.gbif.org/species/5228474",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4a8dcf0106c67230e7385/summary",
+          "url_gbif": "https://www.gbif.org/species/9685907",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c769ddf0106c67230e73ec/summary",
           "slug_tematica": "cites-ii"
         }
       ],
       "list_especies_cites_iii": [],
       "species_list": [
         {
-          "label": "Amazilia tzacatl",
-          "slug_especie": "amazilia-tzacatl",
-          "registros": 8,
-          "url_gbif": "https://www.gbif.org/species/2476441",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e782a283c45700544e407e/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
           "label": "Rupornis magnirostris",
           "slug_especie": "rupornis-magnirostris",
           "registros": 8,
           "url_gbif": "https://www.gbif.org/species/5844398",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56ce57a13c16479905cba79b/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Amazilia tzacatl",
+          "slug_especie": "amazilia-tzacatl",
+          "registros": 8,
+          "url_gbif": "https://www.gbif.org/species/2476441",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e782a283c45700544e407e/summary",
           "slug_tematica": "cites-ii"
         },
         {
@@ -1292,10 +1292,11 @@
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Amazona mercenaria",
-          "slug_especie": "amazona-mercenaria",
+          "label": "Coeligena prunellei",
+          "slug_especie": "coeligena-prunellei",
           "registros": 3,
-          "url_gbif": "https://www.gbif.org/species/2479636",
+          "url_gbif": "https://www.gbif.org/species/2477039",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5c6b2ae2d76e3b71032c8c0e/summary",
           "slug_tematica": "cites-ii"
         },
         {
@@ -1307,27 +1308,26 @@
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Chalybura buffonii",
-          "slug_especie": "chalybura-buffonii",
+          "label": "Ocreatus underwoodii",
+          "slug_especie": "ocreatus-underwoodii",
           "registros": 3,
-          "url_gbif": "https://www.gbif.org/species/2476774",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56df654383c45700544e3c70/summary",
+          "url_gbif": "https://www.gbif.org/species/2476351",
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Coeligena prunellei",
-          "slug_especie": "coeligena-prunellei",
+          "label": "Forpus conspicillatus",
+          "slug_especie": "forpus-conspicillatus",
           "registros": 3,
-          "url_gbif": "https://www.gbif.org/species/2477039",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/5c6b2ae2d76e3b71032c8c0e/summary",
+          "url_gbif": "https://www.gbif.org/species/2479071",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c76fc3f0106c67230e73ed/summary",
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Colibri coruscans",
-          "slug_especie": "colibri-coruscans",
+          "label": "Falco sparverius",
+          "slug_especie": "falco-sparverius",
           "registros": 3,
-          "url_gbif": "https://www.gbif.org/species/5228474",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4a8dcf0106c67230e7385/summary",
+          "url_gbif": "https://www.gbif.org/species/9685907",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c769ddf0106c67230e73ec/summary",
           "slug_tematica": "cites-ii"
         }
       ]
@@ -1888,6 +1888,21 @@
           "genus": "Espeletia"
         },
         {
+          "label": "Condaminea corymbosa",
+          "registros": 2,
+          "slug_especie": "condaminea-corymbosa",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2908496",
+          "species": "Condaminea corymbosa",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Gentianales",
+          "family": "Rubiaceae",
+          "genus": "Condaminea"
+        },
+        {
           "label": "Amphilophium paniculatum",
           "registros": 2,
           "slug_especie": "amphilophium-paniculatum",
@@ -1919,36 +1934,6 @@
           "genus": "Annona"
         },
         {
-          "label": "Clusia elliptica",
-          "registros": 2,
-          "slug_especie": "clusia-elliptica",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5556546",
-          "species": "Clusia elliptica",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Clusiaceae",
-          "genus": "Clusia"
-        },
-        {
-          "label": "Condaminea corymbosa",
-          "registros": 2,
-          "slug_especie": "condaminea-corymbosa",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2908496",
-          "species": "Condaminea corymbosa",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Gentianales",
-          "family": "Rubiaceae",
-          "genus": "Condaminea"
-        },
-        {
           "label": "Stenocereus griseus",
           "registros": 2,
           "slug_especie": "stenocereus-griseus",
@@ -1963,6 +1948,21 @@
           "order": "Caryophyllales",
           "family": "Cactaceae",
           "genus": "Stenocereus"
+        },
+        {
+          "label": "Clusia elliptica",
+          "registros": 2,
+          "slug_especie": "clusia-elliptica",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5556546",
+          "species": "Clusia elliptica",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Malpighiales",
+          "family": "Clusiaceae",
+          "genus": "Clusia"
         },
         {
           "label": "Acrocomia aculeata",
@@ -1981,35 +1981,20 @@
           "genus": "Acrocomia"
         },
         {
-          "label": "Aristolochia anguicida",
+          "label": "Tillandsia turneri",
           "registros": 1,
-          "slug_especie": "aristolochia-anguicida",
+          "slug_especie": "tillandsia-turneri",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2873992",
-          "species": "Aristolochia anguicida",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Piperales",
-          "family": "Aristolochiaceae",
-          "genus": "Aristolochia"
-        },
-        {
-          "label": "Brassavola nodosa",
-          "registros": 1,
-          "slug_especie": "brassavola-nodosa",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5314167",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56d7a9f93c16479905cba92f/summary",
-          "species": "Brassavola nodosa",
+          "url_gbif": "https://www.gbif.org/species/2695772",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e8406983c45700544e43e4/summary",
+          "species": "Tillandsia turneri",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Liliopsida",
-          "order": "Asparagales",
-          "family": "Orchidaceae",
-          "genus": "Brassavola"
+          "order": "Poales",
+          "family": "Bromeliaceae",
+          "genus": "Tillandsia"
         },
         {
           "label": "Caesalpinia pulcherrima",
@@ -2346,6 +2331,21 @@
           "genus": "Senna"
         },
         {
+          "label": "Aristolochia anguicida",
+          "registros": 1,
+          "slug_especie": "aristolochia-anguicida",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2873992",
+          "species": "Aristolochia anguicida",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Piperales",
+          "family": "Aristolochiaceae",
+          "genus": "Aristolochia"
+        },
+        {
           "label": "Tillandsia balbisiana",
           "registros": 1,
           "slug_especie": "tillandsia-balbisiana",
@@ -2408,20 +2408,20 @@
           "genus": "Tillandsia"
         },
         {
-          "label": "Tillandsia turneri",
+          "label": "Brassavola nodosa",
           "registros": 1,
-          "slug_especie": "tillandsia-turneri",
+          "slug_especie": "brassavola-nodosa",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2695772",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e8406983c45700544e43e4/summary",
-          "species": "Tillandsia turneri",
+          "url_gbif": "https://www.gbif.org/species/5314167",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d7a9f93c16479905cba92f/summary",
+          "species": "Brassavola nodosa",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Liliopsida",
-          "order": "Poales",
-          "family": "Bromeliaceae",
-          "genus": "Tillandsia"
+          "order": "Asparagales",
+          "family": "Orchidaceae",
+          "genus": "Brassavola"
         }
       ],
       "species_list_tematica": {
@@ -2955,22 +2955,6 @@
           "genus": "Henicorhina"
         },
         {
-          "label": "Coragyps atratus",
-          "registros": 18,
-          "slug_especie": "coragyps-atratus",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2481942",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4fe28f0106c67230e7394/summary",
-          "species": "Coragyps atratus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Accipitriformes",
-          "family": "Cathartidae",
-          "genus": "Coragyps"
-        },
-        {
           "label": "Myiothlypis coronata",
           "registros": 18,
           "slug_especie": "myiothlypis-coronata",
@@ -2986,19 +2970,20 @@
           "genus": "Myiothlypis"
         },
         {
-          "label": "Myioborus miniatus",
-          "registros": 15,
-          "slug_especie": "myioborus-miniatus",
+          "label": "Coragyps atratus",
+          "registros": 18,
+          "slug_especie": "coragyps-atratus",
           "slug_grupo": "animales",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2489837",
-          "species": "Myioborus miniatus",
+          "url_gbif": "https://www.gbif.org/species/2481942",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4fe28f0106c67230e7394/summary",
+          "species": "Coragyps atratus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Parulidae",
-          "genus": "Myioborus"
+          "order": "Accipitriformes",
+          "family": "Cathartidae",
+          "genus": "Coragyps"
         },
         {
           "label": "Thraupis episcopus",
@@ -3017,20 +3002,19 @@
           "genus": "Thraupis"
         },
         {
-          "label": "Cathartes aura",
-          "registros": 14,
-          "slug_especie": "cathartes-aura",
+          "label": "Myioborus miniatus",
+          "registros": 15,
+          "slug_especie": "myioborus-miniatus",
           "slug_grupo": "animales",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2481930",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c28bd8f0106c67230e7333/summary",
-          "species": "Cathartes aura",
+          "url_gbif": "https://www.gbif.org/species/2489837",
+          "species": "Myioborus miniatus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": "Accipitriformes",
-          "family": "Cathartidae",
-          "genus": "Cathartes"
+          "order": "Passeriformes",
+          "family": "Parulidae",
+          "genus": "Myioborus"
         },
         {
           "label": "Icterus chrysater",
@@ -3047,6 +3031,22 @@
           "order": "Passeriformes",
           "family": "Icteridae",
           "genus": "Icterus"
+        },
+        {
+          "label": "Cathartes aura",
+          "registros": 14,
+          "slug_especie": "cathartes-aura",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2481930",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c28bd8f0106c67230e7333/summary",
+          "species": "Cathartes aura",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Accipitriformes",
+          "family": "Cathartidae",
+          "genus": "Cathartes"
         },
         {
           "label": "Cyanocorax yncas",
@@ -3079,21 +3079,6 @@
           "genus": "Odontophorus"
         },
         {
-          "label": "Pheugopedius mystacalis",
-          "registros": 13,
-          "slug_especie": "pheugopedius-mystacalis",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7341190",
-          "species": "Pheugopedius mystacalis",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Troglodytidae",
-          "genus": "Pheugopedius"
-        },
-        {
           "label": "Sericossypha albocristata",
           "registros": 13,
           "slug_especie": "sericossypha-albocristata",
@@ -3107,6 +3092,21 @@
           "order": "Passeriformes",
           "family": "Thraupidae",
           "genus": "Sericossypha"
+        },
+        {
+          "label": "Pheugopedius mystacalis",
+          "registros": 13,
+          "slug_especie": "pheugopedius-mystacalis",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7341190",
+          "species": "Pheugopedius mystacalis",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Troglodytidae",
+          "genus": "Pheugopedius"
         }
       ],
       "species_list_tematica": {
@@ -3341,24 +3341,6 @@
         ],
         "cites": [
           {
-            "label": "Amazilia tzacatl",
-            "registros": 8,
-            "slug_especie": "amazilia-tzacatl",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476441",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e782a283c45700544e407e/summary",
-            "species": "Amazilia tzacatl",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Amazilia"
-          },
-          {
             "label": "Rupornis magnirostris",
             "registros": 8,
             "slug_especie": "rupornis-magnirostris",
@@ -3375,6 +3357,24 @@
             "order": "Accipitriformes",
             "family": "Accipitridae",
             "genus": "Rupornis"
+          },
+          {
+            "label": "Amazilia tzacatl",
+            "registros": 8,
+            "slug_especie": "amazilia-tzacatl",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2476441",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e782a283c45700544e407e/summary",
+            "species": "Amazilia tzacatl",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Amazilia"
           },
           {
             "label": "Anthracothorax nigricollis",
@@ -3413,39 +3413,22 @@
             "genus": "Chrysolampis"
           },
           {
-            "label": "Adelomyia melanogenys",
+            "label": "Coeligena prunellei",
             "registros": 3,
-            "slug_especie": "adelomyia-melanogenys",
+            "slug_especie": "coeligena-prunellei",
             "slug_tematica": "cites-ii",
             "tematica_label": "Apéndice CITES II",
             "slug_grupo": "animales",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476168",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56bddf40f0106c67230e72ec/summary",
-            "species": "Adelomyia melanogenys",
+            "url_gbif": "https://www.gbif.org/species/2477039",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/5c6b2ae2d76e3b71032c8c0e/summary",
+            "species": "Coeligena prunellei",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Aves",
             "order": "Apodiformes",
             "family": "Trochilidae",
-            "genus": "Adelomyia"
-          },
-          {
-            "label": "Amazona mercenaria",
-            "registros": 3,
-            "slug_especie": "amazona-mercenaria",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2479636",
-            "species": "Amazona mercenaria",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Psittaciformes",
-            "family": "Psittacidae",
-            "genus": "Amazona"
+            "genus": "Coeligena"
           },
           {
             "label": "Asio stygius",
@@ -3484,22 +3467,21 @@
             "genus": "Chalybura"
           },
           {
-            "label": "Coeligena prunellei",
+            "label": "Amazona mercenaria",
             "registros": 3,
-            "slug_especie": "coeligena-prunellei",
+            "slug_especie": "amazona-mercenaria",
             "slug_tematica": "cites-ii",
             "tematica_label": "Apéndice CITES II",
             "slug_grupo": "animales",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2477039",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/5c6b2ae2d76e3b71032c8c0e/summary",
-            "species": "Coeligena prunellei",
+            "url_gbif": "https://www.gbif.org/species/2479636",
+            "species": "Amazona mercenaria",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Coeligena"
+            "order": "Psittaciformes",
+            "family": "Psittacidae",
+            "genus": "Amazona"
           },
           {
             "label": "Colibri coruscans",
@@ -3588,6 +3570,24 @@
             "order": "Apodiformes",
             "family": "Trochilidae",
             "genus": "Ocreatus"
+          },
+          {
+            "label": "Adelomyia melanogenys",
+            "registros": 3,
+            "slug_especie": "adelomyia-melanogenys",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2476168",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56bddf40f0106c67230e72ec/summary",
+            "species": "Adelomyia melanogenys",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Adelomyia"
           }
         ],
         "migratorias": [
@@ -4654,22 +4654,6 @@
           "genus": "Henicorhina"
         },
         {
-          "label": "Coragyps atratus",
-          "registros": 18,
-          "slug_especie": "coragyps-atratus",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2481942",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4fe28f0106c67230e7394/summary",
-          "species": "Coragyps atratus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Accipitriformes",
-          "family": "Cathartidae",
-          "genus": "Coragyps"
-        },
-        {
           "label": "Myiothlypis coronata",
           "registros": 18,
           "slug_especie": "myiothlypis-coronata",
@@ -4685,19 +4669,20 @@
           "genus": "Myiothlypis"
         },
         {
-          "label": "Myioborus miniatus",
-          "registros": 15,
-          "slug_especie": "myioborus-miniatus",
+          "label": "Coragyps atratus",
+          "registros": 18,
+          "slug_especie": "coragyps-atratus",
           "slug_grupo": "aves",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2489837",
-          "species": "Myioborus miniatus",
+          "url_gbif": "https://www.gbif.org/species/2481942",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4fe28f0106c67230e7394/summary",
+          "species": "Coragyps atratus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Parulidae",
-          "genus": "Myioborus"
+          "order": "Accipitriformes",
+          "family": "Cathartidae",
+          "genus": "Coragyps"
         },
         {
           "label": "Thraupis episcopus",
@@ -4716,20 +4701,19 @@
           "genus": "Thraupis"
         },
         {
-          "label": "Cathartes aura",
-          "registros": 14,
-          "slug_especie": "cathartes-aura",
+          "label": "Myioborus miniatus",
+          "registros": 15,
+          "slug_especie": "myioborus-miniatus",
           "slug_grupo": "aves",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2481930",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c28bd8f0106c67230e7333/summary",
-          "species": "Cathartes aura",
+          "url_gbif": "https://www.gbif.org/species/2489837",
+          "species": "Myioborus miniatus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": "Accipitriformes",
-          "family": "Cathartidae",
-          "genus": "Cathartes"
+          "order": "Passeriformes",
+          "family": "Parulidae",
+          "genus": "Myioborus"
         },
         {
           "label": "Icterus chrysater",
@@ -4748,34 +4732,20 @@
           "genus": "Icterus"
         },
         {
-          "label": "Cyanocorax yncas",
-          "registros": 13,
-          "slug_especie": "cyanocorax-yncas",
+          "label": "Cathartes aura",
+          "registros": 14,
+          "slug_especie": "cathartes-aura",
           "slug_grupo": "aves",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2482565",
-          "species": "Cyanocorax yncas",
+          "url_gbif": "https://www.gbif.org/species/2481930",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c28bd8f0106c67230e7333/summary",
+          "species": "Cathartes aura",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Corvidae",
-          "genus": "Cyanocorax"
-        },
-        {
-          "label": "Odontophorus strophium",
-          "registros": 13,
-          "slug_especie": "odontophorus-strophium",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5228041",
-          "species": "Odontophorus strophium",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Galliformes",
-          "family": "Odontophoridae",
-          "genus": "Odontophorus"
+          "order": "Accipitriformes",
+          "family": "Cathartidae",
+          "genus": "Cathartes"
         },
         {
           "label": "Pheugopedius mystacalis",
@@ -4793,6 +4763,21 @@
           "genus": "Pheugopedius"
         },
         {
+          "label": "Odontophorus strophium",
+          "registros": 13,
+          "slug_especie": "odontophorus-strophium",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5228041",
+          "species": "Odontophorus strophium",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Galliformes",
+          "family": "Odontophoridae",
+          "genus": "Odontophorus"
+        },
+        {
           "label": "Sericossypha albocristata",
           "registros": 13,
           "slug_especie": "sericossypha-albocristata",
@@ -4806,6 +4791,21 @@
           "order": "Passeriformes",
           "family": "Thraupidae",
           "genus": "Sericossypha"
+        },
+        {
+          "label": "Cyanocorax yncas",
+          "registros": 13,
+          "slug_especie": "cyanocorax-yncas",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2482565",
+          "species": "Cyanocorax yncas",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Corvidae",
+          "genus": "Cyanocorax"
         }
       ],
       "species_list_tematica": {
@@ -5040,24 +5040,6 @@
         ],
         "cites": [
           {
-            "label": "Amazilia tzacatl",
-            "registros": 8,
-            "slug_especie": "amazilia-tzacatl",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476441",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e782a283c45700544e407e/summary",
-            "species": "Amazilia tzacatl",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Amazilia"
-          },
-          {
             "label": "Rupornis magnirostris",
             "registros": 8,
             "slug_especie": "rupornis-magnirostris",
@@ -5074,6 +5056,24 @@
             "order": "Accipitriformes",
             "family": "Accipitridae",
             "genus": "Rupornis"
+          },
+          {
+            "label": "Amazilia tzacatl",
+            "registros": 8,
+            "slug_especie": "amazilia-tzacatl",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2476441",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e782a283c45700544e407e/summary",
+            "species": "Amazilia tzacatl",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Amazilia"
           },
           {
             "label": "Anthracothorax nigricollis",
@@ -5112,39 +5112,22 @@
             "genus": "Chrysolampis"
           },
           {
-            "label": "Adelomyia melanogenys",
+            "label": "Coeligena prunellei",
             "registros": 3,
-            "slug_especie": "adelomyia-melanogenys",
+            "slug_especie": "coeligena-prunellei",
             "slug_tematica": "cites-ii",
             "tematica_label": "Apéndice CITES II",
             "slug_grupo": "aves",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476168",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56bddf40f0106c67230e72ec/summary",
-            "species": "Adelomyia melanogenys",
+            "url_gbif": "https://www.gbif.org/species/2477039",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/5c6b2ae2d76e3b71032c8c0e/summary",
+            "species": "Coeligena prunellei",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Aves",
             "order": "Apodiformes",
             "family": "Trochilidae",
-            "genus": "Adelomyia"
-          },
-          {
-            "label": "Amazona mercenaria",
-            "registros": 3,
-            "slug_especie": "amazona-mercenaria",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2479636",
-            "species": "Amazona mercenaria",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Psittaciformes",
-            "family": "Psittacidae",
-            "genus": "Amazona"
+            "genus": "Coeligena"
           },
           {
             "label": "Asio stygius",
@@ -5183,22 +5166,21 @@
             "genus": "Chalybura"
           },
           {
-            "label": "Coeligena prunellei",
+            "label": "Amazona mercenaria",
             "registros": 3,
-            "slug_especie": "coeligena-prunellei",
+            "slug_especie": "amazona-mercenaria",
             "slug_tematica": "cites-ii",
             "tematica_label": "Apéndice CITES II",
             "slug_grupo": "aves",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2477039",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/5c6b2ae2d76e3b71032c8c0e/summary",
-            "species": "Coeligena prunellei",
+            "url_gbif": "https://www.gbif.org/species/2479636",
+            "species": "Amazona mercenaria",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Coeligena"
+            "order": "Psittaciformes",
+            "family": "Psittacidae",
+            "genus": "Amazona"
           },
           {
             "label": "Colibri coruscans",
@@ -5287,6 +5269,24 @@
             "order": "Apodiformes",
             "family": "Trochilidae",
             "genus": "Ocreatus"
+          },
+          {
+            "label": "Adelomyia melanogenys",
+            "registros": 3,
+            "slug_especie": "adelomyia-melanogenys",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2476168",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56bddf40f0106c67230e72ec/summary",
+            "species": "Adelomyia melanogenys",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Adelomyia"
           }
         ],
         "migratorias": [
@@ -11095,6 +11095,21 @@
           "genus": "Espeletia"
         },
         {
+          "label": "Clusia elliptica",
+          "registros": 2,
+          "slug_especie": "clusia-elliptica",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5556546",
+          "species": "Clusia elliptica",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Malpighiales",
+          "family": "Clusiaceae",
+          "genus": "Clusia"
+        },
+        {
           "label": "Amphilophium paniculatum",
           "registros": 2,
           "slug_especie": "amphilophium-paniculatum",
@@ -11126,19 +11141,20 @@
           "genus": "Annona"
         },
         {
-          "label": "Clusia elliptica",
+          "label": "Stenocereus griseus",
           "registros": 2,
-          "slug_especie": "clusia-elliptica",
+          "slug_especie": "stenocereus-griseus",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5556546",
-          "species": "Clusia elliptica",
+          "url_gbif": "https://www.gbif.org/species/7284733",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5fe0ea5e213e934b5c4794f2/summary",
+          "species": "Stenocereus griseus",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Clusiaceae",
-          "genus": "Clusia"
+          "order": "Caryophyllales",
+          "family": "Cactaceae",
+          "genus": "Stenocereus"
         },
         {
           "label": "Condaminea corymbosa",
@@ -11154,22 +11170,6 @@
           "order": "Gentianales",
           "family": "Rubiaceae",
           "genus": "Condaminea"
-        },
-        {
-          "label": "Stenocereus griseus",
-          "registros": 2,
-          "slug_especie": "stenocereus-griseus",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7284733",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/5fe0ea5e213e934b5c4794f2/summary",
-          "species": "Stenocereus griseus",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Caryophyllales",
-          "family": "Cactaceae",
-          "genus": "Stenocereus"
         },
         {
           "label": "Acrocomia aculeata",
@@ -11188,50 +11188,20 @@
           "genus": "Acrocomia"
         },
         {
-          "label": "Aristolochia anguicida",
+          "label": "Tillandsia turneri",
           "registros": 1,
-          "slug_especie": "aristolochia-anguicida",
+          "slug_especie": "tillandsia-turneri",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2873992",
-          "species": "Aristolochia anguicida",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Piperales",
-          "family": "Aristolochiaceae",
-          "genus": "Aristolochia"
-        },
-        {
-          "label": "Brassavola nodosa",
-          "registros": 1,
-          "slug_especie": "brassavola-nodosa",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5314167",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56d7a9f93c16479905cba92f/summary",
-          "species": "Brassavola nodosa",
+          "url_gbif": "https://www.gbif.org/species/2695772",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e8406983c45700544e43e4/summary",
+          "species": "Tillandsia turneri",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Liliopsida",
-          "order": "Asparagales",
-          "family": "Orchidaceae",
-          "genus": "Brassavola"
-        },
-        {
-          "label": "Caesalpinia pulcherrima",
-          "registros": 1,
-          "slug_especie": "caesalpinia-pulcherrima",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2958715",
-          "species": "Caesalpinia pulcherrima",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Caesalpinia"
+          "order": "Poales",
+          "family": "Bromeliaceae",
+          "genus": "Tillandsia"
         },
         {
           "label": "Camonea umbellata",
@@ -11386,6 +11356,22 @@
           "order": "Asterales",
           "family": "Asteraceae",
           "genus": "Erechtites"
+        },
+        {
+          "label": "Brassavola nodosa",
+          "registros": 1,
+          "slug_especie": "brassavola-nodosa",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5314167",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d7a9f93c16479905cba92f/summary",
+          "species": "Brassavola nodosa",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Asparagales",
+          "family": "Orchidaceae",
+          "genus": "Brassavola"
         },
         {
           "label": "Eulophia maculata",
@@ -11600,6 +11586,21 @@
           "genus": "Senna"
         },
         {
+          "label": "Aristolochia anguicida",
+          "registros": 1,
+          "slug_especie": "aristolochia-anguicida",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2873992",
+          "species": "Aristolochia anguicida",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Piperales",
+          "family": "Aristolochiaceae",
+          "genus": "Aristolochia"
+        },
+        {
           "label": "Tillandsia balbisiana",
           "registros": 1,
           "slug_especie": "tillandsia-balbisiana",
@@ -11662,20 +11663,19 @@
           "genus": "Tillandsia"
         },
         {
-          "label": "Tillandsia turneri",
+          "label": "Caesalpinia pulcherrima",
           "registros": 1,
-          "slug_especie": "tillandsia-turneri",
+          "slug_especie": "caesalpinia-pulcherrima",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2695772",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e8406983c45700544e43e4/summary",
-          "species": "Tillandsia turneri",
+          "url_gbif": "https://www.gbif.org/species/2958715",
+          "species": "Caesalpinia pulcherrima",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Poales",
-          "family": "Bromeliaceae",
-          "genus": "Tillandsia"
+          "class": "Magnoliopsida",
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Caesalpinia"
         }
       ],
       "species_list_tematica": {
@@ -12522,6 +12522,21 @@
           "genus": "Espeletia"
         },
         {
+          "label": "Clusia elliptica",
+          "registros": 2,
+          "slug_especie": "clusia-elliptica",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5556546",
+          "species": "Clusia elliptica",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Malpighiales",
+          "family": "Clusiaceae",
+          "genus": "Clusia"
+        },
+        {
           "label": "Amphilophium paniculatum",
           "registros": 2,
           "slug_especie": "amphilophium-paniculatum",
@@ -12553,19 +12568,20 @@
           "genus": "Annona"
         },
         {
-          "label": "Clusia elliptica",
+          "label": "Stenocereus griseus",
           "registros": 2,
-          "slug_especie": "clusia-elliptica",
+          "slug_especie": "stenocereus-griseus",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5556546",
-          "species": "Clusia elliptica",
+          "url_gbif": "https://www.gbif.org/species/7284733",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5fe0ea5e213e934b5c4794f2/summary",
+          "species": "Stenocereus griseus",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Clusiaceae",
-          "genus": "Clusia"
+          "order": "Caryophyllales",
+          "family": "Cactaceae",
+          "genus": "Stenocereus"
         },
         {
           "label": "Condaminea corymbosa",
@@ -12581,22 +12597,6 @@
           "order": "Gentianales",
           "family": "Rubiaceae",
           "genus": "Condaminea"
-        },
-        {
-          "label": "Stenocereus griseus",
-          "registros": 2,
-          "slug_especie": "stenocereus-griseus",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7284733",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/5fe0ea5e213e934b5c4794f2/summary",
-          "species": "Stenocereus griseus",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Caryophyllales",
-          "family": "Cactaceae",
-          "genus": "Stenocereus"
         },
         {
           "label": "Acrocomia aculeata",
@@ -12615,50 +12615,20 @@
           "genus": "Acrocomia"
         },
         {
-          "label": "Aristolochia anguicida",
+          "label": "Tillandsia turneri",
           "registros": 1,
-          "slug_especie": "aristolochia-anguicida",
+          "slug_especie": "tillandsia-turneri",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2873992",
-          "species": "Aristolochia anguicida",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Piperales",
-          "family": "Aristolochiaceae",
-          "genus": "Aristolochia"
-        },
-        {
-          "label": "Brassavola nodosa",
-          "registros": 1,
-          "slug_especie": "brassavola-nodosa",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5314167",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56d7a9f93c16479905cba92f/summary",
-          "species": "Brassavola nodosa",
+          "url_gbif": "https://www.gbif.org/species/2695772",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e8406983c45700544e43e4/summary",
+          "species": "Tillandsia turneri",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Liliopsida",
-          "order": "Asparagales",
-          "family": "Orchidaceae",
-          "genus": "Brassavola"
-        },
-        {
-          "label": "Caesalpinia pulcherrima",
-          "registros": 1,
-          "slug_especie": "caesalpinia-pulcherrima",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2958715",
-          "species": "Caesalpinia pulcherrima",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Caesalpinia"
+          "order": "Poales",
+          "family": "Bromeliaceae",
+          "genus": "Tillandsia"
         },
         {
           "label": "Camonea umbellata",
@@ -12813,6 +12783,22 @@
           "order": "Asterales",
           "family": "Asteraceae",
           "genus": "Erechtites"
+        },
+        {
+          "label": "Brassavola nodosa",
+          "registros": 1,
+          "slug_especie": "brassavola-nodosa",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5314167",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d7a9f93c16479905cba92f/summary",
+          "species": "Brassavola nodosa",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Asparagales",
+          "family": "Orchidaceae",
+          "genus": "Brassavola"
         },
         {
           "label": "Eulophia maculata",
@@ -13012,6 +12998,21 @@
           "genus": "Senna"
         },
         {
+          "label": "Aristolochia anguicida",
+          "registros": 1,
+          "slug_especie": "aristolochia-anguicida",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2873992",
+          "species": "Aristolochia anguicida",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Piperales",
+          "family": "Aristolochiaceae",
+          "genus": "Aristolochia"
+        },
+        {
           "label": "Tillandsia balbisiana",
           "registros": 1,
           "slug_especie": "tillandsia-balbisiana",
@@ -13074,20 +13075,19 @@
           "genus": "Tillandsia"
         },
         {
-          "label": "Tillandsia turneri",
+          "label": "Caesalpinia pulcherrima",
           "registros": 1,
-          "slug_especie": "tillandsia-turneri",
+          "slug_especie": "caesalpinia-pulcherrima",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2695772",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e8406983c45700544e43e4/summary",
-          "species": "Tillandsia turneri",
+          "url_gbif": "https://www.gbif.org/species/2958715",
+          "species": "Caesalpinia pulcherrima",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Poales",
-          "family": "Bromeliaceae",
-          "genus": "Tillandsia"
+          "class": "Magnoliopsida",
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Caesalpinia"
         }
       ],
       "species_list_tematica": {
@@ -13631,22 +13631,6 @@
           "genus": "Henicorhina"
         },
         {
-          "label": "Coragyps atratus",
-          "registros": 18,
-          "slug_especie": "coragyps-atratus",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2481942",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4fe28f0106c67230e7394/summary",
-          "species": "Coragyps atratus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Accipitriformes",
-          "family": "Cathartidae",
-          "genus": "Coragyps"
-        },
-        {
           "label": "Myiothlypis coronata",
           "registros": 18,
           "slug_especie": "myiothlypis-coronata",
@@ -13662,19 +13646,20 @@
           "genus": "Myiothlypis"
         },
         {
-          "label": "Myioborus miniatus",
-          "registros": 15,
-          "slug_especie": "myioborus-miniatus",
+          "label": "Coragyps atratus",
+          "registros": 18,
+          "slug_especie": "coragyps-atratus",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2489837",
-          "species": "Myioborus miniatus",
+          "url_gbif": "https://www.gbif.org/species/2481942",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4fe28f0106c67230e7394/summary",
+          "species": "Coragyps atratus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Parulidae",
-          "genus": "Myioborus"
+          "order": "Accipitriformes",
+          "family": "Cathartidae",
+          "genus": "Coragyps"
         },
         {
           "label": "Thraupis episcopus",
@@ -13693,20 +13678,19 @@
           "genus": "Thraupis"
         },
         {
-          "label": "Cathartes aura",
-          "registros": 14,
-          "slug_especie": "cathartes-aura",
+          "label": "Myioborus miniatus",
+          "registros": 15,
+          "slug_especie": "myioborus-miniatus",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2481930",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c28bd8f0106c67230e7333/summary",
-          "species": "Cathartes aura",
+          "url_gbif": "https://www.gbif.org/species/2489837",
+          "species": "Myioborus miniatus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": "Accipitriformes",
-          "family": "Cathartidae",
-          "genus": "Cathartes"
+          "order": "Passeriformes",
+          "family": "Parulidae",
+          "genus": "Myioborus"
         },
         {
           "label": "Icterus chrysater",
@@ -13725,6 +13709,37 @@
           "genus": "Icterus"
         },
         {
+          "label": "Cathartes aura",
+          "registros": 14,
+          "slug_especie": "cathartes-aura",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2481930",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c28bd8f0106c67230e7333/summary",
+          "species": "Cathartes aura",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Accipitriformes",
+          "family": "Cathartidae",
+          "genus": "Cathartes"
+        },
+        {
+          "label": "Sericossypha albocristata",
+          "registros": 13,
+          "slug_especie": "sericossypha-albocristata",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2488675",
+          "species": "Sericossypha albocristata",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Sericossypha"
+        },
+        {
           "label": "Cyanocorax yncas",
           "registros": 13,
           "slug_especie": "cyanocorax-yncas",
@@ -13738,21 +13753,6 @@
           "order": "Passeriformes",
           "family": "Corvidae",
           "genus": "Cyanocorax"
-        },
-        {
-          "label": "Odontophorus strophium",
-          "registros": 13,
-          "slug_especie": "odontophorus-strophium",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5228041",
-          "species": "Odontophorus strophium",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Galliformes",
-          "family": "Odontophoridae",
-          "genus": "Odontophorus"
         },
         {
           "label": "Pheugopedius mystacalis",
@@ -13770,19 +13770,19 @@
           "genus": "Pheugopedius"
         },
         {
-          "label": "Sericossypha albocristata",
+          "label": "Odontophorus strophium",
           "registros": 13,
-          "slug_especie": "sericossypha-albocristata",
+          "slug_especie": "odontophorus-strophium",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2488675",
-          "species": "Sericossypha albocristata",
+          "url_gbif": "https://www.gbif.org/species/5228041",
+          "species": "Odontophorus strophium",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Sericossypha"
+          "order": "Galliformes",
+          "family": "Odontophoridae",
+          "genus": "Odontophorus"
         }
       ],
       "species_list_tematica": {
@@ -14017,24 +14017,6 @@
         ],
         "cites": [
           {
-            "label": "Amazilia tzacatl",
-            "registros": 8,
-            "slug_especie": "amazilia-tzacatl",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476441",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e782a283c45700544e407e/summary",
-            "species": "Amazilia tzacatl",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Amazilia"
-          },
-          {
             "label": "Rupornis magnirostris",
             "registros": 8,
             "slug_especie": "rupornis-magnirostris",
@@ -14051,6 +14033,24 @@
             "order": "Accipitriformes",
             "family": "Accipitridae",
             "genus": "Rupornis"
+          },
+          {
+            "label": "Amazilia tzacatl",
+            "registros": 8,
+            "slug_especie": "amazilia-tzacatl",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2476441",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e782a283c45700544e407e/summary",
+            "species": "Amazilia tzacatl",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Amazilia"
           },
           {
             "label": "Anthracothorax nigricollis",
@@ -14089,39 +14089,22 @@
             "genus": "Chrysolampis"
           },
           {
-            "label": "Adelomyia melanogenys",
+            "label": "Coeligena prunellei",
             "registros": 3,
-            "slug_especie": "adelomyia-melanogenys",
+            "slug_especie": "coeligena-prunellei",
             "slug_tematica": "cites-ii",
             "tematica_label": "Apéndice CITES II",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476168",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56bddf40f0106c67230e72ec/summary",
-            "species": "Adelomyia melanogenys",
+            "url_gbif": "https://www.gbif.org/species/2477039",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/5c6b2ae2d76e3b71032c8c0e/summary",
+            "species": "Coeligena prunellei",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Aves",
             "order": "Apodiformes",
             "family": "Trochilidae",
-            "genus": "Adelomyia"
-          },
-          {
-            "label": "Amazona mercenaria",
-            "registros": 3,
-            "slug_especie": "amazona-mercenaria",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2479636",
-            "species": "Amazona mercenaria",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Psittaciformes",
-            "family": "Psittacidae",
-            "genus": "Amazona"
+            "genus": "Coeligena"
           },
           {
             "label": "Asio stygius",
@@ -14160,22 +14143,21 @@
             "genus": "Chalybura"
           },
           {
-            "label": "Coeligena prunellei",
+            "label": "Amazona mercenaria",
             "registros": 3,
-            "slug_especie": "coeligena-prunellei",
+            "slug_especie": "amazona-mercenaria",
             "slug_tematica": "cites-ii",
             "tematica_label": "Apéndice CITES II",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2477039",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/5c6b2ae2d76e3b71032c8c0e/summary",
-            "species": "Coeligena prunellei",
+            "url_gbif": "https://www.gbif.org/species/2479636",
+            "species": "Amazona mercenaria",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Coeligena"
+            "order": "Psittaciformes",
+            "family": "Psittacidae",
+            "genus": "Amazona"
           },
           {
             "label": "Colibri coruscans",
@@ -14264,6 +14246,24 @@
             "order": "Apodiformes",
             "family": "Trochilidae",
             "genus": "Ocreatus"
+          },
+          {
+            "label": "Adelomyia melanogenys",
+            "registros": 3,
+            "slug_especie": "adelomyia-melanogenys",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2476168",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56bddf40f0106c67230e72ec/summary",
+            "species": "Adelomyia melanogenys",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Adelomyia"
           }
         ],
         "migratorias": [

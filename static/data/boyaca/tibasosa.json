@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -1261,18 +1261,18 @@
           "slug_tematica": "endemicas"
         },
         {
+          "label": "Pleopeltis orientalis",
+          "slug_especie": "pleopeltis-orientalis",
+          "registros": 8,
+          "url_gbif": "https://www.gbif.org/species/4029042",
+          "slug_tematica": "endemicas"
+        },
+        {
           "label": "Calea peruviana",
           "slug_especie": "calea-peruviana",
           "registros": 8,
           "url_gbif": "https://www.gbif.org/species/3147557",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56cd2845207ecea54a561e69/summary",
-          "slug_tematica": "endemicas"
-        },
-        {
-          "label": "Pleopeltis orientalis",
-          "slug_especie": "pleopeltis-orientalis",
-          "registros": 8,
-          "url_gbif": "https://www.gbif.org/species/4029042",
           "slug_tematica": "endemicas"
         },
         {
@@ -1306,10 +1306,11 @@
           "slug_tematica": "endemicas"
         },
         {
-          "label": "Bucquetia glutinosa",
-          "slug_especie": "bucquetia-glutinosa",
+          "label": "Calea sessiliflora",
+          "slug_especie": "calea-sessiliflora",
           "registros": 2,
-          "url_gbif": "https://www.gbif.org/species/3861440",
+          "url_gbif": "https://www.gbif.org/species/3130512",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/594c8e9d2f4fd7bc7f3993dc/summary",
           "slug_tematica": "endemicas"
         }
       ]
@@ -1488,19 +1489,19 @@
           "slug_tematica": "invasoras"
         },
         {
-          "label": "Ricinus communis",
-          "slug_especie": "ricinus-communis",
+          "label": "Verbascum virgatum",
+          "slug_especie": "verbascum-virgatum",
           "registros": 4,
-          "url_gbif": "https://www.gbif.org/species/5380041",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e79c7b83c45700544e4231/summary",
-          "slug_tematica": "exoticas-riesgo-invasion-total"
+          "url_gbif": "https://www.gbif.org/species/3171954",
+          "slug_tematica": "exoticas"
         },
         {
-          "label": "Senecio madagascariensis",
-          "slug_especie": "senecio-madagascariensis",
+          "label": "Trifolium pratense",
+          "slug_especie": "trifolium-pratense",
           "registros": 4,
-          "url_gbif": "https://www.gbif.org/species/3107722",
-          "slug_tematica": "exoticas-riesgo-invasion-total"
+          "url_gbif": "https://www.gbif.org/species/8324121",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/594044502f4fd7bc7f394199/summary",
+          "slug_tematica": "exoticas"
         },
         {
           "label": "Tecoma stans",
@@ -1520,19 +1521,19 @@
           "slug_tematica": "exoticas"
         },
         {
-          "label": "Tecoma stans",
-          "slug_especie": "tecoma-stans",
-          "registros": 4,
-          "url_gbif": "https://www.gbif.org/species/3172492",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7aa5783c45700544e42c2/summary",
-          "slug_tematica": "exoticas"
-        },
-        {
           "label": "Trifolium pratense",
           "slug_especie": "trifolium-pratense",
           "registros": 4,
           "url_gbif": "https://www.gbif.org/species/8324121",
           "url_cbc": "https://catalogo.biodiversidad.co/file/594044502f4fd7bc7f394199/summary",
+          "slug_tematica": "exoticas"
+        },
+        {
+          "label": "Tecoma stans",
+          "slug_especie": "tecoma-stans",
+          "registros": 4,
+          "url_gbif": "https://www.gbif.org/species/3172492",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7aa5783c45700544e42c2/summary",
           "slug_tematica": "exoticas"
         },
         {
@@ -1559,6 +1560,13 @@
           "slug_tematica": "exoticas"
         },
         {
+          "label": "Datura stramonium",
+          "slug_especie": "datura-stramonium",
+          "registros": 3,
+          "url_gbif": "https://www.gbif.org/species/2928751",
+          "slug_tematica": "exoticas"
+        },
+        {
           "label": "Cirsium vulgare",
           "slug_especie": "cirsium-vulgare",
           "registros": 3,
@@ -1567,24 +1575,17 @@
           "slug_tematica": "exoticas"
         },
         {
-          "label": "Datura stramonium",
-          "slug_especie": "datura-stramonium",
-          "registros": 3,
-          "url_gbif": "https://www.gbif.org/species/2928751",
-          "slug_tematica": "exoticas"
-        },
-        {
-          "label": "Chaptalia exscapa",
-          "slug_especie": "chaptalia-exscapa",
-          "registros": 2,
-          "url_gbif": "https://www.gbif.org/species/3090320",
-          "slug_tematica": "exoticas"
-        },
-        {
           "label": "Medicago lupulina",
           "slug_especie": "medicago-lupulina",
           "registros": 2,
           "url_gbif": "https://www.gbif.org/species/2965201",
+          "slug_tematica": "exoticas"
+        },
+        {
+          "label": "Tropaeolum majus",
+          "slug_especie": "tropaeolum-majus",
+          "registros": 2,
+          "url_gbif": "https://www.gbif.org/species/2889934",
           "slug_tematica": "exoticas"
         }
       ],
@@ -2735,6 +2736,21 @@
           "genus": "Morella"
         },
         {
+          "label": "Mesosphaerum perbullatum",
+          "registros": 14,
+          "slug_especie": "mesosphaerum-perbullatum",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/8191556",
+          "species": "Mesosphaerum perbullatum",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Lamiales",
+          "family": "Lamiaceae",
+          "genus": "Mesosphaerum"
+        },
+        {
           "label": "Epidendrum arachnoglossum",
           "registros": 14,
           "slug_especie": "epidendrum-arachnoglossum",
@@ -2749,21 +2765,6 @@
           "order": "Asparagales",
           "family": "Orchidaceae",
           "genus": "Epidendrum"
-        },
-        {
-          "label": "Mesosphaerum perbullatum",
-          "registros": 14,
-          "slug_especie": "mesosphaerum-perbullatum",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/8191556",
-          "species": "Mesosphaerum perbullatum",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Lamiales",
-          "family": "Lamiaceae",
-          "genus": "Mesosphaerum"
         },
         {
           "label": "Eryngium humboldtii",
@@ -3104,6 +3105,40 @@
             "genus": "Evolvulus"
           },
           {
+            "label": "Oxalis cuatrecasasii",
+            "registros": 2,
+            "slug_especie": "oxalis-cuatrecasasii",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "angiospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/3627637",
+            "species": "Oxalis cuatrecasasii",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Oxalidales",
+            "family": "Oxalidaceae",
+            "genus": "Oxalis"
+          },
+          {
+            "label": "Symplocos theiformis",
+            "registros": 2,
+            "slug_especie": "symplocos-theiformis",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "angiospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/3643785",
+            "species": "Symplocos theiformis",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Ericales",
+            "family": "Symplocaceae",
+            "genus": "Symplocos"
+          },
+          {
             "label": "Bucquetia glutinosa",
             "registros": 2,
             "slug_especie": "bucquetia-glutinosa",
@@ -3173,6 +3208,23 @@
             "genus": "Chromolaena"
           },
           {
+            "label": "Spermacoce chartensis",
+            "registros": 2,
+            "slug_especie": "spermacoce-chartensis",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "angiospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2918241",
+            "species": "Spermacoce chartensis",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Gentianales",
+            "family": "Rubiaceae",
+            "genus": "Spermacoce"
+          },
+          {
             "label": "Ficus tequendamae",
             "registros": 2,
             "slug_especie": "ficus-tequendamae",
@@ -3206,57 +3258,6 @@
             "order": "Myrtales",
             "family": "Melastomataceae",
             "genus": "Miconia"
-          },
-          {
-            "label": "Oxalis cuatrecasasii",
-            "registros": 2,
-            "slug_especie": "oxalis-cuatrecasasii",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "angiospermas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3627637",
-            "species": "Oxalis cuatrecasasii",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Oxalidales",
-            "family": "Oxalidaceae",
-            "genus": "Oxalis"
-          },
-          {
-            "label": "Spermacoce chartensis",
-            "registros": 2,
-            "slug_especie": "spermacoce-chartensis",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "angiospermas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2918241",
-            "species": "Spermacoce chartensis",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Gentianales",
-            "family": "Rubiaceae",
-            "genus": "Spermacoce"
-          },
-          {
-            "label": "Symplocos theiformis",
-            "registros": 2,
-            "slug_especie": "symplocos-theiformis",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "angiospermas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3643785",
-            "species": "Symplocos theiformis",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Ericales",
-            "family": "Symplocaceae",
-            "genus": "Symplocos"
           }
         ],
         "exoticas-total": [
@@ -3314,57 +3315,21 @@
             "genus": "Acacia"
           },
           {
-            "label": "Ricinus communis",
+            "label": "Verbascum virgatum",
             "registros": 4,
-            "slug_especie": "ricinus-communis",
-            "slug_tematica": "exoticas-riesgo-invasion-total",
-            "tematica_label": "Exóticas con riesgo de invasión",
-            "slug_grupo": "angiospermas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5380041",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e79c7b83c45700544e4231/summary",
-            "species": "Ricinus communis",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Malpighiales",
-            "family": "Euphorbiaceae",
-            "genus": "Ricinus"
-          },
-          {
-            "label": "Senecio madagascariensis",
-            "registros": 4,
-            "slug_especie": "senecio-madagascariensis",
-            "slug_tematica": "exoticas-riesgo-invasion-total",
-            "tematica_label": "Exóticas con riesgo de invasión",
-            "slug_grupo": "angiospermas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3107722",
-            "species": "Senecio madagascariensis",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Asterales",
-            "family": "Asteraceae",
-            "genus": "Senecio"
-          },
-          {
-            "label": "Tecoma stans",
-            "registros": 4,
-            "slug_especie": "tecoma-stans",
+            "slug_especie": "verbascum-virgatum",
             "slug_tematica": "exoticas",
             "tematica_label": "Exóticas",
             "slug_grupo": "angiospermas",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3172492",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7aa5783c45700544e42c2/summary",
-            "species": "Tecoma stans",
+            "url_gbif": "https://www.gbif.org/species/3171954",
+            "species": "Verbascum virgatum",
             "kingdom": "Plantae",
             "phylum": "Tracheophyta",
             "class": "Magnoliopsida",
             "order": "Lamiales",
-            "family": "Bignoniaceae",
-            "genus": "Tecoma"
+            "family": "Scrophulariaceae",
+            "genus": "Verbascum"
           },
           {
             "label": "Trifolium pratense",
@@ -3385,39 +3350,57 @@
             "genus": "Trifolium"
           },
           {
-            "label": "Verbascum virgatum",
+            "label": "Tecoma stans",
             "registros": 4,
-            "slug_especie": "verbascum-virgatum",
+            "slug_especie": "tecoma-stans",
             "slug_tematica": "exoticas",
             "tematica_label": "Exóticas",
             "slug_grupo": "angiospermas",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3171954",
-            "species": "Verbascum virgatum",
+            "url_gbif": "https://www.gbif.org/species/3172492",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7aa5783c45700544e42c2/summary",
+            "species": "Tecoma stans",
             "kingdom": "Plantae",
             "phylum": "Tracheophyta",
             "class": "Magnoliopsida",
             "order": "Lamiales",
-            "family": "Scrophulariaceae",
-            "genus": "Verbascum"
+            "family": "Bignoniaceae",
+            "genus": "Tecoma"
           },
           {
-            "label": "Agave americana",
-            "registros": 3,
-            "slug_especie": "agave-americana",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
+            "label": "Senecio madagascariensis",
+            "registros": 4,
+            "slug_especie": "senecio-madagascariensis",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
             "slug_grupo": "angiospermas",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2767031",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/5957e9b72f4fd7bc7f39ce0c/summary",
-            "species": "Agave americana",
+            "url_gbif": "https://www.gbif.org/species/3107722",
+            "species": "Senecio madagascariensis",
             "kingdom": "Plantae",
             "phylum": "Tracheophyta",
-            "class": "Liliopsida",
-            "order": "Asparagales",
-            "family": "Asparagaceae",
-            "genus": "Agave"
+            "class": "Magnoliopsida",
+            "order": "Asterales",
+            "family": "Asteraceae",
+            "genus": "Senecio"
+          },
+          {
+            "label": "Ricinus communis",
+            "registros": 4,
+            "slug_especie": "ricinus-communis",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "angiospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5380041",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e79c7b83c45700544e4231/summary",
+            "species": "Ricinus communis",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Malpighiales",
+            "family": "Euphorbiaceae",
+            "genus": "Ricinus"
           },
           {
             "label": "Anthoxanthum odoratum",
@@ -3454,6 +3437,24 @@
             "order": "Asterales",
             "family": "Asteraceae",
             "genus": "Cirsium"
+          },
+          {
+            "label": "Agave americana",
+            "registros": 3,
+            "slug_especie": "agave-americana",
+            "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
+            "slug_grupo": "angiospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2767031",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/5957e9b72f4fd7bc7f39ce0c/summary",
+            "species": "Agave americana",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Liliopsida",
+            "order": "Asparagales",
+            "family": "Asparagaceae",
+            "genus": "Agave"
           },
           {
             "label": "Datura stramonium",
@@ -3895,20 +3896,20 @@
           "genus": "Icterus"
         },
         {
-          "label": "Pheucticus aureoventris",
+          "label": "Troglodytes aedon",
           "registros": 21,
-          "slug_especie": "pheucticus-aureoventris",
+          "slug_especie": "troglodytes-aedon",
           "slug_grupo": "animales",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2490499",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cccc56207ecea54a561e45/summary",
-          "species": "Pheucticus aureoventris",
+          "url_gbif": "https://www.gbif.org/species/5231459",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf90d83c16479905cba7ee/summary",
+          "species": "Troglodytes aedon",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Cardinalidae",
-          "genus": "Pheucticus"
+          "family": "Troglodytidae",
+          "genus": "Troglodytes"
         },
         {
           "label": "Synallaxis subpudica",
@@ -3927,20 +3928,20 @@
           "genus": "Synallaxis"
         },
         {
-          "label": "Troglodytes aedon",
+          "label": "Pheucticus aureoventris",
           "registros": 21,
-          "slug_especie": "troglodytes-aedon",
+          "slug_especie": "pheucticus-aureoventris",
           "slug_grupo": "animales",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5231459",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf90d83c16479905cba7ee/summary",
-          "species": "Troglodytes aedon",
+          "url_gbif": "https://www.gbif.org/species/2490499",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cccc56207ecea54a561e45/summary",
+          "species": "Pheucticus aureoventris",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Troglodytidae",
-          "genus": "Troglodytes"
+          "family": "Cardinalidae",
+          "genus": "Pheucticus"
         }
       ],
       "species_list_tematica": {
@@ -5460,6 +5461,22 @@
           "genus": "Icterus"
         },
         {
+          "label": "Troglodytes aedon",
+          "registros": 21,
+          "slug_especie": "troglodytes-aedon",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5231459",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf90d83c16479905cba7ee/summary",
+          "species": "Troglodytes aedon",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Troglodytidae",
+          "genus": "Troglodytes"
+        },
+        {
           "label": "Pheucticus aureoventris",
           "registros": 21,
           "slug_especie": "pheucticus-aureoventris",
@@ -5490,22 +5507,6 @@
           "order": "Passeriformes",
           "family": "Furnariidae",
           "genus": "Synallaxis"
-        },
-        {
-          "label": "Troglodytes aedon",
-          "registros": 21,
-          "slug_especie": "troglodytes-aedon",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5231459",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf90d83c16479905cba7ee/summary",
-          "species": "Troglodytes aedon",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Troglodytidae",
-          "genus": "Troglodytes"
         }
       ],
       "species_list_tematica": {
@@ -9057,22 +9058,6 @@
           "genus": "Actinote"
         },
         {
-          "label": "Apis mellifera",
-          "registros": 3,
-          "slug_especie": "apis-mellifera",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1341976",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/58b995177bd3becd0fc7395e/summary",
-          "species": "Apis mellifera",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Hymenoptera",
-          "family": "Apidae",
-          "genus": "Apis"
-        },
-        {
           "label": "Bombus pauloensis",
           "registros": 3,
           "slug_especie": "bombus-pauloensis",
@@ -9086,21 +9071,6 @@
           "order": "Hymenoptera",
           "family": "Apidae",
           "genus": "Bombus"
-        },
-        {
-          "label": "Spartocera alternata",
-          "registros": 3,
-          "slug_especie": "spartocera-alternata",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4391014",
-          "species": "Spartocera alternata",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Hemiptera",
-          "family": "Coreidae",
-          "genus": "Spartocera"
         },
         {
           "label": "Thasus heteropus",
@@ -9118,49 +9088,35 @@
           "genus": "Thasus"
         },
         {
-          "label": "Agesander ruficornis",
-          "registros": 2,
-          "slug_especie": "agesander-ruficornis",
+          "label": "Spartocera alternata",
+          "registros": 3,
+          "slug_especie": "spartocera-alternata",
           "slug_grupo": "insectos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1703199",
-          "species": "Agesander ruficornis",
+          "url_gbif": "https://www.gbif.org/species/4391014",
+          "species": "Spartocera alternata",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
-          "order": "Orthoptera",
-          "family": "Acrididae",
-          "genus": "Agesander"
+          "order": "Hemiptera",
+          "family": "Coreidae",
+          "genus": "Spartocera"
         },
         {
-          "label": "Deretrachys juvencus",
-          "registros": 2,
-          "slug_especie": "deretrachys-juvencus",
+          "label": "Apis mellifera",
+          "registros": 3,
+          "slug_especie": "apis-mellifera",
           "slug_grupo": "insectos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1099598",
-          "species": "Deretrachys juvencus",
+          "url_gbif": "https://www.gbif.org/species/1341976",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/58b995177bd3becd0fc7395e/summary",
+          "species": "Apis mellifera",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
-          "order": "Coleoptera",
-          "family": "Cerambycidae",
-          "genus": "Deretrachys"
-        },
-        {
-          "label": "Dione glycera",
-          "registros": 2,
-          "slug_especie": "dione-glycera",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5129257",
-          "species": "Dione glycera",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Dione"
+          "order": "Hymenoptera",
+          "family": "Apidae",
+          "genus": "Apis"
         },
         {
           "label": "Harmonia axyridis",
@@ -9193,19 +9149,34 @@
           "genus": "Lactista"
         },
         {
-          "label": "Penaincisalia loxurina",
+          "label": "Agesander ruficornis",
           "registros": 2,
-          "slug_especie": "penaincisalia-loxurina",
+          "slug_especie": "agesander-ruficornis",
           "slug_grupo": "insectos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/10560255",
-          "species": "Penaincisalia loxurina",
+          "url_gbif": "https://www.gbif.org/species/1703199",
+          "species": "Agesander ruficornis",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Lycaenidae",
-          "genus": "Penaincisalia"
+          "order": "Orthoptera",
+          "family": "Acrididae",
+          "genus": "Agesander"
+        },
+        {
+          "label": "Rhionaeschna marchali",
+          "registros": 2,
+          "slug_especie": "rhionaeschna-marchali",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1424971",
+          "species": "Rhionaeschna marchali",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Odonata",
+          "family": "Aeshnidae",
+          "genus": "Rhionaeschna"
         },
         {
           "label": "Polybia ignobilis",
@@ -9223,19 +9194,49 @@
           "genus": "Polybia"
         },
         {
-          "label": "Rhionaeschna marchali",
+          "label": "Penaincisalia loxurina",
           "registros": 2,
-          "slug_especie": "rhionaeschna-marchali",
+          "slug_especie": "penaincisalia-loxurina",
           "slug_grupo": "insectos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1424971",
-          "species": "Rhionaeschna marchali",
+          "url_gbif": "https://www.gbif.org/species/10560255",
+          "species": "Penaincisalia loxurina",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
-          "order": "Odonata",
-          "family": "Aeshnidae",
-          "genus": "Rhionaeschna"
+          "order": "Lepidoptera",
+          "family": "Lycaenidae",
+          "genus": "Penaincisalia"
+        },
+        {
+          "label": "Deretrachys juvencus",
+          "registros": 2,
+          "slug_especie": "deretrachys-juvencus",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1099598",
+          "species": "Deretrachys juvencus",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Coleoptera",
+          "family": "Cerambycidae",
+          "genus": "Deretrachys"
+        },
+        {
+          "label": "Dione glycera",
+          "registros": 2,
+          "slug_especie": "dione-glycera",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5129257",
+          "species": "Dione glycera",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Dione"
         }
       ],
       "species_list_tematica": {
@@ -9647,6 +9648,36 @@
           "genus": "Actinote"
         },
         {
+          "label": "Thasus heteropus",
+          "registros": 3,
+          "slug_especie": "thasus-heteropus",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2050098",
+          "species": "Thasus heteropus",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hemiptera",
+          "family": "Coreidae",
+          "genus": "Thasus"
+        },
+        {
+          "label": "Spartocera alternata",
+          "registros": 3,
+          "slug_especie": "spartocera-alternata",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/4391014",
+          "species": "Spartocera alternata",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hemiptera",
+          "family": "Coreidae",
+          "genus": "Spartocera"
+        },
+        {
           "label": "Apis mellifera",
           "registros": 3,
           "slug_especie": "apis-mellifera",
@@ -9693,34 +9724,19 @@
           "genus": "Bombus"
         },
         {
-          "label": "Spartocera alternata",
-          "registros": 3,
-          "slug_especie": "spartocera-alternata",
+          "label": "Harmonia axyridis",
+          "registros": 2,
+          "slug_especie": "harmonia-axyridis",
           "slug_grupo": "invertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4391014",
-          "species": "Spartocera alternata",
+          "url_gbif": "https://www.gbif.org/species/4989904",
+          "species": "Harmonia axyridis",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
-          "order": "Hemiptera",
-          "family": "Coreidae",
-          "genus": "Spartocera"
-        },
-        {
-          "label": "Thasus heteropus",
-          "registros": 3,
-          "slug_especie": "thasus-heteropus",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2050098",
-          "species": "Thasus heteropus",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Hemiptera",
-          "family": "Coreidae",
-          "genus": "Thasus"
+          "order": "Coleoptera",
+          "family": "Coccinellidae",
+          "genus": "Harmonia"
         },
         {
           "label": "Agesander ruficornis",
@@ -9736,6 +9752,66 @@
           "order": "Orthoptera",
           "family": "Acrididae",
           "genus": "Agesander"
+        },
+        {
+          "label": "Rhionaeschna marchali",
+          "registros": 2,
+          "slug_especie": "rhionaeschna-marchali",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1424971",
+          "species": "Rhionaeschna marchali",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Odonata",
+          "family": "Aeshnidae",
+          "genus": "Rhionaeschna"
+        },
+        {
+          "label": "Polybia ignobilis",
+          "registros": 2,
+          "slug_especie": "polybia-ignobilis",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5032870",
+          "species": "Polybia ignobilis",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hymenoptera",
+          "family": "Eumenidae",
+          "genus": "Polybia"
+        },
+        {
+          "label": "Penaincisalia loxurina",
+          "registros": 2,
+          "slug_especie": "penaincisalia-loxurina",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/10560255",
+          "species": "Penaincisalia loxurina",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Lycaenidae",
+          "genus": "Penaincisalia"
+        },
+        {
+          "label": "Lactista stramineus",
+          "registros": 2,
+          "slug_especie": "lactista-stramineus",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1710178",
+          "species": "Lactista stramineus",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Orthoptera",
+          "family": "Acrididae",
+          "genus": "Lactista"
         },
         {
           "label": "Deretrachys juvencus",
@@ -9766,81 +9842,6 @@
           "order": "Lepidoptera",
           "family": "Nymphalidae",
           "genus": "Dione"
-        },
-        {
-          "label": "Harmonia axyridis",
-          "registros": 2,
-          "slug_especie": "harmonia-axyridis",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4989904",
-          "species": "Harmonia axyridis",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Coleoptera",
-          "family": "Coccinellidae",
-          "genus": "Harmonia"
-        },
-        {
-          "label": "Lactista stramineus",
-          "registros": 2,
-          "slug_especie": "lactista-stramineus",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1710178",
-          "species": "Lactista stramineus",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Orthoptera",
-          "family": "Acrididae",
-          "genus": "Lactista"
-        },
-        {
-          "label": "Penaincisalia loxurina",
-          "registros": 2,
-          "slug_especie": "penaincisalia-loxurina",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/10560255",
-          "species": "Penaincisalia loxurina",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Lycaenidae",
-          "genus": "Penaincisalia"
-        },
-        {
-          "label": "Polybia ignobilis",
-          "registros": 2,
-          "slug_especie": "polybia-ignobilis",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5032870",
-          "species": "Polybia ignobilis",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Hymenoptera",
-          "family": "Eumenidae",
-          "genus": "Polybia"
-        },
-        {
-          "label": "Rhionaeschna marchali",
-          "registros": 2,
-          "slug_especie": "rhionaeschna-marchali",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1424971",
-          "species": "Rhionaeschna marchali",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Odonata",
-          "family": "Aeshnidae",
-          "genus": "Rhionaeschna"
         }
       ],
       "species_list_tematica": {
@@ -11384,6 +11385,21 @@
           "genus": "Morella"
         },
         {
+          "label": "Mesosphaerum perbullatum",
+          "registros": 14,
+          "slug_especie": "mesosphaerum-perbullatum",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/8191556",
+          "species": "Mesosphaerum perbullatum",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Lamiales",
+          "family": "Lamiaceae",
+          "genus": "Mesosphaerum"
+        },
+        {
           "label": "Epidendrum arachnoglossum",
           "registros": 14,
           "slug_especie": "epidendrum-arachnoglossum",
@@ -11400,19 +11416,20 @@
           "genus": "Epidendrum"
         },
         {
-          "label": "Mesosphaerum perbullatum",
-          "registros": 14,
-          "slug_especie": "mesosphaerum-perbullatum",
+          "label": "Hesperomeles obtusifolia",
+          "registros": 13,
+          "slug_especie": "hesperomeles-obtusifolia",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/8191556",
-          "species": "Mesosphaerum perbullatum",
+          "url_gbif": "https://www.gbif.org/species/2988522",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7866183c45700544e40bf/summary",
+          "species": "Hesperomeles obtusifolia",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Lamiales",
-          "family": "Lamiaceae",
-          "genus": "Mesosphaerum"
+          "order": "Rosales",
+          "family": "Rosaceae",
+          "genus": "Hesperomeles"
         },
         {
           "label": "Eryngium humboldtii",
@@ -11429,22 +11446,6 @@
           "order": "Apiales",
           "family": "Apiaceae",
           "genus": "Eryngium"
-        },
-        {
-          "label": "Hesperomeles obtusifolia",
-          "registros": 13,
-          "slug_especie": "hesperomeles-obtusifolia",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2988522",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7866183c45700544e40bf/summary",
-          "species": "Hesperomeles obtusifolia",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Rosales",
-          "family": "Rosaceae",
-          "genus": "Hesperomeles"
         }
       ],
       "species_list_tematica": {
@@ -11997,57 +11998,21 @@
             "genus": "Acacia"
           },
           {
-            "label": "Ricinus communis",
+            "label": "Verbascum virgatum",
             "registros": 4,
-            "slug_especie": "ricinus-communis",
-            "slug_tematica": "exoticas-riesgo-invasion-total",
-            "tematica_label": "Exóticas con riesgo de invasión",
-            "slug_grupo": "plantas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5380041",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e79c7b83c45700544e4231/summary",
-            "species": "Ricinus communis",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Malpighiales",
-            "family": "Euphorbiaceae",
-            "genus": "Ricinus"
-          },
-          {
-            "label": "Senecio madagascariensis",
-            "registros": 4,
-            "slug_especie": "senecio-madagascariensis",
-            "slug_tematica": "exoticas-riesgo-invasion-total",
-            "tematica_label": "Exóticas con riesgo de invasión",
-            "slug_grupo": "plantas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3107722",
-            "species": "Senecio madagascariensis",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Asterales",
-            "family": "Asteraceae",
-            "genus": "Senecio"
-          },
-          {
-            "label": "Tecoma stans",
-            "registros": 4,
-            "slug_especie": "tecoma-stans",
+            "slug_especie": "verbascum-virgatum",
             "slug_tematica": "exoticas",
             "tematica_label": "Exóticas",
             "slug_grupo": "plantas",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3172492",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7aa5783c45700544e42c2/summary",
-            "species": "Tecoma stans",
+            "url_gbif": "https://www.gbif.org/species/3171954",
+            "species": "Verbascum virgatum",
             "kingdom": "Plantae",
             "phylum": "Tracheophyta",
             "class": "Magnoliopsida",
             "order": "Lamiales",
-            "family": "Bignoniaceae",
-            "genus": "Tecoma"
+            "family": "Scrophulariaceae",
+            "genus": "Verbascum"
           },
           {
             "label": "Trifolium pratense",
@@ -12068,39 +12033,57 @@
             "genus": "Trifolium"
           },
           {
-            "label": "Verbascum virgatum",
+            "label": "Tecoma stans",
             "registros": 4,
-            "slug_especie": "verbascum-virgatum",
+            "slug_especie": "tecoma-stans",
             "slug_tematica": "exoticas",
             "tematica_label": "Exóticas",
             "slug_grupo": "plantas",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3171954",
-            "species": "Verbascum virgatum",
+            "url_gbif": "https://www.gbif.org/species/3172492",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7aa5783c45700544e42c2/summary",
+            "species": "Tecoma stans",
             "kingdom": "Plantae",
             "phylum": "Tracheophyta",
             "class": "Magnoliopsida",
             "order": "Lamiales",
-            "family": "Scrophulariaceae",
-            "genus": "Verbascum"
+            "family": "Bignoniaceae",
+            "genus": "Tecoma"
           },
           {
-            "label": "Agave americana",
-            "registros": 3,
-            "slug_especie": "agave-americana",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
+            "label": "Senecio madagascariensis",
+            "registros": 4,
+            "slug_especie": "senecio-madagascariensis",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
             "slug_grupo": "plantas",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2767031",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/5957e9b72f4fd7bc7f39ce0c/summary",
-            "species": "Agave americana",
+            "url_gbif": "https://www.gbif.org/species/3107722",
+            "species": "Senecio madagascariensis",
             "kingdom": "Plantae",
             "phylum": "Tracheophyta",
-            "class": "Liliopsida",
-            "order": "Asparagales",
-            "family": "Asparagaceae",
-            "genus": "Agave"
+            "class": "Magnoliopsida",
+            "order": "Asterales",
+            "family": "Asteraceae",
+            "genus": "Senecio"
+          },
+          {
+            "label": "Ricinus communis",
+            "registros": 4,
+            "slug_especie": "ricinus-communis",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "plantas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5380041",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e79c7b83c45700544e4231/summary",
+            "species": "Ricinus communis",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Malpighiales",
+            "family": "Euphorbiaceae",
+            "genus": "Ricinus"
           },
           {
             "label": "Anthoxanthum odoratum",
@@ -12137,6 +12120,24 @@
             "order": "Asterales",
             "family": "Asteraceae",
             "genus": "Cirsium"
+          },
+          {
+            "label": "Agave americana",
+            "registros": 3,
+            "slug_especie": "agave-americana",
+            "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
+            "slug_grupo": "plantas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2767031",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/5957e9b72f4fd7bc7f39ce0c/summary",
+            "species": "Agave americana",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Liliopsida",
+            "order": "Asparagales",
+            "family": "Asparagaceae",
+            "genus": "Agave"
           },
           {
             "label": "Datura stramonium",
@@ -12879,6 +12880,21 @@
           "genus": "Morella"
         },
         {
+          "label": "Mesosphaerum perbullatum",
+          "registros": 14,
+          "slug_especie": "mesosphaerum-perbullatum",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/8191556",
+          "species": "Mesosphaerum perbullatum",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Lamiales",
+          "family": "Lamiaceae",
+          "genus": "Mesosphaerum"
+        },
+        {
           "label": "Epidendrum arachnoglossum",
           "registros": 14,
           "slug_especie": "epidendrum-arachnoglossum",
@@ -12895,19 +12911,20 @@
           "genus": "Epidendrum"
         },
         {
-          "label": "Mesosphaerum perbullatum",
-          "registros": 14,
-          "slug_especie": "mesosphaerum-perbullatum",
+          "label": "Hesperomeles obtusifolia",
+          "registros": 13,
+          "slug_especie": "hesperomeles-obtusifolia",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/8191556",
-          "species": "Mesosphaerum perbullatum",
+          "url_gbif": "https://www.gbif.org/species/2988522",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7866183c45700544e40bf/summary",
+          "species": "Hesperomeles obtusifolia",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Lamiales",
-          "family": "Lamiaceae",
-          "genus": "Mesosphaerum"
+          "order": "Rosales",
+          "family": "Rosaceae",
+          "genus": "Hesperomeles"
         },
         {
           "label": "Eryngium humboldtii",
@@ -12924,22 +12941,6 @@
           "order": "Apiales",
           "family": "Apiaceae",
           "genus": "Eryngium"
-        },
-        {
-          "label": "Hesperomeles obtusifolia",
-          "registros": 13,
-          "slug_especie": "hesperomeles-obtusifolia",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2988522",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7866183c45700544e40bf/summary",
-          "species": "Hesperomeles obtusifolia",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Rosales",
-          "family": "Rosaceae",
-          "genus": "Hesperomeles"
         }
       ],
       "species_list_tematica": {
@@ -13492,57 +13493,21 @@
             "genus": "Acacia"
           },
           {
-            "label": "Ricinus communis",
+            "label": "Verbascum virgatum",
             "registros": 4,
-            "slug_especie": "ricinus-communis",
-            "slug_tematica": "exoticas-riesgo-invasion-total",
-            "tematica_label": "Exóticas con riesgo de invasión",
-            "slug_grupo": "vasculares",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5380041",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e79c7b83c45700544e4231/summary",
-            "species": "Ricinus communis",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Malpighiales",
-            "family": "Euphorbiaceae",
-            "genus": "Ricinus"
-          },
-          {
-            "label": "Senecio madagascariensis",
-            "registros": 4,
-            "slug_especie": "senecio-madagascariensis",
-            "slug_tematica": "exoticas-riesgo-invasion-total",
-            "tematica_label": "Exóticas con riesgo de invasión",
-            "slug_grupo": "vasculares",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3107722",
-            "species": "Senecio madagascariensis",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Asterales",
-            "family": "Asteraceae",
-            "genus": "Senecio"
-          },
-          {
-            "label": "Tecoma stans",
-            "registros": 4,
-            "slug_especie": "tecoma-stans",
+            "slug_especie": "verbascum-virgatum",
             "slug_tematica": "exoticas",
             "tematica_label": "Exóticas",
             "slug_grupo": "vasculares",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3172492",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7aa5783c45700544e42c2/summary",
-            "species": "Tecoma stans",
+            "url_gbif": "https://www.gbif.org/species/3171954",
+            "species": "Verbascum virgatum",
             "kingdom": "Plantae",
             "phylum": "Tracheophyta",
             "class": "Magnoliopsida",
             "order": "Lamiales",
-            "family": "Bignoniaceae",
-            "genus": "Tecoma"
+            "family": "Scrophulariaceae",
+            "genus": "Verbascum"
           },
           {
             "label": "Trifolium pratense",
@@ -13563,39 +13528,57 @@
             "genus": "Trifolium"
           },
           {
-            "label": "Verbascum virgatum",
+            "label": "Tecoma stans",
             "registros": 4,
-            "slug_especie": "verbascum-virgatum",
+            "slug_especie": "tecoma-stans",
             "slug_tematica": "exoticas",
             "tematica_label": "Exóticas",
             "slug_grupo": "vasculares",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3171954",
-            "species": "Verbascum virgatum",
+            "url_gbif": "https://www.gbif.org/species/3172492",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7aa5783c45700544e42c2/summary",
+            "species": "Tecoma stans",
             "kingdom": "Plantae",
             "phylum": "Tracheophyta",
             "class": "Magnoliopsida",
             "order": "Lamiales",
-            "family": "Scrophulariaceae",
-            "genus": "Verbascum"
+            "family": "Bignoniaceae",
+            "genus": "Tecoma"
           },
           {
-            "label": "Agave americana",
-            "registros": 3,
-            "slug_especie": "agave-americana",
-            "slug_tematica": "exoticas",
-            "tematica_label": "Exóticas",
+            "label": "Senecio madagascariensis",
+            "registros": 4,
+            "slug_especie": "senecio-madagascariensis",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
             "slug_grupo": "vasculares",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2767031",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/5957e9b72f4fd7bc7f39ce0c/summary",
-            "species": "Agave americana",
+            "url_gbif": "https://www.gbif.org/species/3107722",
+            "species": "Senecio madagascariensis",
             "kingdom": "Plantae",
             "phylum": "Tracheophyta",
-            "class": "Liliopsida",
-            "order": "Asparagales",
-            "family": "Asparagaceae",
-            "genus": "Agave"
+            "class": "Magnoliopsida",
+            "order": "Asterales",
+            "family": "Asteraceae",
+            "genus": "Senecio"
+          },
+          {
+            "label": "Ricinus communis",
+            "registros": 4,
+            "slug_especie": "ricinus-communis",
+            "slug_tematica": "exoticas-riesgo-invasion-total",
+            "tematica_label": "Exóticas con riesgo de invasión",
+            "slug_grupo": "vasculares",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5380041",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e79c7b83c45700544e4231/summary",
+            "species": "Ricinus communis",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Malpighiales",
+            "family": "Euphorbiaceae",
+            "genus": "Ricinus"
           },
           {
             "label": "Anthoxanthum odoratum",
@@ -13632,6 +13615,24 @@
             "order": "Asterales",
             "family": "Asteraceae",
             "genus": "Cirsium"
+          },
+          {
+            "label": "Agave americana",
+            "registros": 3,
+            "slug_especie": "agave-americana",
+            "slug_tematica": "exoticas",
+            "tematica_label": "Exóticas",
+            "slug_grupo": "vasculares",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2767031",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/5957e9b72f4fd7bc7f39ce0c/summary",
+            "species": "Agave americana",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Liliopsida",
+            "order": "Asparagales",
+            "family": "Asparagaceae",
+            "genus": "Agave"
           },
           {
             "label": "Datura stramonium",
@@ -14083,20 +14084,20 @@
           "genus": "Icterus"
         },
         {
-          "label": "Pheucticus aureoventris",
+          "label": "Troglodytes aedon",
           "registros": 21,
-          "slug_especie": "pheucticus-aureoventris",
+          "slug_especie": "troglodytes-aedon",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2490499",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cccc56207ecea54a561e45/summary",
-          "species": "Pheucticus aureoventris",
+          "url_gbif": "https://www.gbif.org/species/5231459",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf90d83c16479905cba7ee/summary",
+          "species": "Troglodytes aedon",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Cardinalidae",
-          "genus": "Pheucticus"
+          "family": "Troglodytidae",
+          "genus": "Troglodytes"
         },
         {
           "label": "Synallaxis subpudica",
@@ -14115,20 +14116,20 @@
           "genus": "Synallaxis"
         },
         {
-          "label": "Troglodytes aedon",
+          "label": "Pheucticus aureoventris",
           "registros": 21,
-          "slug_especie": "troglodytes-aedon",
+          "slug_especie": "pheucticus-aureoventris",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5231459",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf90d83c16479905cba7ee/summary",
-          "species": "Troglodytes aedon",
+          "url_gbif": "https://www.gbif.org/species/2490499",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cccc56207ecea54a561e45/summary",
+          "species": "Pheucticus aureoventris",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Troglodytidae",
-          "genus": "Troglodytes"
+          "family": "Cardinalidae",
+          "genus": "Pheucticus"
         }
       ],
       "species_list_tematica": {

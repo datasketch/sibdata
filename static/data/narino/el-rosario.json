@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -1645,22 +1645,6 @@
           "genus": "Funastrum"
         },
         {
-          "label": "Acalypha macrostachya",
-          "registros": 2,
-          "slug_especie": "acalypha-macrostachya",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3056437",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/595a7c9a2f4fd7bc7f39e11c/summary",
-          "species": "Acalypha macrostachya",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Euphorbiaceae",
-          "genus": "Acalypha"
-        },
-        {
           "label": "Antigonon leptopus",
           "registros": 2,
           "slug_especie": "antigonon-leptopus",
@@ -1674,6 +1658,37 @@
           "order": "Caryophyllales",
           "family": "Polygonaceae",
           "genus": "Antigonon"
+        },
+        {
+          "label": "Pisonia aculeata",
+          "registros": 2,
+          "slug_especie": "pisonia-aculeata",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3086260",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e797ae83c45700544e41d4/summary",
+          "species": "Pisonia aculeata",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Caryophyllales",
+          "family": "Nyctaginaceae",
+          "genus": "Pisonia"
+        },
+        {
+          "label": "Pilea microphylla",
+          "registros": 2,
+          "slug_especie": "pilea-microphylla",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5361841",
+          "species": "Pilea microphylla",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Rosales",
+          "family": "Urticaceae",
+          "genus": "Pilea"
         },
         {
           "label": "Cnidoscolus urens",
@@ -1692,35 +1707,20 @@
           "genus": "Cnidoscolus"
         },
         {
-          "label": "Pilea microphylla",
+          "label": "Acalypha macrostachya",
           "registros": 2,
-          "slug_especie": "pilea-microphylla",
+          "slug_especie": "acalypha-macrostachya",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5361841",
-          "species": "Pilea microphylla",
+          "url_gbif": "https://www.gbif.org/species/3056437",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/595a7c9a2f4fd7bc7f39e11c/summary",
+          "species": "Acalypha macrostachya",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Rosales",
-          "family": "Urticaceae",
-          "genus": "Pilea"
-        },
-        {
-          "label": "Pisonia aculeata",
-          "registros": 2,
-          "slug_especie": "pisonia-aculeata",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3086260",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e797ae83c45700544e41d4/summary",
-          "species": "Pisonia aculeata",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Caryophyllales",
-          "family": "Nyctaginaceae",
-          "genus": "Pisonia"
+          "order": "Malpighiales",
+          "family": "Euphorbiaceae",
+          "genus": "Acalypha"
         }
       ],
       "species_list_tematica": {
@@ -2161,22 +2161,6 @@
           "genus": "Mimus"
         },
         {
-          "label": "Forpus conspicillatus",
-          "registros": 47,
-          "slug_especie": "forpus-conspicillatus",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2479071",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c76fc3f0106c67230e73ed/summary",
-          "species": "Forpus conspicillatus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Psittaciformes",
-          "family": "Psittacidae",
-          "genus": "Forpus"
-        },
-        {
           "label": "Tyrannus melancholicus",
           "registros": 47,
           "slug_especie": "tyrannus-melancholicus",
@@ -2191,6 +2175,22 @@
           "order": "Passeriformes",
           "family": "Tyrannidae",
           "genus": "Tyrannus"
+        },
+        {
+          "label": "Forpus conspicillatus",
+          "registros": 47,
+          "slug_especie": "forpus-conspicillatus",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2479071",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c76fc3f0106c67230e73ed/summary",
+          "species": "Forpus conspicillatus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Psittaciformes",
+          "family": "Psittacidae",
+          "genus": "Forpus"
         },
         {
           "label": "Troglodytes aedon",
@@ -2225,22 +2225,6 @@
           "genus": "Pyrocephalus"
         },
         {
-          "label": "Sporophila nigricollis",
-          "registros": 37,
-          "slug_especie": "sporophila-nigricollis",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2491335",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7ae8683c45700544e42df/summary",
-          "species": "Sporophila nigricollis",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Sporophila"
-        },
-        {
           "label": "Zenaida auriculata",
           "registros": 37,
           "slug_especie": "zenaida-auriculata",
@@ -2255,6 +2239,22 @@
           "order": "Columbiformes",
           "family": "Columbidae",
           "genus": "Zenaida"
+        },
+        {
+          "label": "Sporophila nigricollis",
+          "registros": 37,
+          "slug_especie": "sporophila-nigricollis",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2491335",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7ae8683c45700544e42df/summary",
+          "species": "Sporophila nigricollis",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Sporophila"
         },
         {
           "label": "Pheucticus aureoventris",
@@ -3431,22 +3431,6 @@
           "genus": "Pyrocephalus"
         },
         {
-          "label": "Sporophila nigricollis",
-          "registros": 37,
-          "slug_especie": "sporophila-nigricollis",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2491335",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7ae8683c45700544e42df/summary",
-          "species": "Sporophila nigricollis",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Sporophila"
-        },
-        {
           "label": "Zenaida auriculata",
           "registros": 37,
           "slug_especie": "zenaida-auriculata",
@@ -3461,6 +3445,22 @@
           "order": "Columbiformes",
           "family": "Columbidae",
           "genus": "Zenaida"
+        },
+        {
+          "label": "Sporophila nigricollis",
+          "registros": 37,
+          "slug_especie": "sporophila-nigricollis",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2491335",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7ae8683c45700544e42df/summary",
+          "species": "Sporophila nigricollis",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Sporophila"
         },
         {
           "label": "Pheucticus aureoventris",
@@ -6091,21 +6091,6 @@
           "genus": "Ipomoea"
         },
         {
-          "label": "Alternanthera lanceolata",
-          "registros": 3,
-          "slug_especie": "alternanthera-lanceolata",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3676081",
-          "species": "Alternanthera lanceolata",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Caryophyllales",
-          "family": "Amaranthaceae",
-          "genus": "Alternanthera"
-        },
-        {
           "label": "Euphorbia lasiocarpa",
           "registros": 3,
           "slug_especie": "euphorbia-lasiocarpa",
@@ -6121,6 +6106,21 @@
           "genus": "Euphorbia"
         },
         {
+          "label": "Alternanthera lanceolata",
+          "registros": 3,
+          "slug_especie": "alternanthera-lanceolata",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3676081",
+          "species": "Alternanthera lanceolata",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Caryophyllales",
+          "family": "Amaranthaceae",
+          "genus": "Alternanthera"
+        },
+        {
           "label": "Funastrum clausum",
           "registros": 3,
           "slug_especie": "funastrum-clausum",
@@ -6134,6 +6134,52 @@
           "order": "Gentianales",
           "family": "Apocynaceae",
           "genus": "Funastrum"
+        },
+        {
+          "label": "Antigonon leptopus",
+          "registros": 2,
+          "slug_especie": "antigonon-leptopus",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2889355",
+          "species": "Antigonon leptopus",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Caryophyllales",
+          "family": "Polygonaceae",
+          "genus": "Antigonon"
+        },
+        {
+          "label": "Pisonia aculeata",
+          "registros": 2,
+          "slug_especie": "pisonia-aculeata",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3086260",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e797ae83c45700544e41d4/summary",
+          "species": "Pisonia aculeata",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Caryophyllales",
+          "family": "Nyctaginaceae",
+          "genus": "Pisonia"
+        },
+        {
+          "label": "Pilea microphylla",
+          "registros": 2,
+          "slug_especie": "pilea-microphylla",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5361841",
+          "species": "Pilea microphylla",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Rosales",
+          "family": "Urticaceae",
+          "genus": "Pilea"
         },
         {
           "label": "Acalypha macrostachya",
@@ -6152,21 +6198,6 @@
           "genus": "Acalypha"
         },
         {
-          "label": "Antigonon leptopus",
-          "registros": 2,
-          "slug_especie": "antigonon-leptopus",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2889355",
-          "species": "Antigonon leptopus",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Caryophyllales",
-          "family": "Polygonaceae",
-          "genus": "Antigonon"
-        },
-        {
           "label": "Cnidoscolus urens",
           "registros": 2,
           "slug_especie": "cnidoscolus-urens",
@@ -6181,37 +6212,6 @@
           "order": "Malpighiales",
           "family": "Euphorbiaceae",
           "genus": "Cnidoscolus"
-        },
-        {
-          "label": "Pilea microphylla",
-          "registros": 2,
-          "slug_especie": "pilea-microphylla",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5361841",
-          "species": "Pilea microphylla",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Rosales",
-          "family": "Urticaceae",
-          "genus": "Pilea"
-        },
-        {
-          "label": "Pisonia aculeata",
-          "registros": 2,
-          "slug_especie": "pisonia-aculeata",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3086260",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e797ae83c45700544e41d4/summary",
-          "species": "Pisonia aculeata",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Caryophyllales",
-          "family": "Nyctaginaceae",
-          "genus": "Pisonia"
         }
       ],
       "species_list_tematica": {
@@ -6639,21 +6639,6 @@
           "genus": "Ipomoea"
         },
         {
-          "label": "Alternanthera lanceolata",
-          "registros": 3,
-          "slug_especie": "alternanthera-lanceolata",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3676081",
-          "species": "Alternanthera lanceolata",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Caryophyllales",
-          "family": "Amaranthaceae",
-          "genus": "Alternanthera"
-        },
-        {
           "label": "Euphorbia lasiocarpa",
           "registros": 3,
           "slug_especie": "euphorbia-lasiocarpa",
@@ -6669,6 +6654,21 @@
           "genus": "Euphorbia"
         },
         {
+          "label": "Alternanthera lanceolata",
+          "registros": 3,
+          "slug_especie": "alternanthera-lanceolata",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3676081",
+          "species": "Alternanthera lanceolata",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Caryophyllales",
+          "family": "Amaranthaceae",
+          "genus": "Alternanthera"
+        },
+        {
           "label": "Funastrum clausum",
           "registros": 3,
           "slug_especie": "funastrum-clausum",
@@ -6682,6 +6682,52 @@
           "order": "Gentianales",
           "family": "Apocynaceae",
           "genus": "Funastrum"
+        },
+        {
+          "label": "Antigonon leptopus",
+          "registros": 2,
+          "slug_especie": "antigonon-leptopus",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2889355",
+          "species": "Antigonon leptopus",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Caryophyllales",
+          "family": "Polygonaceae",
+          "genus": "Antigonon"
+        },
+        {
+          "label": "Pisonia aculeata",
+          "registros": 2,
+          "slug_especie": "pisonia-aculeata",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3086260",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e797ae83c45700544e41d4/summary",
+          "species": "Pisonia aculeata",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Caryophyllales",
+          "family": "Nyctaginaceae",
+          "genus": "Pisonia"
+        },
+        {
+          "label": "Pilea microphylla",
+          "registros": 2,
+          "slug_especie": "pilea-microphylla",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5361841",
+          "species": "Pilea microphylla",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Rosales",
+          "family": "Urticaceae",
+          "genus": "Pilea"
         },
         {
           "label": "Acalypha macrostachya",
@@ -6700,21 +6746,6 @@
           "genus": "Acalypha"
         },
         {
-          "label": "Antigonon leptopus",
-          "registros": 2,
-          "slug_especie": "antigonon-leptopus",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2889355",
-          "species": "Antigonon leptopus",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Caryophyllales",
-          "family": "Polygonaceae",
-          "genus": "Antigonon"
-        },
-        {
           "label": "Cnidoscolus urens",
           "registros": 2,
           "slug_especie": "cnidoscolus-urens",
@@ -6729,37 +6760,6 @@
           "order": "Malpighiales",
           "family": "Euphorbiaceae",
           "genus": "Cnidoscolus"
-        },
-        {
-          "label": "Pilea microphylla",
-          "registros": 2,
-          "slug_especie": "pilea-microphylla",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5361841",
-          "species": "Pilea microphylla",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Rosales",
-          "family": "Urticaceae",
-          "genus": "Pilea"
-        },
-        {
-          "label": "Pisonia aculeata",
-          "registros": 2,
-          "slug_especie": "pisonia-aculeata",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3086260",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e797ae83c45700544e41d4/summary",
-          "species": "Pisonia aculeata",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Caryophyllales",
-          "family": "Nyctaginaceae",
-          "genus": "Pisonia"
         }
       ],
       "species_list_tematica": {
@@ -7264,22 +7264,6 @@
           "genus": "Pyrocephalus"
         },
         {
-          "label": "Sporophila nigricollis",
-          "registros": 37,
-          "slug_especie": "sporophila-nigricollis",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2491335",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7ae8683c45700544e42df/summary",
-          "species": "Sporophila nigricollis",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Sporophila"
-        },
-        {
           "label": "Zenaida auriculata",
           "registros": 37,
           "slug_especie": "zenaida-auriculata",
@@ -7294,6 +7278,22 @@
           "order": "Columbiformes",
           "family": "Columbidae",
           "genus": "Zenaida"
+        },
+        {
+          "label": "Sporophila nigricollis",
+          "registros": 37,
+          "slug_especie": "sporophila-nigricollis",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2491335",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7ae8683c45700544e42df/summary",
+          "species": "Sporophila nigricollis",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Sporophila"
         },
         {
           "label": "Pheucticus aureoventris",

@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -1002,18 +1002,18 @@
           "slug_tematica": "cites-iii"
         },
         {
+          "label": "Phaethornis augusti",
+          "slug_especie": "phaethornis-augusti",
+          "registros": 12,
+          "url_gbif": "https://www.gbif.org/species/2476628",
+          "slug_tematica": "cites-ii"
+        },
+        {
           "label": "Chalybura buffonii",
           "slug_especie": "chalybura-buffonii",
           "registros": 12,
           "url_gbif": "https://www.gbif.org/species/2476774",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56df654383c45700544e3c70/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
-          "label": "Phaethornis augusti",
-          "slug_especie": "phaethornis-augusti",
-          "registros": 12,
-          "url_gbif": "https://www.gbif.org/species/2476628",
           "slug_tematica": "cites-ii"
         },
         {
@@ -1098,19 +1098,19 @@
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Buteo platypterus",
-          "slug_especie": "buteo-platypterus",
-          "registros": 10,
-          "url_gbif": "https://www.gbif.org/species/2480538",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c1fa1ff0106c67230e731d/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
           "label": "Falco sparverius",
           "slug_especie": "falco-sparverius",
           "registros": 10,
           "url_gbif": "https://www.gbif.org/species/9685907",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56c769ddf0106c67230e73ec/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Buteo platypterus",
+          "slug_especie": "buteo-platypterus",
+          "registros": 10,
+          "url_gbif": "https://www.gbif.org/species/2480538",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c1fa1ff0106c67230e731d/summary",
           "slug_tematica": "cites-ii"
         },
         {
@@ -1179,18 +1179,18 @@
           "slug_tematica": "cites-iii"
         },
         {
+          "label": "Phaethornis augusti",
+          "slug_especie": "phaethornis-augusti",
+          "registros": 12,
+          "url_gbif": "https://www.gbif.org/species/2476628",
+          "slug_tematica": "cites-ii"
+        },
+        {
           "label": "Chalybura buffonii",
           "slug_especie": "chalybura-buffonii",
           "registros": 12,
           "url_gbif": "https://www.gbif.org/species/2476774",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56df654383c45700544e3c70/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
-          "label": "Phaethornis augusti",
-          "slug_especie": "phaethornis-augusti",
-          "registros": 12,
-          "url_gbif": "https://www.gbif.org/species/2476628",
           "slug_tematica": "cites-ii"
         },
         {
@@ -1385,19 +1385,19 @@
           "slug_tematica": "migratorias"
         },
         {
-          "label": "Cardellina canadensis",
-          "slug_especie": "cardellina-canadensis",
-          "registros": 6,
-          "url_gbif": "https://www.gbif.org/species/6091946",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c277def0106c67230e732e/summary",
-          "slug_tematica": "migratorias"
-        },
-        {
           "label": "Piranga rubra",
           "slug_especie": "piranga-rubra",
           "registros": 6,
           "url_gbif": "https://www.gbif.org/species/2488485",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56cd0550207ecea54a561e5c/summary",
+          "slug_tematica": "migratorias"
+        },
+        {
+          "label": "Cardellina canadensis",
+          "slug_especie": "cardellina-canadensis",
+          "registros": 6,
+          "url_gbif": "https://www.gbif.org/species/6091946",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c277def0106c67230e732e/summary",
           "slug_tematica": "migratorias"
         }
       ]
@@ -2428,21 +2428,6 @@
           "genus": "Castilleja"
         },
         {
-          "label": "Centrosema virginianum",
-          "registros": 4,
-          "slug_especie": "centrosema-virginianum",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2964906",
-          "species": "Centrosema virginianum",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Centrosema"
-        },
-        {
           "label": "Cybianthus laurifolius",
           "registros": 4,
           "slug_especie": "cybianthus-laurifolius",
@@ -2473,19 +2458,19 @@
           "genus": "Lacmellea"
         },
         {
-          "label": "Miconia domociliata",
+          "label": "Ocotea neesiana",
           "registros": 4,
-          "slug_especie": "miconia-domociliata",
+          "slug_especie": "ocotea-neesiana",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/10725593",
-          "species": "Miconia domociliata",
+          "url_gbif": "https://www.gbif.org/species/4178030",
+          "species": "Ocotea neesiana",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Myrtales",
-          "family": "Melastomataceae",
-          "genus": "Miconia"
+          "order": "Laurales",
+          "family": "Lauraceae",
+          "genus": "Ocotea"
         },
         {
           "label": "Myrsine coriacea",
@@ -2503,19 +2488,34 @@
           "genus": "Myrsine"
         },
         {
-          "label": "Ocotea neesiana",
+          "label": "Centrosema virginianum",
           "registros": 4,
-          "slug_especie": "ocotea-neesiana",
+          "slug_especie": "centrosema-virginianum",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4178030",
-          "species": "Ocotea neesiana",
+          "url_gbif": "https://www.gbif.org/species/2964906",
+          "species": "Centrosema virginianum",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Laurales",
-          "family": "Lauraceae",
-          "genus": "Ocotea"
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Centrosema"
+        },
+        {
+          "label": "Miconia domociliata",
+          "registros": 4,
+          "slug_especie": "miconia-domociliata",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/10725593",
+          "species": "Miconia domociliata",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Myrtales",
+          "family": "Melastomataceae",
+          "genus": "Miconia"
         }
       ],
       "species_list_tematica": {
@@ -3556,6 +3556,23 @@
             "genus": "Pteroglossus"
           },
           {
+            "label": "Phaethornis augusti",
+            "registros": 12,
+            "slug_especie": "phaethornis-augusti",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2476628",
+            "species": "Phaethornis augusti",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Phaethornis"
+          },
+          {
             "label": "Chalybura buffonii",
             "registros": 12,
             "slug_especie": "chalybura-buffonii",
@@ -3572,23 +3589,6 @@
             "order": "Apodiformes",
             "family": "Trochilidae",
             "genus": "Chalybura"
-          },
-          {
-            "label": "Phaethornis augusti",
-            "registros": 12,
-            "slug_especie": "phaethornis-augusti",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476628",
-            "species": "Phaethornis augusti",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Phaethornis"
           },
           {
             "label": "Herpetotheres cachinnans",
@@ -3808,24 +3808,6 @@
             "genus": "Vireo"
           },
           {
-            "label": "Cardellina canadensis",
-            "registros": 6,
-            "slug_especie": "cardellina-canadensis",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/6091946",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c277def0106c67230e732e/summary",
-            "species": "Cardellina canadensis",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Parulidae",
-            "genus": "Cardellina"
-          },
-          {
             "label": "Piranga rubra",
             "registros": 6,
             "slug_especie": "piranga-rubra",
@@ -3842,6 +3824,24 @@
             "order": "Passeriformes",
             "family": "Cardinalidae",
             "genus": "Piranga"
+          },
+          {
+            "label": "Cardellina canadensis",
+            "registros": 6,
+            "slug_especie": "cardellina-canadensis",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/6091946",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c277def0106c67230e732e/summary",
+            "species": "Cardellina canadensis",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Parulidae",
+            "genus": "Cardellina"
           },
           {
             "label": "Tyrannus savana",
@@ -4383,21 +4383,6 @@
           "genus": "Mimus"
         },
         {
-          "label": "Stilpnia cyanicollis",
-          "registros": 37,
-          "slug_especie": "stilpnia-cyanicollis",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/10992187",
-          "species": "Stilpnia cyanicollis",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Stilpnia"
-        },
-        {
           "label": "Troglodytes aedon",
           "registros": 37,
           "slug_especie": "troglodytes-aedon",
@@ -4412,6 +4397,21 @@
           "order": "Passeriformes",
           "family": "Troglodytidae",
           "genus": "Troglodytes"
+        },
+        {
+          "label": "Stilpnia cyanicollis",
+          "registros": 37,
+          "slug_especie": "stilpnia-cyanicollis",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/10992187",
+          "species": "Stilpnia cyanicollis",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Stilpnia"
         },
         {
           "label": "Forpus conspicillatus",
@@ -4462,21 +4462,6 @@
           "genus": "Sporophila"
         },
         {
-          "label": "Melanerpes cruentatus",
-          "registros": 29,
-          "slug_especie": "melanerpes-cruentatus",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2478122",
-          "species": "Melanerpes cruentatus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Piciformes",
-          "family": "Picidae",
-          "genus": "Melanerpes"
-        },
-        {
           "label": "Sicalis flaveola",
           "registros": 29,
           "slug_especie": "sicalis-flaveola",
@@ -4491,6 +4476,21 @@
           "order": "Passeriformes",
           "family": "Thraupidae",
           "genus": "Sicalis"
+        },
+        {
+          "label": "Melanerpes cruentatus",
+          "registros": 29,
+          "slug_especie": "melanerpes-cruentatus",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2478122",
+          "species": "Melanerpes cruentatus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Piciformes",
+          "family": "Picidae",
+          "genus": "Melanerpes"
         }
       ],
       "species_list_tematica": {
@@ -4623,6 +4623,23 @@
             "genus": "Pteroglossus"
           },
           {
+            "label": "Phaethornis augusti",
+            "registros": 12,
+            "slug_especie": "phaethornis-augusti",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2476628",
+            "species": "Phaethornis augusti",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Phaethornis"
+          },
+          {
             "label": "Chalybura buffonii",
             "registros": 12,
             "slug_especie": "chalybura-buffonii",
@@ -4639,23 +4656,6 @@
             "order": "Apodiformes",
             "family": "Trochilidae",
             "genus": "Chalybura"
-          },
-          {
-            "label": "Phaethornis augusti",
-            "registros": 12,
-            "slug_especie": "phaethornis-augusti",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476628",
-            "species": "Phaethornis augusti",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Phaethornis"
           },
           {
             "label": "Herpetotheres cachinnans",
@@ -4875,24 +4875,6 @@
             "genus": "Vireo"
           },
           {
-            "label": "Cardellina canadensis",
-            "registros": 6,
-            "slug_especie": "cardellina-canadensis",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/6091946",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c277def0106c67230e732e/summary",
-            "species": "Cardellina canadensis",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Parulidae",
-            "genus": "Cardellina"
-          },
-          {
             "label": "Piranga rubra",
             "registros": 6,
             "slug_especie": "piranga-rubra",
@@ -4909,6 +4891,24 @@
             "order": "Passeriformes",
             "family": "Cardinalidae",
             "genus": "Piranga"
+          },
+          {
+            "label": "Cardellina canadensis",
+            "registros": 6,
+            "slug_especie": "cardellina-canadensis",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/6091946",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c277def0106c67230e732e/summary",
+            "species": "Cardellina canadensis",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Parulidae",
+            "genus": "Cardellina"
           },
           {
             "label": "Tyrannus savana",
@@ -9401,34 +9401,19 @@
           "genus": "Teramnus"
         },
         {
-          "label": "Castilleja arvensis",
+          "label": "Myrsine coriacea",
           "registros": 4,
-          "slug_especie": "castilleja-arvensis",
+          "slug_especie": "myrsine-coriacea",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3170604",
-          "species": "Castilleja arvensis",
+          "url_gbif": "https://www.gbif.org/species/3169418",
+          "species": "Myrsine coriacea",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Lamiales",
-          "family": "Orobanchaceae",
-          "genus": "Castilleja"
-        },
-        {
-          "label": "Centrosema virginianum",
-          "registros": 4,
-          "slug_especie": "centrosema-virginianum",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2964906",
-          "species": "Centrosema virginianum",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Centrosema"
+          "order": "Ericales",
+          "family": "Primulaceae",
+          "genus": "Myrsine"
         },
         {
           "label": "Cybianthus laurifolius",
@@ -9461,6 +9446,21 @@
           "genus": "Lacmellea"
         },
         {
+          "label": "Castilleja arvensis",
+          "registros": 4,
+          "slug_especie": "castilleja-arvensis",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3170604",
+          "species": "Castilleja arvensis",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Lamiales",
+          "family": "Orobanchaceae",
+          "genus": "Castilleja"
+        },
+        {
           "label": "Miconia domociliata",
           "registros": 4,
           "slug_especie": "miconia-domociliata",
@@ -9476,21 +9476,6 @@
           "genus": "Miconia"
         },
         {
-          "label": "Myrsine coriacea",
-          "registros": 4,
-          "slug_especie": "myrsine-coriacea",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3169418",
-          "species": "Myrsine coriacea",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Ericales",
-          "family": "Primulaceae",
-          "genus": "Myrsine"
-        },
-        {
           "label": "Ocotea neesiana",
           "registros": 4,
           "slug_especie": "ocotea-neesiana",
@@ -9504,6 +9489,21 @@
           "order": "Laurales",
           "family": "Lauraceae",
           "genus": "Ocotea"
+        },
+        {
+          "label": "Centrosema virginianum",
+          "registros": 4,
+          "slug_especie": "centrosema-virginianum",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2964906",
+          "species": "Centrosema virginianum",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Centrosema"
         }
       ],
       "species_list_tematica": {
@@ -10505,34 +10505,19 @@
           "genus": "Teramnus"
         },
         {
-          "label": "Castilleja arvensis",
+          "label": "Ocotea neesiana",
           "registros": 4,
-          "slug_especie": "castilleja-arvensis",
+          "slug_especie": "ocotea-neesiana",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3170604",
-          "species": "Castilleja arvensis",
+          "url_gbif": "https://www.gbif.org/species/4178030",
+          "species": "Ocotea neesiana",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Lamiales",
-          "family": "Orobanchaceae",
-          "genus": "Castilleja"
-        },
-        {
-          "label": "Centrosema virginianum",
-          "registros": 4,
-          "slug_especie": "centrosema-virginianum",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2964906",
-          "species": "Centrosema virginianum",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Centrosema"
+          "order": "Laurales",
+          "family": "Lauraceae",
+          "genus": "Ocotea"
         },
         {
           "label": "Cybianthus laurifolius",
@@ -10565,19 +10550,19 @@
           "genus": "Lacmellea"
         },
         {
-          "label": "Miconia domociliata",
+          "label": "Centrosema virginianum",
           "registros": 4,
-          "slug_especie": "miconia-domociliata",
+          "slug_especie": "centrosema-virginianum",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/10725593",
-          "species": "Miconia domociliata",
+          "url_gbif": "https://www.gbif.org/species/2964906",
+          "species": "Centrosema virginianum",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Myrtales",
-          "family": "Melastomataceae",
-          "genus": "Miconia"
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Centrosema"
         },
         {
           "label": "Myrsine coriacea",
@@ -10595,19 +10580,34 @@
           "genus": "Myrsine"
         },
         {
-          "label": "Ocotea neesiana",
+          "label": "Miconia domociliata",
           "registros": 4,
-          "slug_especie": "ocotea-neesiana",
+          "slug_especie": "miconia-domociliata",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4178030",
-          "species": "Ocotea neesiana",
+          "url_gbif": "https://www.gbif.org/species/10725593",
+          "species": "Miconia domociliata",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Laurales",
-          "family": "Lauraceae",
-          "genus": "Ocotea"
+          "order": "Myrtales",
+          "family": "Melastomataceae",
+          "genus": "Miconia"
+        },
+        {
+          "label": "Castilleja arvensis",
+          "registros": 4,
+          "slug_especie": "castilleja-arvensis",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3170604",
+          "species": "Castilleja arvensis",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Lamiales",
+          "family": "Orobanchaceae",
+          "genus": "Castilleja"
         }
       ],
       "species_list_tematica": {
@@ -11663,6 +11663,23 @@
             "genus": "Pteroglossus"
           },
           {
+            "label": "Phaethornis augusti",
+            "registros": 12,
+            "slug_especie": "phaethornis-augusti",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2476628",
+            "species": "Phaethornis augusti",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Phaethornis"
+          },
+          {
             "label": "Chalybura buffonii",
             "registros": 12,
             "slug_especie": "chalybura-buffonii",
@@ -11679,23 +11696,6 @@
             "order": "Apodiformes",
             "family": "Trochilidae",
             "genus": "Chalybura"
-          },
-          {
-            "label": "Phaethornis augusti",
-            "registros": 12,
-            "slug_especie": "phaethornis-augusti",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476628",
-            "species": "Phaethornis augusti",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Phaethornis"
           },
           {
             "label": "Herpetotheres cachinnans",
@@ -11915,24 +11915,6 @@
             "genus": "Vireo"
           },
           {
-            "label": "Cardellina canadensis",
-            "registros": 6,
-            "slug_especie": "cardellina-canadensis",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/6091946",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c277def0106c67230e732e/summary",
-            "species": "Cardellina canadensis",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Parulidae",
-            "genus": "Cardellina"
-          },
-          {
             "label": "Piranga rubra",
             "registros": 6,
             "slug_especie": "piranga-rubra",
@@ -11949,6 +11931,24 @@
             "order": "Passeriformes",
             "family": "Cardinalidae",
             "genus": "Piranga"
+          },
+          {
+            "label": "Cardellina canadensis",
+            "registros": 6,
+            "slug_especie": "cardellina-canadensis",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/6091946",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c277def0106c67230e732e/summary",
+            "species": "Cardellina canadensis",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Parulidae",
+            "genus": "Cardellina"
           },
           {
             "label": "Tyrannus savana",

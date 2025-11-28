@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -2142,22 +2142,6 @@
           "genus": "Pristimantis"
         },
         {
-          "label": "Rheobates palmatus",
-          "registros": 4,
-          "slug_especie": "rheobates-palmatus",
-          "slug_grupo": "anfibios",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2426202",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56d4cb1c3c16479905cba8c7/summary",
-          "species": "Rheobates palmatus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Amphibia",
-          "order": "Anura",
-          "family": "Aromobatidae",
-          "genus": "Rheobates"
-        },
-        {
           "label": "Rulyrana susatamai",
           "registros": 4,
           "slug_especie": "rulyrana-susatamai",
@@ -2172,6 +2156,22 @@
           "order": "Anura",
           "family": "Centrolenidae",
           "genus": "Rulyrana"
+        },
+        {
+          "label": "Rheobates palmatus",
+          "registros": 4,
+          "slug_especie": "rheobates-palmatus",
+          "slug_grupo": "anfibios",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2426202",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d4cb1c3c16479905cba8c7/summary",
+          "species": "Rheobates palmatus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Amphibia",
+          "order": "Anura",
+          "family": "Aromobatidae",
+          "genus": "Rheobates"
         },
         {
           "label": "Andinobates dorisswansonae",
@@ -4002,22 +4002,6 @@
           "genus": "Turdus"
         },
         {
-          "label": "Coragyps atratus",
-          "registros": 445,
-          "slug_especie": "coragyps-atratus",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2481942",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4fe28f0106c67230e7394/summary",
-          "species": "Coragyps atratus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Accipitriformes",
-          "family": "Cathartidae",
-          "genus": "Coragyps"
-        },
-        {
           "label": "Crotophaga ani",
           "registros": 445,
           "slug_especie": "crotophaga-ani",
@@ -4032,6 +4016,22 @@
           "order": "Cuculiformes",
           "family": "Cuculidae",
           "genus": "Crotophaga"
+        },
+        {
+          "label": "Coragyps atratus",
+          "registros": 445,
+          "slug_especie": "coragyps-atratus",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2481942",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4fe28f0106c67230e7394/summary",
+          "species": "Coragyps atratus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Accipitriformes",
+          "family": "Cathartidae",
+          "genus": "Coragyps"
         },
         {
           "label": "Setophaga fusca",
@@ -4993,24 +4993,6 @@
             "genus": "Anthocephala"
           },
           {
-            "label": "Rheobates palmatus",
-            "registros": 4,
-            "slug_especie": "rheobates-palmatus",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2426202",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56d4cb1c3c16479905cba8c7/summary",
-            "species": "Rheobates palmatus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Amphibia",
-            "order": "Anura",
-            "family": "Aromobatidae",
-            "genus": "Rheobates"
-          },
-          {
             "label": "Rulyrana susatamai",
             "registros": 4,
             "slug_especie": "rulyrana-susatamai",
@@ -5027,6 +5009,24 @@
             "order": "Anura",
             "family": "Centrolenidae",
             "genus": "Rulyrana"
+          },
+          {
+            "label": "Rheobates palmatus",
+            "registros": 4,
+            "slug_especie": "rheobates-palmatus",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2426202",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56d4cb1c3c16479905cba8c7/summary",
+            "species": "Rheobates palmatus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Amphibia",
+            "order": "Anura",
+            "family": "Aromobatidae",
+            "genus": "Rheobates"
           }
         ],
         "exoticas-total": [
@@ -10388,21 +10388,6 @@
           "genus": "Strengeriana"
         },
         {
-          "label": "Culicoides castillae",
-          "registros": 3,
-          "slug_especie": "culicoides-castillae",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1632388",
-          "species": "Culicoides castillae",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Diptera",
-          "family": "Ceratopogonidae",
-          "genus": "Culicoides"
-        },
-        {
           "label": "Heterophrynus cervinus",
           "registros": 3,
           "slug_especie": "heterophrynus-cervinus",
@@ -10418,6 +10403,21 @@
           "genus": "Heterophrynus"
         },
         {
+          "label": "Culicoides castillae",
+          "registros": 3,
+          "slug_especie": "culicoides-castillae",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1632388",
+          "species": "Culicoides castillae",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Diptera",
+          "family": "Ceratopogonidae",
+          "genus": "Culicoides"
+        },
+        {
           "label": "Hypolobocera bouvieri",
           "registros": 3,
           "slug_especie": "hypolobocera-bouvieri",
@@ -10431,6 +10431,51 @@
           "order": "Decapoda",
           "family": "Pseudothelphusidae",
           "genus": "Hypolobocera"
+        },
+        {
+          "label": "Strategus aloeus",
+          "registros": 2,
+          "slug_especie": "strategus-aloeus",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/4995788",
+          "species": "Strategus aloeus",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Coleoptera",
+          "family": "Scarabaeidae",
+          "genus": "Strategus"
+        },
+        {
+          "label": "Pelidnota prasina",
+          "registros": 2,
+          "slug_especie": "pelidnota-prasina",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5990194",
+          "species": "Pelidnota prasina",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Coleoptera",
+          "family": "Scarabaeidae",
+          "genus": "Pelidnota"
+        },
+        {
+          "label": "Neoathyreus excavatus",
+          "registros": 2,
+          "slug_especie": "neoathyreus-excavatus",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1085789",
+          "species": "Neoathyreus excavatus",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Coleoptera",
+          "family": "Geotrupidae",
+          "genus": "Neoathyreus"
         },
         {
           "label": "Cyclocephala fulgurata",
@@ -10461,51 +10506,6 @@
           "order": "Coleoptera",
           "family": "Scarabaeidae",
           "genus": "Dyscinetus"
-        },
-        {
-          "label": "Neoathyreus excavatus",
-          "registros": 2,
-          "slug_especie": "neoathyreus-excavatus",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1085789",
-          "species": "Neoathyreus excavatus",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Coleoptera",
-          "family": "Geotrupidae",
-          "genus": "Neoathyreus"
-        },
-        {
-          "label": "Pelidnota prasina",
-          "registros": 2,
-          "slug_especie": "pelidnota-prasina",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5990194",
-          "species": "Pelidnota prasina",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Coleoptera",
-          "family": "Scarabaeidae",
-          "genus": "Pelidnota"
-        },
-        {
-          "label": "Strategus aloeus",
-          "registros": 2,
-          "slug_especie": "strategus-aloeus",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4995788",
-          "species": "Strategus aloeus",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Coleoptera",
-          "family": "Scarabaeidae",
-          "genus": "Strategus"
         }
       ],
       "species_list_tematica": {
@@ -16098,24 +16098,6 @@
             "genus": "Anthocephala"
           },
           {
-            "label": "Rheobates palmatus",
-            "registros": 4,
-            "slug_especie": "rheobates-palmatus",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2426202",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56d4cb1c3c16479905cba8c7/summary",
-            "species": "Rheobates palmatus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Amphibia",
-            "order": "Anura",
-            "family": "Aromobatidae",
-            "genus": "Rheobates"
-          },
-          {
             "label": "Rulyrana susatamai",
             "registros": 4,
             "slug_especie": "rulyrana-susatamai",
@@ -16132,6 +16114,24 @@
             "order": "Anura",
             "family": "Centrolenidae",
             "genus": "Rulyrana"
+          },
+          {
+            "label": "Rheobates palmatus",
+            "registros": 4,
+            "slug_especie": "rheobates-palmatus",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2426202",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56d4cb1c3c16479905cba8c7/summary",
+            "species": "Rheobates palmatus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Amphibia",
+            "order": "Anura",
+            "family": "Aromobatidae",
+            "genus": "Rheobates"
           }
         ],
         "exoticas-total": [

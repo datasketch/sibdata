@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -1258,20 +1258,20 @@
       "parent_registros_cites_iii": 4266,
       "list_especies_cites": [
         {
-          "label": "Forpus conspicillatus",
-          "slug_especie": "forpus-conspicillatus",
-          "registros": 42,
-          "url_gbif": "https://www.gbif.org/species/2479071",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c76fc3f0106c67230e73ed/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
           "label": "Tapirus pinchaque",
           "slug_especie": "tapirus-pinchaque",
           "registros": 42,
           "url_gbif": "https://www.gbif.org/species/2440899",
           "url_cbc": "https://catalogo.biodiversidad.co/file/59e370f75f369343443066f4/summary",
           "slug_tematica": "cites-i"
+        },
+        {
+          "label": "Forpus conspicillatus",
+          "slug_especie": "forpus-conspicillatus",
+          "registros": 42,
+          "url_gbif": "https://www.gbif.org/species/2479071",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c76fc3f0106c67230e73ed/summary",
+          "slug_tematica": "cites-ii"
         },
         {
           "label": "Rupornis magnirostris",
@@ -1313,14 +1313,6 @@
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Brotogeris jugularis",
-          "slug_especie": "brotogeris-jugularis",
-          "registros": 14,
-          "url_gbif": "https://www.gbif.org/species/2479563",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56df5ee983c45700544e3c6a/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
           "label": "Rupicola peruvianus",
           "slug_especie": "rupicola-peruvianus",
           "registros": 14,
@@ -1333,6 +1325,14 @@
           "registros": 14,
           "url_gbif": "https://www.gbif.org/species/7864506",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56702e10f289f5a40c0cd2c7/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Brotogeris jugularis",
+          "slug_especie": "brotogeris-jugularis",
+          "registros": 14,
+          "url_gbif": "https://www.gbif.org/species/2479563",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56df5ee983c45700544e3c6a/summary",
           "slug_tematica": "cites-ii"
         }
       ],
@@ -1396,14 +1396,6 @@
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Brotogeris jugularis",
-          "slug_especie": "brotogeris-jugularis",
-          "registros": 14,
-          "url_gbif": "https://www.gbif.org/species/2479563",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56df5ee983c45700544e3c6a/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
           "label": "Rupicola peruvianus",
           "slug_especie": "rupicola-peruvianus",
           "registros": 14,
@@ -1419,6 +1411,14 @@
           "slug_tematica": "cites-ii"
         },
         {
+          "label": "Brotogeris jugularis",
+          "slug_especie": "brotogeris-jugularis",
+          "registros": 14,
+          "url_gbif": "https://www.gbif.org/species/2479563",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56df5ee983c45700544e3c6a/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
           "label": "Chalcostigma herrani",
           "slug_especie": "chalcostigma-herrani",
           "registros": 13,
@@ -1426,24 +1426,15 @@
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Colibri coruscans",
-          "slug_especie": "colibri-coruscans",
+          "label": "Pionus chalcopterus",
+          "slug_especie": "pionus-chalcopterus",
           "registros": 11,
-          "url_gbif": "https://www.gbif.org/species/5228474",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4a8dcf0106c67230e7385/summary",
+          "url_gbif": "https://www.gbif.org/species/2479901",
           "slug_tematica": "cites-ii"
         }
       ],
       "list_especies_cites_iii": [],
       "species_list": [
-        {
-          "label": "Forpus conspicillatus",
-          "slug_especie": "forpus-conspicillatus",
-          "registros": 42,
-          "url_gbif": "https://www.gbif.org/species/2479071",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c76fc3f0106c67230e73ed/summary",
-          "slug_tematica": "cites-ii"
-        },
         {
           "label": "Tapirus pinchaque",
           "slug_especie": "tapirus-pinchaque",
@@ -1451,6 +1442,14 @@
           "url_gbif": "https://www.gbif.org/species/2440899",
           "url_cbc": "https://catalogo.biodiversidad.co/file/59e370f75f369343443066f4/summary",
           "slug_tematica": "cites-i"
+        },
+        {
+          "label": "Forpus conspicillatus",
+          "slug_especie": "forpus-conspicillatus",
+          "registros": 42,
+          "url_gbif": "https://www.gbif.org/species/2479071",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c76fc3f0106c67230e73ed/summary",
+          "slug_tematica": "cites-ii"
         },
         {
           "label": "Rupornis magnirostris",
@@ -1492,14 +1491,6 @@
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Brotogeris jugularis",
-          "slug_especie": "brotogeris-jugularis",
-          "registros": 14,
-          "url_gbif": "https://www.gbif.org/species/2479563",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56df5ee983c45700544e3c6a/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
           "label": "Rupicola peruvianus",
           "slug_especie": "rupicola-peruvianus",
           "registros": 14,
@@ -1512,6 +1503,14 @@
           "registros": 14,
           "url_gbif": "https://www.gbif.org/species/7864506",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56702e10f289f5a40c0cd2c7/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Brotogeris jugularis",
+          "slug_especie": "brotogeris-jugularis",
+          "registros": 14,
+          "url_gbif": "https://www.gbif.org/species/2479563",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56df5ee983c45700544e3c6a/summary",
           "slug_tematica": "cites-ii"
         }
       ]
@@ -1550,13 +1549,6 @@
           "slug_tematica": "endemicas"
         },
         {
-          "label": "Pristimantis obmutescens",
-          "slug_especie": "pristimantis-obmutescens",
-          "registros": 17,
-          "url_gbif": "https://www.gbif.org/species/2425322",
-          "slug_tematica": "endemicas"
-        },
-        {
           "label": "Themistoclesia mucronata",
           "slug_especie": "themistoclesia-mucronata",
           "registros": 17,
@@ -1565,11 +1557,10 @@
           "slug_tematica": "endemicas"
         },
         {
-          "label": "Zamia tolimensis",
-          "slug_especie": "zamia-tolimensis",
-          "registros": 14,
-          "url_gbif": "https://www.gbif.org/species/7864506",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56702e10f289f5a40c0cd2c7/summary",
+          "label": "Pristimantis obmutescens",
+          "slug_especie": "pristimantis-obmutescens",
+          "registros": 17,
+          "url_gbif": "https://www.gbif.org/species/2425322",
           "slug_tematica": "endemicas"
         },
         {
@@ -1577,6 +1568,14 @@
           "slug_especie": "ortalis-columbiana",
           "registros": 14,
           "url_gbif": "https://www.gbif.org/species/5229460",
+          "slug_tematica": "endemicas"
+        },
+        {
+          "label": "Zamia tolimensis",
+          "slug_especie": "zamia-tolimensis",
+          "registros": 14,
+          "url_gbif": "https://www.gbif.org/species/7864506",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56702e10f289f5a40c0cd2c7/summary",
           "slug_tematica": "endemicas"
         },
         {
@@ -3207,19 +3206,19 @@
           "genus": "Hesperomeles"
         },
         {
-          "label": "Disterigma acuminatum",
+          "label": "Myrsine pellucidopunctata",
           "registros": 33,
-          "slug_especie": "disterigma-acuminatum",
+          "slug_especie": "myrsine-pellucidopunctata",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4171314",
-          "species": "Disterigma acuminatum",
+          "url_gbif": "https://www.gbif.org/species/8352341",
+          "species": "Myrsine pellucidopunctata",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
           "order": "Ericales",
-          "family": "Ericaceae",
-          "genus": "Disterigma"
+          "family": "Primulaceae",
+          "genus": "Myrsine"
         },
         {
           "label": "Gaultheria myrsinoides",
@@ -3237,34 +3236,19 @@
           "genus": "Gaultheria"
         },
         {
-          "label": "Myrsine pellucidopunctata",
+          "label": "Disterigma acuminatum",
           "registros": 33,
-          "slug_especie": "myrsine-pellucidopunctata",
+          "slug_especie": "disterigma-acuminatum",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/8352341",
-          "species": "Myrsine pellucidopunctata",
+          "url_gbif": "https://www.gbif.org/species/4171314",
+          "species": "Disterigma acuminatum",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
           "order": "Ericales",
-          "family": "Primulaceae",
-          "genus": "Myrsine"
-        },
-        {
-          "label": "Gaiadendron punctatum",
-          "registros": 28,
-          "slug_especie": "gaiadendron-punctatum",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7288046",
-          "species": "Gaiadendron punctatum",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Santalales",
-          "family": "Loranthaceae",
-          "genus": "Gaiadendron"
+          "family": "Ericaceae",
+          "genus": "Disterigma"
         },
         {
           "label": "Linochilus schultzii",
@@ -3280,6 +3264,21 @@
           "order": "Asterales",
           "family": "Asteraceae",
           "genus": "Linochilus"
+        },
+        {
+          "label": "Gaiadendron punctatum",
+          "registros": 28,
+          "slug_especie": "gaiadendron-punctatum",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7288046",
+          "species": "Gaiadendron punctatum",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Santalales",
+          "family": "Loranthaceae",
+          "genus": "Gaiadendron"
         },
         {
           "label": "Disterigma empetrifolium",
@@ -3966,22 +3965,6 @@
       ],
       "species_list_top": [
         {
-          "label": "Thraupis episcopus",
-          "registros": 70,
-          "slug_especie": "thraupis-episcopus",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2488602",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf719b3c16479905cba7e1/summary",
-          "species": "Thraupis episcopus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Thraupis"
-        },
-        {
           "label": "Tyrannus melancholicus",
           "registros": 70,
           "slug_especie": "tyrannus-melancholicus",
@@ -3996,6 +3979,22 @@
           "order": "Passeriformes",
           "family": "Tyrannidae",
           "genus": "Tyrannus"
+        },
+        {
+          "label": "Thraupis episcopus",
+          "registros": 70,
+          "slug_especie": "thraupis-episcopus",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2488602",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf719b3c16479905cba7e1/summary",
+          "species": "Thraupis episcopus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Thraupis"
         },
         {
           "label": "Zonotrichia capensis",
@@ -4077,22 +4076,6 @@
           "genus": "Stilpnia"
         },
         {
-          "label": "Forpus conspicillatus",
-          "registros": 42,
-          "slug_especie": "forpus-conspicillatus",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2479071",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c76fc3f0106c67230e73ed/summary",
-          "species": "Forpus conspicillatus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Psittaciformes",
-          "family": "Psittacidae",
-          "genus": "Forpus"
-        },
-        {
           "label": "Tapirus pinchaque",
           "registros": 42,
           "slug_especie": "tapirus-pinchaque",
@@ -4107,6 +4090,22 @@
           "order": "Perissodactyla",
           "family": "Tapiridae",
           "genus": "Tapirus"
+        },
+        {
+          "label": "Forpus conspicillatus",
+          "registros": 42,
+          "slug_especie": "forpus-conspicillatus",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2479071",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c76fc3f0106c67230e73ed/summary",
+          "species": "Forpus conspicillatus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Psittaciformes",
+          "family": "Psittacidae",
+          "genus": "Forpus"
         },
         {
           "label": "Mimus gilvus",
@@ -4125,6 +4124,21 @@
           "genus": "Mimus"
         },
         {
+          "label": "Stilpnia cyanicollis",
+          "registros": 41,
+          "slug_especie": "stilpnia-cyanicollis",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/10992187",
+          "species": "Stilpnia cyanicollis",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Stilpnia"
+        },
+        {
           "label": "Rupornis magnirostris",
           "registros": 41,
           "slug_especie": "rupornis-magnirostris",
@@ -4139,21 +4153,6 @@
           "order": "Accipitriformes",
           "family": "Accipitridae",
           "genus": "Rupornis"
-        },
-        {
-          "label": "Stilpnia cyanicollis",
-          "registros": 41,
-          "slug_especie": "stilpnia-cyanicollis",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/10992187",
-          "species": "Stilpnia cyanicollis",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Stilpnia"
         }
       ],
       "species_list_tematica": {
@@ -4604,24 +4603,6 @@
         ],
         "cites": [
           {
-            "label": "Forpus conspicillatus",
-            "registros": 42,
-            "slug_especie": "forpus-conspicillatus",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2479071",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c76fc3f0106c67230e73ed/summary",
-            "species": "Forpus conspicillatus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Psittaciformes",
-            "family": "Psittacidae",
-            "genus": "Forpus"
-          },
-          {
             "label": "Tapirus pinchaque",
             "registros": 42,
             "slug_especie": "tapirus-pinchaque",
@@ -4638,6 +4619,24 @@
             "order": "Perissodactyla",
             "family": "Tapiridae",
             "genus": "Tapirus"
+          },
+          {
+            "label": "Forpus conspicillatus",
+            "registros": 42,
+            "slug_especie": "forpus-conspicillatus",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2479071",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c76fc3f0106c67230e73ed/summary",
+            "species": "Forpus conspicillatus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Psittaciformes",
+            "family": "Psittacidae",
+            "genus": "Forpus"
           },
           {
             "label": "Rupornis magnirostris",
@@ -4729,6 +4728,23 @@
             "genus": "Amazilia"
           },
           {
+            "label": "Rupicola peruvianus",
+            "registros": 14,
+            "slug_especie": "rupicola-peruvianus",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5230374",
+            "species": "Rupicola peruvianus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Cotingidae",
+            "genus": "Rupicola"
+          },
+          {
             "label": "Brotogeris jugularis",
             "registros": 14,
             "slug_especie": "brotogeris-jugularis",
@@ -4745,23 +4761,6 @@
             "order": "Psittaciformes",
             "family": "Psittacidae",
             "genus": "Brotogeris"
-          },
-          {
-            "label": "Rupicola peruvianus",
-            "registros": 14,
-            "slug_especie": "rupicola-peruvianus",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5230374",
-            "species": "Rupicola peruvianus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Cotingidae",
-            "genus": "Rupicola"
           },
           {
             "label": "Chalcostigma herrani",
@@ -5760,22 +5759,6 @@
       "subgrupo_especies": [],
       "species_list_top": [
         {
-          "label": "Thraupis episcopus",
-          "registros": 70,
-          "slug_especie": "thraupis-episcopus",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2488602",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf719b3c16479905cba7e1/summary",
-          "species": "Thraupis episcopus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Thraupis"
-        },
-        {
           "label": "Tyrannus melancholicus",
           "registros": 70,
           "slug_especie": "tyrannus-melancholicus",
@@ -5790,6 +5773,22 @@
           "order": "Passeriformes",
           "family": "Tyrannidae",
           "genus": "Tyrannus"
+        },
+        {
+          "label": "Thraupis episcopus",
+          "registros": 70,
+          "slug_especie": "thraupis-episcopus",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2488602",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf719b3c16479905cba7e1/summary",
+          "species": "Thraupis episcopus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Thraupis"
         },
         {
           "label": "Zonotrichia capensis",
@@ -5871,22 +5870,6 @@
           "genus": "Forpus"
         },
         {
-          "label": "Mimus gilvus",
-          "registros": 41,
-          "slug_especie": "mimus-gilvus",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5231676",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b8eaf0106c67230e7409/summary",
-          "species": "Mimus gilvus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Mimidae",
-          "genus": "Mimus"
-        },
-        {
           "label": "Rupornis magnirostris",
           "registros": 41,
           "slug_especie": "rupornis-magnirostris",
@@ -5901,6 +5884,22 @@
           "order": "Accipitriformes",
           "family": "Accipitridae",
           "genus": "Rupornis"
+        },
+        {
+          "label": "Mimus gilvus",
+          "registros": 41,
+          "slug_especie": "mimus-gilvus",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5231676",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b8eaf0106c67230e7409/summary",
+          "species": "Mimus gilvus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Mimidae",
+          "genus": "Mimus"
         },
         {
           "label": "Stilpnia cyanicollis",
@@ -6155,6 +6154,23 @@
             "genus": "Amazilia"
           },
           {
+            "label": "Rupicola peruvianus",
+            "registros": 14,
+            "slug_especie": "rupicola-peruvianus",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5230374",
+            "species": "Rupicola peruvianus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Cotingidae",
+            "genus": "Rupicola"
+          },
+          {
             "label": "Brotogeris jugularis",
             "registros": 14,
             "slug_especie": "brotogeris-jugularis",
@@ -6171,23 +6187,6 @@
             "order": "Psittaciformes",
             "family": "Psittacidae",
             "genus": "Brotogeris"
-          },
-          {
-            "label": "Rupicola peruvianus",
-            "registros": 14,
-            "slug_especie": "rupicola-peruvianus",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5230374",
-            "species": "Rupicola peruvianus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Cotingidae",
-            "genus": "Rupicola"
           },
           {
             "label": "Chalcostigma herrani",
@@ -6207,6 +6206,23 @@
             "genus": "Chalcostigma"
           },
           {
+            "label": "Pionus chalcopterus",
+            "registros": 11,
+            "slug_especie": "pionus-chalcopterus",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2479901",
+            "species": "Pionus chalcopterus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Psittaciformes",
+            "family": "Psittacidae",
+            "genus": "Pionus"
+          },
+          {
             "label": "Colibri coruscans",
             "registros": 11,
             "slug_especie": "colibri-coruscans",
@@ -6223,23 +6239,6 @@
             "order": "Apodiformes",
             "family": "Trochilidae",
             "genus": "Colibri"
-          },
-          {
-            "label": "Pionus chalcopterus",
-            "registros": 11,
-            "slug_especie": "pionus-chalcopterus",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2479901",
-            "species": "Pionus chalcopterus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Psittaciformes",
-            "family": "Psittacidae",
-            "genus": "Pionus"
           }
         ],
         "migratorias": [
@@ -10055,21 +10054,6 @@
       ],
       "species_list_top": [
         {
-          "label": "Heliconius cydno",
-          "registros": 15,
-          "slug_especie": "heliconius-cydno",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1900485",
-          "species": "Heliconius cydno",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Heliconius"
-        },
-        {
           "label": "Pedaliodes polusca",
           "registros": 15,
           "slug_especie": "pedaliodes-polusca",
@@ -10083,6 +10067,21 @@
           "order": "Lepidoptera",
           "family": "Nymphalidae",
           "genus": "Pedaliodes"
+        },
+        {
+          "label": "Heliconius cydno",
+          "registros": 15,
+          "slug_especie": "heliconius-cydno",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1900485",
+          "species": "Heliconius cydno",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Heliconius"
         },
         {
           "label": "Steroma bega",
@@ -10190,21 +10189,6 @@
           "genus": "Diaethria"
         },
         {
-          "label": "Pedaliodes phaedra",
-          "registros": 6,
-          "slug_especie": "pedaliodes-phaedra",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1898716",
-          "species": "Pedaliodes phaedra",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Pedaliodes"
-        },
-        {
           "label": "Tegosa anieta",
           "registros": 6,
           "slug_especie": "tegosa-anieta",
@@ -10218,6 +10202,21 @@
           "order": "Lepidoptera",
           "family": "Nymphalidae",
           "genus": "Tegosa"
+        },
+        {
+          "label": "Pedaliodes phaedra",
+          "registros": 6,
+          "slug_especie": "pedaliodes-phaedra",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1898716",
+          "species": "Pedaliodes phaedra",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Pedaliodes"
         }
       ],
       "species_list_tematica": {
@@ -10574,21 +10573,6 @@
           "genus": "Steroma"
         },
         {
-          "label": "Eurema xantochlora",
-          "registros": 11,
-          "slug_especie": "eurema-xantochlora",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5137852",
-          "species": "Eurema xantochlora",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Pieridae",
-          "genus": "Eurema"
-        },
-        {
           "label": "Steremnia monachella",
           "registros": 11,
           "slug_especie": "steremnia-monachella",
@@ -10602,6 +10586,21 @@
           "order": "Lepidoptera",
           "family": "Nymphalidae",
           "genus": "Steremnia"
+        },
+        {
+          "label": "Eurema xantochlora",
+          "registros": 11,
+          "slug_especie": "eurema-xantochlora",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5137852",
+          "species": "Eurema xantochlora",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Pieridae",
+          "genus": "Eurema"
         },
         {
           "label": "Leptophobia eleone",
@@ -10664,21 +10663,6 @@
           "genus": "Diaethria"
         },
         {
-          "label": "Pedaliodes phaedra",
-          "registros": 6,
-          "slug_especie": "pedaliodes-phaedra",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1898716",
-          "species": "Pedaliodes phaedra",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Pedaliodes"
-        },
-        {
           "label": "Tegosa anieta",
           "registros": 6,
           "slug_especie": "tegosa-anieta",
@@ -10692,6 +10676,21 @@
           "order": "Lepidoptera",
           "family": "Nymphalidae",
           "genus": "Tegosa"
+        },
+        {
+          "label": "Pedaliodes phaedra",
+          "registros": 6,
+          "slug_especie": "pedaliodes-phaedra",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1898716",
+          "species": "Pedaliodes phaedra",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Pedaliodes"
         }
       ],
       "species_list_tematica": {
@@ -11715,21 +11714,6 @@
           "genus": "Steroma"
         },
         {
-          "label": "Eurema xantochlora",
-          "registros": 11,
-          "slug_especie": "eurema-xantochlora",
-          "slug_grupo": "mariposas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5137852",
-          "species": "Eurema xantochlora",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Pieridae",
-          "genus": "Eurema"
-        },
-        {
           "label": "Steremnia monachella",
           "registros": 11,
           "slug_especie": "steremnia-monachella",
@@ -11743,6 +11727,21 @@
           "order": "Lepidoptera",
           "family": "Nymphalidae",
           "genus": "Steremnia"
+        },
+        {
+          "label": "Eurema xantochlora",
+          "registros": 11,
+          "slug_especie": "eurema-xantochlora",
+          "slug_grupo": "mariposas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5137852",
+          "species": "Eurema xantochlora",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Pieridae",
+          "genus": "Eurema"
         },
         {
           "label": "Leptophobia eleone",
@@ -11805,21 +11804,6 @@
           "genus": "Diaethria"
         },
         {
-          "label": "Pedaliodes phaedra",
-          "registros": 6,
-          "slug_especie": "pedaliodes-phaedra",
-          "slug_grupo": "mariposas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1898716",
-          "species": "Pedaliodes phaedra",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Pedaliodes"
-        },
-        {
           "label": "Tegosa anieta",
           "registros": 6,
           "slug_especie": "tegosa-anieta",
@@ -11833,6 +11817,21 @@
           "order": "Lepidoptera",
           "family": "Nymphalidae",
           "genus": "Tegosa"
+        },
+        {
+          "label": "Pedaliodes phaedra",
+          "registros": 6,
+          "slug_especie": "pedaliodes-phaedra",
+          "slug_grupo": "mariposas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1898716",
+          "species": "Pedaliodes phaedra",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Pedaliodes"
         }
       ],
       "species_list_tematica": {
@@ -14388,6 +14387,21 @@
           "genus": "Hesperomeles"
         },
         {
+          "label": "Myrsine pellucidopunctata",
+          "registros": 33,
+          "slug_especie": "myrsine-pellucidopunctata",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/8352341",
+          "species": "Myrsine pellucidopunctata",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Ericales",
+          "family": "Primulaceae",
+          "genus": "Myrsine"
+        },
+        {
           "label": "Disterigma acuminatum",
           "registros": 33,
           "slug_especie": "disterigma-acuminatum",
@@ -14416,21 +14430,6 @@
           "order": "Ericales",
           "family": "Ericaceae",
           "genus": "Gaultheria"
-        },
-        {
-          "label": "Myrsine pellucidopunctata",
-          "registros": 33,
-          "slug_especie": "myrsine-pellucidopunctata",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/8352341",
-          "species": "Myrsine pellucidopunctata",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Ericales",
-          "family": "Primulaceae",
-          "genus": "Myrsine"
         },
         {
           "label": "Gaiadendron punctatum",
@@ -15879,6 +15878,21 @@
           "genus": "Hesperomeles"
         },
         {
+          "label": "Myrsine pellucidopunctata",
+          "registros": 33,
+          "slug_especie": "myrsine-pellucidopunctata",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/8352341",
+          "species": "Myrsine pellucidopunctata",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Ericales",
+          "family": "Primulaceae",
+          "genus": "Myrsine"
+        },
+        {
           "label": "Disterigma acuminatum",
           "registros": 33,
           "slug_especie": "disterigma-acuminatum",
@@ -15909,19 +15923,19 @@
           "genus": "Gaultheria"
         },
         {
-          "label": "Myrsine pellucidopunctata",
-          "registros": 33,
-          "slug_especie": "myrsine-pellucidopunctata",
+          "label": "Linochilus schultzii",
+          "registros": 28,
+          "slug_especie": "linochilus-schultzii",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/8352341",
-          "species": "Myrsine pellucidopunctata",
+          "url_gbif": "https://www.gbif.org/species/10697037",
+          "species": "Linochilus schultzii",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Ericales",
-          "family": "Primulaceae",
-          "genus": "Myrsine"
+          "order": "Asterales",
+          "family": "Asteraceae",
+          "genus": "Linochilus"
         },
         {
           "label": "Gaiadendron punctatum",
@@ -15937,21 +15951,6 @@
           "order": "Santalales",
           "family": "Loranthaceae",
           "genus": "Gaiadendron"
-        },
-        {
-          "label": "Linochilus schultzii",
-          "registros": 28,
-          "slug_especie": "linochilus-schultzii",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/10697037",
-          "species": "Linochilus schultzii",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Asterales",
-          "family": "Asteraceae",
-          "genus": "Linochilus"
         },
         {
           "label": "Disterigma empetrifolium",
@@ -16801,20 +16800,19 @@
           "genus": "Tapirus"
         },
         {
-          "label": "Mimus gilvus",
+          "label": "Stilpnia cyanicollis",
           "registros": 41,
-          "slug_especie": "mimus-gilvus",
+          "slug_especie": "stilpnia-cyanicollis",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5231676",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b8eaf0106c67230e7409/summary",
-          "species": "Mimus gilvus",
+          "url_gbif": "https://www.gbif.org/species/10992187",
+          "species": "Stilpnia cyanicollis",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Mimidae",
-          "genus": "Mimus"
+          "family": "Thraupidae",
+          "genus": "Stilpnia"
         },
         {
           "label": "Rupornis magnirostris",
@@ -16833,19 +16831,20 @@
           "genus": "Rupornis"
         },
         {
-          "label": "Stilpnia cyanicollis",
+          "label": "Mimus gilvus",
           "registros": 41,
-          "slug_especie": "stilpnia-cyanicollis",
+          "slug_especie": "mimus-gilvus",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/10992187",
-          "species": "Stilpnia cyanicollis",
+          "url_gbif": "https://www.gbif.org/species/5231676",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b8eaf0106c67230e7409/summary",
+          "species": "Mimus gilvus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Stilpnia"
+          "family": "Mimidae",
+          "genus": "Mimus"
         }
       ],
       "species_list_tematica": {
@@ -17296,24 +17295,6 @@
         ],
         "cites": [
           {
-            "label": "Forpus conspicillatus",
-            "registros": 42,
-            "slug_especie": "forpus-conspicillatus",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2479071",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c76fc3f0106c67230e73ed/summary",
-            "species": "Forpus conspicillatus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Psittaciformes",
-            "family": "Psittacidae",
-            "genus": "Forpus"
-          },
-          {
             "label": "Tapirus pinchaque",
             "registros": 42,
             "slug_especie": "tapirus-pinchaque",
@@ -17330,6 +17311,24 @@
             "order": "Perissodactyla",
             "family": "Tapiridae",
             "genus": "Tapirus"
+          },
+          {
+            "label": "Forpus conspicillatus",
+            "registros": 42,
+            "slug_especie": "forpus-conspicillatus",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2479071",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c76fc3f0106c67230e73ed/summary",
+            "species": "Forpus conspicillatus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Psittaciformes",
+            "family": "Psittacidae",
+            "genus": "Forpus"
           },
           {
             "label": "Rupornis magnirostris",
@@ -17421,6 +17420,23 @@
             "genus": "Amazilia"
           },
           {
+            "label": "Rupicola peruvianus",
+            "registros": 14,
+            "slug_especie": "rupicola-peruvianus",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5230374",
+            "species": "Rupicola peruvianus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Cotingidae",
+            "genus": "Rupicola"
+          },
+          {
             "label": "Brotogeris jugularis",
             "registros": 14,
             "slug_especie": "brotogeris-jugularis",
@@ -17437,23 +17453,6 @@
             "order": "Psittaciformes",
             "family": "Psittacidae",
             "genus": "Brotogeris"
-          },
-          {
-            "label": "Rupicola peruvianus",
-            "registros": 14,
-            "slug_especie": "rupicola-peruvianus",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5230374",
-            "species": "Rupicola peruvianus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Cotingidae",
-            "genus": "Rupicola"
           },
           {
             "label": "Chalcostigma herrani",

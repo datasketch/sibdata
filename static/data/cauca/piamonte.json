@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -2859,36 +2859,6 @@
           "genus": "Columnea"
         },
         {
-          "label": "Miconia tococa",
-          "registros": 3,
-          "slug_especie": "miconia-tococa",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/10816285",
-          "species": "Miconia tococa",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Myrtales",
-          "family": "Melastomataceae",
-          "genus": "Miconia"
-        },
-        {
-          "label": "Palicourea racemosa",
-          "registros": 3,
-          "slug_especie": "palicourea-racemosa",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7868110",
-          "species": "Palicourea racemosa",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Gentianales",
-          "family": "Rubiaceae",
-          "genus": "Palicourea"
-        },
-        {
           "label": "Passiflora vitifolia",
           "registros": 3,
           "slug_especie": "passiflora-vitifolia",
@@ -2904,19 +2874,19 @@
           "genus": "Passiflora"
         },
         {
-          "label": "Piper macrotrichum",
+          "label": "Rudgea panurensis",
           "registros": 3,
-          "slug_especie": "piper-macrotrichum",
+          "slug_especie": "rudgea-panurensis",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4187437",
-          "species": "Piper macrotrichum",
+          "url_gbif": "https://www.gbif.org/species/2910777",
+          "species": "Rudgea panurensis",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Piperales",
-          "family": "Piperaceae",
-          "genus": "Piper"
+          "order": "Gentianales",
+          "family": "Rubiaceae",
+          "genus": "Rudgea"
         },
         {
           "label": "Pseudosenefeldera inclinata",
@@ -2934,19 +2904,49 @@
           "genus": "Pseudosenefeldera"
         },
         {
-          "label": "Rudgea panurensis",
+          "label": "Miconia tococa",
           "registros": 3,
-          "slug_especie": "rudgea-panurensis",
+          "slug_especie": "miconia-tococa",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2910777",
-          "species": "Rudgea panurensis",
+          "url_gbif": "https://www.gbif.org/species/10816285",
+          "species": "Miconia tococa",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Myrtales",
+          "family": "Melastomataceae",
+          "genus": "Miconia"
+        },
+        {
+          "label": "Piper macrotrichum",
+          "registros": 3,
+          "slug_especie": "piper-macrotrichum",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/4187437",
+          "species": "Piper macrotrichum",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Piperales",
+          "family": "Piperaceae",
+          "genus": "Piper"
+        },
+        {
+          "label": "Palicourea racemosa",
+          "registros": 3,
+          "slug_especie": "palicourea-racemosa",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7868110",
+          "species": "Palicourea racemosa",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
           "order": "Gentianales",
           "family": "Rubiaceae",
-          "genus": "Rudgea"
+          "genus": "Palicourea"
         }
       ],
       "species_list_tematica": {
@@ -5210,6 +5210,21 @@
           "genus": "Tyrannus"
         },
         {
+          "label": "Melanerpes cruentatus",
+          "registros": 409,
+          "slug_especie": "melanerpes-cruentatus",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2478122",
+          "species": "Melanerpes cruentatus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Piciformes",
+          "family": "Picidae",
+          "genus": "Melanerpes"
+        },
+        {
           "label": "Coragyps atratus",
           "registros": 409,
           "slug_especie": "coragyps-atratus",
@@ -5224,21 +5239,6 @@
           "order": "Accipitriformes",
           "family": "Cathartidae",
           "genus": "Coragyps"
-        },
-        {
-          "label": "Melanerpes cruentatus",
-          "registros": 409,
-          "slug_especie": "melanerpes-cruentatus",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2478122",
-          "species": "Melanerpes cruentatus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Piciformes",
-          "family": "Picidae",
-          "genus": "Melanerpes"
         }
       ],
       "species_list_tematica": {
@@ -8683,19 +8683,19 @@
           "genus": "Ectatomma"
         },
         {
-          "label": "Odontomachus opaciventris",
+          "label": "Pachycondyla stigma",
           "registros": 9,
-          "slug_especie": "odontomachus-opaciventris",
+          "slug_especie": "pachycondyla-stigma",
           "slug_grupo": "hormigas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5035331",
-          "species": "Odontomachus opaciventris",
+          "url_gbif": "https://www.gbif.org/species/1319880",
+          "species": "Pachycondyla stigma",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Hymenoptera",
           "family": "Formicidae",
-          "genus": "Odontomachus"
+          "genus": "Pachycondyla"
         },
         {
           "label": "Pachycondyla crassinoda",
@@ -8713,19 +8713,19 @@
           "genus": "Pachycondyla"
         },
         {
-          "label": "Pachycondyla stigma",
+          "label": "Odontomachus opaciventris",
           "registros": 9,
-          "slug_especie": "pachycondyla-stigma",
+          "slug_especie": "odontomachus-opaciventris",
           "slug_grupo": "hormigas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1319880",
-          "species": "Pachycondyla stigma",
+          "url_gbif": "https://www.gbif.org/species/5035331",
+          "species": "Odontomachus opaciventris",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Hymenoptera",
           "family": "Formicidae",
-          "genus": "Pachycondyla"
+          "genus": "Odontomachus"
         },
         {
           "label": "Ectatomma edentatum",
@@ -8758,6 +8758,21 @@
           "genus": "Gnamptogenys"
         },
         {
+          "label": "Trachymyrmex diversus",
+          "registros": 6,
+          "slug_especie": "trachymyrmex-diversus",
+          "slug_grupo": "hormigas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1326470",
+          "species": "Trachymyrmex diversus",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hymenoptera",
+          "family": "Formicidae",
+          "genus": "Trachymyrmex"
+        },
+        {
           "label": "Ectatomma tuberculatum",
           "registros": 6,
           "slug_especie": "ectatomma-tuberculatum",
@@ -8786,21 +8801,6 @@
           "order": "Hymenoptera",
           "family": "Formicidae",
           "genus": "Odontomachus"
-        },
-        {
-          "label": "Trachymyrmex diversus",
-          "registros": 6,
-          "slug_especie": "trachymyrmex-diversus",
-          "slug_grupo": "hormigas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1326470",
-          "species": "Trachymyrmex diversus",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Hymenoptera",
-          "family": "Formicidae",
-          "genus": "Trachymyrmex"
         },
         {
           "label": "Odontomachus hastatus",
@@ -9209,19 +9209,19 @@
           "genus": "Ectatomma"
         },
         {
-          "label": "Odontomachus opaciventris",
+          "label": "Pachycondyla stigma",
           "registros": 9,
-          "slug_especie": "odontomachus-opaciventris",
+          "slug_especie": "pachycondyla-stigma",
           "slug_grupo": "insectos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5035331",
-          "species": "Odontomachus opaciventris",
+          "url_gbif": "https://www.gbif.org/species/1319880",
+          "species": "Pachycondyla stigma",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Hymenoptera",
           "family": "Formicidae",
-          "genus": "Odontomachus"
+          "genus": "Pachycondyla"
         },
         {
           "label": "Pachycondyla crassinoda",
@@ -9239,19 +9239,19 @@
           "genus": "Pachycondyla"
         },
         {
-          "label": "Pachycondyla stigma",
+          "label": "Odontomachus opaciventris",
           "registros": 9,
-          "slug_especie": "pachycondyla-stigma",
+          "slug_especie": "odontomachus-opaciventris",
           "slug_grupo": "insectos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1319880",
-          "species": "Pachycondyla stigma",
+          "url_gbif": "https://www.gbif.org/species/5035331",
+          "species": "Odontomachus opaciventris",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Hymenoptera",
           "family": "Formicidae",
-          "genus": "Pachycondyla"
+          "genus": "Odontomachus"
         },
         {
           "label": "Ectatomma edentatum",
@@ -9299,21 +9299,6 @@
           "genus": "Ectatomma"
         },
         {
-          "label": "Odontomachus bradleyi",
-          "registros": 6,
-          "slug_especie": "odontomachus-bradleyi",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5035333",
-          "species": "Odontomachus bradleyi",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Hymenoptera",
-          "family": "Formicidae",
-          "genus": "Odontomachus"
-        },
-        {
           "label": "Trachymyrmex diversus",
           "registros": 6,
           "slug_especie": "trachymyrmex-diversus",
@@ -9327,6 +9312,21 @@
           "order": "Hymenoptera",
           "family": "Formicidae",
           "genus": "Trachymyrmex"
+        },
+        {
+          "label": "Odontomachus bradleyi",
+          "registros": 6,
+          "slug_especie": "odontomachus-bradleyi",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5035333",
+          "species": "Odontomachus bradleyi",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hymenoptera",
+          "family": "Formicidae",
+          "genus": "Odontomachus"
         }
       ],
       "species_list_tematica": {
@@ -9753,19 +9753,19 @@
           "genus": "Ectatomma"
         },
         {
-          "label": "Odontomachus opaciventris",
+          "label": "Pachycondyla stigma",
           "registros": 9,
-          "slug_especie": "odontomachus-opaciventris",
+          "slug_especie": "pachycondyla-stigma",
           "slug_grupo": "invertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5035331",
-          "species": "Odontomachus opaciventris",
+          "url_gbif": "https://www.gbif.org/species/1319880",
+          "species": "Pachycondyla stigma",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Hymenoptera",
           "family": "Formicidae",
-          "genus": "Odontomachus"
+          "genus": "Pachycondyla"
         },
         {
           "label": "Pachycondyla crassinoda",
@@ -9783,19 +9783,19 @@
           "genus": "Pachycondyla"
         },
         {
-          "label": "Pachycondyla stigma",
+          "label": "Odontomachus opaciventris",
           "registros": 9,
-          "slug_especie": "pachycondyla-stigma",
+          "slug_especie": "odontomachus-opaciventris",
           "slug_grupo": "invertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1319880",
-          "species": "Pachycondyla stigma",
+          "url_gbif": "https://www.gbif.org/species/5035331",
+          "species": "Odontomachus opaciventris",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Hymenoptera",
           "family": "Formicidae",
-          "genus": "Pachycondyla"
+          "genus": "Odontomachus"
         },
         {
           "label": "Ectatomma edentatum",
@@ -9828,19 +9828,19 @@
           "genus": "Gnamptogenys"
         },
         {
-          "label": "Ectatomma tuberculatum",
+          "label": "Trachymyrmex diversus",
           "registros": 6,
-          "slug_especie": "ectatomma-tuberculatum",
+          "slug_especie": "trachymyrmex-diversus",
           "slug_grupo": "invertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1314150",
-          "species": "Ectatomma tuberculatum",
+          "url_gbif": "https://www.gbif.org/species/1326470",
+          "species": "Trachymyrmex diversus",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Hymenoptera",
           "family": "Formicidae",
-          "genus": "Ectatomma"
+          "genus": "Trachymyrmex"
         },
         {
           "label": "Odontomachus bradleyi",
@@ -9858,19 +9858,19 @@
           "genus": "Odontomachus"
         },
         {
-          "label": "Trachymyrmex diversus",
+          "label": "Ectatomma tuberculatum",
           "registros": 6,
-          "slug_especie": "trachymyrmex-diversus",
+          "slug_especie": "ectatomma-tuberculatum",
           "slug_grupo": "invertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1326470",
-          "species": "Trachymyrmex diversus",
+          "url_gbif": "https://www.gbif.org/species/1314150",
+          "species": "Ectatomma tuberculatum",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Hymenoptera",
           "family": "Formicidae",
-          "genus": "Trachymyrmex"
+          "genus": "Ectatomma"
         }
       ],
       "species_list_tematica": {
@@ -12640,21 +12640,6 @@
           "genus": "Piper"
         },
         {
-          "label": "Miconia mayeta",
-          "registros": 5,
-          "slug_especie": "miconia-mayeta",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/10850760",
-          "species": "Miconia mayeta",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Myrtales",
-          "family": "Melastomataceae",
-          "genus": "Miconia"
-        },
-        {
           "label": "Tabernaemontana sananho",
           "registros": 5,
           "slug_especie": "tabernaemontana-sananho",
@@ -12668,6 +12653,21 @@
           "order": "Gentianales",
           "family": "Apocynaceae",
           "genus": "Tabernaemontana"
+        },
+        {
+          "label": "Miconia mayeta",
+          "registros": 5,
+          "slug_especie": "miconia-mayeta",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/10850760",
+          "species": "Miconia mayeta",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Myrtales",
+          "family": "Melastomataceae",
+          "genus": "Miconia"
         },
         {
           "label": "Siparuna macrotepala",
@@ -12716,36 +12716,6 @@
           "genus": "Columnea"
         },
         {
-          "label": "Miconia tococa",
-          "registros": 3,
-          "slug_especie": "miconia-tococa",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/10816285",
-          "species": "Miconia tococa",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Myrtales",
-          "family": "Melastomataceae",
-          "genus": "Miconia"
-        },
-        {
-          "label": "Palicourea racemosa",
-          "registros": 3,
-          "slug_especie": "palicourea-racemosa",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7868110",
-          "species": "Palicourea racemosa",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Gentianales",
-          "family": "Rubiaceae",
-          "genus": "Palicourea"
-        },
-        {
           "label": "Passiflora vitifolia",
           "registros": 3,
           "slug_especie": "passiflora-vitifolia",
@@ -12761,19 +12731,19 @@
           "genus": "Passiflora"
         },
         {
-          "label": "Piper macrotrichum",
+          "label": "Rudgea panurensis",
           "registros": 3,
-          "slug_especie": "piper-macrotrichum",
+          "slug_especie": "rudgea-panurensis",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4187437",
-          "species": "Piper macrotrichum",
+          "url_gbif": "https://www.gbif.org/species/2910777",
+          "species": "Rudgea panurensis",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Piperales",
-          "family": "Piperaceae",
-          "genus": "Piper"
+          "order": "Gentianales",
+          "family": "Rubiaceae",
+          "genus": "Rudgea"
         },
         {
           "label": "Pseudosenefeldera inclinata",
@@ -12791,19 +12761,49 @@
           "genus": "Pseudosenefeldera"
         },
         {
-          "label": "Rudgea panurensis",
+          "label": "Piper macrotrichum",
           "registros": 3,
-          "slug_especie": "rudgea-panurensis",
+          "slug_especie": "piper-macrotrichum",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2910777",
-          "species": "Rudgea panurensis",
+          "url_gbif": "https://www.gbif.org/species/4187437",
+          "species": "Piper macrotrichum",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Piperales",
+          "family": "Piperaceae",
+          "genus": "Piper"
+        },
+        {
+          "label": "Palicourea racemosa",
+          "registros": 3,
+          "slug_especie": "palicourea-racemosa",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7868110",
+          "species": "Palicourea racemosa",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
           "order": "Gentianales",
           "family": "Rubiaceae",
-          "genus": "Rudgea"
+          "genus": "Palicourea"
+        },
+        {
+          "label": "Miconia tococa",
+          "registros": 3,
+          "slug_especie": "miconia-tococa",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/10816285",
+          "species": "Miconia tococa",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Myrtales",
+          "family": "Melastomataceae",
+          "genus": "Miconia"
         }
       ],
       "species_list_tematica": {
@@ -14143,21 +14143,6 @@
           "genus": "Piper"
         },
         {
-          "label": "Miconia mayeta",
-          "registros": 5,
-          "slug_especie": "miconia-mayeta",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/10850760",
-          "species": "Miconia mayeta",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Myrtales",
-          "family": "Melastomataceae",
-          "genus": "Miconia"
-        },
-        {
           "label": "Tabernaemontana sananho",
           "registros": 5,
           "slug_especie": "tabernaemontana-sananho",
@@ -14171,6 +14156,21 @@
           "order": "Gentianales",
           "family": "Apocynaceae",
           "genus": "Tabernaemontana"
+        },
+        {
+          "label": "Miconia mayeta",
+          "registros": 5,
+          "slug_especie": "miconia-mayeta",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/10850760",
+          "species": "Miconia mayeta",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Myrtales",
+          "family": "Melastomataceae",
+          "genus": "Miconia"
         },
         {
           "label": "Siparuna macrotepala",
@@ -14219,36 +14219,6 @@
           "genus": "Columnea"
         },
         {
-          "label": "Miconia tococa",
-          "registros": 3,
-          "slug_especie": "miconia-tococa",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/10816285",
-          "species": "Miconia tococa",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Myrtales",
-          "family": "Melastomataceae",
-          "genus": "Miconia"
-        },
-        {
-          "label": "Palicourea racemosa",
-          "registros": 3,
-          "slug_especie": "palicourea-racemosa",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7868110",
-          "species": "Palicourea racemosa",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Gentianales",
-          "family": "Rubiaceae",
-          "genus": "Palicourea"
-        },
-        {
           "label": "Passiflora vitifolia",
           "registros": 3,
           "slug_especie": "passiflora-vitifolia",
@@ -14264,19 +14234,19 @@
           "genus": "Passiflora"
         },
         {
-          "label": "Piper macrotrichum",
+          "label": "Rudgea panurensis",
           "registros": 3,
-          "slug_especie": "piper-macrotrichum",
+          "slug_especie": "rudgea-panurensis",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4187437",
-          "species": "Piper macrotrichum",
+          "url_gbif": "https://www.gbif.org/species/2910777",
+          "species": "Rudgea panurensis",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Piperales",
-          "family": "Piperaceae",
-          "genus": "Piper"
+          "order": "Gentianales",
+          "family": "Rubiaceae",
+          "genus": "Rudgea"
         },
         {
           "label": "Pseudosenefeldera inclinata",
@@ -14294,19 +14264,49 @@
           "genus": "Pseudosenefeldera"
         },
         {
-          "label": "Rudgea panurensis",
+          "label": "Piper macrotrichum",
           "registros": 3,
-          "slug_especie": "rudgea-panurensis",
+          "slug_especie": "piper-macrotrichum",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2910777",
-          "species": "Rudgea panurensis",
+          "url_gbif": "https://www.gbif.org/species/4187437",
+          "species": "Piper macrotrichum",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Piperales",
+          "family": "Piperaceae",
+          "genus": "Piper"
+        },
+        {
+          "label": "Palicourea racemosa",
+          "registros": 3,
+          "slug_especie": "palicourea-racemosa",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7868110",
+          "species": "Palicourea racemosa",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
           "order": "Gentianales",
           "family": "Rubiaceae",
-          "genus": "Rudgea"
+          "genus": "Palicourea"
+        },
+        {
+          "label": "Miconia tococa",
+          "registros": 3,
+          "slug_especie": "miconia-tococa",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/10816285",
+          "species": "Miconia tococa",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Myrtales",
+          "family": "Melastomataceae",
+          "genus": "Miconia"
         }
       ],
       "species_list_tematica": {
@@ -14913,6 +14913,21 @@
           "genus": "Tyrannus"
         },
         {
+          "label": "Melanerpes cruentatus",
+          "registros": 409,
+          "slug_especie": "melanerpes-cruentatus",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2478122",
+          "species": "Melanerpes cruentatus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Piciformes",
+          "family": "Picidae",
+          "genus": "Melanerpes"
+        },
+        {
           "label": "Coragyps atratus",
           "registros": 409,
           "slug_especie": "coragyps-atratus",
@@ -14927,21 +14942,6 @@
           "order": "Accipitriformes",
           "family": "Cathartidae",
           "genus": "Coragyps"
-        },
-        {
-          "label": "Melanerpes cruentatus",
-          "registros": 409,
-          "slug_especie": "melanerpes-cruentatus",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2478122",
-          "species": "Melanerpes cruentatus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Piciformes",
-          "family": "Picidae",
-          "genus": "Melanerpes"
         }
       ],
       "species_list_tematica": {

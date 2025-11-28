@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -1561,6 +1561,13 @@
           "slug_tematica": "endemicas"
         },
         {
+          "label": "Lupinus santanderensis",
+          "slug_especie": "lupinus-santanderensis",
+          "registros": 8,
+          "url_gbif": "https://www.gbif.org/species/2964308",
+          "slug_tematica": "endemicas"
+        },
+        {
           "label": "Chusquea tuberculosa",
           "slug_especie": "chusquea-tuberculosa",
           "registros": 8,
@@ -1573,13 +1580,6 @@
           "registros": 8,
           "url_gbif": "https://www.gbif.org/species/4169425",
           "url_cbc": "https://catalogo.biodiversidad.co/file/5b59d12cf0d3bfe030572e73/summary",
-          "slug_tematica": "endemicas"
-        },
-        {
-          "label": "Lupinus santanderensis",
-          "slug_especie": "lupinus-santanderensis",
-          "registros": 8,
-          "url_gbif": "https://www.gbif.org/species/2964308",
           "slug_tematica": "endemicas"
         },
         {
@@ -1604,18 +1604,17 @@
           "slug_tematica": "endemicas"
         },
         {
-          "label": "Epidendrum chioneum",
-          "slug_especie": "epidendrum-chioneum",
+          "label": "Halenia asclepiadea",
+          "slug_especie": "halenia-asclepiadea",
           "registros": 4,
-          "url_gbif": "https://www.gbif.org/species/5321210",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e1082e83c45700544e3d0e/summary",
+          "url_gbif": "https://www.gbif.org/species/5596294",
           "slug_tematica": "endemicas"
         },
         {
-          "label": "Gynoxys subcinerea",
-          "slug_especie": "gynoxys-subcinerea",
+          "label": "Passiflora hyacinthiflora",
+          "slug_especie": "passiflora-hyacinthiflora",
           "registros": 4,
-          "url_gbif": "https://www.gbif.org/species/3138745",
+          "url_gbif": "https://www.gbif.org/species/7313464",
           "slug_tematica": "endemicas"
         }
       ]
@@ -2647,6 +2646,21 @@
           "genus": "Vaccinium"
         },
         {
+          "label": "Escallonia myrtilloides",
+          "registros": 9,
+          "slug_especie": "escallonia-myrtilloides",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/8376201",
+          "species": "Escallonia myrtilloides",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Escalloniales",
+          "family": "Escalloniaceae",
+          "genus": "Escallonia"
+        },
+        {
           "label": "Calceolaria microbefaria",
           "registros": 9,
           "slug_especie": "calceolaria-microbefaria",
@@ -2661,21 +2675,6 @@
           "order": "Lamiales",
           "family": "Calceolariaceae",
           "genus": "Calceolaria"
-        },
-        {
-          "label": "Escallonia myrtilloides",
-          "registros": 9,
-          "slug_especie": "escallonia-myrtilloides",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/8376201",
-          "species": "Escallonia myrtilloides",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Escalloniales",
-          "family": "Escalloniaceae",
-          "genus": "Escallonia"
         },
         {
           "label": "Andicolea complanata",
@@ -2693,21 +2692,6 @@
           "genus": "Andicolea"
         },
         {
-          "label": "Baccharis tricuneata",
-          "registros": 8,
-          "slug_especie": "baccharis-tricuneata",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3129202",
-          "species": "Baccharis tricuneata",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Asterales",
-          "family": "Asteraceae",
-          "genus": "Baccharis"
-        },
-        {
           "label": "Chusquea tuberculosa",
           "registros": 8,
           "slug_especie": "chusquea-tuberculosa",
@@ -2721,6 +2705,21 @@
           "order": "Poales",
           "family": "Poaceae",
           "genus": "Chusquea"
+        },
+        {
+          "label": "Baccharis tricuneata",
+          "registros": 8,
+          "slug_especie": "baccharis-tricuneata",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3129202",
+          "species": "Baccharis tricuneata",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Asterales",
+          "family": "Asteraceae",
+          "genus": "Baccharis"
         },
         {
           "label": "Gaultheria santanderensis",
@@ -3380,6 +3379,23 @@
             "genus": "Chusquea"
           },
           {
+            "label": "Lupinus santanderensis",
+            "registros": 8,
+            "slug_especie": "lupinus-santanderensis",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "angiospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2964308",
+            "species": "Lupinus santanderensis",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Fabales",
+            "family": "Fabaceae",
+            "genus": "Lupinus"
+          },
+          {
             "label": "Gaultheria santanderensis",
             "registros": 8,
             "slug_especie": "gaultheria-santanderensis",
@@ -3396,23 +3412,6 @@
             "order": "Ericales",
             "family": "Ericaceae",
             "genus": "Gaultheria"
-          },
-          {
-            "label": "Lupinus santanderensis",
-            "registros": 8,
-            "slug_especie": "lupinus-santanderensis",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "angiospermas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2964308",
-            "species": "Lupinus santanderensis",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Fabales",
-            "family": "Fabaceae",
-            "genus": "Lupinus"
           },
           {
             "label": "Passiflora trianae",
@@ -3447,6 +3446,40 @@
             "order": "Ranunculales",
             "family": "Berberidaceae",
             "genus": "Berberis"
+          },
+          {
+            "label": "Passiflora hyacinthiflora",
+            "registros": 4,
+            "slug_especie": "passiflora-hyacinthiflora",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "angiospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/7313464",
+            "species": "Passiflora hyacinthiflora",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Malpighiales",
+            "family": "Passifloraceae",
+            "genus": "Passiflora"
+          },
+          {
+            "label": "Halenia asclepiadea",
+            "registros": 4,
+            "slug_especie": "halenia-asclepiadea",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "angiospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5596294",
+            "species": "Halenia asclepiadea",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Gentianales",
+            "family": "Gentianaceae",
+            "genus": "Halenia"
           },
           {
             "label": "Epidendrum chioneum",
@@ -3484,38 +3517,57 @@
             "genus": "Gynoxys"
           },
           {
-            "label": "Halenia asclepiadea",
-            "registros": 4,
-            "slug_especie": "halenia-asclepiadea",
+            "label": "Polylepis quadrijuga",
+            "registros": 3,
+            "slug_especie": "polylepis-quadrijuga",
             "slug_tematica": "endemicas",
             "tematica_label": "Endémicas",
             "slug_grupo": "angiospermas",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5596294",
-            "species": "Halenia asclepiadea",
+            "url_gbif": "https://www.gbif.org/species/5370607",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/567c1510f289f5a40c0cd34f/summary",
+            "species": "Polylepis quadrijuga",
             "kingdom": "Plantae",
             "phylum": "Tracheophyta",
             "class": "Magnoliopsida",
-            "order": "Gentianales",
-            "family": "Gentianaceae",
-            "genus": "Halenia"
+            "order": "Rosales",
+            "family": "Rosaceae",
+            "genus": "Polylepis"
           },
           {
-            "label": "Passiflora hyacinthiflora",
-            "registros": 4,
-            "slug_especie": "passiflora-hyacinthiflora",
+            "label": "Passiflora bicuspidata",
+            "registros": 3,
+            "slug_especie": "passiflora-bicuspidata",
             "slug_tematica": "endemicas",
             "tematica_label": "Endémicas",
             "slug_grupo": "angiospermas",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/7313464",
-            "species": "Passiflora hyacinthiflora",
+            "url_gbif": "https://www.gbif.org/species/3587282",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56df23e983c45700544e3c50/summary",
+            "species": "Passiflora bicuspidata",
             "kingdom": "Plantae",
             "phylum": "Tracheophyta",
             "class": "Magnoliopsida",
             "order": "Malpighiales",
             "family": "Passifloraceae",
             "genus": "Passiflora"
+          },
+          {
+            "label": "Monnina aestuans",
+            "registros": 3,
+            "slug_especie": "monnina-aestuans",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "angiospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/7293678",
+            "species": "Monnina aestuans",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Fabales",
+            "family": "Polygalaceae",
+            "genus": "Monnina"
           },
           {
             "label": "Berberis goudotii",
@@ -3551,59 +3603,6 @@
             "order": "Asterales",
             "family": "Asteraceae",
             "genus": "Lourteigia"
-          },
-          {
-            "label": "Monnina aestuans",
-            "registros": 3,
-            "slug_especie": "monnina-aestuans",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "angiospermas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/7293678",
-            "species": "Monnina aestuans",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Fabales",
-            "family": "Polygalaceae",
-            "genus": "Monnina"
-          },
-          {
-            "label": "Passiflora bicuspidata",
-            "registros": 3,
-            "slug_especie": "passiflora-bicuspidata",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "angiospermas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3587282",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56df23e983c45700544e3c50/summary",
-            "species": "Passiflora bicuspidata",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Malpighiales",
-            "family": "Passifloraceae",
-            "genus": "Passiflora"
-          },
-          {
-            "label": "Polylepis quadrijuga",
-            "registros": 3,
-            "slug_especie": "polylepis-quadrijuga",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "angiospermas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5370607",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/567c1510f289f5a40c0cd34f/summary",
-            "species": "Polylepis quadrijuga",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Rosales",
-            "family": "Rosaceae",
-            "genus": "Polylepis"
           }
         ],
         "exoticas-total": [
@@ -5600,22 +5599,6 @@
           "genus": "Troglodytes"
         },
         {
-          "label": "Diglossa humeralis",
-          "registros": 35,
-          "slug_especie": "diglossa-humeralis",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5230680",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c53c72f0106c67230e739c/summary",
-          "species": "Diglossa humeralis",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Diglossa"
-        },
-        {
           "label": "Mecocerculus leucophrys",
           "registros": 35,
           "slug_especie": "mecocerculus-leucophrys",
@@ -5630,6 +5613,22 @@
           "order": "Passeriformes",
           "family": "Tyrannidae",
           "genus": "Mecocerculus"
+        },
+        {
+          "label": "Diglossa humeralis",
+          "registros": 35,
+          "slug_especie": "diglossa-humeralis",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5230680",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c53c72f0106c67230e739c/summary",
+          "species": "Diglossa humeralis",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Diglossa"
         }
       ],
       "species_list_tematica": {
@@ -7771,6 +7770,37 @@
           "genus": "Dicksonia"
         },
         {
+          "label": "Dryopteris wallichiana",
+          "registros": 3,
+          "slug_especie": "dryopteris-wallichiana",
+          "slug_grupo": "helechos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5275137",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e04c4483c45700544e3cb8/summary",
+          "species": "Dryopteris wallichiana",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Polypodiopsida",
+          "order": "Polypodiales",
+          "family": "Dryopteridaceae",
+          "genus": "Dryopteris"
+        },
+        {
+          "label": "Serpocaulon semipinnatifidum",
+          "registros": 3,
+          "slug_especie": "serpocaulon-semipinnatifidum",
+          "slug_grupo": "helechos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/4023822",
+          "species": "Serpocaulon semipinnatifidum",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Polypodiopsida",
+          "order": "Polypodiales",
+          "family": "Polypodiaceae",
+          "genus": "Serpocaulon"
+        },
+        {
           "label": "Asplenium castaneum",
           "registros": 3,
           "slug_especie": "asplenium-castaneum",
@@ -7803,22 +7833,6 @@
           "genus": "Asplenium"
         },
         {
-          "label": "Dryopteris wallichiana",
-          "registros": 3,
-          "slug_especie": "dryopteris-wallichiana",
-          "slug_grupo": "helechos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5275137",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e04c4483c45700544e3cb8/summary",
-          "species": "Dryopteris wallichiana",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Polypodiopsida",
-          "order": "Polypodiales",
-          "family": "Dryopteridaceae",
-          "genus": "Dryopteris"
-        },
-        {
           "label": "Lophosoria quadripinnata",
           "registros": 3,
           "slug_especie": "lophosoria-quadripinnata",
@@ -7834,19 +7848,50 @@
           "genus": "Lophosoria"
         },
         {
-          "label": "Serpocaulon semipinnatifidum",
-          "registros": 3,
-          "slug_especie": "serpocaulon-semipinnatifidum",
+          "label": "Serpocaulon levigatum",
+          "registros": 2,
+          "slug_especie": "serpocaulon-levigatum",
           "slug_grupo": "helechos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4023822",
-          "species": "Serpocaulon semipinnatifidum",
+          "url_gbif": "https://www.gbif.org/species/4023945",
+          "species": "Serpocaulon levigatum",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Polypodiopsida",
           "order": "Polypodiales",
           "family": "Polypodiaceae",
           "genus": "Serpocaulon"
+        },
+        {
+          "label": "Serpocaulon fraxinifolium",
+          "registros": 2,
+          "slug_especie": "serpocaulon-fraxinifolium",
+          "slug_grupo": "helechos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/4024020",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e8380d83c45700544e43ab/summary",
+          "species": "Serpocaulon fraxinifolium",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Polypodiopsida",
+          "order": "Polypodiales",
+          "family": "Polypodiaceae",
+          "genus": "Serpocaulon"
+        },
+        {
+          "label": "Melpomene moniliformis",
+          "registros": 2,
+          "slug_especie": "melpomene-moniliformis",
+          "slug_grupo": "helechos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5566998",
+          "species": "Melpomene moniliformis",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Polypodiopsida",
+          "order": "Polypodiales",
+          "family": "Polypodiaceae",
+          "genus": "Melpomene"
         },
         {
           "label": "Campyloneurum angustifolium",
@@ -7908,52 +7953,6 @@
           "order": "Polypodiales",
           "family": "Dryopteridaceae",
           "genus": "Elaphoglossum"
-        },
-        {
-          "label": "Melpomene moniliformis",
-          "registros": 2,
-          "slug_especie": "melpomene-moniliformis",
-          "slug_grupo": "helechos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5566998",
-          "species": "Melpomene moniliformis",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Polypodiopsida",
-          "order": "Polypodiales",
-          "family": "Polypodiaceae",
-          "genus": "Melpomene"
-        },
-        {
-          "label": "Serpocaulon fraxinifolium",
-          "registros": 2,
-          "slug_especie": "serpocaulon-fraxinifolium",
-          "slug_grupo": "helechos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4024020",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e8380d83c45700544e43ab/summary",
-          "species": "Serpocaulon fraxinifolium",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Polypodiopsida",
-          "order": "Polypodiales",
-          "family": "Polypodiaceae",
-          "genus": "Serpocaulon"
-        },
-        {
-          "label": "Serpocaulon levigatum",
-          "registros": 2,
-          "slug_especie": "serpocaulon-levigatum",
-          "slug_grupo": "helechos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4023945",
-          "species": "Serpocaulon levigatum",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Polypodiopsida",
-          "order": "Polypodiales",
-          "family": "Polypodiaceae",
-          "genus": "Serpocaulon"
         }
       ],
       "species_list_tematica": {
@@ -9958,21 +9957,6 @@
           "genus": "Ceratodon"
         },
         {
-          "label": "Lepyrodon tomentosus",
-          "registros": 9,
-          "slug_especie": "lepyrodon-tomentosus",
-          "slug_grupo": "musgos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2678803",
-          "species": "Lepyrodon tomentosus",
-          "kingdom": "Plantae",
-          "phylum": "Bryophyta",
-          "class": "Bryopsida",
-          "order": "Hypnales",
-          "family": "Lepyrodontaceae",
-          "genus": "Lepyrodon"
-        },
-        {
           "label": "Leskeadelphus angustatus",
           "registros": 9,
           "slug_especie": "leskeadelphus-angustatus",
@@ -9986,6 +9970,21 @@
           "order": "Hypnales",
           "family": "Leskeaceae",
           "genus": "Leskeadelphus"
+        },
+        {
+          "label": "Lepyrodon tomentosus",
+          "registros": 9,
+          "slug_especie": "lepyrodon-tomentosus",
+          "slug_grupo": "musgos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2678803",
+          "species": "Lepyrodon tomentosus",
+          "kingdom": "Plantae",
+          "phylum": "Bryophyta",
+          "class": "Bryopsida",
+          "order": "Hypnales",
+          "family": "Lepyrodontaceae",
+          "genus": "Lepyrodon"
         },
         {
           "label": "Sciuro-hypnum plumosum",
@@ -10003,19 +10002,19 @@
           "genus": "Sciuro-hypnum"
         },
         {
-          "label": "Bucklandiella crispipila",
+          "label": "Grimmia longirostris",
           "registros": 8,
-          "slug_especie": "bucklandiella-crispipila",
+          "slug_especie": "grimmia-longirostris",
           "slug_grupo": "musgos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/8388419",
-          "species": "Bucklandiella crispipila",
+          "url_gbif": "https://www.gbif.org/species/5281737",
+          "species": "Grimmia longirostris",
           "kingdom": "Plantae",
           "phylum": "Bryophyta",
           "class": "Bryopsida",
           "order": "Grimmiales",
           "family": "Grimmiaceae",
-          "genus": "Bucklandiella"
+          "genus": "Grimmia"
         },
         {
           "label": "Entosthodon jamesonii",
@@ -10033,19 +10032,19 @@
           "genus": "Entosthodon"
         },
         {
-          "label": "Grimmia longirostris",
+          "label": "Bucklandiella crispipila",
           "registros": 8,
-          "slug_especie": "grimmia-longirostris",
+          "slug_especie": "bucklandiella-crispipila",
           "slug_grupo": "musgos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5281737",
-          "species": "Grimmia longirostris",
+          "url_gbif": "https://www.gbif.org/species/8388419",
+          "species": "Bucklandiella crispipila",
           "kingdom": "Plantae",
           "phylum": "Bryophyta",
           "class": "Bryopsida",
           "order": "Grimmiales",
           "family": "Grimmiaceae",
-          "genus": "Grimmia"
+          "genus": "Bucklandiella"
         },
         {
           "label": "Schistidium rivulare",
@@ -10396,19 +10395,19 @@
           "genus": "Schizymenium"
         },
         {
-          "label": "Ceratodon purpureus",
+          "label": "Leskeadelphus angustatus",
           "registros": 9,
-          "slug_especie": "ceratodon-purpureus",
+          "slug_especie": "leskeadelphus-angustatus",
           "slug_grupo": "no-vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5281381",
-          "species": "Ceratodon purpureus",
+          "url_gbif": "https://www.gbif.org/species/7529490",
+          "species": "Leskeadelphus angustatus",
           "kingdom": "Plantae",
           "phylum": "Bryophyta",
           "class": "Bryopsida",
-          "order": "Dicranales",
-          "family": "Ditrichaceae",
-          "genus": "Ceratodon"
+          "order": "Hypnales",
+          "family": "Leskeaceae",
+          "genus": "Leskeadelphus"
         },
         {
           "label": "Lepyrodon tomentosus",
@@ -10426,19 +10425,19 @@
           "genus": "Lepyrodon"
         },
         {
-          "label": "Leskeadelphus angustatus",
+          "label": "Ceratodon purpureus",
           "registros": 9,
-          "slug_especie": "leskeadelphus-angustatus",
+          "slug_especie": "ceratodon-purpureus",
           "slug_grupo": "no-vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7529490",
-          "species": "Leskeadelphus angustatus",
+          "url_gbif": "https://www.gbif.org/species/5281381",
+          "species": "Ceratodon purpureus",
           "kingdom": "Plantae",
           "phylum": "Bryophyta",
           "class": "Bryopsida",
-          "order": "Hypnales",
-          "family": "Leskeaceae",
-          "genus": "Leskeadelphus"
+          "order": "Dicranales",
+          "family": "Ditrichaceae",
+          "genus": "Ceratodon"
         },
         {
           "label": "Sciuro-hypnum plumosum",
@@ -10456,19 +10455,19 @@
           "genus": "Sciuro-hypnum"
         },
         {
-          "label": "Bucklandiella crispipila",
+          "label": "Grimmia longirostris",
           "registros": 8,
-          "slug_especie": "bucklandiella-crispipila",
+          "slug_especie": "grimmia-longirostris",
           "slug_grupo": "no-vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/8388419",
-          "species": "Bucklandiella crispipila",
+          "url_gbif": "https://www.gbif.org/species/5281737",
+          "species": "Grimmia longirostris",
           "kingdom": "Plantae",
           "phylum": "Bryophyta",
           "class": "Bryopsida",
           "order": "Grimmiales",
           "family": "Grimmiaceae",
-          "genus": "Bucklandiella"
+          "genus": "Grimmia"
         },
         {
           "label": "Entosthodon jamesonii",
@@ -10486,19 +10485,19 @@
           "genus": "Entosthodon"
         },
         {
-          "label": "Grimmia longirostris",
+          "label": "Bucklandiella crispipila",
           "registros": 8,
-          "slug_especie": "grimmia-longirostris",
+          "slug_especie": "bucklandiella-crispipila",
           "slug_grupo": "no-vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5281737",
-          "species": "Grimmia longirostris",
+          "url_gbif": "https://www.gbif.org/species/8388419",
+          "species": "Bucklandiella crispipila",
           "kingdom": "Plantae",
           "phylum": "Bryophyta",
           "class": "Bryopsida",
           "order": "Grimmiales",
           "family": "Grimmiaceae",
-          "genus": "Grimmia"
+          "genus": "Bucklandiella"
         },
         {
           "label": "Schistidium rivulare",
@@ -10940,20 +10939,19 @@
           "genus": "Schizymenium"
         },
         {
-          "label": "Calceolaria microbefaria",
+          "label": "Leskeadelphus angustatus",
           "registros": 9,
-          "slug_especie": "calceolaria-microbefaria",
+          "slug_especie": "leskeadelphus-angustatus",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7804388",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cd2315207ecea54a561e63/summary",
-          "species": "Calceolaria microbefaria",
+          "url_gbif": "https://www.gbif.org/species/7529490",
+          "species": "Leskeadelphus angustatus",
           "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Lamiales",
-          "family": "Calceolariaceae",
-          "genus": "Calceolaria"
+          "phylum": "Bryophyta",
+          "class": "Bryopsida",
+          "order": "Hypnales",
+          "family": "Leskeaceae",
+          "genus": "Leskeadelphus"
         },
         {
           "label": "Ceratodon purpureus",
@@ -10986,36 +10984,6 @@
           "genus": "Escallonia"
         },
         {
-          "label": "Lepyrodon tomentosus",
-          "registros": 9,
-          "slug_especie": "lepyrodon-tomentosus",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2678803",
-          "species": "Lepyrodon tomentosus",
-          "kingdom": "Plantae",
-          "phylum": "Bryophyta",
-          "class": "Bryopsida",
-          "order": "Hypnales",
-          "family": "Lepyrodontaceae",
-          "genus": "Lepyrodon"
-        },
-        {
-          "label": "Leskeadelphus angustatus",
-          "registros": 9,
-          "slug_especie": "leskeadelphus-angustatus",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7529490",
-          "species": "Leskeadelphus angustatus",
-          "kingdom": "Plantae",
-          "phylum": "Bryophyta",
-          "class": "Bryopsida",
-          "order": "Hypnales",
-          "family": "Leskeaceae",
-          "genus": "Leskeadelphus"
-        },
-        {
           "label": "Sciuro-hypnum plumosum",
           "registros": 9,
           "slug_especie": "sciuro-hypnum-plumosum",
@@ -11029,6 +10997,37 @@
           "order": "Hypnales",
           "family": "Brachytheciaceae",
           "genus": "Sciuro-hypnum"
+        },
+        {
+          "label": "Calceolaria microbefaria",
+          "registros": 9,
+          "slug_especie": "calceolaria-microbefaria",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7804388",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cd2315207ecea54a561e63/summary",
+          "species": "Calceolaria microbefaria",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Lamiales",
+          "family": "Calceolariaceae",
+          "genus": "Calceolaria"
+        },
+        {
+          "label": "Lepyrodon tomentosus",
+          "registros": 9,
+          "slug_especie": "lepyrodon-tomentosus",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2678803",
+          "species": "Lepyrodon tomentosus",
+          "kingdom": "Plantae",
+          "phylum": "Bryophyta",
+          "class": "Bryopsida",
+          "order": "Hypnales",
+          "family": "Lepyrodontaceae",
+          "genus": "Lepyrodon"
         }
       ],
       "species_list_tematica": {
@@ -11709,6 +11708,23 @@
             "genus": "Chusquea"
           },
           {
+            "label": "Lupinus santanderensis",
+            "registros": 8,
+            "slug_especie": "lupinus-santanderensis",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "plantas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2964308",
+            "species": "Lupinus santanderensis",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Fabales",
+            "family": "Fabaceae",
+            "genus": "Lupinus"
+          },
+          {
             "label": "Gaultheria santanderensis",
             "registros": 8,
             "slug_especie": "gaultheria-santanderensis",
@@ -11725,23 +11741,6 @@
             "order": "Ericales",
             "family": "Ericaceae",
             "genus": "Gaultheria"
-          },
-          {
-            "label": "Lupinus santanderensis",
-            "registros": 8,
-            "slug_especie": "lupinus-santanderensis",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "plantas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2964308",
-            "species": "Lupinus santanderensis",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Fabales",
-            "family": "Fabaceae",
-            "genus": "Lupinus"
           },
           {
             "label": "Passiflora trianae",
@@ -11776,6 +11775,40 @@
             "order": "Ranunculales",
             "family": "Berberidaceae",
             "genus": "Berberis"
+          },
+          {
+            "label": "Passiflora hyacinthiflora",
+            "registros": 4,
+            "slug_especie": "passiflora-hyacinthiflora",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "plantas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/7313464",
+            "species": "Passiflora hyacinthiflora",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Malpighiales",
+            "family": "Passifloraceae",
+            "genus": "Passiflora"
+          },
+          {
+            "label": "Halenia asclepiadea",
+            "registros": 4,
+            "slug_especie": "halenia-asclepiadea",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "plantas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5596294",
+            "species": "Halenia asclepiadea",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Gentianales",
+            "family": "Gentianaceae",
+            "genus": "Halenia"
           },
           {
             "label": "Epidendrum chioneum",
@@ -11813,38 +11846,57 @@
             "genus": "Gynoxys"
           },
           {
-            "label": "Halenia asclepiadea",
-            "registros": 4,
-            "slug_especie": "halenia-asclepiadea",
+            "label": "Polylepis quadrijuga",
+            "registros": 3,
+            "slug_especie": "polylepis-quadrijuga",
             "slug_tematica": "endemicas",
             "tematica_label": "Endémicas",
             "slug_grupo": "plantas",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5596294",
-            "species": "Halenia asclepiadea",
+            "url_gbif": "https://www.gbif.org/species/5370607",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/567c1510f289f5a40c0cd34f/summary",
+            "species": "Polylepis quadrijuga",
             "kingdom": "Plantae",
             "phylum": "Tracheophyta",
             "class": "Magnoliopsida",
-            "order": "Gentianales",
-            "family": "Gentianaceae",
-            "genus": "Halenia"
+            "order": "Rosales",
+            "family": "Rosaceae",
+            "genus": "Polylepis"
           },
           {
-            "label": "Passiflora hyacinthiflora",
-            "registros": 4,
-            "slug_especie": "passiflora-hyacinthiflora",
+            "label": "Passiflora bicuspidata",
+            "registros": 3,
+            "slug_especie": "passiflora-bicuspidata",
             "slug_tematica": "endemicas",
             "tematica_label": "Endémicas",
             "slug_grupo": "plantas",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/7313464",
-            "species": "Passiflora hyacinthiflora",
+            "url_gbif": "https://www.gbif.org/species/3587282",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56df23e983c45700544e3c50/summary",
+            "species": "Passiflora bicuspidata",
             "kingdom": "Plantae",
             "phylum": "Tracheophyta",
             "class": "Magnoliopsida",
             "order": "Malpighiales",
             "family": "Passifloraceae",
             "genus": "Passiflora"
+          },
+          {
+            "label": "Monnina aestuans",
+            "registros": 3,
+            "slug_especie": "monnina-aestuans",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "plantas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/7293678",
+            "species": "Monnina aestuans",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Fabales",
+            "family": "Polygalaceae",
+            "genus": "Monnina"
           },
           {
             "label": "Berberis goudotii",
@@ -11880,59 +11932,6 @@
             "order": "Asterales",
             "family": "Asteraceae",
             "genus": "Lourteigia"
-          },
-          {
-            "label": "Monnina aestuans",
-            "registros": 3,
-            "slug_especie": "monnina-aestuans",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "plantas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/7293678",
-            "species": "Monnina aestuans",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Fabales",
-            "family": "Polygalaceae",
-            "genus": "Monnina"
-          },
-          {
-            "label": "Passiflora bicuspidata",
-            "registros": 3,
-            "slug_especie": "passiflora-bicuspidata",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "plantas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3587282",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56df23e983c45700544e3c50/summary",
-            "species": "Passiflora bicuspidata",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Malpighiales",
-            "family": "Passifloraceae",
-            "genus": "Passiflora"
-          },
-          {
-            "label": "Polylepis quadrijuga",
-            "registros": 3,
-            "slug_especie": "polylepis-quadrijuga",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "plantas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5370607",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/567c1510f289f5a40c0cd34f/summary",
-            "species": "Polylepis quadrijuga",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Rosales",
-            "family": "Rosaceae",
-            "genus": "Polylepis"
           }
         ],
         "exoticas-total": [
@@ -12707,6 +12706,21 @@
           "genus": "Vaccinium"
         },
         {
+          "label": "Escallonia myrtilloides",
+          "registros": 9,
+          "slug_especie": "escallonia-myrtilloides",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/8376201",
+          "species": "Escallonia myrtilloides",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Escalloniales",
+          "family": "Escalloniaceae",
+          "genus": "Escallonia"
+        },
+        {
           "label": "Calceolaria microbefaria",
           "registros": 9,
           "slug_especie": "calceolaria-microbefaria",
@@ -12723,21 +12737,6 @@
           "genus": "Calceolaria"
         },
         {
-          "label": "Escallonia myrtilloides",
-          "registros": 9,
-          "slug_especie": "escallonia-myrtilloides",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/8376201",
-          "species": "Escallonia myrtilloides",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Escalloniales",
-          "family": "Escalloniaceae",
-          "genus": "Escallonia"
-        },
-        {
           "label": "Andicolea complanata",
           "registros": 8,
           "slug_especie": "andicolea-complanata",
@@ -12751,21 +12750,6 @@
           "order": "Asterales",
           "family": "Asteraceae",
           "genus": "Andicolea"
-        },
-        {
-          "label": "Baccharis tricuneata",
-          "registros": 8,
-          "slug_especie": "baccharis-tricuneata",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3129202",
-          "species": "Baccharis tricuneata",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Asterales",
-          "family": "Asteraceae",
-          "genus": "Baccharis"
         },
         {
           "label": "Chusquea tuberculosa",
@@ -12812,6 +12796,21 @@
           "order": "Fabales",
           "family": "Fabaceae",
           "genus": "Lupinus"
+        },
+        {
+          "label": "Baccharis tricuneata",
+          "registros": 8,
+          "slug_especie": "baccharis-tricuneata",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3129202",
+          "species": "Baccharis tricuneata",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Asterales",
+          "family": "Asteraceae",
+          "genus": "Baccharis"
         }
       ],
       "species_list_tematica": {
@@ -13475,6 +13474,23 @@
             "genus": "Chusquea"
           },
           {
+            "label": "Lupinus santanderensis",
+            "registros": 8,
+            "slug_especie": "lupinus-santanderensis",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "vasculares",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2964308",
+            "species": "Lupinus santanderensis",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Fabales",
+            "family": "Fabaceae",
+            "genus": "Lupinus"
+          },
+          {
             "label": "Gaultheria santanderensis",
             "registros": 8,
             "slug_especie": "gaultheria-santanderensis",
@@ -13491,23 +13507,6 @@
             "order": "Ericales",
             "family": "Ericaceae",
             "genus": "Gaultheria"
-          },
-          {
-            "label": "Lupinus santanderensis",
-            "registros": 8,
-            "slug_especie": "lupinus-santanderensis",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "vasculares",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2964308",
-            "species": "Lupinus santanderensis",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Fabales",
-            "family": "Fabaceae",
-            "genus": "Lupinus"
           },
           {
             "label": "Passiflora trianae",
@@ -13542,6 +13541,40 @@
             "order": "Ranunculales",
             "family": "Berberidaceae",
             "genus": "Berberis"
+          },
+          {
+            "label": "Passiflora hyacinthiflora",
+            "registros": 4,
+            "slug_especie": "passiflora-hyacinthiflora",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "vasculares",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/7313464",
+            "species": "Passiflora hyacinthiflora",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Malpighiales",
+            "family": "Passifloraceae",
+            "genus": "Passiflora"
+          },
+          {
+            "label": "Halenia asclepiadea",
+            "registros": 4,
+            "slug_especie": "halenia-asclepiadea",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "vasculares",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5596294",
+            "species": "Halenia asclepiadea",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Gentianales",
+            "family": "Gentianaceae",
+            "genus": "Halenia"
           },
           {
             "label": "Epidendrum chioneum",
@@ -13579,38 +13612,57 @@
             "genus": "Gynoxys"
           },
           {
-            "label": "Halenia asclepiadea",
-            "registros": 4,
-            "slug_especie": "halenia-asclepiadea",
+            "label": "Polylepis quadrijuga",
+            "registros": 3,
+            "slug_especie": "polylepis-quadrijuga",
             "slug_tematica": "endemicas",
             "tematica_label": "Endémicas",
             "slug_grupo": "vasculares",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5596294",
-            "species": "Halenia asclepiadea",
+            "url_gbif": "https://www.gbif.org/species/5370607",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/567c1510f289f5a40c0cd34f/summary",
+            "species": "Polylepis quadrijuga",
             "kingdom": "Plantae",
             "phylum": "Tracheophyta",
             "class": "Magnoliopsida",
-            "order": "Gentianales",
-            "family": "Gentianaceae",
-            "genus": "Halenia"
+            "order": "Rosales",
+            "family": "Rosaceae",
+            "genus": "Polylepis"
           },
           {
-            "label": "Passiflora hyacinthiflora",
-            "registros": 4,
-            "slug_especie": "passiflora-hyacinthiflora",
+            "label": "Passiflora bicuspidata",
+            "registros": 3,
+            "slug_especie": "passiflora-bicuspidata",
             "slug_tematica": "endemicas",
             "tematica_label": "Endémicas",
             "slug_grupo": "vasculares",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/7313464",
-            "species": "Passiflora hyacinthiflora",
+            "url_gbif": "https://www.gbif.org/species/3587282",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56df23e983c45700544e3c50/summary",
+            "species": "Passiflora bicuspidata",
             "kingdom": "Plantae",
             "phylum": "Tracheophyta",
             "class": "Magnoliopsida",
             "order": "Malpighiales",
             "family": "Passifloraceae",
             "genus": "Passiflora"
+          },
+          {
+            "label": "Monnina aestuans",
+            "registros": 3,
+            "slug_especie": "monnina-aestuans",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "vasculares",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/7293678",
+            "species": "Monnina aestuans",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Fabales",
+            "family": "Polygalaceae",
+            "genus": "Monnina"
           },
           {
             "label": "Berberis goudotii",
@@ -13646,59 +13698,6 @@
             "order": "Asterales",
             "family": "Asteraceae",
             "genus": "Lourteigia"
-          },
-          {
-            "label": "Monnina aestuans",
-            "registros": 3,
-            "slug_especie": "monnina-aestuans",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "vasculares",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/7293678",
-            "species": "Monnina aestuans",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Fabales",
-            "family": "Polygalaceae",
-            "genus": "Monnina"
-          },
-          {
-            "label": "Passiflora bicuspidata",
-            "registros": 3,
-            "slug_especie": "passiflora-bicuspidata",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "vasculares",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3587282",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56df23e983c45700544e3c50/summary",
-            "species": "Passiflora bicuspidata",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Malpighiales",
-            "family": "Passifloraceae",
-            "genus": "Passiflora"
-          },
-          {
-            "label": "Polylepis quadrijuga",
-            "registros": 3,
-            "slug_especie": "polylepis-quadrijuga",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "vasculares",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5370607",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/567c1510f289f5a40c0cd34f/summary",
-            "species": "Polylepis quadrijuga",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Rosales",
-            "family": "Rosaceae",
-            "genus": "Polylepis"
           }
         ],
         "exoticas-total": [

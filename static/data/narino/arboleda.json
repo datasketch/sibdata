@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -1535,51 +1535,20 @@
           "genus": "Inga"
         },
         {
-          "label": "Juglans regia",
+          "label": "Tecoma stans",
           "registros": 4,
-          "slug_especie": "juglans-regia",
+          "slug_especie": "tecoma-stans",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3054368",
-          "species": "Juglans regia",
+          "url_gbif": "https://www.gbif.org/species/3172492",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7aa5783c45700544e42c2/summary",
+          "species": "Tecoma stans",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Fagales",
-          "family": "Juglandaceae",
-          "genus": "Juglans"
-        },
-        {
-          "label": "Lafoensia acuminata",
-          "registros": 4,
-          "slug_especie": "lafoensia-acuminata",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3989776",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/607b7a155d2637cf57d0d061/summary",
-          "species": "Lafoensia acuminata",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Myrtales",
-          "family": "Lythraceae",
-          "genus": "Lafoensia"
-        },
-        {
-          "label": "Persea americana",
-          "registros": 4,
-          "slug_especie": "persea-americana",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3034046",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7928683c45700544e4181/summary",
-          "species": "Persea americana",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Laurales",
-          "family": "Lauraceae",
-          "genus": "Persea"
+          "order": "Lamiales",
+          "family": "Bignoniaceae",
+          "genus": "Tecoma"
         },
         {
           "label": "Psidium guajava",
@@ -1598,20 +1567,51 @@
           "genus": "Psidium"
         },
         {
-          "label": "Tecoma stans",
+          "label": "Persea americana",
           "registros": 4,
-          "slug_especie": "tecoma-stans",
+          "slug_especie": "persea-americana",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3172492",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7aa5783c45700544e42c2/summary",
-          "species": "Tecoma stans",
+          "url_gbif": "https://www.gbif.org/species/3034046",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7928683c45700544e4181/summary",
+          "species": "Persea americana",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Lamiales",
-          "family": "Bignoniaceae",
-          "genus": "Tecoma"
+          "order": "Laurales",
+          "family": "Lauraceae",
+          "genus": "Persea"
+        },
+        {
+          "label": "Lafoensia acuminata",
+          "registros": 4,
+          "slug_especie": "lafoensia-acuminata",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3989776",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/607b7a155d2637cf57d0d061/summary",
+          "species": "Lafoensia acuminata",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Myrtales",
+          "family": "Lythraceae",
+          "genus": "Lafoensia"
+        },
+        {
+          "label": "Juglans regia",
+          "registros": 4,
+          "slug_especie": "juglans-regia",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3054368",
+          "species": "Juglans regia",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Fagales",
+          "family": "Juglandaceae",
+          "genus": "Juglans"
         }
       ],
       "species_list_tematica": {
@@ -2055,22 +2055,6 @@
           "genus": "Turdus"
         },
         {
-          "label": "Icterus chrysater",
-          "registros": 38,
-          "slug_especie": "icterus-chrysater",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5229924",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9f6e2f0106c67230e744f/summary",
-          "species": "Icterus chrysater",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Icteridae",
-          "genus": "Icterus"
-        },
-        {
           "label": "Zonotrichia capensis",
           "registros": 38,
           "slug_especie": "zonotrichia-capensis",
@@ -2085,6 +2069,22 @@
           "order": "Passeriformes",
           "family": "Passerellidae",
           "genus": "Zonotrichia"
+        },
+        {
+          "label": "Icterus chrysater",
+          "registros": 38,
+          "slug_especie": "icterus-chrysater",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5229924",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9f6e2f0106c67230e744f/summary",
+          "species": "Icterus chrysater",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Icteridae",
+          "genus": "Icterus"
         },
         {
           "label": "Atlapetes latinuchus",
@@ -2808,22 +2808,6 @@
           "genus": "Turdus"
         },
         {
-          "label": "Icterus chrysater",
-          "registros": 38,
-          "slug_especie": "icterus-chrysater",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5229924",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9f6e2f0106c67230e744f/summary",
-          "species": "Icterus chrysater",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Icteridae",
-          "genus": "Icterus"
-        },
-        {
           "label": "Zonotrichia capensis",
           "registros": 38,
           "slug_especie": "zonotrichia-capensis",
@@ -2838,6 +2822,22 @@
           "order": "Passeriformes",
           "family": "Passerellidae",
           "genus": "Zonotrichia"
+        },
+        {
+          "label": "Icterus chrysater",
+          "registros": 38,
+          "slug_especie": "icterus-chrysater",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5229924",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9f6e2f0106c67230e744f/summary",
+          "species": "Icterus chrysater",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Icteridae",
+          "genus": "Icterus"
         },
         {
           "label": "Atlapetes latinuchus",
@@ -5625,22 +5625,6 @@
           "genus": "Chusquea"
         },
         {
-          "label": "Inga densiflora",
-          "registros": 4,
-          "slug_especie": "inga-densiflora",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5357837",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/59432cf92f4fd7bc7f39563e/summary",
-          "species": "Inga densiflora",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Inga"
-        },
-        {
           "label": "Juglans regia",
           "registros": 4,
           "slug_especie": "juglans-regia",
@@ -5656,36 +5640,20 @@
           "genus": "Juglans"
         },
         {
-          "label": "Lafoensia acuminata",
+          "label": "Tecoma stans",
           "registros": 4,
-          "slug_especie": "lafoensia-acuminata",
+          "slug_especie": "tecoma-stans",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3989776",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/607b7a155d2637cf57d0d061/summary",
-          "species": "Lafoensia acuminata",
+          "url_gbif": "https://www.gbif.org/species/3172492",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7aa5783c45700544e42c2/summary",
+          "species": "Tecoma stans",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Myrtales",
-          "family": "Lythraceae",
-          "genus": "Lafoensia"
-        },
-        {
-          "label": "Persea americana",
-          "registros": 4,
-          "slug_especie": "persea-americana",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3034046",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7928683c45700544e4181/summary",
-          "species": "Persea americana",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Laurales",
-          "family": "Lauraceae",
-          "genus": "Persea"
+          "order": "Lamiales",
+          "family": "Bignoniaceae",
+          "genus": "Tecoma"
         },
         {
           "label": "Psidium guajava",
@@ -5704,20 +5672,52 @@
           "genus": "Psidium"
         },
         {
-          "label": "Tecoma stans",
+          "label": "Persea americana",
           "registros": 4,
-          "slug_especie": "tecoma-stans",
+          "slug_especie": "persea-americana",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3172492",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7aa5783c45700544e42c2/summary",
-          "species": "Tecoma stans",
+          "url_gbif": "https://www.gbif.org/species/3034046",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7928683c45700544e4181/summary",
+          "species": "Persea americana",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Lamiales",
-          "family": "Bignoniaceae",
-          "genus": "Tecoma"
+          "order": "Laurales",
+          "family": "Lauraceae",
+          "genus": "Persea"
+        },
+        {
+          "label": "Lafoensia acuminata",
+          "registros": 4,
+          "slug_especie": "lafoensia-acuminata",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3989776",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/607b7a155d2637cf57d0d061/summary",
+          "species": "Lafoensia acuminata",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Myrtales",
+          "family": "Lythraceae",
+          "genus": "Lafoensia"
+        },
+        {
+          "label": "Inga densiflora",
+          "registros": 4,
+          "slug_especie": "inga-densiflora",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5357837",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/59432cf92f4fd7bc7f39563e/summary",
+          "species": "Inga densiflora",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Inga"
         }
       ],
       "species_list_tematica": {
@@ -6213,22 +6213,6 @@
           "genus": "Chusquea"
         },
         {
-          "label": "Inga densiflora",
-          "registros": 4,
-          "slug_especie": "inga-densiflora",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5357837",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/59432cf92f4fd7bc7f39563e/summary",
-          "species": "Inga densiflora",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Inga"
-        },
-        {
           "label": "Juglans regia",
           "registros": 4,
           "slug_especie": "juglans-regia",
@@ -6244,36 +6228,20 @@
           "genus": "Juglans"
         },
         {
-          "label": "Lafoensia acuminata",
+          "label": "Tecoma stans",
           "registros": 4,
-          "slug_especie": "lafoensia-acuminata",
+          "slug_especie": "tecoma-stans",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3989776",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/607b7a155d2637cf57d0d061/summary",
-          "species": "Lafoensia acuminata",
+          "url_gbif": "https://www.gbif.org/species/3172492",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7aa5783c45700544e42c2/summary",
+          "species": "Tecoma stans",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Myrtales",
-          "family": "Lythraceae",
-          "genus": "Lafoensia"
-        },
-        {
-          "label": "Persea americana",
-          "registros": 4,
-          "slug_especie": "persea-americana",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3034046",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7928683c45700544e4181/summary",
-          "species": "Persea americana",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Laurales",
-          "family": "Lauraceae",
-          "genus": "Persea"
+          "order": "Lamiales",
+          "family": "Bignoniaceae",
+          "genus": "Tecoma"
         },
         {
           "label": "Psidium guajava",
@@ -6292,20 +6260,52 @@
           "genus": "Psidium"
         },
         {
-          "label": "Tecoma stans",
+          "label": "Persea americana",
           "registros": 4,
-          "slug_especie": "tecoma-stans",
+          "slug_especie": "persea-americana",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3172492",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7aa5783c45700544e42c2/summary",
-          "species": "Tecoma stans",
+          "url_gbif": "https://www.gbif.org/species/3034046",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7928683c45700544e4181/summary",
+          "species": "Persea americana",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Lamiales",
-          "family": "Bignoniaceae",
-          "genus": "Tecoma"
+          "order": "Laurales",
+          "family": "Lauraceae",
+          "genus": "Persea"
+        },
+        {
+          "label": "Lafoensia acuminata",
+          "registros": 4,
+          "slug_especie": "lafoensia-acuminata",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3989776",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/607b7a155d2637cf57d0d061/summary",
+          "species": "Lafoensia acuminata",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Myrtales",
+          "family": "Lythraceae",
+          "genus": "Lafoensia"
+        },
+        {
+          "label": "Inga densiflora",
+          "registros": 4,
+          "slug_especie": "inga-densiflora",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5357837",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/59432cf92f4fd7bc7f39563e/summary",
+          "species": "Inga densiflora",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Inga"
         }
       ],
       "species_list_tematica": {
@@ -6766,22 +6766,6 @@
           "genus": "Turdus"
         },
         {
-          "label": "Icterus chrysater",
-          "registros": 38,
-          "slug_especie": "icterus-chrysater",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5229924",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9f6e2f0106c67230e744f/summary",
-          "species": "Icterus chrysater",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Icteridae",
-          "genus": "Icterus"
-        },
-        {
           "label": "Zonotrichia capensis",
           "registros": 38,
           "slug_especie": "zonotrichia-capensis",
@@ -6796,6 +6780,22 @@
           "order": "Passeriformes",
           "family": "Passerellidae",
           "genus": "Zonotrichia"
+        },
+        {
+          "label": "Icterus chrysater",
+          "registros": 38,
+          "slug_especie": "icterus-chrysater",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5229924",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9f6e2f0106c67230e744f/summary",
+          "species": "Icterus chrysater",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Icteridae",
+          "genus": "Icterus"
         },
         {
           "label": "Atlapetes latinuchus",

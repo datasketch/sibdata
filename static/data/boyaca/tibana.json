@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -888,14 +888,6 @@
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Elanus leucurus",
-          "slug_especie": "elanus-leucurus",
-          "registros": 12,
-          "url_gbif": "https://www.gbif.org/species/2480367",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c6909bf0106c67230e73cf/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
           "label": "Metallura tyrianthina",
           "slug_especie": "metallura-tyrianthina",
           "registros": 12,
@@ -904,10 +896,25 @@
           "slug_tematica": "cites-ii"
         },
         {
+          "label": "Elanus leucurus",
+          "slug_especie": "elanus-leucurus",
+          "registros": 12,
+          "url_gbif": "https://www.gbif.org/species/2480367",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c6909bf0106c67230e73cf/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
           "label": "Coeligena helianthea",
           "slug_especie": "coeligena-helianthea",
           "registros": 11,
           "url_gbif": "https://www.gbif.org/species/2477050",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Pionus tumultuosus",
+          "slug_especie": "pionus-tumultuosus",
+          "registros": 10,
+          "url_gbif": "https://www.gbif.org/species/2479913",
           "slug_tematica": "cites-ii"
         },
         {
@@ -924,13 +931,6 @@
           "registros": 10,
           "url_gbif": "https://www.gbif.org/species/2480668",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b4b2f0106c67230e7405/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
-          "label": "Pionus tumultuosus",
-          "slug_especie": "pionus-tumultuosus",
-          "registros": 10,
-          "url_gbif": "https://www.gbif.org/species/2479913",
           "slug_tematica": "cites-ii"
         }
       ],
@@ -969,14 +969,6 @@
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Elanus leucurus",
-          "slug_especie": "elanus-leucurus",
-          "registros": 12,
-          "url_gbif": "https://www.gbif.org/species/2480367",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c6909bf0106c67230e73cf/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
           "label": "Metallura tyrianthina",
           "slug_especie": "metallura-tyrianthina",
           "registros": 12,
@@ -985,10 +977,25 @@
           "slug_tematica": "cites-ii"
         },
         {
+          "label": "Elanus leucurus",
+          "slug_especie": "elanus-leucurus",
+          "registros": 12,
+          "url_gbif": "https://www.gbif.org/species/2480367",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c6909bf0106c67230e73cf/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
           "label": "Coeligena helianthea",
           "slug_especie": "coeligena-helianthea",
           "registros": 11,
           "url_gbif": "https://www.gbif.org/species/2477050",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Pionus tumultuosus",
+          "slug_especie": "pionus-tumultuosus",
+          "registros": 10,
+          "url_gbif": "https://www.gbif.org/species/2479913",
           "slug_tematica": "cites-ii"
         },
         {
@@ -1005,13 +1012,6 @@
           "registros": 10,
           "url_gbif": "https://www.gbif.org/species/2480668",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b4b2f0106c67230e7405/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
-          "label": "Pionus tumultuosus",
-          "slug_especie": "pionus-tumultuosus",
-          "registros": 10,
-          "url_gbif": "https://www.gbif.org/species/2479913",
           "slug_tematica": "cites-ii"
         }
       ],
@@ -1049,14 +1049,6 @@
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Elanus leucurus",
-          "slug_especie": "elanus-leucurus",
-          "registros": 12,
-          "url_gbif": "https://www.gbif.org/species/2480367",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c6909bf0106c67230e73cf/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
           "label": "Metallura tyrianthina",
           "slug_especie": "metallura-tyrianthina",
           "registros": 12,
@@ -1065,10 +1057,25 @@
           "slug_tematica": "cites-ii"
         },
         {
+          "label": "Elanus leucurus",
+          "slug_especie": "elanus-leucurus",
+          "registros": 12,
+          "url_gbif": "https://www.gbif.org/species/2480367",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c6909bf0106c67230e73cf/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
           "label": "Coeligena helianthea",
           "slug_especie": "coeligena-helianthea",
           "registros": 11,
           "url_gbif": "https://www.gbif.org/species/2477050",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Pionus tumultuosus",
+          "slug_especie": "pionus-tumultuosus",
+          "registros": 10,
+          "url_gbif": "https://www.gbif.org/species/2479913",
           "slug_tematica": "cites-ii"
         },
         {
@@ -1085,13 +1092,6 @@
           "registros": 10,
           "url_gbif": "https://www.gbif.org/species/2480668",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b4b2f0106c67230e7405/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
-          "label": "Pionus tumultuosus",
-          "slug_especie": "pionus-tumultuosus",
-          "registros": 10,
-          "url_gbif": "https://www.gbif.org/species/2479913",
           "slug_tematica": "cites-ii"
         }
       ]
@@ -1778,21 +1778,6 @@
           "genus": "Paramochloa"
         },
         {
-          "label": "Excremis coarctata",
-          "registros": 3,
-          "slug_especie": "excremis-coarctata",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/8059356",
-          "species": "Excremis coarctata",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Asparagales",
-          "family": "Asphodelaceae",
-          "genus": "Excremis"
-        },
-        {
           "label": "Gaultheria myrsinoides",
           "registros": 3,
           "slug_especie": "gaultheria-myrsinoides",
@@ -1808,19 +1793,66 @@
           "genus": "Gaultheria"
         },
         {
-          "label": "Ageratina arbutifolia",
-          "registros": 2,
-          "slug_especie": "ageratina-arbutifolia",
+          "label": "Excremis coarctata",
+          "registros": 3,
+          "slug_especie": "excremis-coarctata",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5400677",
-          "species": "Ageratina arbutifolia",
+          "url_gbif": "https://www.gbif.org/species/8059356",
+          "species": "Excremis coarctata",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Asparagales",
+          "family": "Asphodelaceae",
+          "genus": "Excremis"
+        },
+        {
+          "label": "Persea cuneata",
+          "registros": 2,
+          "slug_especie": "persea-cuneata",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/4183018",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e3e52083c45700544e3e0e/summary",
+          "species": "Persea cuneata",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Asterales",
-          "family": "Asteraceae",
-          "genus": "Ageratina"
+          "order": "Laurales",
+          "family": "Lauraceae",
+          "genus": "Persea"
+        },
+        {
+          "label": "Quercus humboldtii",
+          "registros": 2,
+          "slug_especie": "quercus-humboldtii",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2880642",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/6078868dfa9e7d0d2908c2f6/summary",
+          "species": "Quercus humboldtii",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Fagales",
+          "family": "Fagaceae",
+          "genus": "Quercus"
+        },
+        {
+          "label": "Phaseolus coccineus",
+          "registros": 2,
+          "slug_especie": "phaseolus-coccineus",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5350466",
+          "species": "Phaseolus coccineus",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Phaseolus"
         },
         {
           "label": "Brugmansia aurea",
@@ -1870,6 +1902,21 @@
           "genus": "Cavendishia"
         },
         {
+          "label": "Ageratina arbutifolia",
+          "registros": 2,
+          "slug_especie": "ageratina-arbutifolia",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5400677",
+          "species": "Ageratina arbutifolia",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Asterales",
+          "family": "Asteraceae",
+          "genus": "Ageratina"
+        },
+        {
           "label": "Cestrum buxifolium",
           "registros": 2,
           "slug_especie": "cestrum-buxifolium",
@@ -1884,6 +1931,21 @@
           "order": "Solanales",
           "family": "Solanaceae",
           "genus": "Cestrum"
+        },
+        {
+          "label": "Ruagea tomentosa",
+          "registros": 2,
+          "slug_especie": "ruagea-tomentosa",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3851136",
+          "species": "Ruagea tomentosa",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Sapindales",
+          "family": "Meliaceae",
+          "genus": "Ruagea"
         },
         {
           "label": "Chromolaena scabra",
@@ -1901,98 +1963,6 @@
           "genus": "Chromolaena"
         },
         {
-          "label": "Drimys granadensis",
-          "registros": 2,
-          "slug_especie": "drimys-granadensis",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7827774",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56d047233c16479905cba815/summary",
-          "species": "Drimys granadensis",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Canellales",
-          "family": "Winteraceae",
-          "genus": "Drimys"
-        },
-        {
-          "label": "Gaultheria erecta",
-          "registros": 2,
-          "slug_especie": "gaultheria-erecta",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4171873",
-          "species": "Gaultheria erecta",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Ericales",
-          "family": "Ericaceae",
-          "genus": "Gaultheria"
-        },
-        {
-          "label": "Geissanthus andinus",
-          "registros": 2,
-          "slug_especie": "geissanthus-andinus",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3719368",
-          "species": "Geissanthus andinus",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Ericales",
-          "family": "Primulaceae",
-          "genus": "Geissanthus"
-        },
-        {
-          "label": "Hedyosmum colombianum",
-          "registros": 2,
-          "slug_especie": "hedyosmum-colombianum",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3750598",
-          "species": "Hedyosmum colombianum",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Chloranthales",
-          "family": "Chloranthaceae",
-          "genus": "Hedyosmum"
-        },
-        {
-          "label": "Hedyosmum parvifolium",
-          "registros": 2,
-          "slug_especie": "hedyosmum-parvifolium",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3750607",
-          "species": "Hedyosmum parvifolium",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Chloranthales",
-          "family": "Chloranthaceae",
-          "genus": "Hedyosmum"
-        },
-        {
-          "label": "Linochilus rosmarinifolius",
-          "registros": 2,
-          "slug_especie": "linochilus-rosmarinifolius",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3090609",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cfd6733c16479905cba80b/summary",
-          "species": "Linochilus rosmarinifolius",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Asterales",
-          "family": "Asteraceae",
-          "genus": "Linochilus"
-        },
-        {
           "label": "Melinis minutiflora",
           "registros": 2,
           "slug_especie": "melinis-minutiflora",
@@ -2007,68 +1977,6 @@
           "order": "Poales",
           "family": "Poaceae",
           "genus": "Melinis"
-        },
-        {
-          "label": "Persea cuneata",
-          "registros": 2,
-          "slug_especie": "persea-cuneata",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4183018",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e3e52083c45700544e3e0e/summary",
-          "species": "Persea cuneata",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Laurales",
-          "family": "Lauraceae",
-          "genus": "Persea"
-        },
-        {
-          "label": "Phaseolus coccineus",
-          "registros": 2,
-          "slug_especie": "phaseolus-coccineus",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5350466",
-          "species": "Phaseolus coccineus",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Phaseolus"
-        },
-        {
-          "label": "Quercus humboldtii",
-          "registros": 2,
-          "slug_especie": "quercus-humboldtii",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2880642",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/6078868dfa9e7d0d2908c2f6/summary",
-          "species": "Quercus humboldtii",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Fagales",
-          "family": "Fagaceae",
-          "genus": "Quercus"
-        },
-        {
-          "label": "Ruagea tomentosa",
-          "registros": 2,
-          "slug_especie": "ruagea-tomentosa",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3851136",
-          "species": "Ruagea tomentosa",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Sapindales",
-          "family": "Meliaceae",
-          "genus": "Ruagea"
         },
         {
           "label": "Siphocampylus retrorsus",
@@ -2102,6 +2010,52 @@
           "genus": "Solanum"
         },
         {
+          "label": "Linochilus rosmarinifolius",
+          "registros": 2,
+          "slug_especie": "linochilus-rosmarinifolius",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3090609",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cfd6733c16479905cba80b/summary",
+          "species": "Linochilus rosmarinifolius",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Asterales",
+          "family": "Asteraceae",
+          "genus": "Linochilus"
+        },
+        {
+          "label": "Hedyosmum parvifolium",
+          "registros": 2,
+          "slug_especie": "hedyosmum-parvifolium",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3750607",
+          "species": "Hedyosmum parvifolium",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Chloranthales",
+          "family": "Chloranthaceae",
+          "genus": "Hedyosmum"
+        },
+        {
+          "label": "Hedyosmum colombianum",
+          "registros": 2,
+          "slug_especie": "hedyosmum-colombianum",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3750598",
+          "species": "Hedyosmum colombianum",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Chloranthales",
+          "family": "Chloranthaceae",
+          "genus": "Hedyosmum"
+        },
+        {
           "label": "Thibaudia floribunda",
           "registros": 2,
           "slug_especie": "thibaudia-floribunda",
@@ -2131,6 +2085,52 @@
           "order": "Malpighiales",
           "family": "Hypericaceae",
           "genus": "Vismia"
+        },
+        {
+          "label": "Geissanthus andinus",
+          "registros": 2,
+          "slug_especie": "geissanthus-andinus",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3719368",
+          "species": "Geissanthus andinus",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Ericales",
+          "family": "Primulaceae",
+          "genus": "Geissanthus"
+        },
+        {
+          "label": "Drimys granadensis",
+          "registros": 2,
+          "slug_especie": "drimys-granadensis",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7827774",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d047233c16479905cba815/summary",
+          "species": "Drimys granadensis",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Canellales",
+          "family": "Winteraceae",
+          "genus": "Drimys"
+        },
+        {
+          "label": "Gaultheria erecta",
+          "registros": 2,
+          "slug_especie": "gaultheria-erecta",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/4171873",
+          "species": "Gaultheria erecta",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Ericales",
+          "family": "Ericaceae",
+          "genus": "Gaultheria"
         }
       ],
       "species_list_tematica": {
@@ -3081,6 +3081,23 @@
             "genus": "Coeligena"
           },
           {
+            "label": "Pionus tumultuosus",
+            "registros": 10,
+            "slug_especie": "pionus-tumultuosus",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2479913",
+            "species": "Pionus tumultuosus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Psittaciformes",
+            "family": "Psittacidae",
+            "genus": "Pionus"
+          },
+          {
             "label": "Eriocnemis vestita",
             "registros": 10,
             "slug_especie": "eriocnemis-vestita",
@@ -3115,23 +3132,6 @@
             "order": "Accipitriformes",
             "family": "Accipitridae",
             "genus": "Geranoaetus"
-          },
-          {
-            "label": "Pionus tumultuosus",
-            "registros": 10,
-            "slug_especie": "pionus-tumultuosus",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2479913",
-            "species": "Pionus tumultuosus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Psittaciformes",
-            "family": "Psittacidae",
-            "genus": "Pionus"
           }
         ],
         "migratorias": [
@@ -4090,22 +4090,6 @@
           "genus": "Zenaida"
         },
         {
-          "label": "Coragyps atratus",
-          "registros": 75,
-          "slug_especie": "coragyps-atratus",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2481942",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4fe28f0106c67230e7394/summary",
-          "species": "Coragyps atratus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Accipitriformes",
-          "family": "Cathartidae",
-          "genus": "Coragyps"
-        },
-        {
           "label": "Thraupis episcopus",
           "registros": 75,
           "slug_especie": "thraupis-episcopus",
@@ -4120,6 +4104,22 @@
           "order": "Passeriformes",
           "family": "Thraupidae",
           "genus": "Thraupis"
+        },
+        {
+          "label": "Coragyps atratus",
+          "registros": 75,
+          "slug_especie": "coragyps-atratus",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2481942",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4fe28f0106c67230e7394/summary",
+          "species": "Coragyps atratus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Accipitriformes",
+          "family": "Cathartidae",
+          "genus": "Coragyps"
         },
         {
           "label": "Mimus gilvus",
@@ -4301,6 +4301,23 @@
             "genus": "Coeligena"
           },
           {
+            "label": "Pionus tumultuosus",
+            "registros": 10,
+            "slug_especie": "pionus-tumultuosus",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2479913",
+            "species": "Pionus tumultuosus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Psittaciformes",
+            "family": "Psittacidae",
+            "genus": "Pionus"
+          },
+          {
             "label": "Eriocnemis vestita",
             "registros": 10,
             "slug_especie": "eriocnemis-vestita",
@@ -4335,23 +4352,6 @@
             "order": "Accipitriformes",
             "family": "Accipitridae",
             "genus": "Geranoaetus"
-          },
-          {
-            "label": "Pionus tumultuosus",
-            "registros": 10,
-            "slug_especie": "pionus-tumultuosus",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2479913",
-            "species": "Pionus tumultuosus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Psittaciformes",
-            "family": "Psittacidae",
-            "genus": "Pionus"
           }
         ],
         "migratorias": [
@@ -9733,21 +9733,6 @@
           "genus": "Heteroscyphus"
         },
         {
-          "label": "Imbribryum laevigatum",
-          "registros": 5,
-          "slug_especie": "imbribryum-laevigatum",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/12221829",
-          "species": "Imbribryum laevigatum",
-          "kingdom": "Plantae",
-          "phylum": "Bryophyta",
-          "class": "Bryopsida",
-          "order": "Bryales",
-          "family": "Bryaceae",
-          "genus": "Imbribryum"
-        },
-        {
           "label": "Weinmannia rollottii",
           "registros": 5,
           "slug_especie": "weinmannia-rollottii",
@@ -9762,6 +9747,21 @@
           "order": "Oxalidales",
           "family": "Cunoniaceae",
           "genus": "Weinmannia"
+        },
+        {
+          "label": "Imbribryum laevigatum",
+          "registros": 5,
+          "slug_especie": "imbribryum-laevigatum",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/12221829",
+          "species": "Imbribryum laevigatum",
+          "kingdom": "Plantae",
+          "phylum": "Bryophyta",
+          "class": "Bryopsida",
+          "order": "Bryales",
+          "family": "Bryaceae",
+          "genus": "Imbribryum"
         },
         {
           "label": "Fabronia ciliaris",
@@ -10581,21 +10581,6 @@
           "genus": "Paramochloa"
         },
         {
-          "label": "Excremis coarctata",
-          "registros": 3,
-          "slug_especie": "excremis-coarctata",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/8059356",
-          "species": "Excremis coarctata",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Asparagales",
-          "family": "Asphodelaceae",
-          "genus": "Excremis"
-        },
-        {
           "label": "Gaultheria myrsinoides",
           "registros": 3,
           "slug_especie": "gaultheria-myrsinoides",
@@ -10611,19 +10596,65 @@
           "genus": "Gaultheria"
         },
         {
-          "label": "Ageratina arbutifolia",
-          "registros": 2,
-          "slug_especie": "ageratina-arbutifolia",
+          "label": "Excremis coarctata",
+          "registros": 3,
+          "slug_especie": "excremis-coarctata",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5400677",
-          "species": "Ageratina arbutifolia",
+          "url_gbif": "https://www.gbif.org/species/8059356",
+          "species": "Excremis coarctata",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Asparagales",
+          "family": "Asphodelaceae",
+          "genus": "Excremis"
+        },
+        {
+          "label": "Gaultheria erecta",
+          "registros": 2,
+          "slug_especie": "gaultheria-erecta",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/4171873",
+          "species": "Gaultheria erecta",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Asterales",
-          "family": "Asteraceae",
-          "genus": "Ageratina"
+          "order": "Ericales",
+          "family": "Ericaceae",
+          "genus": "Gaultheria"
+        },
+        {
+          "label": "Quercus humboldtii",
+          "registros": 2,
+          "slug_especie": "quercus-humboldtii",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2880642",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/6078868dfa9e7d0d2908c2f6/summary",
+          "species": "Quercus humboldtii",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Fagales",
+          "family": "Fagaceae",
+          "genus": "Quercus"
+        },
+        {
+          "label": "Phaseolus coccineus",
+          "registros": 2,
+          "slug_especie": "phaseolus-coccineus",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5350466",
+          "species": "Phaseolus coccineus",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Phaseolus"
         },
         {
           "label": "Brugmansia aurea",
@@ -10673,6 +10704,22 @@
           "genus": "Cavendishia"
         },
         {
+          "label": "Persea cuneata",
+          "registros": 2,
+          "slug_especie": "persea-cuneata",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/4183018",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e3e52083c45700544e3e0e/summary",
+          "species": "Persea cuneata",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Laurales",
+          "family": "Lauraceae",
+          "genus": "Persea"
+        },
+        {
           "label": "Cestrum buxifolium",
           "registros": 2,
           "slug_especie": "cestrum-buxifolium",
@@ -10687,6 +10734,21 @@
           "order": "Solanales",
           "family": "Solanaceae",
           "genus": "Cestrum"
+        },
+        {
+          "label": "Ageratina arbutifolia",
+          "registros": 2,
+          "slug_especie": "ageratina-arbutifolia",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5400677",
+          "species": "Ageratina arbutifolia",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Asterales",
+          "family": "Asteraceae",
+          "genus": "Ageratina"
         },
         {
           "label": "Chromolaena scabra",
@@ -10704,98 +10766,6 @@
           "genus": "Chromolaena"
         },
         {
-          "label": "Drimys granadensis",
-          "registros": 2,
-          "slug_especie": "drimys-granadensis",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7827774",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56d047233c16479905cba815/summary",
-          "species": "Drimys granadensis",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Canellales",
-          "family": "Winteraceae",
-          "genus": "Drimys"
-        },
-        {
-          "label": "Gaultheria erecta",
-          "registros": 2,
-          "slug_especie": "gaultheria-erecta",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4171873",
-          "species": "Gaultheria erecta",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Ericales",
-          "family": "Ericaceae",
-          "genus": "Gaultheria"
-        },
-        {
-          "label": "Geissanthus andinus",
-          "registros": 2,
-          "slug_especie": "geissanthus-andinus",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3719368",
-          "species": "Geissanthus andinus",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Ericales",
-          "family": "Primulaceae",
-          "genus": "Geissanthus"
-        },
-        {
-          "label": "Hedyosmum colombianum",
-          "registros": 2,
-          "slug_especie": "hedyosmum-colombianum",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3750598",
-          "species": "Hedyosmum colombianum",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Chloranthales",
-          "family": "Chloranthaceae",
-          "genus": "Hedyosmum"
-        },
-        {
-          "label": "Hedyosmum parvifolium",
-          "registros": 2,
-          "slug_especie": "hedyosmum-parvifolium",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3750607",
-          "species": "Hedyosmum parvifolium",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Chloranthales",
-          "family": "Chloranthaceae",
-          "genus": "Hedyosmum"
-        },
-        {
-          "label": "Linochilus rosmarinifolius",
-          "registros": 2,
-          "slug_especie": "linochilus-rosmarinifolius",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3090609",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cfd6733c16479905cba80b/summary",
-          "species": "Linochilus rosmarinifolius",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Asterales",
-          "family": "Asteraceae",
-          "genus": "Linochilus"
-        },
-        {
           "label": "Melinis minutiflora",
           "registros": 2,
           "slug_especie": "melinis-minutiflora",
@@ -10810,53 +10780,6 @@
           "order": "Poales",
           "family": "Poaceae",
           "genus": "Melinis"
-        },
-        {
-          "label": "Persea cuneata",
-          "registros": 2,
-          "slug_especie": "persea-cuneata",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4183018",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e3e52083c45700544e3e0e/summary",
-          "species": "Persea cuneata",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Laurales",
-          "family": "Lauraceae",
-          "genus": "Persea"
-        },
-        {
-          "label": "Phaseolus coccineus",
-          "registros": 2,
-          "slug_especie": "phaseolus-coccineus",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5350466",
-          "species": "Phaseolus coccineus",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Phaseolus"
-        },
-        {
-          "label": "Quercus humboldtii",
-          "registros": 2,
-          "slug_especie": "quercus-humboldtii",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2880642",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/6078868dfa9e7d0d2908c2f6/summary",
-          "species": "Quercus humboldtii",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Fagales",
-          "family": "Fagaceae",
-          "genus": "Quercus"
         },
         {
           "label": "Ruagea tomentosa",
@@ -10887,6 +10810,52 @@
           "order": "Asterales",
           "family": "Campanulaceae",
           "genus": "Siphocampylus"
+        },
+        {
+          "label": "Linochilus rosmarinifolius",
+          "registros": 2,
+          "slug_especie": "linochilus-rosmarinifolius",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3090609",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cfd6733c16479905cba80b/summary",
+          "species": "Linochilus rosmarinifolius",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Asterales",
+          "family": "Asteraceae",
+          "genus": "Linochilus"
+        },
+        {
+          "label": "Hedyosmum parvifolium",
+          "registros": 2,
+          "slug_especie": "hedyosmum-parvifolium",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3750607",
+          "species": "Hedyosmum parvifolium",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Chloranthales",
+          "family": "Chloranthaceae",
+          "genus": "Hedyosmum"
+        },
+        {
+          "label": "Hedyosmum colombianum",
+          "registros": 2,
+          "slug_especie": "hedyosmum-colombianum",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3750598",
+          "species": "Hedyosmum colombianum",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Chloranthales",
+          "family": "Chloranthaceae",
+          "genus": "Hedyosmum"
         },
         {
           "label": "Solanum americanum",
@@ -10934,6 +10903,37 @@
           "order": "Malpighiales",
           "family": "Hypericaceae",
           "genus": "Vismia"
+        },
+        {
+          "label": "Geissanthus andinus",
+          "registros": 2,
+          "slug_especie": "geissanthus-andinus",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3719368",
+          "species": "Geissanthus andinus",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Ericales",
+          "family": "Primulaceae",
+          "genus": "Geissanthus"
+        },
+        {
+          "label": "Drimys granadensis",
+          "registros": 2,
+          "slug_especie": "drimys-granadensis",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7827774",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d047233c16479905cba815/summary",
+          "species": "Drimys granadensis",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Canellales",
+          "family": "Winteraceae",
+          "genus": "Drimys"
         }
       ],
       "species_list_tematica": {
@@ -11902,6 +11902,23 @@
             "genus": "Coeligena"
           },
           {
+            "label": "Pionus tumultuosus",
+            "registros": 10,
+            "slug_especie": "pionus-tumultuosus",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2479913",
+            "species": "Pionus tumultuosus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Psittaciformes",
+            "family": "Psittacidae",
+            "genus": "Pionus"
+          },
+          {
             "label": "Eriocnemis vestita",
             "registros": 10,
             "slug_especie": "eriocnemis-vestita",
@@ -11936,23 +11953,6 @@
             "order": "Accipitriformes",
             "family": "Accipitridae",
             "genus": "Geranoaetus"
-          },
-          {
-            "label": "Pionus tumultuosus",
-            "registros": 10,
-            "slug_especie": "pionus-tumultuosus",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2479913",
-            "species": "Pionus tumultuosus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Psittaciformes",
-            "family": "Psittacidae",
-            "genus": "Pionus"
           }
         ],
         "migratorias": [

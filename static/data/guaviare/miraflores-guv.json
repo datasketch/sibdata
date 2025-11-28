@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -1340,19 +1340,19 @@
           "slug_tematica": "migratorias"
         },
         {
-          "label": "Hirundo rustica",
-          "slug_especie": "hirundo-rustica",
-          "registros": 18,
-          "url_gbif": "https://www.gbif.org/species/9515886",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9ef66f0106c67230e744e/summary",
-          "slug_tematica": "migratorias"
-        },
-        {
           "label": "Tyrannus savana",
           "slug_especie": "tyrannus-savana",
           "registros": 18,
           "url_gbif": "https://www.gbif.org/species/5229693",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56cfb29d3c16479905cba7f9/summary",
+          "slug_tematica": "migratorias"
+        },
+        {
+          "label": "Hirundo rustica",
+          "slug_especie": "hirundo-rustica",
+          "registros": 18,
+          "url_gbif": "https://www.gbif.org/species/9515886",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9ef66f0106c67230e744e/summary",
           "slug_tematica": "migratorias"
         },
         {
@@ -2726,21 +2726,6 @@
       "subgrupo_especies": [],
       "species_list_top": [
         {
-          "label": "Euterpe catinga",
-          "registros": 11,
-          "slug_especie": "euterpe-catinga",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5293412",
-          "species": "Euterpe catinga",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Arecales",
-          "family": "Arecaceae",
-          "genus": "Euterpe"
-        },
-        {
           "label": "Hevea nitida",
           "registros": 11,
           "slug_especie": "hevea-nitida",
@@ -2756,19 +2741,19 @@
           "genus": "Hevea"
         },
         {
-          "label": "Palicourea longicuspis",
+          "label": "Euterpe catinga",
           "registros": 11,
-          "slug_especie": "palicourea-longicuspis",
+          "slug_especie": "euterpe-catinga",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/10980924",
-          "species": "Palicourea longicuspis",
+          "url_gbif": "https://www.gbif.org/species/5293412",
+          "species": "Euterpe catinga",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Gentianales",
-          "family": "Rubiaceae",
-          "genus": "Palicourea"
+          "class": "Liliopsida",
+          "order": "Arecales",
+          "family": "Arecaceae",
+          "genus": "Euterpe"
         },
         {
           "label": "Vochysia obscura",
@@ -2786,34 +2771,19 @@
           "genus": "Vochysia"
         },
         {
-          "label": "Ischnosiphon lasiocoleus",
-          "registros": 10,
-          "slug_especie": "ischnosiphon-lasiocoleus",
+          "label": "Palicourea longicuspis",
+          "registros": 11,
+          "slug_especie": "palicourea-longicuspis",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2761021",
-          "species": "Ischnosiphon lasiocoleus",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Zingiberales",
-          "family": "Marantaceae",
-          "genus": "Ischnosiphon"
-        },
-        {
-          "label": "Myrcia pulchella",
-          "registros": 10,
-          "slug_especie": "myrcia-pulchella",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/10692890",
-          "species": "Myrcia pulchella",
+          "url_gbif": "https://www.gbif.org/species/10980924",
+          "species": "Palicourea longicuspis",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Myrtales",
-          "family": "Myrtaceae",
-          "genus": "Myrcia"
+          "order": "Gentianales",
+          "family": "Rubiaceae",
+          "genus": "Palicourea"
         },
         {
           "label": "Protium calanense",
@@ -2846,6 +2816,52 @@
           "genus": "Syagrus"
         },
         {
+          "label": "Ischnosiphon lasiocoleus",
+          "registros": 10,
+          "slug_especie": "ischnosiphon-lasiocoleus",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2761021",
+          "species": "Ischnosiphon lasiocoleus",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Zingiberales",
+          "family": "Marantaceae",
+          "genus": "Ischnosiphon"
+        },
+        {
+          "label": "Myrcia pulchella",
+          "registros": 10,
+          "slug_especie": "myrcia-pulchella",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/10692890",
+          "species": "Myrcia pulchella",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Myrtales",
+          "family": "Myrtaceae",
+          "genus": "Myrcia"
+        },
+        {
+          "label": "Geonoma maxima",
+          "registros": 9,
+          "slug_especie": "geonoma-maxima",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2734176",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e33c3383c45700544e3dbb/summary",
+          "species": "Geonoma maxima",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Arecales",
+          "family": "Arecaceae",
+          "genus": "Geonoma"
+        },
+        {
           "label": "Chaunochiton angustifolium",
           "registros": 9,
           "slug_especie": "chaunochiton-angustifolium",
@@ -2876,6 +2892,21 @@
           "genus": "Diplasia"
         },
         {
+          "label": "Sobralia liliastrum",
+          "registros": 9,
+          "slug_especie": "sobralia-liliastrum",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2797435",
+          "species": "Sobralia liliastrum",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Asparagales",
+          "family": "Orchidaceae",
+          "genus": "Sobralia"
+        },
+        {
           "label": "Faramea capillipes",
           "registros": 9,
           "slug_especie": "faramea-capillipes",
@@ -2891,22 +2922,6 @@
           "genus": "Faramea"
         },
         {
-          "label": "Geonoma maxima",
-          "registros": 9,
-          "slug_especie": "geonoma-maxima",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2734176",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e33c3383c45700544e3dbb/summary",
-          "species": "Geonoma maxima",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Arecales",
-          "family": "Arecaceae",
-          "genus": "Geonoma"
-        },
-        {
           "label": "Palicourea egensis",
           "registros": 9,
           "slug_especie": "palicourea-egensis",
@@ -2920,21 +2935,6 @@
           "order": "Gentianales",
           "family": "Rubiaceae",
           "genus": "Palicourea"
-        },
-        {
-          "label": "Sobralia liliastrum",
-          "registros": 9,
-          "slug_especie": "sobralia-liliastrum",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2797435",
-          "species": "Sobralia liliastrum",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Asparagales",
-          "family": "Orchidaceae",
-          "genus": "Sobralia"
         }
       ],
       "species_list_tematica": {
@@ -4172,24 +4172,6 @@
             "genus": "Setophaga"
           },
           {
-            "label": "Hirundo rustica",
-            "registros": 18,
-            "slug_especie": "hirundo-rustica",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/9515886",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c9ef66f0106c67230e744e/summary",
-            "species": "Hirundo rustica",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Hirundinidae",
-            "genus": "Hirundo"
-          },
-          {
             "label": "Tyrannus savana",
             "registros": 18,
             "slug_especie": "tyrannus-savana",
@@ -4206,6 +4188,24 @@
             "order": "Passeriformes",
             "family": "Tyrannidae",
             "genus": "Tyrannus"
+          },
+          {
+            "label": "Hirundo rustica",
+            "registros": 18,
+            "slug_especie": "hirundo-rustica",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/9515886",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c9ef66f0106c67230e744e/summary",
+            "species": "Hirundo rustica",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Hirundinidae",
+            "genus": "Hirundo"
           },
           {
             "label": "Setophaga ruticilla",
@@ -5127,6 +5127,21 @@
           "genus": "Troglodytes"
         },
         {
+          "label": "Patagioenas subvinacea",
+          "registros": 36,
+          "slug_especie": "patagioenas-subvinacea",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2495321",
+          "species": "Patagioenas subvinacea",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Columbiformes",
+          "family": "Columbidae",
+          "genus": "Patagioenas"
+        },
+        {
           "label": "Cacicus cela",
           "registros": 36,
           "slug_especie": "cacicus-cela",
@@ -5141,21 +5156,6 @@
           "order": "Passeriformes",
           "family": "Icteridae",
           "genus": "Cacicus"
-        },
-        {
-          "label": "Patagioenas subvinacea",
-          "registros": 36,
-          "slug_especie": "patagioenas-subvinacea",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2495321",
-          "species": "Patagioenas subvinacea",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Columbiformes",
-          "family": "Columbidae",
-          "genus": "Patagioenas"
         }
       ],
       "species_list_tematica": {
@@ -5416,24 +5416,6 @@
             "genus": "Setophaga"
           },
           {
-            "label": "Hirundo rustica",
-            "registros": 18,
-            "slug_especie": "hirundo-rustica",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/9515886",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c9ef66f0106c67230e744e/summary",
-            "species": "Hirundo rustica",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Hirundinidae",
-            "genus": "Hirundo"
-          },
-          {
             "label": "Tyrannus savana",
             "registros": 18,
             "slug_especie": "tyrannus-savana",
@@ -5450,6 +5432,24 @@
             "order": "Passeriformes",
             "family": "Tyrannidae",
             "genus": "Tyrannus"
+          },
+          {
+            "label": "Hirundo rustica",
+            "registros": 18,
+            "slug_especie": "hirundo-rustica",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/9515886",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c9ef66f0106c67230e744e/summary",
+            "species": "Hirundo rustica",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Hirundinidae",
+            "genus": "Hirundo"
           },
           {
             "label": "Setophaga ruticilla",
@@ -6903,19 +6903,34 @@
           "genus": "Asplenium"
         },
         {
-          "label": "Actinostachys pennula",
+          "label": "Hecistopteris pumila",
           "registros": 6,
-          "slug_especie": "actinostachys-pennula",
+          "slug_especie": "hecistopteris-pumila",
           "slug_grupo": "helechos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2650564",
-          "species": "Actinostachys pennula",
+          "url_gbif": "https://www.gbif.org/species/2650252",
+          "species": "Hecistopteris pumila",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Polypodiopsida",
-          "order": "Schizaeales",
-          "family": "Schizaeaceae",
-          "genus": "Actinostachys"
+          "order": "Polypodiales",
+          "family": "Pteridaceae",
+          "genus": "Hecistopteris"
+        },
+        {
+          "label": "Saccoloma inaequale",
+          "registros": 6,
+          "slug_especie": "saccoloma-inaequale",
+          "slug_grupo": "helechos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2650792",
+          "species": "Saccoloma inaequale",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Polypodiopsida",
+          "order": "Polypodiales",
+          "family": "Saccolomataceae",
+          "genus": "Saccoloma"
         },
         {
           "label": "Asplenium zamiifolium",
@@ -6948,34 +6963,19 @@
           "genus": "Cyathea"
         },
         {
-          "label": "Hecistopteris pumila",
+          "label": "Actinostachys pennula",
           "registros": 6,
-          "slug_especie": "hecistopteris-pumila",
+          "slug_especie": "actinostachys-pennula",
           "slug_grupo": "helechos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2650252",
-          "species": "Hecistopteris pumila",
+          "url_gbif": "https://www.gbif.org/species/2650564",
+          "species": "Actinostachys pennula",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Polypodiopsida",
-          "order": "Polypodiales",
-          "family": "Pteridaceae",
-          "genus": "Hecistopteris"
-        },
-        {
-          "label": "Saccoloma inaequale",
-          "registros": 6,
-          "slug_especie": "saccoloma-inaequale",
-          "slug_grupo": "helechos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2650792",
-          "species": "Saccoloma inaequale",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Polypodiopsida",
-          "order": "Polypodiales",
-          "family": "Saccolomataceae",
-          "genus": "Saccoloma"
+          "order": "Schizaeales",
+          "family": "Schizaeaceae",
+          "genus": "Actinostachys"
         }
       ],
       "species_list_tematica": {
@@ -7307,19 +7307,19 @@
       "subgrupo_especies": [],
       "species_list_top": [
         {
-          "label": "Crematogaster brasiliensis",
+          "label": "Wasmannia auropunctata",
           "registros": 7,
-          "slug_especie": "crematogaster-brasiliensis",
+          "slug_especie": "wasmannia-auropunctata",
           "slug_grupo": "hormigas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1324677",
-          "species": "Crematogaster brasiliensis",
+          "url_gbif": "https://www.gbif.org/species/1315391",
+          "species": "Wasmannia auropunctata",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Hymenoptera",
           "family": "Formicidae",
-          "genus": "Crematogaster"
+          "genus": "Wasmannia"
         },
         {
           "label": "Pachycondyla crassinoda",
@@ -7337,19 +7337,19 @@
           "genus": "Pachycondyla"
         },
         {
-          "label": "Wasmannia auropunctata",
+          "label": "Crematogaster brasiliensis",
           "registros": 7,
-          "slug_especie": "wasmannia-auropunctata",
+          "slug_especie": "crematogaster-brasiliensis",
           "slug_grupo": "hormigas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1315391",
-          "species": "Wasmannia auropunctata",
+          "url_gbif": "https://www.gbif.org/species/1324677",
+          "species": "Crematogaster brasiliensis",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Hymenoptera",
           "family": "Formicidae",
-          "genus": "Wasmannia"
+          "genus": "Crematogaster"
         },
         {
           "label": "Cyphomyrmex rimosus",
@@ -7397,49 +7397,19 @@
           "genus": "Anochetus"
         },
         {
-          "label": "Camponotus atriceps",
+          "label": "Pheidole zeteki",
           "registros": 4,
-          "slug_especie": "camponotus-atriceps",
+          "slug_especie": "pheidole-zeteki",
           "slug_grupo": "hormigas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5033125",
-          "species": "Camponotus atriceps",
+          "url_gbif": "https://www.gbif.org/species/1322323",
+          "species": "Pheidole zeteki",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Hymenoptera",
           "family": "Formicidae",
-          "genus": "Camponotus"
-        },
-        {
-          "label": "Cephalotes atratus",
-          "registros": 4,
-          "slug_especie": "cephalotes-atratus",
-          "slug_grupo": "hormigas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5035960",
-          "species": "Cephalotes atratus",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Hymenoptera",
-          "family": "Formicidae",
-          "genus": "Cephalotes"
-        },
-        {
-          "label": "Crematogaster sotobosque",
-          "registros": 4,
-          "slug_especie": "crematogaster-sotobosque",
-          "slug_grupo": "hormigas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/8302097",
-          "species": "Crematogaster sotobosque",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Hymenoptera",
-          "family": "Formicidae",
-          "genus": "Crematogaster"
+          "genus": "Pheidole"
         },
         {
           "label": "Dolichoderus attelaboides",
@@ -7457,6 +7427,36 @@
           "genus": "Dolichoderus"
         },
         {
+          "label": "Camponotus atriceps",
+          "registros": 4,
+          "slug_especie": "camponotus-atriceps",
+          "slug_grupo": "hormigas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5033125",
+          "species": "Camponotus atriceps",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hymenoptera",
+          "family": "Formicidae",
+          "genus": "Camponotus"
+        },
+        {
+          "label": "Crematogaster sotobosque",
+          "registros": 4,
+          "slug_especie": "crematogaster-sotobosque",
+          "slug_grupo": "hormigas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/8302097",
+          "species": "Crematogaster sotobosque",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hymenoptera",
+          "family": "Formicidae",
+          "genus": "Crematogaster"
+        },
+        {
           "label": "Pheidole biconstricta",
           "registros": 4,
           "slug_especie": "pheidole-biconstricta",
@@ -7472,19 +7472,19 @@
           "genus": "Pheidole"
         },
         {
-          "label": "Pheidole zeteki",
+          "label": "Cephalotes atratus",
           "registros": 4,
-          "slug_especie": "pheidole-zeteki",
+          "slug_especie": "cephalotes-atratus",
           "slug_grupo": "hormigas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1322323",
-          "species": "Pheidole zeteki",
+          "url_gbif": "https://www.gbif.org/species/5035960",
+          "species": "Cephalotes atratus",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Hymenoptera",
           "family": "Formicidae",
-          "genus": "Pheidole"
+          "genus": "Cephalotes"
         }
       ],
       "species_list_tematica": {
@@ -7807,6 +7807,21 @@
       ],
       "species_list_top": [
         {
+          "label": "Wasmannia auropunctata",
+          "registros": 7,
+          "slug_especie": "wasmannia-auropunctata",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1315391",
+          "species": "Wasmannia auropunctata",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hymenoptera",
+          "family": "Formicidae",
+          "genus": "Wasmannia"
+        },
+        {
           "label": "Crematogaster brasiliensis",
           "registros": 7,
           "slug_especie": "crematogaster-brasiliensis",
@@ -7835,21 +7850,6 @@
           "order": "Hymenoptera",
           "family": "Formicidae",
           "genus": "Pachycondyla"
-        },
-        {
-          "label": "Wasmannia auropunctata",
-          "registros": 7,
-          "slug_especie": "wasmannia-auropunctata",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1315391",
-          "species": "Wasmannia auropunctata",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Hymenoptera",
-          "family": "Formicidae",
-          "genus": "Wasmannia"
         },
         {
           "label": "Cyphomyrmex rimosus",
@@ -7912,64 +7912,19 @@
           "genus": "Anochetus"
         },
         {
-          "label": "Camponotus atriceps",
+          "label": "Pheidole zeteki",
           "registros": 4,
-          "slug_especie": "camponotus-atriceps",
+          "slug_especie": "pheidole-zeteki",
           "slug_grupo": "insectos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5033125",
-          "species": "Camponotus atriceps",
+          "url_gbif": "https://www.gbif.org/species/1322323",
+          "species": "Pheidole zeteki",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Hymenoptera",
           "family": "Formicidae",
-          "genus": "Camponotus"
-        },
-        {
-          "label": "Cephalotes atratus",
-          "registros": 4,
-          "slug_especie": "cephalotes-atratus",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5035960",
-          "species": "Cephalotes atratus",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Hymenoptera",
-          "family": "Formicidae",
-          "genus": "Cephalotes"
-        },
-        {
-          "label": "Crematogaster sotobosque",
-          "registros": 4,
-          "slug_especie": "crematogaster-sotobosque",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/8302097",
-          "species": "Crematogaster sotobosque",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Hymenoptera",
-          "family": "Formicidae",
-          "genus": "Crematogaster"
-        },
-        {
-          "label": "Dolichoderus attelaboides",
-          "registros": 4,
-          "slug_especie": "dolichoderus-attelaboides",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5034868",
-          "species": "Dolichoderus attelaboides",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Hymenoptera",
-          "family": "Formicidae",
-          "genus": "Dolichoderus"
+          "genus": "Pheidole"
         },
         {
           "label": "Marpesia crethon",
@@ -7987,6 +7942,51 @@
           "genus": "Marpesia"
         },
         {
+          "label": "Dolichoderus attelaboides",
+          "registros": 4,
+          "slug_especie": "dolichoderus-attelaboides",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5034868",
+          "species": "Dolichoderus attelaboides",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hymenoptera",
+          "family": "Formicidae",
+          "genus": "Dolichoderus"
+        },
+        {
+          "label": "Crematogaster sotobosque",
+          "registros": 4,
+          "slug_especie": "crematogaster-sotobosque",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/8302097",
+          "species": "Crematogaster sotobosque",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hymenoptera",
+          "family": "Formicidae",
+          "genus": "Crematogaster"
+        },
+        {
+          "label": "Cephalotes atratus",
+          "registros": 4,
+          "slug_especie": "cephalotes-atratus",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5035960",
+          "species": "Cephalotes atratus",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hymenoptera",
+          "family": "Formicidae",
+          "genus": "Cephalotes"
+        },
+        {
           "label": "Pheidole biconstricta",
           "registros": 4,
           "slug_especie": "pheidole-biconstricta",
@@ -8002,19 +8002,19 @@
           "genus": "Pheidole"
         },
         {
-          "label": "Pheidole zeteki",
+          "label": "Camponotus atriceps",
           "registros": 4,
-          "slug_especie": "pheidole-zeteki",
+          "slug_especie": "camponotus-atriceps",
           "slug_grupo": "insectos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1322323",
-          "species": "Pheidole zeteki",
+          "url_gbif": "https://www.gbif.org/species/5033125",
+          "species": "Camponotus atriceps",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Hymenoptera",
           "family": "Formicidae",
-          "genus": "Pheidole"
+          "genus": "Camponotus"
         }
       ],
       "species_list_tematica": {
@@ -8341,6 +8341,21 @@
       ],
       "species_list_top": [
         {
+          "label": "Wasmannia auropunctata",
+          "registros": 7,
+          "slug_especie": "wasmannia-auropunctata",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1315391",
+          "species": "Wasmannia auropunctata",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hymenoptera",
+          "family": "Formicidae",
+          "genus": "Wasmannia"
+        },
+        {
           "label": "Crematogaster brasiliensis",
           "registros": 7,
           "slug_especie": "crematogaster-brasiliensis",
@@ -8369,21 +8384,6 @@
           "order": "Hymenoptera",
           "family": "Formicidae",
           "genus": "Pachycondyla"
-        },
-        {
-          "label": "Wasmannia auropunctata",
-          "registros": 7,
-          "slug_especie": "wasmannia-auropunctata",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1315391",
-          "species": "Wasmannia auropunctata",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Hymenoptera",
-          "family": "Formicidae",
-          "genus": "Wasmannia"
         },
         {
           "label": "Cyphomyrmex rimosus",
@@ -8446,64 +8446,19 @@
           "genus": "Anochetus"
         },
         {
-          "label": "Camponotus atriceps",
+          "label": "Pheidole zeteki",
           "registros": 4,
-          "slug_especie": "camponotus-atriceps",
+          "slug_especie": "pheidole-zeteki",
           "slug_grupo": "invertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5033125",
-          "species": "Camponotus atriceps",
+          "url_gbif": "https://www.gbif.org/species/1322323",
+          "species": "Pheidole zeteki",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Hymenoptera",
           "family": "Formicidae",
-          "genus": "Camponotus"
-        },
-        {
-          "label": "Cephalotes atratus",
-          "registros": 4,
-          "slug_especie": "cephalotes-atratus",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5035960",
-          "species": "Cephalotes atratus",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Hymenoptera",
-          "family": "Formicidae",
-          "genus": "Cephalotes"
-        },
-        {
-          "label": "Crematogaster sotobosque",
-          "registros": 4,
-          "slug_especie": "crematogaster-sotobosque",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/8302097",
-          "species": "Crematogaster sotobosque",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Hymenoptera",
-          "family": "Formicidae",
-          "genus": "Crematogaster"
-        },
-        {
-          "label": "Dolichoderus attelaboides",
-          "registros": 4,
-          "slug_especie": "dolichoderus-attelaboides",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5034868",
-          "species": "Dolichoderus attelaboides",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Hymenoptera",
-          "family": "Formicidae",
-          "genus": "Dolichoderus"
+          "genus": "Pheidole"
         },
         {
           "label": "Marpesia crethon",
@@ -8521,6 +8476,51 @@
           "genus": "Marpesia"
         },
         {
+          "label": "Dolichoderus attelaboides",
+          "registros": 4,
+          "slug_especie": "dolichoderus-attelaboides",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5034868",
+          "species": "Dolichoderus attelaboides",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hymenoptera",
+          "family": "Formicidae",
+          "genus": "Dolichoderus"
+        },
+        {
+          "label": "Crematogaster sotobosque",
+          "registros": 4,
+          "slug_especie": "crematogaster-sotobosque",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/8302097",
+          "species": "Crematogaster sotobosque",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hymenoptera",
+          "family": "Formicidae",
+          "genus": "Crematogaster"
+        },
+        {
+          "label": "Cephalotes atratus",
+          "registros": 4,
+          "slug_especie": "cephalotes-atratus",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5035960",
+          "species": "Cephalotes atratus",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Hymenoptera",
+          "family": "Formicidae",
+          "genus": "Cephalotes"
+        },
+        {
           "label": "Pheidole biconstricta",
           "registros": 4,
           "slug_especie": "pheidole-biconstricta",
@@ -8536,19 +8536,19 @@
           "genus": "Pheidole"
         },
         {
-          "label": "Pheidole zeteki",
+          "label": "Camponotus atriceps",
           "registros": 4,
-          "slug_especie": "pheidole-zeteki",
+          "slug_especie": "camponotus-atriceps",
           "slug_grupo": "invertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1322323",
-          "species": "Pheidole zeteki",
+          "url_gbif": "https://www.gbif.org/species/5033125",
+          "species": "Camponotus atriceps",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Hymenoptera",
           "family": "Formicidae",
-          "genus": "Pheidole"
+          "genus": "Camponotus"
         }
       ],
       "species_list_tematica": {
@@ -8957,20 +8957,20 @@
           "genus": "Carollia"
         },
         {
-          "label": "Artibeus obscurus",
+          "label": "Uroderma bilobatum",
           "registros": 7,
-          "slug_especie": "artibeus-obscurus",
+          "slug_especie": "uroderma-bilobatum",
           "slug_grupo": "mamiferos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2433259",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c144b9f0106c67230e730b/summary",
-          "species": "Artibeus obscurus",
+          "url_gbif": "https://www.gbif.org/species/2433156",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cceb9a207ecea54a561e51/summary",
+          "species": "Uroderma bilobatum",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
           "order": "Chiroptera",
           "family": "Phyllostomidae",
-          "genus": "Artibeus"
+          "genus": "Uroderma"
         },
         {
           "label": "Trachops cirrhosus",
@@ -8989,20 +8989,20 @@
           "genus": "Trachops"
         },
         {
-          "label": "Uroderma bilobatum",
+          "label": "Artibeus obscurus",
           "registros": 7,
-          "slug_especie": "uroderma-bilobatum",
+          "slug_especie": "artibeus-obscurus",
           "slug_grupo": "mamiferos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2433156",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cceb9a207ecea54a561e51/summary",
-          "species": "Uroderma bilobatum",
+          "url_gbif": "https://www.gbif.org/species/2433259",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c144b9f0106c67230e730b/summary",
+          "species": "Artibeus obscurus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
           "order": "Chiroptera",
           "family": "Phyllostomidae",
-          "genus": "Uroderma"
+          "genus": "Artibeus"
         },
         {
           "label": "Glossophaga soricina",
@@ -9668,19 +9668,34 @@
           "genus": "Bia"
         },
         {
-          "label": "Antirrhea philaretes",
+          "label": "Eunica concordia",
           "registros": 2,
-          "slug_especie": "antirrhea-philaretes",
+          "slug_especie": "eunica-concordia",
           "slug_grupo": "mariposas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1899994",
-          "species": "Antirrhea philaretes",
+          "url_gbif": "https://www.gbif.org/species/5128465",
+          "species": "Eunica concordia",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Lepidoptera",
           "family": "Nymphalidae",
-          "genus": "Antirrhea"
+          "genus": "Eunica"
+        },
+        {
+          "label": "Pierella astyoche",
+          "registros": 2,
+          "slug_especie": "pierella-astyoche",
+          "slug_grupo": "mariposas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1898348",
+          "species": "Pierella astyoche",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Pierella"
         },
         {
           "label": "Caligo eurilochus",
@@ -9698,94 +9713,19 @@
           "genus": "Caligo"
         },
         {
-          "label": "Camptopleura auxo",
+          "label": "Panacea prola",
           "registros": 2,
-          "slug_especie": "camptopleura-auxo",
+          "slug_especie": "panacea-prola",
           "slug_grupo": "mariposas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1945653",
-          "species": "Camptopleura auxo",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Hesperiidae",
-          "genus": "Camptopleura"
-        },
-        {
-          "label": "Eunica concordia",
-          "registros": 2,
-          "slug_especie": "eunica-concordia",
-          "slug_grupo": "mariposas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5128465",
-          "species": "Eunica concordia",
+          "url_gbif": "https://www.gbif.org/species/5130574",
+          "species": "Panacea prola",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Lepidoptera",
           "family": "Nymphalidae",
-          "genus": "Eunica"
-        },
-        {
-          "label": "Marpesia orsilochus",
-          "registros": 2,
-          "slug_especie": "marpesia-orsilochus",
-          "slug_grupo": "mariposas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5133591",
-          "species": "Marpesia orsilochus",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Marpesia"
-        },
-        {
-          "label": "Marpesia themistocles",
-          "registros": 2,
-          "slug_especie": "marpesia-themistocles",
-          "slug_grupo": "mariposas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5133615",
-          "species": "Marpesia themistocles",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Marpesia"
-        },
-        {
-          "label": "Melete polyhymnia",
-          "registros": 2,
-          "slug_especie": "melete-polyhymnia",
-          "slug_grupo": "mariposas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1920684",
-          "species": "Melete polyhymnia",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Pieridae",
-          "genus": "Melete"
-        },
-        {
-          "label": "Morpho achilles",
-          "registros": 2,
-          "slug_especie": "morpho-achilles",
-          "slug_grupo": "mariposas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5133255",
-          "species": "Morpho achilles",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Morpho"
+          "genus": "Panacea"
         },
         {
           "label": "Morpho menelaus",
@@ -9804,34 +9744,94 @@
           "genus": "Morpho"
         },
         {
-          "label": "Panacea prola",
+          "label": "Camptopleura auxo",
           "registros": 2,
-          "slug_especie": "panacea-prola",
+          "slug_especie": "camptopleura-auxo",
           "slug_grupo": "mariposas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5130574",
-          "species": "Panacea prola",
+          "url_gbif": "https://www.gbif.org/species/1945653",
+          "species": "Camptopleura auxo",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Panacea"
+          "family": "Hesperiidae",
+          "genus": "Camptopleura"
         },
         {
-          "label": "Pierella astyoche",
+          "label": "Morpho achilles",
           "registros": 2,
-          "slug_especie": "pierella-astyoche",
+          "slug_especie": "morpho-achilles",
           "slug_grupo": "mariposas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1898348",
-          "species": "Pierella astyoche",
+          "url_gbif": "https://www.gbif.org/species/5133255",
+          "species": "Morpho achilles",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Lepidoptera",
           "family": "Nymphalidae",
-          "genus": "Pierella"
+          "genus": "Morpho"
+        },
+        {
+          "label": "Melete polyhymnia",
+          "registros": 2,
+          "slug_especie": "melete-polyhymnia",
+          "slug_grupo": "mariposas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1920684",
+          "species": "Melete polyhymnia",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Pieridae",
+          "genus": "Melete"
+        },
+        {
+          "label": "Marpesia themistocles",
+          "registros": 2,
+          "slug_especie": "marpesia-themistocles",
+          "slug_grupo": "mariposas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5133615",
+          "species": "Marpesia themistocles",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Marpesia"
+        },
+        {
+          "label": "Marpesia orsilochus",
+          "registros": 2,
+          "slug_especie": "marpesia-orsilochus",
+          "slug_grupo": "mariposas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5133591",
+          "species": "Marpesia orsilochus",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Marpesia"
+        },
+        {
+          "label": "Antirrhea philaretes",
+          "registros": 2,
+          "slug_especie": "antirrhea-philaretes",
+          "slug_grupo": "mariposas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1899994",
+          "species": "Antirrhea philaretes",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Antirrhea"
         }
       ],
       "species_list_tematica": {
@@ -11150,19 +11150,19 @@
           "genus": "Cyathea"
         },
         {
-          "label": "Cyathea vaupensis",
+          "label": "Hevea nitida",
           "registros": 11,
-          "slug_especie": "cyathea-vaupensis",
+          "slug_especie": "hevea-nitida",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/8004182",
-          "species": "Cyathea vaupensis",
+          "url_gbif": "https://www.gbif.org/species/3071251",
+          "species": "Hevea nitida",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
-          "class": "Polypodiopsida",
-          "order": "Cyatheales",
-          "family": "Cyatheaceae",
-          "genus": "Cyathea"
+          "class": "Magnoliopsida",
+          "order": "Malpighiales",
+          "family": "Euphorbiaceae",
+          "genus": "Hevea"
         },
         {
           "label": "Euterpe catinga",
@@ -11180,34 +11180,19 @@
           "genus": "Euterpe"
         },
         {
-          "label": "Hevea nitida",
+          "label": "Cyathea vaupensis",
           "registros": 11,
-          "slug_especie": "hevea-nitida",
+          "slug_especie": "cyathea-vaupensis",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3071251",
-          "species": "Hevea nitida",
+          "url_gbif": "https://www.gbif.org/species/8004182",
+          "species": "Cyathea vaupensis",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Euphorbiaceae",
-          "genus": "Hevea"
-        },
-        {
-          "label": "Palicourea longicuspis",
-          "registros": 11,
-          "slug_especie": "palicourea-longicuspis",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/10980924",
-          "species": "Palicourea longicuspis",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Gentianales",
-          "family": "Rubiaceae",
-          "genus": "Palicourea"
+          "class": "Polypodiopsida",
+          "order": "Cyatheales",
+          "family": "Cyatheaceae",
+          "genus": "Cyathea"
         },
         {
           "label": "Vochysia obscura",
@@ -11225,6 +11210,21 @@
           "genus": "Vochysia"
         },
         {
+          "label": "Palicourea longicuspis",
+          "registros": 11,
+          "slug_especie": "palicourea-longicuspis",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/10980924",
+          "species": "Palicourea longicuspis",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Gentianales",
+          "family": "Rubiaceae",
+          "genus": "Palicourea"
+        },
+        {
           "label": "Ischnosiphon lasiocoleus",
           "registros": 10,
           "slug_especie": "ischnosiphon-lasiocoleus",
@@ -11238,6 +11238,21 @@
           "order": "Zingiberales",
           "family": "Marantaceae",
           "genus": "Ischnosiphon"
+        },
+        {
+          "label": "Syagrus orinocensis",
+          "registros": 10,
+          "slug_especie": "syagrus-orinocensis",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5293882",
+          "species": "Syagrus orinocensis",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Arecales",
+          "family": "Arecaceae",
+          "genus": "Syagrus"
         },
         {
           "label": "Myrcia pulchella",
@@ -11268,21 +11283,6 @@
           "order": "Sapindales",
           "family": "Burseraceae",
           "genus": "Protium"
-        },
-        {
-          "label": "Syagrus orinocensis",
-          "registros": 10,
-          "slug_especie": "syagrus-orinocensis",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5293882",
-          "species": "Syagrus orinocensis",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Arecales",
-          "family": "Arecaceae",
-          "genus": "Syagrus"
         }
       ],
       "species_list_tematica": {
@@ -12595,19 +12595,19 @@
           "genus": "Cyathea"
         },
         {
-          "label": "Cyathea vaupensis",
+          "label": "Hevea nitida",
           "registros": 11,
-          "slug_especie": "cyathea-vaupensis",
+          "slug_especie": "hevea-nitida",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/8004182",
-          "species": "Cyathea vaupensis",
+          "url_gbif": "https://www.gbif.org/species/3071251",
+          "species": "Hevea nitida",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
-          "class": "Polypodiopsida",
-          "order": "Cyatheales",
-          "family": "Cyatheaceae",
-          "genus": "Cyathea"
+          "class": "Magnoliopsida",
+          "order": "Malpighiales",
+          "family": "Euphorbiaceae",
+          "genus": "Hevea"
         },
         {
           "label": "Euterpe catinga",
@@ -12625,34 +12625,19 @@
           "genus": "Euterpe"
         },
         {
-          "label": "Hevea nitida",
+          "label": "Cyathea vaupensis",
           "registros": 11,
-          "slug_especie": "hevea-nitida",
+          "slug_especie": "cyathea-vaupensis",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3071251",
-          "species": "Hevea nitida",
+          "url_gbif": "https://www.gbif.org/species/8004182",
+          "species": "Cyathea vaupensis",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Euphorbiaceae",
-          "genus": "Hevea"
-        },
-        {
-          "label": "Palicourea longicuspis",
-          "registros": 11,
-          "slug_especie": "palicourea-longicuspis",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/10980924",
-          "species": "Palicourea longicuspis",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Gentianales",
-          "family": "Rubiaceae",
-          "genus": "Palicourea"
+          "class": "Polypodiopsida",
+          "order": "Cyatheales",
+          "family": "Cyatheaceae",
+          "genus": "Cyathea"
         },
         {
           "label": "Vochysia obscura",
@@ -12670,6 +12655,21 @@
           "genus": "Vochysia"
         },
         {
+          "label": "Palicourea longicuspis",
+          "registros": 11,
+          "slug_especie": "palicourea-longicuspis",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/10980924",
+          "species": "Palicourea longicuspis",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Gentianales",
+          "family": "Rubiaceae",
+          "genus": "Palicourea"
+        },
+        {
           "label": "Ischnosiphon lasiocoleus",
           "registros": 10,
           "slug_especie": "ischnosiphon-lasiocoleus",
@@ -12683,6 +12683,21 @@
           "order": "Zingiberales",
           "family": "Marantaceae",
           "genus": "Ischnosiphon"
+        },
+        {
+          "label": "Syagrus orinocensis",
+          "registros": 10,
+          "slug_especie": "syagrus-orinocensis",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5293882",
+          "species": "Syagrus orinocensis",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Arecales",
+          "family": "Arecaceae",
+          "genus": "Syagrus"
         },
         {
           "label": "Myrcia pulchella",
@@ -12713,21 +12728,6 @@
           "order": "Sapindales",
           "family": "Burseraceae",
           "genus": "Protium"
-        },
-        {
-          "label": "Syagrus orinocensis",
-          "registros": 10,
-          "slug_especie": "syagrus-orinocensis",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5293882",
-          "species": "Syagrus orinocensis",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Arecales",
-          "family": "Arecaceae",
-          "genus": "Syagrus"
         }
       ],
       "species_list_tematica": {
@@ -13560,22 +13560,6 @@
           "genus": "Thraupis"
         },
         {
-          "label": "Carollia perspicillata",
-          "registros": 40,
-          "slug_especie": "carollia-perspicillata",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2433176",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c3fa96f0106c67230e7370/summary",
-          "species": "Carollia perspicillata",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Mammalia",
-          "order": "Chiroptera",
-          "family": "Phyllostomidae",
-          "genus": "Carollia"
-        },
-        {
           "label": "Tyrannus melancholicus",
           "registros": 40,
           "slug_especie": "tyrannus-melancholicus",
@@ -13590,6 +13574,22 @@
           "order": "Passeriformes",
           "family": "Tyrannidae",
           "genus": "Tyrannus"
+        },
+        {
+          "label": "Carollia perspicillata",
+          "registros": 40,
+          "slug_especie": "carollia-perspicillata",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2433176",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c3fa96f0106c67230e7370/summary",
+          "species": "Carollia perspicillata",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Chiroptera",
+          "family": "Phyllostomidae",
+          "genus": "Carollia"
         },
         {
           "label": "Troglodytes aedon",
@@ -13996,24 +13996,6 @@
             "genus": "Setophaga"
           },
           {
-            "label": "Hirundo rustica",
-            "registros": 18,
-            "slug_especie": "hirundo-rustica",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/9515886",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c9ef66f0106c67230e744e/summary",
-            "species": "Hirundo rustica",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Hirundinidae",
-            "genus": "Hirundo"
-          },
-          {
             "label": "Tyrannus savana",
             "registros": 18,
             "slug_especie": "tyrannus-savana",
@@ -14030,6 +14012,24 @@
             "order": "Passeriformes",
             "family": "Tyrannidae",
             "genus": "Tyrannus"
+          },
+          {
+            "label": "Hirundo rustica",
+            "registros": 18,
+            "slug_especie": "hirundo-rustica",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/9515886",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c9ef66f0106c67230e744e/summary",
+            "species": "Hirundo rustica",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Hirundinidae",
+            "genus": "Hirundo"
           },
           {
             "label": "Setophaga ruticilla",
@@ -15031,21 +15031,6 @@
           "genus": "Anthurium"
         },
         {
-          "label": "Anthurium clavigerum",
-          "registros": 3,
-          "slug_especie": "anthurium-clavigerum",
-          "slug_grupo": "epifitas",
-          "tipo": "interes",
-          "url_gbif": "https://www.gbif.org/species/2872456",
-          "species": "Anthurium clavigerum",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Alismatales",
-          "family": "Araceae",
-          "genus": "Anthurium"
-        },
-        {
           "label": "Drymonia coccinea",
           "registros": 3,
           "slug_especie": "drymonia-coccinea",
@@ -15061,13 +15046,28 @@
           "genus": "Drymonia"
         },
         {
-          "label": "Philodendron fragrantissimum",
+          "label": "Anthurium clavigerum",
           "registros": 3,
-          "slug_especie": "philodendron-fragrantissimum",
+          "slug_especie": "anthurium-clavigerum",
           "slug_grupo": "epifitas",
           "tipo": "interes",
-          "url_gbif": "https://www.gbif.org/species/2870944",
-          "species": "Philodendron fragrantissimum",
+          "url_gbif": "https://www.gbif.org/species/2872456",
+          "species": "Anthurium clavigerum",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Alismatales",
+          "family": "Araceae",
+          "genus": "Anthurium"
+        },
+        {
+          "label": "Philodendron wittianum",
+          "registros": 3,
+          "slug_especie": "philodendron-wittianum",
+          "slug_grupo": "epifitas",
+          "tipo": "interes",
+          "url_gbif": "https://www.gbif.org/species/2870855",
+          "species": "Philodendron wittianum",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Liliopsida",
@@ -15091,13 +15091,13 @@
           "genus": "Philodendron"
         },
         {
-          "label": "Philodendron wittianum",
+          "label": "Philodendron fragrantissimum",
           "registros": 3,
-          "slug_especie": "philodendron-wittianum",
+          "slug_especie": "philodendron-fragrantissimum",
           "slug_grupo": "epifitas",
           "tipo": "interes",
-          "url_gbif": "https://www.gbif.org/species/2870855",
-          "species": "Philodendron wittianum",
+          "url_gbif": "https://www.gbif.org/species/2870944",
+          "species": "Philodendron fragrantissimum",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Liliopsida",
@@ -15106,34 +15106,19 @@
           "genus": "Philodendron"
         },
         {
-          "label": "Anthurium gracile",
+          "label": "Ludovia lancifolia",
           "registros": 2,
-          "slug_especie": "anthurium-gracile",
+          "slug_especie": "ludovia-lancifolia",
           "slug_grupo": "epifitas",
           "tipo": "interes",
-          "url_gbif": "https://www.gbif.org/species/2872811",
-          "species": "Anthurium gracile",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Alismatales",
-          "family": "Araceae",
-          "genus": "Anthurium"
-        },
-        {
-          "label": "Asplundia vaupesiana",
-          "registros": 2,
-          "slug_especie": "asplundia-vaupesiana",
-          "slug_grupo": "epifitas",
-          "tipo": "interes",
-          "url_gbif": "https://www.gbif.org/species/2861069",
-          "species": "Asplundia vaupesiana",
+          "url_gbif": "https://www.gbif.org/species/5327019",
+          "species": "Ludovia lancifolia",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Liliopsida",
           "order": "Pandanales",
           "family": "Cyclanthaceae",
-          "genus": "Asplundia"
+          "genus": "Ludovia"
         },
         {
           "label": "Blakea rosea",
@@ -15181,19 +15166,19 @@
           "genus": "Epidendrum"
         },
         {
-          "label": "Ludovia lancifolia",
+          "label": "Anthurium gracile",
           "registros": 2,
-          "slug_especie": "ludovia-lancifolia",
+          "slug_especie": "anthurium-gracile",
           "slug_grupo": "epifitas",
           "tipo": "interes",
-          "url_gbif": "https://www.gbif.org/species/5327019",
-          "species": "Ludovia lancifolia",
+          "url_gbif": "https://www.gbif.org/species/2872811",
+          "species": "Anthurium gracile",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Liliopsida",
-          "order": "Pandanales",
-          "family": "Cyclanthaceae",
-          "genus": "Ludovia"
+          "order": "Alismatales",
+          "family": "Araceae",
+          "genus": "Anthurium"
         },
         {
           "label": "Philodendron colombianum",
@@ -15209,6 +15194,21 @@
           "order": "Alismatales",
           "family": "Araceae",
           "genus": "Philodendron"
+        },
+        {
+          "label": "Asplundia vaupesiana",
+          "registros": 2,
+          "slug_especie": "asplundia-vaupesiana",
+          "slug_grupo": "epifitas",
+          "tipo": "interes",
+          "url_gbif": "https://www.gbif.org/species/2861069",
+          "species": "Asplundia vaupesiana",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Pandanales",
+          "family": "Cyclanthaceae",
+          "genus": "Asplundia"
         },
         {
           "label": "Philodendron linnaei",

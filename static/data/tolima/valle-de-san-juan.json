@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -802,19 +802,19 @@
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Amazilia tzacatl",
-          "slug_especie": "amazilia-tzacatl",
-          "registros": 4,
-          "url_gbif": "https://www.gbif.org/species/2476441",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e782a283c45700544e407e/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
           "label": "Buteo brachyurus",
           "slug_especie": "buteo-brachyurus",
           "registros": 4,
           "url_gbif": "https://www.gbif.org/species/2480553",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56e780b283c45700544e4061/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Herpetotheres cachinnans",
+          "slug_especie": "herpetotheres-cachinnans",
+          "registros": 4,
+          "url_gbif": "https://www.gbif.org/species/2481071",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d997513c16479905cba9a0/summary",
           "slug_tematica": "cites-ii"
         }
       ],
@@ -978,19 +978,19 @@
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Amazilia tzacatl",
-          "slug_especie": "amazilia-tzacatl",
-          "registros": 4,
-          "url_gbif": "https://www.gbif.org/species/2476441",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e782a283c45700544e407e/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
           "label": "Buteo brachyurus",
           "slug_especie": "buteo-brachyurus",
           "registros": 4,
           "url_gbif": "https://www.gbif.org/species/2480553",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56e780b283c45700544e4061/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Herpetotheres cachinnans",
+          "slug_especie": "herpetotheres-cachinnans",
+          "registros": 4,
+          "url_gbif": "https://www.gbif.org/species/2481071",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d997513c16479905cba9a0/summary",
           "slug_tematica": "cites-ii"
         }
       ]
@@ -2363,24 +2363,6 @@
             "genus": "Chalybura"
           },
           {
-            "label": "Amazilia tzacatl",
-            "registros": 4,
-            "slug_especie": "amazilia-tzacatl",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476441",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e782a283c45700544e407e/summary",
-            "species": "Amazilia tzacatl",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Amazilia"
-          },
-          {
             "label": "Buteo brachyurus",
             "registros": 4,
             "slug_especie": "buteo-brachyurus",
@@ -2415,6 +2397,24 @@
             "order": "Falconiformes",
             "family": "Falconidae",
             "genus": "Herpetotheres"
+          },
+          {
+            "label": "Amazilia tzacatl",
+            "registros": 4,
+            "slug_especie": "amazilia-tzacatl",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2476441",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e782a283c45700544e407e/summary",
+            "species": "Amazilia tzacatl",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Amazilia"
           }
         ],
         "migratorias": [
@@ -3335,24 +3335,6 @@
             "genus": "Chalybura"
           },
           {
-            "label": "Amazilia tzacatl",
-            "registros": 4,
-            "slug_especie": "amazilia-tzacatl",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476441",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e782a283c45700544e407e/summary",
-            "species": "Amazilia tzacatl",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Amazilia"
-          },
-          {
             "label": "Buteo brachyurus",
             "registros": 4,
             "slug_especie": "buteo-brachyurus",
@@ -3387,6 +3369,24 @@
             "order": "Falconiformes",
             "family": "Falconidae",
             "genus": "Herpetotheres"
+          },
+          {
+            "label": "Amazilia tzacatl",
+            "registros": 4,
+            "slug_especie": "amazilia-tzacatl",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2476441",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e782a283c45700544e407e/summary",
+            "species": "Amazilia tzacatl",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Amazilia"
           }
         ],
         "migratorias": [
@@ -8064,22 +8064,6 @@
           "genus": "Columbina"
         },
         {
-          "label": "Forpus conspicillatus",
-          "registros": 30,
-          "slug_especie": "forpus-conspicillatus",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2479071",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c76fc3f0106c67230e73ed/summary",
-          "species": "Forpus conspicillatus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Psittaciformes",
-          "family": "Psittacidae",
-          "genus": "Forpus"
-        },
-        {
           "label": "Sicalis flaveola",
           "registros": 30,
           "slug_especie": "sicalis-flaveola",
@@ -8094,6 +8078,22 @@
           "order": "Passeriformes",
           "family": "Thraupidae",
           "genus": "Sicalis"
+        },
+        {
+          "label": "Forpus conspicillatus",
+          "registros": 30,
+          "slug_especie": "forpus-conspicillatus",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2479071",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c76fc3f0106c67230e73ed/summary",
+          "species": "Forpus conspicillatus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Psittaciformes",
+          "family": "Psittacidae",
+          "genus": "Forpus"
         },
         {
           "label": "Melanerpes rubricapillus",
@@ -8312,24 +8312,6 @@
             "genus": "Chalybura"
           },
           {
-            "label": "Amazilia tzacatl",
-            "registros": 4,
-            "slug_especie": "amazilia-tzacatl",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476441",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e782a283c45700544e407e/summary",
-            "species": "Amazilia tzacatl",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Amazilia"
-          },
-          {
             "label": "Buteo brachyurus",
             "registros": 4,
             "slug_especie": "buteo-brachyurus",
@@ -8364,6 +8346,24 @@
             "order": "Falconiformes",
             "family": "Falconidae",
             "genus": "Herpetotheres"
+          },
+          {
+            "label": "Amazilia tzacatl",
+            "registros": 4,
+            "slug_especie": "amazilia-tzacatl",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2476441",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e782a283c45700544e407e/summary",
+            "species": "Amazilia tzacatl",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Amazilia"
           }
         ],
         "migratorias": [

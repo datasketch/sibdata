@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -1130,18 +1130,18 @@
       "parent_registros_cites_iii": 4266,
       "list_especies_cites": [
         {
+          "label": "Metallura williami",
+          "slug_especie": "metallura-williami",
+          "registros": 33,
+          "url_gbif": "https://www.gbif.org/species/2476875",
+          "slug_tematica": "cites-ii"
+        },
+        {
           "label": "Geranoaetus melanoleucus",
           "slug_especie": "geranoaetus-melanoleucus",
           "registros": 33,
           "url_gbif": "https://www.gbif.org/species/2480668",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b4b2f0106c67230e7405/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
-          "label": "Metallura williami",
-          "slug_especie": "metallura-williami",
-          "registros": 33,
-          "url_gbif": "https://www.gbif.org/species/2476875",
           "slug_tematica": "cites-ii"
         },
         {
@@ -1184,6 +1184,14 @@
           "slug_tematica": "cites-ii"
         },
         {
+          "label": "Metallura tyrianthina",
+          "slug_especie": "metallura-tyrianthina",
+          "registros": 11,
+          "url_gbif": "https://www.gbif.org/species/2476860",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b67cf0106c67230e7406/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
           "label": "Chalcostigma herrani",
           "slug_especie": "chalcostigma-herrani",
           "registros": 11,
@@ -1196,14 +1204,6 @@
           "registros": 11,
           "url_gbif": "https://www.gbif.org/species/5228474",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56c4a8dcf0106c67230e7385/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
-          "label": "Metallura tyrianthina",
-          "slug_especie": "metallura-tyrianthina",
-          "registros": 11,
-          "url_gbif": "https://www.gbif.org/species/2476860",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b67cf0106c67230e7406/summary",
           "slug_tematica": "cites-ii"
         }
       ],
@@ -1289,37 +1289,37 @@
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Colibri coruscans",
-          "slug_especie": "colibri-coruscans",
-          "registros": 11,
-          "url_gbif": "https://www.gbif.org/species/5228474",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4a8dcf0106c67230e7385/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
           "label": "Metallura tyrianthina",
           "slug_especie": "metallura-tyrianthina",
           "registros": 11,
           "url_gbif": "https://www.gbif.org/species/2476860",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b67cf0106c67230e7406/summary",
           "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Colibri coruscans",
+          "slug_especie": "colibri-coruscans",
+          "registros": 11,
+          "url_gbif": "https://www.gbif.org/species/5228474",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4a8dcf0106c67230e7385/summary",
+          "slug_tematica": "cites-ii"
         }
       ],
       "list_especies_cites_iii": [],
       "species_list": [
+        {
+          "label": "Metallura williami",
+          "slug_especie": "metallura-williami",
+          "registros": 33,
+          "url_gbif": "https://www.gbif.org/species/2476875",
+          "slug_tematica": "cites-ii"
+        },
         {
           "label": "Geranoaetus melanoleucus",
           "slug_especie": "geranoaetus-melanoleucus",
           "registros": 33,
           "url_gbif": "https://www.gbif.org/species/2480668",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b4b2f0106c67230e7405/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
-          "label": "Metallura williami",
-          "slug_especie": "metallura-williami",
-          "registros": 33,
-          "url_gbif": "https://www.gbif.org/species/2476875",
           "slug_tematica": "cites-ii"
         },
         {
@@ -1362,6 +1362,14 @@
           "slug_tematica": "cites-ii"
         },
         {
+          "label": "Metallura tyrianthina",
+          "slug_especie": "metallura-tyrianthina",
+          "registros": 11,
+          "url_gbif": "https://www.gbif.org/species/2476860",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b67cf0106c67230e7406/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
           "label": "Chalcostigma herrani",
           "slug_especie": "chalcostigma-herrani",
           "registros": 11,
@@ -1374,14 +1382,6 @@
           "registros": 11,
           "url_gbif": "https://www.gbif.org/species/5228474",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56c4a8dcf0106c67230e7385/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
-          "label": "Metallura tyrianthina",
-          "slug_especie": "metallura-tyrianthina",
-          "registros": 11,
-          "url_gbif": "https://www.gbif.org/species/2476860",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b67cf0106c67230e7406/summary",
           "slug_tematica": "cites-ii"
         }
       ]
@@ -1537,14 +1537,6 @@
           "slug_tematica": "migratorias"
         },
         {
-          "label": "Geothlypis philadelphia",
-          "slug_especie": "geothlypis-philadelphia",
-          "registros": 4,
-          "url_gbif": "https://www.gbif.org/species/5789148",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c78943f0106c67230e73f3/summary",
-          "slug_tematica": "migratorias"
-        },
-        {
           "label": "Myiodynastes maculatus",
           "slug_especie": "myiodynastes-maculatus",
           "registros": 4,
@@ -1553,11 +1545,19 @@
           "slug_tematica": "migratorias"
         },
         {
-          "label": "Pandion haliaetus",
-          "slug_especie": "pandion-haliaetus",
+          "label": "Geothlypis philadelphia",
+          "slug_especie": "geothlypis-philadelphia",
+          "registros": 4,
+          "url_gbif": "https://www.gbif.org/species/5789148",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c78943f0106c67230e73f3/summary",
+          "slug_tematica": "migratorias"
+        },
+        {
+          "label": "Setophaga petechia",
+          "slug_especie": "setophaga-petechia",
           "registros": 3,
-          "url_gbif": "https://www.gbif.org/species/2480726",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cc8493207ecea54a561e33/summary",
+          "url_gbif": "https://www.gbif.org/species/7341834",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf1f393c16479905cba7c6/summary",
           "slug_tematica": "migratorias"
         }
       ]
@@ -2608,6 +2608,21 @@
           "genus": "Castilleja"
         },
         {
+          "label": "Senecio niveoaureus",
+          "registros": 2,
+          "slug_especie": "senecio-niveoaureus",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3108482",
+          "species": "Senecio niveoaureus",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Asterales",
+          "family": "Asteraceae",
+          "genus": "Senecio"
+        },
+        {
           "label": "Chusquea acuminatissima",
           "registros": 2,
           "slug_especie": "chusquea-acuminatissima",
@@ -2638,21 +2653,6 @@
           "genus": "Disterigma"
         },
         {
-          "label": "Senecio niveoaureus",
-          "registros": 2,
-          "slug_especie": "senecio-niveoaureus",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3108482",
-          "species": "Senecio niveoaureus",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Asterales",
-          "family": "Asteraceae",
-          "genus": "Senecio"
-        },
-        {
           "label": "Baccharis genistelloides",
           "registros": 1,
           "slug_especie": "baccharis-genistelloides",
@@ -2666,37 +2666,6 @@
           "order": "Asterales",
           "family": "Asteraceae",
           "genus": "Baccharis"
-        },
-        {
-          "label": "Baccharis tricuneata",
-          "registros": 1,
-          "slug_especie": "baccharis-tricuneata",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3129202",
-          "species": "Baccharis tricuneata",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Asterales",
-          "family": "Asteraceae",
-          "genus": "Baccharis"
-        },
-        {
-          "label": "Bejaria aestuans",
-          "registros": 1,
-          "slug_especie": "bejaria-aestuans",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2882720",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c81305f0106c67230e7431/summary",
-          "species": "Bejaria aestuans",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Ericales",
-          "family": "Ericaceae",
-          "genus": "Bejaria"
         },
         {
           "label": "Bellis perennis",
@@ -2806,6 +2775,22 @@
           "genus": "Escallonia"
         },
         {
+          "label": "Bejaria aestuans",
+          "registros": 1,
+          "slug_especie": "bejaria-aestuans",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2882720",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c81305f0106c67230e7431/summary",
+          "species": "Bejaria aestuans",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Ericales",
+          "family": "Ericaceae",
+          "genus": "Bejaria"
+        },
+        {
           "label": "Gentiana sedifolia",
           "registros": 1,
           "slug_especie": "gentiana-sedifolia",
@@ -2911,6 +2896,21 @@
           "order": "Poales",
           "family": "Bromeliaceae",
           "genus": "Puya"
+        },
+        {
+          "label": "Baccharis tricuneata",
+          "registros": 1,
+          "slug_especie": "baccharis-tricuneata",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3129202",
+          "species": "Baccharis tricuneata",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Asterales",
+          "family": "Asteraceae",
+          "genus": "Baccharis"
         },
         {
           "label": "Sessea corymbiflora",
@@ -3946,6 +3946,23 @@
         ],
         "cites": [
           {
+            "label": "Metallura williami",
+            "registros": 33,
+            "slug_especie": "metallura-williami",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2476875",
+            "species": "Metallura williami",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Metallura"
+          },
+          {
             "label": "Geranoaetus melanoleucus",
             "registros": 33,
             "slug_especie": "geranoaetus-melanoleucus",
@@ -3962,23 +3979,6 @@
             "order": "Accipitriformes",
             "family": "Accipitridae",
             "genus": "Geranoaetus"
-          },
-          {
-            "label": "Metallura williami",
-            "registros": 33,
-            "slug_especie": "metallura-williami",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476875",
-            "species": "Metallura williami",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Metallura"
           },
           {
             "label": "Rupornis magnirostris",
@@ -4070,6 +4070,24 @@
             "genus": "Chalybura"
           },
           {
+            "label": "Metallura tyrianthina",
+            "registros": 11,
+            "slug_especie": "metallura-tyrianthina",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2476860",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b67cf0106c67230e7406/summary",
+            "species": "Metallura tyrianthina",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Metallura"
+          },
+          {
             "label": "Chalcostigma herrani",
             "registros": 11,
             "slug_especie": "chalcostigma-herrani",
@@ -4103,24 +4121,6 @@
             "order": "Apodiformes",
             "family": "Trochilidae",
             "genus": "Colibri"
-          },
-          {
-            "label": "Metallura tyrianthina",
-            "registros": 11,
-            "slug_especie": "metallura-tyrianthina",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476860",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b67cf0106c67230e7406/summary",
-            "species": "Metallura tyrianthina",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Metallura"
           }
         ],
         "migratorias": [
@@ -4251,24 +4251,6 @@
             "genus": "Piranga"
           },
           {
-            "label": "Geothlypis philadelphia",
-            "registros": 4,
-            "slug_especie": "geothlypis-philadelphia",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5789148",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c78943f0106c67230e73f3/summary",
-            "species": "Geothlypis philadelphia",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Parulidae",
-            "genus": "Geothlypis"
-          },
-          {
             "label": "Myiodynastes maculatus",
             "registros": 4,
             "slug_especie": "myiodynastes-maculatus",
@@ -4287,22 +4269,22 @@
             "genus": "Myiodynastes"
           },
           {
-            "label": "Pandion haliaetus",
-            "registros": 3,
-            "slug_especie": "pandion-haliaetus",
+            "label": "Geothlypis philadelphia",
+            "registros": 4,
+            "slug_especie": "geothlypis-philadelphia",
             "slug_tematica": "migratorias",
             "tematica_label": "Migratorias",
             "slug_grupo": "animales",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2480726",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56cc8493207ecea54a561e33/summary",
-            "species": "Pandion haliaetus",
+            "url_gbif": "https://www.gbif.org/species/5789148",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c78943f0106c67230e73f3/summary",
+            "species": "Geothlypis philadelphia",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Aves",
-            "order": "Accipitriformes",
-            "family": "Pandionidae",
-            "genus": "Pandion"
+            "order": "Passeriformes",
+            "family": "Parulidae",
+            "genus": "Geothlypis"
           },
           {
             "label": "Setophaga petechia",
@@ -4321,6 +4303,24 @@
             "order": "Passeriformes",
             "family": "Parulidae",
             "genus": "Setophaga"
+          },
+          {
+            "label": "Pandion haliaetus",
+            "registros": 3,
+            "slug_especie": "pandion-haliaetus",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2480726",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cc8493207ecea54a561e33/summary",
+            "species": "Pandion haliaetus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Accipitriformes",
+            "family": "Pandionidae",
+            "genus": "Pandion"
           }
         ],
         "endemicas": [
@@ -5313,6 +5313,23 @@
         ],
         "cites": [
           {
+            "label": "Metallura williami",
+            "registros": 33,
+            "slug_especie": "metallura-williami",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2476875",
+            "species": "Metallura williami",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Metallura"
+          },
+          {
             "label": "Geranoaetus melanoleucus",
             "registros": 33,
             "slug_especie": "geranoaetus-melanoleucus",
@@ -5329,23 +5346,6 @@
             "order": "Accipitriformes",
             "family": "Accipitridae",
             "genus": "Geranoaetus"
-          },
-          {
-            "label": "Metallura williami",
-            "registros": 33,
-            "slug_especie": "metallura-williami",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476875",
-            "species": "Metallura williami",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Metallura"
           },
           {
             "label": "Rupornis magnirostris",
@@ -5437,6 +5437,24 @@
             "genus": "Chalybura"
           },
           {
+            "label": "Metallura tyrianthina",
+            "registros": 11,
+            "slug_especie": "metallura-tyrianthina",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2476860",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b67cf0106c67230e7406/summary",
+            "species": "Metallura tyrianthina",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Metallura"
+          },
+          {
             "label": "Chalcostigma herrani",
             "registros": 11,
             "slug_especie": "chalcostigma-herrani",
@@ -5470,24 +5488,6 @@
             "order": "Apodiformes",
             "family": "Trochilidae",
             "genus": "Colibri"
-          },
-          {
-            "label": "Metallura tyrianthina",
-            "registros": 11,
-            "slug_especie": "metallura-tyrianthina",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476860",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b67cf0106c67230e7406/summary",
-            "species": "Metallura tyrianthina",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Metallura"
           }
         ],
         "migratorias": [
@@ -5618,24 +5618,6 @@
             "genus": "Piranga"
           },
           {
-            "label": "Geothlypis philadelphia",
-            "registros": 4,
-            "slug_especie": "geothlypis-philadelphia",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5789148",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c78943f0106c67230e73f3/summary",
-            "species": "Geothlypis philadelphia",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Parulidae",
-            "genus": "Geothlypis"
-          },
-          {
             "label": "Myiodynastes maculatus",
             "registros": 4,
             "slug_especie": "myiodynastes-maculatus",
@@ -5654,22 +5636,22 @@
             "genus": "Myiodynastes"
           },
           {
-            "label": "Pandion haliaetus",
-            "registros": 3,
-            "slug_especie": "pandion-haliaetus",
+            "label": "Geothlypis philadelphia",
+            "registros": 4,
+            "slug_especie": "geothlypis-philadelphia",
             "slug_tematica": "migratorias",
             "tematica_label": "Migratorias",
             "slug_grupo": "aves",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2480726",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56cc8493207ecea54a561e33/summary",
-            "species": "Pandion haliaetus",
+            "url_gbif": "https://www.gbif.org/species/5789148",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c78943f0106c67230e73f3/summary",
+            "species": "Geothlypis philadelphia",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Aves",
-            "order": "Accipitriformes",
-            "family": "Pandionidae",
-            "genus": "Pandion"
+            "order": "Passeriformes",
+            "family": "Parulidae",
+            "genus": "Geothlypis"
           },
           {
             "label": "Setophaga petechia",
@@ -5688,6 +5670,24 @@
             "order": "Passeriformes",
             "family": "Parulidae",
             "genus": "Setophaga"
+          },
+          {
+            "label": "Pandion haliaetus",
+            "registros": 3,
+            "slug_especie": "pandion-haliaetus",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2480726",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cc8493207ecea54a561e33/summary",
+            "species": "Pandion haliaetus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Accipitriformes",
+            "family": "Pandionidae",
+            "genus": "Pandion"
           }
         ],
         "endemicas": [
@@ -8875,21 +8875,6 @@
           "genus": "Leptophobia"
         },
         {
-          "label": "Eurema xantochlora",
-          "registros": 7,
-          "slug_especie": "eurema-xantochlora",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5137852",
-          "species": "Eurema xantochlora",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Pieridae",
-          "genus": "Eurema"
-        },
-        {
           "label": "Lasiophila zapatoza",
           "registros": 7,
           "slug_especie": "lasiophila-zapatoza",
@@ -8918,6 +8903,21 @@
           "order": "Lepidoptera",
           "family": "Pieridae",
           "genus": "Pyrisitia"
+        },
+        {
+          "label": "Eurema xantochlora",
+          "registros": 7,
+          "slug_especie": "eurema-xantochlora",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5137852",
+          "species": "Eurema xantochlora",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Pieridae",
+          "genus": "Eurema"
         },
         {
           "label": "Eurema phiale",
@@ -8996,6 +8996,21 @@
           "genus": "Heliconius"
         },
         {
+          "label": "Urbanus proteus",
+          "registros": 3,
+          "slug_especie": "urbanus-proteus",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1944314",
+          "species": "Urbanus proteus",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Hesperiidae",
+          "genus": "Urbanus"
+        },
+        {
           "label": "Ascia monuste",
           "registros": 3,
           "slug_especie": "ascia-monuste",
@@ -9041,21 +9056,6 @@
           "genus": "Chlosyne"
         },
         {
-          "label": "Euptychoides saturnus",
-          "registros": 3,
-          "slug_especie": "euptychoides-saturnus",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1903634",
-          "species": "Euptychoides saturnus",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Euptychoides"
-        },
-        {
           "label": "Oleria makrena",
           "registros": 3,
           "slug_especie": "oleria-makrena",
@@ -9071,19 +9071,19 @@
           "genus": "Oleria"
         },
         {
-          "label": "Urbanus proteus",
+          "label": "Euptychoides saturnus",
           "registros": 3,
-          "slug_especie": "urbanus-proteus",
+          "slug_especie": "euptychoides-saturnus",
           "slug_grupo": "insectos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1944314",
-          "species": "Urbanus proteus",
+          "url_gbif": "https://www.gbif.org/species/1903634",
+          "species": "Euptychoides saturnus",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Lepidoptera",
-          "family": "Hesperiidae",
-          "genus": "Urbanus"
+          "family": "Nymphalidae",
+          "genus": "Euptychoides"
         }
       ],
       "species_list_tematica": {
@@ -9400,21 +9400,6 @@
           "genus": "Leptophobia"
         },
         {
-          "label": "Eurema xantochlora",
-          "registros": 7,
-          "slug_especie": "eurema-xantochlora",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5137852",
-          "species": "Eurema xantochlora",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Pieridae",
-          "genus": "Eurema"
-        },
-        {
           "label": "Lasiophila zapatoza",
           "registros": 7,
           "slug_especie": "lasiophila-zapatoza",
@@ -9445,13 +9430,13 @@
           "genus": "Pyrisitia"
         },
         {
-          "label": "Eurema phiale",
-          "registros": 6,
-          "slug_especie": "eurema-phiale",
+          "label": "Eurema xantochlora",
+          "registros": 7,
+          "slug_especie": "eurema-xantochlora",
           "slug_grupo": "invertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5137848",
-          "species": "Eurema phiale",
+          "url_gbif": "https://www.gbif.org/species/5137852",
+          "species": "Eurema xantochlora",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
@@ -9460,14 +9445,13 @@
           "genus": "Eurema"
         },
         {
-          "label": "Eurema daira",
-          "registros": 5,
-          "slug_especie": "eurema-daira",
+          "label": "Eurema phiale",
+          "registros": 6,
+          "slug_especie": "eurema-phiale",
           "slug_grupo": "invertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5137819",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7631483c45700544e3fc4/summary",
-          "species": "Eurema daira",
+          "url_gbif": "https://www.gbif.org/species/5137848",
+          "species": "Eurema phiale",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
@@ -9491,6 +9475,22 @@
           "genus": "Tegosa"
         },
         {
+          "label": "Eurema daira",
+          "registros": 5,
+          "slug_especie": "eurema-daira",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5137819",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7631483c45700544e3fc4/summary",
+          "species": "Eurema daira",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Pieridae",
+          "genus": "Eurema"
+        },
+        {
           "label": "Bombus funebris",
           "registros": 4,
           "slug_especie": "bombus-funebris",
@@ -9504,21 +9504,6 @@
           "order": "Hymenoptera",
           "family": "Apidae",
           "genus": "Bombus"
-        },
-        {
-          "label": "Heliconius clysonymus",
-          "registros": 4,
-          "slug_especie": "heliconius-clysonymus",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1900825",
-          "species": "Heliconius clysonymus",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Heliconius"
         },
         {
           "label": "Hypolobocera bouvieri",
@@ -9549,6 +9534,21 @@
           "order": "Decapoda",
           "family": "Pseudothelphusidae",
           "genus": "Strengeriana"
+        },
+        {
+          "label": "Heliconius clysonymus",
+          "registros": 4,
+          "slug_especie": "heliconius-clysonymus",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1900825",
+          "species": "Heliconius clysonymus",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Heliconius"
         }
       ],
       "species_list_tematica": {
@@ -10176,21 +10176,6 @@
           "genus": "Leptophobia"
         },
         {
-          "label": "Eurema xantochlora",
-          "registros": 7,
-          "slug_especie": "eurema-xantochlora",
-          "slug_grupo": "mariposas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5137852",
-          "species": "Eurema xantochlora",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Pieridae",
-          "genus": "Eurema"
-        },
-        {
           "label": "Lasiophila zapatoza",
           "registros": 7,
           "slug_especie": "lasiophila-zapatoza",
@@ -10221,13 +10206,13 @@
           "genus": "Pyrisitia"
         },
         {
-          "label": "Eurema phiale",
-          "registros": 6,
-          "slug_especie": "eurema-phiale",
+          "label": "Eurema xantochlora",
+          "registros": 7,
+          "slug_especie": "eurema-xantochlora",
           "slug_grupo": "mariposas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5137848",
-          "species": "Eurema phiale",
+          "url_gbif": "https://www.gbif.org/species/5137852",
+          "species": "Eurema xantochlora",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
@@ -10236,14 +10221,13 @@
           "genus": "Eurema"
         },
         {
-          "label": "Eurema daira",
-          "registros": 5,
-          "slug_especie": "eurema-daira",
+          "label": "Eurema phiale",
+          "registros": 6,
+          "slug_especie": "eurema-phiale",
           "slug_grupo": "mariposas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5137819",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7631483c45700544e3fc4/summary",
-          "species": "Eurema daira",
+          "url_gbif": "https://www.gbif.org/species/5137848",
+          "species": "Eurema phiale",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
@@ -10267,6 +10251,22 @@
           "genus": "Tegosa"
         },
         {
+          "label": "Eurema daira",
+          "registros": 5,
+          "slug_especie": "eurema-daira",
+          "slug_grupo": "mariposas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5137819",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7631483c45700544e3fc4/summary",
+          "species": "Eurema daira",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Pieridae",
+          "genus": "Eurema"
+        },
+        {
           "label": "Heliconius clysonymus",
           "registros": 4,
           "slug_especie": "heliconius-clysonymus",
@@ -10280,6 +10280,21 @@
           "order": "Lepidoptera",
           "family": "Nymphalidae",
           "genus": "Heliconius"
+        },
+        {
+          "label": "Urbanus proteus",
+          "registros": 3,
+          "slug_especie": "urbanus-proteus",
+          "slug_grupo": "mariposas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1944314",
+          "species": "Urbanus proteus",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Hesperiidae",
+          "genus": "Urbanus"
         },
         {
           "label": "Ascia monuste",
@@ -10312,21 +10327,6 @@
           "genus": "Chlosyne"
         },
         {
-          "label": "Euptychoides saturnus",
-          "registros": 3,
-          "slug_especie": "euptychoides-saturnus",
-          "slug_grupo": "mariposas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1903634",
-          "species": "Euptychoides saturnus",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Euptychoides"
-        },
-        {
           "label": "Oleria makrena",
           "registros": 3,
           "slug_especie": "oleria-makrena",
@@ -10342,19 +10342,19 @@
           "genus": "Oleria"
         },
         {
-          "label": "Urbanus proteus",
+          "label": "Euptychoides saturnus",
           "registros": 3,
-          "slug_especie": "urbanus-proteus",
+          "slug_especie": "euptychoides-saturnus",
           "slug_grupo": "mariposas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1944314",
-          "species": "Urbanus proteus",
+          "url_gbif": "https://www.gbif.org/species/1903634",
+          "species": "Euptychoides saturnus",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Lepidoptera",
-          "family": "Hesperiidae",
-          "genus": "Urbanus"
+          "family": "Nymphalidae",
+          "genus": "Euptychoides"
         }
       ],
       "species_list_tematica": {
@@ -12250,21 +12250,6 @@
       ],
       "species_list_top": [
         {
-          "label": "Chorisodontium speciosum",
-          "registros": 8,
-          "slug_especie": "chorisodontium-speciosum",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2675407",
-          "species": "Chorisodontium speciosum",
-          "kingdom": "Plantae",
-          "phylum": "Bryophyta",
-          "class": "Bryopsida",
-          "order": "Dicranales",
-          "family": "Dicranaceae",
-          "genus": "Chorisodontium"
-        },
-        {
           "label": "Polytrichum juniperinum",
           "registros": 8,
           "slug_especie": "polytrichum-juniperinum",
@@ -12280,19 +12265,19 @@
           "genus": "Polytrichum"
         },
         {
-          "label": "Dicranella campylophylla",
-          "registros": 7,
-          "slug_especie": "dicranella-campylophylla",
+          "label": "Chorisodontium speciosum",
+          "registros": 8,
+          "slug_especie": "chorisodontium-speciosum",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/8139760",
-          "species": "Dicranella campylophylla",
+          "url_gbif": "https://www.gbif.org/species/2675407",
+          "species": "Chorisodontium speciosum",
           "kingdom": "Plantae",
           "phylum": "Bryophyta",
           "class": "Bryopsida",
           "order": "Dicranales",
-          "family": "Dicranellaceae",
-          "genus": "Dicranella"
+          "family": "Dicranaceae",
+          "genus": "Chorisodontium"
         },
         {
           "label": "Leptodontium wallisii",
@@ -12308,6 +12293,21 @@
           "order": "Pottiales",
           "family": "Pottiaceae",
           "genus": "Leptodontium"
+        },
+        {
+          "label": "Dicranella campylophylla",
+          "registros": 7,
+          "slug_especie": "dicranella-campylophylla",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/8139760",
+          "species": "Dicranella campylophylla",
+          "kingdom": "Plantae",
+          "phylum": "Bryophyta",
+          "class": "Bryopsida",
+          "order": "Dicranales",
+          "family": "Dicranellaceae",
+          "genus": "Dicranella"
         },
         {
           "label": "Bucklandiella crispipila",
@@ -12340,6 +12340,21 @@
           "genus": "Cratoneuron"
         },
         {
+          "label": "Pilopogon guadalupensis",
+          "registros": 5,
+          "slug_especie": "pilopogon-guadalupensis",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2675529",
+          "species": "Pilopogon guadalupensis",
+          "kingdom": "Plantae",
+          "phylum": "Bryophyta",
+          "class": "Bryopsida",
+          "order": "Dicranales",
+          "family": "Leucobryaceae",
+          "genus": "Pilopogon"
+        },
+        {
           "label": "Bucklandiella subsecunda",
           "registros": 5,
           "slug_especie": "bucklandiella-subsecunda",
@@ -12370,21 +12385,6 @@
           "genus": "Distichium"
         },
         {
-          "label": "Pilopogon guadalupensis",
-          "registros": 5,
-          "slug_especie": "pilopogon-guadalupensis",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2675529",
-          "species": "Pilopogon guadalupensis",
-          "kingdom": "Plantae",
-          "phylum": "Bryophyta",
-          "class": "Bryopsida",
-          "order": "Dicranales",
-          "family": "Leucobryaceae",
-          "genus": "Pilopogon"
-        },
-        {
           "label": "Andreaea rupestris",
           "registros": 4,
           "slug_especie": "andreaea-rupestris",
@@ -12398,21 +12398,6 @@
           "order": "Andreaeales",
           "family": "Andreaeaceae",
           "genus": "Andreaea"
-        },
-        {
-          "label": "Campyloneurum solutum",
-          "registros": 4,
-          "slug_especie": "campyloneurum-solutum",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4023984",
-          "species": "Campyloneurum solutum",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Polypodiopsida",
-          "order": "Polypodiales",
-          "family": "Polypodiaceae",
-          "genus": "Campyloneurum"
         },
         {
           "label": "Espeletia hartwegiana",
@@ -12431,6 +12416,21 @@
           "genus": "Espeletia"
         },
         {
+          "label": "Sarmentypnum exannulatum",
+          "registros": 4,
+          "slug_especie": "sarmentypnum-exannulatum",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7749266",
+          "species": "Sarmentypnum exannulatum",
+          "kingdom": "Plantae",
+          "phylum": "Bryophyta",
+          "class": "Bryopsida",
+          "order": "Hypnales",
+          "family": "Calliergonaceae",
+          "genus": "Sarmentypnum"
+        },
+        {
           "label": "Rhacocarpus purpurascens",
           "registros": 4,
           "slug_especie": "rhacocarpus-purpurascens",
@@ -12446,19 +12446,19 @@
           "genus": "Rhacocarpus"
         },
         {
-          "label": "Sarmentypnum exannulatum",
+          "label": "Campyloneurum solutum",
           "registros": 4,
-          "slug_especie": "sarmentypnum-exannulatum",
+          "slug_especie": "campyloneurum-solutum",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7749266",
-          "species": "Sarmentypnum exannulatum",
+          "url_gbif": "https://www.gbif.org/species/4023984",
+          "species": "Campyloneurum solutum",
           "kingdom": "Plantae",
-          "phylum": "Bryophyta",
-          "class": "Bryopsida",
-          "order": "Hypnales",
-          "family": "Calliergonaceae",
-          "genus": "Sarmentypnum"
+          "phylum": "Tracheophyta",
+          "class": "Polypodiopsida",
+          "order": "Polypodiales",
+          "family": "Polypodiaceae",
+          "genus": "Campyloneurum"
         }
       ],
       "species_list_tematica": {
@@ -13227,21 +13227,6 @@
       "subgrupo_especies": [],
       "species_list_top": [
         {
-          "label": "Campyloneurum solutum",
-          "registros": 4,
-          "slug_especie": "campyloneurum-solutum",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4023984",
-          "species": "Campyloneurum solutum",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Polypodiopsida",
-          "order": "Polypodiales",
-          "family": "Polypodiaceae",
-          "genus": "Campyloneurum"
-        },
-        {
           "label": "Espeletia hartwegiana",
           "registros": 4,
           "slug_especie": "espeletia-hartwegiana",
@@ -13256,6 +13241,21 @@
           "order": "Asterales",
           "family": "Asteraceae",
           "genus": "Espeletia"
+        },
+        {
+          "label": "Campyloneurum solutum",
+          "registros": 4,
+          "slug_especie": "campyloneurum-solutum",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/4023984",
+          "species": "Campyloneurum solutum",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Polypodiopsida",
+          "order": "Polypodiales",
+          "family": "Polypodiaceae",
+          "genus": "Campyloneurum"
         },
         {
           "label": "Elaphoglossum mathewsii",
@@ -13286,6 +13286,36 @@
           "order": "Polypodiales",
           "family": "Polypodiaceae",
           "genus": "Melpomene"
+        },
+        {
+          "label": "Senecio niveoaureus",
+          "registros": 2,
+          "slug_especie": "senecio-niveoaureus",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3108482",
+          "species": "Senecio niveoaureus",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Asterales",
+          "family": "Asteraceae",
+          "genus": "Senecio"
+        },
+        {
+          "label": "Phlegmariurus crassus",
+          "registros": 2,
+          "slug_especie": "phlegmariurus-crassus",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/8314351",
+          "species": "Phlegmariurus crassus",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Lycopodiopsida",
+          "order": "Lycopodiales",
+          "family": "Lycopodiaceae",
+          "genus": "Phlegmariurus"
         },
         {
           "label": "Castilleja fissifolia",
@@ -13334,36 +13364,6 @@
           "genus": "Disterigma"
         },
         {
-          "label": "Phlegmariurus crassus",
-          "registros": 2,
-          "slug_especie": "phlegmariurus-crassus",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/8314351",
-          "species": "Phlegmariurus crassus",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Lycopodiopsida",
-          "order": "Lycopodiales",
-          "family": "Lycopodiaceae",
-          "genus": "Phlegmariurus"
-        },
-        {
-          "label": "Senecio niveoaureus",
-          "registros": 2,
-          "slug_especie": "senecio-niveoaureus",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3108482",
-          "species": "Senecio niveoaureus",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Asterales",
-          "family": "Asteraceae",
-          "genus": "Senecio"
-        },
-        {
           "label": "Baccharis genistelloides",
           "registros": 1,
           "slug_especie": "baccharis-genistelloides",
@@ -13379,80 +13379,20 @@
           "genus": "Baccharis"
         },
         {
-          "label": "Baccharis tricuneata",
+          "label": "Valeriana pilosa",
           "registros": 1,
-          "slug_especie": "baccharis-tricuneata",
+          "slug_especie": "valeriana-pilosa",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3129202",
-          "species": "Baccharis tricuneata",
+          "url_gbif": "https://www.gbif.org/species/4095768",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e0bb4383c45700544e3ce9/summary",
+          "species": "Valeriana pilosa",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Asterales",
-          "family": "Asteraceae",
-          "genus": "Baccharis"
-        },
-        {
-          "label": "Bejaria aestuans",
-          "registros": 1,
-          "slug_especie": "bejaria-aestuans",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2882720",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c81305f0106c67230e7431/summary",
-          "species": "Bejaria aestuans",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Ericales",
-          "family": "Ericaceae",
-          "genus": "Bejaria"
-        },
-        {
-          "label": "Bellis perennis",
-          "registros": 1,
-          "slug_especie": "bellis-perennis",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3117424",
-          "species": "Bellis perennis",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Asterales",
-          "family": "Asteraceae",
-          "genus": "Bellis"
-        },
-        {
-          "label": "Calatola costaricensis",
-          "registros": 1,
-          "slug_especie": "calatola-costaricensis",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3597030",
-          "species": "Calatola costaricensis",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Metteniusales",
-          "family": "Metteniusaceae",
-          "genus": "Calatola"
-        },
-        {
-          "label": "Drymonia serrulata",
-          "registros": 1,
-          "slug_especie": "drymonia-serrulata",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5590493",
-          "species": "Drymonia serrulata",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Lamiales",
-          "family": "Gesneriaceae",
-          "genus": "Drymonia"
+          "order": "Dipsacales",
+          "family": "Caprifoliaceae",
+          "genus": "Valeriana"
         },
         {
           "label": "Epidendrum scharfii",
@@ -13517,6 +13457,22 @@
           "genus": "Escallonia"
         },
         {
+          "label": "Bejaria aestuans",
+          "registros": 1,
+          "slug_especie": "bejaria-aestuans",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2882720",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c81305f0106c67230e7431/summary",
+          "species": "Bejaria aestuans",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Ericales",
+          "family": "Ericaceae",
+          "genus": "Bejaria"
+        },
+        {
           "label": "Gentiana sedifolia",
           "registros": 1,
           "slug_especie": "gentiana-sedifolia",
@@ -13562,6 +13518,21 @@
           "genus": "Inga"
         },
         {
+          "label": "Calatola costaricensis",
+          "registros": 1,
+          "slug_especie": "calatola-costaricensis",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3597030",
+          "species": "Calatola costaricensis",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Metteniusales",
+          "family": "Metteniusaceae",
+          "genus": "Calatola"
+        },
+        {
           "label": "Monticalia vernicosa",
           "registros": 1,
           "slug_especie": "monticalia-vernicosa",
@@ -13590,6 +13561,21 @@
           "order": "Caryophyllales",
           "family": "Polygonaceae",
           "genus": "Muehlenbeckia"
+        },
+        {
+          "label": "Bellis perennis",
+          "registros": 1,
+          "slug_especie": "bellis-perennis",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3117424",
+          "species": "Bellis perennis",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Asterales",
+          "family": "Asteraceae",
+          "genus": "Bellis"
         },
         {
           "label": "Plantago rigida",
@@ -13652,6 +13638,21 @@
           "order": "Poales",
           "family": "Bromeliaceae",
           "genus": "Puya"
+        },
+        {
+          "label": "Baccharis tricuneata",
+          "registros": 1,
+          "slug_especie": "baccharis-tricuneata",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3129202",
+          "species": "Baccharis tricuneata",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Asterales",
+          "family": "Asteraceae",
+          "genus": "Baccharis"
         },
         {
           "label": "Sessea corymbiflora",
@@ -13731,20 +13732,19 @@
           "genus": "Trifolium"
         },
         {
-          "label": "Valeriana pilosa",
+          "label": "Drymonia serrulata",
           "registros": 1,
-          "slug_especie": "valeriana-pilosa",
+          "slug_especie": "drymonia-serrulata",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4095768",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e0bb4383c45700544e3ce9/summary",
-          "species": "Valeriana pilosa",
+          "url_gbif": "https://www.gbif.org/species/5590493",
+          "species": "Drymonia serrulata",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Dipsacales",
-          "family": "Caprifoliaceae",
-          "genus": "Valeriana"
+          "order": "Lamiales",
+          "family": "Gesneriaceae",
+          "genus": "Drymonia"
         }
       ],
       "species_list_tematica": {
@@ -14685,6 +14685,23 @@
         ],
         "cites": [
           {
+            "label": "Metallura williami",
+            "registros": 33,
+            "slug_especie": "metallura-williami",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2476875",
+            "species": "Metallura williami",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Metallura"
+          },
+          {
             "label": "Geranoaetus melanoleucus",
             "registros": 33,
             "slug_especie": "geranoaetus-melanoleucus",
@@ -14701,23 +14718,6 @@
             "order": "Accipitriformes",
             "family": "Accipitridae",
             "genus": "Geranoaetus"
-          },
-          {
-            "label": "Metallura williami",
-            "registros": 33,
-            "slug_especie": "metallura-williami",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476875",
-            "species": "Metallura williami",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Metallura"
           },
           {
             "label": "Rupornis magnirostris",
@@ -14809,6 +14809,24 @@
             "genus": "Chalybura"
           },
           {
+            "label": "Metallura tyrianthina",
+            "registros": 11,
+            "slug_especie": "metallura-tyrianthina",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2476860",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b67cf0106c67230e7406/summary",
+            "species": "Metallura tyrianthina",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Metallura"
+          },
+          {
             "label": "Chalcostigma herrani",
             "registros": 11,
             "slug_especie": "chalcostigma-herrani",
@@ -14842,24 +14860,6 @@
             "order": "Apodiformes",
             "family": "Trochilidae",
             "genus": "Colibri"
-          },
-          {
-            "label": "Metallura tyrianthina",
-            "registros": 11,
-            "slug_especie": "metallura-tyrianthina",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476860",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b67cf0106c67230e7406/summary",
-            "species": "Metallura tyrianthina",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Metallura"
           }
         ],
         "migratorias": [
@@ -14990,24 +14990,6 @@
             "genus": "Piranga"
           },
           {
-            "label": "Geothlypis philadelphia",
-            "registros": 4,
-            "slug_especie": "geothlypis-philadelphia",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5789148",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c78943f0106c67230e73f3/summary",
-            "species": "Geothlypis philadelphia",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Parulidae",
-            "genus": "Geothlypis"
-          },
-          {
             "label": "Myiodynastes maculatus",
             "registros": 4,
             "slug_especie": "myiodynastes-maculatus",
@@ -15026,22 +15008,22 @@
             "genus": "Myiodynastes"
           },
           {
-            "label": "Pandion haliaetus",
-            "registros": 3,
-            "slug_especie": "pandion-haliaetus",
+            "label": "Geothlypis philadelphia",
+            "registros": 4,
+            "slug_especie": "geothlypis-philadelphia",
             "slug_tematica": "migratorias",
             "tematica_label": "Migratorias",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2480726",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56cc8493207ecea54a561e33/summary",
-            "species": "Pandion haliaetus",
+            "url_gbif": "https://www.gbif.org/species/5789148",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c78943f0106c67230e73f3/summary",
+            "species": "Geothlypis philadelphia",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Aves",
-            "order": "Accipitriformes",
-            "family": "Pandionidae",
-            "genus": "Pandion"
+            "order": "Passeriformes",
+            "family": "Parulidae",
+            "genus": "Geothlypis"
           },
           {
             "label": "Setophaga petechia",
@@ -15060,6 +15042,24 @@
             "order": "Passeriformes",
             "family": "Parulidae",
             "genus": "Setophaga"
+          },
+          {
+            "label": "Pandion haliaetus",
+            "registros": 3,
+            "slug_especie": "pandion-haliaetus",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2480726",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cc8493207ecea54a561e33/summary",
+            "species": "Pandion haliaetus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Accipitriformes",
+            "family": "Pandionidae",
+            "genus": "Pandion"
           }
         ],
         "endemicas": [

@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -2587,22 +2587,6 @@
       ],
       "species_list_top": [
         {
-          "label": "Zenaida auriculata",
-          "registros": 25,
-          "slug_especie": "zenaida-auriculata",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2495358",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56d05fd03c16479905cba81c/summary",
-          "species": "Zenaida auriculata",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Columbiformes",
-          "family": "Columbidae",
-          "genus": "Zenaida"
-        },
-        {
           "label": "Zonotrichia capensis",
           "registros": 25,
           "slug_especie": "zonotrichia-capensis",
@@ -2617,6 +2601,22 @@
           "order": "Passeriformes",
           "family": "Passerellidae",
           "genus": "Zonotrichia"
+        },
+        {
+          "label": "Zenaida auriculata",
+          "registros": 25,
+          "slug_especie": "zenaida-auriculata",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2495358",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d05fd03c16479905cba81c/summary",
+          "species": "Zenaida auriculata",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Columbiformes",
+          "family": "Columbidae",
+          "genus": "Zenaida"
         },
         {
           "label": "Tyrannus melancholicus",
@@ -2651,20 +2651,20 @@
           "genus": "Bubulcus"
         },
         {
-          "label": "Sturnella magna",
+          "label": "Turdus fuscater",
           "registros": 20,
-          "slug_especie": "sturnella-magna",
+          "slug_especie": "turdus-fuscater",
           "slug_grupo": "animales",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2484254",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf49d43c16479905cba7d6/summary",
-          "species": "Sturnella magna",
+          "url_gbif": "https://www.gbif.org/species/2490717",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf9b573c16479905cba7f3/summary",
+          "species": "Turdus fuscater",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Icteridae",
-          "genus": "Sturnella"
+          "family": "Turdidae",
+          "genus": "Turdus"
         },
         {
           "label": "Synallaxis subpudica",
@@ -2683,20 +2683,20 @@
           "genus": "Synallaxis"
         },
         {
-          "label": "Turdus fuscater",
+          "label": "Sturnella magna",
           "registros": 20,
-          "slug_especie": "turdus-fuscater",
+          "slug_especie": "sturnella-magna",
           "slug_grupo": "animales",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2490717",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf9b573c16479905cba7f3/summary",
-          "species": "Turdus fuscater",
+          "url_gbif": "https://www.gbif.org/species/2484254",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf49d43c16479905cba7d6/summary",
+          "species": "Sturnella magna",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Turdidae",
-          "genus": "Turdus"
+          "family": "Icteridae",
+          "genus": "Sturnella"
         },
         {
           "label": "Troglodytes aedon",
@@ -2731,20 +2731,20 @@
           "genus": "Crotophaga"
         },
         {
-          "label": "Cathartes aura",
+          "label": "Mecocerculus leucophrys",
           "registros": 14,
-          "slug_especie": "cathartes-aura",
+          "slug_especie": "mecocerculus-leucophrys",
           "slug_grupo": "animales",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2481930",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c28bd8f0106c67230e7333/summary",
-          "species": "Cathartes aura",
+          "url_gbif": "https://www.gbif.org/species/2483822",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7c0cdf0106c67230e7415/summary",
+          "species": "Mecocerculus leucophrys",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": "Accipitriformes",
-          "family": "Cathartidae",
-          "genus": "Cathartes"
+          "order": "Passeriformes",
+          "family": "Tyrannidae",
+          "genus": "Mecocerculus"
         },
         {
           "label": "Icterus chrysater",
@@ -2763,20 +2763,20 @@
           "genus": "Icterus"
         },
         {
-          "label": "Mecocerculus leucophrys",
+          "label": "Cathartes aura",
           "registros": 14,
-          "slug_especie": "mecocerculus-leucophrys",
+          "slug_especie": "cathartes-aura",
           "slug_grupo": "animales",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2483822",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7c0cdf0106c67230e7415/summary",
-          "species": "Mecocerculus leucophrys",
+          "url_gbif": "https://www.gbif.org/species/2481930",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c28bd8f0106c67230e7333/summary",
+          "species": "Cathartes aura",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Tyrannidae",
-          "genus": "Mecocerculus"
+          "order": "Accipitriformes",
+          "family": "Cathartidae",
+          "genus": "Cathartes"
         }
       ],
       "species_list_tematica": {
@@ -4202,20 +4202,20 @@
           "genus": "Bubulcus"
         },
         {
-          "label": "Sturnella magna",
+          "label": "Turdus fuscater",
           "registros": 20,
-          "slug_especie": "sturnella-magna",
+          "slug_especie": "turdus-fuscater",
           "slug_grupo": "aves",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2484254",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf49d43c16479905cba7d6/summary",
-          "species": "Sturnella magna",
+          "url_gbif": "https://www.gbif.org/species/2490717",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf9b573c16479905cba7f3/summary",
+          "species": "Turdus fuscater",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Icteridae",
-          "genus": "Sturnella"
+          "family": "Turdidae",
+          "genus": "Turdus"
         },
         {
           "label": "Synallaxis subpudica",
@@ -4234,20 +4234,20 @@
           "genus": "Synallaxis"
         },
         {
-          "label": "Turdus fuscater",
+          "label": "Sturnella magna",
           "registros": 20,
-          "slug_especie": "turdus-fuscater",
+          "slug_especie": "sturnella-magna",
           "slug_grupo": "aves",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2490717",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf9b573c16479905cba7f3/summary",
-          "species": "Turdus fuscater",
+          "url_gbif": "https://www.gbif.org/species/2484254",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf49d43c16479905cba7d6/summary",
+          "species": "Sturnella magna",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Turdidae",
-          "genus": "Turdus"
+          "family": "Icteridae",
+          "genus": "Sturnella"
         },
         {
           "label": "Troglodytes aedon",
@@ -9689,20 +9689,20 @@
           "genus": "Bubulcus"
         },
         {
-          "label": "Sturnella magna",
+          "label": "Turdus fuscater",
           "registros": 20,
-          "slug_especie": "sturnella-magna",
+          "slug_especie": "turdus-fuscater",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2484254",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf49d43c16479905cba7d6/summary",
-          "species": "Sturnella magna",
+          "url_gbif": "https://www.gbif.org/species/2490717",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf9b573c16479905cba7f3/summary",
+          "species": "Turdus fuscater",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Icteridae",
-          "genus": "Sturnella"
+          "family": "Turdidae",
+          "genus": "Turdus"
         },
         {
           "label": "Synallaxis subpudica",
@@ -9721,20 +9721,20 @@
           "genus": "Synallaxis"
         },
         {
-          "label": "Turdus fuscater",
+          "label": "Sturnella magna",
           "registros": 20,
-          "slug_especie": "turdus-fuscater",
+          "slug_especie": "sturnella-magna",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2490717",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf9b573c16479905cba7f3/summary",
-          "species": "Turdus fuscater",
+          "url_gbif": "https://www.gbif.org/species/2484254",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf49d43c16479905cba7d6/summary",
+          "species": "Sturnella magna",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Turdidae",
-          "genus": "Turdus"
+          "family": "Icteridae",
+          "genus": "Sturnella"
         },
         {
           "label": "Troglodytes aedon",
@@ -9785,22 +9785,6 @@
           "genus": "Cathartes"
         },
         {
-          "label": "Icterus chrysater",
-          "registros": 14,
-          "slug_especie": "icterus-chrysater",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5229924",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9f6e2f0106c67230e744f/summary",
-          "species": "Icterus chrysater",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Icteridae",
-          "genus": "Icterus"
-        },
-        {
           "label": "Mecocerculus leucophrys",
           "registros": 14,
           "slug_especie": "mecocerculus-leucophrys",
@@ -9815,6 +9799,22 @@
           "order": "Passeriformes",
           "family": "Tyrannidae",
           "genus": "Mecocerculus"
+        },
+        {
+          "label": "Icterus chrysater",
+          "registros": 14,
+          "slug_especie": "icterus-chrysater",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5229924",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9f6e2f0106c67230e744f/summary",
+          "species": "Icterus chrysater",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Icteridae",
+          "genus": "Icterus"
         }
       ],
       "species_list_tematica": {

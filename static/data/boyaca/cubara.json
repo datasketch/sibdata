@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -1425,19 +1425,19 @@
           "slug_tematica": "migratorias"
         },
         {
-          "label": "Myiodynastes maculatus",
-          "slug_especie": "myiodynastes-maculatus",
-          "registros": 44,
-          "url_gbif": "https://www.gbif.org/species/2483497",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e3abb283c45700544e3df9/summary",
-          "slug_tematica": "migratorias"
-        },
-        {
           "label": "Setophaga striata",
           "slug_especie": "setophaga-striata",
           "registros": 44,
           "url_gbif": "https://www.gbif.org/species/6092935",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56cf25ec3c16479905cba7c8/summary",
+          "slug_tematica": "migratorias"
+        },
+        {
+          "label": "Myiodynastes maculatus",
+          "slug_especie": "myiodynastes-maculatus",
+          "registros": 44,
+          "url_gbif": "https://www.gbif.org/species/2483497",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e3abb283c45700544e3df9/summary",
           "slug_tematica": "migratorias"
         },
         {
@@ -1481,11 +1481,11 @@
           "slug_tematica": "migratorias"
         },
         {
-          "label": "Pandion haliaetus",
-          "slug_especie": "pandion-haliaetus",
+          "label": "Vireo olivaceus",
+          "slug_especie": "vireo-olivaceus",
           "registros": 12,
-          "url_gbif": "https://www.gbif.org/species/2480726",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cc8493207ecea54a561e33/summary",
+          "url_gbif": "https://www.gbif.org/species/2487430",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cfcb953c16479905cba805/summary",
           "slug_tematica": "migratorias"
         }
       ]
@@ -2368,21 +2368,6 @@
           "genus": "Kohleria"
         },
         {
-          "label": "Indigofera subulata",
-          "registros": 2,
-          "slug_especie": "indigofera-subulata",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2971660",
-          "species": "Indigofera subulata",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Indigofera"
-        },
-        {
           "label": "Macroptilium lathyroides",
           "registros": 2,
           "slug_especie": "macroptilium-lathyroides",
@@ -2396,6 +2381,21 @@
           "order": "Fabales",
           "family": "Fabaceae",
           "genus": "Macroptilium"
+        },
+        {
+          "label": "Indigofera subulata",
+          "registros": 2,
+          "slug_especie": "indigofera-subulata",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2971660",
+          "species": "Indigofera subulata",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Indigofera"
         },
         {
           "label": "Scleria distans",
@@ -2413,126 +2413,34 @@
           "genus": "Scleria"
         },
         {
-          "label": "Acalypha macrostachya",
+          "label": "Galium canescens",
           "registros": 1,
-          "slug_especie": "acalypha-macrostachya",
+          "slug_especie": "galium-canescens",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3056437",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/595a7c9a2f4fd7bc7f39e11c/summary",
-          "species": "Acalypha macrostachya",
+          "url_gbif": "https://www.gbif.org/species/2915055",
+          "species": "Galium canescens",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Euphorbiaceae",
-          "genus": "Acalypha"
+          "order": "Gentianales",
+          "family": "Rubiaceae",
+          "genus": "Galium"
         },
         {
-          "label": "Adenostemma cuatrecasasii",
+          "label": "Racinaea schumanniana",
           "registros": 1,
-          "slug_especie": "adenostemma-cuatrecasasii",
+          "slug_especie": "racinaea-schumanniana",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3094625",
-          "species": "Adenostemma cuatrecasasii",
+          "url_gbif": "https://www.gbif.org/species/2695065",
+          "species": "Racinaea schumanniana",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Asterales",
-          "family": "Asteraceae",
-          "genus": "Adenostemma"
-        },
-        {
-          "label": "Andira surinamensis",
-          "registros": 1,
-          "slug_especie": "andira-surinamensis",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2952202",
-          "species": "Andira surinamensis",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Andira"
-        },
-        {
-          "label": "Asplundianthus densus",
-          "registros": 1,
-          "slug_especie": "asplundianthus-densus",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3140632",
-          "species": "Asplundianthus densus",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Asterales",
-          "family": "Asteraceae",
-          "genus": "Asplundianthus"
-        },
-        {
-          "label": "Begonia cornuta",
-          "registros": 1,
-          "slug_especie": "begonia-cornuta",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4158502",
-          "species": "Begonia cornuta",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Cucurbitales",
-          "family": "Begoniaceae",
-          "genus": "Begonia"
-        },
-        {
-          "label": "Besleria gibbosa",
-          "registros": 1,
-          "slug_especie": "besleria-gibbosa",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3818014",
-          "species": "Besleria gibbosa",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Lamiales",
-          "family": "Gesneriaceae",
-          "genus": "Besleria"
-        },
-        {
-          "label": "Cavendishia bracteata",
-          "registros": 1,
-          "slug_especie": "cavendishia-bracteata",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5832188",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/5fe3bb19f474659604713664/summary",
-          "species": "Cavendishia bracteata",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Ericales",
-          "family": "Ericaceae",
-          "genus": "Cavendishia"
-        },
-        {
-          "label": "Chromolaena moritziana",
-          "registros": 1,
-          "slug_especie": "chromolaena-moritziana",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3087788",
-          "species": "Chromolaena moritziana",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Asterales",
-          "family": "Asteraceae",
-          "genus": "Chromolaena"
+          "class": "Liliopsida",
+          "order": "Poales",
+          "family": "Bromeliaceae",
+          "genus": "Racinaea"
         },
         {
           "label": "Coccocypselum lanceolatum",
@@ -2671,35 +2579,34 @@
           "genus": "Fuchsia"
         },
         {
-          "label": "Galium canescens",
+          "label": "Besleria gibbosa",
           "registros": 1,
-          "slug_especie": "galium-canescens",
+          "slug_especie": "besleria-gibbosa",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2915055",
-          "species": "Galium canescens",
+          "url_gbif": "https://www.gbif.org/species/3818014",
+          "species": "Besleria gibbosa",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Gentianales",
-          "family": "Rubiaceae",
-          "genus": "Galium"
+          "order": "Lamiales",
+          "family": "Gesneriaceae",
+          "genus": "Besleria"
         },
         {
-          "label": "Gynerium sagittatum",
+          "label": "Chromolaena moritziana",
           "registros": 1,
-          "slug_especie": "gynerium-sagittatum",
+          "slug_especie": "chromolaena-moritziana",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5289743",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e34d1c83c45700544e3dc8/summary",
-          "species": "Gynerium sagittatum",
+          "url_gbif": "https://www.gbif.org/species/3087788",
+          "species": "Chromolaena moritziana",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Poales",
-          "family": "Poaceae",
-          "genus": "Gynerium"
+          "class": "Magnoliopsida",
+          "order": "Asterales",
+          "family": "Asteraceae",
+          "genus": "Chromolaena"
         },
         {
           "label": "Iresine diffusa",
@@ -2792,6 +2699,36 @@
           "genus": "Macrolobium"
         },
         {
+          "label": "Andira surinamensis",
+          "registros": 1,
+          "slug_especie": "andira-surinamensis",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2952202",
+          "species": "Andira surinamensis",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Andira"
+        },
+        {
+          "label": "Begonia cornuta",
+          "registros": 1,
+          "slug_especie": "begonia-cornuta",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/4158502",
+          "species": "Begonia cornuta",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Cucurbitales",
+          "family": "Begoniaceae",
+          "genus": "Begonia"
+        },
+        {
           "label": "Miconia theizans",
           "registros": 1,
           "slug_especie": "miconia-theizans",
@@ -2866,6 +2803,21 @@
           "order": "Fabales",
           "family": "Fabaceae",
           "genus": "Phaseolus"
+        },
+        {
+          "label": "Asplundianthus densus",
+          "registros": 1,
+          "slug_especie": "asplundianthus-densus",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3140632",
+          "species": "Asplundianthus densus",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Asterales",
+          "family": "Asteraceae",
+          "genus": "Asplundianthus"
         },
         {
           "label": "Phenax hirtus",
@@ -2977,6 +2929,22 @@
           "genus": "Protium"
         },
         {
+          "label": "Acalypha macrostachya",
+          "registros": 1,
+          "slug_especie": "acalypha-macrostachya",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3056437",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/595a7c9a2f4fd7bc7f39e11c/summary",
+          "species": "Acalypha macrostachya",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Malpighiales",
+          "family": "Euphorbiaceae",
+          "genus": "Acalypha"
+        },
+        {
           "label": "Puya grubbii",
           "registros": 1,
           "slug_especie": "puya-grubbii",
@@ -2993,19 +2961,20 @@
           "genus": "Puya"
         },
         {
-          "label": "Racinaea schumanniana",
+          "label": "Cavendishia bracteata",
           "registros": 1,
-          "slug_especie": "racinaea-schumanniana",
+          "slug_especie": "cavendishia-bracteata",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2695065",
-          "species": "Racinaea schumanniana",
+          "url_gbif": "https://www.gbif.org/species/5832188",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5fe3bb19f474659604713664/summary",
+          "species": "Cavendishia bracteata",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Poales",
-          "family": "Bromeliaceae",
-          "genus": "Racinaea"
+          "class": "Magnoliopsida",
+          "order": "Ericales",
+          "family": "Ericaceae",
+          "genus": "Cavendishia"
         },
         {
           "label": "Stylosanthes guianensis",
@@ -3051,6 +3020,21 @@
           "order": "Fabales",
           "family": "Fabaceae",
           "genus": "Stylosanthes"
+        },
+        {
+          "label": "Adenostemma cuatrecasasii",
+          "registros": 1,
+          "slug_especie": "adenostemma-cuatrecasasii",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3094625",
+          "species": "Adenostemma cuatrecasasii",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Asterales",
+          "family": "Asteraceae",
+          "genus": "Adenostemma"
         },
         {
           "label": "Terminalia amazonica",
@@ -3111,6 +3095,22 @@
           "order": "Malpighiales",
           "family": "Hypericaceae",
           "genus": "Vismia"
+        },
+        {
+          "label": "Gynerium sagittatum",
+          "registros": 1,
+          "slug_especie": "gynerium-sagittatum",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5289743",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e34d1c83c45700544e3dc8/summary",
+          "species": "Gynerium sagittatum",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Poales",
+          "family": "Poaceae",
+          "genus": "Gynerium"
         }
       ],
       "species_list_tematica": {
@@ -4188,24 +4188,6 @@
             "genus": "Cathartes"
           },
           {
-            "label": "Myiodynastes maculatus",
-            "registros": 44,
-            "slug_especie": "myiodynastes-maculatus",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2483497",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e3abb283c45700544e3df9/summary",
-            "species": "Myiodynastes maculatus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Tyrannidae",
-            "genus": "Myiodynastes"
-          },
-          {
             "label": "Setophaga striata",
             "registros": 44,
             "slug_especie": "setophaga-striata",
@@ -4222,6 +4204,24 @@
             "order": "Passeriformes",
             "family": "Parulidae",
             "genus": "Setophaga"
+          },
+          {
+            "label": "Myiodynastes maculatus",
+            "registros": 44,
+            "slug_especie": "myiodynastes-maculatus",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2483497",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e3abb283c45700544e3df9/summary",
+            "species": "Myiodynastes maculatus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Tyrannidae",
+            "genus": "Myiodynastes"
           },
           {
             "label": "Egretta caerulea",
@@ -4314,24 +4314,6 @@
             "genus": "Setophaga"
           },
           {
-            "label": "Pandion haliaetus",
-            "registros": 12,
-            "slug_especie": "pandion-haliaetus",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2480726",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56cc8493207ecea54a561e33/summary",
-            "species": "Pandion haliaetus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Accipitriformes",
-            "family": "Pandionidae",
-            "genus": "Pandion"
-          },
-          {
             "label": "Vireo olivaceus",
             "registros": 12,
             "slug_especie": "vireo-olivaceus",
@@ -4348,6 +4330,24 @@
             "order": "Passeriformes",
             "family": "Vireonidae",
             "genus": "Vireo"
+          },
+          {
+            "label": "Pandion haliaetus",
+            "registros": 12,
+            "slug_especie": "pandion-haliaetus",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2480726",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cc8493207ecea54a561e33/summary",
+            "species": "Pandion haliaetus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Accipitriformes",
+            "family": "Pandionidae",
+            "genus": "Pandion"
           }
         ],
         "endemicas": [
@@ -5159,24 +5159,6 @@
             "genus": "Cathartes"
           },
           {
-            "label": "Myiodynastes maculatus",
-            "registros": 44,
-            "slug_especie": "myiodynastes-maculatus",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2483497",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e3abb283c45700544e3df9/summary",
-            "species": "Myiodynastes maculatus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Tyrannidae",
-            "genus": "Myiodynastes"
-          },
-          {
             "label": "Setophaga striata",
             "registros": 44,
             "slug_especie": "setophaga-striata",
@@ -5193,6 +5175,24 @@
             "order": "Passeriformes",
             "family": "Parulidae",
             "genus": "Setophaga"
+          },
+          {
+            "label": "Myiodynastes maculatus",
+            "registros": 44,
+            "slug_especie": "myiodynastes-maculatus",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2483497",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e3abb283c45700544e3df9/summary",
+            "species": "Myiodynastes maculatus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Tyrannidae",
+            "genus": "Myiodynastes"
           },
           {
             "label": "Egretta caerulea",
@@ -5285,24 +5285,6 @@
             "genus": "Setophaga"
           },
           {
-            "label": "Pandion haliaetus",
-            "registros": 12,
-            "slug_especie": "pandion-haliaetus",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2480726",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56cc8493207ecea54a561e33/summary",
-            "species": "Pandion haliaetus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Accipitriformes",
-            "family": "Pandionidae",
-            "genus": "Pandion"
-          },
-          {
             "label": "Vireo olivaceus",
             "registros": 12,
             "slug_especie": "vireo-olivaceus",
@@ -5319,6 +5301,24 @@
             "order": "Passeriformes",
             "family": "Vireonidae",
             "genus": "Vireo"
+          },
+          {
+            "label": "Pandion haliaetus",
+            "registros": 12,
+            "slug_especie": "pandion-haliaetus",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2480726",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cc8493207ecea54a561e33/summary",
+            "species": "Pandion haliaetus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Accipitriformes",
+            "family": "Pandionidae",
+            "genus": "Pandion"
           }
         ],
         "endemicas": [
@@ -9428,21 +9428,6 @@
           "genus": "Orthostichopsis"
         },
         {
-          "label": "Brittonodoxa subpinnata",
-          "registros": 5,
-          "slug_especie": "brittonodoxa-subpinnata",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/9322860",
-          "species": "Brittonodoxa subpinnata",
-          "kingdom": "Plantae",
-          "phylum": "Bryophyta",
-          "class": "Bryopsida",
-          "order": "Hypnales",
-          "family": "Sematophyllaceae",
-          "genus": "Brittonodoxa"
-        },
-        {
           "label": "Grimmia navicularis",
           "registros": 5,
           "slug_especie": "grimmia-navicularis",
@@ -9458,34 +9443,19 @@
           "genus": "Grimmia"
         },
         {
-          "label": "Macromitrium punctatum",
+          "label": "Teramnus uncinatus",
           "registros": 5,
-          "slug_especie": "macromitrium-punctatum",
+          "slug_especie": "teramnus-uncinatus",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2672280",
-          "species": "Macromitrium punctatum",
+          "url_gbif": "https://www.gbif.org/species/2951909",
+          "species": "Teramnus uncinatus",
           "kingdom": "Plantae",
-          "phylum": "Bryophyta",
-          "class": "Bryopsida",
-          "order": "Orthotrichales",
-          "family": "Orthotrichaceae",
-          "genus": "Macromitrium"
-        },
-        {
-          "label": "Neckeropsis disticha",
-          "registros": 5,
-          "slug_especie": "neckeropsis-disticha",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2678455",
-          "species": "Neckeropsis disticha",
-          "kingdom": "Plantae",
-          "phylum": "Bryophyta",
-          "class": "Bryopsida",
-          "order": "Hypnales",
-          "family": "Neckeraceae",
-          "genus": "Neckeropsis"
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Teramnus"
         },
         {
           "label": "Rhacopilopsis trinitensis",
@@ -9503,19 +9473,49 @@
           "genus": "Rhacopilopsis"
         },
         {
-          "label": "Teramnus uncinatus",
+          "label": "Neckeropsis disticha",
           "registros": 5,
-          "slug_especie": "teramnus-uncinatus",
+          "slug_especie": "neckeropsis-disticha",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2951909",
-          "species": "Teramnus uncinatus",
+          "url_gbif": "https://www.gbif.org/species/2678455",
+          "species": "Neckeropsis disticha",
           "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Teramnus"
+          "phylum": "Bryophyta",
+          "class": "Bryopsida",
+          "order": "Hypnales",
+          "family": "Neckeraceae",
+          "genus": "Neckeropsis"
+        },
+        {
+          "label": "Brittonodoxa subpinnata",
+          "registros": 5,
+          "slug_especie": "brittonodoxa-subpinnata",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/9322860",
+          "species": "Brittonodoxa subpinnata",
+          "kingdom": "Plantae",
+          "phylum": "Bryophyta",
+          "class": "Bryopsida",
+          "order": "Hypnales",
+          "family": "Sematophyllaceae",
+          "genus": "Brittonodoxa"
+        },
+        {
+          "label": "Macromitrium punctatum",
+          "registros": 5,
+          "slug_especie": "macromitrium-punctatum",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2672280",
+          "species": "Macromitrium punctatum",
+          "kingdom": "Plantae",
+          "phylum": "Bryophyta",
+          "class": "Bryopsida",
+          "order": "Orthotrichales",
+          "family": "Orthotrichaceae",
+          "genus": "Macromitrium"
         }
       ],
       "species_list_tematica": {
@@ -10522,21 +10522,6 @@
           "genus": "Kohleria"
         },
         {
-          "label": "Hypolepis hostilis",
-          "registros": 2,
-          "slug_especie": "hypolepis-hostilis",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7265951",
-          "species": "Hypolepis hostilis",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Polypodiopsida",
-          "order": "Polypodiales",
-          "family": "Dennstaedtiaceae",
-          "genus": "Hypolepis"
-        },
-        {
           "label": "Indigofera subulata",
           "registros": 2,
           "slug_especie": "indigofera-subulata",
@@ -10550,21 +10535,6 @@
           "order": "Fabales",
           "family": "Fabaceae",
           "genus": "Indigofera"
-        },
-        {
-          "label": "Macroptilium lathyroides",
-          "registros": 2,
-          "slug_especie": "macroptilium-lathyroides",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2945063",
-          "species": "Macroptilium lathyroides",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Macroptilium"
         },
         {
           "label": "Scleria distans",
@@ -10582,6 +10552,51 @@
           "genus": "Scleria"
         },
         {
+          "label": "Macroptilium lathyroides",
+          "registros": 2,
+          "slug_especie": "macroptilium-lathyroides",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2945063",
+          "species": "Macroptilium lathyroides",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Macroptilium"
+        },
+        {
+          "label": "Hypolepis hostilis",
+          "registros": 2,
+          "slug_especie": "hypolepis-hostilis",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7265951",
+          "species": "Hypolepis hostilis",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Polypodiopsida",
+          "order": "Polypodiales",
+          "family": "Dennstaedtiaceae",
+          "genus": "Hypolepis"
+        },
+        {
+          "label": "Lomaridium pteropus",
+          "registros": 1,
+          "slug_especie": "lomaridium-pteropus",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/9121620",
+          "species": "Lomaridium pteropus",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Polypodiopsida",
+          "order": "Polypodiales",
+          "family": "Blechnaceae",
+          "genus": "Lomaridium"
+        },
+        {
           "label": "Acalypha macrostachya",
           "registros": 1,
           "slug_especie": "acalypha-macrostachya",
@@ -10596,126 +10611,6 @@
           "order": "Malpighiales",
           "family": "Euphorbiaceae",
           "genus": "Acalypha"
-        },
-        {
-          "label": "Adenostemma cuatrecasasii",
-          "registros": 1,
-          "slug_especie": "adenostemma-cuatrecasasii",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3094625",
-          "species": "Adenostemma cuatrecasasii",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Asterales",
-          "family": "Asteraceae",
-          "genus": "Adenostemma"
-        },
-        {
-          "label": "Andira surinamensis",
-          "registros": 1,
-          "slug_especie": "andira-surinamensis",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2952202",
-          "species": "Andira surinamensis",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Andira"
-        },
-        {
-          "label": "Anemia imbricata",
-          "registros": 1,
-          "slug_especie": "anemia-imbricata",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7695528",
-          "species": "Anemia imbricata",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Polypodiopsida",
-          "order": "Schizaeales",
-          "family": "Anemiaceae",
-          "genus": "Anemia"
-        },
-        {
-          "label": "Anemia villosa",
-          "registros": 1,
-          "slug_especie": "anemia-villosa",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7934402",
-          "species": "Anemia villosa",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Polypodiopsida",
-          "order": "Schizaeales",
-          "family": "Anemiaceae",
-          "genus": "Anemia"
-        },
-        {
-          "label": "Asplenium myriophyllum",
-          "registros": 1,
-          "slug_especie": "asplenium-myriophyllum",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2650610",
-          "species": "Asplenium myriophyllum",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Polypodiopsida",
-          "order": "Polypodiales",
-          "family": "Aspleniaceae",
-          "genus": "Asplenium"
-        },
-        {
-          "label": "Asplundianthus densus",
-          "registros": 1,
-          "slug_especie": "asplundianthus-densus",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3140632",
-          "species": "Asplundianthus densus",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Asterales",
-          "family": "Asteraceae",
-          "genus": "Asplundianthus"
-        },
-        {
-          "label": "Begonia cornuta",
-          "registros": 1,
-          "slug_especie": "begonia-cornuta",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4158502",
-          "species": "Begonia cornuta",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Cucurbitales",
-          "family": "Begoniaceae",
-          "genus": "Begonia"
-        },
-        {
-          "label": "Besleria gibbosa",
-          "registros": 1,
-          "slug_especie": "besleria-gibbosa",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3818014",
-          "species": "Besleria gibbosa",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Lamiales",
-          "family": "Gesneriaceae",
-          "genus": "Besleria"
         },
         {
           "label": "Cavendishia bracteata",
@@ -10991,6 +10886,21 @@
           "genus": "Kohleria"
         },
         {
+          "label": "Andira surinamensis",
+          "registros": 1,
+          "slug_especie": "andira-surinamensis",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2952202",
+          "species": "Andira surinamensis",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Andira"
+        },
+        {
           "label": "Lepechinia cocuyensis",
           "registros": 1,
           "slug_especie": "lepechinia-cocuyensis",
@@ -11006,19 +10916,19 @@
           "genus": "Lepechinia"
         },
         {
-          "label": "Lomaridium pteropus",
+          "label": "Begonia cornuta",
           "registros": 1,
-          "slug_especie": "lomaridium-pteropus",
+          "slug_especie": "begonia-cornuta",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/9121620",
-          "species": "Lomaridium pteropus",
+          "url_gbif": "https://www.gbif.org/species/4158502",
+          "species": "Begonia cornuta",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
-          "class": "Polypodiopsida",
-          "order": "Polypodiales",
-          "family": "Blechnaceae",
-          "genus": "Lomaridium"
+          "class": "Magnoliopsida",
+          "order": "Cucurbitales",
+          "family": "Begoniaceae",
+          "genus": "Begonia"
         },
         {
           "label": "Lourteigia stoechadifolia",
@@ -11049,6 +10959,36 @@
           "order": "Fabales",
           "family": "Fabaceae",
           "genus": "Macrolobium"
+        },
+        {
+          "label": "Asplundianthus densus",
+          "registros": 1,
+          "slug_especie": "asplundianthus-densus",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3140632",
+          "species": "Asplundianthus densus",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Asterales",
+          "family": "Asteraceae",
+          "genus": "Asplundianthus"
+        },
+        {
+          "label": "Asplenium myriophyllum",
+          "registros": 1,
+          "slug_especie": "asplenium-myriophyllum",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2650610",
+          "species": "Asplenium myriophyllum",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Polypodiopsida",
+          "order": "Polypodiales",
+          "family": "Aspleniaceae",
+          "genus": "Asplenium"
         },
         {
           "label": "Miconia theizans",
@@ -11125,6 +11065,21 @@
           "order": "Fabales",
           "family": "Fabaceae",
           "genus": "Phaseolus"
+        },
+        {
+          "label": "Anemia villosa",
+          "registros": 1,
+          "slug_especie": "anemia-villosa",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7934402",
+          "species": "Anemia villosa",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Polypodiopsida",
+          "order": "Schizaeales",
+          "family": "Anemiaceae",
+          "genus": "Anemia"
         },
         {
           "label": "Phenax hirtus",
@@ -11282,6 +11237,21 @@
           "genus": "Racinaea"
         },
         {
+          "label": "Anemia imbricata",
+          "registros": 1,
+          "slug_especie": "anemia-imbricata",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7695528",
+          "species": "Anemia imbricata",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Polypodiopsida",
+          "order": "Schizaeales",
+          "family": "Anemiaceae",
+          "genus": "Anemia"
+        },
+        {
           "label": "Serpocaulon fraxinifolium",
           "registros": 1,
           "slug_especie": "serpocaulon-fraxinifolium",
@@ -11343,6 +11313,21 @@
           "genus": "Stylosanthes"
         },
         {
+          "label": "Adenostemma cuatrecasasii",
+          "registros": 1,
+          "slug_especie": "adenostemma-cuatrecasasii",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3094625",
+          "species": "Adenostemma cuatrecasasii",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Asterales",
+          "family": "Asteraceae",
+          "genus": "Adenostemma"
+        },
+        {
           "label": "Terminalia amazonica",
           "registros": 1,
           "slug_especie": "terminalia-amazonica",
@@ -11401,6 +11386,21 @@
           "order": "Malpighiales",
           "family": "Hypericaceae",
           "genus": "Vismia"
+        },
+        {
+          "label": "Besleria gibbosa",
+          "registros": 1,
+          "slug_especie": "besleria-gibbosa",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3818014",
+          "species": "Besleria gibbosa",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Lamiales",
+          "family": "Gesneriaceae",
+          "genus": "Besleria"
         }
       ],
       "species_list_tematica": {
@@ -12522,24 +12522,6 @@
             "genus": "Cathartes"
           },
           {
-            "label": "Myiodynastes maculatus",
-            "registros": 44,
-            "slug_especie": "myiodynastes-maculatus",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2483497",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e3abb283c45700544e3df9/summary",
-            "species": "Myiodynastes maculatus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Tyrannidae",
-            "genus": "Myiodynastes"
-          },
-          {
             "label": "Setophaga striata",
             "registros": 44,
             "slug_especie": "setophaga-striata",
@@ -12556,6 +12538,24 @@
             "order": "Passeriformes",
             "family": "Parulidae",
             "genus": "Setophaga"
+          },
+          {
+            "label": "Myiodynastes maculatus",
+            "registros": 44,
+            "slug_especie": "myiodynastes-maculatus",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2483497",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e3abb283c45700544e3df9/summary",
+            "species": "Myiodynastes maculatus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Tyrannidae",
+            "genus": "Myiodynastes"
           },
           {
             "label": "Egretta caerulea",
@@ -12648,24 +12648,6 @@
             "genus": "Setophaga"
           },
           {
-            "label": "Pandion haliaetus",
-            "registros": 12,
-            "slug_especie": "pandion-haliaetus",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2480726",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56cc8493207ecea54a561e33/summary",
-            "species": "Pandion haliaetus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Accipitriformes",
-            "family": "Pandionidae",
-            "genus": "Pandion"
-          },
-          {
             "label": "Vireo olivaceus",
             "registros": 12,
             "slug_especie": "vireo-olivaceus",
@@ -12682,6 +12664,24 @@
             "order": "Passeriformes",
             "family": "Vireonidae",
             "genus": "Vireo"
+          },
+          {
+            "label": "Pandion haliaetus",
+            "registros": 12,
+            "slug_especie": "pandion-haliaetus",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2480726",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cc8493207ecea54a561e33/summary",
+            "species": "Pandion haliaetus",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Accipitriformes",
+            "family": "Pandionidae",
+            "genus": "Pandion"
           }
         ],
         "endemicas": [

@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -1316,6 +1316,21 @@
       "subgrupo_especies": [],
       "species_list_top": [
         {
+          "label": "Pagamea thyrsiflora",
+          "registros": 6,
+          "slug_especie": "pagamea-thyrsiflora",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2902174",
+          "species": "Pagamea thyrsiflora",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Gentianales",
+          "family": "Rubiaceae",
+          "genus": "Pagamea"
+        },
+        {
           "label": "Ernestia tenella",
           "registros": 6,
           "slug_especie": "ernestia-tenella",
@@ -1331,19 +1346,19 @@
           "genus": "Ernestia"
         },
         {
-          "label": "Pagamea thyrsiflora",
-          "registros": 6,
-          "slug_especie": "pagamea-thyrsiflora",
+          "label": "Iriartella setigera",
+          "registros": 5,
+          "slug_especie": "iriartella-setigera",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2902174",
-          "species": "Pagamea thyrsiflora",
+          "url_gbif": "https://www.gbif.org/species/2739108",
+          "species": "Iriartella setigera",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Gentianales",
-          "family": "Rubiaceae",
-          "genus": "Pagamea"
+          "class": "Liliopsida",
+          "order": "Arecales",
+          "family": "Arecaceae",
+          "genus": "Iriartella"
         },
         {
           "label": "Aechmea politii",
@@ -1362,21 +1377,6 @@
           "genus": "Aechmea"
         },
         {
-          "label": "Amasonia campestris",
-          "registros": 5,
-          "slug_especie": "amasonia-campestris",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7306869",
-          "species": "Amasonia campestris",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Lamiales",
-          "family": "Lamiaceae",
-          "genus": "Amasonia"
-        },
-        {
           "label": "Humiria balsamifera",
           "registros": 5,
           "slug_especie": "humiria-balsamifera",
@@ -1392,34 +1392,19 @@
           "genus": "Humiria"
         },
         {
-          "label": "Iriartella setigera",
+          "label": "Amasonia campestris",
           "registros": 5,
-          "slug_especie": "iriartella-setigera",
+          "slug_especie": "amasonia-campestris",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2739108",
-          "species": "Iriartella setigera",
+          "url_gbif": "https://www.gbif.org/species/7306869",
+          "species": "Amasonia campestris",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Arecales",
-          "family": "Arecaceae",
-          "genus": "Iriartella"
-        },
-        {
-          "label": "Aechmea penduliflora",
-          "registros": 4,
-          "slug_especie": "aechmea-penduliflora",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2697887",
-          "species": "Aechmea penduliflora",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Poales",
-          "family": "Bromeliaceae",
-          "genus": "Aechmea"
+          "class": "Magnoliopsida",
+          "order": "Lamiales",
+          "family": "Lamiaceae",
+          "genus": "Amasonia"
         },
         {
           "label": "Anthurium bonplandii",
@@ -1435,6 +1420,21 @@
           "order": "Alismatales",
           "family": "Araceae",
           "genus": "Anthurium"
+        },
+        {
+          "label": "Aechmea penduliflora",
+          "registros": 4,
+          "slug_especie": "aechmea-penduliflora",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2697887",
+          "species": "Aechmea penduliflora",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Poales",
+          "family": "Bromeliaceae",
+          "genus": "Aechmea"
         },
         {
           "label": "Casearia euceraea",
@@ -4882,6 +4882,21 @@
       ],
       "species_list_top": [
         {
+          "label": "Pagamea thyrsiflora",
+          "registros": 6,
+          "slug_especie": "pagamea-thyrsiflora",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2902174",
+          "species": "Pagamea thyrsiflora",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Gentianales",
+          "family": "Rubiaceae",
+          "genus": "Pagamea"
+        },
+        {
           "label": "Ernestia tenella",
           "registros": 6,
           "slug_especie": "ernestia-tenella",
@@ -4897,19 +4912,19 @@
           "genus": "Ernestia"
         },
         {
-          "label": "Pagamea thyrsiflora",
-          "registros": 6,
-          "slug_especie": "pagamea-thyrsiflora",
+          "label": "Iriartella setigera",
+          "registros": 5,
+          "slug_especie": "iriartella-setigera",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2902174",
-          "species": "Pagamea thyrsiflora",
+          "url_gbif": "https://www.gbif.org/species/2739108",
+          "species": "Iriartella setigera",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Gentianales",
-          "family": "Rubiaceae",
-          "genus": "Pagamea"
+          "class": "Liliopsida",
+          "order": "Arecales",
+          "family": "Arecaceae",
+          "genus": "Iriartella"
         },
         {
           "label": "Aechmea politii",
@@ -4928,21 +4943,6 @@
           "genus": "Aechmea"
         },
         {
-          "label": "Amasonia campestris",
-          "registros": 5,
-          "slug_especie": "amasonia-campestris",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7306869",
-          "species": "Amasonia campestris",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Lamiales",
-          "family": "Lamiaceae",
-          "genus": "Amasonia"
-        },
-        {
           "label": "Humiria balsamifera",
           "registros": 5,
           "slug_especie": "humiria-balsamifera",
@@ -4958,34 +4958,19 @@
           "genus": "Humiria"
         },
         {
-          "label": "Iriartella setigera",
+          "label": "Amasonia campestris",
           "registros": 5,
-          "slug_especie": "iriartella-setigera",
+          "slug_especie": "amasonia-campestris",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2739108",
-          "species": "Iriartella setigera",
+          "url_gbif": "https://www.gbif.org/species/7306869",
+          "species": "Amasonia campestris",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Arecales",
-          "family": "Arecaceae",
-          "genus": "Iriartella"
-        },
-        {
-          "label": "Aechmea penduliflora",
-          "registros": 4,
-          "slug_especie": "aechmea-penduliflora",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2697887",
-          "species": "Aechmea penduliflora",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Poales",
-          "family": "Bromeliaceae",
-          "genus": "Aechmea"
+          "class": "Magnoliopsida",
+          "order": "Lamiales",
+          "family": "Lamiaceae",
+          "genus": "Amasonia"
         },
         {
           "label": "Anthurium bonplandii",
@@ -5001,6 +4986,21 @@
           "order": "Alismatales",
           "family": "Araceae",
           "genus": "Anthurium"
+        },
+        {
+          "label": "Aechmea penduliflora",
+          "registros": 4,
+          "slug_especie": "aechmea-penduliflora",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2697887",
+          "species": "Aechmea penduliflora",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Poales",
+          "family": "Bromeliaceae",
+          "genus": "Aechmea"
         },
         {
           "label": "Casearia euceraea",
@@ -5860,6 +5860,21 @@
       "subgrupo_especies": [],
       "species_list_top": [
         {
+          "label": "Pagamea thyrsiflora",
+          "registros": 6,
+          "slug_especie": "pagamea-thyrsiflora",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2902174",
+          "species": "Pagamea thyrsiflora",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Gentianales",
+          "family": "Rubiaceae",
+          "genus": "Pagamea"
+        },
+        {
           "label": "Ernestia tenella",
           "registros": 6,
           "slug_especie": "ernestia-tenella",
@@ -5875,19 +5890,19 @@
           "genus": "Ernestia"
         },
         {
-          "label": "Pagamea thyrsiflora",
-          "registros": 6,
-          "slug_especie": "pagamea-thyrsiflora",
+          "label": "Iriartella setigera",
+          "registros": 5,
+          "slug_especie": "iriartella-setigera",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2902174",
-          "species": "Pagamea thyrsiflora",
+          "url_gbif": "https://www.gbif.org/species/2739108",
+          "species": "Iriartella setigera",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Gentianales",
-          "family": "Rubiaceae",
-          "genus": "Pagamea"
+          "class": "Liliopsida",
+          "order": "Arecales",
+          "family": "Arecaceae",
+          "genus": "Iriartella"
         },
         {
           "label": "Aechmea politii",
@@ -5906,21 +5921,6 @@
           "genus": "Aechmea"
         },
         {
-          "label": "Amasonia campestris",
-          "registros": 5,
-          "slug_especie": "amasonia-campestris",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7306869",
-          "species": "Amasonia campestris",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Lamiales",
-          "family": "Lamiaceae",
-          "genus": "Amasonia"
-        },
-        {
           "label": "Humiria balsamifera",
           "registros": 5,
           "slug_especie": "humiria-balsamifera",
@@ -5936,34 +5936,19 @@
           "genus": "Humiria"
         },
         {
-          "label": "Iriartella setigera",
+          "label": "Amasonia campestris",
           "registros": 5,
-          "slug_especie": "iriartella-setigera",
+          "slug_especie": "amasonia-campestris",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2739108",
-          "species": "Iriartella setigera",
+          "url_gbif": "https://www.gbif.org/species/7306869",
+          "species": "Amasonia campestris",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Arecales",
-          "family": "Arecaceae",
-          "genus": "Iriartella"
-        },
-        {
-          "label": "Aechmea penduliflora",
-          "registros": 4,
-          "slug_especie": "aechmea-penduliflora",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2697887",
-          "species": "Aechmea penduliflora",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Poales",
-          "family": "Bromeliaceae",
-          "genus": "Aechmea"
+          "class": "Magnoliopsida",
+          "order": "Lamiales",
+          "family": "Lamiaceae",
+          "genus": "Amasonia"
         },
         {
           "label": "Anthurium bonplandii",
@@ -5979,6 +5964,21 @@
           "order": "Alismatales",
           "family": "Araceae",
           "genus": "Anthurium"
+        },
+        {
+          "label": "Aechmea penduliflora",
+          "registros": 4,
+          "slug_especie": "aechmea-penduliflora",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2697887",
+          "species": "Aechmea penduliflora",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Poales",
+          "family": "Bromeliaceae",
+          "genus": "Aechmea"
         },
         {
           "label": "Casearia euceraea",

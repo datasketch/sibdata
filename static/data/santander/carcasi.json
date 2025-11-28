@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -2155,21 +2155,6 @@
           "genus": "Ocotea"
         },
         {
-          "label": "Excremis coarctata",
-          "registros": 35,
-          "slug_especie": "excremis-coarctata",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/8059356",
-          "species": "Excremis coarctata",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Asparagales",
-          "family": "Asphodelaceae",
-          "genus": "Excremis"
-        },
-        {
           "label": "Rhynchospora ruiziana",
           "registros": 35,
           "slug_especie": "rhynchospora-ruiziana",
@@ -2183,6 +2168,21 @@
           "order": "Poales",
           "family": "Cyperaceae",
           "genus": "Rhynchospora"
+        },
+        {
+          "label": "Excremis coarctata",
+          "registros": 35,
+          "slug_especie": "excremis-coarctata",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/8059356",
+          "species": "Excremis coarctata",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Asparagales",
+          "family": "Asphodelaceae",
+          "genus": "Excremis"
         },
         {
           "label": "Hypericum juniperinum",
@@ -4173,22 +4173,6 @@
           "genus": "Metallura"
         },
         {
-          "label": "Eriocnemis vestita",
-          "registros": 9,
-          "slug_especie": "eriocnemis-vestita",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5228524",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c74cecf0106c67230e73e8/summary",
-          "species": "Eriocnemis vestita",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Apodiformes",
-          "family": "Trochilidae",
-          "genus": "Eriocnemis"
-        },
-        {
           "label": "Troglodytes aedon",
           "registros": 9,
           "slug_especie": "troglodytes-aedon",
@@ -4203,6 +4187,22 @@
           "order": "Passeriformes",
           "family": "Troglodytidae",
           "genus": "Troglodytes"
+        },
+        {
+          "label": "Eriocnemis vestita",
+          "registros": 9,
+          "slug_especie": "eriocnemis-vestita",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5228524",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c74cecf0106c67230e73e8/summary",
+          "species": "Eriocnemis vestita",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Apodiformes",
+          "family": "Trochilidae",
+          "genus": "Eriocnemis"
         },
         {
           "label": "Coeligena torquata",
@@ -8325,21 +8325,6 @@
           "genus": "Ocotea"
         },
         {
-          "label": "Excremis coarctata",
-          "registros": 35,
-          "slug_especie": "excremis-coarctata",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/8059356",
-          "species": "Excremis coarctata",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Asparagales",
-          "family": "Asphodelaceae",
-          "genus": "Excremis"
-        },
-        {
           "label": "Rhynchospora ruiziana",
           "registros": 35,
           "slug_especie": "rhynchospora-ruiziana",
@@ -8355,20 +8340,19 @@
           "genus": "Rhynchospora"
         },
         {
-          "label": "Hypericum juniperinum",
-          "registros": 31,
-          "slug_especie": "hypericum-juniperinum",
+          "label": "Excremis coarctata",
+          "registros": 35,
+          "slug_especie": "excremis-coarctata",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3711397",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56da54173c16479905cba9d4/summary",
-          "species": "Hypericum juniperinum",
+          "url_gbif": "https://www.gbif.org/species/8059356",
+          "species": "Excremis coarctata",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Hypericaceae",
-          "genus": "Hypericum"
+          "class": "Liliopsida",
+          "order": "Asparagales",
+          "family": "Asphodelaceae",
+          "genus": "Excremis"
         },
         {
           "label": "Monticalia abietina",
@@ -8385,6 +8369,22 @@
           "order": "Asterales",
           "family": "Asteraceae",
           "genus": "Monticalia"
+        },
+        {
+          "label": "Hypericum juniperinum",
+          "registros": 31,
+          "slug_especie": "hypericum-juniperinum",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3711397",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56da54173c16479905cba9d4/summary",
+          "species": "Hypericum juniperinum",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Malpighiales",
+          "family": "Hypericaceae",
+          "genus": "Hypericum"
         },
         {
           "label": "Ageratina glyptophlebia",
@@ -9138,21 +9138,6 @@
           "genus": "Ocotea"
         },
         {
-          "label": "Excremis coarctata",
-          "registros": 35,
-          "slug_especie": "excremis-coarctata",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/8059356",
-          "species": "Excremis coarctata",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Asparagales",
-          "family": "Asphodelaceae",
-          "genus": "Excremis"
-        },
-        {
           "label": "Rhynchospora ruiziana",
           "registros": 35,
           "slug_especie": "rhynchospora-ruiziana",
@@ -9166,6 +9151,21 @@
           "order": "Poales",
           "family": "Cyperaceae",
           "genus": "Rhynchospora"
+        },
+        {
+          "label": "Excremis coarctata",
+          "registros": 35,
+          "slug_especie": "excremis-coarctata",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/8059356",
+          "species": "Excremis coarctata",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Asparagales",
+          "family": "Asphodelaceae",
+          "genus": "Excremis"
         },
         {
           "label": "Hypericum juniperinum",
@@ -9997,22 +9997,6 @@
           "genus": "Metallura"
         },
         {
-          "label": "Eriocnemis vestita",
-          "registros": 9,
-          "slug_especie": "eriocnemis-vestita",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5228524",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c74cecf0106c67230e73e8/summary",
-          "species": "Eriocnemis vestita",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Apodiformes",
-          "family": "Trochilidae",
-          "genus": "Eriocnemis"
-        },
-        {
           "label": "Troglodytes aedon",
           "registros": 9,
           "slug_especie": "troglodytes-aedon",
@@ -10027,6 +10011,22 @@
           "order": "Passeriformes",
           "family": "Troglodytidae",
           "genus": "Troglodytes"
+        },
+        {
+          "label": "Eriocnemis vestita",
+          "registros": 9,
+          "slug_especie": "eriocnemis-vestita",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5228524",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c74cecf0106c67230e73e8/summary",
+          "species": "Eriocnemis vestita",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Apodiformes",
+          "family": "Trochilidae",
+          "genus": "Eriocnemis"
         },
         {
           "label": "Coeligena torquata",

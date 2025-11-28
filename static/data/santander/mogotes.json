@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -2083,6 +2083,22 @@
           "genus": "Coffea"
         },
         {
+          "label": "Varronia curassavica",
+          "registros": 2,
+          "slug_especie": "varronia-curassavica",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/4060951",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e04e0283c45700544e3cb9/summary",
+          "species": "Varronia curassavica",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Boraginales",
+          "family": "Cordiaceae",
+          "genus": "Varronia"
+        },
+        {
           "label": "Cardiospermum grandiflorum",
           "registros": 2,
           "slug_especie": "cardiospermum-grandiflorum",
@@ -2096,21 +2112,6 @@
           "order": "Sapindales",
           "family": "Sapindaceae",
           "genus": "Cardiospermum"
-        },
-        {
-          "label": "Drosera communis",
-          "registros": 2,
-          "slug_especie": "drosera-communis",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3191024",
-          "species": "Drosera communis",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Caryophyllales",
-          "family": "Droseraceae",
-          "genus": "Drosera"
         },
         {
           "label": "Haematoxylum brasiletto",
@@ -2129,20 +2130,34 @@
           "genus": "Haematoxylum"
         },
         {
-          "label": "Varronia curassavica",
+          "label": "Drosera communis",
           "registros": 2,
-          "slug_especie": "varronia-curassavica",
+          "slug_especie": "drosera-communis",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4060951",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e04e0283c45700544e3cb9/summary",
-          "species": "Varronia curassavica",
+          "url_gbif": "https://www.gbif.org/species/3191024",
+          "species": "Drosera communis",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Boraginales",
-          "family": "Cordiaceae",
-          "genus": "Varronia"
+          "order": "Caryophyllales",
+          "family": "Droseraceae",
+          "genus": "Drosera"
+        },
+        {
+          "label": "Oxypetalum cordifolium",
+          "registros": 1,
+          "slug_especie": "oxypetalum-cordifolium",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3170200",
+          "species": "Oxypetalum cordifolium",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Gentianales",
+          "family": "Apocynaceae",
+          "genus": "Oxypetalum"
         },
         {
           "label": "Abutilon viscosum",
@@ -2160,20 +2175,19 @@
           "genus": "Abutilon"
         },
         {
-          "label": "Astronium fraxinifolium",
+          "label": "Digitaria californica",
           "registros": 1,
-          "slug_especie": "astronium-fraxinifolium",
+          "slug_especie": "digitaria-californica",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7321614",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c6bffbf0106c67230e73e5/summary",
-          "species": "Astronium fraxinifolium",
+          "url_gbif": "https://www.gbif.org/species/5289937",
+          "species": "Digitaria californica",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Sapindales",
-          "family": "Anacardiaceae",
-          "genus": "Astronium"
+          "class": "Liliopsida",
+          "order": "Poales",
+          "family": "Poaceae",
+          "genus": "Digitaria"
         },
         {
           "label": "Casearia tremula",
@@ -2189,52 +2203,6 @@
           "order": "Malpighiales",
           "family": "Salicaceae",
           "genus": "Casearia"
-        },
-        {
-          "label": "Cnidoscolus urens",
-          "registros": 1,
-          "slug_especie": "cnidoscolus-urens",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3073653",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/595a88102f4fd7bc7f39e530/summary",
-          "species": "Cnidoscolus urens",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Euphorbiaceae",
-          "genus": "Cnidoscolus"
-        },
-        {
-          "label": "Datura ferox",
-          "registros": 1,
-          "slug_especie": "datura-ferox",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2928739",
-          "species": "Datura ferox",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Solanales",
-          "family": "Solanaceae",
-          "genus": "Datura"
-        },
-        {
-          "label": "Digitaria californica",
-          "registros": 1,
-          "slug_especie": "digitaria-californica",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5289937",
-          "species": "Digitaria californica",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Poales",
-          "family": "Poaceae",
-          "genus": "Digitaria"
         },
         {
           "label": "Escallonia pendula",
@@ -2299,6 +2267,22 @@
           "genus": "Gliricidia"
         },
         {
+          "label": "Cnidoscolus urens",
+          "registros": 1,
+          "slug_especie": "cnidoscolus-urens",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3073653",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/595a88102f4fd7bc7f39e530/summary",
+          "species": "Cnidoscolus urens",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Malpighiales",
+          "family": "Euphorbiaceae",
+          "genus": "Cnidoscolus"
+        },
+        {
           "label": "Jatropha gossypiifolia",
           "registros": 1,
           "slug_especie": "jatropha-gossypiifolia",
@@ -2315,19 +2299,20 @@
           "genus": "Jatropha"
         },
         {
-          "label": "Oxypetalum cordifolium",
+          "label": "Astronium fraxinifolium",
           "registros": 1,
-          "slug_especie": "oxypetalum-cordifolium",
+          "slug_especie": "astronium-fraxinifolium",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3170200",
-          "species": "Oxypetalum cordifolium",
+          "url_gbif": "https://www.gbif.org/species/7321614",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c6bffbf0106c67230e73e5/summary",
+          "species": "Astronium fraxinifolium",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Gentianales",
-          "family": "Apocynaceae",
-          "genus": "Oxypetalum"
+          "order": "Sapindales",
+          "family": "Anacardiaceae",
+          "genus": "Astronium"
         },
         {
           "label": "Parkinsonia praecox",
@@ -2525,6 +2510,21 @@
           "order": "Asterales",
           "family": "Asteraceae",
           "genus": "Tridax"
+        },
+        {
+          "label": "Datura ferox",
+          "registros": 1,
+          "slug_especie": "datura-ferox",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2928739",
+          "species": "Datura ferox",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Solanales",
+          "family": "Solanaceae",
+          "genus": "Datura"
         }
       ],
       "species_list_tematica": {
@@ -4535,22 +4535,6 @@
           "genus": "Ramphocelus"
         },
         {
-          "label": "Coereba flaveola",
-          "registros": 10,
-          "slug_especie": "coereba-flaveola",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2493744",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56df75bd83c45700544e3c7b/summary",
-          "species": "Coereba flaveola",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Coereba"
-        },
-        {
           "label": "Icterus chrysater",
           "registros": 10,
           "slug_especie": "icterus-chrysater",
@@ -4565,6 +4549,22 @@
           "order": "Passeriformes",
           "family": "Icteridae",
           "genus": "Icterus"
+        },
+        {
+          "label": "Coereba flaveola",
+          "registros": 10,
+          "slug_especie": "coereba-flaveola",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2493744",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56df75bd83c45700544e3c7b/summary",
+          "species": "Coereba flaveola",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Coereba"
         }
       ],
       "species_list_tematica": {
@@ -8536,6 +8536,21 @@
       ],
       "species_list_top": [
         {
+          "label": "Thuidium tomentosum",
+          "registros": 4,
+          "slug_especie": "thuidium-tomentosum",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2679478",
+          "species": "Thuidium tomentosum",
+          "kingdom": "Plantae",
+          "phylum": "Bryophyta",
+          "class": "Bryopsida",
+          "order": "Hypnales",
+          "family": "Thuidiaceae",
+          "genus": "Thuidium"
+        },
+        {
           "label": "Coffea arabica",
           "registros": 4,
           "slug_especie": "coffea-arabica",
@@ -8552,19 +8567,19 @@
           "genus": "Coffea"
         },
         {
-          "label": "Thuidium tomentosum",
-          "registros": 4,
-          "slug_especie": "thuidium-tomentosum",
+          "label": "Leucobryum antillarum",
+          "registros": 2,
+          "slug_especie": "leucobryum-antillarum",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2679478",
-          "species": "Thuidium tomentosum",
+          "url_gbif": "https://www.gbif.org/species/2675696",
+          "species": "Leucobryum antillarum",
           "kingdom": "Plantae",
           "phylum": "Bryophyta",
           "class": "Bryopsida",
-          "order": "Hypnales",
-          "family": "Thuidiaceae",
-          "genus": "Thuidium"
+          "order": "Dicranales",
+          "family": "Leucobryaceae",
+          "genus": "Leucobryum"
         },
         {
           "label": "Cardiospermum grandiflorum",
@@ -8580,6 +8595,22 @@
           "order": "Sapindales",
           "family": "Sapindaceae",
           "genus": "Cardiospermum"
+        },
+        {
+          "label": "Varronia curassavica",
+          "registros": 2,
+          "slug_especie": "varronia-curassavica",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/4060951",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e04e0283c45700544e3cb9/summary",
+          "species": "Varronia curassavica",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Boraginales",
+          "family": "Cordiaceae",
+          "genus": "Varronia"
         },
         {
           "label": "Drosera communis",
@@ -8613,35 +8644,19 @@
           "genus": "Haematoxylum"
         },
         {
-          "label": "Leucobryum antillarum",
-          "registros": 2,
-          "slug_especie": "leucobryum-antillarum",
+          "label": "Oxypetalum cordifolium",
+          "registros": 1,
+          "slug_especie": "oxypetalum-cordifolium",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2675696",
-          "species": "Leucobryum antillarum",
-          "kingdom": "Plantae",
-          "phylum": "Bryophyta",
-          "class": "Bryopsida",
-          "order": "Dicranales",
-          "family": "Leucobryaceae",
-          "genus": "Leucobryum"
-        },
-        {
-          "label": "Varronia curassavica",
-          "registros": 2,
-          "slug_especie": "varronia-curassavica",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4060951",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e04e0283c45700544e3cb9/summary",
-          "species": "Varronia curassavica",
+          "url_gbif": "https://www.gbif.org/species/3170200",
+          "species": "Oxypetalum cordifolium",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Boraginales",
-          "family": "Cordiaceae",
-          "genus": "Varronia"
+          "order": "Gentianales",
+          "family": "Apocynaceae",
+          "genus": "Oxypetalum"
         },
         {
           "label": "Abutilon viscosum",
@@ -8657,53 +8672,6 @@
           "order": "Malvales",
           "family": "Malvaceae",
           "genus": "Abutilon"
-        },
-        {
-          "label": "Astronium fraxinifolium",
-          "registros": 1,
-          "slug_especie": "astronium-fraxinifolium",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7321614",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c6bffbf0106c67230e73e5/summary",
-          "species": "Astronium fraxinifolium",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Sapindales",
-          "family": "Anacardiaceae",
-          "genus": "Astronium"
-        },
-        {
-          "label": "Casearia tremula",
-          "registros": 1,
-          "slug_especie": "casearia-tremula",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7459713",
-          "species": "Casearia tremula",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Salicaceae",
-          "genus": "Casearia"
-        },
-        {
-          "label": "Cnidoscolus urens",
-          "registros": 1,
-          "slug_especie": "cnidoscolus-urens",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3073653",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/595a88102f4fd7bc7f39e530/summary",
-          "species": "Cnidoscolus urens",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Euphorbiaceae",
-          "genus": "Cnidoscolus"
         },
         {
           "label": "Datura ferox",
@@ -8829,19 +8797,19 @@
           "genus": "Marchesinia"
         },
         {
-          "label": "Oxypetalum cordifolium",
+          "label": "Casearia tremula",
           "registros": 1,
-          "slug_especie": "oxypetalum-cordifolium",
+          "slug_especie": "casearia-tremula",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3170200",
-          "species": "Oxypetalum cordifolium",
+          "url_gbif": "https://www.gbif.org/species/7459713",
+          "species": "Casearia tremula",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Gentianales",
-          "family": "Apocynaceae",
-          "genus": "Oxypetalum"
+          "order": "Malpighiales",
+          "family": "Salicaceae",
+          "genus": "Casearia"
         },
         {
           "label": "Parkinsonia praecox",
@@ -9041,6 +9009,22 @@
           "genus": "Syzygium"
         },
         {
+          "label": "Astronium fraxinifolium",
+          "registros": 1,
+          "slug_especie": "astronium-fraxinifolium",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7321614",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c6bffbf0106c67230e73e5/summary",
+          "species": "Astronium fraxinifolium",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Sapindales",
+          "family": "Anacardiaceae",
+          "genus": "Astronium"
+        },
+        {
           "label": "Tridax procumbens",
           "registros": 1,
           "slug_especie": "tridax-procumbens",
@@ -9054,6 +9038,22 @@
           "order": "Asterales",
           "family": "Asteraceae",
           "genus": "Tridax"
+        },
+        {
+          "label": "Cnidoscolus urens",
+          "registros": 1,
+          "slug_especie": "cnidoscolus-urens",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3073653",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/595a88102f4fd7bc7f39e530/summary",
+          "species": "Cnidoscolus urens",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Malpighiales",
+          "family": "Euphorbiaceae",
+          "genus": "Cnidoscolus"
         }
       ],
       "species_list_tematica": {
@@ -9836,6 +9836,22 @@
           "genus": "Coffea"
         },
         {
+          "label": "Varronia curassavica",
+          "registros": 2,
+          "slug_especie": "varronia-curassavica",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/4060951",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e04e0283c45700544e3cb9/summary",
+          "species": "Varronia curassavica",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Boraginales",
+          "family": "Cordiaceae",
+          "genus": "Varronia"
+        },
+        {
           "label": "Cardiospermum grandiflorum",
           "registros": 2,
           "slug_especie": "cardiospermum-grandiflorum",
@@ -9849,21 +9865,6 @@
           "order": "Sapindales",
           "family": "Sapindaceae",
           "genus": "Cardiospermum"
-        },
-        {
-          "label": "Drosera communis",
-          "registros": 2,
-          "slug_especie": "drosera-communis",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3191024",
-          "species": "Drosera communis",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Caryophyllales",
-          "family": "Droseraceae",
-          "genus": "Drosera"
         },
         {
           "label": "Haematoxylum brasiletto",
@@ -9882,20 +9883,34 @@
           "genus": "Haematoxylum"
         },
         {
-          "label": "Varronia curassavica",
+          "label": "Drosera communis",
           "registros": 2,
-          "slug_especie": "varronia-curassavica",
+          "slug_especie": "drosera-communis",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4060951",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e04e0283c45700544e3cb9/summary",
-          "species": "Varronia curassavica",
+          "url_gbif": "https://www.gbif.org/species/3191024",
+          "species": "Drosera communis",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Boraginales",
-          "family": "Cordiaceae",
-          "genus": "Varronia"
+          "order": "Caryophyllales",
+          "family": "Droseraceae",
+          "genus": "Drosera"
+        },
+        {
+          "label": "Oxypetalum cordifolium",
+          "registros": 1,
+          "slug_especie": "oxypetalum-cordifolium",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3170200",
+          "species": "Oxypetalum cordifolium",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Gentianales",
+          "family": "Apocynaceae",
+          "genus": "Oxypetalum"
         },
         {
           "label": "Abutilon viscosum",
@@ -9913,20 +9928,19 @@
           "genus": "Abutilon"
         },
         {
-          "label": "Astronium fraxinifolium",
+          "label": "Digitaria californica",
           "registros": 1,
-          "slug_especie": "astronium-fraxinifolium",
+          "slug_especie": "digitaria-californica",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7321614",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c6bffbf0106c67230e73e5/summary",
-          "species": "Astronium fraxinifolium",
+          "url_gbif": "https://www.gbif.org/species/5289937",
+          "species": "Digitaria californica",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Sapindales",
-          "family": "Anacardiaceae",
-          "genus": "Astronium"
+          "class": "Liliopsida",
+          "order": "Poales",
+          "family": "Poaceae",
+          "genus": "Digitaria"
         },
         {
           "label": "Casearia tremula",
@@ -9942,52 +9956,6 @@
           "order": "Malpighiales",
           "family": "Salicaceae",
           "genus": "Casearia"
-        },
-        {
-          "label": "Cnidoscolus urens",
-          "registros": 1,
-          "slug_especie": "cnidoscolus-urens",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3073653",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/595a88102f4fd7bc7f39e530/summary",
-          "species": "Cnidoscolus urens",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Euphorbiaceae",
-          "genus": "Cnidoscolus"
-        },
-        {
-          "label": "Datura ferox",
-          "registros": 1,
-          "slug_especie": "datura-ferox",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2928739",
-          "species": "Datura ferox",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Solanales",
-          "family": "Solanaceae",
-          "genus": "Datura"
-        },
-        {
-          "label": "Digitaria californica",
-          "registros": 1,
-          "slug_especie": "digitaria-californica",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5289937",
-          "species": "Digitaria californica",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Poales",
-          "family": "Poaceae",
-          "genus": "Digitaria"
         },
         {
           "label": "Escallonia pendula",
@@ -10052,6 +10020,22 @@
           "genus": "Gliricidia"
         },
         {
+          "label": "Cnidoscolus urens",
+          "registros": 1,
+          "slug_especie": "cnidoscolus-urens",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3073653",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/595a88102f4fd7bc7f39e530/summary",
+          "species": "Cnidoscolus urens",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Malpighiales",
+          "family": "Euphorbiaceae",
+          "genus": "Cnidoscolus"
+        },
+        {
           "label": "Jatropha gossypiifolia",
           "registros": 1,
           "slug_especie": "jatropha-gossypiifolia",
@@ -10068,19 +10052,20 @@
           "genus": "Jatropha"
         },
         {
-          "label": "Oxypetalum cordifolium",
+          "label": "Astronium fraxinifolium",
           "registros": 1,
-          "slug_especie": "oxypetalum-cordifolium",
+          "slug_especie": "astronium-fraxinifolium",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3170200",
-          "species": "Oxypetalum cordifolium",
+          "url_gbif": "https://www.gbif.org/species/7321614",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c6bffbf0106c67230e73e5/summary",
+          "species": "Astronium fraxinifolium",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Gentianales",
-          "family": "Apocynaceae",
-          "genus": "Oxypetalum"
+          "order": "Sapindales",
+          "family": "Anacardiaceae",
+          "genus": "Astronium"
         },
         {
           "label": "Parkinsonia praecox",
@@ -10293,6 +10278,21 @@
           "order": "Asterales",
           "family": "Asteraceae",
           "genus": "Tridax"
+        },
+        {
+          "label": "Datura ferox",
+          "registros": 1,
+          "slug_especie": "datura-ferox",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2928739",
+          "species": "Datura ferox",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Solanales",
+          "family": "Solanaceae",
+          "genus": "Datura"
         }
       ],
       "species_list_tematica": {
@@ -10860,22 +10860,6 @@
           "genus": "Ramphocelus"
         },
         {
-          "label": "Coereba flaveola",
-          "registros": 10,
-          "slug_especie": "coereba-flaveola",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2493744",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56df75bd83c45700544e3c7b/summary",
-          "species": "Coereba flaveola",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Coereba"
-        },
-        {
           "label": "Icterus chrysater",
           "registros": 10,
           "slug_especie": "icterus-chrysater",
@@ -10890,6 +10874,22 @@
           "order": "Passeriformes",
           "family": "Icteridae",
           "genus": "Icterus"
+        },
+        {
+          "label": "Coereba flaveola",
+          "registros": 10,
+          "slug_especie": "coereba-flaveola",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2493744",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56df75bd83c45700544e3c7b/summary",
+          "species": "Coereba flaveola",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Coereba"
         }
       ],
       "species_list_tematica": {

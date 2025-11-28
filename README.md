@@ -1,6 +1,7 @@
-# sibdata 
+# sibdata
 
 <!-- badges: start -->
+
 <!-- badges: end -->
 
 > **Paquete R para el procesamiento, análisis y visualización de datos de biodiversidad de Colombia**
@@ -11,17 +12,17 @@
 
 Este paquete transforma datos científicos de biodiversidad en información accesible y visualizable para científicos, tomadores de decisiones, educadores y el público general. Facilita:
 
-- **Consultas analíticas** sobre 80,000+ especies colombianas
-- **Visualizaciones interactivas** (mapas, gráficos, tablas)
-- **Generación de datos estáticos** para sitios web
-- **Explorador Shiny** para análisis dinámico
-- **Acceso eficiente** a través de DuckDB
+-   **Consultas analíticas** sobre 80,000+ especies colombianas
+-   **Visualizaciones interactivas** (mapas, gráficos, tablas)
+-   **Generación de datos estáticos** para sitios web
+-   **Explorador Shiny** para análisis dinámico
+-   **Acceso eficiente** a través de DuckDB
 
 ## 🏗️ Arquitectura del Sistema
 
 El paquete es el componente central en un sistema de tres capas:
 
-```
+```         
 ┌─────────────────────────────────────────────────────────────┐
 │  1. Scripts Python (GitLab)                                 │
 │     Procesan datos de iNaturalist, GBIF, colecciones        │
@@ -50,7 +51,7 @@ El paquete es el componente central en un sistema de tres capas:
 
 ### Desde GitHub (recomendado)
 
-```r
+``` r
 # Instalar remotes si no lo tiene
 install.packages("remotes")
 
@@ -67,26 +68,26 @@ remotes::install_github("datasketch/sibdata", dependencies = TRUE)
 
 El paquete se instala con todas sus dependencias automáticamente:
 
-- `DBI`, `RSQLite`, `duckdb` - Gestión de bases de datos
-- `dplyr`, `tidyr` - Manipulación de datos
-- `jsonlite` - Generación de JSON
-- `leaflet` - Mapas interactivos
-- `highcharter`, `hgmagic` - Gráficos interactivos
-- `shiny`, `DT` - Aplicación web interactiva
+-   `DBI`, `RSQLite`, `duckdb` - Gestión de bases de datos
+-   `dplyr`, `tidyr` - Manipulación de datos
+-   `jsonlite` - Generación de JSON
+-   `leaflet` - Mapas interactivos
+-   `highcharter`, `hgmagic` - Gráficos interactivos
+-   `shiny`, `DT` - Aplicación web interactiva
 
-**Nota:** El paquete incluye los datos (~200 MB), por lo que la instalación puede tomar varios minutos.
+**Nota:** El paquete incluye los datos (\~200 MB), por lo que la instalación puede tomar varios minutos.
 
 ## 🚀 Inicio Rápido
 
 ### Cargar el paquete
 
-```r
+``` r
 library(sibdata)
 ```
 
 ### Consultas básicas
 
-```r
+``` r
 # Conectar a la base de datos
 con <- get_app_connection(system.file("db/sibdata.duckdb", package = "sibdata"))
 
@@ -120,7 +121,7 @@ head(amenazadas_ant)
 
 ### Visualizaciones
 
-```r
+``` r
 # Crear mapa coroplético
 conmap <- gt_con()
 
@@ -148,7 +149,7 @@ grafico
 
 El paquete incluye una aplicación Shiny completa para explorar los datos interactivamente:
 
-```r
+``` r
 # Ejecutar el explorador (versión 4 - más reciente)
 shiny::runApp(
   system.file("org_sibhumboldt_sibdata_app4", package = "sibdata")
@@ -157,15 +158,15 @@ shiny::runApp(
 
 **Características del explorador:**
 
-- **Mapas coropléticos** de Colombia por departamento/municipio
-- **Gráficos dinámicos** (barras, tortas, treemaps)
-- **Tablas interactivas** con búsqueda y filtros
-- **Tarjetas informativas** con indicadores clave
-- **Descarga de datos** en Excel
-- **Filtros por**:
-  - Región (nacional, departamental, municipal)
-  - Grupo biológico (mamíferos, aves, plantas, etc.)
-  - Temática (amenazadas, CITES, endémicas, exóticas, migratorias)
+-   **Mapas coropléticos** de Colombia por departamento/municipio
+-   **Gráficos dinámicos** (barras, tortas, treemaps)
+-   **Tablas interactivas** con búsqueda y filtros
+-   **Tarjetas informativas** con indicadores clave
+-   **Descarga de datos** en Excel
+-   **Filtros por**:
+    -   Región (nacional, departamental, municipal)
+    -   Grupo biológico (mamíferos, aves, plantas, etc.)
+    -   Temática (amenazadas, CITES, endémicas, exóticas, migratorias)
 
 ## 📊 Funciones Principales
 
@@ -173,7 +174,7 @@ shiny::runApp(
 
 La función principal para obtener datos de biodiversidad:
 
-```r
+``` r
 sibdata(
   region = "colombia",        # Región: colombia, antioquia, medellin, etc.
   tipo = "especies",          # "especies" o "registros"
@@ -190,7 +191,7 @@ sibdata(
 
 ### Visualizaciones
 
-```r
+``` r
 # Mapas
 choropleth_map(data, region, tipo, con, conmap)
 
@@ -203,7 +204,7 @@ create_treemap_chart(data, r, con)
 
 ### Utilidades
 
-```r
+``` r
 # Regiones disponibles
 sib_available_regions(con)
 
@@ -219,7 +220,7 @@ sib_merge_ind_label(c("especies_region_total", "registros_region_total"), con)
 
 ## 🗂️ Estructura del Paquete
 
-```
+```         
 sibdata/
 ├── R/                          # Código R
 │   ├── sibdata.R              # Función principal de consulta
@@ -272,7 +273,7 @@ sibdata/
 
 ### Vignettes (Guías Extensas)
 
-```r
+``` r
 # Ver vignettes disponibles
 browseVignettes("sibdata")
 
@@ -285,7 +286,7 @@ vignette("explorador-shiny-app", package = "sibdata")
 
 ### Ayuda de funciones
 
-```r
+``` r
 # Ayuda de la función principal
 ?sibdata
 
@@ -303,7 +304,7 @@ vignette("explorador-shiny-app", package = "sibdata")
 
 Para actualizar los datos del paquete (administradores):
 
-```r
+``` r
 # 1. Sincronizar desde GitLab
 source("data-raw/DATASET.R")
 
@@ -325,41 +326,37 @@ Ver la vignette "Guía de Actualización de Datos" para instrucciones detalladas
 
 ### Cobertura Geográfica
 
-- **Nacional**: Colombia
-- **Departamental**: 32 departamentos
-- **Municipal**: 1,122+ municipios
-- **Regiones especiales**: 
-  - Región Amazonía
-  - Reserva Forestal La Planada
-  - Resguardo Indígena Pialapi Pueblo Viejo
+-   **Nacional**: Colombia
+-   **Departamental**: 32 departamentos
+-   **Municipal**: 1,122+ municipios
+-   **Regiones especiales**:
+    -   Región Amazonía
+    -   Reserva Forestal La Planada
+    -   Resguardo Indígena Pialapi Pueblo Viejo
 
 ### Grupos Biológicos (37 grupos)
 
-Incluyendo:
-- Mamíferos, Aves, Reptiles, Anfibios, Peces
-- Plantas vasculares, Algas, Hongos, Líquenes
-- Invertebrados (insectos, arácnidos, moluscos, etc.)
-- Microorganismos (bacterias, archaea, virus, protozoos)
+Incluyendo: - Mamíferos, Aves, Reptiles, Anfibios, Peces - Plantas vasculares, Algas, Hongos, Líquenes - Invertebrados (insectos, arácnidos, moluscos, etc.) - Microorganismos (bacterias, archaea, virus, protozoos)
 
 ### Temáticas de Conservación
 
-- **Amenazadas** (CR, EN, VU, NT)
-- **CITES** (Apéndices I, II, III)
-- **Endémicas**
-- **Exóticas** (invasoras, trasplantadas)
-- **Migratorias**
+-   **Amenazadas** (CR, EN, VU, NT)
+-   **CITES** (Apéndices I, II, III)
+-   **Endémicas**
+-   **Exóticas** (invasoras, trasplantadas)
+-   **Migratorias**
 
 ### Estadísticas
 
-- **Especies**: ~80,000
-- **Registros biológicos**: ~20,000,000
-- **Última actualización**: Enero 2025
+-   **Especies**: \~80,000
+-   **Registros biológicos**: \~20,000,000
+-   **Última actualización**: Enero 2025
 
 ## 🧪 Testing
 
 Este paquete aun no cuenta con tests consolidados, para referencia en el momento de incorporación se podrán verificar con:
 
-```r
+``` r
 # Ejecutar tests
 devtools::test()
 
@@ -371,20 +368,20 @@ covr::package_coverage()
 
 Este es un proyecto colaborativo entre:
 
-- **[Datasketch](https://datasketch.co)** - Desarrollo técnico
-- **[Instituto Humboldt](https://humboldt.org.co)** - Datos y contenido científico
-- **[SIB Colombia](https://biodiversidad.co)** - Plataforma y coordinación
+-   [**Datasketch**](https://datasketch.co) - Desarrollo técnico
+-   [**Instituto Humboldt**](https://humboldt.org.co) - Datos y contenido científico
+-   [**SIB Colombia**](https://biodiversidad.co) - Plataforma y coordinación
 
 ### Reportar problemas
 
 Si encuentra un bug o tiene una sugerencia:
 
-1. Verifique que no exista un [issue similar](https://github.com/datasketch/sibdata/issues)
-2. Cree un nuevo issue con:
-   - Descripción clara del problema
-   - Código reproducible
-   - Versión de R y del paquete
-   - Salida de `sessionInfo()`
+1.  Verifique que no exista un [issue similar](https://github.com/datasketch/sibdata/issues)
+2.  Cree un nuevo issue con:
+    -   Descripción clara del problema
+    -   Código reproducible
+    -   Versión de R y del paquete
+    -   Salida de `sessionInfo()`
 
 ## 📄 Licencia
 
@@ -392,17 +389,13 @@ Este proyecto está bajo licencia MIT. Ver archivo `LICENSE` para más detalles.
 
 ## 📞 Contacto
 
-- **Web**: https://cifras.biodiversidad.co
-- **GitHub**: https://github.com/datasketch/sibdata
+-   **Web**: <https://cifras.biodiversidad.co>
+-   **GitHub**: <https://github.com/datasketch/sibdata>
 
 ## 🙏 Agradecimientos
 
-Datos de biodiversidad proporcionados por:
-- Sistema de Información sobre Biodiversidad de Colombia (SIB Colombia)
-- Instituto de Investigación de Recursos Biológicos Alexander von Humboldt
-- Comunidad científica colombiana
-- Plataformas globales: GBIF, iNaturalist
+Datos de biodiversidad proporcionados por: - Sistema de Información sobre Biodiversidad de Colombia (SIB Colombia) - Instituto de Investigación de Recursos Biológicos Alexander von Humboldt - Comunidad científica colombiana - Plataformas globales: GBIF, iNaturalist
 
----
+------------------------------------------------------------------------
 
 **Hecho con ❤️ en Colombia** 🇨🇴

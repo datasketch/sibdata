@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -2397,6 +2397,22 @@
           "genus": "Coragyps"
         },
         {
+          "label": "Turdus ignobilis",
+          "registros": 11,
+          "slug_especie": "turdus-ignobilis",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2490722",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf9ee73c16479905cba7f4/summary",
+          "species": "Turdus ignobilis",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Turdidae",
+          "genus": "Turdus"
+        },
+        {
           "label": "Henicorhina leucophrys",
           "registros": 11,
           "slug_especie": "henicorhina-leucophrys",
@@ -2428,22 +2444,6 @@
           "genus": "Stilpnia"
         },
         {
-          "label": "Turdus ignobilis",
-          "registros": 11,
-          "slug_especie": "turdus-ignobilis",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2490722",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf9ee73c16479905cba7f4/summary",
-          "species": "Turdus ignobilis",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Turdidae",
-          "genus": "Turdus"
-        },
-        {
           "label": "Crotophaga ani",
           "registros": 10,
           "slug_especie": "crotophaga-ani",
@@ -2458,6 +2458,21 @@
           "order": "Cuculiformes",
           "family": "Cuculidae",
           "genus": "Crotophaga"
+        },
+        {
+          "label": "Saucerottia cyanifrons",
+          "registros": 9,
+          "slug_especie": "saucerottia-cyanifrons",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/9088790",
+          "species": "Saucerottia cyanifrons",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Apodiformes",
+          "family": "Trochilidae",
+          "genus": "Saucerottia"
         },
         {
           "label": "Icterus chrysater",
@@ -2476,34 +2491,34 @@
           "genus": "Icterus"
         },
         {
-          "label": "Saucerottia cyanifrons",
-          "registros": 9,
-          "slug_especie": "saucerottia-cyanifrons",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/9088790",
-          "species": "Saucerottia cyanifrons",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Apodiformes",
-          "family": "Trochilidae",
-          "genus": "Saucerottia"
-        },
-        {
-          "label": "Ixothraupis guttata",
+          "label": "Zimmerius chrysops",
           "registros": 8,
-          "slug_especie": "ixothraupis-guttata",
+          "slug_especie": "zimmerius-chrysops",
           "slug_grupo": "animales",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/9628189",
-          "species": "Ixothraupis guttata",
+          "url_gbif": "https://www.gbif.org/species/2483936",
+          "species": "Zimmerius chrysops",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Ixothraupis"
+          "family": "Tyrannidae",
+          "genus": "Zimmerius"
+        },
+        {
+          "label": "Ortalis columbiana",
+          "registros": 8,
+          "slug_especie": "ortalis-columbiana",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5229460",
+          "species": "Ortalis columbiana",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Galliformes",
+          "family": "Cracidae",
+          "genus": "Ortalis"
         },
         {
           "label": "Mniotilta varia",
@@ -2522,19 +2537,19 @@
           "genus": "Mniotilta"
         },
         {
-          "label": "Ortalis columbiana",
+          "label": "Ixothraupis guttata",
           "registros": 8,
-          "slug_especie": "ortalis-columbiana",
+          "slug_especie": "ixothraupis-guttata",
           "slug_grupo": "animales",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5229460",
-          "species": "Ortalis columbiana",
+          "url_gbif": "https://www.gbif.org/species/9628189",
+          "species": "Ixothraupis guttata",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": "Galliformes",
-          "family": "Cracidae",
-          "genus": "Ortalis"
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Ixothraupis"
         },
         {
           "label": "Setophaga fusca",
@@ -2551,21 +2566,6 @@
           "order": "Passeriformes",
           "family": "Parulidae",
           "genus": "Setophaga"
-        },
-        {
-          "label": "Zimmerius chrysops",
-          "registros": 8,
-          "slug_especie": "zimmerius-chrysops",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2483936",
-          "species": "Zimmerius chrysops",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Tyrannidae",
-          "genus": "Zimmerius"
         }
       ],
       "species_list_tematica": {
@@ -3690,6 +3690,21 @@
           "genus": "Coragyps"
         },
         {
+          "label": "Stilpnia cyanicollis",
+          "registros": 11,
+          "slug_especie": "stilpnia-cyanicollis",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/10992187",
+          "species": "Stilpnia cyanicollis",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Stilpnia"
+        },
+        {
           "label": "Henicorhina leucophrys",
           "registros": 11,
           "slug_especie": "henicorhina-leucophrys",
@@ -3704,21 +3719,6 @@
           "order": "Passeriformes",
           "family": "Troglodytidae",
           "genus": "Henicorhina"
-        },
-        {
-          "label": "Stilpnia cyanicollis",
-          "registros": 11,
-          "slug_especie": "stilpnia-cyanicollis",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/10992187",
-          "species": "Stilpnia cyanicollis",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Stilpnia"
         },
         {
           "label": "Turdus ignobilis",
@@ -3753,6 +3753,21 @@
           "genus": "Crotophaga"
         },
         {
+          "label": "Saucerottia cyanifrons",
+          "registros": 9,
+          "slug_especie": "saucerottia-cyanifrons",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/9088790",
+          "species": "Saucerottia cyanifrons",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Apodiformes",
+          "family": "Trochilidae",
+          "genus": "Saucerottia"
+        },
+        {
           "label": "Icterus chrysater",
           "registros": 9,
           "slug_especie": "icterus-chrysater",
@@ -3769,34 +3784,19 @@
           "genus": "Icterus"
         },
         {
-          "label": "Saucerottia cyanifrons",
-          "registros": 9,
-          "slug_especie": "saucerottia-cyanifrons",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/9088790",
-          "species": "Saucerottia cyanifrons",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Apodiformes",
-          "family": "Trochilidae",
-          "genus": "Saucerottia"
-        },
-        {
-          "label": "Ixothraupis guttata",
+          "label": "Ortalis columbiana",
           "registros": 8,
-          "slug_especie": "ixothraupis-guttata",
+          "slug_especie": "ortalis-columbiana",
           "slug_grupo": "aves",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/9628189",
-          "species": "Ixothraupis guttata",
+          "url_gbif": "https://www.gbif.org/species/5229460",
+          "species": "Ortalis columbiana",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Ixothraupis"
+          "order": "Galliformes",
+          "family": "Cracidae",
+          "genus": "Ortalis"
         },
         {
           "label": "Mniotilta varia",
@@ -3815,19 +3815,34 @@
           "genus": "Mniotilta"
         },
         {
-          "label": "Ortalis columbiana",
+          "label": "Zimmerius chrysops",
           "registros": 8,
-          "slug_especie": "ortalis-columbiana",
+          "slug_especie": "zimmerius-chrysops",
           "slug_grupo": "aves",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5229460",
-          "species": "Ortalis columbiana",
+          "url_gbif": "https://www.gbif.org/species/2483936",
+          "species": "Zimmerius chrysops",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": "Galliformes",
-          "family": "Cracidae",
-          "genus": "Ortalis"
+          "order": "Passeriformes",
+          "family": "Tyrannidae",
+          "genus": "Zimmerius"
+        },
+        {
+          "label": "Ixothraupis guttata",
+          "registros": 8,
+          "slug_especie": "ixothraupis-guttata",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/9628189",
+          "species": "Ixothraupis guttata",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Ixothraupis"
         },
         {
           "label": "Setophaga fusca",
@@ -3844,21 +3859,6 @@
           "order": "Passeriformes",
           "family": "Parulidae",
           "genus": "Setophaga"
-        },
-        {
-          "label": "Zimmerius chrysops",
-          "registros": 8,
-          "slug_especie": "zimmerius-chrysops",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2483936",
-          "species": "Zimmerius chrysops",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Tyrannidae",
-          "genus": "Zimmerius"
         }
       ],
       "species_list_tematica": {
@@ -7642,20 +7642,20 @@
           "genus": "Saltator"
         },
         {
-          "label": "Coragyps atratus",
+          "label": "Turdus ignobilis",
           "registros": 11,
-          "slug_especie": "coragyps-atratus",
+          "slug_especie": "turdus-ignobilis",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2481942",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4fe28f0106c67230e7394/summary",
-          "species": "Coragyps atratus",
+          "url_gbif": "https://www.gbif.org/species/2490722",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf9ee73c16479905cba7f4/summary",
+          "species": "Turdus ignobilis",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": "Accipitriformes",
-          "family": "Cathartidae",
-          "genus": "Coragyps"
+          "order": "Passeriformes",
+          "family": "Turdidae",
+          "genus": "Turdus"
         },
         {
           "label": "Henicorhina leucophrys",
@@ -7689,20 +7689,20 @@
           "genus": "Stilpnia"
         },
         {
-          "label": "Turdus ignobilis",
+          "label": "Coragyps atratus",
           "registros": 11,
-          "slug_especie": "turdus-ignobilis",
+          "slug_especie": "coragyps-atratus",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2490722",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf9ee73c16479905cba7f4/summary",
-          "species": "Turdus ignobilis",
+          "url_gbif": "https://www.gbif.org/species/2481942",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4fe28f0106c67230e7394/summary",
+          "species": "Coragyps atratus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Turdidae",
-          "genus": "Turdus"
+          "order": "Accipitriformes",
+          "family": "Cathartidae",
+          "genus": "Coragyps"
         },
         {
           "label": "Crotophaga ani",
@@ -7721,6 +7721,21 @@
           "genus": "Crotophaga"
         },
         {
+          "label": "Saucerottia cyanifrons",
+          "registros": 9,
+          "slug_especie": "saucerottia-cyanifrons",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/9088790",
+          "species": "Saucerottia cyanifrons",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Apodiformes",
+          "family": "Trochilidae",
+          "genus": "Saucerottia"
+        },
+        {
           "label": "Icterus chrysater",
           "registros": 9,
           "slug_especie": "icterus-chrysater",
@@ -7737,19 +7752,19 @@
           "genus": "Icterus"
         },
         {
-          "label": "Saucerottia cyanifrons",
-          "registros": 9,
-          "slug_especie": "saucerottia-cyanifrons",
+          "label": "Zimmerius chrysops",
+          "registros": 8,
+          "slug_especie": "zimmerius-chrysops",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/9088790",
-          "species": "Saucerottia cyanifrons",
+          "url_gbif": "https://www.gbif.org/species/2483936",
+          "species": "Zimmerius chrysops",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": "Apodiformes",
-          "family": "Trochilidae",
-          "genus": "Saucerottia"
+          "order": "Passeriformes",
+          "family": "Tyrannidae",
+          "genus": "Zimmerius"
         },
         {
           "label": "Ixothraupis guttata",
@@ -7765,6 +7780,22 @@
           "order": "Passeriformes",
           "family": "Thraupidae",
           "genus": "Ixothraupis"
+        },
+        {
+          "label": "Setophaga fusca",
+          "registros": 8,
+          "slug_especie": "setophaga-fusca",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/6093199",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf166a3c16479905cba7c4/summary",
+          "species": "Setophaga fusca",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Parulidae",
+          "genus": "Setophaga"
         },
         {
           "label": "Mniotilta varia",
@@ -7796,37 +7827,6 @@
           "order": "Galliformes",
           "family": "Cracidae",
           "genus": "Ortalis"
-        },
-        {
-          "label": "Setophaga fusca",
-          "registros": 8,
-          "slug_especie": "setophaga-fusca",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/6093199",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf166a3c16479905cba7c4/summary",
-          "species": "Setophaga fusca",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Parulidae",
-          "genus": "Setophaga"
-        },
-        {
-          "label": "Zimmerius chrysops",
-          "registros": 8,
-          "slug_especie": "zimmerius-chrysops",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2483936",
-          "species": "Zimmerius chrysops",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Tyrannidae",
-          "genus": "Zimmerius"
         }
       ],
       "species_list_tematica": {

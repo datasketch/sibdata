@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -2228,21 +2228,6 @@
           "genus": "Euphonia"
         },
         {
-          "label": "Stilpnia vitriolina",
-          "registros": 16,
-          "slug_especie": "stilpnia-vitriolina",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/11081628",
-          "species": "Stilpnia vitriolina",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Stilpnia"
-        },
-        {
           "label": "Thraupis episcopus",
           "registros": 16,
           "slug_especie": "thraupis-episcopus",
@@ -2257,6 +2242,21 @@
           "order": "Passeriformes",
           "family": "Thraupidae",
           "genus": "Thraupis"
+        },
+        {
+          "label": "Stilpnia vitriolina",
+          "registros": 16,
+          "slug_especie": "stilpnia-vitriolina",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/11081628",
+          "species": "Stilpnia vitriolina",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Stilpnia"
         },
         {
           "label": "Columbina talpacoti",
@@ -3449,20 +3449,20 @@
           "genus": "Mimus"
         },
         {
-          "label": "Euphonia laniirostris",
+          "label": "Thraupis episcopus",
           "registros": 16,
-          "slug_especie": "euphonia-laniirostris",
+          "slug_especie": "thraupis-episcopus",
           "slug_grupo": "aves",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2487998",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e0a3ca83c45700544e3cdb/summary",
-          "species": "Euphonia laniirostris",
+          "url_gbif": "https://www.gbif.org/species/2488602",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf719b3c16479905cba7e1/summary",
+          "species": "Thraupis episcopus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Fringillidae",
-          "genus": "Euphonia"
+          "family": "Thraupidae",
+          "genus": "Thraupis"
         },
         {
           "label": "Stilpnia vitriolina",
@@ -3480,20 +3480,20 @@
           "genus": "Stilpnia"
         },
         {
-          "label": "Thraupis episcopus",
+          "label": "Euphonia laniirostris",
           "registros": 16,
-          "slug_especie": "thraupis-episcopus",
+          "slug_especie": "euphonia-laniirostris",
           "slug_grupo": "aves",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2488602",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf719b3c16479905cba7e1/summary",
-          "species": "Thraupis episcopus",
+          "url_gbif": "https://www.gbif.org/species/2487998",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e0a3ca83c45700544e3cdb/summary",
+          "species": "Euphonia laniirostris",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Thraupis"
+          "family": "Fringillidae",
+          "genus": "Euphonia"
         },
         {
           "label": "Columbina talpacoti",
@@ -7731,21 +7731,6 @@
           "genus": "Euphonia"
         },
         {
-          "label": "Stilpnia vitriolina",
-          "registros": 16,
-          "slug_especie": "stilpnia-vitriolina",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/11081628",
-          "species": "Stilpnia vitriolina",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Stilpnia"
-        },
-        {
           "label": "Thraupis episcopus",
           "registros": 16,
           "slug_especie": "thraupis-episcopus",
@@ -7760,6 +7745,21 @@
           "order": "Passeriformes",
           "family": "Thraupidae",
           "genus": "Thraupis"
+        },
+        {
+          "label": "Stilpnia vitriolina",
+          "registros": 16,
+          "slug_especie": "stilpnia-vitriolina",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/11081628",
+          "species": "Stilpnia vitriolina",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Stilpnia"
         },
         {
           "label": "Columbina talpacoti",

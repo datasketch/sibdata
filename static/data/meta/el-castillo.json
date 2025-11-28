@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -975,20 +975,20 @@
       "parent_registros_cites_iii": 21405,
       "list_especies_cites": [
         {
-          "label": "Pteroglossus castanotis",
-          "slug_especie": "pteroglossus-castanotis",
-          "registros": 27,
-          "url_gbif": "https://www.gbif.org/species/2478822",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7835383c45700544e4088/summary",
-          "slug_tematica": "cites-iii"
-        },
-        {
           "label": "Rupornis magnirostris",
           "slug_especie": "rupornis-magnirostris",
           "registros": 27,
           "url_gbif": "https://www.gbif.org/species/5844398",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56ce57a13c16479905cba79b/summary",
           "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Pteroglossus castanotis",
+          "slug_especie": "pteroglossus-castanotis",
+          "registros": 27,
+          "url_gbif": "https://www.gbif.org/species/2478822",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7835383c45700544e4088/summary",
+          "slug_tematica": "cites-iii"
         },
         {
           "label": "Puma concolor",
@@ -1014,14 +1014,6 @@
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Herpetotheres cachinnans",
-          "slug_especie": "herpetotheres-cachinnans",
-          "registros": 9,
-          "url_gbif": "https://www.gbif.org/species/2481071",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56d997513c16479905cba9a0/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
           "label": "Panthera onca",
           "slug_especie": "panthera-onca",
           "registros": 9,
@@ -1030,11 +1022,11 @@
           "slug_tematica": "cites-i"
         },
         {
-          "label": "Eudocimus ruber",
-          "slug_especie": "eudocimus-ruber",
-          "registros": 8,
-          "url_gbif": "https://www.gbif.org/species/5229204",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7869d83c45700544e40c6/summary",
+          "label": "Herpetotheres cachinnans",
+          "slug_especie": "herpetotheres-cachinnans",
+          "registros": 9,
+          "url_gbif": "https://www.gbif.org/species/2481071",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d997513c16479905cba9a0/summary",
           "slug_tematica": "cites-ii"
         },
         {
@@ -1043,6 +1035,14 @@
           "registros": 8,
           "url_gbif": "https://www.gbif.org/species/9685907",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56c769ddf0106c67230e73ec/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Eudocimus ruber",
+          "slug_especie": "eudocimus-ruber",
+          "registros": 8,
+          "url_gbif": "https://www.gbif.org/species/5229204",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7869d83c45700544e40c6/summary",
           "slug_tematica": "cites-ii"
         },
         {
@@ -1115,19 +1115,19 @@
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Eudocimus ruber",
-          "slug_especie": "eudocimus-ruber",
-          "registros": 8,
-          "url_gbif": "https://www.gbif.org/species/5229204",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7869d83c45700544e40c6/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
           "label": "Falco sparverius",
           "slug_especie": "falco-sparverius",
           "registros": 8,
           "url_gbif": "https://www.gbif.org/species/9685907",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56c769ddf0106c67230e73ec/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Eudocimus ruber",
+          "slug_especie": "eudocimus-ruber",
+          "registros": 8,
+          "url_gbif": "https://www.gbif.org/species/5229204",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7869d83c45700544e40c6/summary",
           "slug_tematica": "cites-ii"
         },
         {
@@ -1175,20 +1175,20 @@
       ],
       "species_list": [
         {
-          "label": "Pteroglossus castanotis",
-          "slug_especie": "pteroglossus-castanotis",
-          "registros": 27,
-          "url_gbif": "https://www.gbif.org/species/2478822",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7835383c45700544e4088/summary",
-          "slug_tematica": "cites-iii"
-        },
-        {
           "label": "Rupornis magnirostris",
           "slug_especie": "rupornis-magnirostris",
           "registros": 27,
           "url_gbif": "https://www.gbif.org/species/5844398",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56ce57a13c16479905cba79b/summary",
           "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Pteroglossus castanotis",
+          "slug_especie": "pteroglossus-castanotis",
+          "registros": 27,
+          "url_gbif": "https://www.gbif.org/species/2478822",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7835383c45700544e4088/summary",
+          "slug_tematica": "cites-iii"
         },
         {
           "label": "Puma concolor",
@@ -1214,14 +1214,6 @@
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Herpetotheres cachinnans",
-          "slug_especie": "herpetotheres-cachinnans",
-          "registros": 9,
-          "url_gbif": "https://www.gbif.org/species/2481071",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56d997513c16479905cba9a0/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
           "label": "Panthera onca",
           "slug_especie": "panthera-onca",
           "registros": 9,
@@ -1230,11 +1222,11 @@
           "slug_tematica": "cites-i"
         },
         {
-          "label": "Eudocimus ruber",
-          "slug_especie": "eudocimus-ruber",
-          "registros": 8,
-          "url_gbif": "https://www.gbif.org/species/5229204",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7869d83c45700544e40c6/summary",
+          "label": "Herpetotheres cachinnans",
+          "slug_especie": "herpetotheres-cachinnans",
+          "registros": 9,
+          "url_gbif": "https://www.gbif.org/species/2481071",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d997513c16479905cba9a0/summary",
           "slug_tematica": "cites-ii"
         },
         {
@@ -1243,6 +1235,14 @@
           "registros": 8,
           "url_gbif": "https://www.gbif.org/species/9685907",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56c769ddf0106c67230e73ec/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Eudocimus ruber",
+          "slug_especie": "eudocimus-ruber",
+          "registros": 8,
+          "url_gbif": "https://www.gbif.org/species/5229204",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7869d83c45700544e40c6/summary",
           "slug_tematica": "cites-ii"
         },
         {
@@ -2464,6 +2464,21 @@
           "genus": "Socratea"
         },
         {
+          "label": "Protium apiculatum",
+          "registros": 7,
+          "slug_especie": "protium-apiculatum",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3992474",
+          "species": "Protium apiculatum",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Sapindales",
+          "family": "Burseraceae",
+          "genus": "Protium"
+        },
+        {
           "label": "Perebea xanthochyma",
           "registros": 7,
           "slug_especie": "perebea-xanthochyma",
@@ -2479,19 +2494,19 @@
           "genus": "Perebea"
         },
         {
-          "label": "Protium apiculatum",
-          "registros": 7,
-          "slug_especie": "protium-apiculatum",
+          "label": "Urera caracasana",
+          "registros": 6,
+          "slug_especie": "urera-caracasana",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3992474",
-          "species": "Protium apiculatum",
+          "url_gbif": "https://www.gbif.org/species/2984335",
+          "species": "Urera caracasana",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Sapindales",
-          "family": "Burseraceae",
-          "genus": "Protium"
+          "order": "Rosales",
+          "family": "Urticaceae",
+          "genus": "Urera"
         },
         {
           "label": "Dendropanax arboreus",
@@ -2510,19 +2525,19 @@
           "genus": "Dendropanax"
         },
         {
-          "label": "Urera caracasana",
-          "registros": 6,
-          "slug_especie": "urera-caracasana",
+          "label": "Trichilia elegans",
+          "registros": 5,
+          "slug_especie": "trichilia-elegans",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2984335",
-          "species": "Urera caracasana",
+          "url_gbif": "https://www.gbif.org/species/7271353",
+          "species": "Trichilia elegans",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Rosales",
-          "family": "Urticaceae",
-          "genus": "Urera"
+          "order": "Sapindales",
+          "family": "Meliaceae",
+          "genus": "Trichilia"
         },
         {
           "label": "Celtis schippii",
@@ -2538,21 +2553,6 @@
           "order": "Rosales",
           "family": "Cannabaceae",
           "genus": "Celtis"
-        },
-        {
-          "label": "Clarisia racemosa",
-          "registros": 5,
-          "slug_especie": "clarisia-racemosa",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5572170",
-          "species": "Clarisia racemosa",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Rosales",
-          "family": "Moraceae",
-          "genus": "Clarisia"
         },
         {
           "label": "Heliconia episcopalis",
@@ -2571,19 +2571,34 @@
           "genus": "Heliconia"
         },
         {
-          "label": "Trichilia elegans",
+          "label": "Clarisia racemosa",
           "registros": 5,
-          "slug_especie": "trichilia-elegans",
+          "slug_especie": "clarisia-racemosa",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7271353",
-          "species": "Trichilia elegans",
+          "url_gbif": "https://www.gbif.org/species/5572170",
+          "species": "Clarisia racemosa",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Sapindales",
-          "family": "Meliaceae",
-          "genus": "Trichilia"
+          "order": "Rosales",
+          "family": "Moraceae",
+          "genus": "Clarisia"
+        },
+        {
+          "label": "Pseudolmedia laevis",
+          "registros": 4,
+          "slug_especie": "pseudolmedia-laevis",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3764170",
+          "species": "Pseudolmedia laevis",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Rosales",
+          "family": "Moraceae",
+          "genus": "Pseudolmedia"
         },
         {
           "label": "Astrocaryum murumuru",
@@ -2599,22 +2614,6 @@
           "order": "Arecales",
           "family": "Arecaceae",
           "genus": "Astrocaryum"
-        },
-        {
-          "label": "Genipa americana",
-          "registros": 4,
-          "slug_especie": "genipa-americana",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2895593",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/5fdb87185a4ab0a71da8ece3/summary",
-          "species": "Genipa americana",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Gentianales",
-          "family": "Rubiaceae",
-          "genus": "Genipa"
         },
         {
           "label": "Piper aduncum",
@@ -2633,19 +2632,20 @@
           "genus": "Piper"
         },
         {
-          "label": "Pseudolmedia laevis",
+          "label": "Genipa americana",
           "registros": 4,
-          "slug_especie": "pseudolmedia-laevis",
+          "slug_especie": "genipa-americana",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3764170",
-          "species": "Pseudolmedia laevis",
+          "url_gbif": "https://www.gbif.org/species/2895593",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5fdb87185a4ab0a71da8ece3/summary",
+          "species": "Genipa americana",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Rosales",
-          "family": "Moraceae",
-          "genus": "Pseudolmedia"
+          "order": "Gentianales",
+          "family": "Rubiaceae",
+          "genus": "Genipa"
         }
       ],
       "species_list_tematica": {
@@ -3164,21 +3164,6 @@
           "genus": "Tyrannus"
         },
         {
-          "label": "Cyanocorax violaceus",
-          "registros": 31,
-          "slug_especie": "cyanocorax-violaceus",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2482564",
-          "species": "Cyanocorax violaceus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Corvidae",
-          "genus": "Cyanocorax"
-        },
-        {
           "label": "Todirostrum cinereum",
           "registros": 31,
           "slug_especie": "todirostrum-cinereum",
@@ -3193,6 +3178,21 @@
           "order": "Passeriformes",
           "family": "Tyrannidae",
           "genus": "Todirostrum"
+        },
+        {
+          "label": "Cyanocorax violaceus",
+          "registros": 31,
+          "slug_especie": "cyanocorax-violaceus",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2482564",
+          "species": "Cyanocorax violaceus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Corvidae",
+          "genus": "Cyanocorax"
         },
         {
           "label": "Bubulcus ibis",
@@ -3227,6 +3227,22 @@
           "genus": "Vanellus"
         },
         {
+          "label": "Troglodytes aedon",
+          "registros": 27,
+          "slug_especie": "troglodytes-aedon",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5231459",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf90d83c16479905cba7ee/summary",
+          "species": "Troglodytes aedon",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Troglodytidae",
+          "genus": "Troglodytes"
+        },
+        {
           "label": "Pteroglossus castanotis",
           "registros": 27,
           "slug_especie": "pteroglossus-castanotis",
@@ -3257,22 +3273,6 @@
           "order": "Accipitriformes",
           "family": "Accipitridae",
           "genus": "Rupornis"
-        },
-        {
-          "label": "Troglodytes aedon",
-          "registros": 27,
-          "slug_especie": "troglodytes-aedon",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5231459",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf90d83c16479905cba7ee/summary",
-          "species": "Troglodytes aedon",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Troglodytidae",
-          "genus": "Troglodytes"
         },
         {
           "label": "Syrigma sibilatrix",
@@ -3509,24 +3509,6 @@
         ],
         "cites": [
           {
-            "label": "Pteroglossus castanotis",
-            "registros": 27,
-            "slug_especie": "pteroglossus-castanotis",
-            "slug_tematica": "cites-iii",
-            "tematica_label": "Apéndice CITES III",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2478822",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7835383c45700544e4088/summary",
-            "species": "Pteroglossus castanotis",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Piciformes",
-            "family": "Ramphastidae",
-            "genus": "Pteroglossus"
-          },
-          {
             "label": "Rupornis magnirostris",
             "registros": 27,
             "slug_especie": "rupornis-magnirostris",
@@ -3543,6 +3525,24 @@
             "order": "Accipitriformes",
             "family": "Accipitridae",
             "genus": "Rupornis"
+          },
+          {
+            "label": "Pteroglossus castanotis",
+            "registros": 27,
+            "slug_especie": "pteroglossus-castanotis",
+            "slug_tematica": "cites-iii",
+            "tematica_label": "Apéndice CITES III",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2478822",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7835383c45700544e4088/summary",
+            "species": "Pteroglossus castanotis",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Piciformes",
+            "family": "Ramphastidae",
+            "genus": "Pteroglossus"
           },
           {
             "label": "Puma concolor",
@@ -3563,6 +3563,23 @@
             "genus": "Puma"
           },
           {
+            "label": "Phaethornis augusti",
+            "registros": 10,
+            "slug_especie": "phaethornis-augusti",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2476628",
+            "species": "Phaethornis augusti",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Phaethornis"
+          },
+          {
             "label": "Forpus conspicillatus",
             "registros": 10,
             "slug_especie": "forpus-conspicillatus",
@@ -3579,23 +3596,6 @@
             "order": "Psittaciformes",
             "family": "Psittacidae",
             "genus": "Forpus"
-          },
-          {
-            "label": "Phaethornis augusti",
-            "registros": 10,
-            "slug_especie": "phaethornis-augusti",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476628",
-            "species": "Phaethornis augusti",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Phaethornis"
           },
           {
             "label": "Herpetotheres cachinnans",
@@ -4824,22 +4824,6 @@
           "genus": "Todirostrum"
         },
         {
-          "label": "Bubulcus ibis",
-          "registros": 28,
-          "slug_especie": "bubulcus-ibis",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2480830",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c20d14f0106c67230e7320/summary",
-          "species": "Bubulcus ibis",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Pelecaniformes",
-          "family": "Ardeidae",
-          "genus": "Bubulcus"
-        },
-        {
           "label": "Vanellus chilensis",
           "registros": 28,
           "slug_especie": "vanellus-chilensis",
@@ -4854,6 +4838,22 @@
           "order": "Charadriiformes",
           "family": "Charadriidae",
           "genus": "Vanellus"
+        },
+        {
+          "label": "Bubulcus ibis",
+          "registros": 28,
+          "slug_especie": "bubulcus-ibis",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2480830",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c20d14f0106c67230e7320/summary",
+          "species": "Bubulcus ibis",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Pelecaniformes",
+          "family": "Ardeidae",
+          "genus": "Bubulcus"
         },
         {
           "label": "Pteroglossus castanotis",
@@ -5031,6 +5031,24 @@
         ],
         "cites": [
           {
+            "label": "Rupornis magnirostris",
+            "registros": 27,
+            "slug_especie": "rupornis-magnirostris",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5844398",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56ce57a13c16479905cba79b/summary",
+            "species": "Rupornis magnirostris",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Accipitriformes",
+            "family": "Accipitridae",
+            "genus": "Rupornis"
+          },
+          {
             "label": "Pteroglossus castanotis",
             "registros": 27,
             "slug_especie": "pteroglossus-castanotis",
@@ -5049,22 +5067,21 @@
             "genus": "Pteroglossus"
           },
           {
-            "label": "Rupornis magnirostris",
-            "registros": 27,
-            "slug_especie": "rupornis-magnirostris",
+            "label": "Phaethornis augusti",
+            "registros": 10,
+            "slug_especie": "phaethornis-augusti",
             "slug_tematica": "cites-ii",
             "tematica_label": "Apéndice CITES II",
             "slug_grupo": "aves",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5844398",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56ce57a13c16479905cba79b/summary",
-            "species": "Rupornis magnirostris",
+            "url_gbif": "https://www.gbif.org/species/2476628",
+            "species": "Phaethornis augusti",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Aves",
-            "order": "Accipitriformes",
-            "family": "Accipitridae",
-            "genus": "Rupornis"
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Phaethornis"
           },
           {
             "label": "Forpus conspicillatus",
@@ -5085,23 +5102,6 @@
             "genus": "Forpus"
           },
           {
-            "label": "Phaethornis augusti",
-            "registros": 10,
-            "slug_especie": "phaethornis-augusti",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476628",
-            "species": "Phaethornis augusti",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Phaethornis"
-          },
-          {
             "label": "Herpetotheres cachinnans",
             "registros": 9,
             "slug_especie": "herpetotheres-cachinnans",
@@ -5120,24 +5120,6 @@
             "genus": "Herpetotheres"
           },
           {
-            "label": "Eudocimus ruber",
-            "registros": 8,
-            "slug_especie": "eudocimus-ruber",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5229204",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7869d83c45700544e40c6/summary",
-            "species": "Eudocimus ruber",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Pelecaniformes",
-            "family": "Threskiornithidae",
-            "genus": "Eudocimus"
-          },
-          {
             "label": "Falco sparverius",
             "registros": 8,
             "slug_especie": "falco-sparverius",
@@ -5154,6 +5136,24 @@
             "order": "Falconiformes",
             "family": "Falconidae",
             "genus": "Falco"
+          },
+          {
+            "label": "Eudocimus ruber",
+            "registros": 8,
+            "slug_especie": "eudocimus-ruber",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5229204",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7869d83c45700544e40c6/summary",
+            "species": "Eudocimus ruber",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Pelecaniformes",
+            "family": "Threskiornithidae",
+            "genus": "Eudocimus"
           },
           {
             "label": "Brotogeris cyanoptera",
@@ -7543,6 +7543,37 @@
           "genus": "Camponotus"
         },
         {
+          "label": "Mononychellus tanajoa",
+          "registros": 2,
+          "slug_especie": "mononychellus-tanajoa",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2129688",
+          "species": "Mononychellus tanajoa",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Arachnida",
+          "order": "Trombidiformes",
+          "family": "Tetranychidae",
+          "genus": "Mononychellus"
+        },
+        {
+          "label": "Megaphobema robustum",
+          "registros": 2,
+          "slug_especie": "megaphobema-robustum",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2153931",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5e3c6d997312d26d51df5cee/summary",
+          "species": "Megaphobema robustum",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Arachnida",
+          "order": "Araneae",
+          "family": "Theraphosidae",
+          "genus": "Megaphobema"
+        },
+        {
           "label": "Cyphomyrmex major",
           "registros": 2,
           "slug_especie": "cyphomyrmex-major",
@@ -7571,37 +7602,6 @@
           "order": "Hymenoptera",
           "family": "Formicidae",
           "genus": "Labidus"
-        },
-        {
-          "label": "Megaphobema robustum",
-          "registros": 2,
-          "slug_especie": "megaphobema-robustum",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2153931",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/5e3c6d997312d26d51df5cee/summary",
-          "species": "Megaphobema robustum",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Arachnida",
-          "order": "Araneae",
-          "family": "Theraphosidae",
-          "genus": "Megaphobema"
-        },
-        {
-          "label": "Mononychellus tanajoa",
-          "registros": 2,
-          "slug_especie": "mononychellus-tanajoa",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2129688",
-          "species": "Mononychellus tanajoa",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Arachnida",
-          "order": "Trombidiformes",
-          "family": "Tetranychidae",
-          "genus": "Mononychellus"
         }
       ],
       "species_list_tematica": {
@@ -9340,18 +9340,46 @@
       ],
       "species_list_top": [
         {
-          "label": "Aphyocharax alburnus",
+          "label": "Chaetostoma dorsale",
           "registros": 2,
-          "slug_especie": "aphyocharax-alburnus",
+          "slug_especie": "chaetostoma-dorsale",
           "slug_grupo": "peces",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2353645",
-          "species": "Aphyocharax alburnus",
+          "url_gbif": "https://www.gbif.org/species/5202387",
+          "species": "Chaetostoma dorsale",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Siluriformes",
+          "family": "Loricariidae",
+          "genus": "Chaetostoma"
+        },
+        {
+          "label": "Pyrrhulina lugubris",
+          "registros": 2,
+          "slug_especie": "pyrrhulina-lugubris",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2355666",
+          "species": "Pyrrhulina lugubris",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Lebiasinidae",
+          "genus": "Pyrrhulina"
+        },
+        {
+          "label": "Odontostilbe splendida",
+          "registros": 2,
+          "slug_especie": "odontostilbe-splendida",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2352492",
+          "species": "Odontostilbe splendida",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "order": "Characiformes",
           "family": "Characidae",
-          "genus": "Aphyocharax"
+          "genus": "Odontostilbe"
         },
         {
           "label": "Apteronotus galvisi",
@@ -9369,18 +9397,18 @@
           "genus": "Apteronotus"
         },
         {
-          "label": "Chaetostoma dorsale",
+          "label": "Aphyocharax alburnus",
           "registros": 2,
-          "slug_especie": "chaetostoma-dorsale",
+          "slug_especie": "aphyocharax-alburnus",
           "slug_grupo": "peces",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5202387",
-          "species": "Chaetostoma dorsale",
+          "url_gbif": "https://www.gbif.org/species/2353645",
+          "species": "Aphyocharax alburnus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
-          "order": "Siluriformes",
-          "family": "Loricariidae",
-          "genus": "Chaetostoma"
+          "order": "Characiformes",
+          "family": "Characidae",
+          "genus": "Aphyocharax"
         },
         {
           "label": "Creagrutus bolivari",
@@ -9397,77 +9425,18 @@
           "genus": "Creagrutus"
         },
         {
-          "label": "Odontostilbe splendida",
-          "registros": 2,
-          "slug_especie": "odontostilbe-splendida",
-          "slug_grupo": "peces",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2352492",
-          "species": "Odontostilbe splendida",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Characidae",
-          "genus": "Odontostilbe"
-        },
-        {
-          "label": "Pyrrhulina lugubris",
-          "registros": 2,
-          "slug_especie": "pyrrhulina-lugubris",
-          "slug_grupo": "peces",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2355666",
-          "species": "Pyrrhulina lugubris",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Lebiasinidae",
-          "genus": "Pyrrhulina"
-        },
-        {
-          "label": "Apistogramma alacrina",
+          "label": "Hoplomyzon sexpapilostoma",
           "registros": 1,
-          "slug_especie": "apistogramma-alacrina",
+          "slug_especie": "hoplomyzon-sexpapilostoma",
           "slug_grupo": "peces",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2371238",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/59d44ef35f369343442fac9e/summary",
-          "species": "Apistogramma alacrina",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Perciformes",
-          "family": "Cichlidae",
-          "genus": "Apistogramma"
-        },
-        {
-          "label": "Apistogramma macmasteri",
-          "registros": 1,
-          "slug_especie": "apistogramma-macmasteri",
-          "slug_grupo": "peces",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2371262",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/59d2d5415f369343442f982b/summary",
-          "species": "Apistogramma macmasteri",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Perciformes",
-          "family": "Cichlidae",
-          "genus": "Apistogramma"
-        },
-        {
-          "label": "Astroblepus latidens",
-          "registros": 1,
-          "slug_especie": "astroblepus-latidens",
-          "slug_grupo": "peces",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2342128",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/59d262055f369343442f8d5b/summary",
-          "species": "Astroblepus latidens",
+          "url_gbif": "https://www.gbif.org/species/2340538",
+          "species": "Hoplomyzon sexpapilostoma",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "order": "Siluriformes",
-          "family": "Astroblepidae",
-          "genus": "Astroblepus"
+          "family": "Aspredinidae",
+          "genus": "Hoplomyzon"
         },
         {
           "label": "Astyanax venezuelae",
@@ -9542,18 +9511,19 @@
           "genus": "Dolichancistrus"
         },
         {
-          "label": "Hoplomyzon sexpapilostoma",
+          "label": "Apistogramma macmasteri",
           "registros": 1,
-          "slug_especie": "hoplomyzon-sexpapilostoma",
+          "slug_especie": "apistogramma-macmasteri",
           "slug_grupo": "peces",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2340538",
-          "species": "Hoplomyzon sexpapilostoma",
+          "url_gbif": "https://www.gbif.org/species/2371262",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/59d2d5415f369343442f982b/summary",
+          "species": "Apistogramma macmasteri",
           "kingdom": "Animalia",
           "phylum": "Chordata",
-          "order": "Siluriformes",
-          "family": "Aspredinidae",
-          "genus": "Hoplomyzon"
+          "order": "Perciformes",
+          "family": "Cichlidae",
+          "genus": "Apistogramma"
         },
         {
           "label": "Imparfinis microps",
@@ -9642,6 +9612,21 @@
           "genus": "Ochmacanthus"
         },
         {
+          "label": "Astroblepus latidens",
+          "registros": 1,
+          "slug_especie": "astroblepus-latidens",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2342128",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/59d262055f369343442f8d5b/summary",
+          "species": "Astroblepus latidens",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Siluriformes",
+          "family": "Astroblepidae",
+          "genus": "Astroblepus"
+        },
+        {
           "label": "Parodon apolinari",
           "registros": 1,
           "slug_especie": "parodon-apolinari",
@@ -9654,6 +9639,21 @@
           "order": "Characiformes",
           "family": "Parodontidae",
           "genus": "Parodon"
+        },
+        {
+          "label": "Apistogramma alacrina",
+          "registros": 1,
+          "slug_especie": "apistogramma-alacrina",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2371238",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/59d44ef35f369343442fac9e/summary",
+          "species": "Apistogramma alacrina",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Perciformes",
+          "family": "Cichlidae",
+          "genus": "Apistogramma"
         },
         {
           "label": "Rhamdia quelen",
@@ -11027,6 +11027,21 @@
           "genus": "Socratea"
         },
         {
+          "label": "Protium apiculatum",
+          "registros": 7,
+          "slug_especie": "protium-apiculatum",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3992474",
+          "species": "Protium apiculatum",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Sapindales",
+          "family": "Burseraceae",
+          "genus": "Protium"
+        },
+        {
           "label": "Perebea xanthochyma",
           "registros": 7,
           "slug_especie": "perebea-xanthochyma",
@@ -11042,19 +11057,19 @@
           "genus": "Perebea"
         },
         {
-          "label": "Protium apiculatum",
-          "registros": 7,
-          "slug_especie": "protium-apiculatum",
+          "label": "Urera caracasana",
+          "registros": 6,
+          "slug_especie": "urera-caracasana",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3992474",
-          "species": "Protium apiculatum",
+          "url_gbif": "https://www.gbif.org/species/2984335",
+          "species": "Urera caracasana",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Sapindales",
-          "family": "Burseraceae",
-          "genus": "Protium"
+          "order": "Rosales",
+          "family": "Urticaceae",
+          "genus": "Urera"
         },
         {
           "label": "Dendropanax arboreus",
@@ -11073,19 +11088,19 @@
           "genus": "Dendropanax"
         },
         {
-          "label": "Urera caracasana",
-          "registros": 6,
-          "slug_especie": "urera-caracasana",
+          "label": "Trichilia elegans",
+          "registros": 5,
+          "slug_especie": "trichilia-elegans",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2984335",
-          "species": "Urera caracasana",
+          "url_gbif": "https://www.gbif.org/species/7271353",
+          "species": "Trichilia elegans",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Rosales",
-          "family": "Urticaceae",
-          "genus": "Urera"
+          "order": "Sapindales",
+          "family": "Meliaceae",
+          "genus": "Trichilia"
         },
         {
           "label": "Celtis schippii",
@@ -11101,21 +11116,6 @@
           "order": "Rosales",
           "family": "Cannabaceae",
           "genus": "Celtis"
-        },
-        {
-          "label": "Clarisia racemosa",
-          "registros": 5,
-          "slug_especie": "clarisia-racemosa",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5572170",
-          "species": "Clarisia racemosa",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Rosales",
-          "family": "Moraceae",
-          "genus": "Clarisia"
         },
         {
           "label": "Heliconia episcopalis",
@@ -11134,34 +11134,19 @@
           "genus": "Heliconia"
         },
         {
-          "label": "Trichilia elegans",
+          "label": "Clarisia racemosa",
           "registros": 5,
-          "slug_especie": "trichilia-elegans",
+          "slug_especie": "clarisia-racemosa",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7271353",
-          "species": "Trichilia elegans",
+          "url_gbif": "https://www.gbif.org/species/5572170",
+          "species": "Clarisia racemosa",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Sapindales",
-          "family": "Meliaceae",
-          "genus": "Trichilia"
-        },
-        {
-          "label": "Astrocaryum murumuru",
-          "registros": 4,
-          "slug_especie": "astrocaryum-murumuru",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2738081",
-          "species": "Astrocaryum murumuru",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Arecales",
-          "family": "Arecaceae",
-          "genus": "Astrocaryum"
+          "order": "Rosales",
+          "family": "Moraceae",
+          "genus": "Clarisia"
         },
         {
           "label": "Genipa americana",
@@ -11180,6 +11165,36 @@
           "genus": "Genipa"
         },
         {
+          "label": "Pseudolmedia laevis",
+          "registros": 4,
+          "slug_especie": "pseudolmedia-laevis",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3764170",
+          "species": "Pseudolmedia laevis",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Rosales",
+          "family": "Moraceae",
+          "genus": "Pseudolmedia"
+        },
+        {
+          "label": "Astrocaryum murumuru",
+          "registros": 4,
+          "slug_especie": "astrocaryum-murumuru",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2738081",
+          "species": "Astrocaryum murumuru",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Arecales",
+          "family": "Arecaceae",
+          "genus": "Astrocaryum"
+        },
+        {
           "label": "Piper aduncum",
           "registros": 4,
           "slug_especie": "piper-aduncum",
@@ -11194,21 +11209,6 @@
           "order": "Piperales",
           "family": "Piperaceae",
           "genus": "Piper"
-        },
-        {
-          "label": "Pseudolmedia laevis",
-          "registros": 4,
-          "slug_especie": "pseudolmedia-laevis",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3764170",
-          "species": "Pseudolmedia laevis",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Rosales",
-          "family": "Moraceae",
-          "genus": "Pseudolmedia"
         }
       ],
       "species_list_tematica": {
@@ -12195,6 +12195,21 @@
           "genus": "Socratea"
         },
         {
+          "label": "Protium apiculatum",
+          "registros": 7,
+          "slug_especie": "protium-apiculatum",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3992474",
+          "species": "Protium apiculatum",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Sapindales",
+          "family": "Burseraceae",
+          "genus": "Protium"
+        },
+        {
           "label": "Perebea xanthochyma",
           "registros": 7,
           "slug_especie": "perebea-xanthochyma",
@@ -12210,19 +12225,19 @@
           "genus": "Perebea"
         },
         {
-          "label": "Protium apiculatum",
-          "registros": 7,
-          "slug_especie": "protium-apiculatum",
+          "label": "Urera caracasana",
+          "registros": 6,
+          "slug_especie": "urera-caracasana",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3992474",
-          "species": "Protium apiculatum",
+          "url_gbif": "https://www.gbif.org/species/2984335",
+          "species": "Urera caracasana",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Sapindales",
-          "family": "Burseraceae",
-          "genus": "Protium"
+          "order": "Rosales",
+          "family": "Urticaceae",
+          "genus": "Urera"
         },
         {
           "label": "Dendropanax arboreus",
@@ -12241,19 +12256,19 @@
           "genus": "Dendropanax"
         },
         {
-          "label": "Urera caracasana",
-          "registros": 6,
-          "slug_especie": "urera-caracasana",
+          "label": "Trichilia elegans",
+          "registros": 5,
+          "slug_especie": "trichilia-elegans",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2984335",
-          "species": "Urera caracasana",
+          "url_gbif": "https://www.gbif.org/species/7271353",
+          "species": "Trichilia elegans",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Rosales",
-          "family": "Urticaceae",
-          "genus": "Urera"
+          "order": "Sapindales",
+          "family": "Meliaceae",
+          "genus": "Trichilia"
         },
         {
           "label": "Celtis schippii",
@@ -12269,21 +12284,6 @@
           "order": "Rosales",
           "family": "Cannabaceae",
           "genus": "Celtis"
-        },
-        {
-          "label": "Clarisia racemosa",
-          "registros": 5,
-          "slug_especie": "clarisia-racemosa",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5572170",
-          "species": "Clarisia racemosa",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Rosales",
-          "family": "Moraceae",
-          "genus": "Clarisia"
         },
         {
           "label": "Heliconia episcopalis",
@@ -12302,34 +12302,19 @@
           "genus": "Heliconia"
         },
         {
-          "label": "Trichilia elegans",
+          "label": "Clarisia racemosa",
           "registros": 5,
-          "slug_especie": "trichilia-elegans",
+          "slug_especie": "clarisia-racemosa",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7271353",
-          "species": "Trichilia elegans",
+          "url_gbif": "https://www.gbif.org/species/5572170",
+          "species": "Clarisia racemosa",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Sapindales",
-          "family": "Meliaceae",
-          "genus": "Trichilia"
-        },
-        {
-          "label": "Astrocaryum murumuru",
-          "registros": 4,
-          "slug_especie": "astrocaryum-murumuru",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2738081",
-          "species": "Astrocaryum murumuru",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Arecales",
-          "family": "Arecaceae",
-          "genus": "Astrocaryum"
+          "order": "Rosales",
+          "family": "Moraceae",
+          "genus": "Clarisia"
         },
         {
           "label": "Genipa americana",
@@ -12348,6 +12333,36 @@
           "genus": "Genipa"
         },
         {
+          "label": "Pseudolmedia laevis",
+          "registros": 4,
+          "slug_especie": "pseudolmedia-laevis",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3764170",
+          "species": "Pseudolmedia laevis",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Rosales",
+          "family": "Moraceae",
+          "genus": "Pseudolmedia"
+        },
+        {
+          "label": "Astrocaryum murumuru",
+          "registros": 4,
+          "slug_especie": "astrocaryum-murumuru",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2738081",
+          "species": "Astrocaryum murumuru",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Arecales",
+          "family": "Arecaceae",
+          "genus": "Astrocaryum"
+        },
+        {
           "label": "Piper aduncum",
           "registros": 4,
           "slug_especie": "piper-aduncum",
@@ -12362,21 +12377,6 @@
           "order": "Piperales",
           "family": "Piperaceae",
           "genus": "Piper"
-        },
-        {
-          "label": "Pseudolmedia laevis",
-          "registros": 4,
-          "slug_especie": "pseudolmedia-laevis",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3764170",
-          "species": "Pseudolmedia laevis",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Rosales",
-          "family": "Moraceae",
-          "genus": "Pseudolmedia"
         }
       ],
       "species_list_tematica": {
@@ -12928,21 +12928,6 @@
           "genus": "Tyrannus"
         },
         {
-          "label": "Cyanocorax violaceus",
-          "registros": 31,
-          "slug_especie": "cyanocorax-violaceus",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2482564",
-          "species": "Cyanocorax violaceus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Corvidae",
-          "genus": "Cyanocorax"
-        },
-        {
           "label": "Todirostrum cinereum",
           "registros": 31,
           "slug_especie": "todirostrum-cinereum",
@@ -12957,6 +12942,21 @@
           "order": "Passeriformes",
           "family": "Tyrannidae",
           "genus": "Todirostrum"
+        },
+        {
+          "label": "Cyanocorax violaceus",
+          "registros": 31,
+          "slug_especie": "cyanocorax-violaceus",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2482564",
+          "species": "Cyanocorax violaceus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Corvidae",
+          "genus": "Cyanocorax"
         },
         {
           "label": "Bubulcus ibis",
@@ -13007,22 +13007,6 @@
           "genus": "Pteroglossus"
         },
         {
-          "label": "Rupornis magnirostris",
-          "registros": 27,
-          "slug_especie": "rupornis-magnirostris",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5844398",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56ce57a13c16479905cba79b/summary",
-          "species": "Rupornis magnirostris",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Accipitriformes",
-          "family": "Accipitridae",
-          "genus": "Rupornis"
-        },
-        {
           "label": "Troglodytes aedon",
           "registros": 27,
           "slug_especie": "troglodytes-aedon",
@@ -13037,6 +13021,22 @@
           "order": "Passeriformes",
           "family": "Troglodytidae",
           "genus": "Troglodytes"
+        },
+        {
+          "label": "Rupornis magnirostris",
+          "registros": 27,
+          "slug_especie": "rupornis-magnirostris",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5844398",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56ce57a13c16479905cba79b/summary",
+          "species": "Rupornis magnirostris",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Accipitriformes",
+          "family": "Accipitridae",
+          "genus": "Rupornis"
         },
         {
           "label": "Syrigma sibilatrix",
@@ -13255,24 +13255,6 @@
         ],
         "cites": [
           {
-            "label": "Pteroglossus castanotis",
-            "registros": 27,
-            "slug_especie": "pteroglossus-castanotis",
-            "slug_tematica": "cites-iii",
-            "tematica_label": "Apéndice CITES III",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2478822",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7835383c45700544e4088/summary",
-            "species": "Pteroglossus castanotis",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Piciformes",
-            "family": "Ramphastidae",
-            "genus": "Pteroglossus"
-          },
-          {
             "label": "Rupornis magnirostris",
             "registros": 27,
             "slug_especie": "rupornis-magnirostris",
@@ -13289,6 +13271,24 @@
             "order": "Accipitriformes",
             "family": "Accipitridae",
             "genus": "Rupornis"
+          },
+          {
+            "label": "Pteroglossus castanotis",
+            "registros": 27,
+            "slug_especie": "pteroglossus-castanotis",
+            "slug_tematica": "cites-iii",
+            "tematica_label": "Apéndice CITES III",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2478822",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7835383c45700544e4088/summary",
+            "species": "Pteroglossus castanotis",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Piciformes",
+            "family": "Ramphastidae",
+            "genus": "Pteroglossus"
           },
           {
             "label": "Puma concolor",
@@ -13309,6 +13309,23 @@
             "genus": "Puma"
           },
           {
+            "label": "Phaethornis augusti",
+            "registros": 10,
+            "slug_especie": "phaethornis-augusti",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2476628",
+            "species": "Phaethornis augusti",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Phaethornis"
+          },
+          {
             "label": "Forpus conspicillatus",
             "registros": 10,
             "slug_especie": "forpus-conspicillatus",
@@ -13325,23 +13342,6 @@
             "order": "Psittaciformes",
             "family": "Psittacidae",
             "genus": "Forpus"
-          },
-          {
-            "label": "Phaethornis augusti",
-            "registros": 10,
-            "slug_especie": "phaethornis-augusti",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2476628",
-            "species": "Phaethornis augusti",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Phaethornis"
           },
           {
             "label": "Herpetotheres cachinnans",

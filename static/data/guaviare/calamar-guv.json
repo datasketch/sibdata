@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -1163,20 +1163,20 @@
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Ara macao",
-          "slug_especie": "ara-macao",
-          "registros": 60,
-          "url_gbif": "https://www.gbif.org/species/5959227",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7803783c45700544e405b/summary",
-          "slug_tematica": "cites-i"
-        },
-        {
           "label": "Pionus menstruus",
           "slug_especie": "pionus-menstruus",
           "registros": 60,
           "url_gbif": "https://www.gbif.org/species/2479902",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56e6089483c45700544e3e8f/summary",
           "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Ara macao",
+          "slug_especie": "ara-macao",
+          "registros": 60,
+          "url_gbif": "https://www.gbif.org/species/5959227",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7803783c45700544e405b/summary",
+          "slug_tematica": "cites-i"
         },
         {
           "label": "Ramphastos vitellinus",
@@ -1426,20 +1426,20 @@
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Ara macao",
-          "slug_especie": "ara-macao",
-          "registros": 60,
-          "url_gbif": "https://www.gbif.org/species/5959227",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7803783c45700544e405b/summary",
-          "slug_tematica": "cites-i"
-        },
-        {
           "label": "Pionus menstruus",
           "slug_especie": "pionus-menstruus",
           "registros": 60,
           "url_gbif": "https://www.gbif.org/species/2479902",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56e6089483c45700544e3e8f/summary",
           "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Ara macao",
+          "slug_especie": "ara-macao",
+          "registros": 60,
+          "url_gbif": "https://www.gbif.org/species/5959227",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7803783c45700544e405b/summary",
+          "slug_tematica": "cites-i"
         },
         {
           "label": "Ramphastos vitellinus",
@@ -2572,6 +2572,21 @@
           "genus": "Terminalia"
         },
         {
+          "label": "Phenakospermum guyannense",
+          "registros": 24,
+          "slug_especie": "phenakospermum-guyannense",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2763146",
+          "species": "Phenakospermum guyannense",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Zingiberales",
+          "family": "Strelitziaceae",
+          "genus": "Phenakospermum"
+        },
+        {
           "label": "Oenocarpus bataua",
           "registros": 24,
           "slug_especie": "oenocarpus-bataua",
@@ -2586,21 +2601,6 @@
           "order": "Arecales",
           "family": "Arecaceae",
           "genus": "Oenocarpus"
-        },
-        {
-          "label": "Phenakospermum guyannense",
-          "registros": 24,
-          "slug_especie": "phenakospermum-guyannense",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2763146",
-          "species": "Phenakospermum guyannense",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Zingiberales",
-          "family": "Strelitziaceae",
-          "genus": "Phenakospermum"
         },
         {
           "label": "Protium aracouchini",
@@ -4051,24 +4051,6 @@
             "genus": "Rupornis"
           },
           {
-            "label": "Ara macao",
-            "registros": 60,
-            "slug_especie": "ara-macao",
-            "slug_tematica": "cites-i",
-            "tematica_label": "Apéndice CITES I",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5959227",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7803783c45700544e405b/summary",
-            "species": "Ara macao",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Psittaciformes",
-            "family": "Psittacidae",
-            "genus": "Ara"
-          },
-          {
             "label": "Pionus menstruus",
             "registros": 60,
             "slug_especie": "pionus-menstruus",
@@ -4085,6 +4067,24 @@
             "order": "Psittaciformes",
             "family": "Psittacidae",
             "genus": "Pionus"
+          },
+          {
+            "label": "Ara macao",
+            "registros": 60,
+            "slug_especie": "ara-macao",
+            "slug_tematica": "cites-i",
+            "tematica_label": "Apéndice CITES I",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5959227",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7803783c45700544e405b/summary",
+            "species": "Ara macao",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Psittaciformes",
+            "family": "Psittacidae",
+            "genus": "Ara"
           },
           {
             "label": "Ramphastos vitellinus",
@@ -4803,6 +4803,21 @@
       "subgrupo_especies": [],
       "species_list_top": [
         {
+          "label": "Micrathena cyanospina",
+          "registros": 3,
+          "slug_especie": "micrathena-cyanospina",
+          "slug_grupo": "aracnidos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2159614",
+          "species": "Micrathena cyanospina",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Arachnida",
+          "order": "Araneae",
+          "family": "Araneidae",
+          "genus": "Micrathena"
+        },
+        {
           "label": "Architis tenuis",
           "registros": 3,
           "slug_especie": "architis-tenuis",
@@ -4833,64 +4848,19 @@
           "genus": "Eriophora"
         },
         {
-          "label": "Micrathena cyanospina",
-          "registros": 3,
-          "slug_especie": "micrathena-cyanospina",
+          "label": "Thwaitesia bracteata",
+          "registros": 2,
+          "slug_especie": "thwaitesia-bracteata",
           "slug_grupo": "aracnidos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2159614",
-          "species": "Micrathena cyanospina",
+          "url_gbif": "https://www.gbif.org/species/5170912",
+          "species": "Thwaitesia bracteata",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Arachnida",
           "order": "Araneae",
-          "family": "Araneidae",
-          "genus": "Micrathena"
-        },
-        {
-          "label": "Dossenus marginatus",
-          "registros": 2,
-          "slug_especie": "dossenus-marginatus",
-          "slug_grupo": "aracnidos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2179498",
-          "species": "Dossenus marginatus",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Arachnida",
-          "order": "Araneae",
-          "family": "Trechaleidae",
-          "genus": "Dossenus"
-        },
-        {
-          "label": "Neoxyphinus petrogoblin",
-          "registros": 2,
-          "slug_especie": "neoxyphinus-petrogoblin",
-          "slug_grupo": "aracnidos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/8065625",
-          "species": "Neoxyphinus petrogoblin",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Arachnida",
-          "order": "Araneae",
-          "family": "Oonopidae",
-          "genus": "Neoxyphinus"
-        },
-        {
-          "label": "Paratemnoides nidificator",
-          "registros": 2,
-          "slug_especie": "paratemnoides-nidificator",
-          "slug_grupo": "aracnidos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2126347",
-          "species": "Paratemnoides nidificator",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Arachnida",
-          "order": "Pseudoscorpiones",
-          "family": "Atemnidae",
-          "genus": "Paratemnoides"
+          "family": "Theridiidae",
+          "genus": "Thwaitesia"
         },
         {
           "label": "Pseudanapis domingo",
@@ -4908,19 +4878,49 @@
           "genus": "Pseudanapis"
         },
         {
-          "label": "Thwaitesia bracteata",
+          "label": "Dossenus marginatus",
           "registros": 2,
-          "slug_especie": "thwaitesia-bracteata",
+          "slug_especie": "dossenus-marginatus",
           "slug_grupo": "aracnidos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5170912",
-          "species": "Thwaitesia bracteata",
+          "url_gbif": "https://www.gbif.org/species/2179498",
+          "species": "Dossenus marginatus",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Arachnida",
           "order": "Araneae",
-          "family": "Theridiidae",
-          "genus": "Thwaitesia"
+          "family": "Trechaleidae",
+          "genus": "Dossenus"
+        },
+        {
+          "label": "Paratemnoides nidificator",
+          "registros": 2,
+          "slug_especie": "paratemnoides-nidificator",
+          "slug_grupo": "aracnidos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2126347",
+          "species": "Paratemnoides nidificator",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Arachnida",
+          "order": "Pseudoscorpiones",
+          "family": "Atemnidae",
+          "genus": "Paratemnoides"
+        },
+        {
+          "label": "Neoxyphinus petrogoblin",
+          "registros": 2,
+          "slug_especie": "neoxyphinus-petrogoblin",
+          "slug_grupo": "aracnidos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/8065625",
+          "species": "Neoxyphinus petrogoblin",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Arachnida",
+          "order": "Araneae",
+          "family": "Oonopidae",
+          "genus": "Neoxyphinus"
         },
         {
           "label": "Alpaida bicornuta",
@@ -4936,81 +4936,6 @@
           "order": "Araneae",
           "family": "Araneidae",
           "genus": "Alpaida"
-        },
-        {
-          "label": "Ancylometes bogotensis",
-          "registros": 1,
-          "slug_especie": "ancylometes-bogotensis",
-          "slug_grupo": "aracnidos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2152808",
-          "species": "Ancylometes bogotensis",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Arachnida",
-          "order": "Araneae",
-          "family": "Ctenidae",
-          "genus": "Ancylometes"
-        },
-        {
-          "label": "Argiope argentata",
-          "registros": 1,
-          "slug_especie": "argiope-argentata",
-          "slug_grupo": "aracnidos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5170999",
-          "species": "Argiope argentata",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Arachnida",
-          "order": "Araneae",
-          "family": "Araneidae",
-          "genus": "Argiope"
-        },
-        {
-          "label": "Gelanor juruti",
-          "registros": 1,
-          "slug_especie": "gelanor-juruti",
-          "slug_grupo": "aracnidos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7605527",
-          "species": "Gelanor juruti",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Arachnida",
-          "order": "Araneae",
-          "family": "Mimetidae",
-          "genus": "Gelanor"
-        },
-        {
-          "label": "Heterophrynus batesii",
-          "registros": 1,
-          "slug_especie": "heterophrynus-batesii",
-          "slug_grupo": "aracnidos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2181344",
-          "species": "Heterophrynus batesii",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Arachnida",
-          "order": "Amblypygi",
-          "family": "Phrynidae",
-          "genus": "Heterophrynus"
-        },
-        {
-          "label": "Mastigoproctus colombianus",
-          "registros": 1,
-          "slug_especie": "mastigoproctus-colombianus",
-          "slug_grupo": "aracnidos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2127934",
-          "species": "Mastigoproctus colombianus",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Arachnida",
-          "order": "Uropygi",
-          "family": "Thelyphonidae",
-          "genus": "Mastigoproctus"
         },
         {
           "label": "Metabus ocellatus",
@@ -5058,6 +4983,21 @@
           "genus": "Micrathena"
         },
         {
+          "label": "Argiope argentata",
+          "registros": 1,
+          "slug_especie": "argiope-argentata",
+          "slug_grupo": "aracnidos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5170999",
+          "species": "Argiope argentata",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Arachnida",
+          "order": "Araneae",
+          "family": "Araneidae",
+          "genus": "Argiope"
+        },
+        {
           "label": "Micrathena evansi",
           "registros": 1,
           "slug_especie": "micrathena-evansi",
@@ -5088,6 +5028,21 @@
           "genus": "Micrathena"
         },
         {
+          "label": "Mastigoproctus colombianus",
+          "registros": 1,
+          "slug_especie": "mastigoproctus-colombianus",
+          "slug_grupo": "aracnidos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2127934",
+          "species": "Mastigoproctus colombianus",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Arachnida",
+          "order": "Uropygi",
+          "family": "Thelyphonidae",
+          "genus": "Mastigoproctus"
+        },
+        {
           "label": "Novafrontina uncata",
           "registros": 1,
           "slug_especie": "novafrontina-uncata",
@@ -5101,6 +5056,21 @@
           "order": "Araneae",
           "family": "Linyphiidae",
           "genus": "Novafrontina"
+        },
+        {
+          "label": "Heterophrynus batesii",
+          "registros": 1,
+          "slug_especie": "heterophrynus-batesii",
+          "slug_grupo": "aracnidos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2181344",
+          "species": "Heterophrynus batesii",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Arachnida",
+          "order": "Amblypygi",
+          "family": "Phrynidae",
+          "genus": "Heterophrynus"
         },
         {
           "label": "Peucetia macroglossa",
@@ -5133,6 +5103,21 @@
           "genus": "Phoneutria"
         },
         {
+          "label": "Gelanor juruti",
+          "registros": 1,
+          "slug_especie": "gelanor-juruti",
+          "slug_grupo": "aracnidos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7605527",
+          "species": "Gelanor juruti",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Arachnida",
+          "order": "Araneae",
+          "family": "Mimetidae",
+          "genus": "Gelanor"
+        },
+        {
           "label": "Spilasma duodecimguttata",
           "registros": 1,
           "slug_especie": "spilasma-duodecimguttata",
@@ -5146,6 +5131,21 @@
           "order": "Araneae",
           "family": "Araneidae",
           "genus": "Spilasma"
+        },
+        {
+          "label": "Ancylometes bogotensis",
+          "registros": 1,
+          "slug_especie": "ancylometes-bogotensis",
+          "slug_grupo": "aracnidos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2152808",
+          "species": "Ancylometes bogotensis",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Arachnida",
+          "order": "Araneae",
+          "family": "Ctenidae",
+          "genus": "Ancylometes"
         },
         {
           "label": "Wixia abdominalis",
@@ -5599,22 +5599,6 @@
           "genus": "Crotophaga"
         },
         {
-          "label": "Ara macao",
-          "registros": 60,
-          "slug_especie": "ara-macao",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5959227",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7803783c45700544e405b/summary",
-          "species": "Ara macao",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Psittaciformes",
-          "family": "Psittacidae",
-          "genus": "Ara"
-        },
-        {
           "label": "Pionus menstruus",
           "registros": 60,
           "slug_especie": "pionus-menstruus",
@@ -5629,6 +5613,22 @@
           "order": "Psittaciformes",
           "family": "Psittacidae",
           "genus": "Pionus"
+        },
+        {
+          "label": "Ara macao",
+          "registros": 60,
+          "slug_especie": "ara-macao",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5959227",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7803783c45700544e405b/summary",
+          "species": "Ara macao",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Psittaciformes",
+          "family": "Psittacidae",
+          "genus": "Ara"
         }
       ],
       "species_list_tematica": {
@@ -5727,24 +5727,6 @@
             "genus": "Rupornis"
           },
           {
-            "label": "Ara macao",
-            "registros": 60,
-            "slug_especie": "ara-macao",
-            "slug_tematica": "cites-i",
-            "tematica_label": "Apéndice CITES I",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5959227",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7803783c45700544e405b/summary",
-            "species": "Ara macao",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Psittaciformes",
-            "family": "Psittacidae",
-            "genus": "Ara"
-          },
-          {
             "label": "Pionus menstruus",
             "registros": 60,
             "slug_especie": "pionus-menstruus",
@@ -5761,6 +5743,24 @@
             "order": "Psittaciformes",
             "family": "Psittacidae",
             "genus": "Pionus"
+          },
+          {
+            "label": "Ara macao",
+            "registros": 60,
+            "slug_especie": "ara-macao",
+            "slug_tematica": "cites-i",
+            "tematica_label": "Apéndice CITES I",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5959227",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7803783c45700544e405b/summary",
+            "species": "Ara macao",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Psittaciformes",
+            "family": "Psittacidae",
+            "genus": "Ara"
           },
           {
             "label": "Ramphastos vitellinus",
@@ -7049,21 +7049,6 @@
           "genus": "Cyathea"
         },
         {
-          "label": "Asplenium serratum",
-          "registros": 8,
-          "slug_especie": "asplenium-serratum",
-          "slug_grupo": "helechos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2650661",
-          "species": "Asplenium serratum",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Polypodiopsida",
-          "order": "Polypodiales",
-          "family": "Aspleniaceae",
-          "genus": "Asplenium"
-        },
-        {
           "label": "Metaxya rostrata",
           "registros": 8,
           "slug_especie": "metaxya-rostrata",
@@ -7077,6 +7062,21 @@
           "order": "Cyatheales",
           "family": "Metaxyaceae",
           "genus": "Metaxya"
+        },
+        {
+          "label": "Asplenium serratum",
+          "registros": 8,
+          "slug_especie": "asplenium-serratum",
+          "slug_grupo": "helechos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2650661",
+          "species": "Asplenium serratum",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Polypodiopsida",
+          "order": "Polypodiales",
+          "family": "Aspleniaceae",
+          "genus": "Asplenium"
         },
         {
           "label": "Pleopeltis bombycina",
@@ -7094,19 +7094,19 @@
           "genus": "Pleopeltis"
         },
         {
-          "label": "Cyathea lasiosora",
+          "label": "Polytaenium guayanense",
           "registros": 6,
-          "slug_especie": "cyathea-lasiosora",
+          "slug_especie": "polytaenium-guayanense",
           "slug_grupo": "helechos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3598409",
-          "species": "Cyathea lasiosora",
+          "url_gbif": "https://www.gbif.org/species/4047693",
+          "species": "Polytaenium guayanense",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Polypodiopsida",
-          "order": "Cyatheales",
-          "family": "Cyatheaceae",
-          "genus": "Cyathea"
+          "order": "Polypodiales",
+          "family": "Pteridaceae",
+          "genus": "Polytaenium"
         },
         {
           "label": "Microgramma reptans",
@@ -7124,34 +7124,19 @@
           "genus": "Microgramma"
         },
         {
-          "label": "Polytaenium guayanense",
+          "label": "Cyathea lasiosora",
           "registros": 6,
-          "slug_especie": "polytaenium-guayanense",
+          "slug_especie": "cyathea-lasiosora",
           "slug_grupo": "helechos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4047693",
-          "species": "Polytaenium guayanense",
+          "url_gbif": "https://www.gbif.org/species/3598409",
+          "species": "Cyathea lasiosora",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Polypodiopsida",
-          "order": "Polypodiales",
-          "family": "Pteridaceae",
-          "genus": "Polytaenium"
-        },
-        {
-          "label": "Microgramma megalophylla",
-          "registros": 5,
-          "slug_especie": "microgramma-megalophylla",
-          "slug_grupo": "helechos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4026144",
-          "species": "Microgramma megalophylla",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Polypodiopsida",
-          "order": "Polypodiales",
-          "family": "Polypodiaceae",
-          "genus": "Microgramma"
+          "order": "Cyatheales",
+          "family": "Cyatheaceae",
+          "genus": "Cyathea"
         },
         {
           "label": "Pleopeltis desvauxii",
@@ -7169,19 +7154,19 @@
           "genus": "Pleopeltis"
         },
         {
-          "label": "Asplenium juglandifolium",
-          "registros": 4,
-          "slug_especie": "asplenium-juglandifolium",
+          "label": "Microgramma megalophylla",
+          "registros": 5,
+          "slug_especie": "microgramma-megalophylla",
           "slug_grupo": "helechos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2650663",
-          "species": "Asplenium juglandifolium",
+          "url_gbif": "https://www.gbif.org/species/4026144",
+          "species": "Microgramma megalophylla",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Polypodiopsida",
           "order": "Polypodiales",
-          "family": "Aspleniaceae",
-          "genus": "Asplenium"
+          "family": "Polypodiaceae",
+          "genus": "Microgramma"
         },
         {
           "label": "Cyathea vaupensis",
@@ -7197,6 +7182,21 @@
           "order": "Cyatheales",
           "family": "Cyatheaceae",
           "genus": "Cyathea"
+        },
+        {
+          "label": "Asplenium juglandifolium",
+          "registros": 4,
+          "slug_especie": "asplenium-juglandifolium",
+          "slug_grupo": "helechos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2650663",
+          "species": "Asplenium juglandifolium",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Polypodiopsida",
+          "order": "Polypodiales",
+          "family": "Aspleniaceae",
+          "genus": "Asplenium"
         }
       ],
       "species_list_tematica": {
@@ -8206,6 +8206,21 @@
       ],
       "species_list_top": [
         {
+          "label": "Micrathena cyanospina",
+          "registros": 3,
+          "slug_especie": "micrathena-cyanospina",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2159614",
+          "species": "Micrathena cyanospina",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Arachnida",
+          "order": "Araneae",
+          "family": "Araneidae",
+          "genus": "Micrathena"
+        },
+        {
           "label": "Architis tenuis",
           "registros": 3,
           "slug_especie": "architis-tenuis",
@@ -8236,64 +8251,19 @@
           "genus": "Eriophora"
         },
         {
-          "label": "Micrathena cyanospina",
-          "registros": 3,
-          "slug_especie": "micrathena-cyanospina",
+          "label": "Thwaitesia bracteata",
+          "registros": 2,
+          "slug_especie": "thwaitesia-bracteata",
           "slug_grupo": "invertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2159614",
-          "species": "Micrathena cyanospina",
+          "url_gbif": "https://www.gbif.org/species/5170912",
+          "species": "Thwaitesia bracteata",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Arachnida",
           "order": "Araneae",
-          "family": "Araneidae",
-          "genus": "Micrathena"
-        },
-        {
-          "label": "Dossenus marginatus",
-          "registros": 2,
-          "slug_especie": "dossenus-marginatus",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2179498",
-          "species": "Dossenus marginatus",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Arachnida",
-          "order": "Araneae",
-          "family": "Trechaleidae",
-          "genus": "Dossenus"
-        },
-        {
-          "label": "Neoxyphinus petrogoblin",
-          "registros": 2,
-          "slug_especie": "neoxyphinus-petrogoblin",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/8065625",
-          "species": "Neoxyphinus petrogoblin",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Arachnida",
-          "order": "Araneae",
-          "family": "Oonopidae",
-          "genus": "Neoxyphinus"
-        },
-        {
-          "label": "Paratemnoides nidificator",
-          "registros": 2,
-          "slug_especie": "paratemnoides-nidificator",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2126347",
-          "species": "Paratemnoides nidificator",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Arachnida",
-          "order": "Pseudoscorpiones",
-          "family": "Atemnidae",
-          "genus": "Paratemnoides"
+          "family": "Theridiidae",
+          "genus": "Thwaitesia"
         },
         {
           "label": "Pseudanapis domingo",
@@ -8311,19 +8281,49 @@
           "genus": "Pseudanapis"
         },
         {
-          "label": "Thwaitesia bracteata",
+          "label": "Dossenus marginatus",
           "registros": 2,
-          "slug_especie": "thwaitesia-bracteata",
+          "slug_especie": "dossenus-marginatus",
           "slug_grupo": "invertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5170912",
-          "species": "Thwaitesia bracteata",
+          "url_gbif": "https://www.gbif.org/species/2179498",
+          "species": "Dossenus marginatus",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Arachnida",
           "order": "Araneae",
-          "family": "Theridiidae",
-          "genus": "Thwaitesia"
+          "family": "Trechaleidae",
+          "genus": "Dossenus"
+        },
+        {
+          "label": "Paratemnoides nidificator",
+          "registros": 2,
+          "slug_especie": "paratemnoides-nidificator",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2126347",
+          "species": "Paratemnoides nidificator",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Arachnida",
+          "order": "Pseudoscorpiones",
+          "family": "Atemnidae",
+          "genus": "Paratemnoides"
+        },
+        {
+          "label": "Neoxyphinus petrogoblin",
+          "registros": 2,
+          "slug_especie": "neoxyphinus-petrogoblin",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/8065625",
+          "species": "Neoxyphinus petrogoblin",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Arachnida",
+          "order": "Araneae",
+          "family": "Oonopidae",
+          "genus": "Neoxyphinus"
         },
         {
           "label": "Alpaida bicornuta",
@@ -8339,80 +8339,6 @@
           "order": "Araneae",
           "family": "Araneidae",
           "genus": "Alpaida"
-        },
-        {
-          "label": "Ancylometes bogotensis",
-          "registros": 1,
-          "slug_especie": "ancylometes-bogotensis",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2152808",
-          "species": "Ancylometes bogotensis",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Arachnida",
-          "order": "Araneae",
-          "family": "Ctenidae",
-          "genus": "Ancylometes"
-        },
-        {
-          "label": "Argiope argentata",
-          "registros": 1,
-          "slug_especie": "argiope-argentata",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5170999",
-          "species": "Argiope argentata",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Arachnida",
-          "order": "Araneae",
-          "family": "Araneidae",
-          "genus": "Argiope"
-        },
-        {
-          "label": "Drepanotrema cultratum",
-          "registros": 1,
-          "slug_especie": "drepanotrema-cultratum",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/9786437",
-          "species": "Drepanotrema cultratum",
-          "kingdom": "Animalia",
-          "phylum": "Mollusca",
-          "class": "Gastropoda",
-          "family": "Planorbidae",
-          "genus": "Drepanotrema"
-        },
-        {
-          "label": "Gelanor juruti",
-          "registros": 1,
-          "slug_especie": "gelanor-juruti",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7605527",
-          "species": "Gelanor juruti",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Arachnida",
-          "order": "Araneae",
-          "family": "Mimetidae",
-          "genus": "Gelanor"
-        },
-        {
-          "label": "Heterophrynus batesii",
-          "registros": 1,
-          "slug_especie": "heterophrynus-batesii",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2181344",
-          "species": "Heterophrynus batesii",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Arachnida",
-          "order": "Amblypygi",
-          "family": "Phrynidae",
-          "genus": "Heterophrynus"
         },
         {
           "label": "Lystra lanata",
@@ -8490,6 +8416,21 @@
           "genus": "Micrathena"
         },
         {
+          "label": "Argiope argentata",
+          "registros": 1,
+          "slug_especie": "argiope-argentata",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5170999",
+          "species": "Argiope argentata",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Arachnida",
+          "order": "Araneae",
+          "family": "Araneidae",
+          "genus": "Argiope"
+        },
+        {
           "label": "Micrathena evansi",
           "registros": 1,
           "slug_especie": "micrathena-evansi",
@@ -8520,6 +8461,21 @@
           "genus": "Micrathena"
         },
         {
+          "label": "Heterophrynus batesii",
+          "registros": 1,
+          "slug_especie": "heterophrynus-batesii",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2181344",
+          "species": "Heterophrynus batesii",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Arachnida",
+          "order": "Amblypygi",
+          "family": "Phrynidae",
+          "genus": "Heterophrynus"
+        },
+        {
           "label": "Novafrontina uncata",
           "registros": 1,
           "slug_especie": "novafrontina-uncata",
@@ -8533,6 +8489,21 @@
           "order": "Araneae",
           "family": "Linyphiidae",
           "genus": "Novafrontina"
+        },
+        {
+          "label": "Gelanor juruti",
+          "registros": 1,
+          "slug_especie": "gelanor-juruti",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7605527",
+          "species": "Gelanor juruti",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Arachnida",
+          "order": "Araneae",
+          "family": "Mimetidae",
+          "genus": "Gelanor"
         },
         {
           "label": "Parides iphidamas",
@@ -8581,6 +8552,20 @@
           "genus": "Phoneutria"
         },
         {
+          "label": "Drepanotrema cultratum",
+          "registros": 1,
+          "slug_especie": "drepanotrema-cultratum",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/9786437",
+          "species": "Drepanotrema cultratum",
+          "kingdom": "Animalia",
+          "phylum": "Mollusca",
+          "class": "Gastropoda",
+          "family": "Planorbidae",
+          "genus": "Drepanotrema"
+        },
+        {
           "label": "Solaropsis gibboni",
           "registros": 1,
           "slug_especie": "solaropsis-gibboni",
@@ -8609,6 +8594,21 @@
           "order": "Araneae",
           "family": "Araneidae",
           "genus": "Spilasma"
+        },
+        {
+          "label": "Ancylometes bogotensis",
+          "registros": 1,
+          "slug_especie": "ancylometes-bogotensis",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2152808",
+          "species": "Ancylometes bogotensis",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Arachnida",
+          "order": "Araneae",
+          "family": "Ctenidae",
+          "genus": "Ancylometes"
         },
         {
           "label": "Wixia abdominalis",
@@ -10465,19 +10465,18 @@
           "genus": "Crenicichla"
         },
         {
-          "label": "Characidium zebra",
+          "label": "Hemigrammus yinyang",
           "registros": 10,
-          "slug_especie": "characidium-zebra",
+          "slug_especie": "hemigrammus-yinyang",
           "slug_grupo": "peces",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2352379",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/5970d28f2f4fd7bc7f3a6651/summary",
-          "species": "Characidium zebra",
+          "url_gbif": "https://www.gbif.org/species/5962430",
+          "species": "Hemigrammus yinyang",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "order": "Characiformes",
-          "family": "Crenuchidae",
-          "genus": "Characidium"
+          "family": "Characidae",
+          "genus": "Hemigrammus"
         },
         {
           "label": "Hemigrammus newboldi",
@@ -10494,32 +10493,19 @@
           "genus": "Hemigrammus"
         },
         {
-          "label": "Hemigrammus yinyang",
+          "label": "Characidium zebra",
           "registros": 10,
-          "slug_especie": "hemigrammus-yinyang",
+          "slug_especie": "characidium-zebra",
           "slug_grupo": "peces",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5962430",
-          "species": "Hemigrammus yinyang",
+          "url_gbif": "https://www.gbif.org/species/2352379",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5970d28f2f4fd7bc7f3a6651/summary",
+          "species": "Characidium zebra",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "order": "Characiformes",
-          "family": "Characidae",
-          "genus": "Hemigrammus"
-        },
-        {
-          "label": "Aphyocharax alburnus",
-          "registros": 9,
-          "slug_especie": "aphyocharax-alburnus",
-          "slug_grupo": "peces",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2353645",
-          "species": "Aphyocharax alburnus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Characidae",
-          "genus": "Aphyocharax"
+          "family": "Crenuchidae",
+          "genus": "Characidium"
         },
         {
           "label": "Bryconops giacopinii",
@@ -10536,18 +10522,18 @@
           "genus": "Bryconops"
         },
         {
-          "label": "Carnegiella strigata",
+          "label": "Jupiaba abramoides",
           "registros": 9,
-          "slug_especie": "carnegiella-strigata",
+          "slug_especie": "jupiaba-abramoides",
           "slug_grupo": "peces",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5204610",
-          "species": "Carnegiella strigata",
+          "url_gbif": "https://www.gbif.org/species/2353547",
+          "species": "Jupiaba abramoides",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "order": "Characiformes",
-          "family": "Gasteropelecidae",
-          "genus": "Carnegiella"
+          "family": "Characidae",
+          "genus": "Jupiaba"
         },
         {
           "label": "Hyphessobrycon agulha",
@@ -10564,18 +10550,32 @@
           "genus": "Hyphessobrycon"
         },
         {
-          "label": "Jupiaba abramoides",
+          "label": "Carnegiella strigata",
           "registros": 9,
-          "slug_especie": "jupiaba-abramoides",
+          "slug_especie": "carnegiella-strigata",
           "slug_grupo": "peces",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2353547",
-          "species": "Jupiaba abramoides",
+          "url_gbif": "https://www.gbif.org/species/5204610",
+          "species": "Carnegiella strigata",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Gasteropelecidae",
+          "genus": "Carnegiella"
+        },
+        {
+          "label": "Aphyocharax alburnus",
+          "registros": 9,
+          "slug_especie": "aphyocharax-alburnus",
+          "slug_grupo": "peces",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2353645",
+          "species": "Aphyocharax alburnus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "order": "Characiformes",
           "family": "Characidae",
-          "genus": "Jupiaba"
+          "genus": "Aphyocharax"
         }
       ],
       "species_list_tematica": {
@@ -11091,6 +11091,20 @@
           "genus": "Moenkhausia"
         },
         {
+          "label": "Hemigrammus yinyang",
+          "registros": 10,
+          "slug_especie": "hemigrammus-yinyang",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5962430",
+          "species": "Hemigrammus yinyang",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Characidae",
+          "genus": "Hemigrammus"
+        },
+        {
           "label": "Characidium zebra",
           "registros": 10,
           "slug_especie": "characidium-zebra",
@@ -11104,20 +11118,6 @@
           "order": "Characiformes",
           "family": "Crenuchidae",
           "genus": "Characidium"
-        },
-        {
-          "label": "Hemigrammus yinyang",
-          "registros": 10,
-          "slug_especie": "hemigrammus-yinyang",
-          "slug_grupo": "peces-dulceacuicolas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5962430",
-          "species": "Hemigrammus yinyang",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Characidae",
-          "genus": "Hemigrammus"
         },
         {
           "label": "Bryconops giacopinii",
@@ -11134,18 +11134,18 @@
           "genus": "Bryconops"
         },
         {
-          "label": "Carnegiella strigata",
+          "label": "Jupiaba abramoides",
           "registros": 9,
-          "slug_especie": "carnegiella-strigata",
+          "slug_especie": "jupiaba-abramoides",
           "slug_grupo": "peces-dulceacuicolas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5204610",
-          "species": "Carnegiella strigata",
+          "url_gbif": "https://www.gbif.org/species/2353547",
+          "species": "Jupiaba abramoides",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "order": "Characiformes",
-          "family": "Gasteropelecidae",
-          "genus": "Carnegiella"
+          "family": "Characidae",
+          "genus": "Jupiaba"
         },
         {
           "label": "Hyphessobrycon agulha",
@@ -11162,32 +11162,33 @@
           "genus": "Hyphessobrycon"
         },
         {
-          "label": "Jupiaba abramoides",
+          "label": "Carnegiella strigata",
           "registros": 9,
-          "slug_especie": "jupiaba-abramoides",
+          "slug_especie": "carnegiella-strigata",
           "slug_grupo": "peces-dulceacuicolas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2353547",
-          "species": "Jupiaba abramoides",
+          "url_gbif": "https://www.gbif.org/species/5204610",
+          "species": "Carnegiella strigata",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Gasteropelecidae",
+          "genus": "Carnegiella"
+        },
+        {
+          "label": "Tyttocharax metae",
+          "registros": 8,
+          "slug_especie": "tyttocharax-metae",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7193770",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/59d150d55f369343442f8222/summary",
+          "species": "Tyttocharax metae",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "order": "Characiformes",
           "family": "Characidae",
-          "genus": "Jupiaba"
-        },
-        {
-          "label": "Acestrorhynchus falcatus",
-          "registros": 8,
-          "slug_especie": "acestrorhynchus-falcatus",
-          "slug_grupo": "peces-dulceacuicolas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2355586",
-          "species": "Acestrorhynchus falcatus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Acestrorhynchidae",
-          "genus": "Acestrorhynchus"
+          "genus": "Tyttocharax"
         },
         {
           "label": "Characidium pteroides",
@@ -11218,6 +11219,20 @@
           "genus": "Gymnocorymbus"
         },
         {
+          "label": "Acestrorhynchus falcatus",
+          "registros": 8,
+          "slug_especie": "acestrorhynchus-falcatus",
+          "slug_grupo": "peces-dulceacuicolas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2355586",
+          "species": "Acestrorhynchus falcatus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "order": "Characiformes",
+          "family": "Acestrorhynchidae",
+          "genus": "Acestrorhynchus"
+        },
+        {
           "label": "Pimelodella gracilis",
           "registros": 8,
           "slug_especie": "pimelodella-gracilis",
@@ -11230,21 +11245,6 @@
           "order": "Siluriformes",
           "family": "Heptapteridae",
           "genus": "Pimelodella"
-        },
-        {
-          "label": "Tyttocharax metae",
-          "registros": 8,
-          "slug_especie": "tyttocharax-metae",
-          "slug_grupo": "peces-dulceacuicolas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7193770",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/59d150d55f369343442f8222/summary",
-          "species": "Tyttocharax metae",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "order": "Characiformes",
-          "family": "Characidae",
-          "genus": "Tyttocharax"
         }
       ],
       "species_list_tematica": {
@@ -11901,20 +11901,19 @@
           "genus": "Terminalia"
         },
         {
-          "label": "Oenocarpus bataua",
+          "label": "Protium aracouchini",
           "registros": 24,
-          "slug_especie": "oenocarpus-bataua",
+          "slug_especie": "protium-aracouchini",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2735462",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7959583c45700544e41ba/summary",
-          "species": "Oenocarpus bataua",
+          "url_gbif": "https://www.gbif.org/species/7286738",
+          "species": "Protium aracouchini",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Arecales",
-          "family": "Arecaceae",
-          "genus": "Oenocarpus"
+          "class": "Magnoliopsida",
+          "order": "Sapindales",
+          "family": "Burseraceae",
+          "genus": "Protium"
         },
         {
           "label": "Phenakospermum guyannense",
@@ -11932,19 +11931,20 @@
           "genus": "Phenakospermum"
         },
         {
-          "label": "Protium aracouchini",
+          "label": "Oenocarpus bataua",
           "registros": 24,
-          "slug_especie": "protium-aracouchini",
+          "slug_especie": "oenocarpus-bataua",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7286738",
-          "species": "Protium aracouchini",
+          "url_gbif": "https://www.gbif.org/species/2735462",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7959583c45700544e41ba/summary",
+          "species": "Oenocarpus bataua",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Sapindales",
-          "family": "Burseraceae",
-          "genus": "Protium"
+          "class": "Liliopsida",
+          "order": "Arecales",
+          "family": "Arecaceae",
+          "genus": "Oenocarpus"
         }
       ],
       "species_list_tematica": {
@@ -13445,20 +13445,19 @@
           "genus": "Terminalia"
         },
         {
-          "label": "Oenocarpus bataua",
+          "label": "Protium aracouchini",
           "registros": 24,
-          "slug_especie": "oenocarpus-bataua",
+          "slug_especie": "protium-aracouchini",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2735462",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7959583c45700544e41ba/summary",
-          "species": "Oenocarpus bataua",
+          "url_gbif": "https://www.gbif.org/species/7286738",
+          "species": "Protium aracouchini",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Arecales",
-          "family": "Arecaceae",
-          "genus": "Oenocarpus"
+          "class": "Magnoliopsida",
+          "order": "Sapindales",
+          "family": "Burseraceae",
+          "genus": "Protium"
         },
         {
           "label": "Phenakospermum guyannense",
@@ -13476,19 +13475,20 @@
           "genus": "Phenakospermum"
         },
         {
-          "label": "Protium aracouchini",
+          "label": "Oenocarpus bataua",
           "registros": 24,
-          "slug_especie": "protium-aracouchini",
+          "slug_especie": "oenocarpus-bataua",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7286738",
-          "species": "Protium aracouchini",
+          "url_gbif": "https://www.gbif.org/species/2735462",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7959583c45700544e41ba/summary",
+          "species": "Oenocarpus bataua",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Sapindales",
-          "family": "Burseraceae",
-          "genus": "Protium"
+          "class": "Liliopsida",
+          "order": "Arecales",
+          "family": "Arecaceae",
+          "genus": "Oenocarpus"
         }
       ],
       "species_list_tematica": {
@@ -15027,24 +15027,6 @@
             "genus": "Rupornis"
           },
           {
-            "label": "Ara macao",
-            "registros": 60,
-            "slug_especie": "ara-macao",
-            "slug_tematica": "cites-i",
-            "tematica_label": "Apéndice CITES I",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5959227",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7803783c45700544e405b/summary",
-            "species": "Ara macao",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Psittaciformes",
-            "family": "Psittacidae",
-            "genus": "Ara"
-          },
-          {
             "label": "Pionus menstruus",
             "registros": 60,
             "slug_especie": "pionus-menstruus",
@@ -15061,6 +15043,24 @@
             "order": "Psittaciformes",
             "family": "Psittacidae",
             "genus": "Pionus"
+          },
+          {
+            "label": "Ara macao",
+            "registros": 60,
+            "slug_especie": "ara-macao",
+            "slug_tematica": "cites-i",
+            "tematica_label": "Apéndice CITES I",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5959227",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7803783c45700544e405b/summary",
+            "species": "Ara macao",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Psittaciformes",
+            "family": "Psittacidae",
+            "genus": "Ara"
           },
           {
             "label": "Ramphastos vitellinus",
@@ -17473,22 +17473,6 @@
           "genus": "Eschweilera"
         },
         {
-          "label": "Hirtella americana",
-          "registros": 3,
-          "slug_especie": "hirtella-americana",
-          "slug_grupo": "fanerogamas",
-          "tipo": "interes",
-          "url_gbif": "https://www.gbif.org/species/2985148",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/5919e0e8f827bf0c0ced74e8/summary",
-          "species": "Hirtella americana",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Chrysobalanaceae",
-          "genus": "Hirtella"
-        },
-        {
           "label": "Tapura amazonica",
           "registros": 3,
           "slug_especie": "tapura-amazonica",
@@ -17503,6 +17487,22 @@
           "order": "Malpighiales",
           "family": "Dichapetalaceae",
           "genus": "Tapura"
+        },
+        {
+          "label": "Hirtella americana",
+          "registros": 3,
+          "slug_especie": "hirtella-americana",
+          "slug_grupo": "fanerogamas",
+          "tipo": "interes",
+          "url_gbif": "https://www.gbif.org/species/2985148",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5919e0e8f827bf0c0ced74e8/summary",
+          "species": "Hirtella americana",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Malpighiales",
+          "family": "Chrysobalanaceae",
+          "genus": "Hirtella"
         }
       ],
       "species_list_tematica": {

@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -1538,6 +1538,14 @@
           "slug_tematica": "migratorias"
         },
         {
+          "label": "Tyrannus savana",
+          "slug_especie": "tyrannus-savana",
+          "registros": 3,
+          "url_gbif": "https://www.gbif.org/species/5229693",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cfb29d3c16479905cba7f9/summary",
+          "slug_tematica": "migratorias"
+        },
+        {
           "label": "Buteo platypterus",
           "slug_especie": "buteo-platypterus",
           "registros": 3,
@@ -1562,19 +1570,11 @@
           "slug_tematica": "migratorias"
         },
         {
-          "label": "Tyrannus savana",
-          "slug_especie": "tyrannus-savana",
-          "registros": 3,
-          "url_gbif": "https://www.gbif.org/species/5229693",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cfb29d3c16479905cba7f9/summary",
-          "slug_tematica": "migratorias"
-        },
-        {
-          "label": "Catharus minimus",
-          "slug_especie": "catharus-minimus",
+          "label": "Empidonax alnorum",
+          "slug_especie": "empidonax-alnorum",
           "registros": 2,
-          "url_gbif": "https://www.gbif.org/species/2490826",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c2acf3f0106c67230e7339/summary",
+          "url_gbif": "https://www.gbif.org/species/2482809",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c698aaf0106c67230e73d3/summary",
           "slug_tematica": "migratorias"
         }
       ]
@@ -2983,6 +2983,22 @@
           "genus": "Ficus"
         },
         {
+          "label": "Manihot esculenta",
+          "registros": 4,
+          "slug_especie": "manihot-esculenta",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3060998",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5949e98a2f4fd7bc7f3981d1/summary",
+          "species": "Manihot esculenta",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Malpighiales",
+          "family": "Euphorbiaceae",
+          "genus": "Manihot"
+        },
+        {
           "label": "Alchorneopsis floribunda",
           "registros": 4,
           "slug_especie": "alchorneopsis-floribunda",
@@ -2998,20 +3014,20 @@
           "genus": "Alchorneopsis"
         },
         {
-          "label": "Manihot esculenta",
-          "registros": 4,
-          "slug_especie": "manihot-esculenta",
+          "label": "Pourouma bicolor",
+          "registros": 3,
+          "slug_especie": "pourouma-bicolor",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3060998",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/5949e98a2f4fd7bc7f3981d1/summary",
-          "species": "Manihot esculenta",
+          "url_gbif": "https://www.gbif.org/species/7316430",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e3e91983c45700544e3e11/summary",
+          "species": "Pourouma bicolor",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Euphorbiaceae",
-          "genus": "Manihot"
+          "order": "Rosales",
+          "family": "Urticaceae",
+          "genus": "Pourouma"
         },
         {
           "label": "Dracontium spruceanum",
@@ -3044,22 +3060,6 @@
           "order": "Lamiales",
           "family": "Bignoniaceae",
           "genus": "Jacaranda"
-        },
-        {
-          "label": "Pourouma bicolor",
-          "registros": 3,
-          "slug_especie": "pourouma-bicolor",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7316430",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e3e91983c45700544e3e11/summary",
-          "species": "Pourouma bicolor",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Rosales",
-          "family": "Urticaceae",
-          "genus": "Pourouma"
         }
       ],
       "species_list_tematica": {
@@ -3799,22 +3799,6 @@
           "genus": "Pitangus"
         },
         {
-          "label": "Sicalis flaveola",
-          "registros": 23,
-          "slug_especie": "sicalis-flaveola",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2491862",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf2a703c16479905cba7ca/summary",
-          "species": "Sicalis flaveola",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Sicalis"
-        },
-        {
           "label": "Todirostrum cinereum",
           "registros": 23,
           "slug_especie": "todirostrum-cinereum",
@@ -3831,20 +3815,20 @@
           "genus": "Todirostrum"
         },
         {
-          "label": "Forpus conspicillatus",
-          "registros": 21,
-          "slug_especie": "forpus-conspicillatus",
+          "label": "Sicalis flaveola",
+          "registros": 23,
+          "slug_especie": "sicalis-flaveola",
           "slug_grupo": "animales",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2479071",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c76fc3f0106c67230e73ed/summary",
-          "species": "Forpus conspicillatus",
+          "url_gbif": "https://www.gbif.org/species/2491862",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf2a703c16479905cba7ca/summary",
+          "species": "Sicalis flaveola",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": "Psittaciformes",
-          "family": "Psittacidae",
-          "genus": "Forpus"
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Sicalis"
         },
         {
           "label": "Ramphocelus dimidiatus",
@@ -3879,6 +3863,22 @@
           "genus": "Tyrannus"
         },
         {
+          "label": "Forpus conspicillatus",
+          "registros": 21,
+          "slug_especie": "forpus-conspicillatus",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2479071",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c76fc3f0106c67230e73ed/summary",
+          "species": "Forpus conspicillatus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Psittaciformes",
+          "family": "Psittacidae",
+          "genus": "Forpus"
+        },
+        {
           "label": "Psarocolius decumanus",
           "registros": 20,
           "slug_especie": "psarocolius-decumanus",
@@ -3892,21 +3892,6 @@
           "order": "Passeriformes",
           "family": "Icteridae",
           "genus": "Psarocolius"
-        },
-        {
-          "label": "Basiliscus galeritus",
-          "registros": 18,
-          "slug_especie": "basiliscus-galeritus",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5221811",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56d107dd3c16479905cba840/summary",
-          "species": "Basiliscus galeritus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Squamata",
-          "family": "Corytophanidae",
-          "genus": "Basiliscus"
         },
         {
           "label": "Brotogeris jugularis",
@@ -3923,6 +3908,21 @@
           "order": "Psittaciformes",
           "family": "Psittacidae",
           "genus": "Brotogeris"
+        },
+        {
+          "label": "Basiliscus galeritus",
+          "registros": 18,
+          "slug_especie": "basiliscus-galeritus",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5221811",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d107dd3c16479905cba840/summary",
+          "species": "Basiliscus galeritus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Squamata",
+          "family": "Corytophanidae",
+          "genus": "Basiliscus"
         },
         {
           "label": "Leptotila verreauxi",
@@ -4217,24 +4217,6 @@
             "genus": "Pionus"
           },
           {
-            "label": "Ara ararauna",
-            "registros": 9,
-            "slug_especie": "ara-ararauna",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5959231",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e77d4483c45700544e4048/summary",
-            "species": "Ara ararauna",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Psittaciformes",
-            "family": "Psittacidae",
-            "genus": "Ara"
-          },
-          {
             "label": "Pionus menstruus",
             "registros": 9,
             "slug_especie": "pionus-menstruus",
@@ -4251,6 +4233,24 @@
             "order": "Psittaciformes",
             "family": "Psittacidae",
             "genus": "Pionus"
+          },
+          {
+            "label": "Ara ararauna",
+            "registros": 9,
+            "slug_especie": "ara-ararauna",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5959231",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e77d4483c45700544e4048/summary",
+            "species": "Ara ararauna",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Psittaciformes",
+            "family": "Psittacidae",
+            "genus": "Ara"
           },
           {
             "label": "Ramphastos vitellinus",
@@ -4417,6 +4417,24 @@
             "genus": "Empidonax"
           },
           {
+            "label": "Tyrannus savana",
+            "registros": 3,
+            "slug_especie": "tyrannus-savana",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5229693",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cfb29d3c16479905cba7f9/summary",
+            "species": "Tyrannus savana",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Tyrannidae",
+            "genus": "Tyrannus"
+          },
+          {
             "label": "Buteo platypterus",
             "registros": 3,
             "slug_especie": "buteo-platypterus",
@@ -4469,42 +4487,6 @@
             "order": "Passeriformes",
             "family": "Parulidae",
             "genus": "Setophaga"
-          },
-          {
-            "label": "Tyrannus savana",
-            "registros": 3,
-            "slug_especie": "tyrannus-savana",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5229693",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56cfb29d3c16479905cba7f9/summary",
-            "species": "Tyrannus savana",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Tyrannidae",
-            "genus": "Tyrannus"
-          },
-          {
-            "label": "Catharus minimus",
-            "registros": 2,
-            "slug_especie": "catharus-minimus",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2490826",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c2acf3f0106c67230e7339/summary",
-            "species": "Catharus minimus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Turdidae",
-            "genus": "Catharus"
           },
           {
             "label": "Empidonax alnorum",
@@ -4561,22 +4543,22 @@
             "genus": "Icterus"
           },
           {
-            "label": "Leiothlypis peregrina",
+            "label": "Catharus minimus",
             "registros": 2,
-            "slug_especie": "leiothlypis-peregrina",
+            "slug_especie": "catharus-minimus",
             "slug_tematica": "migratorias",
             "tematica_label": "Migratorias",
             "slug_grupo": "animales",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/7415507",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56ca1d87f0106c67230e7456/summary",
-            "species": "Leiothlypis peregrina",
+            "url_gbif": "https://www.gbif.org/species/2490826",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c2acf3f0106c67230e7339/summary",
+            "species": "Catharus minimus",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Aves",
             "order": "Passeriformes",
-            "family": "Parulidae",
-            "genus": "Leiothlypis"
+            "family": "Turdidae",
+            "genus": "Catharus"
           },
           {
             "label": "Riparia riparia",
@@ -4613,6 +4595,24 @@
             "order": "Passeriformes",
             "family": "Parulidae",
             "genus": "Setophaga"
+          },
+          {
+            "label": "Leiothlypis peregrina",
+            "registros": 2,
+            "slug_especie": "leiothlypis-peregrina",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/7415507",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56ca1d87f0106c67230e7456/summary",
+            "species": "Leiothlypis peregrina",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Parulidae",
+            "genus": "Leiothlypis"
           }
         ],
         "endemicas": [
@@ -5493,22 +5493,6 @@
           "genus": "Todirostrum"
         },
         {
-          "label": "Forpus conspicillatus",
-          "registros": 21,
-          "slug_especie": "forpus-conspicillatus",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2479071",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c76fc3f0106c67230e73ed/summary",
-          "species": "Forpus conspicillatus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Psittaciformes",
-          "family": "Psittacidae",
-          "genus": "Forpus"
-        },
-        {
           "label": "Ramphocelus dimidiatus",
           "registros": 21,
           "slug_especie": "ramphocelus-dimidiatus",
@@ -5539,6 +5523,22 @@
           "order": "Passeriformes",
           "family": "Tyrannidae",
           "genus": "Tyrannus"
+        },
+        {
+          "label": "Forpus conspicillatus",
+          "registros": 21,
+          "slug_especie": "forpus-conspicillatus",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2479071",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c76fc3f0106c67230e73ed/summary",
+          "species": "Forpus conspicillatus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Psittaciformes",
+          "family": "Psittacidae",
+          "genus": "Forpus"
         },
         {
           "label": "Psarocolius decumanus",
@@ -5572,22 +5572,6 @@
           "genus": "Brotogeris"
         },
         {
-          "label": "Leptotila verreauxi",
-          "registros": 18,
-          "slug_especie": "leptotila-verreauxi",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2496060",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e79b8e83c45700544e4226/summary",
-          "species": "Leptotila verreauxi",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Columbiformes",
-          "family": "Columbidae",
-          "genus": "Leptotila"
-        },
-        {
           "label": "Melanerpes rubricapillus",
           "registros": 18,
           "slug_especie": "melanerpes-rubricapillus",
@@ -5602,6 +5586,22 @@
           "order": "Piciformes",
           "family": "Picidae",
           "genus": "Melanerpes"
+        },
+        {
+          "label": "Leptotila verreauxi",
+          "registros": 18,
+          "slug_especie": "leptotila-verreauxi",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2496060",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e79b8e83c45700544e4226/summary",
+          "species": "Leptotila verreauxi",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Columbiformes",
+          "family": "Columbidae",
+          "genus": "Leptotila"
         }
       ],
       "species_list_tematica": {
@@ -5917,6 +5917,24 @@
             "genus": "Empidonax"
           },
           {
+            "label": "Tyrannus savana",
+            "registros": 3,
+            "slug_especie": "tyrannus-savana",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5229693",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cfb29d3c16479905cba7f9/summary",
+            "species": "Tyrannus savana",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Tyrannidae",
+            "genus": "Tyrannus"
+          },
+          {
             "label": "Buteo platypterus",
             "registros": 3,
             "slug_especie": "buteo-platypterus",
@@ -5969,42 +5987,6 @@
             "order": "Passeriformes",
             "family": "Parulidae",
             "genus": "Setophaga"
-          },
-          {
-            "label": "Tyrannus savana",
-            "registros": 3,
-            "slug_especie": "tyrannus-savana",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5229693",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56cfb29d3c16479905cba7f9/summary",
-            "species": "Tyrannus savana",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Tyrannidae",
-            "genus": "Tyrannus"
-          },
-          {
-            "label": "Catharus minimus",
-            "registros": 2,
-            "slug_especie": "catharus-minimus",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2490826",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c2acf3f0106c67230e7339/summary",
-            "species": "Catharus minimus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Turdidae",
-            "genus": "Catharus"
           },
           {
             "label": "Empidonax alnorum",
@@ -6061,22 +6043,22 @@
             "genus": "Icterus"
           },
           {
-            "label": "Leiothlypis peregrina",
+            "label": "Catharus minimus",
             "registros": 2,
-            "slug_especie": "leiothlypis-peregrina",
+            "slug_especie": "catharus-minimus",
             "slug_tematica": "migratorias",
             "tematica_label": "Migratorias",
             "slug_grupo": "aves",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/7415507",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56ca1d87f0106c67230e7456/summary",
-            "species": "Leiothlypis peregrina",
+            "url_gbif": "https://www.gbif.org/species/2490826",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c2acf3f0106c67230e7339/summary",
+            "species": "Catharus minimus",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Aves",
             "order": "Passeriformes",
-            "family": "Parulidae",
-            "genus": "Leiothlypis"
+            "family": "Turdidae",
+            "genus": "Catharus"
           },
           {
             "label": "Riparia riparia",
@@ -6113,6 +6095,24 @@
             "order": "Passeriformes",
             "family": "Parulidae",
             "genus": "Setophaga"
+          },
+          {
+            "label": "Leiothlypis peregrina",
+            "registros": 2,
+            "slug_especie": "leiothlypis-peregrina",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/7415507",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56ca1d87f0106c67230e7456/summary",
+            "species": "Leiothlypis peregrina",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Parulidae",
+            "genus": "Leiothlypis"
           }
         ],
         "endemicas": [
@@ -6806,6 +6806,36 @@
       "subgrupo_especies": [],
       "species_list_top": [
         {
+          "label": "Pseudoxycheila bipustulata",
+          "registros": 2,
+          "slug_especie": "pseudoxycheila-bipustulata",
+          "slug_grupo": "escarabajos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7557170",
+          "species": "Pseudoxycheila bipustulata",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Coleoptera",
+          "family": "Carabidae",
+          "genus": "Pseudoxycheila"
+        },
+        {
+          "label": "Strongylosomus dichrous",
+          "registros": 2,
+          "slug_especie": "strongylosomus-dichrous",
+          "slug_grupo": "escarabajos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/9527808",
+          "species": "Strongylosomus dichrous",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Coleoptera",
+          "family": "Erotylidae",
+          "genus": "Strongylosomus"
+        },
+        {
           "label": "Azya luteipes",
           "registros": 2,
           "slug_especie": "azya-luteipes",
@@ -6819,6 +6849,21 @@
           "order": "Coleoptera",
           "family": "Coccinellidae",
           "genus": "Azya"
+        },
+        {
+          "label": "Ptenomela columbica",
+          "registros": 2,
+          "slug_especie": "ptenomela-columbica",
+          "slug_grupo": "escarabajos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5989676",
+          "species": "Ptenomela columbica",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Coleoptera",
+          "family": "Scarabaeidae",
+          "genus": "Ptenomela"
         },
         {
           "label": "Chlorida festiva",
@@ -6851,51 +6896,6 @@
           "genus": "Cyclocephala"
         },
         {
-          "label": "Pseudoxycheila bipustulata",
-          "registros": 2,
-          "slug_especie": "pseudoxycheila-bipustulata",
-          "slug_grupo": "escarabajos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7557170",
-          "species": "Pseudoxycheila bipustulata",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Coleoptera",
-          "family": "Carabidae",
-          "genus": "Pseudoxycheila"
-        },
-        {
-          "label": "Ptenomela columbica",
-          "registros": 2,
-          "slug_especie": "ptenomela-columbica",
-          "slug_grupo": "escarabajos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5989676",
-          "species": "Ptenomela columbica",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Coleoptera",
-          "family": "Scarabaeidae",
-          "genus": "Ptenomela"
-        },
-        {
-          "label": "Strongylosomus dichrous",
-          "registros": 2,
-          "slug_especie": "strongylosomus-dichrous",
-          "slug_grupo": "escarabajos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/9527808",
-          "species": "Strongylosomus dichrous",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Coleoptera",
-          "family": "Erotylidae",
-          "genus": "Strongylosomus"
-        },
-        {
           "label": "Acrocinus longimanus",
           "registros": 1,
           "slug_especie": "acrocinus-longimanus",
@@ -6911,64 +6911,19 @@
           "genus": "Acrocinus"
         },
         {
-          "label": "Amyipunga moritzii",
+          "label": "Xyleborus spathipennis",
           "registros": 1,
-          "slug_especie": "amyipunga-moritzii",
+          "slug_especie": "xyleborus-spathipennis",
           "slug_grupo": "escarabajos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/6263447",
-          "species": "Amyipunga moritzii",
+          "url_gbif": "https://www.gbif.org/species/5019850",
+          "species": "Xyleborus spathipennis",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Coleoptera",
-          "family": "Cerambycidae",
-          "genus": "Amyipunga"
-        },
-        {
-          "label": "Callipogon lemoinei",
-          "registros": 1,
-          "slug_especie": "callipogon-lemoinei",
-          "slug_grupo": "escarabajos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1155326",
-          "species": "Callipogon lemoinei",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Coleoptera",
-          "family": "Cerambycidae",
-          "genus": "Callipogon"
-        },
-        {
-          "label": "Cycloneda sanguinea",
-          "registros": 1,
-          "slug_especie": "cycloneda-sanguinea",
-          "slug_grupo": "escarabajos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1043105",
-          "species": "Cycloneda sanguinea",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Coleoptera",
-          "family": "Coccinellidae",
-          "genus": "Cycloneda"
-        },
-        {
-          "label": "Cyrea noticollis",
-          "registros": 1,
-          "slug_especie": "cyrea-noticollis",
-          "slug_grupo": "escarabajos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/11654536",
-          "species": "Cyrea noticollis",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Coleoptera",
-          "family": "Coccinellidae",
-          "genus": "Cyrea"
+          "family": "Curculionidae",
+          "genus": "Xyleborus"
         },
         {
           "label": "Enema pan",
@@ -7166,6 +7121,36 @@
           "genus": "Oedudes"
         },
         {
+          "label": "Callipogon lemoinei",
+          "registros": 1,
+          "slug_especie": "callipogon-lemoinei",
+          "slug_grupo": "escarabajos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1155326",
+          "species": "Callipogon lemoinei",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Coleoptera",
+          "family": "Cerambycidae",
+          "genus": "Callipogon"
+        },
+        {
+          "label": "Cycloneda sanguinea",
+          "registros": 1,
+          "slug_especie": "cycloneda-sanguinea",
+          "slug_grupo": "escarabajos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1043105",
+          "species": "Cycloneda sanguinea",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Coleoptera",
+          "family": "Coccinellidae",
+          "genus": "Cycloneda"
+        },
+        {
           "label": "Rhodobaenus nawradii",
           "registros": 1,
           "slug_especie": "rhodobaenus-nawradii",
@@ -7256,6 +7241,21 @@
           "genus": "Strigoderma"
         },
         {
+          "label": "Amyipunga moritzii",
+          "registros": 1,
+          "slug_especie": "amyipunga-moritzii",
+          "slug_grupo": "escarabajos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/6263447",
+          "species": "Amyipunga moritzii",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Coleoptera",
+          "family": "Cerambycidae",
+          "genus": "Amyipunga"
+        },
+        {
           "label": "Taeniotes orbignyi",
           "registros": 1,
           "slug_especie": "taeniotes-orbignyi",
@@ -7301,19 +7301,19 @@
           "genus": "Trachyderes"
         },
         {
-          "label": "Xyleborus spathipennis",
+          "label": "Cyrea noticollis",
           "registros": 1,
-          "slug_especie": "xyleborus-spathipennis",
+          "slug_especie": "cyrea-noticollis",
           "slug_grupo": "escarabajos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5019850",
-          "species": "Xyleborus spathipennis",
+          "url_gbif": "https://www.gbif.org/species/11654536",
+          "species": "Cyrea noticollis",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Coleoptera",
-          "family": "Curculionidae",
-          "genus": "Xyleborus"
+          "family": "Coccinellidae",
+          "genus": "Cyrea"
         }
       ],
       "species_list_tematica": {
@@ -8760,36 +8760,6 @@
           "genus": "Horiola"
         },
         {
-          "label": "Azya luteipes",
-          "registros": 2,
-          "slug_especie": "azya-luteipes",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/6993536",
-          "species": "Azya luteipes",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Coleoptera",
-          "family": "Coccinellidae",
-          "genus": "Azya"
-        },
-        {
-          "label": "Chlorida festiva",
-          "registros": 2,
-          "slug_especie": "chlorida-festiva",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5000791",
-          "species": "Chlorida festiva",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Coleoptera",
-          "family": "Cerambycidae",
-          "genus": "Chlorida"
-        },
-        {
           "label": "Cyclocephala tutilina",
           "registros": 2,
           "slug_especie": "cyclocephala-tutilina",
@@ -8805,34 +8775,19 @@
           "genus": "Cyclocephala"
         },
         {
-          "label": "Dione juno",
+          "label": "Strongylosomus dichrous",
           "registros": 2,
-          "slug_especie": "dione-juno",
+          "slug_especie": "strongylosomus-dichrous",
           "slug_grupo": "insectos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5925238",
-          "species": "Dione juno",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Dione"
-        },
-        {
-          "label": "Pseudoxycheila bipustulata",
-          "registros": 2,
-          "slug_especie": "pseudoxycheila-bipustulata",
-          "slug_grupo": "insectos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7557170",
-          "species": "Pseudoxycheila bipustulata",
+          "url_gbif": "https://www.gbif.org/species/9527808",
+          "species": "Strongylosomus dichrous",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Coleoptera",
-          "family": "Carabidae",
-          "genus": "Pseudoxycheila"
+          "family": "Erotylidae",
+          "genus": "Strongylosomus"
         },
         {
           "label": "Ptenomela columbica",
@@ -8850,19 +8805,64 @@
           "genus": "Ptenomela"
         },
         {
-          "label": "Strongylosomus dichrous",
+          "label": "Pseudoxycheila bipustulata",
           "registros": 2,
-          "slug_especie": "strongylosomus-dichrous",
+          "slug_especie": "pseudoxycheila-bipustulata",
           "slug_grupo": "insectos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/9527808",
-          "species": "Strongylosomus dichrous",
+          "url_gbif": "https://www.gbif.org/species/7557170",
+          "species": "Pseudoxycheila bipustulata",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Coleoptera",
-          "family": "Erotylidae",
-          "genus": "Strongylosomus"
+          "family": "Carabidae",
+          "genus": "Pseudoxycheila"
+        },
+        {
+          "label": "Chlorida festiva",
+          "registros": 2,
+          "slug_especie": "chlorida-festiva",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5000791",
+          "species": "Chlorida festiva",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Coleoptera",
+          "family": "Cerambycidae",
+          "genus": "Chlorida"
+        },
+        {
+          "label": "Azya luteipes",
+          "registros": 2,
+          "slug_especie": "azya-luteipes",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/6993536",
+          "species": "Azya luteipes",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Coleoptera",
+          "family": "Coccinellidae",
+          "genus": "Azya"
+        },
+        {
+          "label": "Dione juno",
+          "registros": 2,
+          "slug_especie": "dione-juno",
+          "slug_grupo": "insectos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5925238",
+          "species": "Dione juno",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Dione"
         }
       ],
       "species_list_tematica": {
@@ -9228,36 +9228,6 @@
           "genus": "Horiola"
         },
         {
-          "label": "Azya luteipes",
-          "registros": 2,
-          "slug_especie": "azya-luteipes",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/6993536",
-          "species": "Azya luteipes",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Coleoptera",
-          "family": "Coccinellidae",
-          "genus": "Azya"
-        },
-        {
-          "label": "Chlorida festiva",
-          "registros": 2,
-          "slug_especie": "chlorida-festiva",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5000791",
-          "species": "Chlorida festiva",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Coleoptera",
-          "family": "Cerambycidae",
-          "genus": "Chlorida"
-        },
-        {
           "label": "Cyclocephala tutilina",
           "registros": 2,
           "slug_especie": "cyclocephala-tutilina",
@@ -9273,34 +9243,19 @@
           "genus": "Cyclocephala"
         },
         {
-          "label": "Dione juno",
+          "label": "Strongylosomus dichrous",
           "registros": 2,
-          "slug_especie": "dione-juno",
+          "slug_especie": "strongylosomus-dichrous",
           "slug_grupo": "invertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5925238",
-          "species": "Dione juno",
-          "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Dione"
-        },
-        {
-          "label": "Pseudoxycheila bipustulata",
-          "registros": 2,
-          "slug_especie": "pseudoxycheila-bipustulata",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7557170",
-          "species": "Pseudoxycheila bipustulata",
+          "url_gbif": "https://www.gbif.org/species/9527808",
+          "species": "Strongylosomus dichrous",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Coleoptera",
-          "family": "Carabidae",
-          "genus": "Pseudoxycheila"
+          "family": "Erotylidae",
+          "genus": "Strongylosomus"
         },
         {
           "label": "Ptenomela columbica",
@@ -9318,19 +9273,64 @@
           "genus": "Ptenomela"
         },
         {
-          "label": "Strongylosomus dichrous",
+          "label": "Pseudoxycheila bipustulata",
           "registros": 2,
-          "slug_especie": "strongylosomus-dichrous",
+          "slug_especie": "pseudoxycheila-bipustulata",
           "slug_grupo": "invertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/9527808",
-          "species": "Strongylosomus dichrous",
+          "url_gbif": "https://www.gbif.org/species/7557170",
+          "species": "Pseudoxycheila bipustulata",
           "kingdom": "Animalia",
           "phylum": "Arthropoda",
           "class": "Insecta",
           "order": "Coleoptera",
-          "family": "Erotylidae",
-          "genus": "Strongylosomus"
+          "family": "Carabidae",
+          "genus": "Pseudoxycheila"
+        },
+        {
+          "label": "Chlorida festiva",
+          "registros": 2,
+          "slug_especie": "chlorida-festiva",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5000791",
+          "species": "Chlorida festiva",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Coleoptera",
+          "family": "Cerambycidae",
+          "genus": "Chlorida"
+        },
+        {
+          "label": "Azya luteipes",
+          "registros": 2,
+          "slug_especie": "azya-luteipes",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/6993536",
+          "species": "Azya luteipes",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Coleoptera",
+          "family": "Coccinellidae",
+          "genus": "Azya"
+        },
+        {
+          "label": "Dione juno",
+          "registros": 2,
+          "slug_especie": "dione-juno",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5925238",
+          "species": "Dione juno",
+          "kingdom": "Animalia",
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Dione"
         }
       ],
       "species_list_tematica": {
@@ -12121,22 +12121,6 @@
           "genus": "Manihot"
         },
         {
-          "label": "Dracontium spruceanum",
-          "registros": 3,
-          "slug_especie": "dracontium-spruceanum",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5330716",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/5fe4fa47ab5fcefa17627ad9/summary",
-          "species": "Dracontium spruceanum",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Alismatales",
-          "family": "Araceae",
-          "genus": "Dracontium"
-        },
-        {
           "label": "Jacaranda copaia",
           "registros": 3,
           "slug_especie": "jacaranda-copaia",
@@ -12167,6 +12151,22 @@
           "order": "Rosales",
           "family": "Urticaceae",
           "genus": "Pourouma"
+        },
+        {
+          "label": "Dracontium spruceanum",
+          "registros": 3,
+          "slug_especie": "dracontium-spruceanum",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5330716",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5fe4fa47ab5fcefa17627ad9/summary",
+          "species": "Dracontium spruceanum",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Alismatales",
+          "family": "Araceae",
+          "genus": "Dracontium"
         }
       ],
       "species_list_tematica": {
@@ -12961,21 +12961,6 @@
           "genus": "Basiliscus"
         },
         {
-          "label": "Anolis tropidogaster",
-          "registros": 5,
-          "slug_especie": "anolis-tropidogaster",
-          "slug_grupo": "reptiles",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/8072367",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56d062693c16479905cba81e/summary",
-          "species": "Anolis tropidogaster",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Squamata",
-          "family": "Dactyloidae",
-          "genus": "Anolis"
-        },
-        {
           "label": "Bothrops asper",
           "registros": 5,
           "slug_especie": "bothrops-asper",
@@ -12989,6 +12974,21 @@
           "class": "Squamata",
           "family": "Viperidae",
           "genus": "Bothrops"
+        },
+        {
+          "label": "Anolis tropidogaster",
+          "registros": 5,
+          "slug_especie": "anolis-tropidogaster",
+          "slug_grupo": "reptiles",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/8072367",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d062693c16479905cba81e/summary",
+          "species": "Anolis tropidogaster",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Squamata",
+          "family": "Dactyloidae",
+          "genus": "Anolis"
         },
         {
           "label": "Gonatodes albogularis",
@@ -13555,22 +13555,6 @@
           "genus": "Manihot"
         },
         {
-          "label": "Dracontium spruceanum",
-          "registros": 3,
-          "slug_especie": "dracontium-spruceanum",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5330716",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/5fe4fa47ab5fcefa17627ad9/summary",
-          "species": "Dracontium spruceanum",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Alismatales",
-          "family": "Araceae",
-          "genus": "Dracontium"
-        },
-        {
           "label": "Jacaranda copaia",
           "registros": 3,
           "slug_especie": "jacaranda-copaia",
@@ -13585,6 +13569,22 @@
           "order": "Lamiales",
           "family": "Bignoniaceae",
           "genus": "Jacaranda"
+        },
+        {
+          "label": "Dracontium spruceanum",
+          "registros": 3,
+          "slug_especie": "dracontium-spruceanum",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5330716",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5fe4fa47ab5fcefa17627ad9/summary",
+          "species": "Dracontium spruceanum",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Alismatales",
+          "family": "Araceae",
+          "genus": "Dracontium"
         },
         {
           "label": "Pourouma bicolor",
@@ -14423,6 +14423,22 @@
           "genus": "Pitangus"
         },
         {
+          "label": "Todirostrum cinereum",
+          "registros": 23,
+          "slug_especie": "todirostrum-cinereum",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2483274",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7b08283c45700544e4300/summary",
+          "species": "Todirostrum cinereum",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Tyrannidae",
+          "genus": "Todirostrum"
+        },
+        {
           "label": "Sicalis flaveola",
           "registros": 23,
           "slug_especie": "sicalis-flaveola",
@@ -14439,20 +14455,20 @@
           "genus": "Sicalis"
         },
         {
-          "label": "Todirostrum cinereum",
-          "registros": 23,
-          "slug_especie": "todirostrum-cinereum",
+          "label": "Tyrannus melancholicus",
+          "registros": 21,
+          "slug_especie": "tyrannus-melancholicus",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2483274",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7b08283c45700544e4300/summary",
-          "species": "Todirostrum cinereum",
+          "url_gbif": "https://www.gbif.org/species/5229662",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cfa86b3c16479905cba7f5/summary",
+          "species": "Tyrannus melancholicus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
           "family": "Tyrannidae",
-          "genus": "Todirostrum"
+          "genus": "Tyrannus"
         },
         {
           "label": "Forpus conspicillatus",
@@ -14487,22 +14503,6 @@
           "genus": "Ramphocelus"
         },
         {
-          "label": "Tyrannus melancholicus",
-          "registros": 21,
-          "slug_especie": "tyrannus-melancholicus",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5229662",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cfa86b3c16479905cba7f5/summary",
-          "species": "Tyrannus melancholicus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Tyrannidae",
-          "genus": "Tyrannus"
-        },
-        {
           "label": "Psarocolius decumanus",
           "registros": 20,
           "slug_especie": "psarocolius-decumanus",
@@ -14518,19 +14518,20 @@
           "genus": "Psarocolius"
         },
         {
-          "label": "Basiliscus galeritus",
+          "label": "Melanerpes rubricapillus",
           "registros": 18,
-          "slug_especie": "basiliscus-galeritus",
+          "slug_especie": "melanerpes-rubricapillus",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5221811",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56d107dd3c16479905cba840/summary",
-          "species": "Basiliscus galeritus",
+          "url_gbif": "https://www.gbif.org/species/2478125",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7c075f0106c67230e7414/summary",
+          "species": "Melanerpes rubricapillus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
-          "class": "Squamata",
-          "family": "Corytophanidae",
-          "genus": "Basiliscus"
+          "class": "Aves",
+          "order": "Piciformes",
+          "family": "Picidae",
+          "genus": "Melanerpes"
         },
         {
           "label": "Brotogeris jugularis",
@@ -14549,6 +14550,21 @@
           "genus": "Brotogeris"
         },
         {
+          "label": "Basiliscus galeritus",
+          "registros": 18,
+          "slug_especie": "basiliscus-galeritus",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5221811",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d107dd3c16479905cba840/summary",
+          "species": "Basiliscus galeritus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Squamata",
+          "family": "Corytophanidae",
+          "genus": "Basiliscus"
+        },
+        {
           "label": "Leptotila verreauxi",
           "registros": 18,
           "slug_especie": "leptotila-verreauxi",
@@ -14563,22 +14579,6 @@
           "order": "Columbiformes",
           "family": "Columbidae",
           "genus": "Leptotila"
-        },
-        {
-          "label": "Melanerpes rubricapillus",
-          "registros": 18,
-          "slug_especie": "melanerpes-rubricapillus",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2478125",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7c075f0106c67230e7414/summary",
-          "species": "Melanerpes rubricapillus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Piciformes",
-          "family": "Picidae",
-          "genus": "Melanerpes"
         }
       ],
       "species_list_tematica": {
@@ -14841,24 +14841,6 @@
             "genus": "Pionus"
           },
           {
-            "label": "Ara ararauna",
-            "registros": 9,
-            "slug_especie": "ara-ararauna",
-            "slug_tematica": "cites-ii",
-            "tematica_label": "Apéndice CITES II",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5959231",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e77d4483c45700544e4048/summary",
-            "species": "Ara ararauna",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Psittaciformes",
-            "family": "Psittacidae",
-            "genus": "Ara"
-          },
-          {
             "label": "Pionus menstruus",
             "registros": 9,
             "slug_especie": "pionus-menstruus",
@@ -14875,6 +14857,24 @@
             "order": "Psittaciformes",
             "family": "Psittacidae",
             "genus": "Pionus"
+          },
+          {
+            "label": "Ara ararauna",
+            "registros": 9,
+            "slug_especie": "ara-ararauna",
+            "slug_tematica": "cites-ii",
+            "tematica_label": "Apéndice CITES II",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5959231",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e77d4483c45700544e4048/summary",
+            "species": "Ara ararauna",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Psittaciformes",
+            "family": "Psittacidae",
+            "genus": "Ara"
           },
           {
             "label": "Ramphastos vitellinus",
@@ -15041,6 +15041,24 @@
             "genus": "Empidonax"
           },
           {
+            "label": "Tyrannus savana",
+            "registros": 3,
+            "slug_especie": "tyrannus-savana",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/5229693",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cfb29d3c16479905cba7f9/summary",
+            "species": "Tyrannus savana",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Tyrannidae",
+            "genus": "Tyrannus"
+          },
+          {
             "label": "Buteo platypterus",
             "registros": 3,
             "slug_especie": "buteo-platypterus",
@@ -15093,42 +15111,6 @@
             "order": "Passeriformes",
             "family": "Parulidae",
             "genus": "Setophaga"
-          },
-          {
-            "label": "Tyrannus savana",
-            "registros": 3,
-            "slug_especie": "tyrannus-savana",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5229693",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56cfb29d3c16479905cba7f9/summary",
-            "species": "Tyrannus savana",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Tyrannidae",
-            "genus": "Tyrannus"
-          },
-          {
-            "label": "Catharus minimus",
-            "registros": 2,
-            "slug_especie": "catharus-minimus",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2490826",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c2acf3f0106c67230e7339/summary",
-            "species": "Catharus minimus",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Turdidae",
-            "genus": "Catharus"
           },
           {
             "label": "Empidonax alnorum",
@@ -15185,22 +15167,22 @@
             "genus": "Icterus"
           },
           {
-            "label": "Leiothlypis peregrina",
+            "label": "Catharus minimus",
             "registros": 2,
-            "slug_especie": "leiothlypis-peregrina",
+            "slug_especie": "catharus-minimus",
             "slug_tematica": "migratorias",
             "tematica_label": "Migratorias",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/7415507",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56ca1d87f0106c67230e7456/summary",
-            "species": "Leiothlypis peregrina",
+            "url_gbif": "https://www.gbif.org/species/2490826",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c2acf3f0106c67230e7339/summary",
+            "species": "Catharus minimus",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Aves",
             "order": "Passeriformes",
-            "family": "Parulidae",
-            "genus": "Leiothlypis"
+            "family": "Turdidae",
+            "genus": "Catharus"
           },
           {
             "label": "Riparia riparia",
@@ -15237,6 +15219,24 @@
             "order": "Passeriformes",
             "family": "Parulidae",
             "genus": "Setophaga"
+          },
+          {
+            "label": "Leiothlypis peregrina",
+            "registros": 2,
+            "slug_especie": "leiothlypis-peregrina",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/7415507",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56ca1d87f0106c67230e7456/summary",
+            "species": "Leiothlypis peregrina",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Parulidae",
+            "genus": "Leiothlypis"
           }
         ],
         "endemicas": [

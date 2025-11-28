@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -1186,6 +1186,20 @@
           "slug_tematica": "endemicas"
         },
         {
+          "label": "Piper enckeaespicum",
+          "slug_especie": "piper-enckeaespicum",
+          "registros": 3,
+          "url_gbif": "https://www.gbif.org/species/4184803",
+          "slug_tematica": "endemicas"
+        },
+        {
+          "label": "Penelope perspicax",
+          "slug_especie": "penelope-perspicax",
+          "registros": 3,
+          "url_gbif": "https://www.gbif.org/species/2482224",
+          "slug_tematica": "endemicas"
+        },
+        {
           "label": "Burmeistera ceratocarpa",
           "slug_especie": "burmeistera-ceratocarpa",
           "registros": 3,
@@ -1197,20 +1211,6 @@
           "slug_especie": "burmeistera-killipii",
           "registros": 3,
           "url_gbif": "https://www.gbif.org/species/3161564",
-          "slug_tematica": "endemicas"
-        },
-        {
-          "label": "Penelope perspicax",
-          "slug_especie": "penelope-perspicax",
-          "registros": 3,
-          "url_gbif": "https://www.gbif.org/species/2482224",
-          "slug_tematica": "endemicas"
-        },
-        {
-          "label": "Piper enckeaespicum",
-          "slug_especie": "piper-enckeaespicum",
-          "registros": 3,
-          "url_gbif": "https://www.gbif.org/species/4184803",
           "slug_tematica": "endemicas"
         }
       ]
@@ -1297,11 +1297,11 @@
           "slug_tematica": "migratorias"
         },
         {
-          "label": "Setophaga ruticilla",
-          "slug_especie": "setophaga-ruticilla",
+          "label": "Tyrannus savana",
+          "slug_especie": "tyrannus-savana",
           "registros": 21,
-          "url_gbif": "https://www.gbif.org/species/2489985",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cfd11d3c16479905cba808/summary",
+          "url_gbif": "https://www.gbif.org/species/5229693",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cfb29d3c16479905cba7f9/summary",
           "slug_tematica": "migratorias"
         }
       ]
@@ -1375,20 +1375,20 @@
           "slug_tematica": "exoticas"
         },
         {
-          "label": "Psidium guajava",
-          "slug_especie": "psidium-guajava",
-          "registros": 3,
-          "url_gbif": "https://www.gbif.org/species/5420380",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/5948609c2f4fd7bc7f39699c/summary",
-          "slug_tematica": "exoticas"
-        },
-        {
           "label": "Rattus rattus",
           "slug_especie": "rattus-rattus",
           "registros": 3,
           "url_gbif": "https://www.gbif.org/species/2439270",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56cbb061207ecea54a561dfc/summary",
           "slug_tematica": "exoticas-riesgo-invasion-total"
+        },
+        {
+          "label": "Psidium guajava",
+          "slug_especie": "psidium-guajava",
+          "registros": 3,
+          "url_gbif": "https://www.gbif.org/species/5420380",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/5948609c2f4fd7bc7f39699c/summary",
+          "slug_tematica": "exoticas"
         },
         {
           "label": "Apis mellifera",
@@ -2551,21 +2551,6 @@
           "genus": "Sphyrospermum"
         },
         {
-          "label": "Clusia ducu",
-          "registros": 6,
-          "slug_especie": "clusia-ducu",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7330393",
-          "species": "Clusia ducu",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Clusiaceae",
-          "genus": "Clusia"
-        },
-        {
           "label": "Comparettia falcata",
           "registros": 6,
           "slug_especie": "comparettia-falcata",
@@ -2582,6 +2567,21 @@
           "genus": "Comparettia"
         },
         {
+          "label": "Clusia ducu",
+          "registros": 6,
+          "slug_especie": "clusia-ducu",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7330393",
+          "species": "Clusia ducu",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Malpighiales",
+          "family": "Clusiaceae",
+          "genus": "Clusia"
+        },
+        {
           "label": "Miconia micayana",
           "registros": 5,
           "slug_especie": "miconia-micayana",
@@ -2595,6 +2595,67 @@
           "order": "Myrtales",
           "family": "Melastomataceae",
           "genus": "Miconia"
+        },
+        {
+          "label": "Kohleria affinis",
+          "registros": 4,
+          "slug_especie": "kohleria-affinis",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5589557",
+          "species": "Kohleria affinis",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Lamiales",
+          "family": "Gesneriaceae",
+          "genus": "Kohleria"
+        },
+        {
+          "label": "Ricinus communis",
+          "registros": 4,
+          "slug_especie": "ricinus-communis",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5380041",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e79c7b83c45700544e4231/summary",
+          "species": "Ricinus communis",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Malpighiales",
+          "family": "Euphorbiaceae",
+          "genus": "Ricinus"
+        },
+        {
+          "label": "Piper echinocaule",
+          "registros": 4,
+          "slug_especie": "piper-echinocaule",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/4185563",
+          "species": "Piper echinocaule",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Piperales",
+          "family": "Piperaceae",
+          "genus": "Piper"
+        },
+        {
+          "label": "Passiflora emarginata",
+          "registros": 4,
+          "slug_especie": "passiflora-emarginata",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3588060",
+          "species": "Passiflora emarginata",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Malpighiales",
+          "family": "Passifloraceae",
+          "genus": "Passiflora"
         },
         {
           "label": "Anthurium nigrescens",
@@ -2625,67 +2686,6 @@
           "order": "Asterales",
           "family": "Campanulaceae",
           "genus": "Burmeistera"
-        },
-        {
-          "label": "Kohleria affinis",
-          "registros": 4,
-          "slug_especie": "kohleria-affinis",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5589557",
-          "species": "Kohleria affinis",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Lamiales",
-          "family": "Gesneriaceae",
-          "genus": "Kohleria"
-        },
-        {
-          "label": "Passiflora emarginata",
-          "registros": 4,
-          "slug_especie": "passiflora-emarginata",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3588060",
-          "species": "Passiflora emarginata",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Passifloraceae",
-          "genus": "Passiflora"
-        },
-        {
-          "label": "Piper echinocaule",
-          "registros": 4,
-          "slug_especie": "piper-echinocaule",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4185563",
-          "species": "Piper echinocaule",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Piperales",
-          "family": "Piperaceae",
-          "genus": "Piper"
-        },
-        {
-          "label": "Ricinus communis",
-          "registros": 4,
-          "slug_especie": "ricinus-communis",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5380041",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e79c7b83c45700544e4231/summary",
-          "species": "Ricinus communis",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Euphorbiaceae",
-          "genus": "Ricinus"
         }
       ],
       "species_list_tematica": {
@@ -3045,23 +3045,6 @@
             "genus": "Passiflora"
           },
           {
-            "label": "Burmeistera ceratocarpa",
-            "registros": 3,
-            "slug_especie": "burmeistera-ceratocarpa",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "angiospermas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3161550",
-            "species": "Burmeistera ceratocarpa",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Asterales",
-            "family": "Campanulaceae",
-            "genus": "Burmeistera"
-          },
-          {
             "label": "Burmeistera killipii",
             "registros": 3,
             "slug_especie": "burmeistera-killipii",
@@ -3094,6 +3077,23 @@
             "order": "Piperales",
             "family": "Piperaceae",
             "genus": "Piper"
+          },
+          {
+            "label": "Burmeistera ceratocarpa",
+            "registros": 3,
+            "slug_especie": "burmeistera-ceratocarpa",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "angiospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/3161550",
+            "species": "Burmeistera ceratocarpa",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Asterales",
+            "family": "Campanulaceae",
+            "genus": "Burmeistera"
           },
           {
             "label": "Anthurium hygrophilum",
@@ -3146,57 +3146,6 @@
             "order": "Asparagales",
             "family": "Orchidaceae",
             "genus": "Rodriguezia"
-          },
-          {
-            "label": "Anthurium stipitatum",
-            "registros": 1,
-            "slug_especie": "anthurium-stipitatum",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "angiospermas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2873158",
-            "species": "Anthurium stipitatum",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Liliopsida",
-            "order": "Alismatales",
-            "family": "Araceae",
-            "genus": "Anthurium"
-          },
-          {
-            "label": "Begonia hexandra",
-            "registros": 1,
-            "slug_especie": "begonia-hexandra",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "angiospermas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/4157000",
-            "species": "Begonia hexandra",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Cucurbitales",
-            "family": "Begoniaceae",
-            "genus": "Begonia"
-          },
-          {
-            "label": "Burmeistera fuscoapicata",
-            "registros": 1,
-            "slug_especie": "burmeistera-fuscoapicata",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "angiospermas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3161630",
-            "species": "Burmeistera fuscoapicata",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Asterales",
-            "family": "Campanulaceae",
-            "genus": "Burmeistera"
           },
           {
             "label": "Cattleya quadricolor",
@@ -3319,6 +3268,23 @@
             "genus": "Miconia"
           },
           {
+            "label": "Begonia hexandra",
+            "registros": 1,
+            "slug_especie": "begonia-hexandra",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "angiospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/4157000",
+            "species": "Begonia hexandra",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Cucurbitales",
+            "family": "Begoniaceae",
+            "genus": "Begonia"
+          },
+          {
             "label": "Oncidium adelaidae",
             "registros": 1,
             "slug_especie": "oncidium-adelaidae",
@@ -3335,6 +3301,23 @@
             "order": "Asparagales",
             "family": "Orchidaceae",
             "genus": "Oncidium"
+          },
+          {
+            "label": "Burmeistera fuscoapicata",
+            "registros": 1,
+            "slug_especie": "burmeistera-fuscoapicata",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "angiospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/3161630",
+            "species": "Burmeistera fuscoapicata",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Asterales",
+            "family": "Campanulaceae",
+            "genus": "Burmeistera"
           },
           {
             "label": "Passiflora leptomischa",
@@ -3420,6 +3403,23 @@
             "order": "Ericales",
             "family": "Actinidiaceae",
             "genus": "Saurauia"
+          },
+          {
+            "label": "Anthurium stipitatum",
+            "registros": 1,
+            "slug_especie": "anthurium-stipitatum",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "angiospermas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2873158",
+            "species": "Anthurium stipitatum",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Liliopsida",
+            "order": "Alismatales",
+            "family": "Araceae",
+            "genus": "Anthurium"
           },
           {
             "label": "Telipogon wallisii",
@@ -4701,24 +4701,6 @@
             "genus": "Empidonax"
           },
           {
-            "label": "Setophaga ruticilla",
-            "registros": 21,
-            "slug_especie": "setophaga-ruticilla",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "animales",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2489985",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56cfd11d3c16479905cba808/summary",
-            "species": "Setophaga ruticilla",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Parulidae",
-            "genus": "Setophaga"
-          },
-          {
             "label": "Tyrannus savana",
             "registros": 21,
             "slug_especie": "tyrannus-savana",
@@ -4735,6 +4717,24 @@
             "order": "Passeriformes",
             "family": "Tyrannidae",
             "genus": "Tyrannus"
+          },
+          {
+            "label": "Setophaga ruticilla",
+            "registros": 21,
+            "slug_especie": "setophaga-ruticilla",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "animales",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2489985",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cfd11d3c16479905cba808/summary",
+            "species": "Setophaga ruticilla",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Parulidae",
+            "genus": "Setophaga"
           }
         ],
         "endemicas": [
@@ -6170,24 +6170,6 @@
             "genus": "Empidonax"
           },
           {
-            "label": "Setophaga ruticilla",
-            "registros": 21,
-            "slug_especie": "setophaga-ruticilla",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "aves",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2489985",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56cfd11d3c16479905cba808/summary",
-            "species": "Setophaga ruticilla",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Parulidae",
-            "genus": "Setophaga"
-          },
-          {
             "label": "Tyrannus savana",
             "registros": 21,
             "slug_especie": "tyrannus-savana",
@@ -6204,6 +6186,24 @@
             "order": "Passeriformes",
             "family": "Tyrannidae",
             "genus": "Tyrannus"
+          },
+          {
+            "label": "Setophaga ruticilla",
+            "registros": 21,
+            "slug_especie": "setophaga-ruticilla",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "aves",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2489985",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cfd11d3c16479905cba808/summary",
+            "species": "Setophaga ruticilla",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Parulidae",
+            "genus": "Setophaga"
           }
         ],
         "endemicas": [
@@ -9789,22 +9789,6 @@
           "genus": "Carollia"
         },
         {
-          "label": "Phyllostomus discolor",
-          "registros": 11,
-          "slug_especie": "phyllostomus-discolor",
-          "slug_grupo": "mamiferos",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2433280",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c960aff0106c67230e7444/summary",
-          "species": "Phyllostomus discolor",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Mammalia",
-          "order": "Chiroptera",
-          "family": "Phyllostomidae",
-          "genus": "Phyllostomus"
-        },
-        {
           "label": "Rhipidomys latimanus",
           "registros": 11,
           "slug_especie": "rhipidomys-latimanus",
@@ -9820,20 +9804,20 @@
           "genus": "Rhipidomys"
         },
         {
-          "label": "Glossophaga soricina",
-          "registros": 10,
-          "slug_especie": "glossophaga-soricina",
+          "label": "Phyllostomus discolor",
+          "registros": 11,
+          "slug_especie": "phyllostomus-discolor",
           "slug_grupo": "mamiferos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2433194",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56ca76eaf0106c67230e745f/summary",
-          "species": "Glossophaga soricina",
+          "url_gbif": "https://www.gbif.org/species/2433280",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c960aff0106c67230e7444/summary",
+          "species": "Phyllostomus discolor",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
           "order": "Chiroptera",
           "family": "Phyllostomidae",
-          "genus": "Glossophaga"
+          "genus": "Phyllostomus"
         },
         {
           "label": "Platyrrhinus dorsalis",
@@ -9852,19 +9836,35 @@
           "genus": "Platyrrhinus"
         },
         {
-          "label": "Anoura caudifer",
-          "registros": 6,
-          "slug_especie": "anoura-caudifer",
+          "label": "Glossophaga soricina",
+          "registros": 10,
+          "slug_especie": "glossophaga-soricina",
           "slug_grupo": "mamiferos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5963040",
-          "species": "Anoura caudifer",
+          "url_gbif": "https://www.gbif.org/species/2433194",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56ca76eaf0106c67230e745f/summary",
+          "species": "Glossophaga soricina",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
           "order": "Chiroptera",
           "family": "Phyllostomidae",
-          "genus": "Anoura"
+          "genus": "Glossophaga"
+        },
+        {
+          "label": "Sturnira ludovici",
+          "registros": 6,
+          "slug_especie": "sturnira-ludovici",
+          "slug_grupo": "mamiferos",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2433332",
+          "species": "Sturnira ludovici",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Mammalia",
+          "order": "Chiroptera",
+          "family": "Phyllostomidae",
+          "genus": "Sturnira"
         },
         {
           "label": "Didelphis marsupialis",
@@ -9900,19 +9900,19 @@
           "genus": "Enchisthenes"
         },
         {
-          "label": "Sturnira ludovici",
+          "label": "Anoura caudifer",
           "registros": 6,
-          "slug_especie": "sturnira-ludovici",
+          "slug_especie": "anoura-caudifer",
           "slug_grupo": "mamiferos",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2433332",
-          "species": "Sturnira ludovici",
+          "url_gbif": "https://www.gbif.org/species/5963040",
+          "species": "Anoura caudifer",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Mammalia",
           "order": "Chiroptera",
           "family": "Phyllostomidae",
-          "genus": "Sturnira"
+          "genus": "Anoura"
         }
       ],
       "species_list_tematica": {
@@ -12326,21 +12326,6 @@
           "genus": "Sphyrospermum"
         },
         {
-          "label": "Clusia ducu",
-          "registros": 6,
-          "slug_especie": "clusia-ducu",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7330393",
-          "species": "Clusia ducu",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Clusiaceae",
-          "genus": "Clusia"
-        },
-        {
           "label": "Comparettia falcata",
           "registros": 6,
           "slug_especie": "comparettia-falcata",
@@ -12357,6 +12342,21 @@
           "genus": "Comparettia"
         },
         {
+          "label": "Clusia ducu",
+          "registros": 6,
+          "slug_especie": "clusia-ducu",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7330393",
+          "species": "Clusia ducu",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Malpighiales",
+          "family": "Clusiaceae",
+          "genus": "Clusia"
+        },
+        {
           "label": "Miconia micayana",
           "registros": 5,
           "slug_especie": "miconia-micayana",
@@ -12370,6 +12370,67 @@
           "order": "Myrtales",
           "family": "Melastomataceae",
           "genus": "Miconia"
+        },
+        {
+          "label": "Kohleria affinis",
+          "registros": 4,
+          "slug_especie": "kohleria-affinis",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5589557",
+          "species": "Kohleria affinis",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Lamiales",
+          "family": "Gesneriaceae",
+          "genus": "Kohleria"
+        },
+        {
+          "label": "Ricinus communis",
+          "registros": 4,
+          "slug_especie": "ricinus-communis",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5380041",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e79c7b83c45700544e4231/summary",
+          "species": "Ricinus communis",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Malpighiales",
+          "family": "Euphorbiaceae",
+          "genus": "Ricinus"
+        },
+        {
+          "label": "Piper echinocaule",
+          "registros": 4,
+          "slug_especie": "piper-echinocaule",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/4185563",
+          "species": "Piper echinocaule",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Piperales",
+          "family": "Piperaceae",
+          "genus": "Piper"
+        },
+        {
+          "label": "Passiflora emarginata",
+          "registros": 4,
+          "slug_especie": "passiflora-emarginata",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3588060",
+          "species": "Passiflora emarginata",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Malpighiales",
+          "family": "Passifloraceae",
+          "genus": "Passiflora"
         },
         {
           "label": "Anthurium nigrescens",
@@ -12400,67 +12461,6 @@
           "order": "Asterales",
           "family": "Campanulaceae",
           "genus": "Burmeistera"
-        },
-        {
-          "label": "Kohleria affinis",
-          "registros": 4,
-          "slug_especie": "kohleria-affinis",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5589557",
-          "species": "Kohleria affinis",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Lamiales",
-          "family": "Gesneriaceae",
-          "genus": "Kohleria"
-        },
-        {
-          "label": "Passiflora emarginata",
-          "registros": 4,
-          "slug_especie": "passiflora-emarginata",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3588060",
-          "species": "Passiflora emarginata",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Passifloraceae",
-          "genus": "Passiflora"
-        },
-        {
-          "label": "Piper echinocaule",
-          "registros": 4,
-          "slug_especie": "piper-echinocaule",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4185563",
-          "species": "Piper echinocaule",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Piperales",
-          "family": "Piperaceae",
-          "genus": "Piper"
-        },
-        {
-          "label": "Ricinus communis",
-          "registros": 4,
-          "slug_especie": "ricinus-communis",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5380041",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e79c7b83c45700544e4231/summary",
-          "species": "Ricinus communis",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Euphorbiaceae",
-          "genus": "Ricinus"
         }
       ],
       "species_list_tematica": {
@@ -12838,23 +12838,6 @@
             "genus": "Passiflora"
           },
           {
-            "label": "Burmeistera ceratocarpa",
-            "registros": 3,
-            "slug_especie": "burmeistera-ceratocarpa",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "plantas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3161550",
-            "species": "Burmeistera ceratocarpa",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Asterales",
-            "family": "Campanulaceae",
-            "genus": "Burmeistera"
-          },
-          {
             "label": "Burmeistera killipii",
             "registros": 3,
             "slug_especie": "burmeistera-killipii",
@@ -12887,6 +12870,23 @@
             "order": "Piperales",
             "family": "Piperaceae",
             "genus": "Piper"
+          },
+          {
+            "label": "Burmeistera ceratocarpa",
+            "registros": 3,
+            "slug_especie": "burmeistera-ceratocarpa",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "plantas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/3161550",
+            "species": "Burmeistera ceratocarpa",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Asterales",
+            "family": "Campanulaceae",
+            "genus": "Burmeistera"
           },
           {
             "label": "Anthurium hygrophilum",
@@ -12939,57 +12939,6 @@
             "order": "Asparagales",
             "family": "Orchidaceae",
             "genus": "Rodriguezia"
-          },
-          {
-            "label": "Anthurium stipitatum",
-            "registros": 1,
-            "slug_especie": "anthurium-stipitatum",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "plantas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2873158",
-            "species": "Anthurium stipitatum",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Liliopsida",
-            "order": "Alismatales",
-            "family": "Araceae",
-            "genus": "Anthurium"
-          },
-          {
-            "label": "Begonia hexandra",
-            "registros": 1,
-            "slug_especie": "begonia-hexandra",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "plantas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/4157000",
-            "species": "Begonia hexandra",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Cucurbitales",
-            "family": "Begoniaceae",
-            "genus": "Begonia"
-          },
-          {
-            "label": "Burmeistera fuscoapicata",
-            "registros": 1,
-            "slug_especie": "burmeistera-fuscoapicata",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "plantas",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3161630",
-            "species": "Burmeistera fuscoapicata",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Asterales",
-            "family": "Campanulaceae",
-            "genus": "Burmeistera"
           },
           {
             "label": "Cattleya quadricolor",
@@ -13112,6 +13061,23 @@
             "genus": "Miconia"
           },
           {
+            "label": "Begonia hexandra",
+            "registros": 1,
+            "slug_especie": "begonia-hexandra",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "plantas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/4157000",
+            "species": "Begonia hexandra",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Cucurbitales",
+            "family": "Begoniaceae",
+            "genus": "Begonia"
+          },
+          {
             "label": "Oncidium adelaidae",
             "registros": 1,
             "slug_especie": "oncidium-adelaidae",
@@ -13128,6 +13094,23 @@
             "order": "Asparagales",
             "family": "Orchidaceae",
             "genus": "Oncidium"
+          },
+          {
+            "label": "Burmeistera fuscoapicata",
+            "registros": 1,
+            "slug_especie": "burmeistera-fuscoapicata",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "plantas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/3161630",
+            "species": "Burmeistera fuscoapicata",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Asterales",
+            "family": "Campanulaceae",
+            "genus": "Burmeistera"
           },
           {
             "label": "Passiflora leptomischa",
@@ -13213,6 +13196,23 @@
             "order": "Ericales",
             "family": "Actinidiaceae",
             "genus": "Saurauia"
+          },
+          {
+            "label": "Anthurium stipitatum",
+            "registros": 1,
+            "slug_especie": "anthurium-stipitatum",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "plantas",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2873158",
+            "species": "Anthurium stipitatum",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Liliopsida",
+            "order": "Alismatales",
+            "family": "Araceae",
+            "genus": "Anthurium"
           },
           {
             "label": "Telipogon wallisii",
@@ -14289,21 +14289,6 @@
           "genus": "Sphyrospermum"
         },
         {
-          "label": "Clusia ducu",
-          "registros": 6,
-          "slug_especie": "clusia-ducu",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/7330393",
-          "species": "Clusia ducu",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Clusiaceae",
-          "genus": "Clusia"
-        },
-        {
           "label": "Comparettia falcata",
           "registros": 6,
           "slug_especie": "comparettia-falcata",
@@ -14320,6 +14305,21 @@
           "genus": "Comparettia"
         },
         {
+          "label": "Clusia ducu",
+          "registros": 6,
+          "slug_especie": "clusia-ducu",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/7330393",
+          "species": "Clusia ducu",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Malpighiales",
+          "family": "Clusiaceae",
+          "genus": "Clusia"
+        },
+        {
           "label": "Miconia micayana",
           "registros": 5,
           "slug_especie": "miconia-micayana",
@@ -14333,6 +14333,67 @@
           "order": "Myrtales",
           "family": "Melastomataceae",
           "genus": "Miconia"
+        },
+        {
+          "label": "Kohleria affinis",
+          "registros": 4,
+          "slug_especie": "kohleria-affinis",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5589557",
+          "species": "Kohleria affinis",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Lamiales",
+          "family": "Gesneriaceae",
+          "genus": "Kohleria"
+        },
+        {
+          "label": "Ricinus communis",
+          "registros": 4,
+          "slug_especie": "ricinus-communis",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5380041",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e79c7b83c45700544e4231/summary",
+          "species": "Ricinus communis",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Malpighiales",
+          "family": "Euphorbiaceae",
+          "genus": "Ricinus"
+        },
+        {
+          "label": "Piper echinocaule",
+          "registros": 4,
+          "slug_especie": "piper-echinocaule",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/4185563",
+          "species": "Piper echinocaule",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Piperales",
+          "family": "Piperaceae",
+          "genus": "Piper"
+        },
+        {
+          "label": "Passiflora emarginata",
+          "registros": 4,
+          "slug_especie": "passiflora-emarginata",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3588060",
+          "species": "Passiflora emarginata",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Malpighiales",
+          "family": "Passifloraceae",
+          "genus": "Passiflora"
         },
         {
           "label": "Anthurium nigrescens",
@@ -14363,67 +14424,6 @@
           "order": "Asterales",
           "family": "Campanulaceae",
           "genus": "Burmeistera"
-        },
-        {
-          "label": "Kohleria affinis",
-          "registros": 4,
-          "slug_especie": "kohleria-affinis",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5589557",
-          "species": "Kohleria affinis",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Lamiales",
-          "family": "Gesneriaceae",
-          "genus": "Kohleria"
-        },
-        {
-          "label": "Passiflora emarginata",
-          "registros": 4,
-          "slug_especie": "passiflora-emarginata",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3588060",
-          "species": "Passiflora emarginata",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Passifloraceae",
-          "genus": "Passiflora"
-        },
-        {
-          "label": "Piper echinocaule",
-          "registros": 4,
-          "slug_especie": "piper-echinocaule",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4185563",
-          "species": "Piper echinocaule",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Piperales",
-          "family": "Piperaceae",
-          "genus": "Piper"
-        },
-        {
-          "label": "Ricinus communis",
-          "registros": 4,
-          "slug_especie": "ricinus-communis",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5380041",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e79c7b83c45700544e4231/summary",
-          "species": "Ricinus communis",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Euphorbiaceae",
-          "genus": "Ricinus"
         }
       ],
       "species_list_tematica": {
@@ -14801,23 +14801,6 @@
             "genus": "Passiflora"
           },
           {
-            "label": "Burmeistera ceratocarpa",
-            "registros": 3,
-            "slug_especie": "burmeistera-ceratocarpa",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "vasculares",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3161550",
-            "species": "Burmeistera ceratocarpa",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Asterales",
-            "family": "Campanulaceae",
-            "genus": "Burmeistera"
-          },
-          {
             "label": "Burmeistera killipii",
             "registros": 3,
             "slug_especie": "burmeistera-killipii",
@@ -14850,6 +14833,23 @@
             "order": "Piperales",
             "family": "Piperaceae",
             "genus": "Piper"
+          },
+          {
+            "label": "Burmeistera ceratocarpa",
+            "registros": 3,
+            "slug_especie": "burmeistera-ceratocarpa",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "vasculares",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/3161550",
+            "species": "Burmeistera ceratocarpa",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Asterales",
+            "family": "Campanulaceae",
+            "genus": "Burmeistera"
           },
           {
             "label": "Anthurium hygrophilum",
@@ -14902,57 +14902,6 @@
             "order": "Asparagales",
             "family": "Orchidaceae",
             "genus": "Rodriguezia"
-          },
-          {
-            "label": "Anthurium stipitatum",
-            "registros": 1,
-            "slug_especie": "anthurium-stipitatum",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "vasculares",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2873158",
-            "species": "Anthurium stipitatum",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Liliopsida",
-            "order": "Alismatales",
-            "family": "Araceae",
-            "genus": "Anthurium"
-          },
-          {
-            "label": "Begonia hexandra",
-            "registros": 1,
-            "slug_especie": "begonia-hexandra",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "vasculares",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/4157000",
-            "species": "Begonia hexandra",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Cucurbitales",
-            "family": "Begoniaceae",
-            "genus": "Begonia"
-          },
-          {
-            "label": "Burmeistera fuscoapicata",
-            "registros": 1,
-            "slug_especie": "burmeistera-fuscoapicata",
-            "slug_tematica": "endemicas",
-            "tematica_label": "Endémicas",
-            "slug_grupo": "vasculares",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/3161630",
-            "species": "Burmeistera fuscoapicata",
-            "kingdom": "Plantae",
-            "phylum": "Tracheophyta",
-            "class": "Magnoliopsida",
-            "order": "Asterales",
-            "family": "Campanulaceae",
-            "genus": "Burmeistera"
           },
           {
             "label": "Cattleya quadricolor",
@@ -15075,6 +15024,23 @@
             "genus": "Miconia"
           },
           {
+            "label": "Begonia hexandra",
+            "registros": 1,
+            "slug_especie": "begonia-hexandra",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "vasculares",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/4157000",
+            "species": "Begonia hexandra",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Cucurbitales",
+            "family": "Begoniaceae",
+            "genus": "Begonia"
+          },
+          {
             "label": "Oncidium adelaidae",
             "registros": 1,
             "slug_especie": "oncidium-adelaidae",
@@ -15091,6 +15057,23 @@
             "order": "Asparagales",
             "family": "Orchidaceae",
             "genus": "Oncidium"
+          },
+          {
+            "label": "Burmeistera fuscoapicata",
+            "registros": 1,
+            "slug_especie": "burmeistera-fuscoapicata",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "vasculares",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/3161630",
+            "species": "Burmeistera fuscoapicata",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Magnoliopsida",
+            "order": "Asterales",
+            "family": "Campanulaceae",
+            "genus": "Burmeistera"
           },
           {
             "label": "Passiflora leptomischa",
@@ -15176,6 +15159,23 @@
             "order": "Ericales",
             "family": "Actinidiaceae",
             "genus": "Saurauia"
+          },
+          {
+            "label": "Anthurium stipitatum",
+            "registros": 1,
+            "slug_especie": "anthurium-stipitatum",
+            "slug_tematica": "endemicas",
+            "tematica_label": "Endémicas",
+            "slug_grupo": "vasculares",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2873158",
+            "species": "Anthurium stipitatum",
+            "kingdom": "Plantae",
+            "phylum": "Tracheophyta",
+            "class": "Liliopsida",
+            "order": "Alismatales",
+            "family": "Araceae",
+            "genus": "Anthurium"
           },
           {
             "label": "Telipogon wallisii",
@@ -16472,24 +16472,6 @@
             "genus": "Empidonax"
           },
           {
-            "label": "Setophaga ruticilla",
-            "registros": 21,
-            "slug_especie": "setophaga-ruticilla",
-            "slug_tematica": "migratorias",
-            "tematica_label": "Migratorias",
-            "slug_grupo": "vertebrados",
-            "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2489985",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56cfd11d3c16479905cba808/summary",
-            "species": "Setophaga ruticilla",
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": "Aves",
-            "order": "Passeriformes",
-            "family": "Parulidae",
-            "genus": "Setophaga"
-          },
-          {
             "label": "Tyrannus savana",
             "registros": 21,
             "slug_especie": "tyrannus-savana",
@@ -16506,6 +16488,24 @@
             "order": "Passeriformes",
             "family": "Tyrannidae",
             "genus": "Tyrannus"
+          },
+          {
+            "label": "Setophaga ruticilla",
+            "registros": 21,
+            "slug_especie": "setophaga-ruticilla",
+            "slug_tematica": "migratorias",
+            "tematica_label": "Migratorias",
+            "slug_grupo": "vertebrados",
+            "tipo": "biologico",
+            "url_gbif": "https://www.gbif.org/species/2489985",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56cfd11d3c16479905cba808/summary",
+            "species": "Setophaga ruticilla",
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Parulidae",
+            "genus": "Setophaga"
           }
         ],
         "endemicas": [
@@ -19313,51 +19313,19 @@
           "genus": "Rodriguezia"
         },
         {
-          "label": "Bletia campanulata",
+          "label": "Epidendrum calothyrsus",
           "registros": 1,
-          "slug_especie": "bletia-campanulata",
+          "slug_especie": "epidendrum-calothyrsus",
           "slug_grupo": "orquideas",
           "tipo": "interes",
-          "url_gbif": "https://www.gbif.org/species/2794624",
-          "species": "Bletia campanulata",
+          "url_gbif": "https://www.gbif.org/species/5320306",
+          "species": "Epidendrum calothyrsus",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Liliopsida",
           "order": "Asparagales",
           "family": "Orchidaceae",
-          "genus": "Bletia"
-        },
-        {
-          "label": "Cattleya quadricolor",
-          "registros": 1,
-          "slug_especie": "cattleya-quadricolor",
-          "slug_grupo": "orquideas",
-          "tipo": "interes",
-          "url_gbif": "https://www.gbif.org/species/2800940",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/61e5b124182759fd3656a032/summary",
-          "species": "Cattleya quadricolor",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Asparagales",
-          "family": "Orchidaceae",
-          "genus": "Cattleya"
-        },
-        {
-          "label": "Cyrtochilum halteratum",
-          "registros": 1,
-          "slug_especie": "cyrtochilum-halteratum",
-          "slug_grupo": "orquideas",
-          "tipo": "interes",
-          "url_gbif": "https://www.gbif.org/species/2833150",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56de5adb83c45700544e3c12/summary",
-          "species": "Cyrtochilum halteratum",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Asparagales",
-          "family": "Orchidaceae",
-          "genus": "Cyrtochilum"
+          "genus": "Epidendrum"
         },
         {
           "label": "Cyrtochilum ventilabrum",
@@ -19373,21 +19341,6 @@
           "order": "Asparagales",
           "family": "Orchidaceae",
           "genus": "Cyrtochilum"
-        },
-        {
-          "label": "Dichaea morrisii",
-          "registros": 1,
-          "slug_especie": "dichaea-morrisii",
-          "slug_grupo": "orquideas",
-          "tipo": "interes",
-          "url_gbif": "https://www.gbif.org/species/2789909",
-          "species": "Dichaea morrisii",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Asparagales",
-          "family": "Orchidaceae",
-          "genus": "Dichaea"
         },
         {
           "label": "Elleanthus oliganthus",
@@ -19435,19 +19388,20 @@
           "genus": "Epidendrum"
         },
         {
-          "label": "Epidendrum calothyrsus",
+          "label": "Cattleya quadricolor",
           "registros": 1,
-          "slug_especie": "epidendrum-calothyrsus",
+          "slug_especie": "cattleya-quadricolor",
           "slug_grupo": "orquideas",
           "tipo": "interes",
-          "url_gbif": "https://www.gbif.org/species/5320306",
-          "species": "Epidendrum calothyrsus",
+          "url_gbif": "https://www.gbif.org/species/2800940",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/61e5b124182759fd3656a032/summary",
+          "species": "Cattleya quadricolor",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Liliopsida",
           "order": "Asparagales",
           "family": "Orchidaceae",
-          "genus": "Epidendrum"
+          "genus": "Cattleya"
         },
         {
           "label": "Epidendrum fastigiatum",
@@ -19465,19 +19419,19 @@
           "genus": "Epidendrum"
         },
         {
-          "label": "Epidendrum geminiflorum",
+          "label": "Dichaea morrisii",
           "registros": 1,
-          "slug_especie": "epidendrum-geminiflorum",
+          "slug_especie": "dichaea-morrisii",
           "slug_grupo": "orquideas",
           "tipo": "interes",
-          "url_gbif": "https://www.gbif.org/species/5320422",
-          "species": "Epidendrum geminiflorum",
+          "url_gbif": "https://www.gbif.org/species/2789909",
+          "species": "Dichaea morrisii",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Liliopsida",
           "order": "Asparagales",
           "family": "Orchidaceae",
-          "genus": "Epidendrum"
+          "genus": "Dichaea"
         },
         {
           "label": "Epidendrum ibaguense",
@@ -19508,6 +19462,21 @@
           "order": "Asparagales",
           "family": "Orchidaceae",
           "genus": "Epidendrum"
+        },
+        {
+          "label": "Bletia campanulata",
+          "registros": 1,
+          "slug_especie": "bletia-campanulata",
+          "slug_grupo": "orquideas",
+          "tipo": "interes",
+          "url_gbif": "https://www.gbif.org/species/2794624",
+          "species": "Bletia campanulata",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Asparagales",
+          "family": "Orchidaceae",
+          "genus": "Bletia"
         },
         {
           "label": "Eulophia alta",
@@ -19631,6 +19600,21 @@
           "genus": "Oncidium"
         },
         {
+          "label": "Trichopilia fragrans",
+          "registros": 1,
+          "slug_especie": "trichopilia-fragrans",
+          "slug_grupo": "orquideas",
+          "tipo": "interes",
+          "url_gbif": "https://www.gbif.org/species/4934932",
+          "species": "Trichopilia fragrans",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Asparagales",
+          "family": "Orchidaceae",
+          "genus": "Trichopilia"
+        },
+        {
           "label": "Oncidium hapalotyle",
           "registros": 1,
           "slug_especie": "oncidium-hapalotyle",
@@ -19677,6 +19661,22 @@
           "genus": "Ponthieva"
         },
         {
+          "label": "Cyrtochilum halteratum",
+          "registros": 1,
+          "slug_especie": "cyrtochilum-halteratum",
+          "slug_grupo": "orquideas",
+          "tipo": "interes",
+          "url_gbif": "https://www.gbif.org/species/2833150",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56de5adb83c45700544e3c12/summary",
+          "species": "Cyrtochilum halteratum",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Asparagales",
+          "family": "Orchidaceae",
+          "genus": "Cyrtochilum"
+        },
+        {
           "label": "Telipogon wallisii",
           "registros": 1,
           "slug_especie": "telipogon-wallisii",
@@ -19692,19 +19692,19 @@
           "genus": "Telipogon"
         },
         {
-          "label": "Trichopilia fragrans",
+          "label": "Epidendrum geminiflorum",
           "registros": 1,
-          "slug_especie": "trichopilia-fragrans",
+          "slug_especie": "epidendrum-geminiflorum",
           "slug_grupo": "orquideas",
           "tipo": "interes",
-          "url_gbif": "https://www.gbif.org/species/4934932",
-          "species": "Trichopilia fragrans",
+          "url_gbif": "https://www.gbif.org/species/5320422",
+          "species": "Epidendrum geminiflorum",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Liliopsida",
           "order": "Asparagales",
           "family": "Orchidaceae",
-          "genus": "Trichopilia"
+          "genus": "Epidendrum"
         }
       ],
       "species_list_tematica": {

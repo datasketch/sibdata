@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -1069,10 +1069,11 @@
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Habenaria monorrhiza",
-          "slug_especie": "habenaria-monorrhiza",
+          "label": "Ramphastos tucanus",
+          "slug_especie": "ramphastos-tucanus",
           "registros": 6,
-          "url_gbif": "https://www.gbif.org/species/2829647",
+          "url_gbif": "https://www.gbif.org/species/2478774",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e78da383c45700544e413e/summary",
           "slug_tematica": "cites-ii"
         }
       ],
@@ -2339,19 +2340,19 @@
           "genus": "Phaseolus"
         },
         {
-          "label": "Acalypha diversifolia",
+          "label": "Endlicheria klugii",
           "registros": 12,
-          "slug_especie": "acalypha-diversifolia",
+          "slug_especie": "endlicheria-klugii",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3056298",
-          "species": "Acalypha diversifolia",
+          "url_gbif": "https://www.gbif.org/species/4176133",
+          "species": "Endlicheria klugii",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Malpighiales",
-          "family": "Euphorbiaceae",
-          "genus": "Acalypha"
+          "order": "Laurales",
+          "family": "Lauraceae",
+          "genus": "Endlicheria"
         },
         {
           "label": "Acalypha macrostachya",
@@ -2370,19 +2371,19 @@
           "genus": "Acalypha"
         },
         {
-          "label": "Endlicheria klugii",
+          "label": "Acalypha diversifolia",
           "registros": 12,
-          "slug_especie": "endlicheria-klugii",
+          "slug_especie": "acalypha-diversifolia",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4176133",
-          "species": "Endlicheria klugii",
+          "url_gbif": "https://www.gbif.org/species/3056298",
+          "species": "Acalypha diversifolia",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Laurales",
-          "family": "Lauraceae",
-          "genus": "Endlicheria"
+          "order": "Malpighiales",
+          "family": "Euphorbiaceae",
+          "genus": "Acalypha"
         }
       ],
       "species_list_tematica": {
@@ -4780,22 +4781,6 @@
           "genus": "Psarocolius"
         },
         {
-          "label": "Coragyps atratus",
-          "registros": 30,
-          "slug_especie": "coragyps-atratus",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2481942",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4fe28f0106c67230e7394/summary",
-          "species": "Coragyps atratus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Accipitriformes",
-          "family": "Cathartidae",
-          "genus": "Coragyps"
-        },
-        {
           "label": "Troglodytes aedon",
           "registros": 30,
           "slug_especie": "troglodytes-aedon",
@@ -4810,6 +4795,22 @@
           "order": "Passeriformes",
           "family": "Troglodytidae",
           "genus": "Troglodytes"
+        },
+        {
+          "label": "Coragyps atratus",
+          "registros": 30,
+          "slug_especie": "coragyps-atratus",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2481942",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4fe28f0106c67230e7394/summary",
+          "species": "Coragyps atratus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Accipitriformes",
+          "family": "Cathartidae",
+          "genus": "Coragyps"
         },
         {
           "label": "Cacicus cela",
@@ -4844,6 +4845,22 @@
           "genus": "Myiozetetes"
         },
         {
+          "label": "Turdus ignobilis",
+          "registros": 26,
+          "slug_especie": "turdus-ignobilis",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2490722",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf9ee73c16479905cba7f4/summary",
+          "species": "Turdus ignobilis",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Turdidae",
+          "genus": "Turdus"
+        },
+        {
           "label": "Megarynchus pitangua",
           "registros": 26,
           "slug_especie": "megarynchus-pitangua",
@@ -4874,22 +4891,6 @@
           "order": "Accipitriformes",
           "family": "Accipitridae",
           "genus": "Rupornis"
-        },
-        {
-          "label": "Turdus ignobilis",
-          "registros": 26,
-          "slug_especie": "turdus-ignobilis",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2490722",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf9ee73c16479905cba7f4/summary",
-          "species": "Turdus ignobilis",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Turdidae",
-          "genus": "Turdus"
         }
       ],
       "species_list_tematica": {
@@ -9812,19 +9813,19 @@
           "genus": "Heliconius"
         },
         {
-          "label": "Lecane bulla",
+          "label": "Prepona claudina",
           "registros": 4,
-          "slug_especie": "lecane-bulla",
+          "slug_especie": "prepona-claudina",
           "slug_grupo": "invertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1002248",
-          "species": "Lecane bulla",
+          "url_gbif": "https://www.gbif.org/species/8731494",
+          "species": "Prepona claudina",
           "kingdom": "Animalia",
-          "phylum": "Rotifera",
-          "class": "Eurotatoria",
-          "order": "Ploima",
-          "family": "Lecanidae",
-          "genus": "Lecane"
+          "phylum": "Arthropoda",
+          "class": "Insecta",
+          "order": "Lepidoptera",
+          "family": "Nymphalidae",
+          "genus": "Prepona"
         },
         {
           "label": "Plationus patulus",
@@ -9842,19 +9843,79 @@
           "genus": "Plationus"
         },
         {
-          "label": "Prepona claudina",
+          "label": "Lecane bulla",
           "registros": 4,
-          "slug_especie": "prepona-claudina",
+          "slug_especie": "lecane-bulla",
           "slug_grupo": "invertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/8731494",
-          "species": "Prepona claudina",
+          "url_gbif": "https://www.gbif.org/species/1002248",
+          "species": "Lecane bulla",
           "kingdom": "Animalia",
-          "phylum": "Arthropoda",
-          "class": "Insecta",
-          "order": "Lepidoptera",
-          "family": "Nymphalidae",
-          "genus": "Prepona"
+          "phylum": "Rotifera",
+          "class": "Eurotatoria",
+          "order": "Ploima",
+          "family": "Lecanidae",
+          "genus": "Lecane"
+        },
+        {
+          "label": "Testudinella patina",
+          "registros": 3,
+          "slug_especie": "testudinella-patina",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/4983853",
+          "species": "Testudinella patina",
+          "kingdom": "Animalia",
+          "phylum": "Rotifera",
+          "class": "Eurotatoria",
+          "order": "Flosculariaceae",
+          "family": "Testudinellidae",
+          "genus": "Testudinella"
+        },
+        {
+          "label": "Lecane quadridentata",
+          "registros": 3,
+          "slug_especie": "lecane-quadridentata",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1002325",
+          "species": "Lecane quadridentata",
+          "kingdom": "Animalia",
+          "phylum": "Rotifera",
+          "class": "Eurotatoria",
+          "order": "Ploima",
+          "family": "Lecanidae",
+          "genus": "Lecane"
+        },
+        {
+          "label": "Lecane pyriformis",
+          "registros": 3,
+          "slug_especie": "lecane-pyriformis",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1002345",
+          "species": "Lecane pyriformis",
+          "kingdom": "Animalia",
+          "phylum": "Rotifera",
+          "class": "Eurotatoria",
+          "order": "Ploima",
+          "family": "Lecanidae",
+          "genus": "Lecane"
+        },
+        {
+          "label": "Lecane lunaris",
+          "registros": 3,
+          "slug_especie": "lecane-lunaris",
+          "slug_grupo": "invertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/1002417",
+          "species": "Lecane lunaris",
+          "kingdom": "Animalia",
+          "phylum": "Rotifera",
+          "class": "Eurotatoria",
+          "order": "Ploima",
+          "family": "Lecanidae",
+          "genus": "Lecane"
         },
         {
           "label": "Cephalodella biungulata",
@@ -9884,66 +9945,6 @@
           "order": "Araneae",
           "family": "Araneidae",
           "genus": "Hypognatha"
-        },
-        {
-          "label": "Lecane lunaris",
-          "registros": 3,
-          "slug_especie": "lecane-lunaris",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1002417",
-          "species": "Lecane lunaris",
-          "kingdom": "Animalia",
-          "phylum": "Rotifera",
-          "class": "Eurotatoria",
-          "order": "Ploima",
-          "family": "Lecanidae",
-          "genus": "Lecane"
-        },
-        {
-          "label": "Lecane pyriformis",
-          "registros": 3,
-          "slug_especie": "lecane-pyriformis",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1002345",
-          "species": "Lecane pyriformis",
-          "kingdom": "Animalia",
-          "phylum": "Rotifera",
-          "class": "Eurotatoria",
-          "order": "Ploima",
-          "family": "Lecanidae",
-          "genus": "Lecane"
-        },
-        {
-          "label": "Lecane quadridentata",
-          "registros": 3,
-          "slug_especie": "lecane-quadridentata",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/1002325",
-          "species": "Lecane quadridentata",
-          "kingdom": "Animalia",
-          "phylum": "Rotifera",
-          "class": "Eurotatoria",
-          "order": "Ploima",
-          "family": "Lecanidae",
-          "genus": "Lecane"
-        },
-        {
-          "label": "Testudinella patina",
-          "registros": 3,
-          "slug_especie": "testudinella-patina",
-          "slug_grupo": "invertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4983853",
-          "species": "Testudinella patina",
-          "kingdom": "Animalia",
-          "phylum": "Rotifera",
-          "class": "Eurotatoria",
-          "order": "Flosculariaceae",
-          "family": "Testudinellidae",
-          "genus": "Testudinella"
         }
       ],
       "species_list_tematica": {
@@ -12901,6 +12902,21 @@
           "genus": "Phaseolus"
         },
         {
+          "label": "Endlicheria klugii",
+          "registros": 12,
+          "slug_especie": "endlicheria-klugii",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/4176133",
+          "species": "Endlicheria klugii",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Laurales",
+          "family": "Lauraceae",
+          "genus": "Endlicheria"
+        },
+        {
           "label": "Acalypha diversifolia",
           "registros": 12,
           "slug_especie": "acalypha-diversifolia",
@@ -12930,21 +12946,6 @@
           "order": "Malpighiales",
           "family": "Euphorbiaceae",
           "genus": "Acalypha"
-        },
-        {
-          "label": "Endlicheria klugii",
-          "registros": 12,
-          "slug_especie": "endlicheria-klugii",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/4176133",
-          "species": "Endlicheria klugii",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Laurales",
-          "family": "Lauraceae",
-          "genus": "Endlicheria"
         }
       ],
       "species_list_tematica": {
@@ -15352,22 +15353,6 @@
           "genus": "Psarocolius"
         },
         {
-          "label": "Coragyps atratus",
-          "registros": 30,
-          "slug_especie": "coragyps-atratus",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2481942",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4fe28f0106c67230e7394/summary",
-          "species": "Coragyps atratus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Accipitriformes",
-          "family": "Cathartidae",
-          "genus": "Coragyps"
-        },
-        {
           "label": "Troglodytes aedon",
           "registros": 30,
           "slug_especie": "troglodytes-aedon",
@@ -15382,6 +15367,22 @@
           "order": "Passeriformes",
           "family": "Troglodytidae",
           "genus": "Troglodytes"
+        },
+        {
+          "label": "Coragyps atratus",
+          "registros": 30,
+          "slug_especie": "coragyps-atratus",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2481942",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c4fe28f0106c67230e7394/summary",
+          "species": "Coragyps atratus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Accipitriformes",
+          "family": "Cathartidae",
+          "genus": "Coragyps"
         }
       ],
       "species_list_tematica": {

@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -912,19 +912,19 @@
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Falco femoralis",
-          "slug_especie": "falco-femoralis",
-          "registros": 5,
-          "url_gbif": "https://www.gbif.org/species/2481006",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56d8c1e33c16479905cba979/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
           "label": "Milvago chimachima",
           "slug_especie": "milvago-chimachima",
           "registros": 5,
           "url_gbif": "https://www.gbif.org/species/2481066",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b89cf0106c67230e7408/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Falco femoralis",
+          "slug_especie": "falco-femoralis",
+          "registros": 5,
+          "url_gbif": "https://www.gbif.org/species/2481006",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d8c1e33c16479905cba979/summary",
           "slug_tematica": "cites-ii"
         },
         {
@@ -1005,19 +1005,19 @@
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Falco femoralis",
-          "slug_especie": "falco-femoralis",
-          "registros": 5,
-          "url_gbif": "https://www.gbif.org/species/2481006",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56d8c1e33c16479905cba979/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
           "label": "Milvago chimachima",
           "slug_especie": "milvago-chimachima",
           "registros": 5,
           "url_gbif": "https://www.gbif.org/species/2481066",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b89cf0106c67230e7408/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Falco femoralis",
+          "slug_especie": "falco-femoralis",
+          "registros": 5,
+          "url_gbif": "https://www.gbif.org/species/2481006",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d8c1e33c16479905cba979/summary",
           "slug_tematica": "cites-ii"
         },
         {
@@ -1088,19 +1088,19 @@
           "slug_tematica": "cites-ii"
         },
         {
-          "label": "Falco femoralis",
-          "slug_especie": "falco-femoralis",
-          "registros": 5,
-          "url_gbif": "https://www.gbif.org/species/2481006",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56d8c1e33c16479905cba979/summary",
-          "slug_tematica": "cites-ii"
-        },
-        {
           "label": "Milvago chimachima",
           "slug_especie": "milvago-chimachima",
           "registros": 5,
           "url_gbif": "https://www.gbif.org/species/2481066",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b89cf0106c67230e7408/summary",
+          "slug_tematica": "cites-ii"
+        },
+        {
+          "label": "Falco femoralis",
+          "slug_especie": "falco-femoralis",
+          "registros": 5,
+          "url_gbif": "https://www.gbif.org/species/2481006",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d8c1e33c16479905cba979/summary",
           "slug_tematica": "cites-ii"
         },
         {
@@ -1319,12 +1319,33 @@
       "parent_registros_trasplantadas": 9,
       "list_especies_exoticas_total": [
         {
+          "label": "Portulaca pilosa",
+          "slug_especie": "portulaca-pilosa",
+          "registros": 3,
+          "url_gbif": "https://www.gbif.org/species/3084704",
+          "slug_tematica": "exoticas"
+        },
+        {
           "label": "Bubulcus ibis",
           "slug_especie": "bubulcus-ibis",
           "registros": 3,
           "url_gbif": "https://www.gbif.org/species/2480830",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56c20d14f0106c67230e7320/summary",
           "slug_tematica": "exoticas-riesgo-invasion-total"
+        },
+        {
+          "label": "Portulaca oleracea",
+          "slug_especie": "portulaca-oleracea",
+          "registros": 3,
+          "url_gbif": "https://www.gbif.org/species/3084719",
+          "slug_tematica": "exoticas"
+        },
+        {
+          "label": "Paroaria nigrogenis",
+          "slug_especie": "paroaria-nigrogenis",
+          "registros": 3,
+          "url_gbif": "https://www.gbif.org/species/5845551",
+          "slug_tematica": "trasplantadas"
         },
         {
           "label": "Columba livia",
@@ -1342,24 +1363,10 @@
           "slug_tematica": "exoticas"
         },
         {
-          "label": "Paroaria nigrogenis",
-          "slug_especie": "paroaria-nigrogenis",
-          "registros": 3,
-          "url_gbif": "https://www.gbif.org/species/5845551",
-          "slug_tematica": "trasplantadas"
-        },
-        {
-          "label": "Portulaca oleracea",
-          "slug_especie": "portulaca-oleracea",
-          "registros": 3,
-          "url_gbif": "https://www.gbif.org/species/3084719",
-          "slug_tematica": "exoticas"
-        },
-        {
-          "label": "Portulaca pilosa",
-          "slug_especie": "portulaca-pilosa",
-          "registros": 3,
-          "url_gbif": "https://www.gbif.org/species/3084704",
+          "label": "Gomphocarpus physocarpus",
+          "slug_especie": "gomphocarpus-physocarpus",
+          "registros": 2,
+          "url_gbif": "https://www.gbif.org/species/3170326",
           "slug_tematica": "exoticas"
         },
         {
@@ -1370,25 +1377,19 @@
           "slug_tematica": "exoticas"
         },
         {
+          "label": "Setaria parviflora",
+          "slug_especie": "setaria-parviflora",
+          "registros": 2,
+          "url_gbif": "https://www.gbif.org/species/5289679",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e8380d83c45700544e43ad/summary",
+          "slug_tematica": "exoticas"
+        },
+        {
           "label": "Cascabela thevetia",
           "slug_especie": "cascabela-thevetia",
           "registros": 2,
           "url_gbif": "https://www.gbif.org/species/3169652",
           "url_cbc": "https://catalogo.biodiversidad.co/file/56e7aab683c45700544e42c4/summary",
-          "slug_tematica": "exoticas"
-        },
-        {
-          "label": "Gomphocarpus physocarpus",
-          "slug_especie": "gomphocarpus-physocarpus",
-          "registros": 2,
-          "url_gbif": "https://www.gbif.org/species/3170326",
-          "slug_tematica": "exoticas"
-        },
-        {
-          "label": "Gomphrena globosa",
-          "slug_especie": "gomphrena-globosa",
-          "registros": 2,
-          "url_gbif": "https://www.gbif.org/species/3084908",
           "slug_tematica": "exoticas"
         }
       ],
@@ -3000,22 +3001,6 @@
           "genus": "Thraupis"
         },
         {
-          "label": "Falco sparverius",
-          "registros": 35,
-          "slug_especie": "falco-sparverius",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/9685907",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c769ddf0106c67230e73ec/summary",
-          "species": "Falco sparverius",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Falconiformes",
-          "family": "Falconidae",
-          "genus": "Falco"
-        },
-        {
           "label": "Tyrannus melancholicus",
           "registros": 35,
           "slug_especie": "tyrannus-melancholicus",
@@ -3030,6 +3015,22 @@
           "order": "Passeriformes",
           "family": "Tyrannidae",
           "genus": "Tyrannus"
+        },
+        {
+          "label": "Falco sparverius",
+          "registros": 35,
+          "slug_especie": "falco-sparverius",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/9685907",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c769ddf0106c67230e73ec/summary",
+          "species": "Falco sparverius",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Falconiformes",
+          "family": "Falconidae",
+          "genus": "Falco"
         }
       ],
       "species_list_tematica": {
@@ -3200,22 +3201,22 @@
             "genus": "Milvago"
           },
           {
-            "label": "Amazona ochrocephala",
+            "label": "Colibri coruscans",
             "registros": 3,
-            "slug_especie": "amazona-ochrocephala",
+            "slug_especie": "colibri-coruscans",
             "slug_tematica": "cites-ii",
             "tematica_label": "Apéndice CITES II",
             "slug_grupo": "animales",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2479612",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7943b83c45700544e419d/summary",
-            "species": "Amazona ochrocephala",
+            "url_gbif": "https://www.gbif.org/species/5228474",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c4a8dcf0106c67230e7385/summary",
+            "species": "Colibri coruscans",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Aves",
-            "order": "Psittaciformes",
-            "family": "Psittacidae",
-            "genus": "Amazona"
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Colibri"
           },
           {
             "label": "Brotogeris jugularis",
@@ -3236,22 +3237,22 @@
             "genus": "Brotogeris"
           },
           {
-            "label": "Colibri coruscans",
+            "label": "Amazona ochrocephala",
             "registros": 3,
-            "slug_especie": "colibri-coruscans",
+            "slug_especie": "amazona-ochrocephala",
             "slug_tematica": "cites-ii",
             "tematica_label": "Apéndice CITES II",
             "slug_grupo": "animales",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5228474",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c4a8dcf0106c67230e7385/summary",
-            "species": "Colibri coruscans",
+            "url_gbif": "https://www.gbif.org/species/2479612",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7943b83c45700544e419d/summary",
+            "species": "Amazona ochrocephala",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Colibri"
+            "order": "Psittaciformes",
+            "family": "Psittacidae",
+            "genus": "Amazona"
           },
           {
             "label": "Ictinia plumbea",
@@ -4149,22 +4150,6 @@
           "genus": "Synallaxis"
         },
         {
-          "label": "Mimus gilvus",
-          "registros": 36,
-          "slug_especie": "mimus-gilvus",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5231676",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b8eaf0106c67230e7409/summary",
-          "species": "Mimus gilvus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Mimidae",
-          "genus": "Mimus"
-        },
-        {
           "label": "Thraupis episcopus",
           "registros": 36,
           "slug_especie": "thraupis-episcopus",
@@ -4179,6 +4164,22 @@
           "order": "Passeriformes",
           "family": "Thraupidae",
           "genus": "Thraupis"
+        },
+        {
+          "label": "Mimus gilvus",
+          "registros": 36,
+          "slug_especie": "mimus-gilvus",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5231676",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b8eaf0106c67230e7409/summary",
+          "species": "Mimus gilvus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Mimidae",
+          "genus": "Mimus"
         },
         {
           "label": "Falco sparverius",
@@ -4381,22 +4382,22 @@
             "genus": "Milvago"
           },
           {
-            "label": "Amazona ochrocephala",
+            "label": "Colibri coruscans",
             "registros": 3,
-            "slug_especie": "amazona-ochrocephala",
+            "slug_especie": "colibri-coruscans",
             "slug_tematica": "cites-ii",
             "tematica_label": "Apéndice CITES II",
             "slug_grupo": "aves",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2479612",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7943b83c45700544e419d/summary",
-            "species": "Amazona ochrocephala",
+            "url_gbif": "https://www.gbif.org/species/5228474",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c4a8dcf0106c67230e7385/summary",
+            "species": "Colibri coruscans",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Aves",
-            "order": "Psittaciformes",
-            "family": "Psittacidae",
-            "genus": "Amazona"
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Colibri"
           },
           {
             "label": "Brotogeris jugularis",
@@ -4417,22 +4418,22 @@
             "genus": "Brotogeris"
           },
           {
-            "label": "Colibri coruscans",
+            "label": "Amazona ochrocephala",
             "registros": 3,
-            "slug_especie": "colibri-coruscans",
+            "slug_especie": "amazona-ochrocephala",
             "slug_tematica": "cites-ii",
             "tematica_label": "Apéndice CITES II",
             "slug_grupo": "aves",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5228474",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c4a8dcf0106c67230e7385/summary",
-            "species": "Colibri coruscans",
+            "url_gbif": "https://www.gbif.org/species/2479612",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7943b83c45700544e419d/summary",
+            "species": "Amazona ochrocephala",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Colibri"
+            "order": "Psittaciformes",
+            "family": "Psittacidae",
+            "genus": "Amazona"
           },
           {
             "label": "Ictinia plumbea",
@@ -11856,22 +11857,6 @@
           "genus": "Synallaxis"
         },
         {
-          "label": "Mimus gilvus",
-          "registros": 36,
-          "slug_especie": "mimus-gilvus",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5231676",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b8eaf0106c67230e7409/summary",
-          "species": "Mimus gilvus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Mimidae",
-          "genus": "Mimus"
-        },
-        {
           "label": "Thraupis episcopus",
           "registros": 36,
           "slug_especie": "thraupis-episcopus",
@@ -11888,20 +11873,20 @@
           "genus": "Thraupis"
         },
         {
-          "label": "Falco sparverius",
-          "registros": 35,
-          "slug_especie": "falco-sparverius",
+          "label": "Mimus gilvus",
+          "registros": 36,
+          "slug_especie": "mimus-gilvus",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/9685907",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c769ddf0106c67230e73ec/summary",
-          "species": "Falco sparverius",
+          "url_gbif": "https://www.gbif.org/species/5231676",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7b8eaf0106c67230e7409/summary",
+          "species": "Mimus gilvus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": "Falconiformes",
-          "family": "Falconidae",
-          "genus": "Falco"
+          "order": "Passeriformes",
+          "family": "Mimidae",
+          "genus": "Mimus"
         },
         {
           "label": "Tyrannus melancholicus",
@@ -11918,6 +11903,22 @@
           "order": "Passeriformes",
           "family": "Tyrannidae",
           "genus": "Tyrannus"
+        },
+        {
+          "label": "Falco sparverius",
+          "registros": 35,
+          "slug_especie": "falco-sparverius",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/9685907",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c769ddf0106c67230e73ec/summary",
+          "species": "Falco sparverius",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Falconiformes",
+          "family": "Falconidae",
+          "genus": "Falco"
         }
       ],
       "species_list_tematica": {
@@ -12088,22 +12089,22 @@
             "genus": "Milvago"
           },
           {
-            "label": "Amazona ochrocephala",
+            "label": "Colibri coruscans",
             "registros": 3,
-            "slug_especie": "amazona-ochrocephala",
+            "slug_especie": "colibri-coruscans",
             "slug_tematica": "cites-ii",
             "tematica_label": "Apéndice CITES II",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/2479612",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7943b83c45700544e419d/summary",
-            "species": "Amazona ochrocephala",
+            "url_gbif": "https://www.gbif.org/species/5228474",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56c4a8dcf0106c67230e7385/summary",
+            "species": "Colibri coruscans",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Aves",
-            "order": "Psittaciformes",
-            "family": "Psittacidae",
-            "genus": "Amazona"
+            "order": "Apodiformes",
+            "family": "Trochilidae",
+            "genus": "Colibri"
           },
           {
             "label": "Brotogeris jugularis",
@@ -12124,22 +12125,22 @@
             "genus": "Brotogeris"
           },
           {
-            "label": "Colibri coruscans",
+            "label": "Amazona ochrocephala",
             "registros": 3,
-            "slug_especie": "colibri-coruscans",
+            "slug_especie": "amazona-ochrocephala",
             "slug_tematica": "cites-ii",
             "tematica_label": "Apéndice CITES II",
             "slug_grupo": "vertebrados",
             "tipo": "biologico",
-            "url_gbif": "https://www.gbif.org/species/5228474",
-            "url_cbc": "https://catalogo.biodiversidad.co/file/56c4a8dcf0106c67230e7385/summary",
-            "species": "Colibri coruscans",
+            "url_gbif": "https://www.gbif.org/species/2479612",
+            "url_cbc": "https://catalogo.biodiversidad.co/file/56e7943b83c45700544e419d/summary",
+            "species": "Amazona ochrocephala",
             "kingdom": "Animalia",
             "phylum": "Chordata",
             "class": "Aves",
-            "order": "Apodiformes",
-            "family": "Trochilidae",
-            "genus": "Colibri"
+            "order": "Psittaciformes",
+            "family": "Psittacidae",
+            "genus": "Amazona"
           },
           {
             "label": "Ictinia plumbea",

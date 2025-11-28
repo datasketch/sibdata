@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -1553,21 +1553,6 @@
       ],
       "species_list_top": [
         {
-          "label": "Ramphocelus flammigerus",
-          "registros": 10,
-          "slug_especie": "ramphocelus-flammigerus",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2488439",
-          "species": "Ramphocelus flammigerus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Ramphocelus"
-        },
-        {
           "label": "Tyrannus melancholicus",
           "registros": 10,
           "slug_especie": "tyrannus-melancholicus",
@@ -1582,6 +1567,21 @@
           "order": "Passeriformes",
           "family": "Tyrannidae",
           "genus": "Tyrannus"
+        },
+        {
+          "label": "Ramphocelus flammigerus",
+          "registros": 10,
+          "slug_especie": "ramphocelus-flammigerus",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2488439",
+          "species": "Ramphocelus flammigerus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Ramphocelus"
         },
         {
           "label": "Zonotrichia capensis",
@@ -1600,20 +1600,19 @@
           "genus": "Zonotrichia"
         },
         {
-          "label": "Icterus chrysater",
+          "label": "Stilpnia vitriolina",
           "registros": 9,
-          "slug_especie": "icterus-chrysater",
+          "slug_especie": "stilpnia-vitriolina",
           "slug_grupo": "animales",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5229924",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9f6e2f0106c67230e744f/summary",
-          "species": "Icterus chrysater",
+          "url_gbif": "https://www.gbif.org/species/11081628",
+          "species": "Stilpnia vitriolina",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Icteridae",
-          "genus": "Icterus"
+          "family": "Thraupidae",
+          "genus": "Stilpnia"
         },
         {
           "label": "Patagioenas fasciata",
@@ -1632,19 +1631,52 @@
           "genus": "Patagioenas"
         },
         {
-          "label": "Stilpnia vitriolina",
+          "label": "Icterus chrysater",
           "registros": 9,
-          "slug_especie": "stilpnia-vitriolina",
+          "slug_especie": "icterus-chrysater",
           "slug_grupo": "animales",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/11081628",
-          "species": "Stilpnia vitriolina",
+          "url_gbif": "https://www.gbif.org/species/5229924",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9f6e2f0106c67230e744f/summary",
+          "species": "Icterus chrysater",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Icteridae",
+          "genus": "Icterus"
+        },
+        {
+          "label": "Thraupis episcopus",
+          "registros": 8,
+          "slug_especie": "thraupis-episcopus",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2488602",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf719b3c16479905cba7e1/summary",
+          "species": "Thraupis episcopus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
           "family": "Thraupidae",
-          "genus": "Stilpnia"
+          "genus": "Thraupis"
+        },
+        {
+          "label": "Tangara gyrola",
+          "registros": 8,
+          "slug_especie": "tangara-gyrola",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2488114",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7aeb583c45700544e42f1/summary",
+          "species": "Tangara gyrola",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Tangara"
         },
         {
           "label": "Coragyps atratus",
@@ -1694,36 +1726,20 @@
           "genus": "Cyanocorax"
         },
         {
-          "label": "Tangara gyrola",
+          "label": "Turdus ignobilis",
           "registros": 8,
-          "slug_especie": "tangara-gyrola",
+          "slug_especie": "turdus-ignobilis",
           "slug_grupo": "animales",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2488114",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7aeb583c45700544e42f1/summary",
-          "species": "Tangara gyrola",
+          "url_gbif": "https://www.gbif.org/species/2490722",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf9ee73c16479905cba7f4/summary",
+          "species": "Turdus ignobilis",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Tangara"
-        },
-        {
-          "label": "Thraupis episcopus",
-          "registros": 8,
-          "slug_especie": "thraupis-episcopus",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2488602",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf719b3c16479905cba7e1/summary",
-          "species": "Thraupis episcopus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Thraupis"
+          "family": "Turdidae",
+          "genus": "Turdus"
         },
         {
           "label": "Troglodytes aedon",
@@ -1740,22 +1756,6 @@
           "order": "Passeriformes",
           "family": "Troglodytidae",
           "genus": "Troglodytes"
-        },
-        {
-          "label": "Turdus ignobilis",
-          "registros": 8,
-          "slug_especie": "turdus-ignobilis",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2490722",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf9ee73c16479905cba7f4/summary",
-          "species": "Turdus ignobilis",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Turdidae",
-          "genus": "Turdus"
         }
       ],
       "species_list_tematica": {
@@ -2235,21 +2235,6 @@
       "subgrupo_especies": [],
       "species_list_top": [
         {
-          "label": "Ramphocelus flammigerus",
-          "registros": 10,
-          "slug_especie": "ramphocelus-flammigerus",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2488439",
-          "species": "Ramphocelus flammigerus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Ramphocelus"
-        },
-        {
           "label": "Tyrannus melancholicus",
           "registros": 10,
           "slug_especie": "tyrannus-melancholicus",
@@ -2264,6 +2249,21 @@
           "order": "Passeriformes",
           "family": "Tyrannidae",
           "genus": "Tyrannus"
+        },
+        {
+          "label": "Ramphocelus flammigerus",
+          "registros": 10,
+          "slug_especie": "ramphocelus-flammigerus",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2488439",
+          "species": "Ramphocelus flammigerus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Ramphocelus"
         },
         {
           "label": "Zonotrichia capensis",
@@ -2282,20 +2282,19 @@
           "genus": "Zonotrichia"
         },
         {
-          "label": "Icterus chrysater",
+          "label": "Stilpnia vitriolina",
           "registros": 9,
-          "slug_especie": "icterus-chrysater",
+          "slug_especie": "stilpnia-vitriolina",
           "slug_grupo": "aves",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5229924",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9f6e2f0106c67230e744f/summary",
-          "species": "Icterus chrysater",
+          "url_gbif": "https://www.gbif.org/species/11081628",
+          "species": "Stilpnia vitriolina",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Icteridae",
-          "genus": "Icterus"
+          "family": "Thraupidae",
+          "genus": "Stilpnia"
         },
         {
           "label": "Patagioenas fasciata",
@@ -2314,19 +2313,52 @@
           "genus": "Patagioenas"
         },
         {
-          "label": "Stilpnia vitriolina",
+          "label": "Icterus chrysater",
           "registros": 9,
-          "slug_especie": "stilpnia-vitriolina",
+          "slug_especie": "icterus-chrysater",
           "slug_grupo": "aves",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/11081628",
-          "species": "Stilpnia vitriolina",
+          "url_gbif": "https://www.gbif.org/species/5229924",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9f6e2f0106c67230e744f/summary",
+          "species": "Icterus chrysater",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Icteridae",
+          "genus": "Icterus"
+        },
+        {
+          "label": "Thraupis episcopus",
+          "registros": 8,
+          "slug_especie": "thraupis-episcopus",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2488602",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf719b3c16479905cba7e1/summary",
+          "species": "Thraupis episcopus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
           "family": "Thraupidae",
-          "genus": "Stilpnia"
+          "genus": "Thraupis"
+        },
+        {
+          "label": "Tangara gyrola",
+          "registros": 8,
+          "slug_especie": "tangara-gyrola",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2488114",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7aeb583c45700544e42f1/summary",
+          "species": "Tangara gyrola",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Tangara"
         },
         {
           "label": "Coragyps atratus",
@@ -2376,36 +2408,20 @@
           "genus": "Cyanocorax"
         },
         {
-          "label": "Tangara gyrola",
+          "label": "Turdus ignobilis",
           "registros": 8,
-          "slug_especie": "tangara-gyrola",
+          "slug_especie": "turdus-ignobilis",
           "slug_grupo": "aves",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2488114",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7aeb583c45700544e42f1/summary",
-          "species": "Tangara gyrola",
+          "url_gbif": "https://www.gbif.org/species/2490722",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf9ee73c16479905cba7f4/summary",
+          "species": "Turdus ignobilis",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Tangara"
-        },
-        {
-          "label": "Thraupis episcopus",
-          "registros": 8,
-          "slug_especie": "thraupis-episcopus",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2488602",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf719b3c16479905cba7e1/summary",
-          "species": "Thraupis episcopus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Thraupis"
+          "family": "Turdidae",
+          "genus": "Turdus"
         },
         {
           "label": "Troglodytes aedon",
@@ -2422,22 +2438,6 @@
           "order": "Passeriformes",
           "family": "Troglodytidae",
           "genus": "Troglodytes"
-        },
-        {
-          "label": "Turdus ignobilis",
-          "registros": 8,
-          "slug_especie": "turdus-ignobilis",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2490722",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf9ee73c16479905cba7f4/summary",
-          "species": "Turdus ignobilis",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Turdidae",
-          "genus": "Turdus"
         }
       ],
       "species_list_tematica": {
@@ -3845,21 +3845,6 @@
       ],
       "species_list_top": [
         {
-          "label": "Ramphocelus flammigerus",
-          "registros": 10,
-          "slug_especie": "ramphocelus-flammigerus",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2488439",
-          "species": "Ramphocelus flammigerus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Ramphocelus"
-        },
-        {
           "label": "Tyrannus melancholicus",
           "registros": 10,
           "slug_especie": "tyrannus-melancholicus",
@@ -3874,6 +3859,21 @@
           "order": "Passeriformes",
           "family": "Tyrannidae",
           "genus": "Tyrannus"
+        },
+        {
+          "label": "Ramphocelus flammigerus",
+          "registros": 10,
+          "slug_especie": "ramphocelus-flammigerus",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2488439",
+          "species": "Ramphocelus flammigerus",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Ramphocelus"
         },
         {
           "label": "Zonotrichia capensis",
@@ -3892,20 +3892,19 @@
           "genus": "Zonotrichia"
         },
         {
-          "label": "Icterus chrysater",
+          "label": "Stilpnia vitriolina",
           "registros": 9,
-          "slug_especie": "icterus-chrysater",
+          "slug_especie": "stilpnia-vitriolina",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5229924",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9f6e2f0106c67230e744f/summary",
-          "species": "Icterus chrysater",
+          "url_gbif": "https://www.gbif.org/species/11081628",
+          "species": "Stilpnia vitriolina",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Icteridae",
-          "genus": "Icterus"
+          "family": "Thraupidae",
+          "genus": "Stilpnia"
         },
         {
           "label": "Patagioenas fasciata",
@@ -3924,19 +3923,52 @@
           "genus": "Patagioenas"
         },
         {
-          "label": "Stilpnia vitriolina",
+          "label": "Icterus chrysater",
           "registros": 9,
-          "slug_especie": "stilpnia-vitriolina",
+          "slug_especie": "icterus-chrysater",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/11081628",
-          "species": "Stilpnia vitriolina",
+          "url_gbif": "https://www.gbif.org/species/5229924",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c9f6e2f0106c67230e744f/summary",
+          "species": "Icterus chrysater",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Icteridae",
+          "genus": "Icterus"
+        },
+        {
+          "label": "Thraupis episcopus",
+          "registros": 8,
+          "slug_especie": "thraupis-episcopus",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2488602",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf719b3c16479905cba7e1/summary",
+          "species": "Thraupis episcopus",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
           "family": "Thraupidae",
-          "genus": "Stilpnia"
+          "genus": "Thraupis"
+        },
+        {
+          "label": "Tangara gyrola",
+          "registros": 8,
+          "slug_especie": "tangara-gyrola",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2488114",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7aeb583c45700544e42f1/summary",
+          "species": "Tangara gyrola",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Thraupidae",
+          "genus": "Tangara"
         },
         {
           "label": "Coragyps atratus",
@@ -3986,36 +4018,20 @@
           "genus": "Cyanocorax"
         },
         {
-          "label": "Tangara gyrola",
+          "label": "Turdus ignobilis",
           "registros": 8,
-          "slug_especie": "tangara-gyrola",
+          "slug_especie": "turdus-ignobilis",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2488114",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7aeb583c45700544e42f1/summary",
-          "species": "Tangara gyrola",
+          "url_gbif": "https://www.gbif.org/species/2490722",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf9ee73c16479905cba7f4/summary",
+          "species": "Turdus ignobilis",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Tangara"
-        },
-        {
-          "label": "Thraupis episcopus",
-          "registros": 8,
-          "slug_especie": "thraupis-episcopus",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2488602",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf719b3c16479905cba7e1/summary",
-          "species": "Thraupis episcopus",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Thraupidae",
-          "genus": "Thraupis"
+          "family": "Turdidae",
+          "genus": "Turdus"
         },
         {
           "label": "Troglodytes aedon",
@@ -4032,22 +4048,6 @@
           "order": "Passeriformes",
           "family": "Troglodytidae",
           "genus": "Troglodytes"
-        },
-        {
-          "label": "Turdus ignobilis",
-          "registros": 8,
-          "slug_especie": "turdus-ignobilis",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2490722",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf9ee73c16479905cba7f4/summary",
-          "species": "Turdus ignobilis",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Turdidae",
-          "genus": "Turdus"
         }
       ],
       "species_list_tematica": {

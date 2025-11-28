@@ -4,7 +4,7 @@
     "children": [
       {
         "slug": "amenazadas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/amenazadas-black.svg",
         "icon_white": "static/icons/amenazadas-white.svg",
@@ -13,7 +13,7 @@
         "children": [
           {
             "slug": "amenazadas-global",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-global-black.svg",
             "icon_white": "static/icons/amenazadas-global-white.svg",
@@ -22,7 +22,7 @@
           },
           {
             "slug": "amenazadas-nacional",
-            "activa": "TRUE",
+            "activa": true,
             "icon": false,
             "icon_black": "static/icons/amenazadas-nacional-black.svg",
             "icon_white": "static/icons/amenazadas-nacional-white.svg",
@@ -33,7 +33,7 @@
       },
       {
         "slug": "cites",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/cites-black.svg",
         "icon_white": "static/icons/cites-white.svg",
@@ -42,7 +42,7 @@
       },
       {
         "slug": "endemicas",
-        "activa": "TRUE",
+        "activa": true,
         "icon": true,
         "icon_black": "static/icons/endemicas-black.svg",
         "icon_white": "static/icons/endemicas-white.svg",
@@ -51,7 +51,7 @@
       },
       {
         "slug": "exoticas-total",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/exoticas-total-black.svg",
         "icon_white": "static/icons/exoticas-total-white.svg",
@@ -60,7 +60,7 @@
       },
       {
         "slug": "migratorias",
-        "activa": "TRUE",
+        "activa": true,
         "icon": false,
         "icon_black": "static/icons/migratorias-black.svg",
         "icon_white": "static/icons/migratorias-white.svg",
@@ -1989,6 +1989,21 @@
           "genus": "Montanoa"
         },
         {
+          "label": "Erythrina rubrinervia",
+          "registros": 2,
+          "slug_especie": "erythrina-rubrinervia",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5349665",
+          "species": "Erythrina rubrinervia",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Erythrina"
+        },
+        {
           "label": "Cajanus cajan",
           "registros": 2,
           "slug_especie": "cajanus-cajan",
@@ -2019,34 +2034,19 @@
           "genus": "Chromolaena"
         },
         {
-          "label": "Erythrina rubrinervia",
+          "label": "Sambucus nigra",
           "registros": 2,
-          "slug_especie": "erythrina-rubrinervia",
+          "slug_especie": "sambucus-nigra",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5349665",
-          "species": "Erythrina rubrinervia",
+          "url_gbif": "https://www.gbif.org/species/2888728",
+          "species": "Sambucus nigra",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Erythrina"
-        },
-        {
-          "label": "Mauria heterophylla",
-          "registros": 2,
-          "slug_especie": "mauria-heterophylla",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5544309",
-          "species": "Mauria heterophylla",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Sapindales",
-          "family": "Anacardiaceae",
-          "genus": "Mauria"
+          "order": "Dipsacales",
+          "family": "Viburnaceae",
+          "genus": "Sambucus"
         },
         {
           "label": "Psidium guineense",
@@ -2065,19 +2065,19 @@
           "genus": "Psidium"
         },
         {
-          "label": "Sambucus nigra",
+          "label": "Mauria heterophylla",
           "registros": 2,
-          "slug_especie": "sambucus-nigra",
+          "slug_especie": "mauria-heterophylla",
           "slug_grupo": "angiospermas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2888728",
-          "species": "Sambucus nigra",
+          "url_gbif": "https://www.gbif.org/species/5544309",
+          "species": "Mauria heterophylla",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Dipsacales",
-          "family": "Viburnaceae",
-          "genus": "Sambucus"
+          "order": "Sapindales",
+          "family": "Anacardiaceae",
+          "genus": "Mauria"
         },
         {
           "label": "Aiphanes lindeniana",
@@ -2094,69 +2094,6 @@
           "order": "Arecales",
           "family": "Arecaceae",
           "genus": "Aiphanes"
-        },
-        {
-          "label": "Cestrum mutisii",
-          "registros": 1,
-          "slug_especie": "cestrum-mutisii",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3802187",
-          "species": "Cestrum mutisii",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Solanales",
-          "family": "Solanaceae",
-          "genus": "Cestrum"
-        },
-        {
-          "label": "Colocasia esculenta",
-          "registros": 1,
-          "slug_especie": "colocasia-esculenta",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5330776",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56d9e51c3c16479905cba9c6/summary",
-          "species": "Colocasia esculenta",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Alismatales",
-          "family": "Araceae",
-          "genus": "Colocasia"
-        },
-        {
-          "label": "Comparettia macroplectron",
-          "registros": 1,
-          "slug_especie": "comparettia-macroplectron",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2796010",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56d9f3533c16479905cba9cb/summary",
-          "species": "Comparettia macroplectron",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Asparagales",
-          "family": "Orchidaceae",
-          "genus": "Comparettia"
-        },
-        {
-          "label": "Cyrtochilum revolutum",
-          "registros": 1,
-          "slug_especie": "cyrtochilum-revolutum",
-          "slug_grupo": "angiospermas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2833015",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56de608583c45700544e3c17/summary",
-          "species": "Cyrtochilum revolutum",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Asparagales",
-          "family": "Orchidaceae",
-          "genus": "Cyrtochilum"
         },
         {
           "label": "Cyrtochilum tetracopis",
@@ -2252,6 +2189,22 @@
           "genus": "Modiola"
         },
         {
+          "label": "Colocasia esculenta",
+          "registros": 1,
+          "slug_especie": "colocasia-esculenta",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5330776",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d9e51c3c16479905cba9c6/summary",
+          "species": "Colocasia esculenta",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Alismatales",
+          "family": "Araceae",
+          "genus": "Colocasia"
+        },
+        {
           "label": "Myrcia splendens",
           "registros": 1,
           "slug_especie": "myrcia-splendens",
@@ -2313,6 +2266,22 @@
           "genus": "Pseudomalmea"
         },
         {
+          "label": "Cyrtochilum revolutum",
+          "registros": 1,
+          "slug_especie": "cyrtochilum-revolutum",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2833015",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56de608583c45700544e3c17/summary",
+          "species": "Cyrtochilum revolutum",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Asparagales",
+          "family": "Orchidaceae",
+          "genus": "Cyrtochilum"
+        },
+        {
           "label": "Rubus bogotensis",
           "registros": 1,
           "slug_especie": "rubus-bogotensis",
@@ -2329,6 +2298,22 @@
           "genus": "Rubus"
         },
         {
+          "label": "Comparettia macroplectron",
+          "registros": 1,
+          "slug_especie": "comparettia-macroplectron",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2796010",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d9f3533c16479905cba9cb/summary",
+          "species": "Comparettia macroplectron",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Asparagales",
+          "family": "Orchidaceae",
+          "genus": "Comparettia"
+        },
+        {
           "label": "Tagetes verticillata",
           "registros": 1,
           "slug_especie": "tagetes-verticillata",
@@ -2342,6 +2327,21 @@
           "order": "Asterales",
           "family": "Asteraceae",
           "genus": "Tagetes"
+        },
+        {
+          "label": "Cestrum mutisii",
+          "registros": 1,
+          "slug_especie": "cestrum-mutisii",
+          "slug_grupo": "angiospermas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3802187",
+          "species": "Cestrum mutisii",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Solanales",
+          "family": "Solanaceae",
+          "genus": "Cestrum"
         },
         {
           "label": "Toxicodendron striatum",
@@ -3032,22 +3032,6 @@
           "genus": "Pheucticus"
         },
         {
-          "label": "Rupornis magnirostris",
-          "registros": 4,
-          "slug_especie": "rupornis-magnirostris",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5844398",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56ce57a13c16479905cba79b/summary",
-          "species": "Rupornis magnirostris",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Accipitriformes",
-          "family": "Accipitridae",
-          "genus": "Rupornis"
-        },
-        {
           "label": "Vanellus chilensis",
           "registros": 4,
           "slug_especie": "vanellus-chilensis",
@@ -3062,6 +3046,22 @@
           "order": "Charadriiformes",
           "family": "Charadriidae",
           "genus": "Vanellus"
+        },
+        {
+          "label": "Rupornis magnirostris",
+          "registros": 4,
+          "slug_especie": "rupornis-magnirostris",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5844398",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56ce57a13c16479905cba79b/summary",
+          "species": "Rupornis magnirostris",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Accipitriformes",
+          "family": "Accipitridae",
+          "genus": "Rupornis"
         },
         {
           "label": "Diglossa sittoides",
@@ -3080,22 +3080,6 @@
           "genus": "Diglossa"
         },
         {
-          "label": "Mecocerculus leucophrys",
-          "registros": 3,
-          "slug_especie": "mecocerculus-leucophrys",
-          "slug_grupo": "animales",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2483822",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7c0cdf0106c67230e7415/summary",
-          "species": "Mecocerculus leucophrys",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Tyrannidae",
-          "genus": "Mecocerculus"
-        },
-        {
           "label": "Mimus gilvus",
           "registros": 3,
           "slug_especie": "mimus-gilvus",
@@ -3110,6 +3094,22 @@
           "order": "Passeriformes",
           "family": "Mimidae",
           "genus": "Mimus"
+        },
+        {
+          "label": "Mecocerculus leucophrys",
+          "registros": 3,
+          "slug_especie": "mecocerculus-leucophrys",
+          "slug_grupo": "animales",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2483822",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7c0cdf0106c67230e7415/summary",
+          "species": "Mecocerculus leucophrys",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Tyrannidae",
+          "genus": "Mecocerculus"
         },
         {
           "label": "Sturnella magna",
@@ -3946,22 +3946,6 @@
           "genus": "Pheucticus"
         },
         {
-          "label": "Rupornis magnirostris",
-          "registros": 4,
-          "slug_especie": "rupornis-magnirostris",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5844398",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56ce57a13c16479905cba79b/summary",
-          "species": "Rupornis magnirostris",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Accipitriformes",
-          "family": "Accipitridae",
-          "genus": "Rupornis"
-        },
-        {
           "label": "Vanellus chilensis",
           "registros": 4,
           "slug_especie": "vanellus-chilensis",
@@ -3976,6 +3960,22 @@
           "order": "Charadriiformes",
           "family": "Charadriidae",
           "genus": "Vanellus"
+        },
+        {
+          "label": "Rupornis magnirostris",
+          "registros": 4,
+          "slug_especie": "rupornis-magnirostris",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5844398",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56ce57a13c16479905cba79b/summary",
+          "species": "Rupornis magnirostris",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Accipitriformes",
+          "family": "Accipitridae",
+          "genus": "Rupornis"
         },
         {
           "label": "Diglossa sittoides",
@@ -3994,22 +3994,6 @@
           "genus": "Diglossa"
         },
         {
-          "label": "Mecocerculus leucophrys",
-          "registros": 3,
-          "slug_especie": "mecocerculus-leucophrys",
-          "slug_grupo": "aves",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2483822",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7c0cdf0106c67230e7415/summary",
-          "species": "Mecocerculus leucophrys",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Tyrannidae",
-          "genus": "Mecocerculus"
-        },
-        {
           "label": "Mimus gilvus",
           "registros": 3,
           "slug_especie": "mimus-gilvus",
@@ -4024,6 +4008,22 @@
           "order": "Passeriformes",
           "family": "Mimidae",
           "genus": "Mimus"
+        },
+        {
+          "label": "Mecocerculus leucophrys",
+          "registros": 3,
+          "slug_especie": "mecocerculus-leucophrys",
+          "slug_grupo": "aves",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2483822",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7c0cdf0106c67230e7415/summary",
+          "species": "Mecocerculus leucophrys",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Tyrannidae",
+          "genus": "Mecocerculus"
         },
         {
           "label": "Sturnella magna",
@@ -7765,6 +7765,21 @@
           "genus": "Montanoa"
         },
         {
+          "label": "Erythrina rubrinervia",
+          "registros": 2,
+          "slug_especie": "erythrina-rubrinervia",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5349665",
+          "species": "Erythrina rubrinervia",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Erythrina"
+        },
+        {
           "label": "Cajanus cajan",
           "registros": 2,
           "slug_especie": "cajanus-cajan",
@@ -7795,34 +7810,19 @@
           "genus": "Chromolaena"
         },
         {
-          "label": "Erythrina rubrinervia",
+          "label": "Sambucus nigra",
           "registros": 2,
-          "slug_especie": "erythrina-rubrinervia",
+          "slug_especie": "sambucus-nigra",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5349665",
-          "species": "Erythrina rubrinervia",
+          "url_gbif": "https://www.gbif.org/species/2888728",
+          "species": "Sambucus nigra",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Erythrina"
-        },
-        {
-          "label": "Mauria heterophylla",
-          "registros": 2,
-          "slug_especie": "mauria-heterophylla",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5544309",
-          "species": "Mauria heterophylla",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Sapindales",
-          "family": "Anacardiaceae",
-          "genus": "Mauria"
+          "order": "Dipsacales",
+          "family": "Viburnaceae",
+          "genus": "Sambucus"
         },
         {
           "label": "Psidium guineense",
@@ -7841,19 +7841,19 @@
           "genus": "Psidium"
         },
         {
-          "label": "Sambucus nigra",
+          "label": "Mauria heterophylla",
           "registros": 2,
-          "slug_especie": "sambucus-nigra",
+          "slug_especie": "mauria-heterophylla",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2888728",
-          "species": "Sambucus nigra",
+          "url_gbif": "https://www.gbif.org/species/5544309",
+          "species": "Mauria heterophylla",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Dipsacales",
-          "family": "Viburnaceae",
-          "genus": "Sambucus"
+          "order": "Sapindales",
+          "family": "Anacardiaceae",
+          "genus": "Mauria"
         },
         {
           "label": "Aiphanes lindeniana",
@@ -7872,83 +7872,20 @@
           "genus": "Aiphanes"
         },
         {
-          "label": "Cestrum mutisii",
+          "label": "Zea mays",
           "registros": 1,
-          "slug_especie": "cestrum-mutisii",
+          "slug_especie": "zea-mays",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3802187",
-          "species": "Cestrum mutisii",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Solanales",
-          "family": "Solanaceae",
-          "genus": "Cestrum"
-        },
-        {
-          "label": "Colocasia esculenta",
-          "registros": 1,
-          "slug_especie": "colocasia-esculenta",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5330776",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56d9e51c3c16479905cba9c6/summary",
-          "species": "Colocasia esculenta",
+          "url_gbif": "https://www.gbif.org/species/5290052",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7af7083c45700544e42f5/summary",
+          "species": "Zea mays",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Liliopsida",
-          "order": "Alismatales",
-          "family": "Araceae",
-          "genus": "Colocasia"
-        },
-        {
-          "label": "Comparettia macroplectron",
-          "registros": 1,
-          "slug_especie": "comparettia-macroplectron",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2796010",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56d9f3533c16479905cba9cb/summary",
-          "species": "Comparettia macroplectron",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Asparagales",
-          "family": "Orchidaceae",
-          "genus": "Comparettia"
-        },
-        {
-          "label": "Cyrtochilum revolutum",
-          "registros": 1,
-          "slug_especie": "cyrtochilum-revolutum",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2833015",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56de608583c45700544e3c17/summary",
-          "species": "Cyrtochilum revolutum",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Asparagales",
-          "family": "Orchidaceae",
-          "genus": "Cyrtochilum"
-        },
-        {
-          "label": "Cyrtochilum tetracopis",
-          "registros": 1,
-          "slug_especie": "cyrtochilum-tetracopis",
-          "slug_grupo": "plantas",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2833097",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56de61b283c45700544e3c19/summary",
-          "species": "Cyrtochilum tetracopis",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Asparagales",
-          "family": "Orchidaceae",
-          "genus": "Cyrtochilum"
+          "order": "Poales",
+          "family": "Poaceae",
+          "genus": "Zea"
         },
         {
           "label": "Epidendrum radicans",
@@ -8043,6 +7980,22 @@
           "genus": "Modiola"
         },
         {
+          "label": "Colocasia esculenta",
+          "registros": 1,
+          "slug_especie": "colocasia-esculenta",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5330776",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d9e51c3c16479905cba9c6/summary",
+          "species": "Colocasia esculenta",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Alismatales",
+          "family": "Araceae",
+          "genus": "Colocasia"
+        },
+        {
           "label": "Myrcia splendens",
           "registros": 1,
           "slug_especie": "myrcia-splendens",
@@ -8119,6 +8072,22 @@
           "genus": "Pseudomalmea"
         },
         {
+          "label": "Cyrtochilum revolutum",
+          "registros": 1,
+          "slug_especie": "cyrtochilum-revolutum",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2833015",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56de608583c45700544e3c17/summary",
+          "species": "Cyrtochilum revolutum",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Asparagales",
+          "family": "Orchidaceae",
+          "genus": "Cyrtochilum"
+        },
+        {
           "label": "Rubus bogotensis",
           "registros": 1,
           "slug_especie": "rubus-bogotensis",
@@ -8133,6 +8102,22 @@
           "order": "Rosales",
           "family": "Rosaceae",
           "genus": "Rubus"
+        },
+        {
+          "label": "Comparettia macroplectron",
+          "registros": 1,
+          "slug_especie": "comparettia-macroplectron",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2796010",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d9f3533c16479905cba9cb/summary",
+          "species": "Comparettia macroplectron",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Asparagales",
+          "family": "Orchidaceae",
+          "genus": "Comparettia"
         },
         {
           "label": "Tagetes verticillata",
@@ -8163,6 +8148,21 @@
           "order": "Hypnales",
           "family": "Thuidiaceae",
           "genus": "Thuidium"
+        },
+        {
+          "label": "Cestrum mutisii",
+          "registros": 1,
+          "slug_especie": "cestrum-mutisii",
+          "slug_grupo": "plantas",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3802187",
+          "species": "Cestrum mutisii",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Solanales",
+          "family": "Solanaceae",
+          "genus": "Cestrum"
         },
         {
           "label": "Toxicodendron striatum",
@@ -8226,20 +8226,20 @@
           "genus": "Vicia"
         },
         {
-          "label": "Zea mays",
+          "label": "Cyrtochilum tetracopis",
           "registros": 1,
-          "slug_especie": "zea-mays",
+          "slug_especie": "cyrtochilum-tetracopis",
           "slug_grupo": "plantas",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5290052",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56e7af7083c45700544e42f5/summary",
-          "species": "Zea mays",
+          "url_gbif": "https://www.gbif.org/species/2833097",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56de61b283c45700544e3c19/summary",
+          "species": "Cyrtochilum tetracopis",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Liliopsida",
-          "order": "Poales",
-          "family": "Poaceae",
-          "genus": "Zea"
+          "order": "Asparagales",
+          "family": "Orchidaceae",
+          "genus": "Cyrtochilum"
         }
       ],
       "species_list_tematica": {
@@ -9093,6 +9093,21 @@
           "genus": "Montanoa"
         },
         {
+          "label": "Erythrina rubrinervia",
+          "registros": 2,
+          "slug_especie": "erythrina-rubrinervia",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5349665",
+          "species": "Erythrina rubrinervia",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Fabales",
+          "family": "Fabaceae",
+          "genus": "Erythrina"
+        },
+        {
           "label": "Cajanus cajan",
           "registros": 2,
           "slug_especie": "cajanus-cajan",
@@ -9123,34 +9138,19 @@
           "genus": "Chromolaena"
         },
         {
-          "label": "Erythrina rubrinervia",
+          "label": "Sambucus nigra",
           "registros": 2,
-          "slug_especie": "erythrina-rubrinervia",
+          "slug_especie": "sambucus-nigra",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5349665",
-          "species": "Erythrina rubrinervia",
+          "url_gbif": "https://www.gbif.org/species/2888728",
+          "species": "Sambucus nigra",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Fabales",
-          "family": "Fabaceae",
-          "genus": "Erythrina"
-        },
-        {
-          "label": "Mauria heterophylla",
-          "registros": 2,
-          "slug_especie": "mauria-heterophylla",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5544309",
-          "species": "Mauria heterophylla",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Sapindales",
-          "family": "Anacardiaceae",
-          "genus": "Mauria"
+          "order": "Dipsacales",
+          "family": "Viburnaceae",
+          "genus": "Sambucus"
         },
         {
           "label": "Psidium guineense",
@@ -9169,19 +9169,19 @@
           "genus": "Psidium"
         },
         {
-          "label": "Sambucus nigra",
+          "label": "Mauria heterophylla",
           "registros": 2,
-          "slug_especie": "sambucus-nigra",
+          "slug_especie": "mauria-heterophylla",
           "slug_grupo": "vasculares",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2888728",
-          "species": "Sambucus nigra",
+          "url_gbif": "https://www.gbif.org/species/5544309",
+          "species": "Mauria heterophylla",
           "kingdom": "Plantae",
           "phylum": "Tracheophyta",
           "class": "Magnoliopsida",
-          "order": "Dipsacales",
-          "family": "Viburnaceae",
-          "genus": "Sambucus"
+          "order": "Sapindales",
+          "family": "Anacardiaceae",
+          "genus": "Mauria"
         },
         {
           "label": "Aiphanes lindeniana",
@@ -9198,69 +9198,6 @@
           "order": "Arecales",
           "family": "Arecaceae",
           "genus": "Aiphanes"
-        },
-        {
-          "label": "Cestrum mutisii",
-          "registros": 1,
-          "slug_especie": "cestrum-mutisii",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/3802187",
-          "species": "Cestrum mutisii",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Magnoliopsida",
-          "order": "Solanales",
-          "family": "Solanaceae",
-          "genus": "Cestrum"
-        },
-        {
-          "label": "Colocasia esculenta",
-          "registros": 1,
-          "slug_especie": "colocasia-esculenta",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5330776",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56d9e51c3c16479905cba9c6/summary",
-          "species": "Colocasia esculenta",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Alismatales",
-          "family": "Araceae",
-          "genus": "Colocasia"
-        },
-        {
-          "label": "Comparettia macroplectron",
-          "registros": 1,
-          "slug_especie": "comparettia-macroplectron",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2796010",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56d9f3533c16479905cba9cb/summary",
-          "species": "Comparettia macroplectron",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Asparagales",
-          "family": "Orchidaceae",
-          "genus": "Comparettia"
-        },
-        {
-          "label": "Cyrtochilum revolutum",
-          "registros": 1,
-          "slug_especie": "cyrtochilum-revolutum",
-          "slug_grupo": "vasculares",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2833015",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56de608583c45700544e3c17/summary",
-          "species": "Cyrtochilum revolutum",
-          "kingdom": "Plantae",
-          "phylum": "Tracheophyta",
-          "class": "Liliopsida",
-          "order": "Asparagales",
-          "family": "Orchidaceae",
-          "genus": "Cyrtochilum"
         },
         {
           "label": "Cyrtochilum tetracopis",
@@ -9356,6 +9293,22 @@
           "genus": "Modiola"
         },
         {
+          "label": "Colocasia esculenta",
+          "registros": 1,
+          "slug_especie": "colocasia-esculenta",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/5330776",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d9e51c3c16479905cba9c6/summary",
+          "species": "Colocasia esculenta",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Alismatales",
+          "family": "Araceae",
+          "genus": "Colocasia"
+        },
+        {
           "label": "Myrcia splendens",
           "registros": 1,
           "slug_especie": "myrcia-splendens",
@@ -9417,6 +9370,22 @@
           "genus": "Pseudomalmea"
         },
         {
+          "label": "Cyrtochilum revolutum",
+          "registros": 1,
+          "slug_especie": "cyrtochilum-revolutum",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2833015",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56de608583c45700544e3c17/summary",
+          "species": "Cyrtochilum revolutum",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Asparagales",
+          "family": "Orchidaceae",
+          "genus": "Cyrtochilum"
+        },
+        {
           "label": "Rubus bogotensis",
           "registros": 1,
           "slug_especie": "rubus-bogotensis",
@@ -9433,6 +9402,22 @@
           "genus": "Rubus"
         },
         {
+          "label": "Comparettia macroplectron",
+          "registros": 1,
+          "slug_especie": "comparettia-macroplectron",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2796010",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56d9f3533c16479905cba9cb/summary",
+          "species": "Comparettia macroplectron",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Liliopsida",
+          "order": "Asparagales",
+          "family": "Orchidaceae",
+          "genus": "Comparettia"
+        },
+        {
           "label": "Tagetes verticillata",
           "registros": 1,
           "slug_especie": "tagetes-verticillata",
@@ -9446,6 +9431,21 @@
           "order": "Asterales",
           "family": "Asteraceae",
           "genus": "Tagetes"
+        },
+        {
+          "label": "Cestrum mutisii",
+          "registros": 1,
+          "slug_especie": "cestrum-mutisii",
+          "slug_grupo": "vasculares",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/3802187",
+          "species": "Cestrum mutisii",
+          "kingdom": "Plantae",
+          "phylum": "Tracheophyta",
+          "class": "Magnoliopsida",
+          "order": "Solanales",
+          "family": "Solanaceae",
+          "genus": "Cestrum"
         },
         {
           "label": "Toxicodendron striatum",
@@ -10125,20 +10125,20 @@
           "genus": "Tyrannus"
         },
         {
-          "label": "Pheucticus aureoventris",
+          "label": "Vanellus chilensis",
           "registros": 4,
-          "slug_especie": "pheucticus-aureoventris",
+          "slug_especie": "vanellus-chilensis",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2490499",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cccc56207ecea54a561e45/summary",
-          "species": "Pheucticus aureoventris",
+          "url_gbif": "https://www.gbif.org/species/5229146",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cfc6d83c16479905cba803/summary",
+          "species": "Vanellus chilensis",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Cardinalidae",
-          "genus": "Pheucticus"
+          "order": "Charadriiformes",
+          "family": "Charadriidae",
+          "genus": "Vanellus"
         },
         {
           "label": "Rupornis magnirostris",
@@ -10157,20 +10157,36 @@
           "genus": "Rupornis"
         },
         {
-          "label": "Vanellus chilensis",
+          "label": "Pheucticus aureoventris",
           "registros": 4,
-          "slug_especie": "vanellus-chilensis",
+          "slug_especie": "pheucticus-aureoventris",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/5229146",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cfc6d83c16479905cba803/summary",
-          "species": "Vanellus chilensis",
+          "url_gbif": "https://www.gbif.org/species/2490499",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cccc56207ecea54a561e45/summary",
+          "species": "Pheucticus aureoventris",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
-          "order": "Charadriiformes",
-          "family": "Charadriidae",
-          "genus": "Vanellus"
+          "order": "Passeriformes",
+          "family": "Cardinalidae",
+          "genus": "Pheucticus"
+        },
+        {
+          "label": "Sturnella magna",
+          "registros": 3,
+          "slug_especie": "sturnella-magna",
+          "slug_grupo": "vertebrados",
+          "tipo": "biologico",
+          "url_gbif": "https://www.gbif.org/species/2484254",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf49d43c16479905cba7d6/summary",
+          "species": "Sturnella magna",
+          "kingdom": "Animalia",
+          "phylum": "Chordata",
+          "class": "Aves",
+          "order": "Passeriformes",
+          "family": "Icteridae",
+          "genus": "Sturnella"
         },
         {
           "label": "Diglossa sittoides",
@@ -10189,22 +10205,6 @@
           "genus": "Diglossa"
         },
         {
-          "label": "Mecocerculus leucophrys",
-          "registros": 3,
-          "slug_especie": "mecocerculus-leucophrys",
-          "slug_grupo": "vertebrados",
-          "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2483822",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7c0cdf0106c67230e7415/summary",
-          "species": "Mecocerculus leucophrys",
-          "kingdom": "Animalia",
-          "phylum": "Chordata",
-          "class": "Aves",
-          "order": "Passeriformes",
-          "family": "Tyrannidae",
-          "genus": "Mecocerculus"
-        },
-        {
           "label": "Mimus gilvus",
           "registros": 3,
           "slug_especie": "mimus-gilvus",
@@ -10221,20 +10221,20 @@
           "genus": "Mimus"
         },
         {
-          "label": "Sturnella magna",
+          "label": "Mecocerculus leucophrys",
           "registros": 3,
-          "slug_especie": "sturnella-magna",
+          "slug_especie": "mecocerculus-leucophrys",
           "slug_grupo": "vertebrados",
           "tipo": "biologico",
-          "url_gbif": "https://www.gbif.org/species/2484254",
-          "url_cbc": "https://catalogo.biodiversidad.co/file/56cf49d43c16479905cba7d6/summary",
-          "species": "Sturnella magna",
+          "url_gbif": "https://www.gbif.org/species/2483822",
+          "url_cbc": "https://catalogo.biodiversidad.co/file/56c7c0cdf0106c67230e7415/summary",
+          "species": "Mecocerculus leucophrys",
           "kingdom": "Animalia",
           "phylum": "Chordata",
           "class": "Aves",
           "order": "Passeriformes",
-          "family": "Icteridae",
-          "genus": "Sturnella"
+          "family": "Tyrannidae",
+          "genus": "Mecocerculus"
         }
       ],
       "species_list_tematica": {

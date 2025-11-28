@@ -24,8 +24,8 @@ library(paletero)
 
 
 con <- DBI::dbConnect(RSQLite::SQLite(),
-                      #sys_file_sibdata("db/sibdata.sqlite"),
-                      "sibdata.sqlite",
+                      sys_file_sibdata("db/sibdata.sqlite"),
+                      #"sibdata.sqlite",
                       read_only = TRUE)
 
 dbListTables(con)

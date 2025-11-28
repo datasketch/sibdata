@@ -114,7 +114,7 @@ server <-  function(input, output, session) {
 
 
 
-  dbdir <- "db/sibdata.sqlite"
+  dbdir <- sys_file_sibdata("db/sibdata.sqlite")#"db/sibdata.sqlite"
   # dbdir <- "db/sibdata.duckdb"
   con <- DBI::dbConnect(RSQLite::SQLite(), dbdir, read_only = TRUE)
   # con <- duckdb_con(db)
@@ -741,11 +741,11 @@ server <-  function(input, output, session) {
         if(grepl("amenazadas", params$tematica)){
           # palette <- c("#FF0000", "#FFA500", "#FFFF00")
           palette <- c("#d9453d", "#d8783d", "#d7a900")
-          color_by <- 1
+          #color_by <- 1
         }
         if(grepl("cites", params$tematica)){
           palette <- c("#00AFFF", "#000000", "#FFD150", "#4DD3AC")
-          color_by <- 1
+          #color_by <- 1
         }
       }
     }
@@ -753,7 +753,7 @@ server <-  function(input, output, session) {
       data = dd,
       color_palette_categorical = palette,
       color_palette_numeric = palette_numeric,
-      color_by = color_by,
+      #color_by = color_by,
       con = con
     )
 

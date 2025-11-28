@@ -311,6 +311,7 @@ exp_inputs_tematica_ui <- function(id) {
       /* Faster tooltip appearance */
       .tematica-info-icon {
         position: relative;
+        z-index: 10000;
       }
 
       .tematica-info-icon:hover::after {
@@ -332,12 +333,28 @@ exp_inputs_tematica_ui <- function(id) {
         white-space: pre-wrap;
         max-width: 450px;
         min-width: 300px;
-        z-index: 1000;
+        z-index: 10000 !important;
         animation: fadeIn 0.1s ease-in;
         border: 1px solid #dee2e6;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         line-height: 1.5;
         word-wrap: break-word;
+        pointer-events: none;
+      }
+
+      /* Ensure parent containers don't clip tooltips */
+      .tematica-parent-content,
+      .tematica-radio-content,
+      .tematica-parent,
+      .tematica-children,
+      .well,
+      .form-group {
+        overflow: visible !important;
+      }
+
+      /* Ensure tooltip container has proper stacking context */
+      .tematica-info-icon:hover {
+        z-index: 10000;
       }
 
       @keyframes fadeIn {
@@ -398,6 +415,15 @@ exp_inputs_tematica_ui <- function(id) {
         color: #006400;
       }
 
+      .tematica-dynamic-info-icon {
+        position: relative;
+        z-index: 10000;
+      }
+
+      .tematica-dynamic-info-icon:hover {
+        z-index: 10000;
+      }
+
       .tematica-dynamic-info-icon:hover::after {
         content: attr(data-tooltip);
         position: absolute;
@@ -417,12 +443,13 @@ exp_inputs_tematica_ui <- function(id) {
         white-space: pre-wrap;
         max-width: 450px;
         min-width: 300px;
-        z-index: 1000;
+        z-index: 10000 !important;
         animation: fadeIn 0.1s ease-in;
         border: 1px solid #dee2e6;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         line-height: 1.5;
         word-wrap: break-word;
+        pointer-events: none;
       }
     ")),
     tags$script(HTML("

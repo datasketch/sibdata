@@ -12,7 +12,6 @@ library(sibdata)
 library(data.tree)
 library(htmlwidgets)
 library(leaflet)
-library(geotable)
 library(leaflet.extras)
 library(openxlsx)
 library(jsonlite)
@@ -41,11 +40,25 @@ ui <- fluidPage(
         width: 100%;
         height: 100%;
         background-color: rgba(255, 255, 255, 0.9);
-        z-index: 9999;
+        z-index: 1040;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+      }
+
+      .loading-overlay[style*='display: none'],
+      .loading-overlay.hidden {
+        z-index: -1 !important;
+        pointer-events: none !important;
+      }
+
+      .modal {
+        z-index: 1055 !important;
+      }
+
+      .modal-backdrop {
+        z-index: 1050 !important;
       }
 
       .spinner {
@@ -147,11 +160,14 @@ server <- function(input, output, session) {
 
   hide_loading <- function() {
     shinyjs::hide("global-loading")
+    # Also add hidden class to ensure it doesn't interfere
+    shinyjs::runjs("$('#global-loading').addClass('hidden');")
   }
 
   # Create session-specific app options
   # con <- get_app_connection("db/sibdata.sqlite", debug = DEBUG_MODE)
-  con <- get_app_connection("db/sibdata.duckdb", debug = DEBUG_MODE)
+  db <- "db/sibdata.duckdb"
+  con <- get_app_connection(db, debug = DEBUG_MODE)
   app_options <- get_app_options(con, debug = DEBUG_MODE)
   app_options$con <- con
   conmap <- gt_con()
@@ -202,13 +218,14 @@ server <- function(input, output, session) {
   exp_viz_inputs_server("viz_inputs", r, debug = DEBUG_MODE)
   if (DEBUG_MODE) message("✓ Viz inputs module initialized")
 
-  # Dynamic chart output based on chart_type
+  # Dynamic chart output based on chart_type (optimized to prevent flickering)
   output$chart_output <- renderUI({
-    chart_type <- r$chart_type
+    chart_type <- isolate(r$chart_type)
     req(chart_type)
 
     if (DEBUG_MODE) message("📊 Rendering UI for chart_type: ", chart_type)
 
+    # Use switch for better performance
     switch(chart_type,
       "map" = leaflet::leafletOutput("map_viz", height = 450),
       "cards" = uiOutput("cards_viz"),
@@ -219,7 +236,8 @@ server <- function(input, output, session) {
       "treemap" = highcharter::highchartOutput("hgch_viz", height = 450),
       div(h3("Tipo de gráfico no soportado"))
     )
-  })
+  }) |>
+    shiny::bindEvent(r$chart_type)  # Only update when chart_type changes
 
   # Map rendering - directly in app4.R like app-inputs4.R
   output$map_viz <- leaflet::renderLeaflet({
@@ -268,8 +286,10 @@ server <- function(input, output, session) {
     req(d)
     if (DEBUG_MODE) message("✅ Data fetched: ", nrow(d), " rows")
 
-    # Store for other uses
-    r$main_data <- d
+    # Store for other uses (isolate to prevent unnecessary re-renders)
+    isolate({
+      r$main_data <- d
+    })
 
     # Render map
     choropleth_map(
@@ -358,12 +378,14 @@ server <- function(input, output, session) {
       label_regs <- gsub("(?i)registros", "Observaciones", label_regs, perl = TRUE)
       label_esps <- gsub("(?i)registros", "Observaciones", label_esps, perl = TRUE)
 
-      r$current_chart_data <- data.frame(
-        indicador = c(ind_regs, ind_esps),
-        etiqueta = unname(labels),
-        valor = c(val_regs, val_esps),
-        stringsAsFactors = FALSE
-      )
+      isolate({
+        r$current_chart_data <- data.frame(
+          indicador = c(ind_regs, ind_esps),
+          etiqueta = unname(labels),
+          valor = c(val_regs, val_esps),
+          stringsAsFactors = FALSE
+        )
+      })
 
       # Determine which tipo is active
       is_especies <- identical(sel_tipo, "especies")
@@ -410,7 +432,9 @@ server <- function(input, output, session) {
     }
 
     if (is.null(d) || nrow(d) == 0) {
-      r$current_chart_data <- NULL
+      isolate({
+        r$current_chart_data <- NULL
+      })
       return(div(style = "border: 1px solid #4ad3ac; background: #F2FBF8; color: #09A274; padding: 16px; border-radius: 8px; text-align: center;",
                  div(style = "font-size: 18px; font-weight: 600;", "Los filtros no arrojaron resultados"),
                  div(style = "font-size: 14px; margin-top: 6px;", "Por favor amplía la búsqueda con categorías más genéricas")
@@ -437,12 +461,14 @@ server <- function(input, output, session) {
     etiqueta <- as.character(labels_vec)
     etiqueta <- gsub("(?i)registros", "observaciones", etiqueta, perl = TRUE)
 
-    r$current_chart_data <- data.frame(
-      indicador = inds,
-      etiqueta = etiqueta,
-      valor = d$count,
-      stringsAsFactors = FALSE
-    )
+    isolate({
+      r$current_chart_data <- data.frame(
+        indicador = inds,
+        etiqueta = etiqueta,
+        valor = d$count,
+        stringsAsFactors = FALSE
+      )
+    })
 
     # Determine subcategory matching pattern
     subcat_pattern <- NULL
@@ -464,10 +490,12 @@ server <- function(input, output, session) {
     }
     any_sub_present <- !is.null(subcat_pattern) && any(grepl(subcat_pattern, r$current_chart_data$indicador))
 
-    boxes <- lapply(seq_len(nrow(r$current_chart_data)), function(i){
-      val <- r$current_chart_data$valor[i]
-      lab <- r$current_chart_data$etiqueta[i]
-      ind_slug <- r$current_chart_data$indicador[i]
+    # Optimize: use purrr::map instead of lapply
+    chart_data <- r$current_chart_data
+    boxes <- purrr::map(seq_len(nrow(chart_data)), function(i) {
+      val <- chart_data$valor[i]
+      lab <- chart_data$etiqueta[i]
+      ind_slug <- chart_data$indicador[i]
       ind_tipo <- if (grepl("^especies", ind_slug)) "especies" else "registros"
 
       # Active by tipo
@@ -483,11 +511,13 @@ server <- function(input, output, session) {
         active_by_tipo
       }
 
-      div(style = if (is_active) box_css_active else box_css_inactive,
-          p(style = if (is_active) value_css_active else value_css_inactive,
-            format(val, big.mark = ",", scientific = FALSE)
-          ),
-          p(style = label_css, lab)
+      div(
+        style = if (is_active) box_css_active else box_css_inactive,
+        p(
+          style = if (is_active) value_css_active else value_css_inactive,
+          format(val, big.mark = ",", scientific = FALSE)
+        ),
+        p(style = label_css, lab)
       )
     })
 
@@ -529,10 +559,12 @@ server <- function(input, output, session) {
 
     req(d)
 
-    # Store for other uses
-    r$main_data <- d
-    r$table_data <- d
-    r$current_chart_data <- d
+    # Store for other uses (isolate to prevent unnecessary re-renders)
+    isolate({
+      r$main_data <- d
+      r$table_data <- d
+      r$current_chart_data <- d
+    })
 
     # Format data and column names for display
     display_data <- d
@@ -621,10 +653,12 @@ server <- function(input, output, session) {
 
     req(d)
 
-    # Store for other uses
-    r$main_data <- d
-    r$chart_data <- d
-    r$current_chart_data <- d
+    # Store for other uses (isolate to prevent unnecessary re-renders)
+    isolate({
+      r$main_data <- d
+      r$chart_data <- d
+      r$current_chart_data <- d
+    })
 
     # Create chart using hgmagic
     tryCatch({
@@ -637,49 +671,55 @@ server <- function(input, output, session) {
     })
   })
 
-  # Download button UI - show data modal button based on chart type
+  # Download button UI - show data modal button based on chart type (optimized)
   output$descargas <- renderUI({
-    req(r$chart_type)
+    chart_type <- isolate(r$chart_type)
+    req(chart_type)
 
-    if(r$chart_type == "map") {
-      actionButton("show_map_data", "Ver datos del mapa",
-                   class = "btn-sm btn-outline-info")
-    } else if(r$chart_type == "table") {
-      actionButton("show_table_data", "Ver datos de la tabla",
-                   class = "btn-sm btn-outline-info")
-    } else if(r$chart_type == "cards") {
-      actionButton("show_cards_data", "Ver datos de las tarjetas",
-                   class = "btn-sm btn-outline-info")
-    } else {
+    switch(chart_type,
+      "map" = actionButton("show_map_data", "Ver datos del mapa",
+                          class = "btn-sm btn-outline-info"),
+      "table" = actionButton("show_table_data", "Ver datos de la tabla",
+                            class = "btn-sm btn-outline-info"),
+      "cards" = actionButton("show_cards_data", "Ver datos de las tarjetas",
+                           class = "btn-sm btn-outline-info"),
       actionButton("show_chart_data", "Ver datos del gráfico",
-                   class = "btn-sm btn-outline-info")
-    }
-  })
+                  class = "btn-sm btn-outline-info")
+    )
+  }) |>
+    shiny::bindEvent(r$chart_type)  # Only update when chart_type changes
 
   # Show map data modal
   observeEvent(input$show_map_data, {
     req(r$main_data)
 
-    showModal(modalDialog(
-      title = div(
-        style = "display: flex; justify-content: space-between; align-items: center;",
-        h5(paste("Indicador:", if(!is.null(r$indicador) && r$indicador != "" && !is.na(r$indicador)) {
-          tools::toTitleCase(gsub("_", " ", r$indicador))
-        } else "Mapa")),
-        tags$button(
-          type = "button",
-          class = "close",
-          `data-dismiss` = "modal",
-          `aria-label` = "Close",
-          style = "font-size: 1.5rem; font-weight: bold; line-height: 1; color: #000; text-shadow: 0 1px 0 #fff; opacity: 0.5; border: none; background: none;",
-          HTML("&times;")
-        )
-      ),
-      size = "l",
-      DT::dataTableOutput("map_data_table"),
-      footer = NULL,
-      easyClose = TRUE
-    ))
+    # Ensure loading overlay is hidden before showing modal
+    hide_loading()
+
+    # Use a small delay to ensure DOM is ready
+    shinyjs::delay(100, {
+      showModal(modalDialog(
+        title = div(
+          style = "display: flex; justify-content: space-between; align-items: center;",
+          h5(paste("Indicador:", if(!is.null(r$indicador) && r$indicador != "" && !is.na(r$indicador)) {
+            tools::toTitleCase(gsub("_", " ", r$indicador))
+          } else "Mapa")),
+          tags$button(
+            type = "button",
+            class = "close",
+            `data-dismiss` = "modal",
+            `aria-label` = "Close",
+            style = "font-size: 1.5rem; font-weight: bold; line-height: 1; color: #000; text-shadow: 0 1px 0 #fff; opacity: 0.5; border: none; background: none;",
+            HTML("&times;")
+          )
+        ),
+        size = "l",
+        DT::dataTableOutput("map_data_table"),
+        footer = NULL,
+        easyClose = TRUE,
+        fade = TRUE
+      ))
+    })
   })
 
   # Show table data modal
@@ -754,7 +794,7 @@ server <- function(input, output, session) {
     ))
   })
 
-  # Render map data table for modal
+  # Render map data table for modal (initial render, will be updated in observeEvent)
   output$map_data_table <- DT::renderDataTable({
     # Read reactive dependencies to ensure table updates when they change
     sel_tipo <- r$sel_tipo
@@ -763,28 +803,86 @@ server <- function(input, output, session) {
 
     req(main_data)
 
+    # Validate that main_data is a data frame with at least one row
+    if (!is.data.frame(main_data) || nrow(main_data) == 0) {
+      return(DT::datatable(
+        data.frame(Mensaje = "No hay datos disponibles"),
+        rownames = FALSE,
+        options = list(dom = 't', language = list(url = '//cdn.datatables.net/plug-ins/2.3.4/i18n/es-ES.json'))
+      ))
+    }
+
     display_data <- main_data
 
-    # Keep only label and indicator columns
-    cols_to_keep <- c("label")
-    if (!is.null(indicador) && indicador %in% names(display_data)) {
+    # Get available column names
+    available_cols <- names(display_data)
+
+    # Keep only label and indicator columns that actually exist
+    cols_to_keep <- character(0)
+
+    # Add label if it exists
+    if ("label" %in% available_cols) {
+      cols_to_keep <- c(cols_to_keep, "label")
+    }
+
+    # Add indicator if it exists
+    if (!is.null(indicador) && indicador %in% available_cols) {
       cols_to_keep <- c(cols_to_keep, indicador)
     } else {
-      numeric_cols <- names(display_data)[sapply(display_data, is.numeric)]
+      # If indicator doesn't exist, get numeric columns (optimized with dplyr)
+      numeric_cols <- display_data |>
+        dplyr::select(dplyr::where(is.numeric)) |>
+        names()
       cols_to_keep <- c(cols_to_keep, numeric_cols)
     }
 
+    # Exclude unwanted columns
     cols_to_exclude <- c("slug_region", "label_region")
     cols_to_keep <- cols_to_keep[!cols_to_keep %in% cols_to_exclude]
 
+    # Ensure we only keep columns that actually exist
+    cols_to_keep <- cols_to_keep[cols_to_keep %in% available_cols]
+
+    # If no columns to keep, return empty table with message
+    if (length(cols_to_keep) == 0) {
+      return(DT::datatable(
+        data.frame(Mensaje = "No hay columnas disponibles para mostrar"),
+        rownames = FALSE,
+        options = list(dom = 't', language = list(url = '//cdn.datatables.net/plug-ins/2.3.4/i18n/es-ES.json'))
+      ))
+    }
+
+    # Select only existing columns
     display_data <- display_data[, cols_to_keep, drop = FALSE]
 
     # Translate column names using sib_merge_ind_label
-    names(display_data) <- sib_merge_ind_label(names(display_data), con = con)
+    # Only translate names that actually exist in the data
+    original_names <- names(display_data)
+    tryCatch({
+      translated_names <- sib_merge_ind_label(original_names, con = con)
+      # Ensure we have the same length and valid names
+      if (length(translated_names) == length(original_names) &&
+          !any(is.na(translated_names)) &&
+          !any(translated_names == "")) {
+        names(display_data) <- translated_names
+      } else {
+        # If translation returns invalid names, keep original names
+        if (DEBUG_MODE) message("Warning: Translation returned invalid names, keeping original names")
+      }
+    }, error = function(e) {
+      # If translation fails, keep original names
+      if (DEBUG_MODE) message("Warning: Could not translate column names: ", e$message)
+    })
 
     # Rename label to Región (in case it wasn't translated)
     if ("label" %in% names(display_data)) {
       names(display_data)[names(display_data) == "label"] <- "Región"
+    }
+
+    # Final validation: ensure all column names are valid and exist
+    valid_names <- names(display_data)
+    if (length(valid_names) != ncol(display_data)) {
+      names(display_data) <- paste0("Col", seq_len(ncol(display_data)))
     }
 
     DT::datatable(
@@ -794,6 +892,8 @@ server <- function(input, output, session) {
         pageLength = 15,
         searching = TRUE,
         ordering = TRUE,
+        stateSave = FALSE,  # Don't save state to avoid column name conflicts
+        destroy = TRUE,  # Destroy previous table instance before creating new one
         language = list(url = '//cdn.datatables.net/plug-ins/2.3.4/i18n/es-ES.json')
       )
     )
@@ -803,6 +903,15 @@ server <- function(input, output, session) {
   output$table_data_table <- DT::renderDataTable({
     req(r$main_data)
 
+    # Validate that main_data is a data frame
+    if (!is.data.frame(r$main_data) || nrow(r$main_data) == 0) {
+      return(DT::datatable(
+        data.frame(Mensaje = "No hay datos disponibles"),
+        rownames = FALSE,
+        options = list(dom = 't', language = list(url = '//cdn.datatables.net/plug-ins/2.3.4/i18n/es-ES.json'))
+      ))
+    }
+
     DT::datatable(
       r$main_data,
       rownames = FALSE,
@@ -810,6 +919,8 @@ server <- function(input, output, session) {
         pageLength = 15,
         searching = TRUE,
         ordering = TRUE,
+        stateSave = FALSE,  # Don't save state to avoid column name conflicts
+        destroy = TRUE,  # Destroy previous table instance before creating new one
         language = list(url = '//cdn.datatables.net/plug-ins/2.3.4/i18n/es-ES.json')
       )
     )
@@ -819,6 +930,15 @@ server <- function(input, output, session) {
   output$cards_data_table <- DT::renderDataTable({
     req(r$current_chart_data)
 
+    # Validate that current_chart_data is a data frame
+    if (!is.data.frame(r$current_chart_data) || nrow(r$current_chart_data) == 0) {
+      return(DT::datatable(
+        data.frame(Mensaje = "No hay datos disponibles"),
+        rownames = FALSE,
+        options = list(dom = 't', language = list(url = '//cdn.datatables.net/plug-ins/2.3.4/i18n/es-ES.json'))
+      ))
+    }
+
     DT::datatable(
       r$current_chart_data,
       rownames = FALSE,
@@ -826,6 +946,8 @@ server <- function(input, output, session) {
         pageLength = 15,
         searching = TRUE,
         ordering = TRUE,
+        stateSave = FALSE,  # Don't save state to avoid column name conflicts
+        destroy = TRUE,  # Destroy previous table instance before creating new one
         language = list(url = '//cdn.datatables.net/plug-ins/2.3.4/i18n/es-ES.json')
       )
     )
@@ -835,19 +957,38 @@ server <- function(input, output, session) {
   output$chart_data_table <- DT::renderDataTable({
     req(r$main_data)
 
-    display_data <- r$main_data
-
-    # Format indicator column to human-friendly labels
-    if ("indicador" %in% names(display_data)) {
-      display_data$indicador <- as.character(
-        sib_merge_ind_label(as.character(display_data$indicador), con = con)
-      )
+    # Validate that main_data is a data frame
+    if (!is.data.frame(r$main_data) || nrow(r$main_data) == 0) {
+      return(DT::datatable(
+        data.frame(Mensaje = "No hay datos disponibles"),
+        rownames = FALSE,
+        options = list(dom = 't', language = list(url = '//cdn.datatables.net/plug-ins/2.3.4/i18n/es-ES.json'))
+      ))
     }
 
-    # Translate column names
-    names(display_data) <- sib_merge_ind_label(names(display_data), con = con)
+    display_data <- r$main_data
 
-    # Force friendly headers for common columns
+    # Format indicator column to human-friendly labels (only if it exists)
+    if ("indicador" %in% names(display_data)) {
+      tryCatch({
+        display_data$indicador <- as.character(
+          sib_merge_ind_label(as.character(display_data$indicador), con = con)
+        )
+      }, error = function(e) {
+        # If translation fails, keep original values
+        if (DEBUG_MODE) message("Warning: Could not translate indicador column: ", e$message)
+      })
+    }
+
+    # Translate column names (with error handling)
+    tryCatch({
+      names(display_data) <- sib_merge_ind_label(names(display_data), con = con)
+    }, error = function(e) {
+      # If translation fails, keep original names
+      if (DEBUG_MODE) message("Warning: Could not translate column names: ", e$message)
+    })
+
+    # Force friendly headers for common columns (only if they exist)
     if ("indicator" %in% names(display_data)) {
       names(display_data)[names(display_data) == "indicator"] <- "Indicador"
     }
@@ -862,6 +1003,8 @@ server <- function(input, output, session) {
         pageLength = 15,
         searching = TRUE,
         ordering = TRUE,
+        stateSave = FALSE,  # Don't save state to avoid column name conflicts
+        destroy = TRUE,  # Destroy previous table instance before creating new one
         language = list(url = '//cdn.datatables.net/plug-ins/2.3.4/i18n/es-ES.json')
       )
     )

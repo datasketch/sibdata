@@ -290,7 +290,7 @@ server <-  function(input, output, session) {
                        " ",
                        images = available_charts() |> as.vector(),
                        tooltips = hover_viz(),
-                       path = 'viz_icons/',
+                       path = 'www/viz_icons/',
                        active = actual_but$active)
     )
   })

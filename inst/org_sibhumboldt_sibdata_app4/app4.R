@@ -220,7 +220,7 @@ server <- function(input, output, session) {
 
   # Dynamic chart output based on chart_type (optimized to prevent flickering)
   output$chart_output <- renderUI({
-    chart_type <- isolate(r$chart_type)
+    chart_type <- r$chart_type
     req(chart_type)
 
     if (DEBUG_MODE) message("📊 Rendering UI for chart_type: ", chart_type)

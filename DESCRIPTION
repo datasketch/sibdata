@@ -30,7 +30,8 @@ Language: es
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
 Depends: 
-    R (>= 4.1)
+    R (>= 4.1),
+    hgmagic
 Imports:
     DBI,
     RSQLite,
@@ -45,10 +46,10 @@ Imports:
     leaflet,
     leaflet.extras,
     highcharter,
-    hgmagic,
     htmlwidgets
 Suggests:
     gt,
+    dsdatawiz,
     gtExtras,
     openxlsx,
     shinyinvoer,
@@ -81,7 +82,8 @@ Config/testthat/edition: 3
 VignetteBuilder: knitr
 LazyData: true
 Remotes:
-    datasketch/hgchmagic,
+    datasketch/dsdatawiz,
+    datasketch/hgmagic,
     datasketch/dstools,
     datasketch/makeup,
     datasketch/paletero

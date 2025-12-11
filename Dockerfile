@@ -75,9 +75,8 @@ RUN Rscript -e 'remotes::install_github("datasketch/ggmagic@cfeb47aafd792bf342d6
 
 RUN Rscript -e 'remotes::install_github("datasketch/dsmodules@5e9a9860ae27aad2cbecf3492be5eab1545e5ff5")'
 
-RUN Rscript -e 'remotes::install_github("datasketch/hgchmagic@1c2126cb2722071855fa7133bffcd32a805399e1")'
+RUN Rscript -e 'remotes::install_github("datasketch/hgmagic@84008111aaf3a8e8bf55c3e04cdbfa5a502e5a2f")'
 
-RUN Rscript -e 'remotes::install_github("datasketch/lfltmagic@7677b096a1440ba105c67c883d1144830204923e")'
 
 RUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/*
 

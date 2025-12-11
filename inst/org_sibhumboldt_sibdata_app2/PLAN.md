@@ -82,8 +82,8 @@ Transform the basic visualization module into a comprehensive chart system match
 
 #### 2. **hgmagic Chart Integration**
 Based on `dev.R` analysis, implement support for:
-- **Pie Charts**: `hgmagic::hg_pie_CatNum()` for categorical/numerical data
-- **Bar Charts**: `hgmagic::hg_bar_CatNum()` for categorical/numerical data  
+- **Pie Charts**: `hg_pie_CatNum()` for categorical/numerical data
+- **Bar Charts**: `hg_bar_CatNum()` for categorical/numerical data  
 - **Dynamic palettes**: Theme-specific color schemes
   - **Amenazadas**: Red/Orange/Yellow (`#FF0000`, `#FFA500`, `#FFFF00`)
   - **CITES**: Blue/Black/Yellow/Green (`#00AFFF`, `#000000`, `#FFD150`, `#4DD3AC`)

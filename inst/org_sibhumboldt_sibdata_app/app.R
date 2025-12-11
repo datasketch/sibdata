@@ -815,7 +815,7 @@ server <-  function(input, output, session) {
       return()
     }
 
-    viz <- paste0("hgmagic::hg_", current_chart(), "_CatNum")
+    viz <- paste0("hg_", current_chart(), "_CatNum")
     if (current_chart() == "map") {
       message("Creating map with: region=", opts$region,
               ", indicador=", opts$indicador)

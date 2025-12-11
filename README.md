@@ -60,6 +60,9 @@ remotes::install_github("datasketch/sibdata")
 
 # Para instalar con todas las dependencias opcionales (Suggests)
 remotes::install_github("datasketch/sibdata", dependencies = TRUE)
+
+# Docker
+#docker build --build-arg GITHUB_PAT=tu_token_aqui -t sibdata .
 ```
 
 > **Nota**: Algunos paquetes del ecosistema Datasketch ( `shinypanels`, `dsmods`, etc.) se instalan automáticamente desde GitHub.

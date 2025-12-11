@@ -31,7 +31,6 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
 Depends: 
     R (>= 4.1),
-    hgmagic
 Imports:
     DBI,
     RSQLite,
@@ -45,11 +44,11 @@ Imports:
     purrr,
     leaflet,
     leaflet.extras,
+    dsopts,
     highcharter,
     htmlwidgets
 Suggests:
     gt,
-    dsdatawiz,
     gtExtras,
     openxlsx,
     shinyinvoer,
@@ -59,7 +58,6 @@ Suggests:
     rmarkdown,
     webshot,
     covr,
-    ggplot2,
     readr,
     tibble,
     stringr,
@@ -76,14 +74,12 @@ Suggests:
     collapsibleTree,
     shinydisconnect,
     dstools,
-    makeup,
-    waffle
+    makeup
 Config/testthat/edition: 3
 VignetteBuilder: knitr
 LazyData: true
 Remotes:
-    datasketch/dsdatawiz,
-    datasketch/hgmagic,
+    datasketch/dsopts,
     datasketch/dstools,
-    datasketch/makeup,
-    datasketch/paletero
+    datasketch/makeup
+    

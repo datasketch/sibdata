@@ -360,7 +360,7 @@ server <-  function(input, output, session) {
     opts <- vizOps()
     sel_chart_type <- actual_but$active
     if (sel_chart_type == "table") return()
-    viz <- paste0("hgmagic::hgch_", sel_chart_type, "_CatNum")
+    viz <- paste0("hgch_", sel_chart_type, "_CatNum")
     if (sel_chart_type == "map") viz <- "lfltmagic::lflt_choropleth_GnmNum"
     suppressWarnings(do.call(eval(parse(text=viz)), opts))
   })

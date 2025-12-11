@@ -25,6 +25,9 @@ RUN apt-get update && apt-get install -y \
 
 ARG GITHUB_PAT
 
+# Set GITHUB_PAT as environment variable for remotes to use
+#ENV GITHUB_PAT=${GITHUB_PAT}
+
 RUN echo "options(repos = c(CRAN = 'https://cran.rstudio.com/'), download.file.method = 'libcurl', Ncpus = 4)" >> /usr/local/lib/R/etc/Rprofile.site
 
 RUN R -e 'install.packages("remotes")'
@@ -71,8 +74,6 @@ RUN Rscript -e 'remotes::install_github("datasketch/shinyinvoer@dd8178db99cac78f
 
 RUN Rscript -e 'remotes::install_github("datasketch/shinypanels@ce26c64f9749d1fbe90c992b1c15e83af576b305")'
 
-RUN Rscript -e 'remotes::install_github("datasketch/ggmagic@cfeb47aafd792bf342d657177206ff28fa833b0d")'
-
 RUN Rscript -e 'remotes::install_github("datasketch/dsmodules@5e9a9860ae27aad2cbecf3492be5eab1545e5ff5")'
 
 RUN Rscript -e 'remotes::install_github("datasketch/hgmagic@84008111aaf3a8e8bf55c3e04cdbfa5a502e5a2f")'
@@ -100,4 +101,4 @@ RUN rm -rf /build_zone
 
 EXPOSE 3838
 
-CMD R -e "options('shiny.port'=3838,shiny.host='0.0.0.0');sibdata::run_app()"
+CMD R -e "options('shiny.port'=3838,shiny.host='0.0.0.0');app_file <- system.file('org_sibhumboldt_sibdata_app4/app4.R', package = 'sibdata');shiny::runApp(app_file)"

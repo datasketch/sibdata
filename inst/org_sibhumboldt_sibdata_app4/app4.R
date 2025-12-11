@@ -7,6 +7,7 @@ options(timeout = 600)
 
 library(shiny)
 library(DT)
+library(dsopts)
 library(tidyverse)
 library(sibdata)
 library(data.tree)
@@ -16,7 +17,6 @@ library(leaflet.extras)
 library(openxlsx)
 library(jsonlite)
 library(highcharter)
-library(hgmagic)
 library(shinyinvoer)
 library(shinyjs)
 
@@ -166,7 +166,7 @@ server <- function(input, output, session) {
 
   # Create session-specific app options
   # con <- get_app_connection("db/sibdata.sqlite", debug = DEBUG_MODE)
-  db <- "db/sibdata.duckdb"
+  db <- "sibdata.duckdb"
   con <- get_app_connection(db, debug = DEBUG_MODE)
   app_options <- get_app_options(con, debug = DEBUG_MODE)
   app_options$con <- con

@@ -240,7 +240,7 @@ d <- sibdata(inp$region,
              with_parent = inp$with_parent,
              con = con)
 d
-hgmagic::hg_pie_CatNum(d)
+hg_pie_CatNum(d)
 
 list_species(region = "colombia",
              grupo = "",
@@ -275,8 +275,8 @@ d <- sibdata(inp$region,
              with_parent = inp$with_parent,
              con = con)
 d
-hgmagic::hg_bar_CatNum(iris |> select(5,4), color_palette_categorical = NULL, color_by = NULL)
-hgmagic::hg_pie_CatNum(d)
+hg_bar_CatNum(iris |> select(5,4), color_palette_categorical = NULL, color_by = NULL)
+hg_pie_CatNum(d)
 
 
 
@@ -301,7 +301,7 @@ d <- sibdata(inp$region,
              with_parent = inp$with_parent,
              con = con)
 d
-hgmagic::hg_pie_CatNum(d)
+hg_pie_CatNum(d)
 
 
 
@@ -331,7 +331,7 @@ d <- sibdata(inp$region,
              con = con)
 d <- d |> sib_merge_ind_label(con = con)
 palette <- c("#FF0000", "#FFA500", "#FFFF00")
-hgmagic::hg_pie_CatNum(d, opts = list(color_palette_categorical = palette))
+hg_pie_CatNum(d, opts = list(color_palette_categorical = palette))
 
 
 ## Cites
@@ -364,7 +364,7 @@ opts <- list(
   axis_text_wrap = 100
   )
 
-hgmagic::hg_pie_CatNum(d, opts = opts)
+hg_pie_CatNum(d, opts = opts)
 
 esp <- list_species(region = inp$region,
                     grupo = inp$grupo,

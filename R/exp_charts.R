@@ -160,7 +160,7 @@ create_pie_chart <- function(data, options) {
 
   # Call hgmagic function
   tryCatch({
-    result <- do.call(hgmagic::hg_pie_CatNum, args)
+    result <- do.call(hg_pie_CatNum, args)
     message("✓ Pie chart created")
     return(result)
   }, error = function(e) {
@@ -190,7 +190,7 @@ create_donut_chart <- function(data, options) {
 
   # Call hgmagic function
   tryCatch({
-    result <- do.call(hgmagic::hg_donut_CatNum, args)
+    result <- do.call(hg_donut_CatNum, args)
     message("✓ Donut chart created")
     return(result)
   }, error = function(e) {
@@ -220,7 +220,7 @@ create_bar_chart <- function(data, options) {
 
   # Call hgmagic function
   tryCatch({
-    result <- do.call(hgmagic::hg_bar_CatNum, args)
+    result <- do.call(hg_bar_CatNum, args)
     message("✓ Bar chart created")
     return(result)
   }, error = function(e) {
@@ -250,7 +250,7 @@ create_treemap_chart <- function(data, options) {
 
   # Call hgmagic function
   tryCatch({
-    result <- do.call(hgmagic::hg_treemap_CatNum, args)
+    result <- do.call(hg_treemap_CatNum, args)
     message("✓ Treemap chart created")
     return(result)
   }, error = function(e) {
@@ -268,10 +268,10 @@ create_treemap_chart <- function(data, options) {
 #' @return Function name for hgmagic
 get_chart_function_name <- function(chart_type) {
   switch(chart_type,
-    "pie" = "hgmagic::hg_pie_CatNum",
-    "donut" = "hgmagic::hg_donut_CatNum",
-    "bar" = "hgmagic::hg_bar_CatNum",
-    "treemap" = "hgmagic::hg_treemap_CatNum",
+    "pie" = "hg_pie_CatNum",
+    "donut" = "hg_donut_CatNum",
+    "bar" = "hg_bar_CatNum",
+    "treemap" = "hg_treemap_CatNum",
     "map" = "choropleth_map",
     "table" = NULL,
     stop("Unknown chart type: ", chart_type)

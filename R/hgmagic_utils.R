@@ -1,30 +1,25 @@
 hc_add_bar <- function(hc, data, hdtype, ...) {
-  opts <- c(
-    dsopts_merge(..., categories = "bar"),
-    dsopts_merge(..., categories = "axis")
-  )
+  opts_theme <- list(...)
 
-  opts_theme <-  dsopts_merge(..., categories = "colorprep")
   opts_theme$palette_colors <- opts_theme$color_palette_categorical
-  bar_type <- if (opts$bar_orientation == "ver") "column" else "bar"
+  bar_type <- "column"
 
   hc <- hc |>
     hc_chart(
       type = bar_type
     )
 
-  if (opts$bar_orientation == "hor") {
-    title_axis_x <- opts$title_axis_y
-    title_axis_y <- opts$title_axis_x
-    opts$title_axis_x <- title_axis_x
-    opts$title_axis_y <- title_axis_y
-  }
+  #if (opts$bar_orientation == "hor") {
+    #title_axis_x <- opts_theme$title_axis_y
+    #title_axis_y <- opts_theme$title_axis_x
+    opts_theme$title_axis_x <- " "#title_axis_x
+    opts_theme$title_axis_y <- " "#title_axis_y
+  #}
 
   # Handle different hdtype scenarios with consolidated conditional logic
   if (hdtype == "CatNum") {
-    opts$legend_show <- FALSE
-    opts$bar_graph_type <- "grouped"
-    hc <- hc |> add_CatNum_features(data, opts, bar_type)
+
+    hc <- hc |> add_CatNum_features(data, opts_theme, bar_type)
   }
 
   hc <- hc |> hc_colors(opts_theme$palette_colors) |>
@@ -35,13 +30,12 @@ hc_add_bar <- function(hc, data, hdtype, ...) {
 
 hc_add_pie <- function(hc, data, hdtype, ...) {
 
-  opts <- c(dsopts_merge(..., categories = "pie"),
-            dsopts_merge(..., categories = "legend"))
+  opts_theme <- list(...)
 
   hc <- hc |>
     hc_chart(type = "pie") |>
     add_CatNum_features(data, opts, "pie")
-  opts_theme <-  dsopts_merge(..., categories = "colorprep")
+
   opts_theme$palette_colors <- opts_theme$color_palette_categorical
   hc <- hc |> hc_colors(opts_theme$palette_colors) |>
     hc_plotOptions(
@@ -58,8 +52,8 @@ hc_add_pie <- function(hc, data, hdtype, ...) {
 
 hc_add_donut <- function(hc, data, hdtype, ...) {
 
-  opts <- c(dsopts_merge(..., categories = "donut"),
-            dsopts_merge(..., categories = "legend"))
+  opts_theme <- list(...)
+
   hc <- hc |>
     hc_chart(type = "pie") |>
     add_CatNum_features(data, opts, "pie") |>
@@ -70,7 +64,7 @@ hc_add_donut <- function(hc, data, hdtype, ...) {
       pie = list(
       showInLegend = TRUE,
       innerSize = 180))
-  opts_theme <-  dsopts_merge(..., categories = "colorprep")
+
   opts_theme$palette_colors <- opts_theme$color_palette_categorical
   hc <- hc |> hc_colors(opts_theme$palette_colors)
 
@@ -81,17 +75,13 @@ hc_add_donut <- function(hc, data, hdtype, ...) {
 
 hc_add_treemap <- function(hc, data, hdtype, ...) {
 
-  opts <- c(
-    dsopts_merge(..., categories = "treemap"),
-    dsopts_merge(..., categories = "legend")
-  )
 
-  opts_color <- dsopts_merge(..., categories = "colorprep")
+  opts_theme <- list(...)
 
   hc <- hc |>
     hc_chart(type = "treemap")
 
-  colors <- opts_color$color_palette_categorical
+  colors <- opts_theme$color_palette_categorical
 
   # Handle different hdtype scenarios with consolidated conditional logic
   if (hdtype == "CatNum") {

@@ -7,7 +7,6 @@ options(timeout = 600)
 
 library(shiny)
 library(DT)
-library(dsopts)
 library(tidyverse)
 library(sibdata)
 library(data.tree)

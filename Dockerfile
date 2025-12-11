@@ -23,67 +23,31 @@ RUN apt-get update && apt-get install -y \
   libpoppler-cpp-dev \
   && rm -rf /var/lib/apt/lists/*
 
-ARG GITHUB_PAT
-
-# Set GITHUB_PAT as environment variable for remotes to use
-#ENV GITHUB_PAT=${GITHUB_PAT}
-
 RUN echo "options(repos = c(CRAN = 'https://cran.rstudio.com/'), download.file.method = 'libcurl', Ncpus = 4)" >> /usr/local/lib/R/etc/Rprofile.site
 
+# Install remotes for package installation
 RUN R -e 'install.packages("remotes")'
 
-RUN Rscript -e 'remotes::install_version("tidyverse", upgrade="never", version = "1.3.2")'
+# Install CRAN packages (Imports from DESCRIPTION)
+RUN Rscript -e 'install.packages(c("DBI", "RSQLite", "duckdb", "dplyr", "tidyr", "data.tree", "jsonlite", "shiny", "DT", "purrr", "leaflet", "leaflet.extras", "highcharter", "htmlwidgets"))'
 
-RUN Rscript -e 'remotes::install_version("RSQLite", upgrade="never", version = "2.2.17")'
+# Install CRAN packages (Suggests needed by app4.R)
+RUN Rscript -e 'install.packages(c("openxlsx", "shinyjs"))'
 
-RUN Rscript -e 'remotes::install_version("googlesheets4", upgrade="never", version = "1.0.1")'
+# Install GitHub packages that are in Remotes field or explicitly needed by app4.R
+# These are public repositories, no GITHUB_PAT needed
 
-RUN Rscript -e 'remotes::install_version("shiny", upgrade="never", version = "1.7.2")'
-
-RUN Rscript -e 'remotes::install_version("DT", upgrade="never", version = "0.23")'
-
-RUN Rscript -e 'remotes::install_version("dotenv", upgrade="never", version = "1.0.3")'
-
-RUN Rscript -e 'remotes::install_version("shinydisconnect", upgrade="never", version = "0.1.0")'
-
-RUN Rscript -e 'remotes::install_version("tictoc", upgrade="never", version = "1.1")'
-
-RUN Rscript -e 'remotes::install_version("waffle", upgrade="never", version = "0.7.0")'
-
-RUN Rscript -e 'remotes::install_version("htmlwidgets", upgrade="never", version = "1.5.4")'
-
-RUN Rscript -e 'remotes::install_version("openxlsx", upgrade="never", version = "4.2.5")'
-
-RUN Rscript -e 'remotes::install_version("DBI", upgrade="never", version = "1.1.3")'
-
-RUN Rscript -e 'remotes::install_version("jsonlite", upgrade="never", version = "1.8.0")'
-
-RUN Rscript -e 'remotes::install_version("data.tree", upgrade="never", version = "1.0.0")'
-
-RUN Rscript -e 'remotes::install_version("gt", upgrade="never", version = "0.7.0")'
-
-RUN Rscript -e 'remotes::install_version("devtools", upgrade="never", version = "2.4.4")'
-
-RUN Rscript -e 'remotes::install_github("dgrtwo/dbcooper@6757ff84ec40b0c9d2c60560cc6ee4032ef2ac4a")'
-
-RUN Rscript -e 'remotes::install_github("jpmarindiaz/mop@44a9f30b7d3fe8c5ff18f828ceac4473397df132")'
-
-RUN Rscript -e 'remotes::install_github("datasketch/makeup@e4cde16244da49883e728de54b34586ebd84e40c")'
-
-RUN Rscript -e 'remotes::install_github("datasketch/shinyinvoer@dd8178db99cac78f0abbd236e83e07bf1f22ba18")'
-
-RUN Rscript -e 'remotes::install_github("datasketch/shinypanels@ce26c64f9749d1fbe90c992b1c15e83af576b305")'
-
-RUN Rscript -e 'remotes::install_github("datasketch/dsmodules@5e9a9860ae27aad2cbecf3492be5eab1545e5ff5")'
-
-RUN Rscript -e 'remotes::install_github("datasketch/hgmagic@84008111aaf3a8e8bf55c3e04cdbfa5a502e5a2f")'
+RUN Rscript -e 'remotes::install_github("datasketch/dstools")'
+RUN Rscript -e 'remotes::install_github("datasketch/makeup")'
+RUN Rscript -e 'remotes::install_github("datasketch/shinyinvoer")'
+RUN Rscript -e 'remotes::install_github("datasketch/shinypanels")'
 
 
 RUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/*
 
 RUN wget https://ds-services-assets.s3.amazonaws.com/common/phantomjs-2.1.1-linux-x86_64.tar.bz2
 
-RUN tar phantomjs-2.1.1-linux-x86_64.tar.bz2
+RUN tar -xjf phantomjs-2.1.1-linux-x86_64.tar.bz2
 
 RUN mv phantomjs-2.1.1-linux-x86_64 /usr/local/share
 
@@ -95,7 +59,9 @@ ADD . /build_zone
 
 WORKDIR /build_zone
 
-RUN R -e 'remotes::install_local(upgrade="never")'
+# Install local package with all dependencies (Imports and Suggests)
+# This will automatically install all packages listed in DESCRIPTION
+RUN R -e 'remotes::install_local(upgrade="never", dependencies=TRUE)'
 
 RUN rm -rf /build_zone
 

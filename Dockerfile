@@ -38,7 +38,6 @@ RUN Rscript -e 'install.packages(c("openxlsx", "shinyjs"))'
 # These are public repositories, no GITHUB_PAT needed
 
 RUN Rscript -e 'remotes::install_github("datasketch/dstools")'
-RUN Rscript -e 'remotes::install_github("datasketch/makeup")'
 RUN Rscript -e 'remotes::install_github("datasketch/shinyinvoer")'
 RUN Rscript -e 'remotes::install_github("datasketch/shinypanels")'
 

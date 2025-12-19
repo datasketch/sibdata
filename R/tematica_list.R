@@ -9,7 +9,7 @@
 #' @return Lista con datos de temáticas (amenazadas, CITES, endémicas,
 #'   migratorias, exóticas).
 #'
-#' @keywords internal
+#' @export
 tematica_list <- function(region, con) {
 
   # region <- "boyaca"

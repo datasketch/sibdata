@@ -19,4 +19,3 @@ migratorias, exóticas).
 Genera lista completa de temáticas con indicadores y listas de especies para
 una región.
 }
-\keyword{internal}

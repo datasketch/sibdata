@@ -8,6 +8,57 @@
 #' @keywords internal
 NULL
 
+# DuckDB helper functions (internal replacements for duckdbits)
+
+#' Load DuckDB extension
+#'
+#' @param ext_name Name of the extension to load (e.g., "spatial").
+#' @param con DuckDB connection.
+#'
+#' @return Invisible, loads the extension.
+#'
+#' @keywords internal
+duckdb_load_ext <- function(ext_name, con) {
+  # Try to load the extension, install if needed
+  tryCatch(
+    {
+      DBI::dbExecute(con, paste0("LOAD ", ext_name, ";"))
+    },
+    error = function(e) {
+      # If load fails, try to install first
+      DBI::dbExecute(con, paste0("INSTALL ", ext_name, ";"))
+      DBI::dbExecute(con, paste0("LOAD ", ext_name, ";"))
+    }
+  )
+  invisible(NULL)
+}
+
+#' Create DuckDB connection
+#'
+#' @param dbdir Path to DuckDB database file.
+#' @param read_only Logical, indicates if the connection is read-only (defaults
+#'   to `TRUE`).
+#'
+#' @return DuckDB connection object.
+#'
+#' @keywords internal
+duckdb_con <- function(dbdir, read_only = TRUE) {
+  drv <- duckdb::duckdb(dbdir)
+  DBI::dbConnect(drv, read_only = read_only)
+}
+
+#' Disconnect DuckDB connection
+#'
+#' @param con DuckDB connection to disconnect.
+#'
+#' @return `NULL` (invisible).
+#'
+#' @keywords internal
+duckdb_disconnect <- function(con) {
+  DBI::dbDisconnect(con, shutdown = TRUE)
+  invisible(NULL)
+}
+
 # Helper functions
 
 #' List tables in DuckDB connection
@@ -48,7 +99,7 @@ duckdb_read_table <- function(tblname, con = NULL, collect = FALSE) {
 #'
 #' @keywords internal
 duckdb_read_geotable <- function(tblname, con = NULL, geometrycol = "geom") {
-  duckdbits::duckdb_load_ext("spatial", con)
+  duckdb_load_ext("spatial", con)
   # ST_AsWKB is a DuckDB spatial function, not an R function
   sql <- dbplyr::sql_render(
     dplyr::mutate(
@@ -168,10 +219,10 @@ gt_regions <- function(map_name = NULL, con) {
 gt_con <- function(con = NULL, read_only = TRUE) {
   if (is.null(con)) {
     dbdir <- sys_file_sibdata("db/geotable.duckdb")
-    con <- duckdbits::duckdb_con(dbdir = dbdir, read_only = read_only)
+    con <- duckdb_con(dbdir = dbdir, read_only = read_only)
   }
   if (is.character(con)) {
-    con <- duckdbits::duckdb_con(dbdir = con, read_only = read_only)
+    con <- duckdb_con(dbdir = con, read_only = read_only)
   }
   con
 }
@@ -221,7 +272,7 @@ rename_dotdot <- function(x) {
 #'
 #' @keywords internal
 gt_discon <- function(con) {
-  duckdbits::duckdb_disconnect(con)
+  duckdb_disconnect(con)
 }
 
 #' Default options for map icons

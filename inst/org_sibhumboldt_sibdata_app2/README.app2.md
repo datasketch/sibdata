@@ -94,7 +94,7 @@ The app supports URL parameters for:
 ### Dependencies
 - `shiny`, `shinypanels`, `DT`, `leaflet`
 - `hgmagic`, `dsmods`, `dsmodules`, `geotable`
-- `sibdata`, `duckdbits`
+- `sibdata`
 - `tidyverse`, `shinyinvoer`, `shinyjs`, `shinydisconnect`
 
 ### Current Architecture Issues

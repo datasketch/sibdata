@@ -12,7 +12,6 @@ library(shinyinvoer)
 library(dsmods)
 library(dsmodules)
 library(sibdata)
-library(duckdbits)
 library(shinyjs)
 library(shinydisconnect)
 

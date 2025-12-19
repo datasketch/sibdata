@@ -11,6 +11,7 @@
 #' @param r Reactive values object for additional options
 #' @param con Database connection for label processing
 #' @return hgmagic chart object
+#' @export
 create_hgmagic_chart <- function(chart_type, data, r, con) {
   message("=== Creating hgmagic chart ===")
   message("Chart type: ", chart_type)
@@ -46,6 +47,7 @@ create_hgmagic_chart <- function(chart_type, data, r, con) {
 #' @param r Reactive values object
 #' @param con Database connection
 #' @return Processed data ready for charting
+#' @export
 prepare_chart_data <- function(data, chart_type, r, con) {
   message("=== Preparing chart data ===")
 
@@ -105,6 +107,7 @@ prepare_chart_data <- function(data, chart_type, r, con) {
 #' @param chart_type Type of chart
 #' @param r Reactive values object
 #' @return List of chart options
+#' @export
 get_chart_options <- function(chart_type, r) {
   message("=== Getting chart options ===")
 
@@ -146,6 +149,7 @@ get_chart_options <- function(chart_type, r) {
 #' @param data Prepared chart data
 #' @param options Chart options
 #' @return hgmagic pie chart
+#' @export
 create_pie_chart <- function(data, options) {
   message("Creating pie chart...")
 
@@ -176,6 +180,7 @@ create_pie_chart <- function(data, options) {
 #' @param data Prepared chart data
 #' @param options Chart options
 #' @return hgmagic donut chart
+#' @export
 create_donut_chart <- function(data, options) {
   message("Creating donut chart...")
 
@@ -206,6 +211,7 @@ create_donut_chart <- function(data, options) {
 #' @param data Prepared chart data
 #' @param options Chart options
 #' @return hgmagic bar chart
+#' @export
 create_bar_chart <- function(data, options) {
   message("Creating bar chart...")
 
@@ -236,6 +242,7 @@ create_bar_chart <- function(data, options) {
 #' @param data Prepared chart data
 #' @param options Chart options
 #' @return hgmagic treemap chart
+#' @export
 create_treemap_chart <- function(data, options) {
   message("Creating treemap chart...")
 
@@ -266,6 +273,7 @@ create_treemap_chart <- function(data, options) {
 #'
 #' @param chart_type Type of chart
 #' @return Function name for hgmagic
+#' @export
 get_chart_function_name <- function(chart_type) {
   switch(chart_type,
     "pie" = "hg_pie_CatNum",
@@ -285,6 +293,7 @@ get_chart_function_name <- function(chart_type) {
 #' @param data Data to validate
 #' @param chart_type Type of chart
 #' @return TRUE if valid, FALSE otherwise
+#' @export
 validate_chart_data <- function(data, chart_type) {
   if(is.null(data) || nrow(data) == 0) {
     message("❌ Data validation failed: empty or null data")

@@ -31,6 +31,8 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
 Depends: 
     R (>= 4.1),
+    dstools,
+    shinyinvoer
 Imports:
     DBI,
     RSQLite,
@@ -45,7 +47,9 @@ Imports:
     leaflet,
     leaflet.extras,
     highcharter,
-    htmlwidgets
+    htmlwidgets,
+    dbplyr,
+    sf
 Suggests:
     gt,
     gtExtras,
@@ -62,14 +66,12 @@ Suggests:
     stringr,
     forcats,
     googlesheets4,
-    sf,
     tictoc,
     vctrs,
     httr,
     rsconnect,
     parallel,
     shinypanels,
-    dbplyr,
     collapsibleTree,
     shinydisconnect,
     dstools

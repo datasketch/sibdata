@@ -34,18 +34,67 @@ RUN echo "options(repos = c(CRAN = 'https://cran.rstudio.com/'), download.file.m
 # remotes
 RUN Rscript -e 'install.packages("remotes")'
 
-# CRAN packages
-RUN Rscript -e 'install.packages(c( "DBI","RSQLite","duckdb","dplyr","tidyr","data.tree","jsonlite","shiny","DT","purrr","leaflet","leaflet.extras","highcharter","htmlwidgets","openxlsx","shinyjs"))'
+# CRAN packages - incluyendo todas las dependencias de Imports
+RUN Rscript -e 'install.packages(c( \
+    "DBI", \
+    "RSQLite", \
+    "duckdb", \
+    "dplyr", \
+    "tidyr", \
+    "data.tree", \
+    "jsonlite", \
+    "shiny", \
+    "DT", \
+    "purrr", \
+    "leaflet", \
+    "leaflet.extras", \
+    "highcharter", \
+    "htmlwidgets", \
+    "openxlsx", \
+    "shinyjs", \
+    "dbplyr", \
+    "sf" \
+  ), repos = "https://cran.rstudio.com/")'
 
 # GitHub packages
-RUN Rscript -e 'remotes::install_github("datasketch/dstools", lib = .libPaths()[1])'
-RUN Rscript -e 'remotes::install_github("datasketch/shinyinvoer", lib = .libPaths()[1])'
-RUN Rscript -e 'remotes::install_github("datasketch/sibdata", lib = .libPaths()[1], dependencies = TRUE, upgrade = "never")'
+RUN Rscript -e 'remotes::install_github("datasketch/dstools", lib = .libPaths()[1], upgrade = "never")' || \
+    Rscript -e 'cat("Error installing dstools\n"); quit(status = 1)'
 
-# Verificación (ahora sí)
-RUN Rscript -e 'stopifnot(requireNamespace("sibdata", quietly = TRUE)); \
+RUN Rscript -e 'remotes::install_github("datasketch/shinyinvoer", lib = .libPaths()[1], upgrade = "never")' || \
+    Rscript -e 'cat("Error installing shinyinvoer\n"); quit(status = 1)'
+
+# Instalar sibdata con manejo de errores mejorado
+RUN Rscript -e ' \
+  result <- tryCatch({ \
+    remotes::install_github("datasketch/sibdata", lib = .libPaths()[1], dependencies = TRUE, upgrade = "never"); \
+    TRUE \
+  }, error = function(e) { \
+    cat("ERROR installing sibdata:\n"); \
+    print(e); \
+    cat("\nTrying to load sibdata anyway...\n"); \
+    FALSE \
+  }); \
+  if (!result) { \
+    cat("Installation had errors, checking if package is available...\n"); \
+  } \
+  if (!requireNamespace("sibdata", quietly = TRUE)) { \
+    cat("sibdata package is not available after installation\n"); \
+    cat("Installed packages:\n"); \
+    print(installed.packages()[, "Package"]); \
+    quit(status = 1) \
+  } else { \
+    cat("sibdata package loaded successfully\n") \
+  }'
+
+# Verificación
+RUN Rscript -e ' \
+  if (!requireNamespace("sibdata", quietly = TRUE)) { \
+    stop("sibdata package not found") \
+  }; \
   app_dir <- system.file("org_sibhumboldt_sibdata_app4", package="sibdata"); \
-  stopifnot(app_dir != ""); \
+  if (app_dir == "") { \
+    stop("app directory not found") \
+  }; \
   cat("sibdata OK:", app_dir, "\n")'
 
 # PhantomJS

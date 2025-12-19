@@ -22,4 +22,3 @@ Lista con datos de grupos, subgrupos, especies y temáticas.
 Obtiene datos completos de grupos biológicos o de interés para una región,
 incluyendo subgrupos, listas de especies y temáticas.
 }
-\keyword{internal}

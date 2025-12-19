@@ -11,7 +11,7 @@
 #'
 #' @return Lista con datos de grupos, subgrupos, especies y temáticas.
 #'
-#' @keywords internal
+#' @export
 region_grupo_data <- function(region, tipo = "biologico", verbose = FALSE, con) {
 
   sel_tipo <- tipo

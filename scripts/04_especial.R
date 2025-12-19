@@ -1,8 +1,7 @@
-#library(sibdata)
+library(sibdata)
 #library(lfltmagic)
 library(tictoc)
 library(vctrs)
-devtools::load_all()
 
 
 # con_map <- gt_con()

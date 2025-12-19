@@ -1,9 +1,4 @@
 library(sibdata)
-
-
-devtools::load_all()
-
-
 library(tictoc)
 
 # here::dr_here()

@@ -5,13 +5,23 @@
 \title{#' @export
 sib_available_tables <- function(){
 sibdata::available_tables
-}}
+}
+Get available regions}
 \usage{
 sib_available_regions(subtipo = NULL, departamento = NULL, con = con)
 }
-\description{
-#' @export
-sib_available_tables <- function(){
-sibdata::available_tables
+\arguments{
+\item{subtipo}{Subtipo de región (ej: "País", "Departamento", "Municipio",
+"Especial").}
+
+\item{departamento}{Slug del departamento para filtrar municipios (opcional).}
+
+\item{con}{Conexión a la base de datos.}
 }
+\value{
+Vector nombrado con slugs de regiones (nombres son las etiquetas).
+}
+\description{
+Obtiene lista de regiones disponibles, opcionalmente filtradas por subtipo o
+departamento.
 }

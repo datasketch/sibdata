@@ -1,5 +1,14 @@
-
-subregion_tematica <- function(region, con){
+#' Get subregion tematica data
+#'
+#' Obtiene datos de temática para todas las subregiones de una región padre.
+#'
+#' @param region Slug de la región padre.
+#' @param con Conexión a la base de datos.
+#'
+#' @return Objeto `tbl` con datos de temática de subregiones.
+#'
+#' @keywords internal
+subregion_tematica <- function(region, con) {
 
   regs <- sibdata_region(con) |>
     select(slug_region = slug, label)
@@ -21,8 +30,19 @@ subregion_tematica <- function(region, con){
   subreg_tematica |> distinct()
 }
 
-
-subregion_grupo <- function(region, grupo, con){
+#' Get subregion grupo data
+#'
+#' Obtiene datos de grupo biológico para todas las subregiones de una región
+#' padre.
+#'
+#' @param region Slug de la región padre.
+#' @param grupo Slug del grupo biológico.
+#' @param con Conexión a la base de datos.
+#'
+#' @return Objeto `tbl` con datos de grupo de subregiones.
+#'
+#' @keywords internal
+subregion_grupo <- function(region, grupo, con) {
 
   grp <- grupo
   regs <- sibdata_region(con) |>

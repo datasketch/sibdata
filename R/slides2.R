@@ -1,5 +1,15 @@
+#' Make region slides (version 2)
+#'
+#' Genera datos para slides de una región (versión alternativa con estructura
+#' diferente).
+#'
+#' @param region Slug de la región.
+#' @param con Conexión a la base de datos.
+#'
+#' @return Lista con datos de slides para la región.
+#'
 #' @export
-make_region_slides2 <- function(region, con = con){
+make_region_slides2 <- function(region, con = con) {
 
   #sib_validate_available_regions(region)
 

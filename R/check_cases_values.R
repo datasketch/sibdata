@@ -1,6 +1,18 @@
 
-
-check_cases_values <- function(param, value, con = NULL, ...){
+#' Check case values
+#'
+#' Valida que un valor sea válido para un parámetro dado (tipo, cobertura,
+#' temática, indicador, grupo).
+#'
+#' @param param Nombre del parámetro a validar.
+#' @param value Valor a validar.
+#' @param con Conexión a la base de datos.
+#' @param ... Argumentos adicionales (no usados).
+#'
+#' @return Invisible, lanza error si el valor no es válido.
+#'
+#' @keywords internal
+check_cases_values <- function(param, value, con = NULL, ...) {
   # param <- "tematica"
   # value <- "cites_total"
   # value <- "exoticas_total"

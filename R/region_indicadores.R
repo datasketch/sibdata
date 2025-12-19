@@ -1,6 +1,16 @@
 
+#' Get region indicators
+#'
+#' Obtiene valores de indicadores específicos para una región.
+#'
+#' @param region Slug de la región.
+#' @param indicadores Vector con nombres de indicadores.
+#' @param con Conexión a la base de datos.
+#'
+#' @return Lista con valores de indicadores.
+#'
 #' @export
-region_indicadores <- function(region, indicadores, con = NULL){
+region_indicadores <- function(region, indicadores, con = NULL) {
   #indicadores <- inds_exoticas
   sib_validate_indicadores(indicadores, con)
   d <- region_tematica(region, con) |> collect()
@@ -21,8 +31,19 @@ region_indicadores <- function(region, indicadores, con = NULL){
 }
 
 
+#' Get default indicators for a section
+#'
+#' Retorna un vector nombrado con los indicadores por defecto para una sección
+#' específica (amenazadas, CITES, endémicas, migratorias, exóticas).
+#'
+#' @param section Nombre de la sección (ej: "inds_amenazadas_nacional",
+#'   "inds_cites", "inds_endemicas").
+#'
+#' @return Vector nombrado con indicadores (nombres son etiquetas, valores son
+#'   nombres de columnas).
+#'
 #' @export
-default_indicadores <- function(section){
+default_indicadores <- function(section) {
 
   if(section == "inds_amenazadas_nacional"){
     inds <- c(

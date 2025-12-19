@@ -1,5 +1,16 @@
-
-map_icon <- function (sf = NULL, opts = NULL, save_path = NULL){
+#' Create map icon
+#'
+#' Genera un icono de mapa (visualización simplificada) a partir de un objeto
+#' sf.
+#'
+#' @param sf Objeto `sf` con datos geoespaciales.
+#' @param opts Lista con opciones de visualización (opcional).
+#' @param save_path Ruta donde guardar el icono (opcional).
+#'
+#' @return Objeto ggplot con el icono del mapa.
+#'
+#' @keywords internal
+map_icon <- function(sf = NULL, opts = NULL, save_path = NULL) {
 
   default_opts <- default_icon_opts()
   default_projections <- default_projections()

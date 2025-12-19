@@ -1,6 +1,17 @@
 
+#' Make region slides
+#'
+#' Genera datos para slides (diapositivas) de una región, incluyendo gráficos y
+#' visualizaciones.
+#'
+#' @param region Slug de la región.
+#' @param con Conexión a la base de datos.
+#' @param save_path Ruta donde guardar gráficos (opcional).
+#'
+#' @return Lista con datos de slides para la región.
+#'
 #' @export
-make_region_slides <- function(region, con, save_path = NULL){
+make_region_slides <- function(region, con, save_path = NULL) {
 
   #sib_validate_available_regions(region)
 

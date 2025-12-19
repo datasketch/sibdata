@@ -1,7 +1,16 @@
 
-
+#' Get region subgrupo data
+#'
+#' Obtiene datos de subgrupos biológicos para una región y grupo padre.
+#'
+#' @param region Slug de la región.
+#' @param grupo Slug del grupo biológico padre.
+#' @param con Conexión a la base de datos.
+#'
+#' @return Objeto `tbl` con datos de subgrupos.
+#'
 #' @export
-sib_region_subgrupo <- function(region, grupo, con){
+sib_region_subgrupo <- function(region, grupo, con) {
   #grupo <- "animales"
 
   subgrupos <- sibdata_grupo(con) |>

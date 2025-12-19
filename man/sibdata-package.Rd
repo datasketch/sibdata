@@ -2,7 +2,6 @@
 % Please edit documentation in R/sibdata-package.R
 \docType{package}
 \name{sibdata-package}
-\alias{sibdata}
 \alias{sibdata-package}
 \title{sibdata: Procesamiento y Visualización de Datos de Biodiversidad de Colombia}
 \description{

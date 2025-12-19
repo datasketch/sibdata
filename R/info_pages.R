@@ -1,34 +1,63 @@
-
-save_info_page <- function(path, con){
-
+#' Save info pages to JSON files
+#'
+#' Genera archivos JSON con información de páginas informativas (publicadores,
+#' preguntas frecuentes, glosario, tooltips).
+#'
+#' @param path Ruta del directorio donde se guardarán los archivos JSON.
+#' @param con Conexión a la base de datos.
+#'
+#' @return Invisible, guarda archivos JSON en el directorio especificado.
+#'
+#' @export
+save_info_page <- function(path, con) {
   # Copy icons
-
   copy_icons("static")
 
   l <- info_pages(con)
 
-  map2(l,names(l), function(page, nm){
-    jsonlite::write_json(page,
-                         file.path(path, paste0(nm, ".json")),
-                         auto_unbox = TRUE, pretty = TRUE)
+  purrr::map2(l, names(l), function(page, nm) {
+    jsonlite::write_json(
+      page,
+      file.path(path, paste0(nm, ".json")),
+      auto_unbox = TRUE,
+      pretty = TRUE
+    )
   })
-
-
 }
 
-info_pages <- function(con){
+#' Generate info pages data
+#'
+#' Genera una lista con datos de páginas informativas.
+#'
+#' @param con Conexión a la base de datos.
+#'
+#' @return Lista con datos de publicadores, preguntas frecuentes, glosario y
+#'   tooltips.
+#'
+#' @keywords internal
+info_pages <- function(con) {
   list(
     publicador = info_publicador(con),
     preg_frecuentes = sibdata_preg_frecuentes(con) |> collect(),
     glosario = sibdata_glosario(con) |> collect(),
-    tooltips = sibdata_tematica(con) |> select(slug, tooltip) |> collect()
+    tooltips = sibdata_tematica(con) |>
+      select(slug, tooltip) |>
+      collect()
   )
-
 }
 
+#' Generate publicador information
+#'
+#' Genera información sobre publicadores de datos de biodiversidad, incluyendo
+#' estadísticas por región y filtros de navegación.
+#'
+#' @param con Conexión a la base de datos.
+#'
+#' @return Lista con información de publicadores por región y filtros de
+#'   navegación.
+#'
 #' @export
-info_publicador <- function(con){
-
+info_publicador <- function(con) {
   deptos <- sibdata_departamento(con) |> pull(slug)
 
   which_regs <- c("colombia",
@@ -59,7 +88,7 @@ info_publicador <- function(con){
     group_split(slug_region)
   names(pub_reg_list) <- keys
 
-  pub_reg_list <- map(pub_reg_list, function(r){
+  pub_reg_list <- purrr::map(pub_reg_list, function(r) {
     # r <- pub_reg_list[[18]]
     list(
       publicadores = r |>

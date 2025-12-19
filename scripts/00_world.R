@@ -1,8 +1,6 @@
 library(sibdata)
 library(tictoc)
 
-devtools::load_all()
-
 #here::i_am("static")
 
 here::dr_here()

@@ -1,6 +1,18 @@
 
-
-region_grupo_data <- function(region, tipo = "biologico", verbose = FALSE, con){
+#' Get region grupo data
+#'
+#' Obtiene datos completos de grupos biológicos o de interés para una región,
+#' incluyendo subgrupos, listas de especies y temáticas.
+#'
+#' @param region Slug de la región.
+#' @param tipo Tipo de grupo: "biologico" o "interes" (default: "biologico").
+#' @param verbose Logical, mostrar mensajes de progreso (default: `FALSE`).
+#' @param con Conexión a la base de datos.
+#'
+#' @return Lista con datos de grupos, subgrupos, especies y temáticas.
+#'
+#' @keywords internal
+region_grupo_data <- function(region, tipo = "biologico", verbose = FALSE, con) {
 
   sel_tipo <- tipo
   reg_gr_bio <- sibdata_region_grupo(con) |>

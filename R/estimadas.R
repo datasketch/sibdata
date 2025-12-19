@@ -1,6 +1,16 @@
 
+#' Get estimated species by grupo
+#'
+#' Obtiene estimaciones de especies amenazadas, CITES, endémicas para un grupo
+#' biológico.
+#'
+#' @param grupo Slug del grupo biológico.
+#' @param con Conexión a la base de datos.
+#'
+#' @return Lista con estimaciones de especies.
+#'
 #' @export
-estimadas_grupo <- function(grupo, con){
+estimadas_grupo <- function(grupo, con) {
 
   d <- sibdata_estimada(con) |>
     filter(slug_grupo == grupo) |>

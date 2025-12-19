@@ -1,13 +1,37 @@
 
-sib_region_labels <- function(con){
+#' Get region labels
+#'
+#' Obtiene tabla con slugs y etiquetas de regiones.
+#'
+#' @param con Conexión a la base de datos.
+#'
+#' @return Objeto `tbl` con columnas `slug` y `label`.
+#'
+#' @keywords internal
+sib_region_labels <- function(con) {
   sibdata_region(con) |>
     select(slug, label)
 }
 
 
+#' Merge region labels into data
+#'
+#' Agrega etiquetas de región a un data frame usando el slug de región.
+#'
+#' @param d Data frame con columna de slug de región.
+#' @param slug Nombre de la columna con el slug de región (default:
+#'   "slug_region").
+#' @param label Nombre de la columna de etiqueta a crear (default:
+#'   "label_region").
+#' @param con Conexión a la base de datos.
+#'
+#' @return Data frame con columna de etiqueta agregada.
+#'
 #' @export
-sib_merge_region_label <- function(d, slug = "slug_region", label = "label_region",
-                                   con = con){
+sib_merge_region_label <- function(d,
+                                   slug = "slug_region",
+                                   label = "label_region",
+                                   con = con) {
   if(label %in% colnames(d)){
     d$label <- NULL
     warning("Overwritting existing label column: ", label,
@@ -38,8 +62,19 @@ sib_merge_region_label <- function(d, slug = "slug_region", label = "label_regio
 }
 
 
+#' Merge grupo labels into data
+#'
+#' Agrega etiquetas de grupo biológico a un data frame usando el slug de grupo.
+#'
+#' @param d Data frame con columna de slug de grupo.
+#' @param slug Nombre de la columna con el slug de grupo ("slug" o
+#'   "slug_grupo").
+#' @param con Conexión a la base de datos.
+#'
+#' @return Data frame con columna `label_grupo` agregada.
+#'
 #' @export
-sib_merge_grupo_label <- function(d, slug, con){
+sib_merge_grupo_label <- function(d, slug, con) {
   grupo_labels <- sibdata_grupo(con) |>
     select(slug_grupo = slug, label_grupo = label)
 
@@ -64,8 +99,19 @@ sib_merge_grupo_label <- function(d, slug, con){
 
 
 
+#' Merge indicator labels into data
+#'
+#' Agrega o reemplaza etiquetas de indicadores en un data frame o vector.
+#'
+#' @param d Data frame o vector de caracteres con nombres de indicadores.
+#' @param replace Logical, reemplazar columna de indicador con etiqueta
+#'   (default: `TRUE`).
+#' @param con Conexión a la base de datos.
+#'
+#' @return Data frame o vector con etiquetas de indicadores.
+#'
 #' @export
-sib_merge_ind_label <- function(d, replace = TRUE, con = con){
+sib_merge_ind_label <- function(d, replace = TRUE, con = con) {
 
   inds <- sibdata_indicadores(con = con) |>
     #filter(indicador %in% names(d)) |>
@@ -89,8 +135,17 @@ sib_merge_ind_label <- function(d, replace = TRUE, con = con){
 }
 
 
+#' Merge especie labels into data
+#'
+#' Agrega etiquetas de especies (nombres científicos) a un data frame.
+#'
+#' @param x Data frame con columna `slug_especie`.
+#' @param con Conexión a la base de datos.
+#'
+#' @return Data frame con columna `label` (nombre científico) agregada.
+#'
 #' @export
-sib_merge_especie_label <- function(x, con){
+sib_merge_especie_label <- function(x, con) {
   especie <- sibdata_especie(con) |>
     mutate(label = species)
   x |>
@@ -100,8 +155,17 @@ sib_merge_especie_label <- function(x, con){
 }
 
 
+#' Merge tematica labels into data
+#'
+#' Agrega etiquetas de temática a un data frame usando el slug de temática.
+#'
+#' @param d Data frame con columna `slug_tematica`.
+#' @param con Conexión a la base de datos.
+#'
+#' @return Data frame con columna `tematica_label` agregada.
+#'
 #' @export
-sib_merge_tematica_label <- function(d, con){
+sib_merge_tematica_label <- function(d, con) {
 
   tematica_label <- sibdata_tematica(con) |>
     select(slug_tematica = slug, tematica_label = label) |>

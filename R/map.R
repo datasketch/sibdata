@@ -235,7 +235,16 @@ choropleth_map <- function(data = NULL,
 }
 
 
-basic_map <- function(sf){
+#' Create basic map
+#'
+#' Crea un mapa básico sin datos asociados.
+#'
+#' @param sf Objeto `sf` con datos geoespaciales.
+#'
+#' @return Objeto Leaflet con mapa básico.
+#'
+#' @keywords internal
+basic_map <- function(sf) {
 
 
   bounds <- as.vector(sf::st_bbox(sf))

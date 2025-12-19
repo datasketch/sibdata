@@ -1,4 +1,29 @@
 
+#' Query biodiversity data
+#'
+#' Función principal para consultar datos de biodiversidad de Colombia. Permite
+#' filtrar por región, tipo (registros/especies), cobertura, temática, indicador
+#' y grupo biológico.
+#'
+#' @param region Slug de la región (ej: "colombia", "antioquia").
+#' @param tipo Tipo de dato: "registros" o "especies" (opcional).
+#' @param cobertura Cobertura: "total", "continentales", "marinas" (opcional).
+#' @param tematica Temática: "amenazadas", "cites", "endemicas", etc.
+#'   (opcional).
+#' @param indicador Indicador específico (opcional).
+#' @param grupo Slug del grupo biológico (opcional).
+#' @param subregiones Logical, incluir subregiones (default: `FALSE`).
+#' @param with_parent Logical, incluir región padre (default: `FALSE`).
+#' @param tidy Logical, retornar datos en formato largo (default: `TRUE`).
+#' @param n_especies Logical, retornar solo número de especies (default:
+#'   `FALSE`).
+#' @param all_indicators Logical, retornar todos los indicadores (default:
+#'   `FALSE`).
+#' @param con Conexión a la base de datos.
+#'
+#' @return Data frame con los datos solicitados, o número si `n_especies =
+#'   TRUE`.
+#'
 #' @export
 sibdata <- function(region = NULL,
                     tipo = NULL,
@@ -11,7 +36,7 @@ sibdata <- function(region = NULL,
                     tidy = TRUE,
                     n_especies = FALSE,
                     all_indicators = FALSE,
-                    con = con){
+                    con = con) {
 
   if(!is.null(tipo)) check_cases_values("tipo", tipo, con = con)
   if(!is.null(cobertura)) check_cases_values("cobertura", cobertura, con = con)
@@ -58,6 +83,24 @@ sibdata <- function(region = NULL,
 
 
 
+#' Query biodiversity data (wide format)
+#'
+#' Consulta datos de biodiversidad en formato ancho (una columna por
+#' indicador).
+#'
+#' @param region Slug de la región.
+#' @param tipo Tipo de dato (opcional).
+#' @param cobertura Cobertura (opcional).
+#' @param tematica Temática (opcional).
+#' @param grupo Slug del grupo biológico (opcional).
+#' @param indicador Indicador específico (opcional).
+#' @param subregiones Logical, incluir subregiones.
+#' @param with_parent Logical, incluir región padre.
+#' @param con Conexión a la base de datos.
+#'
+#' @return Data frame en formato ancho.
+#'
+#' @keywords internal
 sibdata_wide <- function(region = NULL,
                          tipo = NULL,
                          cobertura = NULL,
@@ -66,7 +109,7 @@ sibdata_wide <- function(region = NULL,
                          indicador = NULL,
                          subregiones = FALSE,
                          with_parent = FALSE,
-                         con = NULL){
+                         con = NULL) {
   d <- NULL
   if(is.null(region)) stop("Need a region")
   if(subregiones){
@@ -115,12 +158,26 @@ sibdata_wide <- function(region = NULL,
 }
 
 
+#' Convert wide data to tidy format
+#'
+#' Convierte datos en formato ancho a formato largo (tidy).
+#'
+#' @param d Data frame en formato ancho.
+#' @param tematica Temática para filtrar (opcional).
+#' @param cobertura Cobertura para filtrar (opcional).
+#' @param indicador Indicador específico (opcional).
+#' @param all_indicators Logical, retornar todos los indicadores.
+#' @param con Conexión a la base de datos.
+#'
+#' @return Data frame en formato largo.
+#'
+#' @keywords internal
 sibdata_tidify <- function(d,
                            tematica = NULL,
                            cobertura = NULL,
                            indicador = NULL,
                            all_indicators = FALSE,
-                           con = NULL){
+                           con = NULL) {
 
 
   inds <- sibdata_indicadores(con)
@@ -172,10 +229,22 @@ sibdata_tidify <- function(d,
 
 
 
+#' Select indicators based on filters
+#'
+#' Selecciona indicadores disponibles según los filtros proporcionados.
+#'
+#' @param tipo Tipo de dato (opcional).
+#' @param cobertura Cobertura (opcional).
+#' @param tematica Temática (opcional).
+#' @param con Conexión a la base de datos.
+#'
+#' @return Vector con nombres de indicadores.
+#'
+#' @keywords internal
 select_indicator <- function(tipo = NULL,
                              cobertura = NULL,
                              tematica = NULL,
-                             con = NULL){
+                             con = NULL) {
 
   cases <- list(tipo = tipo,
                 cobertura = cobertura,

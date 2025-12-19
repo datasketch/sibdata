@@ -1,6 +1,15 @@
-
-make_gallery <- function(region, con){
-
+#' Create gallery data for a region
+#'
+#' Genera datos de galería (textos e imágenes) para una región específica.
+#'
+#' @param region Slug de la región (debe estar en la lista de regiones válidas).
+#' @param con Conexión a la base de datos.
+#'
+#' @return Data frame con columnas `text`, `image` y `credit` combinando textos
+#'   relevantes e imágenes de la galería.
+#'
+#' @export
+make_gallery <- function(region, con) {
   gallery_regions <- c(
     "colombia",
     "boyaca",
@@ -9,9 +18,11 @@ make_gallery <- function(region, con){
     "santander",
     "region-amazonia"
   )
-  if(!region %in% gallery_regions){
-    warning("Trying create a gallery in non-valid region. Valid regions:\n",
-            toString(gallery_regions))
+  if (!region %in% gallery_regions) {
+    warning(
+      "Trying create a gallery in non-valid region. Valid regions:\n",
+      toString(gallery_regions)
+    )
     return(list())
   }
 
@@ -24,26 +35,6 @@ make_gallery <- function(region, con){
     filter(slug_region == region) |>
     select(image = img_link, credit = credito) |>
     collect()
-
-  # if(region == "region-amazonia"){
-  #   txts <- bind_rows(txts, txts) |> slice(1:8)
-  #   imgs <- sibdata_gallery_images(con) |>
-  #     filter(slug_region == "colombia") |>
-  #     select(image = img_link) |>
-  #     collect()
-  # }
-
-
-
-  # n <- min(nrow(txts), nrow(imgs), 7)
-  # txts <- txts |> slice(1:(n+1))
-  # imgs <- imgs |> slice(c(1:(n),1))
-  #
-  # gal <- bind_cols(txts, imgs) |>
-  #   pivot_longer(text:image) |>
-  #   rownames_to_column(var = "id") |>
-  #   pivot_wider(id_cols = "id", names_from = "name", values_from = "value") |>
-  #   slice(1:15)
 
   n <- min(nrow(txts), nrow(imgs), 6)
   txts <- txts |> slice(1:(n))

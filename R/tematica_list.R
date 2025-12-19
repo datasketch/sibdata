@@ -1,5 +1,16 @@
-
-tematica_list <- function(region, con){
+#' Get tematica list for region
+#'
+#' Genera lista completa de temáticas con indicadores y listas de especies para
+#' una región.
+#'
+#' @param region Slug de la región.
+#' @param con Conexión a la base de datos.
+#'
+#' @return Lista con datos de temáticas (amenazadas, CITES, endémicas,
+#'   migratorias, exóticas).
+#'
+#' @keywords internal
+tematica_list <- function(region, con) {
 
   # region <- "boyaca"
   #reg_tematica <- region_tematica(region)

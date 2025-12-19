@@ -1,9 +1,5 @@
-#library(sibdata)
-#library(lfltmagic)
-
-library(tidyverse)
-
-devtools::load_all()
+library(sibdata)
+library(tictoc)
 
 
 # Generate navigation files
@@ -13,7 +9,6 @@ devtools::load_all()
 
 
 
-library(tictoc)
 
 here::dr_here()
 save_path <- here::here("static", "data")

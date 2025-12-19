@@ -1,6 +1,18 @@
 
+#' Generate navigation trees
+#'
+#' Genera árboles de navegación para diferentes tipos de perfiles (regiones,
+#' grupos biológicos, temáticas, territorios).
+#'
+#' @param type Tipo de perfil: "region", "grupo_biologico", "grupo_interes",
+#'   "tematica", "territorio".
+#' @param region Slug de la región (requerido para tipo "territorio").
+#' @param con Conexión a la base de datos.
+#'
+#' @return Lista anidada con estructura de árbol para navegación.
+#'
 #' @export
-navigation_trees <- function(type, region = NULL, con = con){
+navigation_trees <- function(type, region = NULL, con = con) {
 
   #type <- "region"
   #type <- "grupo_biologico"

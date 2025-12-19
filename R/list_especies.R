@@ -1,10 +1,25 @@
 
 
+#' List species for a region
+#'
+#' Obtiene lista de especies para una región, opcionalmente filtradas por grupo
+#' o temática.
+#'
+#' @param region Slug de la región.
+#' @param grupo Slug del grupo biológico (opcional).
+#' @param tematica Slug de la temática (opcional).
+#' @param with_labels Logical, retornar con etiquetas en español (default:
+#'   `FALSE`).
+#' @param con Conexión a la base de datos.
+#'
+#' @return Objeto `tbl` o data frame con información de especies.
+#'
 #' @export
 list_species <- function(region,
                          grupo = NULL,
-                         tematica = NULL, with_labels = FALSE,
-                         con = NULL){
+                         tematica = NULL,
+                         with_labels = FALSE,
+                         con = NULL) {
   # region <- "colombia"
   # region <- "tolima"
   # tematica <- "endemicas"

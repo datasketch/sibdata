@@ -1,6 +1,16 @@
 
+#' Get general region information
+#'
+#' Obtiene información general de una región incluyendo estadísticas,
+#' descripción y créditos.
+#'
+#' @param region Slug de la región.
+#' @param con Conexión a la base de datos.
+#'
+#' @return Lista con información general de la región.
+#'
 #' @export
-sib_region_general <- function(region, con){
+sib_region_general <- function(region, con) {
 
   ## TODO validate varsnames
   vars <- c(
@@ -87,8 +97,19 @@ sib_region_general <- function(region, con){
 
 }
 
+#' Calculate region data
+#'
+#' Calcula datos de una región combinando información de la tabla de regiones,
+#' datos marinos y temáticas.
+#'
+#' @param region Slug de la región.
+#' @param vars Vector de nombres de variables a seleccionar (opcional).
+#' @param con Conexión a la base de datos.
+#'
+#' @return Objeto `tbl` con datos de la región.
+#'
 #' @export
-sib_calculate_region <- function(region, vars = NULL, con = NULL){
+sib_calculate_region <- function(region, vars = NULL, con = NULL) {
   region_table <- sibdata_region(con) |> select(-marino)
   marinos <- sib_region_marino(con)
   region_table <- left_join(region_table, marinos,
@@ -109,11 +130,23 @@ sib_calculate_region <- function(region, vars = NULL, con = NULL){
   reg |> distinct()
 }
 
-sib_region_marino <- function(con){
+#' Get marine regions data
+#'
+#' Obtiene información sobre regiones marinas (departamentos, municipios y
+#' Colombia).
+#'
+#' @param con Conexión a la base de datos.
+#'
+#' @return Data frame con columnas `slug` y `marino` (logical).
+#'
+#' @keywords internal
+sib_region_marino <- function(con) {
   deptos <- sibdata_departamento(con) |>
-    select(slug, marino) |> collect()
+    select(slug, marino) |>
+    collect()
   munis <- sibdata_municipio(con) |>
-    select(slug, marino) |> collect()
+    select(slug, marino) |>
+    collect()
   munis$slug[munis$slug == "colombia"] <- "colombia-hui"
   col <- tibble(slug = "colombia", marino = TRUE)
   bind_rows(col, deptos, munis)

@@ -57,43 +57,25 @@ RUN Rscript -e 'install.packages(c( \
   ), repos = "https://cran.rstudio.com/")'
 
 # GitHub packages
-RUN Rscript -e 'remotes::install_github("datasketch/dstools", lib = .libPaths()[1], upgrade = "never")' || \
-    Rscript -e 'cat("Error installing dstools\n"); quit(status = 1)'
+RUN Rscript -e 'remotes::install_github("datasketch/dstools", lib = .libPaths()[1], upgrade = "never")'
 
-RUN Rscript -e 'remotes::install_github("datasketch/shinyinvoer", lib = .libPaths()[1], upgrade = "never")' || \
-    Rscript -e 'cat("Error installing shinyinvoer\n"); quit(status = 1)'
+RUN Rscript -e 'remotes::install_github("datasketch/shinyinvoer", lib = .libPaths()[1], upgrade = "never")'
 
-# Instalar sibdata con manejo de errores mejorado
+# Instalar sibdata con todas sus dependencias
+RUN Rscript -e 'remotes::install_github("datasketch/sibdata", lib = .libPaths()[1], dependencies = TRUE, upgrade = "never")'
+
+# Verificación con mejor manejo de errores
 RUN Rscript -e ' \
-  result <- tryCatch({ \
-    remotes::install_github("datasketch/sibdata", lib = .libPaths()[1], dependencies = TRUE, upgrade = "never"); \
-    TRUE \
-  }, error = function(e) { \
-    cat("ERROR installing sibdata:\n"); \
-    print(e); \
-    cat("\nTrying to load sibdata anyway...\n"); \
-    FALSE \
-  }); \
-  if (!result) { \
-    cat("Installation had errors, checking if package is available...\n"); \
-  } \
   if (!requireNamespace("sibdata", quietly = TRUE)) { \
-    cat("sibdata package is not available after installation\n"); \
+    cat("ERROR: sibdata package not found\n"); \
     cat("Installed packages:\n"); \
-    print(installed.packages()[, "Package"]); \
-    quit(status = 1) \
-  } else { \
-    cat("sibdata package loaded successfully\n") \
-  }'
-
-# Verificación
-RUN Rscript -e ' \
-  if (!requireNamespace("sibdata", quietly = TRUE)) { \
-    stop("sibdata package not found") \
+    print(rownames(installed.packages())); \
+    stop("sibdata installation failed") \
   }; \
+  cat("sibdata package loaded successfully\n"); \
   app_dir <- system.file("org_sibhumboldt_sibdata_app4", package="sibdata"); \
   if (app_dir == "") { \
-    stop("app directory not found") \
+    stop("app directory org_sibhumboldt_sibdata_app4 not found") \
   }; \
   cat("sibdata OK:", app_dir, "\n")'
 

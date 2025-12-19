@@ -1,10 +1,18 @@
 
 
 
-
-
-
-tematica_list_col <- function(region, con){
+#' Get tematica list for Colombia
+#'
+#' Genera lista completa de temáticas con indicadores y listas de especies para
+#' Colombia (versión simplificada).
+#'
+#' @param region Slug de la región (debe ser "colombia").
+#' @param con Conexión a la base de datos.
+#'
+#' @return Lista con datos de temáticas.
+#'
+#' @keywords internal
+tematica_list_col <- function(region, con) {
 
   region <- "colombia"
   # region <- "boyaca"

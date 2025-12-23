@@ -11,7 +11,7 @@
 #'
 #' @return Invisible, lanza error si el valor no es válido.
 #'
-#' @keywords internal
+#' @export
 check_cases_values <- function(param, value, con = NULL, ...) {
   # param <- "tematica"
   # value <- "cites_total"

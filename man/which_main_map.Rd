@@ -15,4 +15,3 @@ Main map name.
 \description{
 Get main map name from map name
 }
-\keyword{internal}

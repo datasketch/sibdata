@@ -19,4 +19,3 @@ duckdb_read_geotable(tblname, con = NULL, geometrycol = "geom")
 \description{
 Read geotable from DuckDB
 }
-\keyword{internal}

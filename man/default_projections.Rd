@@ -12,4 +12,3 @@ List with default projections.
 \description{
 Default cartographic projections
 }
-\keyword{internal}

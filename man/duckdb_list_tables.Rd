@@ -15,4 +15,3 @@ Character vector of table names.
 \description{
 List tables in DuckDB connection
 }
-\keyword{internal}

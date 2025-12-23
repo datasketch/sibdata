@@ -15,4 +15,3 @@ duckdb_disconnect(con)
 \description{
 Disconnect DuckDB connection
 }
-\keyword{internal}

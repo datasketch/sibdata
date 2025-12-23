@@ -15,4 +15,3 @@ Logical indicating if it's a main map.
 \description{
 Check if map is a main map
 }
-\keyword{internal}

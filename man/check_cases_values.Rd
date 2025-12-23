@@ -22,4 +22,3 @@ Invisible, lanza error si el valor no es válido.
 Valida que un valor sea válido para un parámetro dado (tipo, cobertura,
 temática, indicador, grupo).
 }
-\keyword{internal}

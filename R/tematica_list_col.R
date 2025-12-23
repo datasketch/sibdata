@@ -11,7 +11,7 @@
 #'
 #' @return Lista con datos de temáticas.
 #'
-#' @keywords internal
+#' @export
 tematica_list_col <- function(region, con) {
 
   region <- "colombia"

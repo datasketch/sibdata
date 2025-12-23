@@ -42,4 +42,3 @@ Data frame en formato ancho.
 Consulta datos de biodiversidad en formato ancho (una columna por
 indicador).
 }
-\keyword{internal}

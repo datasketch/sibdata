@@ -15,4 +15,3 @@ gt_discon(con)
 \description{
 Disconnect geotable connection
 }
-\keyword{internal}

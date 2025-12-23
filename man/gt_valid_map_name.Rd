@@ -17,4 +17,3 @@ Invisible, throws error if map name is not valid.
 \description{
 Validate map name
 }
-\keyword{internal}

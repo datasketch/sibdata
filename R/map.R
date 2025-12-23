@@ -243,7 +243,7 @@ choropleth_map <- function(data = NULL,
 #'
 #' @return Objeto Leaflet con mapa básico.
 #'
-#' @keywords internal
+#' @export
 basic_map <- function(sf) {
 
 

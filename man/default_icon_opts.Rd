@@ -12,4 +12,3 @@ List with default options for icons.
 \description{
 Default options for map icons
 }
-\keyword{internal}

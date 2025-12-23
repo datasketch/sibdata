@@ -17,4 +17,3 @@ Invisible, loads the extension.
 \description{
 Load DuckDB extension
 }
-\keyword{internal}

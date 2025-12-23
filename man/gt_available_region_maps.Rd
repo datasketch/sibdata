@@ -15,4 +15,3 @@ Character vector of region map names.
 \description{
 Get available region maps
 }
-\keyword{internal}

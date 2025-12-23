@@ -15,4 +15,3 @@ Objeto Leaflet con mapa básico.
 \description{
 Crea un mapa básico sin datos asociados.
 }
-\keyword{internal}

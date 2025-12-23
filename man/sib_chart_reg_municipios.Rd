@@ -17,4 +17,3 @@ Objeto de gráfico Highcharts.
 \description{
 Crea un gráfico de barras para regiones o municipios.
 }
-\keyword{internal}

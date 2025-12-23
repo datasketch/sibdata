@@ -16,4 +16,3 @@ ggplot theme object (\code{theme}).
 \description{
 ggplot theme without visual elements
 }
-\keyword{internal}

@@ -20,4 +20,3 @@ Objeto \code{tbl} con datos de grupo de subregiones.
 Obtiene datos de grupo biológico para todas las subregiones de una región
 padre.
 }
-\keyword{internal}

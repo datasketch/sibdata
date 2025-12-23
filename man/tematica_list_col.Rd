@@ -18,4 +18,3 @@ Lista con datos de temáticas.
 Genera lista completa de temáticas con indicadores y listas de especies para
 Colombia (versión simplificada).
 }
-\keyword{internal}

@@ -15,4 +15,3 @@ Character vector of main map names.
 \description{
 Get available main maps
 }
-\keyword{internal}

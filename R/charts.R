@@ -8,7 +8,7 @@
 #'
 #' @return Objeto de gráfico Highcharts.
 #'
-#' @keywords internal
+#' @export
 sib_chart_reg_municipios <- function(d, var = "especies_region_total") {
 
   x <- d |> dplyr::select(one_of(c("slug_region", var)))

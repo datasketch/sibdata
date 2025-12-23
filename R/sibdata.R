@@ -100,7 +100,7 @@ sibdata <- function(region = NULL,
 #'
 #' @return Data frame en formato ancho.
 #'
-#' @keywords internal
+#' @export
 sibdata_wide <- function(region = NULL,
                          tipo = NULL,
                          cobertura = NULL,
@@ -171,7 +171,7 @@ sibdata_wide <- function(region = NULL,
 #'
 #' @return Data frame en formato largo.
 #'
-#' @keywords internal
+#' @export
 sibdata_tidify <- function(d,
                            tematica = NULL,
                            cobertura = NULL,
@@ -240,7 +240,7 @@ sibdata_tidify <- function(d,
 #'
 #' @return Vector con nombres de indicadores.
 #'
-#' @keywords internal
+#' @export
 select_indicator <- function(tipo = NULL,
                              cobertura = NULL,
                              tematica = NULL,

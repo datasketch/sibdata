@@ -17,4 +17,3 @@ Table with region information.
 \description{
 Get regions for a map
 }
-\keyword{internal}

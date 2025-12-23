@@ -18,4 +18,3 @@ DuckDB connection object.
 \description{
 Create DuckDB connection
 }
-\keyword{internal}

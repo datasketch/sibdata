@@ -21,4 +21,3 @@ Vector con nombres de indicadores.
 \description{
 Selecciona indicadores disponibles según los filtros proporcionados.
 }
-\keyword{internal}

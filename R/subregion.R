@@ -7,7 +7,7 @@
 #'
 #' @return Objeto `tbl` con datos de temática de subregiones.
 #'
-#' @keywords internal
+#' @export
 subregion_tematica <- function(region, con) {
 
   regs <- sibdata_region(con) |>
@@ -41,7 +41,7 @@ subregion_tematica <- function(region, con) {
 #'
 #' @return Objeto `tbl` con datos de grupo de subregiones.
 #'
-#' @keywords internal
+#' @export
 subregion_grupo <- function(region, grupo, con) {
 
   grp <- grupo

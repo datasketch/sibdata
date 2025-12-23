@@ -34,7 +34,7 @@ save_info_page <- function(path, con) {
 #' @return Lista con datos de publicadores, preguntas frecuentes, glosario y
 #'   tooltips.
 #'
-#' @keywords internal
+#' @export
 info_pages <- function(con) {
   list(
     publicador = info_publicador(con),

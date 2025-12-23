@@ -18,4 +18,3 @@ gt_sf(map_name, con = NULL)
 \description{
 Get Simple Features (sf) object from a map
 }
-\keyword{internal}

@@ -17,4 +17,3 @@ Objeto \code{tbl} con datos de temática de subregiones.
 \description{
 Obtiene datos de temática para todas las subregiones de una región padre.
 }
-\keyword{internal}

@@ -16,4 +16,3 @@ tooltips.
 \description{
 Genera una lista con datos de páginas informativas.
 }
-\keyword{internal}

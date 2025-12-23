@@ -17,7 +17,7 @@ NULL
 #'
 #' @return Invisible, loads the extension.
 #'
-#' @keywords internal
+#'@export
 duckdb_load_ext <- function(ext_name, con) {
   # Try to load the extension, install if needed
   tryCatch(
@@ -41,7 +41,7 @@ duckdb_load_ext <- function(ext_name, con) {
 #'
 #' @return DuckDB connection object.
 #'
-#' @keywords internal
+#' @export
 duckdb_con <- function(dbdir, read_only = TRUE) {
   drv <- duckdb::duckdb(dbdir)
   DBI::dbConnect(drv, read_only = read_only)
@@ -53,7 +53,7 @@ duckdb_con <- function(dbdir, read_only = TRUE) {
 #'
 #' @return `NULL` (invisible).
 #'
-#' @keywords internal
+#' @export
 duckdb_disconnect <- function(con) {
   DBI::dbDisconnect(con, shutdown = TRUE)
   invisible(NULL)
@@ -67,7 +67,7 @@ duckdb_disconnect <- function(con) {
 #'
 #' @return Character vector of table names.
 #'
-#' @keywords internal
+#' @export
 duckdb_list_tables <- function(con) {
   DBI::dbListTables(con)
 }
@@ -97,7 +97,7 @@ duckdb_read_table <- function(tblname, con = NULL, collect = FALSE) {
 #'
 #' @return `sf` object.
 #'
-#' @keywords internal
+#' @export
 duckdb_read_geotable <- function(tblname, con = NULL, geometrycol = "geom") {
   duckdb_load_ext("spatial", con)
   # ST_AsWKB is a DuckDB spatial function, not an R function
@@ -116,7 +116,7 @@ duckdb_read_geotable <- function(tblname, con = NULL, geometrycol = "geom") {
 #'
 #' @return Main map name.
 #'
-#' @keywords internal
+#' @export
 which_main_map <- function(map_name) {
   gsub("_(.*?)_.*", "_\\1", map_name)
 }
@@ -127,7 +127,7 @@ which_main_map <- function(map_name) {
 #'
 #' @return Logical indicating if it's a main map.
 #'
-#' @keywords internal
+#' @export
 is_main_map <- function(map_name) {
   map_name == which_main_map(map_name)
 }
@@ -138,7 +138,7 @@ is_main_map <- function(map_name) {
 #'
 #' @return Character vector of main map names.
 #'
-#' @keywords internal
+#' @export
 gt_available_main_maps <- function(con = NULL) {
   con <- gt_con(con)
   tables <- duckdb_list_tables(con)
@@ -152,7 +152,7 @@ gt_available_main_maps <- function(con = NULL) {
 #'
 #' @return Character vector of region map names.
 #'
-#' @keywords internal
+#' @export
 gt_available_region_maps <- function(con = NULL) {
   con <- gt_con(con)
   region_maps <- duckdb_read_table("gt_regions_meta", collect = TRUE, con = con)
@@ -165,7 +165,7 @@ gt_available_region_maps <- function(con = NULL) {
 #'
 #' @return Character vector of all available map names.
 #'
-#' @keywords internal
+#' @export
 gt_available_maps <- function(con = NULL) {
   con <- gt_con(con)
   main <- gt_available_main_maps(con = con)
@@ -180,7 +180,7 @@ gt_available_maps <- function(con = NULL) {
 #'
 #' @return Invisible, throws error if map name is not valid.
 #'
-#' @keywords internal
+#' @export
 gt_valid_map_name <- function(map_name, con = NULL) {
   con <- gt_con(con)
   if (!map_name %in% gt_available_maps(con = con)) {
@@ -195,7 +195,7 @@ gt_valid_map_name <- function(map_name, con = NULL) {
 #'
 #' @return Table with region information.
 #'
-#' @keywords internal
+#' @export
 gt_regions <- function(map_name = NULL, con) {
   regs <- duckdb_read_table("gt_regions", con = con)
   if (!is.null(map_name)) {
@@ -235,7 +235,7 @@ gt_con <- function(con = NULL, read_only = TRUE) {
 #'
 #' @return `sf` object with the geographic data of the requested map.
 #'
-#' @keywords internal
+#' @export
 gt_sf <- function(map_name, con = NULL) {
   con <- gt_con(con)
   gt_valid_map_name(map_name, con)
@@ -257,7 +257,7 @@ gt_sf <- function(map_name, con = NULL) {
 #'
 #' @return `sf` object with renamed columns.
 #'
-#' @keywords internal
+#' @export
 rename_dotdot <- function(x) {
   no_dotdot_idx <- !grepl("^\\.\\.gt|geom", names(x))
   names(x)[no_dotdot_idx] <- paste0("..gt_", names(x)[no_dotdot_idx])
@@ -270,7 +270,7 @@ rename_dotdot <- function(x) {
 #'
 #' @return `NULL` (invisible).
 #'
-#' @keywords internal
+#' @export
 gt_discon <- function(con) {
   duckdb_disconnect(con)
 }
@@ -279,7 +279,7 @@ gt_discon <- function(con) {
 #'
 #' @return List with default options for icons.
 #'
-#' @keywords internal
+#' @export
 default_icon_opts <- function() {
   list(
     main_border_color = "#888888",
@@ -303,7 +303,7 @@ default_icon_opts <- function() {
 #'
 #' @return List with default projections.
 #'
-#' @keywords internal
+#' @export
 default_projections <- function() {
   list(
     wgs84 = list(
@@ -337,7 +337,7 @@ default_projections <- function() {
 #'
 #' @return ggplot theme object (`theme`).
 #'
-#' @keywords internal
+#' @export
 gg_theme_nothing <- function(background_color = "transparent") {
   if (background_color == "transparent") {
     bg <- ggplot2::element_blank()
@@ -693,7 +693,7 @@ gt_codes <- function(map_name = NULL, con){
   codes
 }
 
-
+#' @export
 gt_altnames <- function(map_name = NULL, str_clean = FALSE, con){
   altnames <- duckdb_read_table("gt_altnames", con = con)
   nm <- map_name
@@ -718,7 +718,7 @@ gt_altnames <- function(map_name = NULL, str_clean = FALSE, con){
 }
 
 
-
+#' @export
 gt_regions <- function(map_name = NULL, con){
   regs <- duckdb_read_table("gt_regions", con = con)
   if(!is.null(map_name)){
@@ -728,6 +728,7 @@ gt_regions <- function(map_name = NULL, con){
   regs
 }
 
+#' @export
 gt_regions_meta <- function(map_name = NULL, parent_map_name = NULL, con = NULL){
   con <- gt_con(con)
   regs_meta <- duckdb_read_table("gt_regions_meta", con = con)
@@ -742,7 +743,7 @@ gt_regions_meta <- function(map_name = NULL, parent_map_name = NULL, con = NULL)
   regs_meta
 }
 
-
+#' @export
 gt_centroids <- function(map_name = NULL, con = NULL){
   con <- gt_con(con)
   cents <- duckdb_read_table("gt_centroids", con = con)

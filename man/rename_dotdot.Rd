@@ -15,4 +15,3 @@ rename_dotdot(x)
 \description{
 Rename columns with double dots
 }
-\keyword{internal}

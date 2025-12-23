@@ -15,4 +15,3 @@ Character vector of all available map names.
 \description{
 Get all available maps
 }
-\keyword{internal}

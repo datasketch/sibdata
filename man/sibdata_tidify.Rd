@@ -32,4 +32,3 @@ Data frame en formato largo.
 \description{
 Convierte datos en formato ancho a formato largo (tidy).
 }
-\keyword{internal}

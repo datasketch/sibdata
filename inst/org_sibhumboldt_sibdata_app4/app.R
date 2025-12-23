@@ -164,9 +164,9 @@ server <- function(input, output, session) {
   }
 
   # Create session-specific app options
-  # con <- get_app_connection("db/sibdata.sqlite", debug = DEBUG_MODE)
-  db <- "sibdata.duckdb"
-  con <- get_app_connection(db, debug = DEBUG_MODE)
+   con <- get_app_connection(NULL, debug = DEBUG_MODE)
+  #db <- "sibdata.duckdb"
+  #con <- get_app_connection(db, debug = DEBUG_MODE)
   app_options <- get_app_options(con, debug = DEBUG_MODE)
   app_options$con <- con
   conmap <- gt_con()

@@ -103,7 +103,10 @@ map(av_regions, safely(function(region){
 
 
   # Territorio
-  dir.create(glue::glue("static/charts/{region}"))
+  charts_dir <- file.path(project_root, "static/charts", region)
+  if (!dir.exists(charts_dir)) {
+    dir.create(charts_dir, recursive = TRUE)
+  }
   subreg_tematica <- subregion_tematica(region, con)
   d <- subreg_tematica |>
     collect()
@@ -259,25 +262,35 @@ map(av_regions, safely(function(region){
     municipios_lista = municipios_lista,
     departamentos_lista = departamentos_lista
   )
-  message("Creating dir:")
-  message(glue::glue("static/data/{region}"))
-  dir.create(glue::glue("static/data/{region}"))
-  if(!dir.exists(file.path(save_path,region))){
-    dir.create(file.path(save_path,region))
+  region_dir <- file.path(save_path, region)
+  if (!dir.exists(region_dir)) {
+    dir.create(region_dir, recursive = TRUE)
+    message("📂 Directorio creado: ", region_dir)
   }
-  jsonlite::write_json(l, paste0(save_path,"/",region,"/",region, ".json"),
-                       auto_unbox = TRUE, pretty =TRUE)
+  
+  jsonlite::write_json(
+    l,
+    file.path(region_dir, paste0(region, ".json")),
+    auto_unbox = TRUE,
+    pretty = TRUE
+  )
 
   if(!region %in% reserva_resguardo){
-    sf::write_sf(tj, paste0(save_path,"/",region,"/",region, ".geojson"),
-                 delete_dsn = TRUE)
+    sf::write_sf(
+      tj,
+      file.path(region_dir, paste0(region, ".geojson")),
+      delete_dsn = TRUE
+    )
     opts <- list(main_border_width = 0.1,
                  main_border_color = "#007139",
                  fill_color = "#b3cfc0",
                  minor_border_color = "#007139",
                  minor_border_width = 0.1)
-    gt_icon(map_name, opts = opts,
-            save_path = paste0(save_path,"/",region,"/",region, ".svg"))
+    gt_icon(
+      map_name,
+      opts = opts,
+      save_path = file.path(region_dir, paste0(region, ".svg"))
+    )
   }
 
 }))
@@ -290,7 +303,14 @@ map(av_regions, safely(function(region){
 # })
 
 
-toc() # 00:34:12
+toc()
+
+# ============================================================================
+# LIMPIAR
+# ============================================================================
+DBI::dbDisconnect(con)
+message("🔌 Conexión cerrada")
+message("✅ Proceso completado. Archivos guardados en: ", save_path)
 
 
 

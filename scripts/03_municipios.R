@@ -1,18 +1,133 @@
 library(sibdata)
-#library(lfltmagic)
-#devtools::load_all()
+library(tictoc)
 
+# ============================================================================
+# FUNCIÓN: Encontrar la raíz del proyecto buscando DESCRIPTION
+# ============================================================================
+find_project_root <- function(start_path = NULL) {
+  if (is.null(start_path)) {
+    script_path <- NULL
+    
+    if (requireNamespace("rstudioapi", quietly = TRUE)) {
+      tryCatch({
+        script_path <- rstudioapi::getActiveDocumentContext()$path
+        if (script_path != "") {
+          start_path <- dirname(script_path)
+        }
+      }, error = function(e) NULL)
+    }
+    
+    if (is.null(start_path)) {
+      tryCatch({
+        script_path <- normalizePath(sys.frame(1)$ofile)
+        start_path <- dirname(script_path)
+      }, error = function(e) NULL)
+    }
+    
+    if (is.null(start_path)) {
+      start_path <- getwd()
+    }
+  }
+  
+  start_path <- normalizePath(start_path, mustWork = FALSE)
+  current_path <- start_path
+  max_depth <- 10
+  depth <- 0
+  
+  while (depth < max_depth) {
+    desc_file <- file.path(current_path, "DESCRIPTION")
+    
+    if (file.exists(desc_file)) {
+      first_line <- readLines(desc_file, n = 1, warn = FALSE)
+      if (!is.null(first_line) && grepl("^Package:", first_line)) {
+        return(normalizePath(current_path))
+      }
+    }
+    
+    parent_path <- dirname(current_path)
+    if (parent_path == current_path) {
+      break
+    }
+    
+    current_path <- parent_path
+    depth <- depth + 1
+  }
+  
+  if (requireNamespace("here", quietly = TRUE)) {
+    tryCatch({
+      here::dr_here()
+      return(here::here())
+    }, error = function(e) NULL)
+  }
+  
+  warning(
+    "No se encontró el archivo DESCRIPTION. ",
+    "Usando directorio actual: ", getwd()
+  )
+  return(getwd())
+}
 
-# here::dr_here()
-# #here::set_here("./..")
-# setwd("../")
-# here::dr_here()
+# ============================================================================
+# ENCONTRAR RUTA BASE DEL PROYECTO
+# ============================================================================
+project_root <- find_project_root()
+message("📁 Raíz del proyecto: ", project_root)
 
+# ============================================================================
+# PREPARAR DIRECTORIO DE SALIDA
+# ============================================================================
+save_path <- file.path(project_root, "static", "data")
+if (!dir.exists(save_path)) {
+  dir.create(save_path, recursive = TRUE)
+  message("📂 Directorio creado: ", save_path)
+}
+message("📂 Ruta de salida: ", save_path)
 
-# con <- DBI::dbConnect(RSQLite::SQLite(), sys_file_sibdata("db/sibdata.sqlite"),
-#                       read_only = TRUE)
-con <- DBI::dbConnect(duckdb::duckdb(), sys_file_sibdata("db/sibdata.duckdb"),
-               read_only = TRUE)
+# ============================================================================
+# BUSCAR BASE DE DATOS
+# ============================================================================
+db_paths <- c(
+  file.path(project_root, "inst/db/sibdata.duckdb"),
+  file.path(project_root, "inst/db/sibdata.sqlite"),
+  file.path(project_root, "db/sibdata.duckdb"),
+  file.path(project_root, "db/sibdata.sqlite"),
+  sys_file_sibdata("db/sibdata.duckdb"),
+  sys_file_sibdata("db/sibdata.sqlite")
+)
+
+db_path <- NULL
+for (path in db_paths) {
+  if (file.exists(path)) {
+    db_path <- normalizePath(path)
+    break
+  }
+}
+
+if (is.null(db_path)) {
+  stop(
+    "❌ No se encontró la base de datos.\n",
+    "Buscó en las siguientes ubicaciones:\n",
+    paste("  -", db_paths, collapse = "\n"),
+    "\n\nPor favor, asegúrate de que la base de datos existe ",
+    "en una de estas ubicaciones."
+  )
+}
+
+message("🗄️  Base de datos encontrada: ", db_path)
+
+# ============================================================================
+# CONECTAR A BASE DE DATOS
+# ============================================================================
+is_duckdb <- grepl("\\.duckdb$", db_path, ignore.case = TRUE)
+
+if (is_duckdb) {
+  con <- DBI::dbConnect(duckdb::duckdb(), db_path, read_only = TRUE)
+} else {
+  con <- DBI::dbConnect(RSQLite::SQLite(), db_path, read_only = TRUE)
+}
+
+tic()
+message("🚀 Generando datos para municipios...")
 
 #av_regions <- sib_available_regions(subtipo = c("Municipio"))
 av_regions2 <- sib_available_regions(subtipo = c("Municipio"),
@@ -190,15 +305,30 @@ map(av_regions, function(region){
     publicadores = publicadores,
     municipios_lista = list()
   )
-  dir.create(file.path("static/data",parent))
-  jsonlite::write_json(l, paste0("static/data/",parent,"/",region, ".json"),
-                       auto_unbox = TRUE, pretty =TRUE)
+  parent_dir <- file.path(save_path, parent)
+  if (!dir.exists(parent_dir)) {
+    dir.create(parent_dir, recursive = TRUE)
+  }
+  
+  jsonlite::write_json(
+    l,
+    file.path(parent_dir, paste0(region, ".json")),
+    auto_unbox = TRUE,
+    pretty = TRUE
+  )
 
 
 })
 
 
-toc() # 06:00:00
+toc()
+
+# ============================================================================
+# LIMPIAR
+# ============================================================================
+DBI::dbDisconnect(con)
+message("🔌 Conexión cerrada")
+message("✅ Proceso completado. Archivos guardados en: ", save_path)
 
 
 

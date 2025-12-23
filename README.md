@@ -80,6 +80,23 @@ El paquete se instala con todas sus dependencias automáticamente:
 
 **Nota:** El paquete incluye los datos (\~200 MB), por lo que la instalación puede tomar varios minutos.
 
+### ⚠️ Requisito: Bases de Datos
+
+**Importante:** Para que el paquete funcione correctamente, debes agregar manualmente los archivos de base de datos en el directorio `inst/db/`:
+
+-   `sibdata.duckdb` (recomendado, formato DuckDB)
+-   `sibdata.sqlite` (formato SQLite legacy)
+
+Estos archivos **no están incluidos** en el repositorio de GitHub debido a su tamaño (\~200 MB). Debes obtenerlos por separado y colocarlos en:
+
+```
+inst/db/
+├── sibdata.duckdb
+└── sibdata.sqlite
+```
+
+Sin estos archivos, las funciones del paquete que requieren conexión a la base de datos no funcionarán.
+
 ## 🚀 Inicio Rápido
 
 ### Cargar el paquete
@@ -235,8 +252,8 @@ sibdata/
 │
 ├── inst/
 │   ├── db/                    # Bases de datos
-│   │   ├── sibdata.duckdb     # DuckDB (recomendado)
-│   │   └── sibdata.sqlite     # SQLite (legacy)
+│   │   ├── sibdata.duckdb     # DuckDB (recomendado) ⚠️ Debe agregarse manualmente
+│   │   └── sibdata.sqlite     # SQLite (legacy) ⚠️ Debe agregarse manualmente
 │   │
 │   ├── org_sibhumboldt_sibdata_app4/  # Explorador Shiny v4
 │   │   ├── app4.R             # Aplicación principal

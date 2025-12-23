@@ -7,6 +7,9 @@ setwd("../")
 here::dr_here()
 tic()
 
+dir_exist <- dir.exists("static/data")
+if (dir_exist) return() else dir.create("static/data", recursive = TRUE)
+
 con <- DBI::dbConnect(RSQLite::SQLite(), sys_file_sibdata("db/sibdata.sqlite"),
                       read_only = TRUE)
 

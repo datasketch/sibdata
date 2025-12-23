@@ -123,26 +123,26 @@ make_region_slides <- function(region, con, save_path = NULL) {
 
     regionLabel <- sib_merge_region_label(data.frame(slug_region = region), con = con)$label
     parentLabel <- sib_merge_region_label(data.frame(slug_region = parent), con = con)$label
-    regionTitle <- makeup::makeup_chr(region, "Title")
+    regionTitle <- makeup_chr(region, "Title")
 
     esp_colombia <- reg_vs_parent |>
       filter(slug_region == "colombia") |> pull(especies_region_total)
-    esp_colombia_str <- makeup::makeup(esp_colombia,"45.343,00")
+    esp_colombia_str <- makeup(esp_colombia,"45.343,00")
 
     esp_parent <- reg_vs_parent |>
       filter(slug_region == parent) |> pull(especies_region_total)
-    esp_parent_str <- makeup::makeup(esp_parent,"45.343,00")
+    esp_parent_str <- makeup(esp_parent,"45.343,00")
 
     esp_depto <- reg_vs_parent |>
       filter(slug_region != "colombia") |>
       filter(slug_region != parent) |>
       pull(especies_region_total)
-    esp_depto_str <- makeup::makeup(esp_depto,"45.343,00")
+    esp_depto_str <- makeup(esp_depto,"45.343,00")
     esp_depto_endemicas <- reg_vs_parent |>
       filter(slug_region != "colombia") |>
       filter(slug_region != parent) |>
       pull(especies_endemicas)
-    esp_depto_endemicas_str <- makeup::makeup(esp_depto_endemicas,"45.343,00")
+    esp_depto_endemicas_str <- makeup(esp_depto_endemicas,"45.343,00")
 
     description_tpl <- "De las {esp_colombia_str} especies observadas en Colombia,
     departamento de {regionLabel} aporta {esp_depto_str}, equivalentes a {proportion}%.
@@ -193,27 +193,27 @@ make_region_slides <- function(region, con, save_path = NULL) {
   esp_animal_mas_obs <- esp_obs |>
     filter(kingdom == "Animalia") |>
     slice_max(registros, n = 20) |>
-    mutate(registros_str = makeup::makeup(as.numeric(registros),  "45.343,00"))
+    mutate(registros_str = makeup(as.numeric(registros),  "45.343,00"))
 
   esp_animal_menos_obs <- esp_obs |>
     filter(kingdom == "Animalia") |>
     slice_min(registros, n = 20) |>
-    mutate(registros_str = makeup::makeup(as.numeric(registros),  "45.343,00"))
+    mutate(registros_str = makeup(as.numeric(registros),  "45.343,00"))
 
   esp_planta_mas_obs <- esp_obs |>
     filter(kingdom == "Plantae") |>
     slice_max(registros, n = 20) |>
-    mutate(registros_str = makeup::makeup(as.numeric(registros),  "45.343,00"))
+    mutate(registros_str = makeup(as.numeric(registros),  "45.343,00"))
 
   esp_planta_menos_obs <- esp_obs |>
     filter(kingdom == "Plantae") |>
     slice_min(registros, n = 20) |>
-    mutate(registros_str = makeup::makeup(as.numeric(registros),  "45.343,00"))
+    mutate(registros_str = makeup(as.numeric(registros),  "45.343,00"))
 
   esp_mamiferos_mas_obs <- esp_obs |>
     filter(class == "Mammalia") |>
     slice_min(registros, n = 20) |>
-    mutate(registros_str = makeup::makeup(as.numeric(registros),  "45.343,00"))
+    mutate(registros_str = makeup(as.numeric(registros),  "45.343,00"))
 
 
   x <- glue::glue_data(esp_animal_mas_obs |> slice(1:5), "_{species}_ ({registros_str})")

@@ -35,7 +35,7 @@ sib_region_general <- function(region, con) {
 
   reg_data$subtipo <- tolower(reg_data$subtipo)
   reg_data$marino <- as.logical(reg_data$marino)
-  reg_data$fecha_corte <- makeup::makeup_dat(as.Date(reg_data$fecha_corte),"diciembre 12 de 2030", locale = "es")
+  reg_data$fecha_corte <- makeup_dat(as.Date(reg_data$fecha_corte),"diciembre 12 de 2030", locale = "es")
   if(is.na(reg_data$marino))
     reg_data$marino <- FALSE
 
@@ -46,8 +46,8 @@ sib_region_general <- function(region, con) {
     marino_text <- "; de las cuales {especies_continentales} habitan al interior del
     continente y {especies_marinas} en el mar."
   }
-  especies_marinas <-  makeup::makeup(reg_data$especies_marinas,"45.343,00")
-  especies_continentales <-  makeup::makeup(reg_data$especies_continentales,"45.343,00")
+  especies_marinas <-  makeup(reg_data$especies_marinas,"45.343,00")
+  especies_continentales <-  makeup(reg_data$especies_continentales,"45.343,00")
   reg_data$marino_text <- glue::glue(marino_text)
 
   intro_tpl <- "A través del SiB Colombia se han publicado {registros_region_total_str} observaciones
@@ -65,8 +65,8 @@ sib_region_general <- function(region, con) {
   {especies_region_total_str} especies{marino_text}"
   }
 
-  reg_data$especies_region_total_str <- makeup::makeup(reg_data$especies_region_total,"45.343,00")
-  reg_data$registros_region_total_str <- makeup::makeup(reg_data$registros_region_total,"45.343,00")
+  reg_data$especies_region_total_str <- makeup(reg_data$especies_region_total,"45.343,00")
+  reg_data$registros_region_total_str <- makeup(reg_data$registros_region_total,"45.343,00")
 
   reg_list <- purrr::transpose(reg_data)[[1]]
   reg_list$main_text <- glue::glue_data(reg_data, intro_tpl)

@@ -33,9 +33,8 @@ Depends:
     R (>= 4.1),
     dstools,
     shinyinvoer,
-    dplyr,
-    tidyr,
-    purrr
+    tidyverse,
+    here
 Imports:
     DBI,
     RSQLite,
@@ -44,7 +43,6 @@ Imports:
     jsonlite,
     shiny,
     DT,
-    purrr,
     leaflet,
     leaflet.extras,
     highcharter,
@@ -55,7 +53,6 @@ Suggests:
     gt,
     gtExtras,
     openxlsx,
-    shinyinvoer,
     shinyjs,
     testthat (>= 3.0.0),
     knitr,
@@ -74,8 +71,7 @@ Suggests:
     parallel,
     shinypanels,
     collapsibleTree,
-    shinydisconnect,
-    dstools
+    shinydisconnect
 Config/testthat/edition: 3
 VignetteBuilder: knitr
 LazyData: true

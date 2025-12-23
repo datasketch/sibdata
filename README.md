@@ -74,13 +74,16 @@ devtools::install_github("datasketch/sibdata", dependencies = TRUE)
 El paquete se instala con todas sus dependencias automáticamente:
 
 -   `DBI`, `RSQLite`, `duckdb` - Gestión de bases de datos
--   `dplyr`, `tidyr` - Manipulación de datos
--   `jsonlite` - Generación de JSON
--   `leaflet` - Mapas interactivos
--   `highcharter`, `hgmagic` - Gráficos interactivos
--   `shiny`, `DT` - Aplicación web interactiva
 
-**Nota:** El paquete incluye los datos (\~200 MB), por lo que la instalación puede tomar varios minutos.
+-   `dplyr`, `tidyr` - Manipulación de datos
+
+-   `jsonlite` - Generación de JSON
+
+-   `leaflet` - Mapas interactivos
+
+-   `highcharter` - Gráficos interactivos
+
+-   `shiny`, `DT` - Aplicación web interactiva
 
 ### ⚠️ Requisito: Bases de Datos
 
@@ -421,3 +424,4 @@ Datos de biodiversidad proporcionados por: - Sistema de Información sobre Biodi
 ------------------------------------------------------------------------
 
 **Hecho con ❤️ en Colombia** 🇨🇴
+

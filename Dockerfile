@@ -39,13 +39,11 @@ RUN Rscript -e 'install.packages(c( \
     "DBI", \
     "RSQLite", \
     "duckdb", \
-    "dplyr", \
-    "tidyr", \
+    "tidyverse", \
     "data.tree", \
     "jsonlite", \
     "shiny", \
     "DT", \
-    "purrr", \
     "leaflet", \
     "leaflet.extras", \
     "highcharter", \

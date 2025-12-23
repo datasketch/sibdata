@@ -164,9 +164,9 @@ server <- function(input, output, session) {
   }
 
   # Create session-specific app options
-   con <- get_app_connection(NULL, debug = DEBUG_MODE)
-  #db <- "sibdata.duckdb"
-  #con <- get_app_connection(db, debug = DEBUG_MODE)
+
+  con <- get_app_connection(NULL, debug = DEBUG_MODE)
+
   app_options <- get_app_options(con, debug = DEBUG_MODE)
   app_options$con <- con
   conmap <- gt_con()
@@ -226,14 +226,14 @@ server <- function(input, output, session) {
 
     # Use switch for better performance
     switch(chart_type,
-      "map" = leaflet::leafletOutput("map_viz", height = 450),
-      "cards" = uiOutput("cards_viz"),
-      "table" = DT::dataTableOutput("table_viz"),
-      "pie" = highcharter::highchartOutput("hgch_viz", height = 450),
-      "donut" = highcharter::highchartOutput("hgch_viz", height = 450),
-      "bar" = highcharter::highchartOutput("hgch_viz", height = 450),
-      "treemap" = highcharter::highchartOutput("hgch_viz", height = 450),
-      div(h3("Tipo de gráfico no soportado"))
+           "map" = leaflet::leafletOutput("map_viz", height = 450),
+           "cards" = uiOutput("cards_viz"),
+           "table" = DT::dataTableOutput("table_viz"),
+           "pie" = highcharter::highchartOutput("hgch_viz", height = 450),
+           "donut" = highcharter::highchartOutput("hgch_viz", height = 450),
+           "bar" = highcharter::highchartOutput("hgch_viz", height = 450),
+           "treemap" = highcharter::highchartOutput("hgch_viz", height = 450),
+           div(h3("Tipo de gráfico no soportado"))
     )
   }) |>
     shiny::bindEvent(r$chart_type)  # Only update when chart_type changes
@@ -676,14 +676,14 @@ server <- function(input, output, session) {
     req(chart_type)
 
     switch(chart_type,
-      "map" = actionButton("show_map_data", "Ver datos del mapa",
-                          class = "btn-sm btn-outline-info"),
-      "table" = actionButton("show_table_data", "Ver datos de la tabla",
-                            class = "btn-sm btn-outline-info"),
-      "cards" = actionButton("show_cards_data", "Ver datos de las tarjetas",
-                           class = "btn-sm btn-outline-info"),
-      actionButton("show_chart_data", "Ver datos del gráfico",
-                  class = "btn-sm btn-outline-info")
+           "map" = actionButton("show_map_data", "Ver datos del mapa",
+                                class = "btn-sm btn-outline-info"),
+           "table" = actionButton("show_table_data", "Ver datos de la tabla",
+                                  class = "btn-sm btn-outline-info"),
+           "cards" = actionButton("show_cards_data", "Ver datos de las tarjetas",
+                                  class = "btn-sm btn-outline-info"),
+           actionButton("show_chart_data", "Ver datos del gráfico",
+                        class = "btn-sm btn-outline-info")
     )
   }) |>
     shiny::bindEvent(r$chart_type)  # Only update when chart_type changes

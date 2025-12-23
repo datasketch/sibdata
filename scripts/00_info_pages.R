@@ -1,11 +1,11 @@
 library(sibdata)
 library(tictoc)
 
-# here::dr_here()
-# #here::set_here("./..")
-# setwd("../")
-# here::dr_here()
-# tic()
+here::dr_here()
+#here::set_here("./..")
+setwd("../")
+here::dr_here()
+tic()
 
 con <- DBI::dbConnect(RSQLite::SQLite(), sys_file_sibdata("db/sibdata.sqlite"),
                       read_only = TRUE)

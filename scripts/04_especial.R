@@ -18,7 +18,7 @@ library(vctrs)
 find_project_root <- function(start_path = NULL) {
   if (is.null(start_path)) {
     script_path <- NULL
-    
+
     if (requireNamespace("rstudioapi", quietly = TRUE)) {
       tryCatch({
         script_path <- rstudioapi::getActiveDocumentContext()$path
@@ -27,50 +27,50 @@ find_project_root <- function(start_path = NULL) {
         }
       }, error = function(e) NULL)
     }
-    
+
     if (is.null(start_path)) {
       tryCatch({
         script_path <- normalizePath(sys.frame(1)$ofile)
         start_path <- dirname(script_path)
       }, error = function(e) NULL)
     }
-    
+
     if (is.null(start_path)) {
       start_path <- getwd()
     }
   }
-  
+
   start_path <- normalizePath(start_path, mustWork = FALSE)
   current_path <- start_path
   max_depth <- 10
   depth <- 0
-  
+
   while (depth < max_depth) {
     desc_file <- file.path(current_path, "DESCRIPTION")
-    
+
     if (file.exists(desc_file)) {
       first_line <- readLines(desc_file, n = 1, warn = FALSE)
       if (!is.null(first_line) && grepl("^Package:", first_line)) {
         return(normalizePath(current_path))
       }
     }
-    
+
     parent_path <- dirname(current_path)
     if (parent_path == current_path) {
       break
     }
-    
+
     current_path <- parent_path
     depth <- depth + 1
   }
-  
+
   if (requireNamespace("here", quietly = TRUE)) {
     tryCatch({
       here::dr_here()
       return(here::here())
     }, error = function(e) NULL)
   }
-  
+
   warning(
     "No se encontró el archivo DESCRIPTION. ",
     "Usando directorio actual: ", getwd()
@@ -356,7 +356,7 @@ map(av_regions, safely(function(region){
     dir.create(region_dir, recursive = TRUE)
     message("📂 Directorio creado: ", region_dir)
   }
-  
+
   jsonlite::write_json(
     l,
     file.path(region_dir, paste0(region, ".json")),
@@ -420,6 +420,5 @@ toc()
 DBI::dbDisconnect(con)
 message("🔌 Conexión cerrada")
 message("✅ Proceso completado. Archivos guardados en: ", save_path)
-
 
 

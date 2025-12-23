@@ -267,7 +267,7 @@ map(av_regions, safely(function(region){
     dir.create(region_dir, recursive = TRUE)
     message("📂 Directorio creado: ", region_dir)
   }
-  
+
   jsonlite::write_json(
     l,
     file.path(region_dir, paste0(region, ".json")),
@@ -311,6 +311,5 @@ toc()
 DBI::dbDisconnect(con)
 message("🔌 Conexión cerrada")
 message("✅ Proceso completado. Archivos guardados en: ", save_path)
-
 
 

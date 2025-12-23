@@ -325,6 +325,90 @@ vignette("explorador-shiny-app", package = "sibdata")
 ?create_bar_chart
 ```
 
+## 🔧 Desarrollo y Trabajo Local
+
+### Clonar el Repositorio
+
+Para trabajar con el código fuente del paquete:
+
+``` bash
+# Clonar el repositorio
+git clone https://github.com/datasketch/sibdata.git
+
+# Navegar al directorio
+cd sibdata
+```
+
+O desde R:
+
+``` r
+# Usar usethis para clonar
+usethis::create_from_github("datasketch/sibdata")
+```
+
+### Configurar el Entorno de Desarrollo
+
+1.  **Cargar el paquete en modo desarrollo:**
+
+``` r
+# Cargar el paquete desde el directorio local
+devtools::load_all()
+
+# O instalar en modo desarrollo
+devtools::install()
+```
+
+2.  **Agregar las bases de datos:**
+
+Los scripts requieren que los archivos de base de datos estén en `inst/db/`. Si aún no los tienes:
+
+``` r
+# Crear el directorio si no existe
+dir.create("inst/db", recursive = TRUE)
+
+# Luego, copia manualmente los archivos:
+# - sibdata.duckdb
+# - sibdata.sqlite
+# 
+# Asegúrate de que estén en:
+# inst/db/sibdata.duckdb
+# inst/db/sibdata.sqlite
+```
+
+**Estructura esperada:**
+
+```         
+sibdata/
+├── inst/
+│   └── db/
+│       ├── sibdata.duckdb    # Base de datos principal (DuckDB)
+│       └── sibdata.sqlite    # Base de datos alternativa (SQLite)
+├── scripts/
+│   ├── 00_info_pages.R
+│   ├── 00_world.R
+│   ├── 01_colombia.R
+│   ├── 02_departamentos_pais.R
+│   ├── 03_municipios.R
+│   └── 04_especial.R
+└── ...
+```
+
+### Ejecutar los Scripts de Generación de Datos
+
+Una vez que tengas las bases de datos en `inst/db/`, puedes ejecutar los scripts desde cualquier directorio:
+
+``` r
+# Desde R, ejecuta los scripts en orden:
+source("scripts/00_info_pages.R")
+source("scripts/00_world.R")
+source("scripts/01_colombia.R")
+source("scripts/02_departamentos_pais.R")
+source("scripts/03_municipios.R")
+source("scripts/04_especial.R")
+```
+
+**Nota:** Los scripts están diseñados para funcionar desde cualquier ruta. Automáticamente detectan la raíz del proyecto buscando el archivo `DESCRIPTION`.
+
 ## 🔄 Actualización de Datos
 
 Para actualizar los datos del paquete (administradores):
@@ -424,4 +508,3 @@ Datos de biodiversidad proporcionados por: - Sistema de Información sobre Biodi
 ------------------------------------------------------------------------
 
 **Hecho con ❤️ en Colombia** 🇨🇴
-

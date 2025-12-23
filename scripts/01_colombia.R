@@ -19,10 +19,10 @@ message("Save path: ", save_path)
 tic()
 
 
-# con <- DBI::dbConnect(RSQLite::SQLite(), sys_file_sibdata("db/sibdata.sqlite"),
-#                       read_only = TRUE)
-con <- DBI::dbConnect(RSQLite::SQLite(), "inst/db/sibdata.sqlite",
-                      read_only = TRUE)
+con <- DBI::dbConnect(RSQLite::SQLite(), sys_file_sibdata("db/sibdata.sqlite"),
+                       read_only = TRUE)
+#con <- DBI::dbConnect(RSQLite::SQLite(), "inst/db/sibdata.sqlite",
+ #                     read_only = TRUE)
 region <- "colombia"
 
 

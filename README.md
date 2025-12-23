@@ -58,8 +58,10 @@ install.packages("remotes")
 # Instalar sibdata (instala automáticamente dependencias desde GitHub)
 remotes::install_github("datasketch/sibdata")
 
+
+install.packages("devtools")
 # Para instalar con todas las dependencias opcionales (Suggests)
-remotes::install_github("datasketch/sibdata", dependencies = TRUE)
+devtools::install_github("datasketch/sibdata", dependencies = TRUE)
 
 # Docker
 #docker build --build-arg GITHUB_PAT=tu_token_aqui -t sibdata .
@@ -89,7 +91,7 @@ El paquete se instala con todas sus dependencias automáticamente:
 
 Estos archivos **no están incluidos** en el repositorio de GitHub debido a su tamaño (\~200 MB). Debes obtenerlos por separado y colocarlos en:
 
-```
+```         
 inst/db/
 ├── sibdata.duckdb
 └── sibdata.sqlite
